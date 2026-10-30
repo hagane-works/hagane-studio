@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "esprit national",
+    "character": "personnage",
+    "event": "événement",
+    "decision": "décision",
+    "focus_node": "Priorité - nation (nœud de l'arbre)",
+    "tech": "technologie"
+  },
+  "title": "Modifier l'élément {noun} importé",
+  "desc": "<mono>{label}</mono> provient du jeu de base ou d'un mod chargé. Que se passe-t-il si vous le modifiez ?",
+  "keepImportedTitle": "Conserver l'original importé",
+  "keepImportedDesc": "Abandonne cette modification. L'exportation conserve l'original du jeu de base ou du mod.",
+  "overrideTitle": "Remplacer comme modification du créateur",
+  "overrideDesc": "Après l'enregistrement, il devient votre modification et l'exportation écrase l'original. L'ID reste identique.",
+  "createCopyTitle": "Créer une nouvelle copie (changer l'ID)",
+  "createCopyDesc": "Après l'enregistrement, l'original importé reste et vous obtenez une entité {entityType} autonome. Les deux existent dans la compilation."
+}

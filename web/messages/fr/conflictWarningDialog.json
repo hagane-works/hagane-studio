@@ -1,0 +1,10 @@
+{
+  "titleSuffix": "est un TAG HOI4 du jeu de base",
+  "description": "En continuant, le contenu du {tag} du jeu de base ({vanillaName}) sera remplacé par celui de votre mod. C'est précisément ce que font les mods d'histoire alternative comme KR, TNO ou TFR : leurs esprits nationaux, Priorités - nation et événements l'emportent au chargement.",
+  "ifGoalLabel": "Si c'est votre objectif",
+  "ifGoalText": "(réécrire le {tag} du jeu de base) : cliquez sur Continuer.",
+  "ifCustomLabel": "Si vous vouliez un TAG personnalisé",
+  "ifCustomText": "(inutilisé par le jeu de base) : annulez et choisissez un autre code de 2 à 5 lettres.",
+  "cancel": "Annuler",
+  "confirm": "Continuer · remplacer le jeu de base"
+}

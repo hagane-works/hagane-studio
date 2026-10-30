@@ -1,0 +1,12 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+focus_tree = {
+	id = generic_focus
+	country = { factor = 1 }
+	default = yes
+	focus = {
+		id = test_generic_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1 y = 0
+		cost = 10
+	}
+}

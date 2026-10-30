@@ -1,0 +1,5 @@
+{
+  "summary": "⚠ {count} drapeaux sont définis, mais jamais lus",
+  "summaryNote": "(premier indice qu'une chaîne de Priorités - nation, événements ou décisions peut être rompue)",
+  "fix": "Correction : lisez le drapeau avec <code>has_country_flag = {flag}</code> dans trigger, available ou visible d'une Priorité - nation, décision ou événement ; ou supprimez <code>set_country_flag</code> si rien n'en a besoin. Cette vérification ne suit pas encore les drapeaux modifiés par <code>modify_country_flag</code> ou <code>clr_country_flag</code>."
+}

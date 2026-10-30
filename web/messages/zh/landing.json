@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "载入现有 mod",
+  "newProject": "+ 新建项目",
+  "newProjectFromScratch": "新建项目(从零起步)",
+  "dashboardTitle": "我的项目",
+  "ctaLoadExisting": "导入已有 mod",
+  "ctaNewProject": "新建空项目",
+  "statProjects": "项目",
+  "statCountries": "国家",
+  "statEntities": "实体",
+  "statRecentEdit": "最近编辑",
+  "statRecentNone": "暂无",
+  "timeJustNow": "刚刚",
+  "timeMinutesAgo": "{n} 分钟前",
+  "timeHoursAgo": "{n} 小时前",
+  "timeToday": "今天",
+  "timeYesterday": "昨天",
+  "timeDaysAgo": "{n} 天前",
+  "modNamingTitle": "这些自动帮你处理",
+  "modNamingContent": "ID 会自动加上项目前缀，不和原版撞车；命名冲突自动解决；导出时自动生成 descriptor.mod 和标准目录结构。你只管创作。",
+  "emptyState": "还没有项目。从零起步，或载入现有 mod 改写。",
+  "loadedBadge": "载入模式",
+  "docsNavLink": "使用手册",
+  "dashboardNavigationLabel": "工作台导航",
+  "languageLabel": "语言",
+  "confirmDeleteProject": "确定要删除这个项目吗？",
+  "deleteFailed": "删除失败： {msg}",
+  "modNameLabel": "Mod 名称",
+  "modNamePlaceholder": "例如： 三国 Mod",
+  "modNameHint": "先起个名字即可。打开项目后再添加国家。",
+  "supportedVersionLabel": "兼容 HOI4 版本",
+  "supportedVersionHint": "你的 mod 目标 HOI4 引擎版本 —— 会写进 descriptor.mod 的 supported_version。1.19.* 表示 1.19.x 全部 patch。默认最新版，之后可在 Mod Descriptor 设置里修改。",
+  "supportedVersionDefault": "最新",
+  "creating": "创建中...",
+  "createProject": "创建项目",
+  "baseModShelf": {
+    "dialogTitle": "新建项目",
+    "sectionTitle": "基础 mod",
+    "sectionHint": "基于一个 base mod 创作，即可引用它的角色、国策与美术 —— 或从零起步。",
+    "fromScratch": {
+      "title": "从零起步",
+      "subtitle": "无 base 的独立 mod"
+    },
+    "buildOnThis": "基于此创作",
+    "workshopLink": "创意工坊",
+    "otherMod": {
+      "title": "基于其它 mod?",
+      "subtitle": "把你自己的 base mod 载入私有沙箱"
+    },
+    "createFailed": "创建项目失败： {msg}"
+  },
+  "gridLoading": "加载中...",
+  "cardNoCountries": "暂无国家",
+  "cardMore": "+{n} 个",
+  "cardDelete": "删除",
+  "cardCharacters": "{n} 个角色",
+  "cardFocusNodes": "{n} 个国策节点",
+  "cardTechnologies": "{n} 项科技",
+  "cardUpdated": "更新于： {date}",
+  "statEntitiesTooltipTitle": "实体明细",
+  "entityType": {
+    "country": "国家",
+    "character": "角色",
+    "custom_trait": "自定义特质",
+    "opinion_modifier": "态度修正",
+    "dynamic_modifier": "动态修正",
+    "modifier_definition": "修正量定义",
+    "ai_strategy_plan": "AI 战略计划",
+    "ai_template": "AI 师模板",
+    "wargoal": "战争目标",
+    "idea": "民族精神",
+    "focus_tree": "国策树",
+    "focus_node": "国策",
+    "technology": "科技",
+    "event_namespace": "事件命名空间",
+    "event": "事件",
+    "super_event": "超级事件",
+    "decision_category": "决议分类",
+    "decision": "决议",
+    "bookmark": "书签",
+    "mio": "军工组织",
+    "history_file": "历史文件"
+  },
+  "recentOpened": "最近打开",
+  "continueEditing": "继续编辑",
+  "recentlyEdited": "最近编辑",
+  "editingNow": "编辑中",
+  "justNow": "刚刚",
+  "minAgo": "{n} 分钟前",
+  "hourAgo": "{n} 小时前",
+  "dayAgo": "{n} 天前",
+  "noCountries": "还没有国家",
+  "moreCountries": "+{n} 个国家",
+  "entityCharacters": "{n} 角色",
+  "entityFocusNodes": "{n} 国策",
+  "entityTechnologies": "{n} 科技",
+  "toolbar": {
+    "searchPlaceholder": "搜项目名 / 国家 TAG / mod base...",
+    "sortLabel": "排序：",
+    "sortOption": {
+      "recent": "最近编辑",
+      "name": "名称 A-Z",
+      "countries": "国家数",
+      "created": "创建时间"
+    },
+    "filterGroupLabel": "筛选项目",
+    "filterOption": {
+      "all": "全部",
+      "in_progress": "进行中",
+      "by_mod_base": "按 mod base 分组"
+    },
+    "noMatch": "没有匹配当前筛选的项目。",
+    "clearFilters": "清空筛选"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "The New Order",
+    "tfr": "The Fire Rises",
+    "other": "原创"
+  },
+  "emptyHero": {
+    "title": "一起做你的第一个 HOI4 mod",
+    "subtitle": "导入已有的 mod，或从空项目开始。",
+    "load": {
+      "title": "已有 HOI4 mod 文件夹？",
+      "blurb": "选择你的 mod 文件夹，自动解析后在可视化工作台里继续编辑。",
+      "cta": "导入已有 mod"
+    },
+    "scratch": {
+      "title": "想从空 project 开始？",
+      "blurb": "给 mod 命名，选一个基础国家，再从空项目自由发挥。",
+      "cta": "新建空项目"
+    }
+  },
+  "settings": "设置",
+  "public": {
+    "brandHome": "钢之工坊官网"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "message": "„{id}“ existiert bereits in {dependency}. Wenn du diese ID weiterverwendest, funktioniert der hier neu angelegte Eintrag ({entityLabel}) im Spiel nicht.",
+  "fixHint": "Wähle eine noch freie ID, oder verweise auf den bereits vorhandenen Eintrag in {dependency}.",
+  "unknownDependency": "dem Basis-Mod",
+  "entityCharacter": "Charakter",
+  "entityFocus": "Fokus",
+  "entityIdea": "Idee",
+  "entityDecision": "Entscheidung"
+}

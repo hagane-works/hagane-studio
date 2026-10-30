@@ -1,0 +1,26 @@
+{
+  "title": "预导入小结",
+  "subtitle": "正式导入前先看一下扫描结果。大 mod 会比较慢，可以勾选后台运行，一边导一边继续操作。",
+  "stat": {
+    "countries": "国家(TAG)",
+    "characters": "角色",
+    "ideas": "Idea",
+    "focus_trees": "国策树",
+    "events": "事件",
+    "decisions": "决议",
+    "dynamic_modifiers": "动态 modifier",
+    "superevents": "超事件"
+  },
+  "etaLabel": "预计耗时",
+  "etaUnitMinutes": "{minutes} 分钟",
+  "etaUnitSeconds": "约 {seconds} 秒",
+  "etaUnit": "({mb} MB · {files} 个文件)",
+  "etaFallback": "—(无数据)",
+  "etaHint": "按文件总体积粗略估算，实际耗时还受磁盘和电脑性能影响。",
+  "backgroundToggleLabel": "后台运行导入",
+  "backgroundToggleHint": "关掉对话框继续做别的，右下角的进度挂件会实时显示进度。",
+  "ctaContinue": "开始导入",
+  "ctaCancel": "取消",
+  "statFallback": "—",
+  "notAvailableHint": "标 “—” 的字段在扫描阶段拿不到，会在导入完成后的小结里出现。"
+}

@@ -1,0 +1,17 @@
+{
+ "bookmarks": [
+  "common/bookmarks/blitzkrieg.txt",
+  "common/bookmarks/the_gathering_storm.txt"
+ ],
+ "icons": [
+  "gfx/interface/goals/focus_test_treaty.dds",
+  "gfx/interface/goals/focus_test_usa_dream.dds",
+  "gfx/interface/goals/focus_tst_special.dds",
+  "gfx/interface/goals/goal_generic_allies_build_infantry.dds",
+  "gfx/interface/goals/goal_generic_construct_civ_factory.dds",
+  "gfx/interface/goals/goal_generic_test.dds",
+  "gfx/interface/goals/goal_test_unity.dds",
+  "gfx/interface/technologies/test_infantry_weapons.dds",
+  "gfx/interface/technologies/test_support_weapons.dds"
+ ]
+}

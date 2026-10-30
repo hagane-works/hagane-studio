@@ -1,0 +1,125 @@
+{
+  "decision": {
+    "kind": "Decision · {id}",
+    "categoryKind": "Decision category · {id}",
+    "loading": "Loading the project’s decision…",
+    "confirmDelete": "Delete this decision?",
+    "delete": "Delete decision",
+    "notDeletable": "This decision comes from the game or a mod’s original file: the game would still show it from that file if the project’s row were deleted, so it cannot be deleted here.",
+    "loadingCategory": "Loading the project’s decision category…",
+    "newLog": "New · {name}",
+    "add": "+ New decision in this category",
+    "addNote": "The new decision is for {tag} only, costs 0 and has no conditions or effects; once created it opens here for you to keep editing.",
+    "hitCategory": "Decision category {name}",
+    "hitDecision": "Decision {name}",
+    "hitCost": "Cost of decision {name}"
+  },
+  "override": {
+    "heading": "Copy into my mod to edit",
+    "vanillaNote": "Saving copies all of {file} into your mod (you are asked the first time); everything else in the file stays as it is. The change applies to every country that uses this decision.",
+    "modNote": "This changes {file} in your mod, and only this decision.",
+    "cost": "Cost",
+    "icon": "Icon",
+    "daysRemove": "Duration (days)",
+    "daysReEnable": "Cooldown (days)",
+    "fireOnce": "Can only be taken once",
+    "placeholder": "Not set",
+    "note": "Scripts such as conditions and effects cannot be changed here yet; a mistake can be undone in the “Change log”.",
+    "confirmTitle": "Copy the base-game file into your mod",
+    "confirmLabel": "Copy and save",
+    "confirmBody": "All of the base-game file {file} will be copied into your mod, replacing the game’s file of the same name; the other decisions and other countries’ content in it stay as they are.\nThis change applies to every country that uses this decision; if a game update changes this file, your copy will not follow automatically.",
+    "fileFallback": "the file that declares this decision",
+    "importedDone": "Copied {file} into your mod and made the change.",
+    "done": "Changed {file}.",
+    "problem": {
+      "cost": "Cost must be a number of 0 or more",
+      "icon": "Write the icon as its name in the files (letters, digits, underscores)",
+      "days": "Days must be a whole number of 0 or more"
+    }
+  },
+  "focus": {
+    "kind": "Focus · {tree} · {id}",
+    "newChildLog": "New child focus · {name}",
+    "loading": "Loading the project’s focus…",
+    "notInTree": "The project’s copy of this tree does not have this focus.",
+    "prereqs": "Prerequisites",
+    "prereqHint": "One group per line: any one focus of a group will do; every group must be met.",
+    "or": "or",
+    "addOr": "+ or",
+    "addPrereq": "+ Prerequisite",
+    "mutex": "Mutually exclusive",
+    "addMutex": "+ Mutually exclusive",
+    "newChild": "New child focus",
+    "confirmDelete": "Confirm delete",
+    "delete": "Delete focus",
+    "remove": "Remove {id}",
+    "picking": "Click one in the tree…",
+    "createHere": "New focus here",
+    "link": {
+      "self": "A focus cannot link to itself.",
+      "alreadyMutex": "They are already mutually exclusive.",
+      "alreadyPrereq": "It is already a prerequisite.",
+      "loop": "That would make a loop: that focus itself needs this one done first."
+    }
+  },
+  "focusTree": {
+    "created": "Created focus tree {id}; right-click an empty spot to place its first focus",
+    "label": "{tag} focus tree",
+    "none": "No tree is declared for {tag}.",
+    "count": "{count, plural, one {# focus} other {# focuses}}",
+    "gameDefault": "game default",
+    "newIdPlaceholder": "New tree id (leave blank to name it automatically)",
+    "create": "New focus tree",
+    "createNote": "The new tree goes into the project, for {tag}; the game picks a tree by weight, so an empty tree will not replace the existing one."
+  },
+  "event": {
+    "kind": "Event · {id}",
+    "loading": "Loading the project’s event…",
+    "unreadable": "This event is not in the project data, and how it looks in the game could not be read.",
+    "hitOption": "Option {name}",
+    "hitTitle": "Event title",
+    "hitDesc": "Event description",
+    "problem": {
+      "timeoutDays": "Timeout days must be a whole number of 0 or more",
+      "mtth": "An event that is not triggered only by scripts needs a mean time to happen (e.g. days = 30)"
+    }
+  },
+  "eventSwitcher": {
+    "superCreated": "Created super event #{number}",
+    "notInProject": "The event on screen is not in the project data, so there is no namespace to put a new event in.",
+    "created": "Created event {id}",
+    "superEvent": "Super event",
+    "event": "Event",
+    "search": "Search by id or title",
+    "scopeLabel": "Which events to list",
+    "countryEvents": "{tag} events",
+    "allEvents": "All events",
+    "totalPartial": "Events: {total} · showing the first {shown}, search for the rest",
+    "totalAll": "Events: {total} · drag the scrollbar on the right to skim through",
+    "genericEvents": "Generic events (any country may get these)",
+    "noCountryEvents": "This country has no events; switch to “All events” to look.",
+    "noMatch": "No matching events.",
+    "newEvent": "New event",
+    "newEventNote": "It goes into the namespace of the event on screen, numbered after the last one; fired only by scripts, it never pops up on its own.",
+    "superAria": "Super event {label}",
+    "noSuperEvents": "The project has no super events yet.",
+    "newSuperEvent": "New super event"
+  },
+  "superEvent": {
+    "kind": "Super event · #{number} · {tag}",
+    "projectCountry": "project country",
+    "saved": "Saved super event “{title}”",
+    "pictureSaved": "Replaced the super event’s picture",
+    "deleted": "Deleted super event “{title}”"
+  },
+  "bookmark": {
+    "fallbackName": "Bookmark",
+    "kind": "Bookmark · {id}",
+    "loading": "Loading the project’s bookmark…",
+    "notInProject": "This bookmark is not in the project data (it comes from the base game or a mod file); import it into the project to edit it here.",
+    "pictureLog": "New background · {name}",
+    "problem": {
+      "date": "Write the date as 1936.1.1 or 1936.1.1.12"
+    }
+  }
+}

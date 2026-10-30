@@ -1,0 +1,6 @@
+{
+  "autoSuffixedTitle": "ID에 접미사를 자동으로 붙였습니다",
+  "autoSuffixedFallback": "해당 ID가 기존 엔티티와 겹쳐 고유하도록 접미사를 추가했습니다.",
+  "alreadyExistsTitle": "ID가 이미 존재합니다",
+  "alreadyExistsFallback": "해당 ID는 이 프로젝트에서 이미 사용 중입니다. 다른 ID를 선택하세요."
+}

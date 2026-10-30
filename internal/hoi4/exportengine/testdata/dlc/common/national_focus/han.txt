@@ -1,0 +1,17 @@
+focus_tree = {
+	id = han_tree
+	focus = {
+		id = HAN_navy
+		available = { has_dlc = "Man the Guns" }
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Wojtek Expansion Pack" }
+				add_political_power = 50
+			}
+			else_if = {
+				limit = { has_dlc = "Man the Guns" }
+				navy_experience = 20
+			}
+		}
+	}
+}

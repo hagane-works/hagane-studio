@@ -1,0 +1,16 @@
+{
+  "title": "Delimita tu escenario",
+  "subtitle": "Rodea la parte del mundo en la que sucede tu historia. El resto sigue existiendo; la IA y las comprobaciones se centrarán aquí.",
+  "selectedCount": "{count, plural, =0 {Aún no has delimitado nada: todo el mundo es tu escenario} one {# Estado delimitado} other {# Estados delimitados}}",
+  "clear": "Borrar",
+  "toolPan": "Arrastra para mover el mapa",
+  "toolBox": "Arrastra para seleccionar Estados con un cuadro",
+  "loading": "Cargando mapa…",
+  "unavailable": "Este proyecto aún no tiene geometría de mapa, así que no puedes delimitar nada. Puedes seguir creando; el escenario seguirá siendo todo el mundo.",
+  "close": "Cerrar",
+  "cancel": "Cancelar",
+  "save": "Guardar escenario",
+  "saving": "Guardando…",
+  "saved": "Escenario guardado",
+  "saveFailed": "No se pudo guardar el escenario: {msg}"
+}

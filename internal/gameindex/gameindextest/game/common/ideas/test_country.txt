@@ -1,0 +1,40 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+ideas = {
+	country = {
+		GER_test_spirit = {
+			picture = generic_fascism_drift_2
+			modifier = { political_power_gain = 0.1 }
+		}
+		GER_plain_spirit = {
+			modifier = { stability_factor = 0.05 }
+		}
+		GER_reused_picture = {
+			picture = GFX_idea_war_economy
+		}
+		sour_loser = {
+			picture = new_economic_policy
+		}
+	}
+	hidden_ideas = {
+		GER_hidden_test = { }
+	}
+	political_advisor = {
+		GER_test_advisor = {
+			allowed = { original_tag = GER }
+			picture = generic_political_advisor_europe_1
+		}
+	}
+	economy = {
+		law = yes
+		civilian_economy = { picture = civilian_economy }
+		war_economy = { picture = war_economy }
+	}
+	trade_laws = {
+		law = yes
+		limited_exports = { }
+	}
+	mobilization_laws = {
+		law = yes
+		limited_conscription = { }
+	}
+}

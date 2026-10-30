@@ -1,0 +1,6 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+opinion_modifiers = {
+	test_opinion_modifier = { value = 10 }
+	embargo = { value = -50 trade = yes }
+	test_trade_modifier = { trade = yes value = 5 }
+}

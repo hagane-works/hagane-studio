@@ -1,0 +1,12 @@
+{
+  "loadingEditor": "Loading editor…",
+  "copyTooltip": "Copy script to clipboard",
+  "copiedLabel": "Copied",
+  "copyLabel": "Copy",
+  "resetTooltip": "Discard editor edits and re-load from the form",
+  "resetLabel": "Reset",
+  "applyTooltip": "Save editor edits to the entity (overwrites form fields)",
+  "applyErrorTooltip": "Resolve parse errors first to enable Apply",
+  "unknownTokenWithSuggestion": "⚠ \"{token}\" isn't a vanilla trigger/effect. Possible typo — did you mean {suggestion}?",
+  "unknownToken": "⚠ \"{token}\" isn't a vanilla trigger/effect. If it's a mod-custom token, you can safely ignore this."
+}

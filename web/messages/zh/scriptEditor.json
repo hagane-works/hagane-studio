@@ -1,0 +1,12 @@
+{
+  "loadingEditor": "加载编辑器…",
+  "copyTooltip": "复制脚本到剪贴板",
+  "copiedLabel": "已复制",
+  "copyLabel": "复制",
+  "resetTooltip": "放弃编辑器改动并从表单重新加载",
+  "resetLabel": "重置",
+  "applyTooltip": "将编辑器改动保存到实体（覆盖表单字段）",
+  "applyErrorTooltip": "先解决解析错误才能启用 Apply",
+  "unknownTokenWithSuggestion": "⚠ \"{token}\" 不是 vanilla trigger/effect，可能是拼写错误。最接近的是：{suggestion}",
+  "unknownToken": "⚠ \"{token}\" 不是 vanilla trigger/effect。如果是 mod 自定义 token，可以忽略。"
+}

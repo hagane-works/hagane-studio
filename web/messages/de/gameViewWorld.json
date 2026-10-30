@@ -1,0 +1,144 @@
+{
+  "common": {
+    "notTags": "Keine Ländercodes: {tags}"
+  },
+  "ideology": {
+    "title": "Parteien und Ideologien",
+    "kind": "Politik · {tag} · Länderhistorie · Projektideologien",
+    "loadingPolitics": "Startpolitik des Projekts wird geladen…",
+    "definitions": "Ideologie-Definitionen",
+    "definitionsHint": "Wählen Sie einen ROOT oder eine Unterideologie; darunter steht derselbe Editor wie in der Ideologie-Werkbank.",
+    "target": "Zu bearbeitende Ideologie",
+    "targetLabel": "Ideologie bearbeiten",
+    "loadingDefinitions": "Ideologien des Projekts werden geladen…",
+    "none": "Keine bearbeitbare Ideologie.",
+    "workbenchNote": "Anlegen, Löschen und die Prüfung von Verweisen bleiben in der Ideologie-Werkbank.",
+    "politicsLog": "Startpolitik von {tag}",
+    "politicsSaved": "Startpolitik von {tag} gespeichert",
+    "leaderKind": "Ideologie der Person · {token}",
+    "leaderSaved": "Ideologie von „{name}“ gespeichert",
+    "definitionLog": "Parteien und Ideologien · {name}",
+    "definitionKind": "Ideologie · {id}",
+    "definitionSaved": "Ideologie „{name}“ gespeichert",
+    "iconLog": "Parteien und Ideologien · {name} · Symbol",
+    "iconSaved": "Neues Symbol für „{name}“",
+    "saved": "Ideologie gespeichert",
+    "problem": {
+      "supportTotal": "Die Unterstützung muss zusammen 100 ergeben (derzeit {total})",
+      "lastElectionDate": "Geben Sie das Datum der letzten Wahl im Format 1933.3.5 an",
+      "frequency": "Der Wahlabstand muss eine ganze Zahl von Monaten sein, 0 oder mehr",
+      "rulingZero": "Die Unterstützung der Regierungspartei darf nicht 0 sein",
+      "idRequired": "Geben Sie eine Kennung ein, zum Beispiel technocracy",
+      "idInvalid": "Die Kennung darf nur Kleinbuchstaben, Ziffern und Unterstriche enthalten und nicht mit einer Ziffer beginnen",
+      "idTaken": "Das Projekt hat bereits „{id}“",
+      "rootTakeover": "Dieses Projekt baut auf einem Basis-Mod auf und übernimmt dessen Ideologiegruppen; hier kann keine neue Gruppe angelegt werden",
+      "sourceLock": "Diese Ideologie stammt aus dem Basis-Mod; importieren Sie sie und sperren Sie ihre Quelle, bevor Sie darunter eine Unterideologie anlegen"
+    }
+  },
+  "warGoal": {
+    "field": {
+      "baseDays": "Basistage für die Rechtfertigung",
+      "perStateDays": "Zusätzliche Tage je weiterer Region",
+      "stateLimit": "Höchstzahl wählbarer Regionen",
+      "threat": "Weltspannung je Region"
+    },
+    "kind": "Kriegsziel · {id}",
+    "loading": "Kriegsziele des Projekts werden geladen…",
+    "saved": "Kriegsziel „{name}“ gespeichert",
+    "deleted": "Kriegsziel „{name}“ gelöscht",
+    "formula": "Rechtfertigungstage = Basis + je Region × gewählte Regionen; jeder Tag kostet 0,2 politische Macht (NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP).",
+    "problem": "Geben Sie Zahlen ab 0 ein",
+    "note": "Beim Speichern wird die ganze Datei mit diesem Kriegsziel ins Projekt übernommen.",
+    "hit": "Kriegsziel {name}"
+  },
+  "autonomy": {
+    "kind": "Autonomiestufe · {id}",
+    "saved": "Autonomiestufe „{name}“ gespeichert",
+    "loading": "Autonomiestufen des Projekts werden geladen…",
+    "name": "Name (der in der Oberfläche angezeigte Stufenname)",
+    "minFreedom": "Mindestfreiheit (0 bis 1; danach steigt oder fällt ein Untertan um eine Stufe)",
+    "manpower": "Anteil der Mannstärke des Untertanen, den sein Oberherr erhält (0 bis 1)",
+    "unset": "Nicht gesetzt",
+    "rule": "Regeln (rule: was der Untertan darf)",
+    "modifier": "Modifikatoren (modifier)",
+    "scriptNote": "Regeln und Modifikatoren werden als Spielskript geschrieben; ein leeres Feld entfernt sie.",
+    "problem": "Der Name darf nicht leer sein, Zahlen müssen zwischen 0 und 1 liegen und die Mindestfreiheit darf nicht leer sein",
+    "note": "Beim Speichern wird die ganze Datei dieser Stufe ins Projekt übernommen und nur ihr Block geändert; eine in der Werkbank für Autonomiestufen angelegte Stufe ändert ihre Zeile. Der Name wird als Lokalisierung der Stufen-ID gespeichert, sodass sich alle Oberflächen mit ändern.",
+    "hit": "Autonomiestufe {tag} {name}"
+  },
+  "newCountry": {
+    "heading": "Land",
+    "summary": "Ein Land anlegen und ihm Regionen geben",
+    "create": "+ Neues Land",
+    "giveTitle": "{tag} Regionen geben (als Eigentümer setzen und Kern hinzufügen)",
+    "searchPlaceholder": "Regionsname, Nummer oder aktueller Eigentümer (z. B. GER)",
+    "searchLabel": "Regionen suchen",
+    "noMatch": "Keine passenden Regionen.",
+    "loading": "Regionen werden geladen…",
+    "chosen": "Ausgewählt: {list}",
+    "listSeparator": ", ",
+    "giving": "Wird vergeben…",
+    "give": "{count, plural, one {# Region} other {# Regionen}} an {tag} geben",
+    "gave": "{count, plural, one {# Region} other {# Regionen}} an {tag} gegeben",
+    "gaveHint": "Es ist jetzt in der Liste der kleineren Länder auf dem Länderauswahlbildschirm wählbar.",
+    "giveFailed": "Regionen konnten nicht vergeben werden: {error}",
+    "hint": "Geben Sie ihm nach dem Anlegen hier Regionen; das Spiel listet nur Länder mit Regionen. Sie können ihm auch in „Weltkarte“ ein neues Stück Land hinzufügen.",
+    "gaveLog": "{tag} erhält {count, plural, one {# Region} other {# Regionen}}",
+    "statesKind": "Regionen · {ids}",
+    "createdLog": "Neues Land {tag}",
+    "countryKind": "Land · {tag}"
+  },
+  "province": {
+    "stateSaved": "Region {id} gespeichert",
+    "editKind": "Karte · Eigenschaften",
+    "renameLog": "Umbenennung · {key}",
+    "renameKind": "Karte · Name",
+    "stateTitle": "Region {id} · {name}",
+    "noStateTitle": "Dieser Ort gehört zu keiner Region",
+    "stateKind": "STATE_{id} · Eigentümer {owner} · {count, plural, one {# Provinz} other {# Provinzen}}",
+    "noOwner": "keiner",
+    "provinceKind": "Provinz {id} · {kind}",
+    "regionTitle": "Strategische Region {id} · {name}",
+    "noRegionTitle": "Dieser Ort gehört zu keiner strategischen Region",
+    "regionKind": "STRATEGICREGION_{id} · {count, plural, one {# Provinz} other {# Provinzen}}",
+    "provinceId": "Provinz {id}",
+    "inState": "{kind} · in Region {id} {name}",
+    "scope": "Ein Klick auf die Karte wählt",
+    "scopeState": "Region",
+    "scopeProvince": "Provinz",
+    "scopeRegion": "Strategische Region",
+    "landNoState": "In keiner Region. Wechseln Sie zu „Provinz“, um diesen Block selbst zu bearbeiten.",
+    "waterNoState": "Meere und Seen gehören zu keiner Region. Wechseln Sie zu „Provinz“, um diesen Block selbst zu bearbeiten.",
+    "noRegion": "Dieser Block gehört zu keiner strategischen Region.",
+    "openWorldMap": "In der Werkbank Weltkarte öffnen ↗"
+  },
+  "state": {
+    "fallbackTitle": "Region",
+    "kind": "Region · {id}",
+    "countryStates": "Regionen dieses Landes",
+    "pick": "Region wählen",
+    "logKind": "Region · {id}",
+    "loadFailed": "Diese Region konnte nicht geladen werden: {error}",
+    "missing": "Weder das Basisspiel noch das Projekt hat Region {id}; hier gibt es nichts zu bearbeiten.",
+    "adopting": "Diese Region wird ins Projekt übernommen… (sie landet nur in der exportierten Mod, wenn Sie sie ändern)",
+    "loading": "Region aus dem Projekt wird geladen…",
+    "problem": {
+      "ownerRequired": "Der Eigentümer darf nicht leer sein"
+    }
+  },
+  "diplomacy": {
+    "title": "Startdiplomatie",
+    "problem": {
+      "self": "Ein Land kann das nicht mit sich selbst tun",
+      "subjectAutonomy": "Jeder Untertanenstaat braucht einen Autonomietyp",
+      "relationType": "Jeder Vertrag braucht einen Vertragstyp"
+    }
+  },
+  "profile": {
+    "problem": {
+      "nameRequired": "Der Ländername darf nicht leer sein",
+      "adjectiveRequired": "Das Adjektiv darf nicht leer sein (zum Beispiel German)",
+      "capitalRequired": "Die Hauptstadt muss eine Regionsnummer sein"
+    }
+  }
+}

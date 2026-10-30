@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "Load existing mod",
+  "newProject": "+ New Project",
+  "newProjectFromScratch": "New Project (from scratch)",
+  "dashboardTitle": "My projects",
+  "ctaLoadExisting": "Import existing mod",
+  "ctaNewProject": "New empty project",
+  "statProjects": "Projects",
+  "statCountries": "Countries",
+  "statEntities": "Entities",
+  "statRecentEdit": "Recent edit",
+  "statRecentNone": "None",
+  "timeJustNow": "just now",
+  "timeMinutesAgo": "{n} min ago",
+  "timeHoursAgo": "{n} hr ago",
+  "timeToday": "today",
+  "timeYesterday": "yesterday",
+  "timeDaysAgo": "{n} d ago",
+  "modNamingTitle": "What's handled for you",
+  "modNamingContent": "IDs are automatically prefixed with your project tag, so they never clash with vanilla. Naming conflicts resolve themselves. On export, descriptor.mod and the standard folder layout are generated for you. You just create.",
+  "emptyState": "No projects yet. Start from scratch, or import an existing mod to rework.",
+  "loadedBadge": "Loaded Mode",
+  "docsNavLink": "User guide",
+  "dashboardNavigationLabel": "Workbench navigation",
+  "languageLabel": "Language",
+  "confirmDeleteProject": "Are you sure you want to delete this project?",
+  "deleteFailed": "Delete failed: {msg}",
+  "modNameLabel": "Mod Name",
+  "modNamePlaceholder": "e.g. Three Kingdoms Mod",
+  "modNameHint": "Start with just a name. You'll add countries after opening the project.",
+  "supportedVersionLabel": "Compatible HOI4 version",
+  "supportedVersionHint": "The HOI4 engine version your mod targets — written to descriptor.mod as supported_version. 1.19.* covers every 1.19.x patch. Defaults to the latest; you can change it later in Mod Descriptor settings.",
+  "supportedVersionDefault": "latest",
+  "creating": "Creating...",
+  "createProject": "Create Project",
+  "baseModShelf": {
+    "dialogTitle": "New Project",
+    "sectionTitle": "Base mod",
+    "sectionHint": "Build on top of a base mod to reference its characters, focuses and art — or start from scratch.",
+    "fromScratch": {
+      "title": "From scratch",
+      "subtitle": "A standalone mod with no base"
+    },
+    "buildOnThis": "Build on this",
+    "workshopLink": "Workshop",
+    "otherMod": {
+      "title": "Based on another mod?",
+      "subtitle": "Bring your own base mod into a private sandbox"
+    },
+    "createFailed": "Could not create project: {msg}"
+  },
+  "gridLoading": "Loading...",
+  "cardNoCountries": "No countries yet",
+  "cardMore": "+{n} more",
+  "cardDelete": "Delete",
+  "cardCharacters": "{n} Characters",
+  "cardFocusNodes": "{n} Focus Nodes",
+  "cardTechnologies": "{n} Technologies",
+  "cardUpdated": "Updated: {date}",
+  "statEntitiesTooltipTitle": "Entity breakdown",
+  "entityType": {
+    "country": "Countries",
+    "character": "Characters",
+    "custom_trait": "Custom traits",
+    "opinion_modifier": "Opinion modifiers",
+    "dynamic_modifier": "Dynamic modifiers",
+    "modifier_definition": "Modifier definitions",
+    "ai_strategy_plan": "AI strategy plans",
+    "ai_template": "AI division templates",
+    "wargoal": "War goals",
+    "idea": "Ideas",
+    "focus_tree": "Focus trees",
+    "focus_node": "Focus nodes",
+    "technology": "Technologies",
+    "event_namespace": "Event namespaces",
+    "event": "Events",
+    "super_event": "Super events",
+    "decision_category": "Decision categories",
+    "decision": "Decisions",
+    "bookmark": "Bookmarks",
+    "mio": "MIOs",
+    "history_file": "History files"
+  },
+  "recentOpened": "Recently opened",
+  "continueEditing": "Continue editing",
+  "recentlyEdited": "Recently edited",
+  "editingNow": "Editing now",
+  "justNow": "just now",
+  "minAgo": "{n} min ago",
+  "hourAgo": "{n} h ago",
+  "dayAgo": "{n} d ago",
+  "noCountries": "No countries yet",
+  "moreCountries": "+{n} more",
+  "entityCharacters": "{n} characters",
+  "entityFocusNodes": "{n} focus nodes",
+  "entityTechnologies": "{n} technologies",
+  "toolbar": {
+    "searchPlaceholder": "Search project name / country TAG / mod base...",
+    "sortLabel": "Sort:",
+    "sortOption": {
+      "recent": "Recently edited",
+      "name": "Name A-Z",
+      "countries": "Country count",
+      "created": "Recently created"
+    },
+    "filterGroupLabel": "Filter projects",
+    "filterOption": {
+      "all": "All",
+      "in_progress": "In progress",
+      "by_mod_base": "By mod base"
+    },
+    "noMatch": "No projects match the current filters.",
+    "clearFilters": "Clear filters"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "The New Order",
+    "tfr": "The Fire Rises",
+    "other": "Original"
+  },
+  "emptyHero": {
+    "title": "Let's build your first HOI4 mod",
+    "subtitle": "Import a mod you already have, or start from an empty project.",
+    "load": {
+      "title": "Already have a HOI4 mod folder?",
+      "blurb": "Pick your mod folder. It is read automatically, and you keep editing it in the visual workbenches.",
+      "cta": "Import existing mod"
+    },
+    "scratch": {
+      "title": "Want to start from an empty project?",
+      "blurb": "Name your mod, pick a base country, then build freely from a blank slate.",
+      "cta": "New empty project"
+    }
+  },
+  "settings": "Settings",
+  "public": {
+    "brandHome": "Hagane Works home"
+  }
+}

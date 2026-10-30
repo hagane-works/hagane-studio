@@ -1,0 +1,20 @@
+{
+  "startYear": "Beginn Jahr",
+  "cost": "Forschungskosten",
+  "costValue": "{cost} ({days}(Tag)",
+  "source": "Quelle",
+  "level": "Ebene",
+  "unlockPath": "Pfad öffnen",
+  "loading": "Laden...",
+  "noPath": "Noch kein Entsperren-Pfad. Fügen Sie einen Fokus, ein Ereignis oder eine Entscheidung hinzu, die diese Technologie freischaltet.",
+  "moreCount": "+{n}mehr",
+  "unlockPathTitle": "Pfad entsperren · schweben, um den vollständigen Pfad zu sehen",
+  "deleteTitle": "Diese Technologie löschen",
+  "noIconTitle": "Kein Symbol für diese Technologie verfügbar",
+  "iconLoadFailedTitle": "Diese Technologie hat ein hochgeladenes Symbol, das jedoch nicht geladen werden konnte",
+  "unlockKind": {
+    "focus": "Schwerpunkt",
+    "event": "Ereignis",
+    "decision": "Entscheidung"
+  }
+}

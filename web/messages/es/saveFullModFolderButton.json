@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "Tu navegador no admite la API File System Access. Usa Chrome o Edge.",
+  "syncing": "Sincronizando...",
+  "syncToNamed": "Sincronizar con {dir}",
+  "syncToFolder": "Escribir en la carpeta del juego",
+  "titleWithFolder": "Sincronizar el mod completo con {dir}/ (surte efecto después de reiniciar el mod en HOI4)",
+  "titleNoFolder": "La primera vez, elegirás una carpeta del mod. Se reutilizará durante el resto de esta sesión.",
+  "tooltipTitle": "Después de exportar: flujo de pruebas completo",
+  "tooltipContent": "Flujo de pruebas de mods de HOI4 (creación + depuración + registros):\n1. Coloca la carpeta del mod elegida en %userprofile%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\\n2. Iniciador → Biblioteca de mods → marca este mod\n3. Activa el modo de depuración de una de estas formas:\n   • Steam · clic derecho en HOI4 → Propiedades → General → escribe -debug en las opciones de lanzamiento\n   • Local · crea un acceso directo a dowser.exe → Propiedades → añade \" -debug\" al Destino (fíjate en el espacio antes del guion)\n4. Inicia el juego · error.log se abrirá automáticamente (Bloc de notas) cuando termine de cargar el menú principal\n5. Clasificación de errores · tres categorías en error.log:\n   • Familia · divergencia de convenciones de nombres entre mods/entidades\n   • Compatible con vanilla · compatibilidad con vanilla (campos de DLC / versión)\n   • Interno del mod · dentro de este mod (ID roto / referencia circular)\n6. Ubicación de registros · %userprofile%\\Documents\\...\\logs\\ (error.log + game.log)\n> Nota: algunos errores graves podrían no registrarse antes de un cierre inesperado; diagnostícalos combinando los síntomas en el juego con game.log.",
+  "includeImportedTitleOn": "Incluye contenido importado del mod original (fuentes de vanilla o de un mod antiguo). Escribe la carpeta completa del mod.",
+  "includeImportedTitleOff": "Sincroniza solo las entidades que has creado o modificado. No sobrescribas contenido importado antiguo.",
+  "includeImportedLabel": "Incluir importado",
+  "changeFolderTitle": "Cambiar la carpeta del mod",
+  "changeFolder": "Cambiar carpeta",
+  "wroteFiles": "✓ Se han escrito {count} archivos",
+  "wrotePartial": "⚠ Se han escrito {ok}/{total} archivos; {failed} han fallado (p. ej., {firstError}). La carpeta del mod se ha actualizado parcialmente.",
+  "illegalPathSegment": "Segmento de ruta no válido \"{segment}\" en {path}",
+  "additiveCaption": "La sincronización solo escribe o sobrescribe; nunca elimina.",
+  "additiveTitle": "La sincronización es aditiva",
+  "additiveWarning": "La sincronización solo escribe o sobrescribe archivos; nunca los elimina. Si has cambiado el nombre, eliminado o cambiado la etiqueta de una entidad, el antiguo .txt/.yml/.dds permanece en la carpeta y el juego carga tanto la versión antigua como la nueva. Tras esos cambios, limpia manualmente las carpetas generadas del mod (common/, events/, history/, localisation/, gfx/) antes de sincronizar, o sincroniza con una carpeta nueva."
+}

@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "Los archivos de tecnologías se combinan por ruta exacta",
+  "technologyMergeBody": "Append solo sobrescribe archivos con exactamente la misma ruta. No fusiona bloques de tecnologías de un archivo del proyecto dentro del archivo fuente vanilla.",
+  "toastWarning": "Superposición terminada. En los conflictos se sobrescribieron {conflictCount} archivo(s) del mod base. Para controlar cada archivo, usa la fusión diferencial.",
+  "toastSuccess": "Superposición terminada. No hubo conflictos de ruta; todo tu contenido se añadió como archivos nuevos.",
+  "description": "Superpone este proyecto a un ZIP de mod existente. Si hay un conflicto de ruta, prevalecen tus cambios. Es ideal para «cargar un mod, editarlo aquí y descargar un ZIP combinado».",
+  "naiveMergeTitle": "Fusión por superposición · tus cambios prevalecen",
+  "naiveMergeBody": "En un conflicto de ruta, tus cambios sobrescriben el archivo del mismo nombre del mod base. Sus archivos exclusivos se conservan y los nuevos se escriben con tu versión. Para revisar cada conflicto, usa la fusión diferencial.",
+  "pickBaseZip": "Elegir ZIP del mod base...",
+  "pickBaseFolder": "Elegir carpeta del mod...",
+  "folderPickerTitle": "Elige la carpeta del mod base",
+  "folderPickerHint": "Abre la carpeta que contiene el descriptor.mod del mod, por ejemplo un elemento de Steam Workshop en steamapps\\workshop\\content\\394360 o un mod de tu carpeta de mods. El programa solo la lee y nunca la modifica.",
+  "folderNotAMod": "Esta carpeta no es un mod de Hearts of Iron IV: no tiene un descriptor.mod con el nombre del mod. Elige la carpeta que contiene el descriptor.mod.",
+  "supportNote": "Sirve cualquier ZIP o carpeta de mod de HOI4. El programa solo lee la base y nunca la modifica; el ZIP combinado se guarda en tu carpeta de Descargas.",
+  "title": "Superponer a un mod existente",
+  "baseZipLabel": "Mod base",
+  "cancel": "Cancelar",
+  "merging": "Fusionando...",
+  "confirmAppend": "Confirmar superposición y descargar"
+}

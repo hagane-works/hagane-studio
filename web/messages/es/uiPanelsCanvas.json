@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "Controles",
+  "paletteContainer": "Contenedor",
+  "paletteIcon": "Icono",
+  "paletteText": "Texto",
+  "paletteProgressbar": "Barra de progreso",
+  "paletteButton": "Botón",
+  "stageLoading": "Generando vista previa 1:1...",
+  "stageNotSavedTitle": "Aún no se ha compilado",
+  "stageNotSavedBody": "Guarda el panel para ver la vista previa 1:1 del juego. Los controles provisionales aparecen abajo como marcadores ámbar.",
+  "stageEmpty": "Añade controles desde la paleta superior.",
+  "stageError": "No se pudo cargar la vista previa",
+  "ghostBadge": "borrador",
+  "ghostHint": "Aún no está en la vista previa compilada. Guarda para generarlo 1:1.",
+  "ribbonEmpty": "Selecciona un control del lienzo. Sus enlaces aparecerán aquí.",
+  "ribbonGhost": "borrador sin guardar",
+  "mockPreviewOn": "Vista previa en directo con valores de variables de muestra",
+  "addIntoPanel": "Se añade al panel",
+  "addIntoContainer": "Se añade dentro de «{name}»"
+}

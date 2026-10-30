@@ -1,0 +1,6 @@
+{
+  "save_conflict": "Este contenido cambió después de que lo abrieras. Tu borrador se conserva. Copia tus cambios, vuelve a cargarlo y revisa la versión actual antes de guardar.",
+  "save_precondition_required": "Este borrador no tiene una versión guardada para comparar. Copia tus cambios y vuelve a abrir el elemento antes de guardar.",
+  "save_committed_host_publish_deferred": "El contenido se ha guardado, pero la vista previa de la imagen aún no se ha actualizado. Actualiza la página para verla.",
+  "save_committed_host_publish_failed": "El contenido se ha guardado, pero la vista previa de la imagen aún no se ha actualizado. Actualiza la página para verla."
+}

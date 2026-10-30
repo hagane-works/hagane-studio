@@ -1,0 +1,16 @@
+{
+  "entityDecision": "décision",
+  "entityEvent": "événement",
+  "entityFocus": "Priorité - nation",
+  "entityIdea": "esprit national",
+  "searchPlaceholder": "Rechercher l'ID ou le nom de {entity}…",
+  "all": "Tous",
+  "searchingBase": "Recherche dans le mod de base…",
+  "projectBadge": "projet",
+  "baseBadge": "mod de base",
+  "noResults": "Aucun résultat.",
+  "emptyProject": "Aucune entrée de {entity} dans ce projet.",
+  "emptyCategory": "Aucune entrée de {entity} dans cette catégorie.",
+  "promptManual": "Saisissez manuellement l'ID de {entity} :",
+  "enterManually": "+ Saisir manuellement…"
+}

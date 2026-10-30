@@ -1,0 +1,20 @@
+{
+  "heading": "Retrato y recursos",
+  "uploading": "Cargando…",
+  "uploadButton": "Cargar imagen de retrato",
+  "ratioHint": "PNG / JPG, proporción recomendada 3:4",
+  "resetConfirm": "¿Restablecer el retrato de {tag} al del juego base? Se eliminará el retrato cargado.",
+  "resetFailed": "Falló el restablecimiento",
+  "resetting": "Restableciendo…",
+  "resetButton": "↺ Restablecer retrato del juego base",
+  "generatedPreview": "Vista previa generada",
+  "leaderPortraitAlt": "Retrato del líder",
+  "leaderPortrait": "Retrato del líder",
+  "advisorIconAlt": "Icono del asesor",
+  "advisorIcon": "Icono del asesor",
+  "notImported": "⚠ Retrato no importado",
+  "referencesSprite": "Este personaje hace referencia al sprite de retrato",
+  "notImportedDetail": "pero la importación no lo convirtió en una imagen; probablemente no se incluyeron los .gfx/.dds del mod, algo habitual al importar solo .txt. Carga un retrato personalizado arriba o vuelve a importar la carpeta completa.",
+  "noPortrait": "No se ha cargado ningún retrato",
+  "noPortraitHint": "Carga uno para generar automáticamente el retrato y los iconos de asesor y rasgo"
+}

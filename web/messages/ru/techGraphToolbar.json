@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "Уменьшить",
+  "toolbarZoomIn": "Увеличить",
+  "toolbarZoomReset": "Перезагрузить увеличение до 100%",
+  "toolbarFitView": "Подключить график для просмотра",
+  "toolbarUndo": "Отменить (Ctrl+Z)",
+  "toolbarRedo": "Повторить (Ctrl+Y)",
+  "toolbarAutoLayout": "Автоматическое оформление — перепланировка всех технологий",
+  "toolbarCreateTech": "Новые технологии"
+}

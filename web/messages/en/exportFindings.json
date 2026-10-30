@@ -1,0 +1,696 @@
+{
+  "focus_display_name_missing_created": {
+    "what": "Focus {id} has no name",
+    "impact": "In game the focus shows as its ID, with no tooltip text.",
+    "action": "Set a name",
+    "jump": "Focus workbench › This focus › Name"
+  },
+  "focus_display_name_missing_enabled_locale": {
+    "what": "Focus {id} has no {locale} name",
+    "impact": "Players using that language will see the ID.",
+    "action": "Add that language",
+    "jump": "Focus › Name › Language tabs"
+  },
+  "focus_initial_position_unknown_kind": {
+    "what": "The initial position type of {tree} is not recognized",
+    "impact": "The whole focus tree may shift or overlap itself.",
+    "action": "Reset the initial position",
+    "jump": "Focus tree › Layout"
+  },
+  "focus_reward_modifier_in_effect_position": {
+    "what": "In the completion reward of focus {id}, {token} is a modifier but sits in an effect position",
+    "impact": "The game ignores the line on load — <b>it does not take effect</b>.",
+    "action": "Move it into a modifier carrier",
+    "jump": "Focus › Completion reward"
+  },
+  "focus_reward_scalar_effect_block_value": {
+    "what": "{token} in focus {id} expects a number but got a code block (or the reverse)",
+    "impact": "The line does not take effect.",
+    "action": "Fix the syntax",
+    "jump": "Focus › Completion reward"
+  },
+  "focus_reward_trigger_in_effect_position": {
+    "what": "The completion reward of focus {id} contains the condition {token}; this position only accepts effects",
+    "impact": "<b>The line does not take effect</b> and the condition is never evaluated.",
+    "action": "Move it into the condition block",
+    "jump": "Focus › Completion reward"
+  },
+  "focus_reward_unsupported_scope": {
+    "what": "{effect} in focus {id} is not supported in the current scope ({scope})",
+    "impact": "The effect does not fire. Supported scopes: {supported}.",
+    "action": "Wrap it in a supported scope",
+    "jump": "Focus › Completion reward"
+  },
+  "focus_base_default_provider_unresolved": {
+    "what": "The default focus tree provided by the base mod could not be found",
+    "impact": "The focus tree may not attach to the right country and stays invisible in game.",
+    "action": "Refresh the base mod index",
+    "jump": "Project settings › Dependencies"
+  },
+  "focus_effective_default_missing": {
+    "what": "{country} has no default focus tree",
+    "impact": "The country falls back to the generic tree — <b>players never see the tree you built</b>.",
+    "action": "Set as default",
+    "jump": "Focus tree list"
+  },
+  "focus_file_policy_applied": {
+    "what": "Focus tree output files were written as recorded",
+    "impact": "Passed check, counted toward ✅."
+  },
+  "focus_file_policy_cohort_incomplete": {
+    "what": "{tree} was not exported together with the other focus trees in its file",
+    "impact": "The file is only partially written — <b>the missing trees do not appear in game</b>.",
+    "action": "Select them together for export",
+    "jump": "Export page › Content selection"
+  },
+  "focus_file_policy_drift": {
+    "what": "The file policy of {tree_ids} does not match the version record",
+    "impact": "No impact on the output; exported per the current policy. This field is system-maintained — no change needed."
+  },
+  "focus_file_policy_duplicate_membership": {
+    "what": "Internal record conflict: one tree carries two file policies",
+    "impact": "The UI will show “check incomplete”; reported automatically."
+  },
+  "focus_file_policy_missing": {
+    "what": "{id} has no output file; one was assigned automatically",
+    "impact": "No impact on the game; content is complete."
+  },
+  "focus_initial_position_target_missing": {
+    "what": "The initial position of {tree} points to focus {id}, which does not exist in that tree",
+    "impact": "The tree opens with a misplaced initial view, showing an empty area.",
+    "action": "Pick the initial focus again",
+    "jump": "Focus tree › Layout"
+  },
+  "focus_raw_file_parse_failed": {
+    "what": "Focus file {path} has a syntax error and cannot be read",
+    "impact": "<b>All focuses in this file will be missing.</b>",
+    "action": "Fix the syntax (jump to the failing spot)",
+    "jump": "Raw file editor"
+  },
+  "focus_registry_unavailable": {
+    "what": "The vanilla focus registry failed to load; the file check did not finish",
+    "impact": "The UI will show “check incomplete”; this export took the conservative path; reported automatically."
+  },
+  "timeline_bookmark_path_shadow_date_mismatch": {
+    "what": "Two bookmark files write to the same path with different dates; only one takes effect",
+    "impact": "<b>The start date may differ from what you set.</b>",
+    "action": "Review both bookmarks",
+    "jump": "Bookmark workbench"
+  },
+  "timeline_custom_start_without_bookmark": {
+    "what": "A custom start date is set, but it has no matching bookmark",
+    "impact": "<b>Players do not see this start on the campaign selection screen.</b>",
+    "action": "Create a bookmark",
+    "jump": "Bookmark workbench › New"
+  },
+  "timeline_project_earliest_bookmark_mismatch": {
+    "what": "The project start date ({a}) differs from the earliest bookmark date ({b})",
+    "impact": "The game starts on the bookmark date.",
+    "action": "Align the dates",
+    "jump": "Project settings › Start date"
+  },
+  "timeline_project_start_date_unknown": {
+    "what": "The project has no start date",
+    "impact": "The export uses the default date.",
+    "action": "Set a start date",
+    "jump": "Project settings"
+  },
+  "timeline_raw_bookmark_date_unknown": {
+    "what": "No date could be parsed from the bookmark file",
+    "impact": "The bookmark is exported as-is and skips the date consistency check."
+  },
+  "timeline_raw_bookmark_hash_mismatch": {
+    "what": "The bookmark file was modified outside the program and differs from the record",
+    "impact": "Check results may not reflect the file's real content.",
+    "action": "Refresh the record",
+    "jump": "Raw files › Re-read"
+  },
+  "timeline_raw_defines_start_date_conflict": {
+    "what": "The start date in the defines file ({a}) conflicts with the project setting ({b})",
+    "impact": "The game starts on the bookmark date, but campaign length, world tension and similar mechanics run from the defines date — <b>a mismatch skews them all</b>.",
+    "action": "Align the dates",
+    "jump": "Project settings › Start date"
+  },
+  "timeline_start_date_ok": {
+    "what": "Start date check passed",
+    "impact": "The game starts on this project's start date."
+  },
+  "timeline_structured_bookmark_date_unknown": {
+    "what": "No date could be parsed from the bookmark",
+    "impact": "The bookmark skips the date consistency check."
+  },
+  "clausewitz_parse_error": {
+    "what": "{file} has a syntax error and cannot be read",
+    "impact": "<b>The entire file is left out of the mod.</b>",
+    "action": "Jump to the error",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_unclosed_block": {
+    "what": "{file} line {line}: unclosed {",
+    "impact": "<b>Everything after this line will be lost.</b>",
+    "action": "Jump to the line",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_stray_closing_brace": {
+    "what": "{file} line {line}: stray } with no matching {",
+    "impact": "Following content may land in the wrong block.",
+    "action": "Jump to the line",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_unterminated_quote": {
+    "what": "{file} line {line}: unterminated quote",
+    "impact": "The line and everything after it is read as one string.",
+    "action": "Jump to the line",
+    "jump": "Raw file editor"
+  },
+  "raw_content_literal_escape_newline": {
+    "what": "{file} line {line}: literal \\n (backslash + n) in script text",
+    "impact": "HOI4 script does not interpret escapes — players will see the two characters \\n verbatim.",
+    "action": "Use a real line break, or move the text into a localisation yml value where \\n is a newline",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_missing_assignment_value": {
+    "what": "{file} line {line}: {key} = has no value",
+    "impact": "The setting does not take effect.",
+    "action": "Jump to the line",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_analysis_ast_mismatch": {
+    "what": "Parser self-check mismatch; results for this file may be incomplete",
+    "impact": "The UI will show “check incomplete”; reported automatically."
+  },
+  "clausewitz_analysis_token_alignment": {
+    "what": "Parser token alignment failed; results for this file may be incomplete",
+    "impact": "The UI will show “check incomplete”; reported automatically."
+  },
+  "country_capital_missing": {
+    "what": "{country} has no capital",
+    "impact": "<b>Capitulation, the supply network and political power all anchor on the capital</b> — without one, all of these mechanics misbehave.",
+    "action": "Set a capital",
+    "jump": "History file › Capital"
+  },
+  "country_capital_invalid_state": {
+    "what": "The capital value {value} of {country} is not a valid state ID",
+    "impact": "The country has no usable capital; consequences as above.",
+    "action": "Pick a state again",
+    "jump": "History file › Capital"
+  },
+  "country_capital_not_owned": {
+    "what": "The capital {state} of {country} is owned by {owner}",
+    "impact": "The game rejects the capital and logs an error — <b>the engine falls back to a capital of its own choosing</b>.",
+    "action": "Change the capital or the ownership",
+    "jump": "History file / States"
+  },
+  "map_state_no_land": {
+    "what": "State {name} (#{state_id}) is only a lake, with no land",
+    "impact": "The game has nowhere to place this state's air base, rocket site and stronghold and <b>crashes when a game starts</b>; error.log stays empty on a normal start.",
+    "action": "Open the map studio and click Fix, or ask the assistant to fix it, then export again",
+    "jump": "Map studio"
+  },
+  "country_history_final_winner_ambiguous": {
+    "what": "{country} has history files from multiple sources; the effective one cannot be determined",
+    "impact": "<b>The effective start setup may not be your latest edit.</b>",
+    "action": "Choose the effective source",
+    "jump": "History file › Sources"
+  },
+  "country_history_final_winner_inferred": {
+    "what": "{country} has history files from multiple sources; {path} was chosen by load order",
+    "impact": "Usually the correct version."
+  },
+  "country_research_slots_missing": {
+    "what": "{id} has no research slot count",
+    "impact": "The game uses the default value.",
+    "action": "Set research slots",
+    "jump": "History file"
+  },
+  "country_research_slots_invalid": {
+    "what": "The research slot count {value} of {country} is invalid",
+    "impact": "The line does not take effect; slots fall back to the default.",
+    "action": "Change to a valid number",
+    "jump": "History file"
+  },
+  "playtest_crash": {
+    "what": "The game crashed during the playtest (type: {exception})",
+    "impact": "The report carries the crash type and game version; usually enough to pinpoint the content.",
+    "action": "View the crash analysis",
+    "jump": "Mod health › Playtest report"
+  },
+  "playtest_start_date_mismatch": {
+    "what": "The start date the game actually loaded ({a}) differs from the design ({b})",
+    "impact": "<b>Players enter the wrong era</b> — history content designed for {b} may fire completely out of order. Common root cause: the outer .mod file lacks replace_path=\"common/bookmarks\".",
+    "action": "View the suggested fix",
+    "jump": "Mod health › Playtest report"
+  },
+  "playtest_runtime_diagnostics_input_invalid": {
+    "what": "The playtest log could not be read",
+    "impact": "No diagnostics for this playtest.",
+    "action": "Upload the log again",
+    "jump": "Mod health › Playtest report"
+  },
+  "playtest_loaded_start_date": {
+    "what": "Confirmed start date loaded by the game: {date}",
+    "impact": "Informational; counts toward ✅ when it matches the design."
+  },
+  "playtest_enabled_mods": {
+    "what": "Confirmed the mod list enabled during the playtest",
+    "impact": "Informational; used to rule out mod conflicts."
+  },
+  "playtest_start_date_ok": {
+    "what": "The start date matches the design",
+    "impact": "Passed check."
+  },
+  "oob_air_location_missing": {
+    "what": "Air wing {name} has no state set",
+    "impact": "<b>The wing does not appear at game start.</b>",
+    "action": "Set the state (requires an air base)",
+    "jump": "Starting army › Air force"
+  },
+  "oob_air_location_invalid": {
+    "what": "The state {id} of air wing {name} is invalid",
+    "impact": "The wing does not appear at game start; wings must be based in a state with an air base.",
+    "action": "Pick a state again",
+    "jump": "Starting army › Air force"
+  },
+  "oob_air_equipment_type_missing": {
+    "what": "Air wing {name} has no equipment type",
+    "impact": "<b>The wing does not appear at game start.</b>",
+    "action": "Choose an equipment type",
+    "jump": "Starting army › Air force"
+  },
+  "oob_air_equipment_type_invalid": {
+    "what": "The equipment type {value} of air wing {name} does not exist",
+    "impact": "The wing does not appear at game start.",
+    "action": "Pick equipment again",
+    "jump": "Starting army › Air force"
+  },
+  "building_state_coordinate_mismatch": {
+    "what": "Building {id} is declared in state {a}, but its coordinates fall in state {b}",
+    "impact": "<b>The game ignores the building — it does not appear</b>; the error is logged.",
+    "action": "Fix the coordinates or the state",
+    "jump": "States › Buildings"
+  },
+  "building_coordinate_membership_missing": {
+    "what": "The coordinates of building {id} fall in province {province}, which belongs to no state",
+    "impact": "Produces a map error and <b>the building is ignored</b>.",
+    "action": "Assign the province to a state",
+    "jump": "States › State membership"
+  },
+  "building_reference_province_invalid": {
+    "what": "Building {id} needs a valid {kind} reference province; the current value is {value}",
+    "impact": "Naval bases must point to an adjacent sea province; <b>with an invalid one the port is unusable</b>.",
+    "action": "Pick a reference province again",
+    "jump": "States › Buildings"
+  },
+  "duplicate_expected_province": {
+    "what": "The program's reference data self-check failed (duplicate province list)",
+    "impact": "The UI will show “check incomplete”; reported automatically."
+  },
+  "duplicate_province_within_state": {
+    "what": "State {id} lists province {province} {count} times",
+    "impact": "Duplicates are ignored — usually harmless, but it signals a data source problem.",
+    "action": "Deduplicate",
+    "jump": "States › State"
+  },
+  "duplicate_state_input": {
+    "what": "State {id} appears in {count} inputs",
+    "impact": "<b>Only one takes effect; your edits may be overwritten by the other.</b>",
+    "action": "Review the conflicting sources",
+    "jump": "States › State › Sources"
+  },
+  "province_in_multiple_states": {
+    "what": "Province {province} belongs to both state {a} and state {b}",
+    "impact": "<b>The game crashes.</b>",
+    "action": "Remove it from one of them",
+    "jump": "States › State"
+  },
+  "province_without_state": {
+    "what": "Province {province} belongs to no state",
+    "impact": "The game runs, but <b>pops a MAP_ERROR warning in game</b>.",
+    "action": "Assign a state",
+    "jump": "States › State"
+  },
+  "unknown_province": {
+    "what": "State {state} references the nonexistent province {province}",
+    "impact": "The reference is dropped as an invalid token and an error is logged; the rest of the state loads normally.",
+    "action": "Remove or fix it",
+    "jump": "States › State"
+  },
+  "bookmark_raw_no_bookmark": {
+    "what": "No bookmark could be parsed from bookmark file {path}",
+    "impact": "<b>The start does not appear on the campaign selection screen.</b>",
+    "action": "Check the file structure",
+    "jump": "Raw file editor"
+  },
+  "bookmark_raw_path_case_collision": {
+    "what": "Two bookmark files differ only in letter case ({a} / {b})",
+    "impact": "On Windows only one takes effect, on Linux both do — <b>behavior differs across platforms</b>.",
+    "action": "Rename one of them",
+    "jump": "Raw file list"
+  },
+  "descriptor_imported_replace_paths_require_full_export": {
+    "what": "This mod carries directory-level replace_path rules, but “export self-built content only” is selected",
+    "impact": "<b>The game unloads entire vanilla directories with nothing to replace them — large amounts of content go missing.</b>",
+    "action": "Switch to full export",
+    "jump": "Export page › Export mode"
+  },
+  "descriptor_replace_path_empty": {
+    "what": "replace_path “{path}” unloads a vanilla directory, but the export package has no files under it",
+    "impact": "<b>Everything in that directory will be missing in game.</b>",
+    "action": "Add files or remove the rule",
+    "jump": "Export page › replace_path"
+  },
+  "ideology_root_invalid": {
+    "what": "Custom ROOT ideology “{id}” is invalid: {reason}",
+    "impact": "Writes a broken common/ideologies — <b>the ruling party setup of every country referencing it fails</b>.",
+    "action": "Fix the ideology registry",
+    "jump": "Ideology workbench"
+  },
+  "ideology_root_submod_blocked": {
+    "what": "Replacing the ROOT ideology inside a submod",
+    "impact": "<b>This would wipe the base mod's ideology definitions.</b>",
+    "action": "Use the ROOT provided by the base mod, or make this a standalone mod",
+    "jump": "Project settings › Dependencies"
+  },
+  "raid_path_unsafe": {
+    "what": "Raid file {path} was skipped because of an unsafe path",
+    "impact": "<b>Its content was not imported into the project.</b>",
+    "action": "Review the skipped files",
+    "jump": "Import report"
+  },
+  "raid_deps_not_carried": {
+    "what": "Files the raids depend on were not imported along",
+    "impact": "The raids may be unavailable in game.",
+    "action": "Add the dependency files",
+    "jump": "Import › Dependencies"
+  },
+  "unit_path_unsafe": {
+    "what": "Sub-unit file {path} was skipped because of an unsafe path",
+    "impact": "<b>Its content was not imported into the project.</b>",
+    "action": "Review the skipped files",
+    "jump": "Import report"
+  },
+  "factions_path_unsafe": {
+    "what": "Faction file {path} was skipped because of an unsafe path",
+    "impact": "<b>Its content was not imported into the project.</b>",
+    "action": "Review the skipped files",
+    "jump": "Import report"
+  },
+  "loc_entry_unpreserved": {
+    "what": "{count} localisation entries were not preserved during import",
+    "impact": "These texts are not included in the export.",
+    "action": "Review the unpreserved list",
+    "jump": "Import report"
+  },
+  "state_raw_parse_failed": {
+    "what": "State file {path} has a syntax error",
+    "impact": "<b>All states in this file will be missing.</b>",
+    "action": "Jump to the error",
+    "jump": "Raw file editor"
+  },
+  "sub_unit_classification_invalid": {
+    "what": "The classification of sub-unit “{id}” is invalid: {reason}",
+    "impact": "<b>The game errors when loading the sub-unit.</b>",
+    "action": "Use a supported type",
+    "jump": "Sub-unit workbench"
+  },
+  "sub_unit_source_file_collision": {
+    "what": "Sub-unit “{id}” would be written to “{path}”, overwriting an existing sub-unit definition file",
+    "impact": "<b>The other sub-units in the original file will be missing.</b>",
+    "action": "Let the program assign the filename",
+    "jump": "Sub-unit workbench"
+  },
+  "base_id_collision_rerouted": {
+    "what": "A new ID collided with the base mod and was renamed automatically: {oldId} → {newId}",
+    "impact": "No impact on the game; base mod content is untouched. <b>Use the new ID in later references.</b>"
+  },
+  "non_additive_base_history_override": {
+    "what": "Blocked a direct rewrite of the history file of base mod country {tag}",
+    "impact": "<b>A direct rewrite overrides the original mod's setup and can conflict or even CTD</b>; an additive alternative was provided.",
+    "action": "View the alternative",
+    "jump": "AI chat"
+  },
+  "gateway_tool_passthrough_failed_sdk_emit": {
+    "what": "AI gateway routing error; this tool call did not run",
+    "impact": "That AI step did not take effect.",
+    "action": "Retry or switch the model",
+    "jump": "AI chat"
+  },
+  "content_language_export_languages_missing": {
+    "what": "{language} content exists, but that language is not enabled for export",
+    "impact": "<b>The content is not packaged; the game shows localisation keys instead.</b>",
+    "action": "Enable the language",
+    "jump": "Project settings › Mod content languages"
+  },
+  "display_name_placeholder": {
+    "what": "{count} {kind} entries have no name ({samples})",
+    "impact": "They show as IDs in game.",
+    "action": "Fill in names in bulk",
+    "jump": "The matching workbench"
+  },
+  "effect_typo": {
+    "what": "“{token}” is likely a typo; suggested replacement: “{suggestion}”",
+    "impact": "<b>The line does not take effect</b> with no in-game hint; diagnosing it requires error.log.",
+    "action": "Fix it",
+    "jump": "Script editing location"
+  },
+  "preserved_raw": {
+    "what": "Raw files preserved as-is",
+    "impact": "Passed check, counted toward ✅."
+  },
+  "research_bonus_as_effect": {
+    "what": "research_bonus is written in an effect position",
+    "impact": "<b>No effect</b>; it must sit in a modifier position.",
+    "action": "Fix the syntax",
+    "jump": "Script editing location"
+  },
+  "script_position_swap_ideas_child_outside_parent": {
+    "what": "A swap_ideas child sits outside its parent block",
+    "impact": "<b>The swap does not take effect.</b>",
+    "action": "Move it into the parent block",
+    "jump": "Script editing location"
+  },
+  "unknown_tech_category": {
+    "what": "Technology category “{name}” does not exist",
+    "impact": "<b>The technology appears on no tech tree tab</b> and cannot be researched.",
+    "action": "Choose an existing category",
+    "jump": "Technology workbench"
+  },
+  "vanilla_seed_dlc_effects_absent": {
+    "what": "Projects seeded from vanilla do not include the extra content vanilla keeps in its own state script ({count} states affected)",
+    "impact": "The province-level buildings stored in that script go missing — naval bases, bunkers, dams and landmarks — along with dated history blocks, DLC-conditional ownership transfers, resistance and compliance settings, and a few entries we do not read by name. Exporting these states overwrites the game's own files for them. The States page can restore this content from vanilla."
+  },
+  "ideology_undefined_standalone": {
+    "what": "Character {id} uses an ideology that is not defined in this project",
+    "impact": "<b>The ideology definition is not written into the exported mod.</b> Characters using it become a leader with no political party in game.",
+    "action": "Define the ideology",
+    "jump": "Ideologies › New"
+  },
+  "ideology_registry_parent_missing": {
+    "what": "Ideology {id} has no parent group",
+    "impact": "<b>The ideology definition is not written into the exported mod.</b> Characters using it become a leader with no political party in game.",
+    "action": "Choose a parent group",
+    "jump": "Ideologies › this ideology › Parent group"
+  },
+  "focus_layout_same_cell": {
+    "what": "Focuses {focus_ids} sit in the same cell ({position})",
+    "impact": "<b>Two focuses overlap; the game shows only one of them.</b>",
+    "action": "Move one of them",
+    "jump": "Focus tree › Layout"
+  },
+  "focus_layout_adjacent_same_row": {
+    "what": "Two focuses sit next to each other in the same row, one column apart",
+    "impact": "The focus icons overlap and are hard to read or click. Nothing is lost.",
+    "action": "Increase the horizontal gap",
+    "jump": "Focus tree › Layout"
+  },
+  "focus_display_name_unproven_fallback": {
+    "what": "Focus {focus_id} has no {locale} name in this project",
+    "impact": "<b>The focus name may not be localised in game.</b>",
+    "action": "Fill in the name",
+    "jump": "Focuses › this focus › Name"
+  },
+  "idea_no_modifier": {
+    "what": "Idea {idea_id} has no modifiers",
+    "impact": "It appears on the country but grants no bonus or penalty.",
+    "action": "Add a modifier",
+    "jump": "Ideas › this idea › Modifiers"
+  },
+  "character_no_military_traits": {
+    "what": "Commander {tag} has no military traits",
+    "impact": "The character can be appointed but brings no bonus.",
+    "action": "Add a military trait",
+    "jump": "Characters › this character › Traits"
+  },
+  "bookmark_selectable_ideology_missing": {
+    "what": "Selectable country {country_tag} in the bookmark has no ideology",
+    "impact": "The leader, party icon and country name may display incorrectly on the country-select screen.",
+    "action": "Set an ideology",
+    "jump": "Bookmarks › this country › Ideology"
+  },
+  "focus_tree_no_nodes": {
+    "what": "Focus tree {tree_id} contains no focuses",
+    "impact": "The tree is empty; the focus screen shows nothing.",
+    "action": "Add a focus",
+    "jump": "Focus trees › this tree"
+  },
+  "localisation_reference_not_in_project": {
+    "what": "{id} references localisation key {loc_key}, which is not in this project",
+    "impact": "The text renders as the key itself.",
+    "action": "Add the text",
+    "jump": "Localisation › New entry"
+  },
+  "mod_folder_name": {
+    "what": "Mod folder name {folder} contains characters HOI4 does not accept",
+    "impact": "The exported folder is renamed; the name shown in the launcher does not change.",
+    "action": "Use letters, digits and underscores",
+    "jump": "Export settings › Folder name"
+  },
+  "province_double_mapping": {
+    "what": "Province {province_id} belongs to states {state_ids} at the same time",
+    "impact": "<b>The game crashes on load.</b>",
+    "action": "Remove the province from one state",
+    "jump": "States › this state › Provinces"
+  },
+  "doctrine_track_unresolved": {
+    "what": "Doctrine {id} points at a track that is in neither this project nor the base mod",
+    "impact": "If the base mod removed that track, the doctrine tree may render incorrectly.",
+    "action": "Point it at an existing track",
+    "jump": "Doctrines › this doctrine › Track"
+  },
+  "event_namespace_mismatch": {
+    "what": "The event ID prefix does not match its namespace",
+    "impact": "Callers may not find it and the event never fires.",
+    "action": "Align the prefix with the namespace",
+    "jump": "Events › this event › ID"
+  },
+  "event_no_options": {
+    "what": "Event {event_id} has no options",
+    "impact": "The event pops up with no button to click.",
+    "action": "Add an option",
+    "jump": "Events › this event › Options"
+  },
+  "tech_circular_prereq": {
+    "what": "Technology {tech_id} and another technology require each other",
+    "impact": "Not measured; the in-game effect is unknown.",
+    "action": "Break one of the prerequisites",
+    "jump": "Technology › this technology › Prerequisites"
+  },
+  "tech_folder_unknown": {
+    "what": "Technology {id} has a folder the game does not know",
+    "impact": "Not measured; the in-game effect is unknown.",
+    "action": "Use a known folder",
+    "jump": "Technology › this technology › Folder"
+  },
+  "focus_effective_default_multiple": {
+    "what": "Several focus trees are marked default at once ({default_tree_ids})",
+    "impact": "Not measured; the in-game effect is unknown.",
+    "action": "Keep only one default",
+    "jump": "Focus trees › Default marker"
+  },
+  "focus_created_primary_id_collision": {
+    "what": "Focus tree {tree_id} writes to {canonical_path}, which already holds other content",
+    "impact": "Not measured; the in-game effect is unknown.",
+    "action": "Use a non-conflicting ID",
+    "jump": "Focuses › this focus › ID"
+  },
+  "focus_shared_pool_scope_ignored": {
+    "what": "The sharing scope set on focus tree {tree_id} has no effect on export",
+    "impact": "Not measured; the in-game effect is unknown.",
+    "action": "",
+    "jump": "Focus trees › this tree › Sharing scope"
+  },
+  "impassable_category_mismatch": {
+    "what": "{count} impassable states use a category vanilla never pairs with impassable",
+    "impact": "Impassable blocks troop entry and provincial building construction, and the state shows as impassable terrain in game. Vanilla only pairs it with wasteland or enclave, so a different category usually means the flag was set by accident. Nothing is blocked and no data is changed — worth a look before you ship."
+  },
+  "impassable_without_force_link": {
+    "what": "{count} impassable states do not say which neighbouring state owns them",
+    "impact": "Impassable land has no owner of its own, so it needs a neighbouring state to inherit ownership from. Vanilla sets force_link_ownership_to on all 21 of its impassable states (measured on 1.19.2 — this field is not in the wiki). Nothing is blocked and no data is changed — only newly saved states are required to fill it in.",
+    "action": "Open each state and pick the neighbouring state that should own it",
+    "jump": "States › this state › Ownership follows"
+  },
+  "bookmark_filter_registry_missing": {
+    "what": "The scenario filters could not be checked",
+    "impact": "The project has no supported target game version, so filter compatibility is unverified.",
+    "action": "Review scenario settings",
+    "jump": "Scenarios › Campaign settings"
+  },
+  "bookmark_default_multiple": {
+    "what": "{default_count} scenarios are marked as the default",
+    "impact": "The intended opening scenario is ambiguous.",
+    "action": "Choose the intended default",
+    "jump": "Scenarios › Default scenario"
+  },
+  "bookmark_default_country_not_interesting": {
+    "what": "The default country {default_country} is not in this scenario’s selectable countries",
+    "impact": "The game may not preselect the country you intended.",
+    "action": "Review selectable countries",
+    "jump": "Scenarios › Selectable countries"
+  },
+  "bookmark_country_label_invalid": {
+    "what": "A scenario country has an unsupported filter label",
+    "impact": "That country may not appear under the intended filter.",
+    "action": "Review country labels",
+    "jump": "Scenarios › Selectable countries › Labels"
+  },
+  "bookmark_country_labels_filter_missing": {
+    "what": "Countries have labels, but the label filter is not enabled",
+    "impact": "Players cannot use those labels to filter the country list.",
+    "action": "Review scenario filters",
+    "jump": "Scenarios › Filters"
+  },
+  "bookmark_filter_invalid_for_target": {
+    "what": "A scenario filter is not supported by the target game version",
+    "impact": "The filter may not work as intended in game.",
+    "action": "Review scenario filters",
+    "jump": "Scenarios › Filters"
+  },
+  "bookmark_filter_country_label_semantics": {
+    "what": "Country labels have been used as scenario filters",
+    "impact": "The filter buttons may not show the intended countries.",
+    "action": "Review filters and labels",
+    "jump": "Scenarios › Filters and country labels"
+  },
+  "focus_layout_missing_focus_id": {
+    "what": "A focus has no script ID",
+    "impact": "The game cannot reliably identify or reference this focus.",
+    "action": "Review focus IDs",
+    "jump": "Focus tree › Focus details"
+  },
+  "focus_layout_duplicate_focus_id": {
+    "what": "More than one focus uses the ID {focus_id}",
+    "impact": "References to this ID may point to the wrong focus.",
+    "action": "Review duplicate IDs",
+    "jump": "Focus tree › Focus details"
+  },
+  "focus_layout_relative_cycle": {
+    "what": "Focus positions refer back to one another: {cycle}",
+    "impact": "The game cannot resolve all relative positions in this loop.",
+    "action": "Review position references",
+    "jump": "Focus tree › Position"
+  },
+  "focus_layout_missing_anchor": {
+    "what": "Focus {focus_id} refers to missing position anchor {relative_position_id}",
+    "impact": "Its relative position cannot be resolved in this output.",
+    "action": "Review the position anchor",
+    "jump": "Focus tree › Position"
+  },
+  "focus_layout_replacement_global_shift": {
+    "what": "The replacement focus tree has been moved as a whole",
+    "impact": "Its alignment with other branches may have changed.",
+    "action": "Review the tree layout",
+    "jump": "Focus tree › Layout"
+  },
+  "focus_layout_unknown_mode": {
+    "what": "The focus layout check could not complete",
+    "impact": "The program could not interpret this tree’s layout mode; its layout remains unverified.",
+    "action": "Review the focus tree",
+    "jump": "Focus tree › Layout"
+  },
+  "timeline_base_timeline_source_unregistered": {
+    "what": "The base mod’s campaign dates have not been verified",
+    "impact": "The chosen dates may differ from the base mod’s timeline.",
+    "action": "Review campaign dates",
+    "jump": "Scenarios › Campaign settings"
+  }
+}

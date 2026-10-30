@@ -1,0 +1,11 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+spriteTypes = {
+	SpriteType = { name = "GFX_goal_generic_test" texturefile = "gfx/interface/goals/goal_generic_test.dds" }
+	SpriteType = { name = "GFX_goal_generic_construct_civ_factory" texturefile = "gfx/interface/goals/goal_generic_construct_civ_factory.dds" }
+	SpriteType = { name = "GFX_goal_generic_allies_build_infantry" texturefile = "gfx/interface/goals/goal_generic_allies_build_infantry.dds" }
+	SpriteType = { name = "GFX_focus_TST_special" texturefile = "gfx/interface/goals/focus_TST_special.dds" }
+	SpriteType = { name = "GFX_focus_usa_guarantee_the_american_dream" texturefile = "gfx/interface/goals/focus_test_usa_dream.dds" }
+	SpriteType = { name = "GFX_goal_generic_national_unity" texturefile = "gfx/interface/goals/goal_test_unity.dds" }
+	SpriteType = { name = "GFX_focus_generic_diplomatic_treaty" texturefile = "gfx/interface/goals/focus_test_treaty.dds" }
+	SpriteType = { name = "GFX_goal_generic_test_shine" texturefile = "gfx/interface/goals/goal_generic_test.dds" }
+}

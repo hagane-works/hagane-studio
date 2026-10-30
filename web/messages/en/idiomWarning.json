@@ -1,0 +1,4 @@
+{
+  "advisorSlotNote": "“{value}” isn't one of the advisor slots this base mod provides. This only matters if no loaded mod defines it — if you define it yourself, you're fine. Slots in the base mod: {list}",
+  "ideaTypeNote": "“{value}” isn't one of the idea categories this base mod provides. This only matters if no loaded mod defines it — if you define it yourself, you're fine. Categories in the base mod: {list}"
+}

@@ -1,0 +1,84 @@
+{
+ "source": "history/countries/TAG - Name.txt",
+ "game_version": "1.19.3.0",
+ "aliases": {
+  "CHI": [
+   "china"
+  ],
+  "COG": [
+   "congo"
+  ],
+  "ENG": [
+   "britain"
+  ],
+  "FIN": [
+   "finland"
+  ],
+  "FRA": [
+   "france"
+  ],
+  "GER": [
+   "germany"
+  ],
+  "HAN": [
+   "hanover"
+  ],
+  "HUN": [
+   "hungary"
+  ],
+  "ITA": [
+   "italy"
+  ],
+  "JAP": [
+   "japan"
+  ],
+  "NOR": [
+   "norway"
+  ],
+  "POL": [
+   "poland"
+  ],
+  "ROM": [
+   "romania"
+  ],
+  "SOV": [
+   "soviet",
+   "soviet_union",
+   "sovietunion"
+  ]
+ },
+ "names": {
+  "CHI": "China",
+  "COG": "Congo",
+  "ENG": "Britain",
+  "FIN": "Finland",
+  "FRA": "France",
+  "GER": "Germany",
+  "HAN": "Hanover",
+  "HUN": "Hungary",
+  "ITA": "Italy",
+  "JAP": "Japan",
+  "NOR": "Norway",
+  "POL": "Poland",
+  "ROM": "Romania",
+  "SOV": "Soviet union",
+  "USA": "USA"
+ },
+ "files": {
+  "CHI": "CHI - China.txt",
+  "COG": "COG - Congo.txt",
+  "ENG": "ENG - Britain.txt",
+  "FIN": "FIN - Finland.txt",
+  "FRA": "FRA - France.txt",
+  "GER": "GER - Germany.txt",
+  "HAN": "HAN - Hanover.txt",
+  "HUN": "HUN - Hungary.txt",
+  "ITA": "ITA - Italy.txt",
+  "JAP": "JAP - Japan.txt",
+  "NOR": "NOR - Norway.txt",
+  "POL": "POL - Poland.txt",
+  "ROM": "ROM - Romania.txt",
+  "SOV": "SOV - Soviet union.txt",
+  "USA": "USA - USA.txt"
+ }
+}

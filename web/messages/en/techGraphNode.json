@@ -1,0 +1,20 @@
+{
+  "startYear": "Start year",
+  "cost": "Research cost",
+  "costValue": "{cost} ({days} days)",
+  "source": "Source",
+  "level": "Level",
+  "unlockPath": "Unlock path",
+  "loading": "Loading…",
+  "noPath": "No unlock path yet. Add a focus, event, or decision that unlocks this tech.",
+  "moreCount": "+{n} more",
+  "unlockPathTitle": "Unlock path · hover to see the full path",
+  "deleteTitle": "Delete this tech",
+  "noIconTitle": "No icon available for this tech",
+  "iconLoadFailedTitle": "This tech has an uploaded icon, but it failed to load",
+  "unlockKind": {
+    "focus": "Focus",
+    "event": "Event",
+    "decision": "Decision"
+  }
+}

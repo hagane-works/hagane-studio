@@ -1,0 +1,15 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+characters = {
+	GER_franz_seldte = {
+		name = GER_franz_seldte
+		advisor = { slot = political_advisor idea_token = GER_franz_seldte }
+	}
+	GER_test_leader = {
+		name = GER_test_leader
+		country_leader = { ideology = nazism traits = { test_leader_trait } }
+	}
+	GER_test_general = {
+		name = GER_test_general
+		corps_commander = { skill = 3 traits = { test_general_trait } }
+	}
+}

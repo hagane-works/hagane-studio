@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "Search idea ID…",
+  "tabProject": "Project",
+  "tabCountry": "Country",
+  "tabShared": "Shared",
+  "tabLaws": "Laws",
+  "tabDesign": "Designers",
+  "tabOldAdvisors": "Old Advisors",
+  "tabOther": "Others",
+  "otherHint": "Use the search box to find ideas from other countries.",
+  "loadingVanilla": "Loading vanilla ideas…",
+  "noResults": "No results found.",
+  "emptyCategory": "No ideas in this category.",
+  "projectBadge": "project",
+  "promptManual": "Enter idea ID manually:",
+  "enterManually": "+ Enter manually…"
+}

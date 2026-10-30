@@ -1,0 +1,15 @@
+﻿l_english:
+ demo_focus_a: "Rally the Army"
+ demo_focus_a_desc: "The army must be rallied."
+ # a comment line
+
+ demo_focus_b: "Build Forts"
+ demo_num: "12"
+ demo_sym: "§Y-§!"
+ demo_var: "$WHO$"
+ demo_empty: ""
+ demo_quote: "He said \"go\""
+ demo_ver:0 "Versioned Text"
+ demo_only_en: "Only in English"
+ demo_shared: "Base English"
+ demo_lenient: "say "hi" now"

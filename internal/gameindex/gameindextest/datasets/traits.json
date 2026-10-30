@@ -1,0 +1,62 @@
+{
+ "source": "common/{country_leader,unit_leader,scientist_traits}",
+ "game_version": "1.19.3.0",
+ "total": 6,
+ "by_type": {
+  "country_leader": 2,
+  "scientist": 1,
+  "unit_leader": 3
+ },
+ "ids": [
+  "brilliant_strategist",
+  "test_general_trait",
+  "test_leader_trait",
+  "test_scientist_trait",
+  "test_second_leader_trait",
+  "test_terrain_trait"
+ ],
+ "ids_by_type": {
+  "country_leader": [
+   "test_leader_trait",
+   "test_second_leader_trait"
+  ],
+  "scientist": [
+   "test_scientist_trait"
+  ],
+  "unit_leader": [
+   "brilliant_strategist",
+   "test_general_trait",
+   "test_terrain_trait"
+  ]
+ },
+ "metadata_by_type": {
+  "unit_leader": {
+   "brilliant_strategist": {
+    "trait_types": [
+     "personality_trait"
+    ],
+    "types": [
+     "corps_commander",
+     "field_marshal"
+    ]
+   },
+   "test_general_trait": {
+    "trait_types": [
+     "personality_trait"
+    ],
+    "types": [
+     "corps_commander"
+    ]
+   },
+   "test_terrain_trait": {
+    "trait_types": [
+     "basic_terrain_trait"
+    ],
+    "types": [
+     "corps_commander",
+     "field_marshal"
+    ]
+   }
+  }
+ }
+}

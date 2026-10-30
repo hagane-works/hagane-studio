@@ -1,0 +1,39 @@
+{
+  "save": "Сохранить",
+  "cancel": "Отмена",
+  "delete": "Удалить",
+  "create": "Создать",
+  "loading": "Загрузка…",
+  "unnamed": "Без имени",
+  "all": "Все",
+  "clear": "Очистить",
+  "saving": "Сохранение…",
+  "revert": "Вернуть",
+  "search": "Поиск",
+  "discardUnsavedConfirm": "Отменить несохранённые изменения?",
+  "countBadgeTooltip": "Показано: {count} из {total}",
+  "copiedToClipboard": "Скопировано в буфер обмена",
+  "theme": {
+    "switchToDark": "Включить тёмную тему",
+    "switchToLight": "Включить светлую тему"
+  },
+  "language": {
+    "label": "Язык",
+    "heading": "ЯЗЫК / LANGUAGE",
+    "publicHeading": "Язык интерфейса",
+    "current": "Текущий язык: {language}",
+    "description": "При выборе языка интерфейс переключается на него. Языки содержимого мода настраиваются отдельно."
+  },
+  "emptyCtaCreate": "+ Создать",
+  "emptyCtaAi": "Поручить ИИ",
+  "emptyCtaAddCountry": "+ Сначала добавить страну",
+  "vocabulary": {
+    "customOption": "Своё значение… (введите вручную)",
+    "customChip": "Своё",
+    "vanillaGroup": "Ванилла",
+    "baseModGroup": "Из базового мода"
+  },
+  "chooseFile": "Выбрать файл",
+  "noFileChosen": "Файл не выбран",
+  "gameFolderMissing": "Для этого нужна базовая игра: выберите папку Hearts of Iron IV в разделе «Настройки» → «Установка Hearts of Iron IV»."
+}

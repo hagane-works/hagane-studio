@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Display name language tabs",
+  "addLanguage": "Add language",
+  "addingLanguage": "Adding {language}…",
+  "addLanguageError": "Couldn’t add {language} to this project. Try again.",
+  "legacyFallbackHint": "Showing the legacy name field — type to override; the new value is stored in display_name_locs.",
+  "fullName": {
+    "en": "English",
+    "zh": "Chinese (Simplified)",
+    "ru": "Russian",
+    "fr": "French",
+    "de": "German",
+    "es": "Spanish",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "pl": "Polish",
+    "pt": "Portuguese (Brazil)"
+  }
+}

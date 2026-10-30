@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "표시 이름 언어 탭",
+  "addLanguage": "언어 추가",
+  "addingLanguage": "{language} 추가 중…",
+  "addLanguageError": "{language}를 프로젝트에 추가하지 못했습니다. 다시 시도하세요.",
+  "legacyFallbackHint": "기존 이름 필드를 표시하고 있습니다. 입력하면 덮어쓰며 새 값은 display_name_locs에 저장됩니다.",
+  "fullName": {
+    "en": "영어",
+    "zh": "중국어 간체",
+    "ru": "러시아어",
+    "fr": "프랑스어",
+    "de": "독일어",
+    "es": "스페인어",
+    "ja": "일본어",
+    "ko": "한국어",
+    "pl": "폴란드어",
+    "pt": "포르투갈어(브라질)"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "expandPreview": "Expand preview",
+  "collapsePreview": "Collapse preview",
+  "tabLivePreview": "Live Preview",
+  "tabScript": "Script",
+  "tabReferencesHint": "See what other entities reference this one, and what it references.",
+  "tabScriptHint": "The exported mod script files for this entity (advanced).",
+  "livePreviewSelectHint": "Select an item from the list to see its in-game preview.",
+  "livePreviewCreateFirstHint": "Nothing to preview yet — create your first item from the list on the left.",
+  "liveDraftBadge": "Live draft",
+  "previewLabel": "Preview",
+  "openInGame": "Open in game",
+  "previewUnavailableGeneric": "This workbench has no in-game preview yet — every field is visible in the editor.",
+  "noSelectionGeneric": "Nothing selected",
+  "backFromNew": "Back",
+  "searchPlaceholderGeneric": "Search by name…",
+  "noMatchesGeneric": "No matching entries"
+}

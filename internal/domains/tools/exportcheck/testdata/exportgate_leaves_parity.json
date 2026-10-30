@@ -1,0 +1,983 @@
+{
+ "normalize": [
+  {
+   "input": [
+    "common/bookmarks"
+   ],
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "input": [
+    "common\\bookmarks"
+   ],
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "input": [
+    "./common/bookmarks"
+   ],
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "input": [
+    "././common/bookmarks"
+   ],
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "input": [
+    "common//bookmarks///x"
+   ],
+   "output": [
+    "common/bookmarks/x"
+   ]
+  },
+  {
+   "input": [
+    "common/bookmarks/"
+   ],
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "input": [
+    "  common/bookmarks  "
+   ],
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "input": [
+    ""
+   ],
+   "output": []
+  },
+  {
+   "input": [
+    "   "
+   ],
+   "output": []
+  },
+  {
+   "input": [
+    "a\nb"
+   ],
+   "output": []
+  },
+  {
+   "input": [
+    "a\rb"
+   ],
+   "output": []
+  },
+  {
+   "input": [
+    "common/a",
+    "common/a",
+    "common/b"
+   ],
+   "output": [
+    "common/a",
+    "common/b"
+   ]
+  },
+  {
+   "input": [
+    "common/a/",
+    "common/a"
+   ],
+   "output": [
+    "common/a"
+   ]
+  },
+  {
+   "input": [
+    "/"
+   ],
+   "output": []
+  },
+  {
+   "input": [
+    "中文/路径"
+   ],
+   "output": [
+    "中文/路径"
+   ]
+  }
+ ],
+ "parse": [
+  {
+   "text": "name=\"Mod\"\nreplace_path=\"common/bookmarks\"\n",
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "text": "replace_path=common/bookmarks\n",
+   "output": [
+    "common/bookmarks"
+   ]
+  },
+  {
+   "text": "replace_path = \"common/a\"\nreplace_path = \"common/b\"\n",
+   "output": [
+    "common/a",
+    "common/b"
+   ]
+  },
+  {
+   "text": "replace_path = \"common/a\"\nreplace_path = \"common/a\"\n",
+   "output": [
+    "common/a"
+   ]
+  },
+  {
+   "text": "replace_path=\"common/a\" # comment\n",
+   "output": [
+    "common/a"
+   ]
+  },
+  {
+   "text": "# replace_path=\"common/ignored\"\nreplace_path=\"common/real\"\n",
+   "output": [
+    "common/real"
+   ]
+  },
+  {
+   "text": "  replace_path\t=\t\"common/tabbed\"  \n",
+   "output": [
+    "common/tabbed"
+   ]
+  },
+  {
+   "text": "xreplace_path=\"common/nope\"\n",
+   "output": []
+  },
+  {
+   "text": "replace_path=\"\"\n",
+   "output": []
+  },
+  {
+   "text": "name=\"没有替换路径\"\n",
+   "output": []
+  },
+  {
+   "text": "",
+   "output": []
+  },
+  {
+   "text": "replace_path={ common/a }\n",
+   "output": []
+  }
+ ],
+ "effective": [
+  {
+   "imported": [],
+   "selected": [],
+   "output": []
+  },
+  {
+   "imported": [
+    "common/a"
+   ],
+   "selected": [],
+   "output": [
+    "common/a"
+   ]
+  },
+  {
+   "imported": [],
+   "selected": [
+    "common/b"
+   ],
+   "output": [
+    "common/b"
+   ]
+  },
+  {
+   "imported": [
+    "common/a"
+   ],
+   "selected": [
+    "common/b"
+   ],
+   "output": [
+    "common/a",
+    "common/b"
+   ]
+  },
+  {
+   "imported": [
+    "common/a"
+   ],
+   "selected": [
+    "common/a"
+   ],
+   "output": [
+    "common/a"
+   ]
+  },
+  {
+   "imported": [
+    "common/a/"
+   ],
+   "selected": [
+    "./common/a"
+   ],
+   "output": [
+    "common/a"
+   ]
+  }
+ ],
+ "sub_units": [
+  {
+   "name": "ok",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u1",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [
+      "cat_a"
+     ],
+     "source_file": "common/units/GER_sub_units.txt",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "bad-type",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u2",
+     "unit_types": [
+      "not_a_type"
+     ],
+     "categories": [],
+     "source_file": "",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_classification_invalid",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u2"
+     },
+     "severity": "blocker",
+     "message": "Sub-unit 'u2' has an invalid classification: unsupported sub-unit internal type 'not_a_type'.",
+     "fix_hint": "Use only supported internal types. Put special_forces and other yes/no properties in their dedicated fields; custom categories remain allowed."
+    }
+   ]
+  },
+  {
+   "name": "boolean-field-as-type",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u3",
+     "unit_types": [
+      "special_forces"
+     ],
+     "categories": [],
+     "source_file": "",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_classification_invalid",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u3"
+     },
+     "severity": "blocker",
+     "message": "Sub-unit 'u3' has an invalid classification: unit_types contains boolean field 'special_forces'; set special_forces=yes instead.",
+     "fix_hint": "Use only supported internal types. Put special_forces and other yes/no properties in their dedicated fields; custom categories remain allowed."
+    }
+   ]
+  },
+  {
+   "name": "bad-category",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u4",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [
+      "bad token!"
+     ],
+     "source_file": "",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_classification_invalid",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u4"
+     },
+     "severity": "blocker",
+     "message": "Sub-unit 'u4' has an invalid classification: invalid sub-unit category token 'bad token!'.",
+     "fix_hint": "Use only supported internal types. Put special_forces and other yes/no properties in their dedicated fields; custom categories remain allowed."
+    }
+   ]
+  },
+  {
+   "name": "collision-vanilla",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u5",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/infantry.txt",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_source_file_collision",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u5"
+     },
+     "severity": "blocker",
+     "detail": {
+      "source_file": "common/units/infantry.txt",
+      "vanilla_collision": true
+     },
+     "message": "Sub-unit 'u5' would write to 'common/units/infantry.txt', replacing an existing unit definition file instead of adding a project-owned file.",
+     "fix_hint": "Let Hagane Works assign the output filename, or import the complete original file before editing it."
+    }
+   ]
+  },
+  {
+   "name": "collision-custom",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u6",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/whatever.txt",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_source_file_collision",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u6"
+     },
+     "severity": "blocker",
+     "detail": {
+      "source_file": "common/units/whatever.txt",
+      "vanilla_collision": false
+     },
+     "message": "Sub-unit 'u6' would write to 'common/units/whatever.txt', replacing an existing unit definition file instead of adding a project-owned file.",
+     "fix_hint": "Let Hagane Works assign the output filename, or import the complete original file before editing it."
+    }
+   ]
+  },
+  {
+   "name": "safe-legacy",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u7",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/hagane_units.txt",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "safe-tag",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u8",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/GER_sub_units.txt",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "imported-row-skipped",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u9",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/infantry.txt",
+     "source": "imported"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "imported-path-allowed",
+   "project_tag": "GER",
+   "imported_raw_paths": [
+    "common/units/imported.txt"
+   ],
+   "rows": [
+    {
+     "sub_unit_id": "u10",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/imported.txt",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "empty-tag",
+   "project_tag": "",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u11",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/x.txt",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_source_file_collision",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u11"
+     },
+     "severity": "blocker",
+     "detail": {
+      "source_file": "common/units/x.txt",
+      "vanilla_collision": false
+     },
+     "message": "Sub-unit 'u11' would write to 'common/units/x.txt', replacing an existing unit definition file instead of adding a project-owned file.",
+     "fix_hint": "Let Hagane Works assign the output filename, or import the complete original file before editing it."
+    }
+   ]
+  },
+  {
+   "name": "tag-with-punct",
+   "project_tag": "G-E",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u12",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common/units/G_E_sub_units.txt",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "no-source-file",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u13",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "backslash-path",
+   "project_tag": "GER",
+   "imported_raw_paths": [],
+   "rows": [
+    {
+     "sub_unit_id": "u14",
+     "unit_types": [
+      "infantry"
+     ],
+     "categories": [],
+     "source_file": "common\\units\\infantry.txt",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "sub_unit_source_file_collision",
+     "entity_ref": {
+      "type": "sub_unit",
+      "id": "u14"
+     },
+     "severity": "blocker",
+     "detail": {
+      "source_file": "common/units/infantry.txt",
+      "vanilla_collision": true
+     },
+     "message": "Sub-unit 'u14' would write to 'common/units/infantry.txt', replacing an existing unit definition file instead of adding a project-owned file.",
+     "fix_hint": "Let Hagane Works assign the output filename, or import the complete original file before editing it."
+    }
+   ]
+  }
+ ],
+ "source_files": [
+  {
+   "input": "common/units/x.txt",
+   "output": "common/units/x.txt",
+   "error": null
+  },
+  {
+   "input": "common\\units\\x.txt",
+   "output": "common/units/x.txt",
+   "error": null
+  },
+  {
+   "input": "/common/units/x.txt",
+   "output": "common/units/x.txt",
+   "error": null
+  },
+  {
+   "input": "common/units/X.TXT",
+   "output": "common/units/X.TXT",
+   "error": null
+  },
+  {
+   "input": "",
+   "output": "",
+   "error": null
+  },
+  {
+   "input": "common/units",
+   "output": null,
+   "error": "source_file must be a mod-relative common/units/*.txt path"
+  },
+  {
+   "input": "common/units/a/b.txt",
+   "output": null,
+   "error": "source_file must be a mod-relative common/units/*.txt path"
+  },
+  {
+   "input": "common/other/x.txt",
+   "output": null,
+   "error": "source_file must be a mod-relative common/units/*.txt path"
+  },
+  {
+   "input": "common/units/../x.txt",
+   "output": null,
+   "error": "source_file must be a mod-relative common/units/*.txt path"
+  },
+  {
+   "input": "C:common/units/x.txt",
+   "output": null,
+   "error": "source_file must be a mod-relative common/units/*.txt path"
+  },
+  {
+   "input": "common/units/x.png",
+   "output": null,
+   "error": "source_file must be a mod-relative common/units/*.txt path"
+  }
+ ],
+ "loc_extract": [
+  {
+   "value": "custom_effect_tooltip = my_key",
+   "keys": [
+    "my_key"
+   ]
+  },
+  {
+   "value": "custom_effect_tooltip = \"my_quoted_key\"",
+   "keys": [
+    "my_quoted_key"
+   ]
+  },
+  {
+   "value": "custom_trigger_tooltip = trig_key",
+   "keys": [
+    "trig_key"
+   ]
+  },
+  {
+   "value": "tooltip = t_key",
+   "keys": [
+    "t_key"
+   ]
+  },
+  {
+   "value": "localization_key = lk",
+   "keys": [
+    "lk"
+   ]
+  },
+  {
+   "value": "localisation_key = lk2",
+   "keys": [
+    "lk2"
+   ]
+  },
+  {
+   "value": "CUSTOM_EFFECT_TOOLTIP = upper_key",
+   "keys": [
+    "upper_key"
+   ]
+  },
+  {
+   "value": "xcustom_effect_tooltip = should_not_match",
+   "keys": []
+  },
+  {
+   "value": "my_custom_effect_tooltip = should_not_match2",
+   "keys": []
+  },
+  {
+   "value": "custom_effect_tooltip = yes",
+   "keys": []
+  },
+  {
+   "value": "custom_effect_tooltip = 12345",
+   "keys": []
+  },
+  {
+   "value": "custom_effect_tooltip = my_key # comment\ncustom_effect_tooltip = second",
+   "keys": [
+    "my_key",
+    "second"
+   ]
+  },
+  {
+   "value": "# custom_effect_tooltip = commented_out",
+   "keys": []
+  },
+  {
+   "value": "text = \"a # b\" custom_effect_tooltip = after_hash_in_quotes",
+   "keys": [
+    "after_hash_in_quotes"
+   ]
+  },
+  {
+   "value": "custom_effect_tooltip = \"with spaces\"",
+   "keys": []
+  },
+  {
+   "value": [
+    "custom_effect_tooltip = from_list"
+   ],
+   "keys": [
+    "from_list"
+   ]
+  },
+  {
+   "value": {
+    "a": "custom_effect_tooltip = from_dict"
+   },
+   "keys": [
+    "from_dict"
+   ]
+  },
+  {
+   "value": {
+    "a": [
+     {
+      "b": "custom_effect_tooltip = deep"
+     }
+    ]
+   },
+   "keys": [
+    "deep"
+   ]
+  },
+  {
+   "value": null,
+   "keys": []
+  },
+  {
+   "value": 123,
+   "keys": []
+  },
+  {
+   "value": "",
+   "keys": []
+  }
+ ],
+ "loc_scan": [
+  {
+   "name": "none-defined",
+   "defined": [],
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_a",
+     "field": "completion_reward",
+     "value": "custom_effect_tooltip = key_one"
+    }
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "GER_a",
+      "loc_key": "key_one",
+      "field": "completion_reward"
+     },
+     "detail": {
+      "id": "GER_a",
+      "key": "key_one",
+      "field": "completion_reward"
+     },
+     "severity": "warning",
+     "message": "focus 'GER_a' references localisation key 'key_one' in completion_reward, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'key_one' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    }
+   ]
+  },
+  {
+   "name": "defined",
+   "defined": [
+    "key_one"
+   ],
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_a",
+     "field": "completion_reward",
+     "value": "custom_effect_tooltip = key_one"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "dedup-same-entity",
+   "defined": [],
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_a",
+     "field": "completion_reward",
+     "value": "custom_effect_tooltip = key_one"
+    },
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_a",
+     "field": "available",
+     "value": "custom_effect_tooltip = key_one"
+    }
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "GER_a",
+      "loc_key": "key_one",
+      "field": "completion_reward"
+     },
+     "detail": {
+      "id": "GER_a",
+      "key": "key_one",
+      "field": "completion_reward"
+     },
+     "severity": "warning",
+     "message": "focus 'GER_a' references localisation key 'key_one' in completion_reward, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'key_one' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    }
+   ]
+  },
+  {
+   "name": "sorted-output",
+   "defined": [],
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_z",
+     "field": "f",
+     "value": "custom_effect_tooltip = k2"
+    },
+    {
+     "entity_type": "event",
+     "entity_id": "ger.1",
+     "field": "f",
+     "value": "custom_effect_tooltip = k1"
+    },
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_a",
+     "field": "f",
+     "value": "custom_effect_tooltip = k3"
+    }
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "event",
+      "id": "ger.1",
+      "loc_key": "k1",
+      "field": "f"
+     },
+     "detail": {
+      "id": "ger.1",
+      "key": "k1",
+      "field": "f"
+     },
+     "severity": "warning",
+     "message": "event 'ger.1' references localisation key 'k1' in f, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'k1' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    },
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "GER_a",
+      "loc_key": "k3",
+      "field": "f"
+     },
+     "detail": {
+      "id": "GER_a",
+      "key": "k3",
+      "field": "f"
+     },
+     "severity": "warning",
+     "message": "focus 'GER_a' references localisation key 'k3' in f, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'k3' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    },
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "GER_z",
+      "loc_key": "k2",
+      "field": "f"
+     },
+     "detail": {
+      "id": "GER_z",
+      "key": "k2",
+      "field": "f"
+     },
+     "severity": "warning",
+     "message": "focus 'GER_z' references localisation key 'k2' in f, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'k2' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    }
+   ]
+  },
+  {
+   "name": "multi-key-one-source",
+   "defined": [],
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "GER_a",
+     "field": "f",
+     "value": "custom_effect_tooltip = kb\ncustom_effect_tooltip = ka"
+    }
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "GER_a",
+      "loc_key": "ka",
+      "field": "f"
+     },
+     "detail": {
+      "id": "GER_a",
+      "key": "ka",
+      "field": "f"
+     },
+     "severity": "warning",
+     "message": "focus 'GER_a' references localisation key 'ka' in f, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'ka' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    },
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "GER_a",
+      "loc_key": "kb",
+      "field": "f"
+     },
+     "detail": {
+      "id": "GER_a",
+      "key": "kb",
+      "field": "f"
+     },
+     "severity": "warning",
+     "message": "focus 'GER_a' references localisation key 'kb' in f, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'kb' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    }
+   ]
+  }
+ ]
+}

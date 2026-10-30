@@ -1,0 +1,11 @@
+{
+  "description": "전체 모드가 내보내는 실제 파일 트리와 파일 내용을 살펴봅니다. 다운로드하는 zip의 내용과 동일합니다.",
+  "includeImportedTitleOn": "원본 모드(바닐라 또는 이전 모드)에서 가져온 콘텐츠를 포함하여 전체 모드 미리보기",
+  "includeImportedTitleOff": "사용자가 만들거나 수정한 엔티티만 미리보기",
+  "includeImportedLabel": "가져온 항목 포함(원본 모드에서)",
+  "binaryNote": "바이너리 파일({size}) — 미리 볼 수 없습니다. 모드 폴더에 저장하면 바이트 그대로 기록합니다.",
+  "selectFileHint": "왼쪽에서 파일을 골라 내용을 미리 보세요",
+  "buttonTitle": "전체 모드의 내보내기 파일 트리와 내용 미리보기",
+  "buttonLabel": "파일 미리보기",
+  "loading": "불러오는 중…"
+}

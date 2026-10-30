@@ -1,0 +1,7 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+duplicate_archetypes = {
+	small_plane_cas_airframe = {
+		archetype = small_plane_airframe
+		picture = archetype_CAS_equipment
+	}
+}

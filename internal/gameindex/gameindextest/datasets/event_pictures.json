@@ -1,0 +1,17 @@
+{
+ "all_pictures": [
+  "GFX_news_event_generic_parade",
+  "GFX_report_event_generic_rally"
+ ],
+ "by_prefix": {
+  "news": [
+   "GFX_news_event_generic_parade"
+  ],
+  "report": [
+   "GFX_report_event_generic_rally"
+  ]
+ },
+ "game_version": "1.19.3.0",
+ "source": "interface/eventpictures*.gfx + news_event_pictures.gfx",
+ "total": 2
+}

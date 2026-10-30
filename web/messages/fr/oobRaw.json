@@ -1,0 +1,21 @@
+{
+  "title": "Ordre de bataille et unités (conservés)",
+  "subtitle": "Votre OOB, vos unités, vos Modèles de divisions et votre Matériel écrits à la main sont conservés tels quels et réexportés octet par octet.",
+  "preservedBadge": "Conservé lors de l'aller-retour",
+  "detectedHeading": "Détecté dans ce fichier",
+  "stat": {
+    "set_oob": "Référence OOB terrestre",
+    "set_air_oob": "Référence OOB aérien",
+    "set_naval_oob": "Référence OOB naval",
+    "units": "bloc units",
+    "division_template": "division_template",
+    "equipment": "equipment / production"
+  },
+  "editLabel": "Script brut d'OOB / unités",
+  "editHelp": "Modifiez librement : ce texte exact est écrit dans history/countries/[TAG].txt à l'exportation. Les commentaires et blocs en ligne sont conservés.",
+  "emptyTitle": "Aucun OOB ni unité pour le moment",
+  "emptyBody": "Collez ici une référence set_oob ou un bloc units : il survivra sans changement à l'exportation. set_oob désigne un fichier dans history/units/ : le programme le génère depuis vos ateliers Modèles de divisions et Armée initiale, et un fichier du même nom provenant d'un mod importé est conservé intact. Nommez-le tag de pays + année de départ (par exemple ROM_1936) — tout le reste déduit le pays de ce préfixe.",
+  "emptyInsert": "Insérer un début d'OOB",
+  "starterComment": "# Ordre de bataille — écrit tel quel dans le fichier historique de ce pays",
+  "starterNeedsTag": "Renseignez d'abord le tag de pays de ce fichier d'historique — le nom du fichier OOB doit commencer par ce tag (par exemple ROM_1936), sinon rien ne permet de savoir à quel pays appartiennent ces unités."
+}

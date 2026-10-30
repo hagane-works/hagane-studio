@@ -1,0 +1,4 @@
+{
+ "sizes": {},
+ "source": "HOI4 interface/Technologies.gfx + dlc/*/interface/*_technologies.gfx, GFX_<tech>_medium texture sizes; techs not listed use 64x64"
+}

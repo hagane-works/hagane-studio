@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "Your browser doesn't support the File System Access API. Use Chrome or Edge.",
+  "syncing": "Syncing...",
+  "syncToNamed": "Sync to {dir}",
+  "syncToFolder": "Write to game folder",
+  "titleWithFolder": "Sync the whole mod to {dir}/ (takes effect after restarting the mod in HOI4)",
+  "titleNoFolder": "The first time, you'll pick a mod folder. It's reused for the rest of this session.",
+  "tooltipTitle": "After export: full testing workflow",
+  "tooltipContent": "HOI4 mod testing workflow (create + Debug + logs):\n1. Put the chosen mod folder in %userprofile%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\\n2. Launcher → Mod library → tick this mod\n3. Enable Debug mode, either way:\n   • Steam · right-click HOI4 → Properties → General → enter -debug in launch options\n   • Local · create a dowser.exe shortcut → Properties → append \" -debug\" to Target (note the space before the dash)\n4. Launch the game · error.log pops up automatically (Notepad) once the main menu finishes loading\n5. Error triage · three categories in error.log:\n   • Family · cross-mod / cross-entity naming idiom drift\n   • Vanilla compatible · compatibility with vanilla (DLC fields / version)\n   • Mod-internal · inside this mod (broken ID / circular ref)\n6. Log location · %userprofile%\\Documents\\...\\logs\\ (error.log + game.log)\n> Note: some severe errors may not be logged before a crash · diagnose with in-game symptoms + game.log together.",
+  "includeImportedTitleOn": "Include content imported from the original mod (vanilla or old-mod sources). Writes the full mod folder.",
+  "includeImportedTitleOff": "Sync only the entities you created or modified. Don't overwrite old imported content.",
+  "includeImportedLabel": "Include imported",
+  "changeFolderTitle": "Change mod folder",
+  "changeFolder": "Change folder",
+  "wroteFiles": "✓ Wrote {count} files",
+  "wrotePartial": "⚠ Wrote {ok}/{total} files, {failed} failed (e.g. {firstError}). The mod folder is partially updated.",
+  "illegalPathSegment": "Illegal path segment \"{segment}\" in {path}",
+  "additiveCaption": "Sync only writes or overwrites; it never deletes.",
+  "additiveTitle": "Sync is additive",
+  "additiveWarning": "Sync only writes or overwrites files; it never deletes. If you renamed, deleted, or re-tagged an entity, the old .txt/.yml/.dds stays in the folder and the game loads both the old and new versions. After such changes, manually clear the mod's generated folders (common/, events/, history/, localisation/, gfx/) before syncing, or sync into a fresh folder."
+}

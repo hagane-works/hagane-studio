@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows a empêché Hagane Works d’enregistrer des fichiers",
+  "writeBlockedDescription": "L’écriture dans {folder} a été refusée. Si la Protection contre les ransomwares (Accès contrôlé aux dossiers) est activée dans Sécurité Windows, autorisez HaganeWorks.exe ou choisissez dans les Paramètres un Dossier de création hors des dossiers protégés comme Documents."
+}

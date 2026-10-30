@@ -1,0 +1,20 @@
+{
+  "heading": "Портрет & активы",
+  "uploading": "Загрузка...",
+  "uploadButton": "Загрузить портрет",
+  "ratioHint": "PNG/JPG, рекомендуемое соотношение 3:4",
+  "resetConfirm": "Reset {tag}'s portrait back to vanilla? Your uploaded portrait will be removed.",
+  "resetFailed": "Ошибка восстановления",
+  "resetting": "Перезапуск...",
+  "resetButton": "» Переместиться в портрет Ванильи",
+  "generatedPreview": "Генерированный просмотр",
+  "leaderPortraitAlt": "Портрет лидера",
+  "leaderPortrait": "Лидер Портрейт",
+  "advisorIconAlt": "Значок советника",
+  "advisorIcon": "Советник Икон",
+  "notImported": "» Портрет не импортируется",
+  "referencesSprite": "Этот персонаж ссылается на портрет",
+  "notImportedDetail": "Но импорт не позволил решить эту проблему с изображением — собственный рисунок.gfx/.ds для этой сприта, вероятно, не был реализован (обычно при использовании только \"Import.txt\"). Нажмите \"Upload Portrait Image\" выше, чтобы добавить портрет или переимпортировать полную папку мода для ввода его произведений.",
+  "noPortrait": "Портрет не загружен",
+  "noPortraitHint": "Загрузка для автогенерации портрета/конкурса советника/конкурса атрибута"
+}

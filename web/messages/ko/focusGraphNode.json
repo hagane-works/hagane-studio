@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "조건부 분기 — allow_branch 조건을 충족할 때만 나타나는 숨겨진 경로입니다.",
+  "allowBranchBadge": "분기",
+  "loadTreeTitle": "이 국가중점을 완료하면 다른 국가중점 트리로 이동합니다.",
+  "loadTreeBadge": "이동",
+  "relativePositionTitle": "상대 위치",
+  "addChildTitle": "연결된 하위 국가중점 추가",
+  "addMutexChildTitle": "상호 배타 국가중점 추가"
+}

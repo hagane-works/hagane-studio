@@ -1,0 +1,6 @@
+{
+  "uploadHint": "Ordner-Upload funktioniert in Ihrem Browser. Speichern von Änderungen direkt zurück in einen Ordner benötigt Chrome, Edge, oder Opera — auf anderen Browsern, verwenden Zip-Export statt.",
+  "writeHint": "Ihr Browser kann keine Dateien direkt in einen Ordner schreiben. Verwenden Sie Zip-Export, um den Mod herunterzuladen, dann entpacken Sie ihn in Ihren HOI4-Mod-Ordner. (Direkter Ordner speichern braucht Chrome, Edge, oder Opera.)",
+  "largeFolderConfirm": "Dieser Ordner enthält {count} Mod-Dateien. Das Lesen eines sehr großen Ordners kann eine Weile dauern. Weiter?",
+  "noRelevantFiles": "Im ausgewählten Ordner wurden keine Mod-Dateien (.txt /.gfx /.yml / Images) gefunden. Stellen Sie sicher, dass Sie den Mod-Root ausgewählt haben – den Ordner, der Descriptor.mod, Common und Events enthält."
+}

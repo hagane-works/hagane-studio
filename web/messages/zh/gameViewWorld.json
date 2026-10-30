@@ -1,0 +1,144 @@
+{
+  "common": {
+    "notTags": "不是国家代码:{tags}"
+  },
+  "ideology": {
+    "title": "政党与意识形态",
+    "kind": "政治 · {tag} · 国家历史 · 项目意识形态",
+    "loadingPolitics": "读取项目里的开局政治…",
+    "definitions": "意识形态定义",
+    "definitionsHint": "选择 ROOT 或流派；下面就是意识形态库工作台的同一个编辑器。",
+    "target": "编辑对象",
+    "targetLabel": "编辑意识形态",
+    "loadingDefinitions": "读取项目的意识形态…",
+    "none": "没有可编辑的意识形态。",
+    "workbenchNote": "新建、删除与引用影响检查留在意识形态库工作台。",
+    "politicsLog": "{tag} 开局政治",
+    "politicsSaved": "已保存 {tag} 的开局政治",
+    "leaderKind": "人物意识形态 · {token}",
+    "leaderSaved": "已保存人物「{name}」的意识形态",
+    "definitionLog": "政党与意识形态 · {name}",
+    "definitionKind": "意识形态 · {id}",
+    "definitionSaved": "意识形态「{name}」已保存",
+    "iconLog": "政党与意识形态 · {name} · 图标",
+    "iconSaved": "已换上「{name}」的图标",
+    "saved": "意识形态已保存",
+    "problem": {
+      "supportTotal": "支持率合计要是 100(现在是 {total})",
+      "lastElectionDate": "上次选举的日期要写成 1933.3.5 这样",
+      "frequency": "选举间隔要是不小于 0 的整数(月)",
+      "rulingZero": "执政党的支持率不能是 0",
+      "idRequired": "填一个标识,例如 technocracy",
+      "idInvalid": "标识只能用小写字母、数字和下划线,且不能以数字开头",
+      "idTaken": "项目里已经有「{id}」",
+      "rootTakeover": "这个项目基于基础 Mod,沿用它的意识形态组,不能在这里新建组",
+      "sourceLock": "这个意识形态来自基础 Mod,要先导入并锁定它的来源,才能在它下面新建流派"
+    }
+  },
+  "warGoal": {
+    "field": {
+      "baseDays": "正当化基础天数",
+      "perStateDays": "每多一个州加的天数",
+      "stateLimit": "最多可选州数",
+      "threat": "每个州带来的紧张度"
+    },
+    "kind": "战争目标 · {id}",
+    "loading": "读取项目里的战争目标…",
+    "saved": "已保存战争目标「{name}」",
+    "deleted": "已删除战争目标「{name}」",
+    "formula": "正当化天数 = 基础 + 每州 × 选的州数;每天花 0.2 政治点(NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP)。",
+    "problem": "要填不小于 0 的数字",
+    "note": "保存会把这个战争目标所在的文件整份收进项目。",
+    "hit": "战争目标 {name}"
+  },
+  "autonomy": {
+    "kind": "自治等级 · {id}",
+    "saved": "已保存自治等级「{name}」",
+    "loading": "读取项目里的自治等级…",
+    "name": "名称(界面上显示的等级名)",
+    "minFreedom": "自由度下限(0 到 1,附庸的升降一级按它排)",
+    "manpower": "宗主国拿到的附庸人力比例(0 到 1)",
+    "unset": "不写",
+    "rule": "规则(rule:附庸能做什么)",
+    "modifier": "修正(modifier)",
+    "scriptNote": "规则与修正按游戏脚本写,留空即去掉。",
+    "problem": "名称不能空,数值要在 0 到 1 之间,自由度下限不能空",
+    "note": "保存会把这个等级所在的文件整份收进项目、只改这一块;在自治等级工作台建的等级改那一行。名称存为这个等级 id 的本地化文字,所有界面一起变。",
+    "hit": "自治等级 {tag} {name}"
+  },
+  "newCountry": {
+    "heading": "国家",
+    "summary": "新建一个国家,给它州",
+    "create": "+ 新建国家",
+    "giveTitle": "给 {tag} 州(设为拥有者并加核心)",
+    "searchPlaceholder": "州名、编号或现在的拥有者(如 GER)",
+    "searchLabel": "搜索州",
+    "noMatch": "没有匹配的州。",
+    "loading": "读取州…",
+    "chosen": "已选:{list}",
+    "listSeparator": "、",
+    "giving": "正在给…",
+    "give": "把 {count} 个州给 {tag}",
+    "gave": "已把 {count} 个州给了 {tag}",
+    "gaveHint": "它现在能在选国界面的小国列表里选到了。",
+    "giveFailed": "没能给州:{error}",
+    "hint": "新建后在这里给它州;游戏只列出有州的国家。也可以在「世界地图」里新增一块土地给它。",
+    "gaveLog": "{tag} 得到 {count} 个州",
+    "statesKind": "地块 · {ids}",
+    "createdLog": "新建国家 {tag}",
+    "countryKind": "国家 · {tag}"
+  },
+  "province": {
+    "stateSaved": "已保存地块 {id}",
+    "editKind": "地块 · 改属性",
+    "renameLog": "改名 · {key}",
+    "renameKind": "地块 · 名字",
+    "stateTitle": "地块 {id} · {name}",
+    "noStateTitle": "这里不属于任何地块",
+    "stateKind": "STATE_{id} · 拥有者 {owner} · {count} 个省份",
+    "noOwner": "无",
+    "provinceKind": "省份 {id} · {kind}",
+    "regionTitle": "战略区 {id} · {name}",
+    "noRegionTitle": "这里不属于任何战略区",
+    "regionKind": "STRATEGICREGION_{id} · {count} 个省份",
+    "provinceId": "省份 {id}",
+    "inState": "{kind} · 在地块 {id} {name}",
+    "scope": "点地图选",
+    "scopeState": "地块(州)",
+    "scopeProvince": "省份",
+    "scopeRegion": "战略区",
+    "landNoState": "不属于任何地块。换到「省份」改这一块本身。",
+    "waterNoState": "海洋和湖泊不属于任何地块。换到「省份」改这一块本身。",
+    "noRegion": "这一块不属于任何战略区。",
+    "openWorldMap": "在世界地图工作台打开 ↗"
+  },
+  "state": {
+    "fallbackTitle": "州",
+    "kind": "州 · {id}",
+    "countryStates": "这个国家的州",
+    "pick": "选州",
+    "logKind": "地块 · {id}",
+    "loadFailed": "没能读取这个地块:{error}",
+    "missing": "原版里没有地块 {id},项目里也没有,这里没有可改的数据。",
+    "adopting": "把这个地块拉进项目…(不改就不会写进导出的 mod)",
+    "loading": "读取项目里的地块…",
+    "problem": {
+      "ownerRequired": "拥有者不能为空"
+    }
+  },
+  "diplomacy": {
+    "title": "开局外交",
+    "problem": {
+      "self": "不能对自己",
+      "subjectAutonomy": "附属国要填自治类型",
+      "relationType": "外交协定要填协定类型"
+    }
+  },
+  "profile": {
+    "problem": {
+      "nameRequired": "国名不能空着",
+      "adjectiveRequired": "形容词不能空着(例如 German)",
+      "capitalRequired": "首都要填一个州的编号"
+    }
+  }
+}

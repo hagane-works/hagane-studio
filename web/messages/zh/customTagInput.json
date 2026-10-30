@@ -1,0 +1,7 @@
+{
+  "hintEmpty": "2–5 个字符，首位是字母，其后 A–Z 或 0–9。例：GER / FL2 / USSR2",
+  "hintShort": "太短，需要 2–5 个字符。",
+  "hintValid": "{tag} — 可用",
+  "hintInvalid": "首位必须是 A–Z，其后只能 A–Z 或 0–9，不能有空格或下划线。",
+  "placeholder": "例 BAV"
+}

@@ -1,0 +1,12 @@
+{
+  "heading": "技術を検索",
+  "inputAriaLabel": "すべての技術ラインを検索",
+  "placeholder": "技術名または ID を入力…",
+  "paletteTitle": "技術を見つける",
+  "paletteHint": "技術名または ID を入力してください。結果を選ぶと、その技術ラインを開いて技術を強調表示します。",
+  "navHint": "上部の陸軍、空軍、海軍、産業装備ページからも閲覧できます。",
+  "projectTotal": "{lineCount} 本の技術ラインに {techCount} 件の技術",
+  "noMatches": "「{query}」の結果はありません。",
+  "firstMatches": "最初の {count} 件を表示しています。入力を続けて絞り込んでください。",
+  "matches": "{count} 件の結果"
+}

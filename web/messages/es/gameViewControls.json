@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "Estudio de mapas · Clic izquierdo para pintar, arrastra con el botón derecho para mover el mapa, rueda para hacer zoom"
+  },
+  "refresh": "Actualizar",
+  "refreshing": "Actualizando la vista previa del juego…",
+  "refreshed": "Actualizado",
+  "startScreens": "Escenario (F2)",
+  "startScreensBack": "Volver al juego (F2)",
+  "startScreensHint": "Abre la selección de escenario y país para cambiar de escenario o de país; atajo F2",
+  "unsupportedControl": "«{control}» aún no está disponible en Game View.",
+  "uiEdit": "Editar IU",
+  "exitUIEdit": "Salir de Editar IU",
+  "textEdit": "Editar contenido",
+  "exitTextEdit": "Salir de Editar contenido",
+  "mapStudio": "Estudio de mapas",
+  "exitMapStudio": "Salir del estudio de mapas",
+  "mapStudioHint": "Pinta tu propio mundo directamente sobre el mapa mundial: terreno y países; luego genéralo y guárdalo como un mundo nuevo.",
+  "mapStudioSaved": "Mundo nuevo guardado",
+  "mapStudioSavedBody": "{states} estados. El mapa ahora es el mundo que pintaste.",
+  "uiEditHint": "Edita las imágenes y textos de la interfaz. Al hacer clic se selecciona un elemento en vez de activar su botón.",
+  "textEditHint": "Edita decisiones, personajes, enfoques y otros contenidos. Los botones siguen funcionando; pulsa una provincia para editar terreno, estado y nombre.",
+  "inspect": {
+    "viewHint": "Modo de vista: haz clic en una tecnología para ver sus detalles. Entra en Edición de contenido para modificarla.",
+    "startYear": "Año inicial",
+    "status": "Estado",
+    "researchCost": "Coste de investigación",
+    "approxDays": "Tiempo estimado",
+    "days": "{days} días",
+    "position": "Posición en el árbol",
+    "icon": "Icono",
+    "leadsTo": "Desbloquea",
+    "mutuallyExclusive": "Mutuamente excluyente",
+    "subTechnologies": "Subtecnologías",
+    "none": "Ninguno",
+    "enterEdit": "Entrar en Edición de contenido",
+    "states": {
+      "researched": "Investigada",
+      "available": "Disponible",
+      "unavailable": "Bloqueada"
+    }
+  },
+  "backToWorkbench": "Volver al taller",
+  "loadingTitle": "Cargando la pantalla del juego",
+  "loadingProgress": "{done} de {total} listos",
+  "loadingStarting": "Conectando…",
+  "loadingBusy": "Cargando…",
+  "continuousPanelMove": "Arrastra para apartar el panel de focos continuos (solo en esta ventana, no en el mod); doble clic para devolverlo",
+  "continuousPanelPlace": "Arrastra para fijar dónde coloca el mod el panel de focos continuos",
+  "alertsMore": "Mostrar todas las alertas ({count} más)",
+  "alertsLess": "Contraer alertas"
+}

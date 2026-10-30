@@ -1,0 +1,13 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+technologies = {
+	infantry_weapons = {
+		enable_equipments = { infantry_equipment_1 }
+		research_cost = 1
+		folder = { name = infantry_folder position = { x = 0 y = 0 } }
+		categories = { infantry_weapons }
+	}
+	support_weapons = {
+		research_cost = 1
+		categories = { support_tech }
+	}
+}

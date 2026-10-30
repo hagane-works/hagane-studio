@@ -1,0 +1,225 @@
+{
+ "vanilla_tags": [
+  "CHI",
+  "COG",
+  "ENG",
+  "FIN",
+  "FRA",
+  "GER",
+  "HAN",
+  "HUN",
+  "ITA",
+  "JAP",
+  "NOR",
+  "POL",
+  "ROM",
+  "SOV"
+ ],
+ "state_filenames": {
+  "1": "1-Test_State_1.txt",
+  "2": "2-Test_State_2.txt",
+  "3": "3-Test_State_3.txt",
+  "4": "4-Test_State_4.txt",
+  "5": "5-Test_State_5.txt",
+  "6": "6-Test_State_6.txt",
+  "7": "7-Test_State_7.txt",
+  "8": "8-Test_State_8.txt",
+  "9": "9-Test_State_9.txt",
+  "10": "10-Test_State_10.txt",
+  "11": "11-Test_State_11.txt",
+  "12": "12-Test_State_12.txt",
+  "13": "13-Test_State_13.txt",
+  "14": "14-Test_State_14.txt"
+ },
+ "state_owners": {
+  "1": "NOR",
+  "2": "GER",
+  "3": "ROM",
+  "4": "ENG",
+  "5": "FRA",
+  "6": "ITA",
+  "7": "SOV",
+  "8": "USA",
+  "9": "CHI",
+  "10": "FIN",
+  "11": "HUN",
+  "12": "POL",
+  "13": "JAP",
+  "14": "COG"
+ },
+ "country_filenames": {
+  "CHI": "China.txt",
+  "COG": "Congo.txt",
+  "D01": "D01.txt",
+  "D02": "D01.txt",
+  "ENG": "Britain.txt",
+  "FIN": "Finland.txt",
+  "FRA": "France.txt",
+  "GER": "Germany.txt",
+  "HAN": "Hanover.txt",
+  "HUN": "Hungary.txt",
+  "ITA": "Italy.txt",
+  "JAP": "Japan.txt",
+  "NOR": "Norway.txt",
+  "POL": "Poland.txt",
+  "ROM": "Romania.txt",
+  "SOV": "Soviet Union.txt",
+  "USA": "USA.txt"
+ },
+ "country_cultures": {
+  "CHI": {
+   "graphical_culture": "asian_gfx",
+   "graphical_culture_2d": "asian_2d",
+   "color": [
+    180,
+    140,
+    60
+   ]
+  },
+  "COG": {
+   "graphical_culture": "african_gfx",
+   "graphical_culture_2d": "african_2d",
+   "color": [
+    40,
+    120,
+    60
+   ]
+  },
+  "D01": {
+   "color": [
+    10,
+    20,
+    30
+   ]
+  },
+  "D02": {
+   "color": [
+    40,
+    50,
+    60
+   ]
+  },
+  "ENG": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    150,
+    25,
+    25
+   ]
+  },
+  "FIN": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    220,
+    220,
+    220
+   ]
+  },
+  "FRA": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    57,
+    88,
+    186
+   ]
+  },
+  "GER": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    106,
+    119,
+    89
+   ]
+  },
+  "HAN": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    80,
+    120,
+    200
+   ]
+  },
+  "HUN": {
+   "graphical_culture": "eastern_european_gfx",
+   "graphical_culture_2d": "eastern_european_2d",
+   "color": [
+    160,
+    120,
+    80
+   ]
+  },
+  "ITA": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    67,
+    127,
+    63
+   ]
+  },
+  "JAP": {
+   "graphical_culture": "asian_gfx",
+   "graphical_culture_2d": "asian_2d",
+   "color": [
+    255,
+    255,
+    255
+   ]
+  },
+  "NOR": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    130,
+    40,
+    40
+   ]
+  },
+  "POL": {
+   "graphical_culture": "eastern_european_gfx",
+   "graphical_culture_2d": "eastern_european_2d",
+   "color": [
+    200,
+    50,
+    80
+   ]
+  },
+  "ROM": {
+   "graphical_culture": "eastern_european_gfx",
+   "graphical_culture_2d": "eastern_european_2d",
+   "color": [
+    205,
+    177,
+    18
+   ]
+  },
+  "SOV": {
+   "graphical_culture": "eastern_european_gfx",
+   "graphical_culture_2d": "eastern_european_2d",
+   "color": [
+    160,
+    0,
+    0
+   ]
+  },
+  "USA": {
+   "graphical_culture": "western_european_gfx",
+   "graphical_culture_2d": "western_european_2d",
+   "color": [
+    20,
+    133,
+    237
+   ]
+  }
+ },
+ "cosmetic_tags": [
+  "ENG_TEST_COSMETIC",
+  "GER_TEST_COSMETIC"
+ ],
+ "ideology_base_text": "# Synthetic test fixture written for Hagane Works' tests (not game data).\nideologies = {\n\n\tdemocratic = {\n\n\t\ttypes = {\n\n\t\t\tconservatism = {\n\t\t\t\tcan_be_randomly_selected = no\n\t\t\t}\n\n\t\t\tliberalism = {\n\t\t\t}\n\n\t\t\tsocialism = {\n\t\t\t}\n\t\t}\n\n\t\tdynamic_faction_names = {\n\t\t\t\"FACTION_NAME_DEMOCRATIC_1\"\n\t\t}\n\n\t\tcolor = { 0 0 255 }\n\n\t\trules = {\n\t\t\tcan_force_government = no\n\t\t}\n\n\t\tcan_be_boosted = no\n\t\tcan_collaborate = no\n\n\t\tai_democratic = yes\n\t}\n\n\tcommunism = {\n\n\t\ttypes = {\n\n\t\t\tmarxism = {\n\t\t\t}\n\n\t\t\tleninism = {\n\t\t\t}\n\n\t\t\tstalinism = {\n\t\t\t}\n\n\t\t\tanti_revisionism = {\n\t\t\t}\n\n\t\t\tanarchist_communism = {\n\t\t\t}\n\t\t}\n\n\t\tdynamic_faction_names = {\n\t\t\t\"FACTION_NAME_COMMUNIST_1\"\n\t\t}\n\n\t\tcolor = { 255 0 0 }\n\n\t\trules = {\n\t\t\tcan_force_government = yes\n\t\t}\n\n\t\tcan_be_boosted = yes\n\t\tcan_collaborate = no\n\n\t\tai_communist = yes\n\t}\n\n\tfascism = {\n\n\t\ttypes = {\n\n\t\t\tnazism = {\n\t\t\t}\n\n\t\t\tgen_nazism = {\n\t\t\t}\n\n\t\t\tfascism_ideology = {\n\t\t\t}\n\n\t\t\tfalangism = {\n\t\t\t}\n\n\t\t\trexism = {\n\t\t\t}\n\t\t}\n\n\t\tdynamic_faction_names = {\n\t\t\t\"FACTION_NAME_FASCIST_1\"\n\t\t}\n\n\t\tcolor = { 100 50 20 }\n\n\t\trules = {\n\t\t\tcan_force_government = yes\n\t\t}\n\n\t\tcan_be_boosted = yes\n\t\tcan_collaborate = yes\n\n\t\tai_fascist = yes\n\t}\n\n\tneutrality = {\n\n\t\ttypes = {\n\n\t\t\tdespotism = {\n\t\t\t}\n\n\t\t\toligarchism = {\n\t\t\t}\n\n\t\t\tanarchism = {\n\t\t\t}\n\n\t\t\tmoderatism = {\n\t\t\t}\n\n\t\t\tcentrism = {\n\t\t\t}\n\t\t}\n\n\t\tdynamic_faction_names = {\n\t\t\t\"FACTION_NAME_NONALIGNED_1\"\n\t\t}\n\n\t\tcolor = { 128 128 128 }\n\n\t\trules = {\n\t\t\tcan_force_government = yes\n\t\t}\n\n\t\tcan_be_boosted = no\n\t\tcan_collaborate = yes\n\n\t\tai_neutral = yes\n\t}\n}\n"
+}

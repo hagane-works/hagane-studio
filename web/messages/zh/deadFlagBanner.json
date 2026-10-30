@@ -1,0 +1,5 @@
+{
+  "summary": "⚠ {count} 面旗子设置了却从没被读取",
+  "summaryNote": "(这通常在提示：某条国策 / 事件 / 决议的链路可能断了)",
+  "fix": "修法:在某条国策 / 决议 / 事件的 trigger / available / visible 里用 <code>has_country_flag = {flag}</code> 读取这面旗子;如果哪里都用不到,就把对应的 <code>set_country_flag</code> 删掉。这项检查目前不会追踪用 <code>modify_country_flag</code> 或 <code>clr_country_flag</code> 改动的旗子。"
+}

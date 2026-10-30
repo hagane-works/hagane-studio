@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "Votre navigateur ne prend pas en charge l'API File System Access. Utilisez Chrome ou Edge, ou suivez le flux complet Exporter le mod.",
+  "savedToFolder": "Écrit dans le dossier du mod",
+  "saveFailed": "Échec de l'enregistrement dans le dossier du mod. {msg}",
+  "titleWithFolder": "Enregistrer les trois fichiers de {tag} dans {dir}/ (écriture directe ; ils prennent effet après le redémarrage du mod dans HOI4)",
+  "titleNoFolder": "La première utilisation vous demandera de choisir un dossier de mod",
+  "saving": "Enregistrement...",
+  "saveToFolderNamed": "Enregistrer dans {dir}",
+  "saveToModFolder": "Enregistrer dans le dossier du mod",
+  "changeFolderTitle": "Changer le dossier du mod",
+  "changeFolder": "Changer de dossier",
+  "saved": "Enregistré ✓"
+}

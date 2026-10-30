@@ -1,0 +1,20 @@
+{
+  "title": "국가 추가",
+  "sourceAriaLabel": "국가 출처",
+  "tabVanilla": "바닐라",
+  "tabCustom": "사용자 지정",
+  "countryTagLabel": "국가 TAG",
+  "displayNameLabel": "표시 이름(선택 사항)",
+  "vanillaNamePlaceholder": "기본값은 바닐라 국가 이름 사용",
+  "vanillaNameHint": "비워 두면 바닐라 HOI4 이름을 사용합니다. 나중에 편집할 수 있습니다.",
+  "adding": "추가 중...",
+  "addButton": "국가 추가",
+  "customHint": "바닐라에 없는 대체 역사 국가(바이에른, 웨일스, 텍사스 등)에 사용합니다. 2~5자의 대문자 코드를 입력하세요. 바닐라 TAG와 겹치면 덮어쓰기 전에 가벼운 경고가 표시됩니다.",
+  "customNamePlaceholder": "예: 바이에른 왕국",
+  "mapColorLabel": "지도 색상(선택 사항)",
+  "mapColorAriaLabel": "지도 색상",
+  "mapColorAuto": "자동",
+  "graphicalCultureLabel": "그래픽 문화권(선택 사항)",
+  "graphicalCultureAriaLabel": "그래픽 문화권",
+  "graphicalCultureAuto": "자동(western_european_gfx)"
+}

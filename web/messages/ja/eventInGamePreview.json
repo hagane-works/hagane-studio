@@ -1,0 +1,17 @@
+{
+  "noPicture": "画像なし",
+  "empty": "（空）",
+  "noOptions": "選択肢なし — 手動で閉じるまでイベントが画面に残ります",
+  "conditionalOption": "条件付き選択肢（trigger で表示を制御）",
+  "alwaysVisibleOption": "常に表示する選択肢",
+  "timeout": "タイムアウト · {days}日",
+  "immediateEffects": "即時エフェクト · あり",
+  "afterEffects": "終了後エフェクト · あり",
+  "editPicture": "イベント画像を編集",
+  "editTitle": "イベントタイトルを編集",
+  "editDescription": "イベント説明を編集",
+  "editOption": "選択肢 {n} を編集",
+  "previewUnavailableTitle": "イベントのプレビューを表示できませんでした",
+  "previewUnavailableBody": "イベントと未保存の編集内容は失われていません。編集を続けるか、プレビューを再試行できます。",
+  "previewUnavailableRetry": "プレビューを再試行"
+}

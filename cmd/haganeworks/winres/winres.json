@@ -1,0 +1,14 @@
+{
+  "RT_GROUP_ICON": {
+    "#1": {
+      "0000": "../../../web/public/brand/hagane-icon-512.png"
+    }
+  },
+  "RT_MANIFEST": {
+    "#1": {
+      "0409": {
+        "dpi-awareness": "per monitor v2"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "Die Chargen gelten",
+  "undonePrefix": "Undone",
+  "undoFailedPrefix": "Rückgängig machen fehlgeschlagen:",
+  "justCreatedPrefix": "Gerade erst geschaffen",
+  "justCreatedSuffix": "Artikel · die ganze Charge rückgängig machen, wenn Sie nicht glücklich sind",
+  "justUpdatedPrefix": "Gerade aktualisiert",
+  "justUpdatedSuffix": "Fokusbedingungen · Rückgängig macht die gespeicherten Werte wiederhergestellt",
+  "undoBatchTitle": "Diesen Batch rückgängig machen · alles löschen, was er gerade erstellt hat",
+  "undoRestoreTitle": "Rückgängig machen · die gespeicherten vorherigen Fokusbedingungen wiederherstellen",
+  "undoing": "Untun...",
+  "undo": "Rückgängig",
+  "dismissTitle": "Banner ausblenden (nicht rückgängig machen)",
+  "itemsFallback": "{count}Artikel",
+  "cannotUndoTitle": "Massenwechsel · kann nicht rückgängig gemacht werden",
+  "cannotUndoNote": "Es gibt keine gespeicherte Kopie davon, wie diese aussahen, so dass diese Charge nicht zurückgesetzt werden kann — das Drücken von Rückgängig bringt nichts zurück. Öffnen Sie die passende Werkbank und überprüfen Sie, was sich geändert hat.",
+  "nothingUndoneNote": "Das hat nichts geändert: Die Elemente sind nicht mehr im Projekt (bereits gelöscht oder früher rückgängig gemacht). Bitte öffnen Sie die passende Werkbank, um dies zu bestätigen.",
+  "undoUnavailableTitle": "Diese Charge kann nicht rückgängig gemacht werden"
+}

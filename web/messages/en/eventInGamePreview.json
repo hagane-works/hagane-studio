@@ -1,0 +1,17 @@
+{
+  "noPicture": "no picture",
+  "empty": "(empty)",
+  "noOptions": "No options — the event stays on screen until dismissed manually",
+  "conditionalOption": "Conditional option (trigger guards visibility)",
+  "alwaysVisibleOption": "Always visible option",
+  "timeout": "timeout · {days} days",
+  "immediateEffects": "immediate effects · yes",
+  "afterEffects": "after effects · yes",
+  "editPicture": "Edit event picture",
+  "editTitle": "Edit event title",
+  "editDescription": "Edit event description",
+  "editOption": "Edit option {n}",
+  "previewUnavailableTitle": "The event preview could not be shown",
+  "previewUnavailableBody": "Your event and unsaved edits are still safe. You can keep editing and retry the preview.",
+  "previewUnavailableRetry": "Retry preview"
+}

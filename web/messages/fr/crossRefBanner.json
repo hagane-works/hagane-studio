@@ -1,0 +1,37 @@
+{
+  "headline": "<mono>{count}</mono> références pointent vers du contenu de pays non importés. C’est normal.",
+  "tooltipTitle": "Sémantique des références entre pays",
+  "tooltipContent": "Une référence entre pays signifie que le fichier de mod d’un pays référence une entité d’un autre pays (personnage/Esprit national/Priorité - nation, etc.).\n\nRègle de chargement des mods du moteur HOI4 : le moteur charge ensemble tous les fichiers du mod et l’événement de n’importe quel pays peut se lancer pour tout pays si son déclencheur est satisfait.\n\nDans l’éditeur : les références sont filtrées selon le pays actif et leur consultation ne change pas votre pays principal. L’ajout d’un pays secondaire importe les entités associées sans modifier votre vue principale.\n\nExemple : britain.1 (la mission Tizard) dans Britain.txt possède le déclencheur tag = USA. Le \"propriétaire\" de l’événement est USA, mais le fichier réside dans Britain.txt et son espace de noms est britain ; la bannière de références croisées suggère donc d’ajouter USA ou ENG comme pays secondaire afin d’importer l’entité.",
+  "reason": "Ces références pointent presque toujours vers le contenu d’autres pays et sont sans danger. Une exportation <b>\"refusionner dans le mod d’origine\" (chemin B) les conserve intactes</b> : rien n’est perdu. Vous voulez aussi ce contenu dans l’éditeur ? Ajoutez un pays ci-dessous. <b>Votre pays principal ne changera pas.</b>",
+  "suggestLabel": "Pays dont l’ajout est suggéré (par nombre de références) :",
+  "alreadyInProject": "{tag} est déjà dans le projet",
+  "expandTitle": "Ajouter {tag} comme pays secondaire étend la liste des pays du projet. Cela ne change pas votre pays principal ; la vue principale demeure inchangée.",
+  "added": "(ajouté)",
+  "expandAddCountry": "Ajouter un pays",
+  "addingCountry": "Ajout de {tag}…",
+  "collapseDetails": "Réduire les détails",
+  "viewDetails": "Afficher les détails ({count} types)",
+  "hideScope": "Masquer la portée de vérification",
+  "showScope": "Portée de vérification",
+  "currentScope": "Portée de vérification actuelle :",
+  "none": "(aucune)",
+  "scopeNote": "Les types de référence pas encore couverts (Priorité - nation/Décision/trait/Technologie, etc.) seront ajoutés dans de prochains lots. \"Non signalé\" ne signifie pas \"aucun problème\".",
+  "moreHidden": "…et {hidden} autres types masqués (sur {total} au total)",
+  "egPrefix": "p. ex. ",
+  "unmodeled": {
+    "headline": "<mono>{count}</mono> références vers du contenu non modélisé par le programme ont été trouvées",
+    "tooltipTitle": "Qu’est-ce que le \"contenu non modélisé\" ?",
+    "tooltipContent": "Le programme modélise 9 types d’entités (Esprit national/événement/Priorité - nation/Décision/personnage/trait/Technologie/modificateur d’opinion/OIM). D’autres catégories HOI4 — effets/déclencheurs scriptés, idéologies, tags cosmétiques, règles du jeu, Matériel et projets spéciaux — ne sont pas modélisées ; le programme ne peut donc pas réémettre leurs fichiers de définition.\n\nLeurs références sont du script HOI4 valide. Une exportation \"refusionner dans le mod d’origine\" (chemin B) conserve les fichiers de définition d’origine, et les références sont donc résolues. Une exportation de zéro (chemin A) ne peut pas les reproduire et les laisserait en suspens.\n\nIl s’agit d’une information et non d’une erreur : le programme vous indique simplement quel chemin d’export les conserve.",
+    "note": "Ces références pointent vers du contenu que le programme ne modélise pas encore (p. ex. scripted_effect/scripted_trigger personnalisés, idéologies personnalisées, tags cosmétiques). <b>Seule l’exportation \"refusionner dans le mod d’origine\" (chemin B) les conserve</b> ; une exportation de zéro (chemin A) les laisse en suspens. Si vous exportez par le chemin B, aucune action n’est nécessaire.",
+    "viewDetails": "Afficher les détails ({count} types)",
+    "collapseDetails": "Réduire les détails",
+    "cat": {
+      "scripted_effect_trigger": "scripted_effect/déclencheur personnalisé",
+      "ideology": "Idéologie personnalisée (sous-idéologie)",
+      "cosmetic_tag": "Tag cosmétique (renommage de pays)",
+      "game_rule": "Règle du jeu",
+      "equipment": "Matériel personnalisé",
+      "special_project": "Projet spécial"
+    }
+  }
+}

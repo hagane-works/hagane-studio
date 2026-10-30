@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows が Hagane Works によるファイルの保存をブロックしました",
+  "writeBlockedDescription": "{folder} への書き込みが拒否されました。Windows セキュリティの「ランサムウェア防止」（コントロールされたフォルダー アクセス）が有効な場合は HaganeWorks.exe を許可するか、設定でドキュメントなどの保護されたフォルダー以外に作成フォルダを変更してください。"
+}

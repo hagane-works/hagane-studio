@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount}개 · {tag} · {ownCount, plural, one {이벤트} other {이벤트}}",
+  "sharedSuffix": " · 공유 / 전역 방송 +{sharedCount}개",
+  "filteredNote": "바닐라 DLC와 국가별 파일은 가져올 때 제외하며 {tag} 전용 이벤트만 보존합니다.",
+  "vanillaCta": "참고용 바닐라 이벤트 열기",
+  "hiddenHint": "공유/전역 {hiddenCount, plural, one {이벤트} other {이벤트}} {hiddenCount}개 숨김 · 오른쪽의 <emph>전체</emph>를 눌러 표시하세요.",
+  "dismiss": "닫기",
+  "dontShowAgain": "다시 표시하지 않기"
+}

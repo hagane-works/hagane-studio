@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows가 Hagane Works의 파일 저장을 차단했습니다",
+  "writeBlockedDescription": "{folder}에 쓰기가 거부되었습니다. Windows 보안에서 랜섬웨어 방지(제어된 폴더 액세스)가 켜져 있다면 HaganeWorks.exe를 허용하거나, 설정에서 작업 폴더를 문서 등 보호된 폴더 밖으로 바꾸세요."
+}

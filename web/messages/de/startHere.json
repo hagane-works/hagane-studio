@@ -1,0 +1,25 @@
+{
+  "title": "Bevor du anfängst: drei Dinge, die du wissen solltest",
+  "subtitle": "Lesezeit etwa eine Minute.",
+  "c1": {
+    "title": "Ihre Mod entsteht Land für Land – Sie fügen dem Spiel Inhalte hinzu",
+    "b1": "Fügen Sie zuerst ein Land hinzu: Wählen Sie eines aus dem Grundspiel, etwa Deutschland (GER), oder legen Sie einen eigenen Länder-TAG an.",
+    "b2": "Charaktere, Fokusse, Ereignisse und Entscheidungen gehören jeweils zu einem Land. Die Werkbänke links zeigen das aktuelle Land.",
+    "b3": "Beim Export wird standardmäßig nur gepackt, was Sie hinzugefügt oder geändert haben. Das Grundspiel wird nicht komplett in Ihre Mod kopiert.",
+    "b3Loaded": "Projekte, die aus einer bestehenden Mod geladen wurden, exportieren standardmäßig den vollständigen Inhalt.",
+    "addCountry": "+ Land hinzufügen",
+    "currentCountry": "Aktuelles Land: {tag} · {name}"
+  },
+  "c2": {
+    "title": "Import und Export werden noch verbessert; auf TNO können Sie direkt aufbauen",
+    "b1": "Der Import bestehender Mods und der Export werden noch verbessert. Bei großen Mods kann nach dem Import ein Teil der Inhalte fehlen. <b>Testen Sie die exportierte Mod deshalb unbedingt im Spiel.</b>",
+    "b2Base": "Dieses Projekt basiert auf <b>{baseMod}</b>. Fügen Sie Inhalte pro Länder-TAG hinzu. Exportiert wird eine Submod; Spieler müssen {baseMod} zusätzlich aktivieren."
+  },
+  "ctaAddFirst": "Erstes Land hinzufügen",
+  "ctaCharacters": "Zu den Charakteren",
+  "local": {
+    "title": "Alles bleibt auf deinem Computer",
+    "b1": "Jedes Projekt ist ein Ordner in deinem Projektordner: <b>project.json</b> plus eine Datendatei pro Inhaltsart. Du kannst ihn kopieren, sichern oder versionieren.",
+    "b2": "Das Grundspiel wird aus deiner eigenen Hearts-of-Iron-IV-Installation gelesen. Exportiere ein ZIP oder installiere die Mod direkt in den Mod-Ordner des Spiels."
+  }
+}

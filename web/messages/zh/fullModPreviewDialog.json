@@ -1,0 +1,11 @@
+{
+  "description": "查看整个 mod 导出后的真实文件树和文件内容 —— 和你下载到的 zip 里一模一样。",
+  "includeImportedTitleOn": "包含从原 mod 导入的内容(vanilla 或旧 mod 来源)，预览完整 mod",
+  "includeImportedTitleOff": "仅预览用户新建 / 修改过的 entity",
+  "includeImportedLabel": "包含 imported(从原 mod 导入)",
+  "binaryNote": "二进制文件({size})，无法预览。保存到 Mod 文件夹时会按原始字节写入。",
+  "selectFileHint": "选择左侧文件预览内容",
+  "buttonTitle": "查看整个 mod 导出后的文件树和内容预览",
+  "buttonLabel": "预览文件",
+  "loading": "加载中…"
+}

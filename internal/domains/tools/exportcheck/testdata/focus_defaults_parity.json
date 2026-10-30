@@ -1,0 +1,1335 @@
+{
+ "cases": [
+  {
+   "name": "only-vanilla-generic",
+   "input": {
+    "emissions": [],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "vanilla:generic_focus",
+      "path": "common/national_focus/generic.txt",
+      "provider": "vanilla",
+      "artifact_id": "vanilla:common/national_focus/generic.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "vanilla:generic_focus"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": true,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "nothing-at-all",
+   "input": {
+    "emissions": [],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "author-default-plus-generic",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/ger.txt",
+      "provider": "mod",
+      "tree_id": "ger_focus"
+     }
+    ],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "ger_focus",
+      "path": "common/national_focus/ger.txt",
+      "provider": "mod",
+      "artifact_id": "mod:common/national_focus/ger.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     },
+     {
+      "tree_id": "vanilla:generic_focus",
+      "path": "common/national_focus/generic.txt",
+      "provider": "vanilla",
+      "artifact_id": "vanilla:common/national_focus/generic.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "ger_focus",
+     "vanilla:generic_focus"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/ger.txt",
+      "mod:common/national_focus/ger.txt"
+     ]
+    ],
+    "vanilla_generic_injected": true,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_multiple",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [
+        "ger_focus",
+        "vanilla:generic_focus"
+       ],
+       "default_tree_ids": [
+        "ger_focus",
+        "vanilla:generic_focus"
+       ],
+       "default_paths": [
+        "common/national_focus/ger.txt",
+        "common/national_focus/generic.txt"
+       ],
+       "default_providers": [
+        "mod",
+        "vanilla"
+       ],
+       "replace_paths": [],
+       "vanilla_generic_injected": true
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "replace-dir-suppresses-generic",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/ger.txt",
+      "provider": "mod",
+      "tree_id": "ger_focus"
+     }
+    ],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [
+     "common/national_focus"
+    ],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "ger_focus",
+      "path": "common/national_focus/ger.txt",
+      "provider": "mod",
+      "artifact_id": "mod:common/national_focus/ger.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "ger_focus"
+    ],
+    "replace_paths": [
+     "common/national_focus"
+    ],
+    "selected_artifacts": [
+     [
+      "common/national_focus/ger.txt",
+      "mod:common/national_focus/ger.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": true,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "replace-dir-no-default",
+   "input": {
+    "emissions": [
+     {
+      "path": "common/national_focus/ger.txt",
+      "provider": "mod",
+      "tree_id": "ger_focus"
+     }
+    ],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [
+     "common/national_focus"
+    ],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "ger_focus",
+      "path": "common/national_focus/ger.txt",
+      "provider": "mod",
+      "artifact_id": "mod:common/national_focus/ger.txt",
+      "is_default": false,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [],
+    "replace_paths": [
+     "common/national_focus"
+    ],
+    "selected_artifacts": [
+     [
+      "common/national_focus/ger.txt",
+      "mod:common/national_focus/ger.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": true,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [
+        "ger_focus"
+       ],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [
+        "common/national_focus"
+       ],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "shadow-generic-file",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/generic.txt",
+      "provider": "mod",
+      "tree_id": "ger_focus"
+     }
+    ],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "ger_focus",
+      "path": "common/national_focus/generic.txt",
+      "provider": "mod",
+      "artifact_id": "mod:common/national_focus/generic.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "ger_focus"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/generic.txt",
+      "mod:common/national_focus/generic.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "later-artifact-wins",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "old_tree"
+     },
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "b",
+      "artifact_id": "b1",
+      "tree_id": "new_tree"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "new_tree",
+      "path": "common/national_focus/x.txt",
+      "provider": "b",
+      "artifact_id": "b1",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "new_tree"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "b1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "same-artifact-multiple-trees",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t1"
+     },
+     {
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t2"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "is_default": true,
+      "tree_kind": "primary"
+     },
+     {
+      "tree_id": "t2",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "is_default": false,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "explicit-selection-overrides",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "old_tree"
+     },
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "b",
+      "artifact_id": "b1",
+      "tree_id": "new_tree"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {
+     "common/national_focus/x.txt": "a1"
+    },
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "old_tree",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "old_tree"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "explicit-selection-unknown-path",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {
+     "common/national_focus/nope.txt": "zz"
+    },
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "explicit-selection-unknown-artifact",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {
+     "common/national_focus/x.txt": "ghost"
+    },
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "ghost"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "explicit-selection-blank",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {
+     "common/national_focus/x.txt": "   ",
+     "": "a1"
+    },
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "filter-not-selected",
+   "input": {
+    "emissions": [
+     {
+      "selected": false,
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "filter-not-effective",
+   "input": {
+    "emissions": [
+     {
+      "effective": false,
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "filter-shadowed",
+   "input": {
+    "emissions": [
+     {
+      "shadowed": true,
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "explicit-true-same-as-absent",
+   "input": {
+    "emissions": [
+     {
+      "selected": true,
+      "effective": true,
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a:common/national_focus/x.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a:common/national_focus/x.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "artifact-only-still-selects",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t1"
+     },
+     {
+      "artifact_only": true,
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "b",
+      "artifact_id": "b1",
+      "tree_id": "t2"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "b1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "shared-pool-skipped",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_kind": "shared_pool",
+      "tree_id": "pool"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a:common/national_focus/x.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "blank-tree-id-skipped",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_id": "   "
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a:common/national_focus/x.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "bad-path-skipped",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "../escape.txt",
+      "provider": "a",
+      "tree_id": "t1"
+     },
+     {
+      "is_default": true,
+      "path": "C:/abs.txt",
+      "provider": "a",
+      "tree_id": "t2"
+     },
+     {
+      "is_default": true,
+      "path": "",
+      "provider": "a",
+      "tree_id": "t3"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "artifact-id-synthesised",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/X.txt",
+      "provider": "mod",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/X.txt",
+      "provider": "mod",
+      "artifact_id": "mod:common/national_focus/x.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "mod:common/national_focus/x.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "case-insensitive-path",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/X.txt",
+      "provider": "a",
+      "artifact_id": "a1",
+      "tree_id": "t1"
+     },
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "b",
+      "artifact_id": "b1",
+      "tree_id": "t2"
+     }
+    ],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t2",
+      "path": "common/national_focus/X.txt",
+      "provider": "b",
+      "artifact_id": "b1",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t2"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "b1"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "replace-paths-normalised",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "tree_id": "t1"
+     }
+    ],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [
+     "/COMMON/National_Focus/",
+     "common\\national_focus",
+     "../bad",
+     "",
+     "gfx/flags"
+    ],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/x.txt",
+      "provider": "a",
+      "artifact_id": "a:common/national_focus/x.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1"
+    ],
+    "replace_paths": [
+     "common/national_focus",
+     "gfx/flags"
+    ],
+    "selected_artifacts": [
+     [
+      "common/national_focus/x.txt",
+      "a:common/national_focus/x.txt"
+     ]
+    ],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": true,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "generic-path-normalised",
+   "input": {
+    "emissions": [],
+    "vanilla_generic_path": "\\common/national_focus\\generic.txt",
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "vanilla:generic_focus",
+      "path": "common/national_focus/generic.txt",
+      "provider": "vanilla",
+      "artifact_id": "vanilla:common/national_focus/generic.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "vanilla:generic_focus"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": true,
+    "focus_directory_replaced": false,
+    "blocked": false,
+    "findings": []
+   }
+  },
+  {
+   "name": "generic-path-bad",
+   "input": {
+    "emissions": [],
+    "vanilla_generic_path": "../generic.txt",
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "three-defaults",
+   "input": {
+    "emissions": [
+     {
+      "is_default": true,
+      "path": "common/national_focus/a.txt",
+      "provider": "pa",
+      "tree_id": "t1"
+     },
+     {
+      "is_default": true,
+      "path": "common/national_focus/b.txt",
+      "provider": "pb",
+      "tree_id": "t2"
+     }
+    ],
+    "vanilla_generic_path": "common/national_focus/generic.txt",
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": ""
+   },
+   "expected": {
+    "effective_trees": [
+     {
+      "tree_id": "t1",
+      "path": "common/national_focus/a.txt",
+      "provider": "pa",
+      "artifact_id": "pa:common/national_focus/a.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     },
+     {
+      "tree_id": "t2",
+      "path": "common/national_focus/b.txt",
+      "provider": "pb",
+      "artifact_id": "pb:common/national_focus/b.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     },
+     {
+      "tree_id": "vanilla:generic_focus",
+      "path": "common/national_focus/generic.txt",
+      "provider": "vanilla",
+      "artifact_id": "vanilla:common/national_focus/generic.txt",
+      "is_default": true,
+      "tree_kind": "primary"
+     }
+    ],
+    "default_tree_ids": [
+     "t1",
+     "t2",
+     "vanilla:generic_focus"
+    ],
+    "replace_paths": [],
+    "selected_artifacts": [
+     [
+      "common/national_focus/a.txt",
+      "pa:common/national_focus/a.txt"
+     ],
+     [
+      "common/national_focus/b.txt",
+      "pb:common/national_focus/b.txt"
+     ]
+    ],
+    "vanilla_generic_injected": true,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_multiple",
+      "severity": "blocker",
+      "source": "focus_defaults:effective_artifact",
+      "evidence": {
+       "effective_tree_ids": [
+        "t1",
+        "t2",
+        "vanilla:generic_focus"
+       ],
+       "default_tree_ids": [
+        "t1",
+        "t2",
+        "vanilla:generic_focus"
+       ],
+       "default_paths": [
+        "common/national_focus/a.txt",
+        "common/national_focus/b.txt",
+        "common/national_focus/generic.txt"
+       ],
+       "default_providers": [
+        "pa",
+        "pb",
+        "vanilla"
+       ],
+       "replace_paths": [],
+       "vanilla_generic_injected": true
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  },
+  {
+   "name": "custom-source",
+   "input": {
+    "emissions": [],
+    "vanilla_generic_path": null,
+    "replace_paths": [],
+    "selected_artifact_by_path": {},
+    "source": "custom:probe"
+   },
+   "expected": {
+    "effective_trees": [],
+    "default_tree_ids": [],
+    "replace_paths": [],
+    "selected_artifacts": [],
+    "vanilla_generic_injected": false,
+    "focus_directory_replaced": false,
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_effective_default_missing",
+      "severity": "blocker",
+      "source": "custom:probe",
+      "evidence": {
+       "effective_tree_ids": [],
+       "default_tree_ids": [],
+       "default_paths": [],
+       "default_providers": [],
+       "replace_paths": [],
+       "vanilla_generic_injected": false
+      },
+      "repair_route": "focus_default_selection"
+     }
+    ]
+   }
+  }
+ ]
+}

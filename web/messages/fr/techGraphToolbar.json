@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "Réduire le zoom",
+  "toolbarZoomIn": "Agrandir le zoom",
+  "toolbarZoomReset": "Réinitialiser le zoom à 100 %",
+  "toolbarFitView": "Ajuster le graphe à la vue",
+  "toolbarUndo": "Annuler (Ctrl+Z)",
+  "toolbarRedo": "Rétablir (Ctrl+Y)",
+  "toolbarAutoLayout": "Disposition automatique · réorganiser toutes les technologies",
+  "toolbarCreateTech": "Nouvelle technologie"
+}

@@ -1,0 +1,16 @@
+{
+  "ownLabel": "本国",
+  "ownTitle": "本国自有(country_tag = {tag})。只影响当前国家，可放心编辑。",
+  "explicitLabel": "跨国共享",
+  "explicitTitle": "跨国共享(shared_country_tags = {tags})。编辑会同时影响这些国家。",
+  "globalLabel": "全局",
+  "globalTitle": "全局共享。mod 内每个国家都会受影响，编辑请谨慎。",
+  "globalExceptLabel": "全局 except",
+  "globalExceptTitle": "全局共享，但排除({tags})。编辑会影响其他所有国家。",
+  "sectionOwnLabel": "本国自有",
+  "sectionOwnHint": "仅影响当前国家",
+  "sectionSharedLabel": "共享 / 全局 / 跨国",
+  "sectionSharedHint": "编辑可能影响其他国家",
+  "sectionAllLabel": "所有国家",
+  "sectionAllHint": "显示所有国家的条目，每行的徽章标明它属于哪个国家"
+}

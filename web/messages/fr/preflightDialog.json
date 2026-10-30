@@ -1,0 +1,26 @@
+{
+  "title": "Résumé avant importation",
+  "subtitle": "Examinez l'analyse avant de lancer l'importation. Les gros mods peuvent prendre du temps ; activez l'exécution en arrière-plan pour continuer à travailler.",
+  "stat": {
+    "countries": "Pays (TAG)",
+    "characters": "Personnages",
+    "ideas": "Esprits nationaux",
+    "focus_trees": "Arbres de Priorités - nation",
+    "events": "Événements",
+    "decisions": "Décisions",
+    "dynamic_modifiers": "Modificateurs dynamiques",
+    "superevents": "Super-événements"
+  },
+  "etaLabel": "Durée estimée",
+  "etaUnitMinutes": "{minutes} min",
+  "etaUnitSeconds": "~{seconds}s",
+  "etaUnit": "({mb} Mo dans {files} fichiers)",
+  "etaFallback": "— (aucune donnée)",
+  "etaHint": "Estimation approximative fondée sur la taille totale. La durée réelle dépend du disque et de l’ordinateur.",
+  "backgroundToggleLabel": "Exécuter l'importation en arrière-plan",
+  "backgroundToggleHint": "Fermez cette boîte de dialogue et continuez à travailler. Un widget en bas à droite affiche la progression.",
+  "ctaContinue": "Lancer l'importation",
+  "ctaCancel": "Annuler",
+  "statFallback": "—",
+  "notAvailableHint": "Les nombres marqués « — » ne sont pas disponibles pendant l'analyse ; ils apparaîtront dans le résumé final."
+}

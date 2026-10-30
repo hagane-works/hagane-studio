@@ -1,0 +1,70 @@
+{
+  "title": "Startwelt und Kampagnenrahmen",
+  "intro": "Diese Regeln gelten für alle auswählbaren Szenarien. Wähle die Welt, in die Spieler starten, und das Enddatum der Kampagne.",
+  "worldQuestion": "Welche Welteinstellung soll zum Spielbeginn verwendet werden?",
+  "worldOptions": {
+    "inherit": {
+      "title": "Welteinstellung des Originalspiels oder Basismod verwenden",
+      "description": "Geeignet, wenn dein Mod Inhalte ergänzt oder nur einen Teil einer bestehenden Welt verändert."
+    },
+    "own": {
+      "title": "Meine Szenariowelt einplanen",
+      "description": "Hält deine Absicht für eine alternative Welt oder besondere Epoche fest. Verlaufsdateien werden nicht automatisch umgeschrieben."
+    }
+  },
+  "startDate": {
+    "label": "Startdatum des Szenarios",
+    "hint": "Verwende dasselbe Datum, das Spieler für den Szenariostart auswählen."
+  },
+  "endDate": {
+    "label": "Enddatum des Szenarios",
+    "hint": "Ein gültiges Datum nach allen gespeicherten Szenarien wird in HOI4 zum Kampagnenende."
+  },
+  "compatibilityNotice": "Dein spätestes auswählbares Szenario beginnt am oder nach dem Kampagnenende des Originalspiels von 1949. Bis du ein späteres Enddatum festlegst, ergänzt der Export ein klar ausgewiesenes kompatibles Enddatum, damit das Spiel nicht sofort endet.",
+  "timelineBaseline": {
+    "vanilla": "Eigenständiges Projekt: Vergleichsgrundlage ist HOI4 ohne Mods (Kampagnenende: 1. Januar 1949).",
+    "unregistered": "Zeitleiste des Basismod: Quelle noch nicht registriert. Das Programm nimmt nicht an, dass der Basismod 1949 endet.",
+    "rawBookmarkCoverage": "Dieses Feld verwendet die im Arbeitsbereich gespeicherten Szenarien. Beibehaltene rohe Bookmark-Dateien werden beim Export separat geprüft."
+  },
+  "saveFailed": "Die Szenarioeinstellungen konnten nicht gespeichert werden.",
+  "saveReadbackMismatch": "Beim Zurücklesen kamen nicht die gerade gespeicherten Werte zurück. Es wird nichts als gespeichert markiert; versuche es erneut.",
+  "ownWorldSummary": {
+    "title": "Deine Wahl der Welteinstellung",
+    "description": "Du möchtest Spieler in deine Szenariowelt führen. Diese Einstellung hält nur die Wahl fest; prüfe und erstelle die nötigen Startwelt-Dateien vor der Veröffentlichung selbst."
+  },
+  "submodNotice": "Dieses Projekt baut auf einem Basismod auf, dessen Zeitleistenquelle noch nicht registriert ist. Die Analyse bleibt schreibgeschützt und verändert die Welteinstellung des Basismods nicht automatisch.",
+  "riskPreview": {
+    "title": "Risikovorschau für die Startwelt",
+    "inherit": "Du behältst die Welteinstellung des Originalspiels oder Basismod. Das Programm weist nur auf mögliche Risiken der Welteinstellung hin und verändert diese Welt nicht für dich.",
+    "unverified": "Quelle noch nicht registriert: Für diese Welt ist noch keine verifizierte Vorschau angebunden. Das Programm behauptet kein bekanntes Ergebnis und verändert die Welt nicht automatisch.",
+    "verifiedIntro": "Diese Welteinstellung kann überprüft werden. Wenn du sie für das Szenario bestätigst, erleben Spieler folgende Ergebnisse:",
+    "verifiedEmpty": "Diese Welteinstellung kann überprüft werden, aber es gibt noch keine Änderungen, die Spielern gezeigt werden können. Prüfe Szenariodaten und Welteinstellung.",
+    "consequences": {
+      "scenarioWorld": {
+        "title": "Spieler starten in deiner Szenariowelt",
+        "description": "Die Startwelt folgt der Einstellung, die du für dieses Szenario erstellt hast."
+      },
+      "baseWorld": {
+        "title": "Spätere Änderungen der Basiswelt bleiben aus",
+        "description": "Spätere Weltänderungen des Originalspiels oder Basismod werden zum Startdatum nicht automatisch übernommen."
+      }
+    }
+  },
+  "campaignOpening": {
+    "title": "Kampagnenbeginn",
+    "intro": "Spieler können mehrere Szenarien wählen. Deshalb verwendet HOI4 das früheste gültige, gespeicherte Lesezeichen als Kampagnenbeginn. Spätere Lesezeichen bleiben auswählbare Szenarien.",
+    "currentLabel": "Gespeichertes Datum des Kampagnenbeginns",
+    "notSelected": "Noch kein Beginn ausgewählt",
+    "linked": "Dieses Datum entspricht dem frühesten gespeicherten Szenario {bookmark}.",
+    "unlinked": "Das früheste gespeicherte Szenario beginnt am {date}. Synchronisiere den Kampagnenbeginn vor dem Export.",
+    "noValidBookmark": "Speichere mindestens ein Lesezeichen mit gültigem Datum, bevor du den Kampagnenbeginn festlegst.",
+    "syncEarliest": "Mit frühestem Szenario synchronisieren",
+    "synced": "Mit frühestem Szenario synchronisiert",
+    "saveCampaignSettings": "Kampagneneinstellungen speichern",
+    "workspaceTitle": "Start des gesamten Mods",
+    "workspaceIntro": "Diese Regeln gelten für alle Szenarien. Datum und Länderauswahl-Darstellung jedes Szenarios bearbeitest du unten.",
+    "editWorkspace": "Startregeln bearbeiten",
+    "closeWorkspace": "Startregeln schließen",
+    "notSet": "Nicht festgelegt"
+  }
+}

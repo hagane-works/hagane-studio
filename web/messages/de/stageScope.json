@@ -1,0 +1,16 @@
+{
+  "title": "Kreisen Sie Ihre Bühne",
+  "subtitle": "Kreisen Sie den Teil der Welt, wo Ihre Geschichte passiert. Der Rest der Welt existiert noch — KI und die Kontrollen werden sich hier konzentrieren.",
+  "selectedCount": "{count, plural, =0 {Noch nichts umkreist — die ganze Welt ist eure Bühne} one {# Zustand umkreist} other {# Zustände umkreist}}",
+  "clear": "Löschen",
+  "toolPan": "Ziehen Sie, um die Karte zu verschieben",
+  "toolBox": "Ziehen Sie auf die Box-Select-Zustände",
+  "loading": "Die Karte wird geladen...",
+  "unavailable": "Dieses Projekt hat noch keine Kartengeometrie, also gibt es hier vorerst nichts zu kreisen. Du kannst weiter bauen – deine Bühne bleibt einfach die ganze Welt.",
+  "close": "Schließen",
+  "cancel": "Abbrechen",
+  "save": "Stufe speichern",
+  "saving": "Speichern...",
+  "saved": "Stufe gespeichert",
+  "saveFailed": "Konnte deine Bühne nicht retten: {msg}"
+}

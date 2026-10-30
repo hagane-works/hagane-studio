@@ -1,0 +1,21 @@
+{
+  "button": "Restore base-game content ({count} states)",
+  "buttonBusy": "Checking…",
+  "dialogTitle": "Restore base-game content",
+  "dialogIntro": "The base game ships extra script for these states that this project never received. It will be written back into {count} states that are empty right now. Nothing has been changed yet.",
+  "willRestoreHeading": "Will be added back",
+  "willRestoreLine": "{navalBases} naval bases · {bunkers} bunkers · {dams} dams · {landmarks} landmarks · {datedBlocks} dated history blocks · {hasDlc} DLC-gated blocks",
+  "willNotTouchHeading": "Will not be touched",
+  "willNotTouchLine": "Ownership, cores, claims, buildings, manpower and provinces stay exactly as they are.",
+  "skippedNote": "{count} more states already carry script of your own and will be left alone.",
+  "missingNote": "{count} more states have nothing the base game could add back.",
+  "confirm": "Restore {count} states",
+  "cancel": "Cancel",
+  "successTitle": "Base-game content restored",
+  "successBody": "{count} states are whole again — {navalBases} naval bases and {landmarks} landmarks came back.",
+  "nothingToRestore": "There is nothing to add back: these states already carry everything the base game ships.",
+  "errorVanillaRootUnconfigured": "The Hearts of Iron IV folder is not set, so the base game's state files could not be read and nothing was restored. Not one line was changed. Choose the game folder in Settings → Hearts of Iron IV installation.",
+  "errorVanillaStatesDirMissing": "The Hearts of Iron IV folder in Settings is not the game's installation folder — history/states could not be read. Not one line was changed. Choose the folder that contains hoi4.exe in Settings → Hearts of Iron IV installation.",
+  "errorVanillaStatesEmpty": "The game's history/states folder was found, but not a single state could be read from it. Not one line was changed. Verify the game files in Steam, or choose another installation in Settings → Hearts of Iron IV installation.",
+  "errorGeneric": "Restoring base-game content failed, so not one line was changed. You can try again."
+}

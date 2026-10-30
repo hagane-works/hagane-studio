@@ -1,0 +1,4 @@
+{
+  "advisorSlotNote": "«{value}» no es uno de los puestos de asesor que ofrece este mod base. Solo importa si ningún mod cargado lo define; si lo defines tú mismo, no hay problema. Puestos del mod base: {list}",
+  "ideaTypeNote": "«{value}» no es una de las categorías de ideas que ofrece este mod base. Solo importa si ningún mod cargado la define; si la defines tú mismo, no hay problema. Categorías del mod base: {list}"
+}

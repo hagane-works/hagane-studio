@@ -1,0 +1,12 @@
+{
+ "source": "common/characters/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 5,
+ "ids": [
+  "GER_franz_seldte",
+  "GER_test_general",
+  "GER_test_leader",
+  "ROM_ion_antonescu",
+  "SOV_iosif_stalin"
+ ]
+}

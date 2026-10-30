@@ -1,0 +1,16 @@
+{
+  "entityDecision": "결정",
+  "entityEvent": "이벤트",
+  "entityFocus": "국가중점",
+  "entityIdea": "국민정신",
+  "searchPlaceholder": "{entity} ID 또는 이름 검색…",
+  "all": "전체",
+  "searchingBase": "기본 모드 검색 중…",
+  "projectBadge": "프로젝트",
+  "baseBadge": "기본 모드",
+  "noResults": "검색 결과가 없습니다.",
+  "emptyProject": "이 프로젝트에 {entity} 항목이 없습니다.",
+  "emptyCategory": "이 카테고리에 {entity} 항목이 없습니다.",
+  "promptManual": "{entity} ID 직접 입력:",
+  "enterManually": "+ 직접 입력…"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "戦闘序列と部隊（保持）",
+  "subtitle": "手書きの OOB、部隊、師団編制、装備をそのまま保持し、バイト単位で同一に再エクスポートします。",
+  "preservedBadge": "往復変換で保持",
+  "detectedHeading": "このファイルで検出",
+  "stat": {
+    "set_oob": "陸軍 OOB 参照",
+    "set_air_oob": "空軍 OOB 参照",
+    "set_naval_oob": "海軍 OOB 参照",
+    "units": "units ブロック",
+    "division_template": "division_template",
+    "equipment": "equipment / production"
+  },
+  "editLabel": "OOB / units raw スクリプト",
+  "editHelp": "自由に編集できます。エクスポート時、このテキストをそのまま history/countries/[TAG].txt に書き込みます。コメントとインラインブロックも保持します。",
+  "emptyTitle": "OOB または部隊はまだありません",
+  "emptyBody": "ここに set_oob 参照または units ブロックを貼り付けると、変更せずエクスポートできます。set_oob は history/units/ 配下のファイルを指します。そのファイルは「師団編制」と「初期配備」ワークベンチから本プログラムが生成し、インポートした Mod に同名ファイルがあればそのまま引き継ぎます。ファイル名は 国家タグ + 開始年（例: ROM_1936）にしてください。以降の処理はこの接頭辞から国家を判別します。",
+  "emptyInsert": "OOB のひな形を挿入",
+  "starterComment": "# 戦闘序列 — この国家の履歴ファイルにそのまま書き込み",
+  "starterNeedsTag": "先にこの履歴ファイルの国家タグを設定してください。OOB ファイル名はその国家タグで始まる必要があり（例： ROM_1936）、そうでないとこれらの部隊がどの国家のものか判別できません。"
+}

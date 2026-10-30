@@ -1,0 +1,37 @@
+{
+  "headline": "有 <mono>{count}</mono> 处引用指向你还没导入的别国内容，这很正常。",
+  "tooltipTitle": "跨国引用语义",
+  "tooltipContent": "跨国引用指：一个国家的 mod 文件引用了另一个国家的 entity(character / idea / focus 等)。\n\nHOI4 引擎的 mod 读取规则：引擎会一起加载所有 mod 文件，任何国家的 event 都能对任何国家触发，只要 trigger 满足。\n\n在编辑器里：引用按当前国家过滤显示，查看它们不会切换主国。加一个次要国家，就能把相关 entity 扫进来，不影响主视图。\n\n实例：Britain.txt 里的 britain.1(Tizard mission)触发条件是 tag = USA。这个 event 的 \"owner\" 是 USA，但文件在 Britain.txt、namespace 是 britain，所以 cross-ref banner 会建议把 USA 或 ENG 加为次要国家，好把这个 entity 扫进来。",
+  "reason": "这些基本都指向别国的内容，是无害的。<b>按「合并回原 mod」(Path B)导出会原样保留</b>,不会丢。想把这些内容也放进编辑器？在下面加一个国家即可。<b>主国家不会被切换。</b>",
+  "suggestLabel": "建议加国(按引用次数):",
+  "alreadyInProject": "{tag} 已在项目中",
+  "expandTitle": "把 {tag} 加为次要国家只是扩展项目国清单，不会切换主国，主视图保持不变。",
+  "added": "(已添加)",
+  "expandAddCountry": "扩展加国",
+  "addingCountry": "正在添加 {tag}…",
+  "collapseDetails": "收起明细",
+  "viewDetails": "查看明细 ({count} 类)",
+  "hideScope": "隐藏检查范围",
+  "showScope": "检查范围",
+  "currentScope": "当前检查范围：",
+  "none": "(无)",
+  "scopeNote": "未覆盖的引用类型(focus / decision / trait / tech 等)将在后续批次加入。\"未报\"不等于\"无问题\"。",
+  "moreHidden": "…还有 {hidden} 类未显示(共 {total} 类)",
+  "egPrefix": "例如 ",
+  "unmodeled": {
+    "headline": "发现 <mono>{count}</mono> 条引用指向本程序未建模的内容",
+    "tooltipTitle": "什么是「未建模的内容」?",
+    "tooltipContent": "本程序建模了 9 类实体(idea / event / focus / decision / character / trait / technology / 好感度修正 / MIO)。其余 HOI4 类别——scripted_effect/trigger、意识形态、装饰国名标签、游戏规则、装备、特殊计划——本程序未建模，因此无法重新生成它们的定义文件。\n\n这些引用本身是合法的 HOI4 脚本。走「合并回原 mod」导出(Path B)会保留原始定义文件，引用照常生效；从零导出(Path A)无法复现这些定义，引用会悬空。\n\n此为提示而非报错——只是让你知道哪条导出路径能保留它们。",
+    "note": "这些引用指向本程序尚未建模的内容(如自定义 scripted_effect / scripted_trigger、自定义意识形态、装饰国名标签等)。<b>只有走「合并回原 mod」导出(Path B)才会保留</b>;从零导出(Path A)会悬空。若用 Path B 导出则无需处理。",
+    "viewDetails": "查看明细 ({count} 类)",
+    "collapseDetails": "收起明细",
+    "cat": {
+      "scripted_effect_trigger": "自定义 scripted_effect / trigger",
+      "ideology": "自定义意识形态(子意识形态)",
+      "cosmetic_tag": "装饰国名标签 (cosmetic_tag)",
+      "game_rule": "游戏规则 (game_rule)",
+      "equipment": "自定义装备",
+      "special_project": "特殊计划 (special_project)"
+    }
+  }
+}

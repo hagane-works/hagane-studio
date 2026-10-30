@@ -1,0 +1,5 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+name = "La Resistance"
+path = "dlc/dlc028_la_resistance"
+affects_checksum = yes
+category = "expansion"

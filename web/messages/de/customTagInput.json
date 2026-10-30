@@ -1,0 +1,7 @@
+{
+  "hintEmpty": "2–5 Zeichen, zuerst ein Buchstabe, dann A–Z oder 0–9. Z.B. GER / FL2 / UdSSR2",
+  "hintShort": "Zu kurz — brauchen 2–5 Zeichen.",
+  "hintValid": "{tag}- Okay. - Ich weiß.",
+  "hintInvalid": "Das erste Zeichen muss A–Z sein, dann nur A–Z oder 0–9 (keine Leerzeichen oder Unterstriche).",
+  "placeholder": "BAV-Verfahren"
+}

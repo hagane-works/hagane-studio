@@ -1,0 +1,25 @@
+{
+  "shared": [
+    {"input": null, "old_tag": "GER", "new_tag": "FRA", "expected": null, "changed": false},
+    {"input": [], "old_tag": "GER", "new_tag": "FRA", "expected": [], "changed": false},
+    {"input": {}, "old_tag": "GER", "new_tag": "FRA", "expected": {}, "changed": false},
+    {"input": ["ger", "FRA"], "old_tag": "GER", "new_tag": "FRA", "expected": ["ger", "FRA"], "changed": false},
+    {"input": ["GER", "USA", "FRA", "GER", "ger", "USA"], "old_tag": "GER", "new_tag": "FRA", "expected": ["FRA", "USA", "ger"], "changed": true},
+    {"input": ["FRA", "GER", "FRA"], "old_tag": "GER", "new_tag": "FRA", "expected": ["FRA"], "changed": true}
+  ],
+  "bookmarks": [
+    {"default_country": null, "selectable_countries": null, "old_tag": "GER", "new_tag": "FRA", "expected_default_country": null, "expected_selectable_countries": null, "changed": false},
+    {"default_country": "", "selectable_countries": [], "old_tag": "GER", "new_tag": "FRA", "expected_default_country": "", "expected_selectable_countries": [], "changed": false},
+    {"default_country": "GER", "selectable_countries": [], "old_tag": "GER", "new_tag": "FRA", "expected_default_country": "FRA", "expected_selectable_countries": [], "changed": true},
+    {
+      "default_country": "ger",
+      "selectable_countries": [{"tag": "GER", "history_en": "first"}, "raw", {"tag": "ger"}, {"tag": 123}, {"history_en": "missing"}, {"tag": "GER", "minor": true}],
+      "old_tag": "GER",
+      "new_tag": "FRA",
+      "expected_default_country": "ger",
+      "expected_selectable_countries": [{"tag": "FRA", "history_en": "first"}, "raw", {"tag": "ger"}, {"tag": 123}, {"history_en": "missing"}, {"tag": "FRA", "minor": true}],
+      "changed": true
+    },
+    {"default_country": "USA", "selectable_countries": {"tag": "GER"}, "old_tag": "GER", "new_tag": "FRA", "expected_default_country": "USA", "expected_selectable_countries": {"tag": "GER"}, "changed": false}
+  ]
+}

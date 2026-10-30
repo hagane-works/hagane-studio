@@ -1,0 +1,14 @@
+{
+  "roleCountryLeader": "Líder del país",
+  "roleFieldMarshal": "Mariscal de campo",
+  "roleCorpsCommander": "Comandante de cuerpo",
+  "roleAdmiral": "Almirante",
+  "roleScientist": "Científico",
+  "roleOperative": "Agente",
+  "roleAdvisor": "Asesor",
+  "draft": "Borrador",
+  "noPortrait": "Sin retrato",
+  "traits": "Rasgos",
+  "advisorSlot": "Puesto de asesor",
+  "cost": "Coste {amount}"
+}

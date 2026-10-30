@@ -1,0 +1,15 @@
+{
+  "workbenchTitle": "This workbench hit an error",
+  "workbenchBody": "Something went wrong while rendering this editor. Your other work and the rest of the app are unaffected.",
+  "rootTitle": "Something went wrong",
+  "rootBody": "An unexpected error stopped this page from rendering. The rest of the app is still available.",
+  "chunkTitle": "This page didn't finish loading",
+  "chunkBody": "Part of the page could not be loaded from the program, usually because it was restarted or updated while this window was open. Reload the page to try again.",
+  "globalTitle": "The app failed to load",
+  "globalBody": "A critical error stopped the app from rendering. Reloading usually fixes this.",
+  "draftHint": "Try again first — it keeps any unsaved edits in this session. Reloading the page discards unsaved drafts.",
+  "retry": "Try again",
+  "reload": "Reload page",
+  "details": "Error details",
+  "unknownError": "Unknown error"
+}

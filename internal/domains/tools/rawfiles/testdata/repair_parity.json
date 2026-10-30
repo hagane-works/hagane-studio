@@ -1,0 +1,385 @@
+{
+ "cases": [
+  {
+   "name": "replace-ok",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": "GER_war_economy",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": null,
+   "response": {
+    "entity_kind": "focus",
+    "entity_id": 3,
+    "field": "completion_reward",
+    "target_id": "GER_war_economi",
+    "action": "replace_target",
+    "applicable": true,
+    "before": "GER_war_economi",
+    "after": "GER_war_economy",
+    "source_span": {
+     "start_offset": 35,
+     "end_offset": 50,
+     "start_line": 2,
+     "start_column": 14,
+     "end_line": 2,
+     "end_column": 29
+    },
+    "source_sha256": "a13fc7c8d95738fe81c196b9fa7dcb8732bed9319caa8d667ded516914c3f63b",
+    "reason": "explicit target replacement requested",
+    "replacement_id": "GER_war_economy",
+    "boolean_ancestry": [],
+    "applied": false
+   },
+   "applied_text": "completion_reward = {\n\tadd_ideas = GER_war_economy\n\tcountry_event = { id = ger.500 }\n}\n"
+  },
+  {
+   "name": "delete-ok",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": null,
+   "delete_assignment": true,
+   "source_sha256": null,
+   "error": null,
+   "response": {
+    "entity_kind": "focus",
+    "entity_id": 3,
+    "field": "completion_reward",
+    "target_id": "GER_war_economi",
+    "action": "delete_assignment",
+    "applicable": true,
+    "before": "add_ideas = GER_war_economi",
+    "after": "",
+    "source_span": {
+     "start_offset": 23,
+     "end_offset": 50,
+     "start_line": 2,
+     "start_column": 2,
+     "end_line": 2,
+     "end_column": 29
+    },
+    "source_sha256": "a13fc7c8d95738fe81c196b9fa7dcb8732bed9319caa8d667ded516914c3f63b",
+    "reason": "explicit assignment deletion requested",
+    "replacement_id": null,
+    "boolean_ancestry": [],
+    "applied": false
+   },
+   "applied_text": "completion_reward = {\n\t\n\tcountry_event = { id = ger.500 }\n}\n"
+  },
+  {
+   "name": "delete-refused-boolean",
+   "text": "available = {\n\tAND = {\n\t\thas_completed_focus = GER_ghost\n\t}\n}\n",
+   "target_id": "GER_ghost",
+   "target_start_offset": 47,
+   "target_end_offset": 56,
+   "replacement_id": null,
+   "delete_assignment": true,
+   "source_sha256": null,
+   "error": null,
+   "response": {
+    "entity_kind": "focus",
+    "entity_id": 3,
+    "field": "completion_reward",
+    "target_id": "GER_ghost",
+    "action": "delete_assignment",
+    "applicable": false,
+    "before": "has_completed_focus = GER_ghost",
+    "after": "has_completed_focus = GER_ghost",
+    "source_span": {
+     "start_offset": 25,
+     "end_offset": 56,
+     "start_line": 3,
+     "start_column": 3,
+     "end_line": 3,
+     "end_column": 34
+    },
+    "source_sha256": "a487db6e7775159cb78241e333da4643c00864c7f64260552f9deee3503077cc",
+    "reason": "automatic deletion refused because boolean ancestry may change semantics: AND",
+    "replacement_id": null,
+    "boolean_ancestry": [
+     "AND"
+    ],
+    "applied": false
+   },
+   "applied_text": null
+  },
+  {
+   "name": "both-actions",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": "GER_y",
+   "delete_assignment": true,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_action_invalid",
+    "message": "Choose exactly one action: replacement_id or delete_assignment.",
+    "status_code": 400,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward"
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "neither-action",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": null,
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_action_invalid",
+    "message": "Choose exactly one action: replacement_id or delete_assignment.",
+    "status_code": 400,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward"
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "replacement-unsafe",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": "bad token!",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_replacement_invalid",
+    "message": "Replacement id is not a safe HOI4 reference token.",
+    "status_code": 422,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward"
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "replacement-same",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": "GER_war_economi",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_noop",
+    "message": "Replacement id must differ from the current target id.",
+    "status_code": 400,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward"
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "span-off-by-one",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 36,
+   "target_end_offset": 50,
+   "replacement_id": "GER_y",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_candidate_not_found",
+    "message": "The exact positioned reference no longer exists in this field.",
+    "status_code": 409,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward",
+     "target_id": "GER_war_economi",
+     "target_start_offset": 36,
+     "target_end_offset": 50,
+     "match_count": 0
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "wrong-target",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_nope",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": "GER_y",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_candidate_not_found",
+    "message": "The exact positioned reference no longer exists in this field.",
+    "status_code": 409,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward",
+     "target_id": "GER_nope",
+     "target_start_offset": 35,
+     "target_end_offset": 50,
+     "match_count": 0
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "stale-sha",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "GER_war_economi",
+   "target_start_offset": 35,
+   "target_end_offset": 50,
+   "replacement_id": "GER_y",
+   "delete_assignment": false,
+   "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+   "error": {
+    "code": "cross_ref_repair_stale_source",
+    "message": "The script field changed after the repair preview was created.",
+    "status_code": 409,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward",
+     "expected_source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+     "current_source_sha256": "a13fc7c8d95738fe81c196b9fa7dcb8732bed9319caa8d667ded516914c3f63b"
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "unparseable",
+   "text": "completion_reward = { add_ideas = GER_x",
+   "target_id": "GER_x",
+   "target_start_offset": 0,
+   "target_end_offset": 5,
+   "replacement_id": "GER_y",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": {
+    "code": "cross_ref_repair_source_unparseable",
+    "message": "The current field cannot be safely parsed for a positioned repair.",
+    "status_code": 422,
+    "context": {
+     "project_id": 1,
+     "entity_kind": "focus",
+     "entity_id": 3,
+     "field": "completion_reward",
+     "parser_error": "ParseError"
+    }
+   },
+   "response": null,
+   "applied_text": null
+  },
+  {
+   "name": "event-target",
+   "text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.500 }\n}\n",
+   "target_id": "ger.500",
+   "target_start_offset": 75,
+   "target_end_offset": 82,
+   "replacement_id": "ger.501",
+   "delete_assignment": false,
+   "source_sha256": null,
+   "error": null,
+   "response": {
+    "entity_kind": "focus",
+    "entity_id": 3,
+    "field": "completion_reward",
+    "target_id": "ger.500",
+    "action": "replace_target",
+    "applicable": true,
+    "before": "ger.500",
+    "after": "ger.501",
+    "source_span": {
+     "start_offset": 75,
+     "end_offset": 82,
+     "start_line": 3,
+     "start_column": 25,
+     "end_line": 3,
+     "end_column": 32
+    },
+    "source_sha256": "a13fc7c8d95738fe81c196b9fa7dcb8732bed9319caa8d667ded516914c3f63b",
+    "reason": "explicit target replacement requested",
+    "replacement_id": "ger.501",
+    "boolean_ancestry": [],
+    "applied": false
+   },
+   "applied_text": "completion_reward = {\n\tadd_ideas = GER_war_economi\n\tcountry_event = { id = ger.501 }\n}\n"
+  }
+ ],
+ "allowed_fields": {
+  "focus": [
+   "ai_will_do",
+   "available",
+   "bypass",
+   "cancel",
+   "completion_reward",
+   "select_effect"
+  ],
+  "event": [
+   "after",
+   "immediate",
+   "mean_time_to_happen",
+   "trigger"
+  ],
+  "decision": [
+   "activation",
+   "ai_will_do",
+   "allowed",
+   "available",
+   "cancel_effect",
+   "cancel_trigger",
+   "complete_effect",
+   "custom_cost_trigger",
+   "modifier",
+   "remove_effect",
+   "target_root_trigger",
+   "target_trigger",
+   "timeout_effect",
+   "visible"
+  ],
+  "idea": [
+   "ai_will_do",
+   "allowed",
+   "allowed_civil_war",
+   "allowed_to_remove",
+   "available",
+   "cancel",
+   "do_effect",
+   "on_add",
+   "on_remove",
+   "visible"
+  ]
+ }
+}

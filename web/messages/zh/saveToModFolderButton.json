@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "你的浏览器不支持 File System Access API，请改用 Chrome 或 Edge，或走完整的 Export Mod 流程。",
+  "savedToFolder": "已写入 mod 文件夹",
+  "saveFailed": "保存到 mod 文件夹失败。{msg}",
+  "titleWithFolder": "保存 {tag} 三件套到 {dir}/(直接写入文件，在 HOI4 中重启 mod 即生效)",
+  "titleNoFolder": "首次使用会让你选 mod 文件夹",
+  "saving": "保存中...",
+  "saveToFolderNamed": "保存到 {dir}",
+  "saveToModFolder": "保存到 Mod 文件夹",
+  "changeFolderTitle": "换 mod 文件夹",
+  "changeFolder": "换文件夹",
+  "saved": "已保存 ✓"
+}

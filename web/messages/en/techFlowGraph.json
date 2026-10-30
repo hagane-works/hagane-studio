@@ -1,0 +1,9 @@
+{
+  "footerHint": "Double-click empty space → create · drag a node → change start_year / column · select then press <kbd>Delete</kbd>, or hover a node's top-right × to delete",
+  "footerHintBrowse": "Browse the research board: select a technology, pan, or zoom. Use Layout mode to change a placement.",
+  "footerHintLayout": "Layout mode: place only in the selected research folder's legal slots. Dragging never changes research year.",
+  "footerHintAria": "Canvas controls help",
+  "footerHintRowAxis": "Double-click empty space → create · drag a node → change row / column · select then press <kbd>Delete</kbd>, or hover a node's top-right × to delete",
+  "orphanNoFolder": "Not in any tech tree · {count} techs have no folder block (granted by focus/event)",
+  "orphanUnmatched": "Not matched to any gridbox in the .gui · {count} techs"
+}

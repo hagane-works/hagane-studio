@@ -1,0 +1,11 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+focus_tree = {
+	id = german_focus
+	country = { factor = 0 modifier = { add = 10 tag = GER } }
+	focus = {
+		id = GER_test_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1 y = 0
+		cost = 10
+	}
+}

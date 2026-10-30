@@ -1,0 +1,4 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+test_decision_category = {
+	icon = generic_industry
+}

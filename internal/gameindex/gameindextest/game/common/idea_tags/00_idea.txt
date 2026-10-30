@@ -1,0 +1,20 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+idea_categories = {
+	hidden_ideas = { hidden = yes ledger = hidden }
+	country = { type = national_spirit ledger = hidden }
+	government = {
+		slot = mobilization_laws
+		slot = trade_laws
+		slot = economy
+		character_slot = political_advisor
+	}
+	research_production = {
+		slot = tank_manufacturer
+		character_slot = theorist
+	}
+	military_staff = {
+		character_slot = army_chief
+		character_slot = high_command
+	}
+	army_spirit = { type = army_spirit slot = army_spirit }
+}

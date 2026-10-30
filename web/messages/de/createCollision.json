@@ -1,0 +1,6 @@
+{
+  "autoSuffixedTitle": "ID automatisch ausgefüllt",
+  "autoSuffixedFallback": "Diese ID kollidierte mit einer existierenden Entity — ein Suffix wurde hinzugefügt, um sie einzigartig zu halten.",
+  "alreadyExistsTitle": "ID existiert bereits",
+  "alreadyExistsFallback": "Diese ID wird bereits in diesem Projekt verwendet. Bitte wählen Sie eine andere."
+}

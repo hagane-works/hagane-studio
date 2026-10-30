@@ -1,0 +1,6 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+dlcs = {
+	dlc013 = {
+		name = "Test Music Pack"
+	}
+}

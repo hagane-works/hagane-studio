@@ -1,0 +1,20 @@
+{
+  "title": "国家を追加",
+  "sourceAriaLabel": "国家のソース",
+  "tabVanilla": "バニラ",
+  "tabCustom": "カスタム",
+  "countryTagLabel": "国家 TAG",
+  "displayNameLabel": "表示名（任意）",
+  "vanillaNamePlaceholder": "既定ではバニラの国家名を使用",
+  "vanillaNameHint": "空欄にするとバニラ HOI4 の名前を使用します。後から編集できます。",
+  "adding": "追加中...",
+  "addButton": "国家を追加",
+  "customHint": "バニラに存在しない歴史改変国家（バイエルン、ウェールズ、テキサスなど）に使用します。2～5文字の大文字コードを入力してください。バニラの TAG と重複する場合は、上書き前に軽い警告が表示されます。",
+  "customNamePlaceholder": "例：バイエルン王国",
+  "mapColorLabel": "マップ色（任意）",
+  "mapColorAriaLabel": "マップ色",
+  "mapColorAuto": "自動",
+  "graphicalCultureLabel": "グラフィカルカルチャー（任意）",
+  "graphicalCultureAriaLabel": "グラフィカルカルチャー",
+  "graphicalCultureAuto": "自動（western_european_gfx）"
+}

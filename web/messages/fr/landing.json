@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "Charger un mod existant",
+  "newProject": "+ Nouveau projet",
+  "newProjectFromScratch": "Nouveau projet (à partir de zéro)",
+  "dashboardTitle": "Mes projets",
+  "ctaLoadExisting": "Importer un mod existant",
+  "ctaNewProject": "Nouveau projet vide",
+  "statProjects": "Projets",
+  "statCountries": "Pays",
+  "statEntities": "Entités",
+  "statRecentEdit": "Dernière modification",
+  "statRecentNone": "Aucune",
+  "timeJustNow": "à l'instant",
+  "timeMinutesAgo": "il y a {n} min",
+  "timeHoursAgo": "il y a {n} h",
+  "timeToday": "aujourd'hui",
+  "timeYesterday": "hier",
+  "timeDaysAgo": "il y a {n} j",
+  "modNamingTitle": "Ce que nous gérons pour vous",
+  "modNamingContent": "Les identifiants reçoivent automatiquement le préfixe de votre projet et n'entrent donc jamais en conflit avec le jeu de base. Les conflits de noms se règlent d'eux-mêmes. À l'exportation, descriptor.mod et l'arborescence standard sont générés pour vous. Vous n'avez plus qu'à créer.",
+  "emptyState": "Aucun projet pour le moment. Partez de zéro ou importez un mod existant pour le retravailler.",
+  "loadedBadge": "Mode chargé",
+  "docsNavLink": "Guide d’utilisation",
+  "dashboardNavigationLabel": "Navigation de l’atelier",
+  "languageLabel": "Langue",
+  "confirmDeleteProject": "Voulez-vous vraiment supprimer ce projet ?",
+  "deleteFailed": "Échec de la suppression : {msg}",
+  "modNameLabel": "Nom du mod",
+  "modNamePlaceholder": "ex. Mod des Trois Royaumes",
+  "modNameHint": "Commencez simplement par un nom. Vous ajouterez des pays après avoir ouvert le projet.",
+  "supportedVersionLabel": "Version HOI4 compatible",
+  "supportedVersionHint": "Version du moteur HOI4 ciblée par votre mod — inscrite dans descriptor.mod sous supported_version. 1.19.* couvre toutes les mises à jour 1.19.x. La dernière version est sélectionnée par défaut ; vous pourrez la changer plus tard dans les paramètres du descripteur du mod.",
+  "supportedVersionDefault": "dernière",
+  "creating": "Création...",
+  "createProject": "Créer le projet",
+  "baseModShelf": {
+    "dialogTitle": "Nouveau projet",
+    "sectionTitle": "Mod de base",
+    "sectionHint": "Appuyez-vous sur un mod de base pour référencer ses personnages, ses priorités nationales et ses illustrations — ou partez de zéro.",
+    "fromScratch": {
+      "title": "À partir de zéro",
+      "subtitle": "Un mod autonome sans base"
+    },
+    "buildOnThis": "Utiliser comme base",
+    "workshopLink": "Workshop",
+    "otherMod": {
+      "title": "Basé sur un autre mod ?",
+      "subtitle": "Importez votre propre mod de base dans un espace privé"
+    },
+    "createFailed": "Impossible de créer le projet : {msg}"
+  },
+  "gridLoading": "Chargement...",
+  "cardNoCountries": "Aucun pays pour le moment",
+  "cardMore": "+{n} autres",
+  "cardDelete": "Supprimer",
+  "cardCharacters": "{n} personnages",
+  "cardFocusNodes": "{n} priorités nationales",
+  "cardTechnologies": "{n} technologies",
+  "cardUpdated": "Mis à jour : {date}",
+  "statEntitiesTooltipTitle": "Répartition des entités",
+  "entityType": {
+    "country": "Pays",
+    "character": "Personnages",
+    "custom_trait": "Traits personnalisés",
+    "opinion_modifier": "Modificateurs d'opinion",
+    "dynamic_modifier": "Modificateurs dynamiques",
+    "modifier_definition": "Définitions de modificateurs",
+    "ai_strategy_plan": "Plans stratégiques de l'IA",
+    "ai_template": "Modèles de divisions de l'IA",
+    "wargoal": "Buts de guerre",
+    "idea": "Esprits nationaux",
+    "focus_tree": "Arbres de Priorités - nation",
+    "focus_node": "Priorités - nation",
+    "technology": "Technologies",
+    "event_namespace": "Espaces de noms d'événements",
+    "event": "Événements",
+    "super_event": "Super-événements",
+    "decision_category": "Catégories de décisions",
+    "decision": "Décisions",
+    "bookmark": "Signets",
+    "mio": "Organisations industrielles militaires",
+    "history_file": "Fichiers historiques"
+  },
+  "recentOpened": "Ouverts récemment",
+  "continueEditing": "Continuer la modification",
+  "recentlyEdited": "Modifiés récemment",
+  "editingNow": "Modification en cours",
+  "justNow": "à l'instant",
+  "minAgo": "il y a {n} min",
+  "hourAgo": "il y a {n} h",
+  "dayAgo": "il y a {n} j",
+  "noCountries": "Aucun pays pour le moment",
+  "moreCountries": "+{n} autres",
+  "entityCharacters": "{n} personnages",
+  "entityFocusNodes": "{n} priorités nationales",
+  "entityTechnologies": "{n} technologies",
+  "toolbar": {
+    "searchPlaceholder": "Rechercher un projet, un TAG de pays ou un mod de base...",
+    "sortLabel": "Trier :",
+    "sortOption": {
+      "recent": "Modifiés récemment",
+      "name": "Nom A-Z",
+      "countries": "Nombre de pays",
+      "created": "Créés récemment"
+    },
+    "filterGroupLabel": "Filtrer les projets",
+    "filterOption": {
+      "all": "Tous",
+      "in_progress": "En cours",
+      "by_mod_base": "Par mod de base"
+    },
+    "noMatch": "Aucun projet ne correspond aux filtres actuels.",
+    "clearFilters": "Effacer les filtres"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "The New Order",
+    "tfr": "The Fire Rises",
+    "other": "Original"
+  },
+  "emptyHero": {
+    "title": "Créons votre premier mod HOI4",
+    "subtitle": "Importez un mod existant ou partez d’un projet vide.",
+    "load": {
+      "title": "Vous avez déjà un dossier de mod HOI4 ?",
+      "blurb": "Choisissez le dossier de votre mod. Il est analysé automatiquement et vous continuez à le modifier dans les ateliers visuels.",
+      "cta": "Importer un mod existant"
+    },
+    "scratch": {
+      "title": "Vous préférez partir d'un projet vide ?",
+      "blurb": "Nommez votre mod, choisissez un pays de base, puis créez librement à partir d'une page blanche.",
+      "cta": "Nouveau projet vide"
+    }
+  },
+  "settings": "Paramètres",
+  "public": {
+    "brandHome": "Accueil de Hagane Works"
+  }
+}

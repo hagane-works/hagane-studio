@@ -1,0 +1,125 @@
+{
+  "decision": {
+    "kind": "Entscheidung · {id}",
+    "categoryKind": "Entscheidungskategorie · {id}",
+    "loading": "Entscheidung des Projekts wird geladen…",
+    "confirmDelete": "Diese Entscheidung löschen?",
+    "delete": "Entscheidung löschen",
+    "notDeletable": "Diese Entscheidung stammt aus dem Spiel oder einer Originaldatei der Mod: Das Spiel würde sie weiter aus dieser Datei anzeigen, wenn die Zeile im Projekt gelöscht würde. Daher kann sie hier nicht gelöscht werden.",
+    "loadingCategory": "Entscheidungskategorie des Projekts wird geladen…",
+    "newLog": "Neu angelegt · {name}",
+    "add": "+ Neue Entscheidung in dieser Kategorie",
+    "addNote": "Die neue Entscheidung gilt nur für {tag}, kostet 0 und hat keine Bedingungen oder Effekte; nach dem Anlegen öffnet sie sich hier zum Weiterbearbeiten.",
+    "hitCategory": "Entscheidungskategorie {name}",
+    "hitDecision": "Entscheidung {name}",
+    "hitCost": "Kosten der Entscheidung {name}"
+  },
+  "override": {
+    "heading": "In meine Mod kopieren und ändern",
+    "vanillaNote": "Beim Speichern wird {file} vollständig in Ihre Mod kopiert (beim ersten Mal werden Sie gefragt); alles andere in der Datei bleibt unverändert. Die Änderung gilt für alle Länder, die diese Entscheidung nutzen.",
+    "modNote": "Geändert wird {file} in Ihrer Mod, und nur diese Entscheidung.",
+    "cost": "Kosten",
+    "icon": "Symbol",
+    "daysRemove": "Dauer (Tage)",
+    "daysReEnable": "Abklingzeit (Tage)",
+    "fireOnce": "Kann nur einmal ausgeführt werden",
+    "placeholder": "Nicht gesetzt",
+    "note": "Skripte wie Bedingungen und Effekte lassen sich hier noch nicht ändern; ein Fehler lässt sich im „Änderungsprotokoll“ rückgängig machen.",
+    "confirmTitle": "Datei des Basisspiels in Ihre Mod kopieren",
+    "confirmLabel": "Kopieren und speichern",
+    "confirmBody": "Die Datei {file} des Basisspiels wird vollständig in Ihre Mod kopiert und ersetzt die gleichnamige Datei des Spiels; die übrigen Entscheidungen und die Inhalte anderer Länder darin bleiben unverändert.\nDiese Änderung gilt für alle Länder, die diese Entscheidung nutzen; ändert ein Spielupdate diese Datei, wird Ihre Kopie nicht automatisch angepasst.",
+    "fileFallback": "die Datei, die diese Entscheidung festlegt",
+    "importedDone": "{file} wurde in Ihre Mod kopiert und geändert.",
+    "done": "{file} wurde geändert.",
+    "problem": {
+      "cost": "Die Kosten müssen eine Zahl ab 0 sein",
+      "icon": "Geben Sie das Symbol mit seinem Namen aus den Dateien an (Buchstaben, Ziffern, Unterstriche)",
+      "days": "Tage müssen eine ganze Zahl ab 0 sein"
+    }
+  },
+  "focus": {
+    "kind": "Fokus · {tree} · {id}",
+    "newChildLog": "Neuer Folgefokus · {name}",
+    "loading": "Fokus des Projekts wird geladen…",
+    "notInTree": "Dieser Baum im Projekt enthält diesen Fokus nicht.",
+    "prereqs": "Voraussetzungen",
+    "prereqHint": "Eine Gruppe pro Zeile: ein beliebiger Fokus der Gruppe genügt; jede Gruppe muss erfüllt sein.",
+    "or": "oder",
+    "addOr": "+ oder",
+    "addPrereq": "+ Voraussetzung",
+    "mutex": "Schließen sich gegenseitig aus",
+    "addMutex": "+ Gegenseitiger Ausschluss",
+    "newChild": "Neuer Folgefokus",
+    "confirmDelete": "Löschen bestätigen",
+    "delete": "Fokus löschen",
+    "remove": "{id} entfernen",
+    "picking": "Einen im Baum anklicken…",
+    "createHere": "Neuer Fokus hier",
+    "link": {
+      "self": "Ein Fokus kann nicht mit sich selbst verknüpft werden.",
+      "alreadyMutex": "Sie schließen sich bereits gegenseitig aus.",
+      "alreadyPrereq": "Das ist bereits eine Voraussetzung.",
+      "loop": "Das ergäbe eine Schleife: Jener Fokus setzt selbst diesen hier voraus."
+    }
+  },
+  "focusTree": {
+    "created": "Fokusbaum {id} angelegt; Rechtsklick auf eine leere Stelle setzt den ersten Fokus",
+    "label": "Fokusbaum von {tag}",
+    "none": "Für {tag} ist kein Baum festgelegt.",
+    "count": "{count, plural, one {# Fokus} other {# Fokusse}}",
+    "gameDefault": "Spielstandard",
+    "newIdPlaceholder": "ID des neuen Baums (leer lassen für automatischen Namen)",
+    "create": "Neuer Fokusbaum",
+    "createNote": "Der neue Baum kommt ins Projekt, für {tag}; das Spiel wählt Bäume nach Gewichtung, ein leerer Baum verdrängt den bestehenden also nicht."
+  },
+  "event": {
+    "kind": "Ereignis · {id}",
+    "loading": "Ereignis des Projekts wird geladen…",
+    "unreadable": "Dieses Ereignis ist nicht in den Projektdaten, und wie es im Spiel aussieht, ließ sich nicht lesen.",
+    "hitOption": "Option {name}",
+    "hitTitle": "Ereignistitel",
+    "hitDesc": "Ereignisbeschreibung",
+    "problem": {
+      "timeoutDays": "Die Zeitlimit-Tage müssen eine ganze Zahl ab 0 sein",
+      "mtth": "Ein Ereignis, das nicht nur per Skript ausgelöst wird, braucht eine durchschnittliche Eintrittszeit (z. B. days = 30)"
+    }
+  },
+  "eventSwitcher": {
+    "superCreated": "Superereignis #{number} angelegt",
+    "notInProject": "Das angezeigte Ereignis ist nicht in den Projektdaten, daher gibt es keinen Namensraum für ein neues Ereignis.",
+    "created": "Ereignis {id} angelegt",
+    "superEvent": "Superereignis",
+    "event": "Ereignis",
+    "search": "Nach ID oder Titel suchen",
+    "scopeLabel": "Welche Ereignisse auflisten",
+    "countryEvents": "Ereignisse von {tag}",
+    "allEvents": "Alle Ereignisse",
+    "totalPartial": "Ereignisse: {total} · die ersten {shown} sind gelistet, den Rest bitte suchen",
+    "totalAll": "Ereignisse: {total} · zum schnellen Durchblättern die Bildlaufleiste rechts ziehen",
+    "genericEvents": "Allgemeine Ereignisse (jedes Land kann sie bekommen)",
+    "noCountryEvents": "Dieses Land hat keine Ereignisse; wechseln Sie zu „Alle Ereignisse“.",
+    "noMatch": "Keine passenden Ereignisse.",
+    "newEvent": "Neues Ereignis",
+    "newEventNote": "Es kommt in den Namensraum des angezeigten Ereignisses, nummeriert nach dem letzten; nur per Skript ausgelöst, erscheint es nie von selbst.",
+    "superAria": "Superereignis {label}",
+    "noSuperEvents": "Das Projekt hat noch keine Superereignisse.",
+    "newSuperEvent": "Neues Superereignis"
+  },
+  "superEvent": {
+    "kind": "Superereignis · #{number} · {tag}",
+    "projectCountry": "Projektland",
+    "saved": "Superereignis „{title}“ gespeichert",
+    "pictureSaved": "Bild des Superereignisses ersetzt",
+    "deleted": "Superereignis „{title}“ gelöscht"
+  },
+  "bookmark": {
+    "fallbackName": "Lesezeichen",
+    "kind": "Lesezeichen · {id}",
+    "loading": "Lesezeichen des Projekts wird geladen…",
+    "notInProject": "Dieses Lesezeichen ist nicht in den Projektdaten (es stammt aus dem Basisspiel oder einer Mod-Datei); importieren Sie es ins Projekt, um es hier zu bearbeiten.",
+    "pictureLog": "Neuer Hintergrund · {name}",
+    "problem": {
+      "date": "Schreiben Sie das Datum als 1936.1.1 oder 1936.1.1.12"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows 阻止了 Hagane Works 保存文件",
+  "writeBlockedDescription": "无法写入 {folder}。如果在「Windows 安全中心」里打开了「勒索软件防护」（受控制文件夹的访问），请允许 HaganeWorks.exe 通过；也可以在设置里把创作目录换到「文档」等受保护文件夹以外的位置。"
+}

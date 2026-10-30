@@ -1,0 +1,10 @@
+{
+  "titleSuffix": "is a vanilla HOI4 TAG",
+  "description": "Continuing will replace vanilla {tag} ({vanillaName}) content with your mod's. This is exactly what alt-history mods (KR / TNO / TFR) do — your idea/focus/event entries override the vanilla ones when the mod is loaded.",
+  "ifGoalLabel": "If that's your goal",
+  "ifGoalText": "(rewrite vanilla {tag}): hit Continue.",
+  "ifCustomLabel": "If you wanted a custom TAG",
+  "ifCustomText": "(something vanilla doesn't use): Cancel and pick a different 2–5 letter code.",
+  "cancel": "Cancel",
+  "confirm": "Continue · replace vanilla"
+}

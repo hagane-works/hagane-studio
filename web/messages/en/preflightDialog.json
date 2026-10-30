@@ -1,0 +1,26 @@
+{
+  "title": "Pre-flight summary",
+  "subtitle": "Review what was scanned before starting the import. Big mods can take a while — turn on background run to keep working while it imports.",
+  "stat": {
+    "countries": "Countries (TAG)",
+    "characters": "Characters",
+    "ideas": "Ideas",
+    "focus_trees": "Focus trees",
+    "events": "Events",
+    "decisions": "Decisions",
+    "dynamic_modifiers": "Dynamic modifiers",
+    "superevents": "Super-events"
+  },
+  "etaLabel": "Estimated time",
+  "etaUnitMinutes": "{minutes} min",
+  "etaUnitSeconds": "~{seconds}s",
+  "etaUnit": "({mb} MB across {files} files)",
+  "etaFallback": "— (no data)",
+  "etaHint": "Rough estimate based on total file size. Actual time depends on your disk and computer.",
+  "backgroundToggleLabel": "Run import in background",
+  "backgroundToggleHint": "Close this dialog and keep working. A widget in the bottom-right shows progress.",
+  "ctaContinue": "Start import",
+  "ctaCancel": "Cancel",
+  "statFallback": "—",
+  "notAvailableHint": "Counts marked “—” aren't available during the scan; they'll appear in the post-import summary."
+}

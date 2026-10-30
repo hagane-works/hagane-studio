@@ -1,0 +1,1121 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "project": {
+    "country_tag": "GER",
+    "country_tags": []
+   },
+   "countries": [],
+   "bookmarks": [],
+   "history_files": [],
+   "states": [],
+   "raw_files": [],
+   "findings": [],
+   "entries": [
+    {
+     "tag": "GER",
+     "requirement": {
+      "authored": false,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [
+      "vanilla:GER"
+     ],
+     "load_orders": [
+      100
+     ],
+     "final_winner": "vanilla:GER",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": 4
+    }
+   ]
+  },
+  {
+   "name": "vanilla-tag-fallback",
+   "project": {
+    "country_tag": "GER",
+    "country_tags": []
+   },
+   "countries": [
+    "GER"
+   ],
+   "bookmarks": [],
+   "history_files": [],
+   "states": [],
+   "raw_files": [],
+   "findings": [],
+   "entries": [
+    {
+     "tag": "GER",
+     "requirement": {
+      "authored": false,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [
+      "vanilla:GER"
+     ],
+     "load_orders": [
+      100
+     ],
+     "final_winner": "vanilla:GER",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": 4
+    }
+   ]
+  },
+  {
+   "name": "authored-selectable-no-capital",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [],
+   "states": [],
+   "raw_files": [],
+   "findings": [
+    {
+     "code": "country.capital_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "authored": true,
+      "interesting": true,
+      "providers": [],
+      "selectable": true
+     },
+     "repair_route": "country.history.capital.add"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": []
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "structured-capital",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [
+    {
+     "id": 1,
+     "country_tag": "XXX",
+     "capital": 16,
+     "set_research_slots": 4,
+     "source": "created"
+    }
+   ],
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "XXX"
+    }
+   ],
+   "raw_files": [],
+   "findings": [],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "structured:1",
+      "final:structured:1"
+     ],
+     "load_orders": [
+      300,
+      1001
+     ],
+     "final_winner": "final:structured:1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots": 4
+    }
+   ]
+  },
+  {
+   "name": "structured-capital-invalid",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [
+    {
+     "id": 1,
+     "country_tag": "XXX",
+     "capital": 99999,
+     "set_research_slots": null,
+     "source": "created"
+    }
+   ],
+   "states": [],
+   "raw_files": [],
+   "findings": [
+    {
+     "code": "country.capital_invalid_state",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "history/countries/XXX - zMod.txt",
+      "provider": "final_artifact"
+     },
+     "evidence": {
+      "capital_token": 99999,
+      "parsed_capital": 99999,
+      "provider_id": "final:structured:1",
+      "source_hash": "9e05b98a62ee5439850170b2e7a96611d7952db6abc6cbfeda660bef116d0dce",
+      "valid_state_id": false
+     },
+     "repair_route": "country.history.capital.choose_state_id"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "structured:1",
+       "final:structured:1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "structured:1",
+      "final:structured:1"
+     ],
+     "load_orders": [
+      300,
+      1001
+     ],
+     "final_winner": "final:structured:1",
+     "capital": 99999,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "imported-structured",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [
+    {
+     "id": 1,
+     "country_tag": "XXX",
+     "capital": 16,
+     "set_research_slots": null,
+     "source": "imported"
+    }
+   ],
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "XXX"
+    }
+   ],
+   "raw_files": [],
+   "findings": [
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "structured:1",
+       "final:structured:1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "structured:1",
+      "final:structured:1"
+     ],
+     "load_orders": [
+      200,
+      1001
+     ],
+     "final_winner": "final:structured:1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-history-overrides",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [
+    {
+     "id": 1,
+     "country_tag": "XXX",
+     "capital": 16,
+     "set_research_slots": null,
+     "source": "created"
+    }
+   ],
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "XXX"
+    },
+    {
+     "state_id": 17,
+     "owner": "XXX"
+    }
+   ],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/countries/XXX - custom.txt",
+     "content": "capital = 17\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "structured:1",
+       "raw:10",
+       "final:raw:10",
+       "final:structured:1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "structured:1",
+      "raw:10",
+      "final:raw:10",
+      "final:structured:1"
+     ],
+     "load_orders": [
+      300,
+      400,
+      1001,
+      1002
+     ],
+     "final_winner": "final:structured:1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-shadows-structured-artifact",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [],
+   "history_files": [
+    {
+     "id": 1,
+     "country_tag": "XXX",
+     "capital": 16,
+     "set_research_slots": null,
+     "source": "created"
+    }
+   ],
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "XXX"
+    }
+   ],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/countries/XXX - zMod.txt",
+     "content": "capital = 16\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [
+      "raw:10",
+      "final:raw:10"
+     ],
+     "load_orders": [
+      400,
+      1001
+     ],
+     "final_winner": "final:raw:10",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-last-capital-wins",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [],
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "XXX"
+    },
+    {
+     "state_id": 17,
+     "owner": "XXX"
+    }
+   ],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/countries/XXX - a.txt",
+     "content": "capital = 16\ncapital = 17\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "raw:10",
+       "final:raw:10"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "raw:10",
+      "final:raw:10"
+     ],
+     "load_orders": [
+      400,
+      1001
+     ],
+     "final_winner": "final:raw:10",
+     "capital": 17,
+     "capital_is_valid_state": true,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-capital-block-ignored",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [],
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "XXX"
+    }
+   ],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/countries/XXX - a.txt",
+     "content": "capital = { 16 }\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [
+    {
+     "code": "country.capital_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "authored": true,
+      "interesting": true,
+      "providers": [
+       {
+        "kind": "project_preserved_raw",
+        "path": "history/countries/XXX - a.txt",
+        "provider_id": "raw:10",
+        "source_hash": "88b9bf07a527998a5fabdc311535236fef84cabcfca242226222ee760fa0b39b"
+       },
+       {
+        "kind": "final_artifact",
+        "path": "history/countries/XXX - a.txt",
+        "provider_id": "final:raw:10",
+        "source_hash": "4dc5e18384a25e784619f2232213fb93c50033b8ee98f3c35c6a800ac00c74b0"
+       }
+      ],
+      "selectable": true
+     },
+     "repair_route": "country.history.capital.add"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "raw:10",
+       "final:raw:10"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "raw:10",
+      "final:raw:10"
+     ],
+     "load_orders": [
+      400,
+      1001
+     ],
+     "final_winner": "final:raw:10",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-binary-skipped",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [],
+   "history_files": [],
+   "states": [],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/countries/XXX - a.txt",
+     "content": "capital = 16\n",
+     "source": "created",
+     "is_binary": true,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-unsafe-path-skipped",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [],
+   "history_files": [],
+   "states": [],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/countries/../XXX.txt",
+     "content": "capital = 16\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-state-owner",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "XXX"
+      }
+     ]
+    }
+   ],
+   "history_files": [
+    {
+     "id": 1,
+     "country_tag": "XXX",
+     "capital": 5000,
+     "set_research_slots": null,
+     "source": "created"
+    }
+   ],
+   "states": [],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/states/5000-X.txt",
+     "content": "state = {\n id = 5000\n history = {\n owner = FRA\n }\n}\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [
+    {
+     "code": "country.capital_not_owned",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "history/countries/XXX - zMod.txt",
+      "provider": "final_artifact"
+     },
+     "evidence": {
+      "capital": 5000,
+      "country_tag": "XXX",
+      "owner": "FRA",
+      "provider_id": "final:structured:1"
+     },
+     "repair_route": "country.history.capital.review_ownership"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "structured:1",
+       "final:structured:1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [
+      "structured:1",
+      "final:structured:1"
+     ],
+     "load_orders": [
+      300,
+      1001
+     ],
+     "final_winner": "final:structured:1",
+     "capital": 5000,
+     "capital_is_valid_state": true,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "raw-state-parse-failed",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [],
+   "history_files": [],
+   "states": [],
+   "raw_files": [
+    {
+     "id": 10,
+     "dest_path": "history/states/bad.txt",
+     "content": "state = {\n id = 1\n",
+     "source": "created",
+     "is_binary": false,
+     "content_sha256": ""
+    }
+   ],
+   "findings": [
+    {
+     "code": "state.raw_parse_failed",
+     "severity": "blocker",
+     "source": {
+      "kind": "state_raw_file",
+      "identifier": "history/states/bad.txt",
+      "path": "history/states/bad.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "error": "Expected RBRACE, got EOF '' at line 3",
+      "error_type": "ParseError"
+     },
+     "repair_route": "state.raw_file.repair_syntax"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "BAD",
+     "requirement": {
+      "authored": false,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [
+      "raw:10",
+      "final:raw:10"
+     ],
+     "load_orders": [
+      400,
+      1001
+     ],
+     "final_winner": "final:raw:10",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    },
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "bookmark-default-country",
+   "project": {
+    "country_tag": "XXX",
+    "country_tags": []
+   },
+   "countries": [
+    "XXX"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "XXX",
+     "selectable_countries": []
+    }
+   ],
+   "history_files": [],
+   "states": [],
+   "raw_files": [],
+   "findings": [
+    {
+     "code": "country.capital_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "authored": true,
+      "interesting": false,
+      "providers": [],
+      "selectable": true
+     },
+     "repair_route": "country.history.capital.add"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": []
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "requirement": {
+      "authored": true,
+      "selectable": true,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  },
+  {
+   "name": "multi-country",
+   "project": {
+    "country_tag": "AAA",
+    "country_tags": [
+     "ZZZ"
+    ]
+   },
+   "countries": [
+    "MMM"
+   ],
+   "bookmarks": [
+    {
+     "default_country": "",
+     "selectable_countries": [
+      {
+       "tag": "BBB"
+      }
+     ]
+    }
+   ],
+   "history_files": [],
+   "states": [],
+   "raw_files": [],
+   "findings": [
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "BBB"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": []
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "AAA",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    },
+    {
+     "tag": "BBB",
+     "requirement": {
+      "authored": false,
+      "selectable": true,
+      "interesting": true
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    },
+    {
+     "tag": "MMM",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    },
+    {
+     "tag": "ZZZ",
+     "requirement": {
+      "authored": true,
+      "selectable": false,
+      "interesting": false
+     },
+     "provider_ids": [],
+     "load_orders": [],
+     "final_winner": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots": null
+    }
+   ]
+  }
+ ]
+}

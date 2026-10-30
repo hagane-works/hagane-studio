@@ -1,0 +1,5 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+autonomy_state = {
+	id = autonomy_puppet
+	min_freedom_level = 0.2
+}

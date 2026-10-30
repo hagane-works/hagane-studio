@@ -1,0 +1,6 @@
+{
+  "loading": "Chargement…",
+  "previewFailed": "Échec de l'aperçu : {error}",
+  "noContentYet": "Aucun contenu pour le moment.",
+  "selectCharacterHint": "Sélectionnez un personnage pour prévisualiser sa localisation ou ses GFX."
+}

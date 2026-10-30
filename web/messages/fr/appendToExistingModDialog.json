@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "Les fichiers de technologies sont fusionnés par chemin exact",
+  "technologyMergeBody": "Append remplace uniquement les fichiers dont le chemin est strictement identique. Il ne fusionne pas les blocs de technologies d’un fichier du projet dans le fichier source vanilla.",
+  "toastWarning": "Superposition terminée. En cas de conflit, {conflictCount} fichier(s) du mod de base ont été écrasés. Pour contrôler chaque fichier, utilisez la fusion différentielle.",
+  "toastSuccess": "Superposition terminée. Aucun conflit de chemin ; tout votre contenu a été ajouté comme nouveaux fichiers.",
+  "description": "Superpose ce projet à un ZIP de mod existant. En cas de conflit de chemin, vos modifications l'emportent. Idéal pour « charger un mod, le modifier ici et télécharger un ZIP fusionné ».",
+  "naiveMergeTitle": "Fusion par superposition · vos modifications l'emportent",
+  "naiveMergeBody": "En cas de conflit de chemin, vos modifications écrasent le fichier de même nom du mod de base. Les fichiers propres à la base sont conservés et les nouveaux utilisent votre version. Pour réviser chaque conflit, utilisez la fusion différentielle.",
+  "pickBaseZip": "Choisir le ZIP du mod de base...",
+  "pickBaseFolder": "Choisir le dossier du mod...",
+  "folderPickerTitle": "Choisir le dossier du mod de base",
+  "folderPickerHint": "Ouvrez le dossier qui contient le descriptor.mod du mod, par exemple un élément du Steam Workshop sous steamapps\\workshop\\content\\394360 ou un mod de votre dossier de mods. Le programme le lit seulement, sans jamais le modifier.",
+  "folderNotAMod": "Ce dossier n’est pas un mod de Hearts of Iron IV : il ne contient pas de descriptor.mod portant le nom du mod. Choisissez le dossier qui contient descriptor.mod.",
+  "supportNote": "Tout ZIP ou dossier de mod HOI4 convient. Le programme lit seulement la base, sans jamais la modifier, et le ZIP fusionné est enregistré dans votre dossier Téléchargements.",
+  "title": "Superposer à un mod existant",
+  "baseZipLabel": "Mod de base",
+  "cancel": "Annuler",
+  "merging": "Fusion...",
+  "confirmAppend": "Confirmer la superposition et télécharger"
+}

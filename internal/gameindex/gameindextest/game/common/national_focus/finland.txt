@@ -1,0 +1,11 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+focus_tree = {
+	id = finnish_focus
+	country = { factor = 0 modifier = { add = 10 tag = FIN } }
+	focus = {
+		id = FIN_test_focus
+		icon = GFX_goal_generic_test
+		x = 1 y = 0
+		cost = 10
+	}
+}

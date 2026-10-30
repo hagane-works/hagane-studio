@@ -1,0 +1,4 @@
+{
+  "advisorSlotNote": "« {value} » ne fait pas partie des emplacements de conseiller fournis par ce mod de base. Cela n'a d'importance que si aucun mod chargé ne le définit ; si vous le définissez vous-même, tout va bien. Emplacements du mod de base : {list}",
+  "ideaTypeNote": "« {value} » ne fait pas partie des catégories d'idées fournies par ce mod de base. Cela n'a d'importance que si aucun mod chargé ne la définit ; si vous la définissez vous-même, tout va bien. Catégories du mod de base : {list}"
+}

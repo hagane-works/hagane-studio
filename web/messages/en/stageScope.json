@@ -1,0 +1,16 @@
+{
+  "title": "Circle your stage",
+  "subtitle": "Circle the part of the world where your story happens. The rest of the world still exists — AI and the checks will just focus here.",
+  "selectedCount": "{count, plural, =0 {Nothing circled yet — the whole world is your stage} one {# state circled} other {# states circled}}",
+  "clear": "Clear",
+  "toolPan": "Drag to move the map",
+  "toolBox": "Drag to box-select states",
+  "loading": "Loading the map…",
+  "unavailable": "This project has no map geometry yet, so there's nothing to circle here for now. You can keep building — your stage simply stays the whole world.",
+  "close": "Close",
+  "cancel": "Cancel",
+  "save": "Save stage",
+  "saving": "Saving…",
+  "saved": "Stage saved",
+  "saveFailed": "Couldn't save your stage: {msg}"
+}

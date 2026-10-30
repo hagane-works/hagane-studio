@@ -1,0 +1,70 @@
+{
+  "title": "Opening world and campaign limits",
+  "intro": "These rules apply to every selectable scenario. Choose the world players enter and the campaign end date.",
+  "worldQuestion": "At the opening date, which world setting should the game use?",
+  "worldOptions": {
+    "inherit": {
+      "title": "Use the original or base mod world setting",
+      "description": "Best when your mod adds content or changes only part of an existing world."
+    },
+    "own": {
+      "title": "Plan for my scenario world",
+      "description": "Records your intent for an alternate world or special era. It does not rewrite history files automatically."
+    }
+  },
+  "startDate": {
+    "label": "Scenario opening date",
+    "hint": "Use the same date shown by the scenario players will choose."
+  },
+  "endDate": {
+    "label": "Scenario end date",
+    "hint": "A valid date later than every saved scenario becomes the campaign end date in HOI4."
+  },
+  "compatibilityNotice": "Your latest selectable scenario starts on or after the vanilla 1949 campaign end. Until you set a later scenario end date, the export adds a clearly reported compatibility end date so the game does not conclude immediately.",
+  "timelineBaseline": {
+    "vanilla": "Standalone project: the comparison baseline is vanilla HOI4 (campaign end: 1 January 1949).",
+    "unregistered": "Base mod timeline: source not registered. The program will not assume that the base mod ends in 1949.",
+    "rawBookmarkCoverage": "This panel uses scenarios saved in the workbench. Preserved raw Bookmark files are checked separately during export."
+  },
+  "saveFailed": "Could not save the scenario settings.",
+  "saveReadbackMismatch": "Reading back did not return the values just saved. Nothing is marked as saved; try again.",
+  "ownWorldSummary": {
+    "title": "Your world-setting choice",
+    "description": "You want players to enter your scenario world. This setting records that choice only: review and author the required starting-world files yourself before release."
+  },
+  "submodNotice": "This project builds on a base mod whose timeline source is not registered. The program keeps the analysis read-only and will not automatically rewrite the base mod's world setting.",
+  "riskPreview": {
+    "title": "Opening world risk preview",
+    "inherit": "You are keeping the original or base mod world setting. The program will only point out possible world-setting risks; it will not change that world for you.",
+    "unverified": "Source not registered: there is no verified preview API for this world yet. The program will not pretend the result is known or change the world automatically.",
+    "verifiedIntro": "The world setting can be verified. If you confirm this scenario setting, players will encounter these results:",
+    "verifiedEmpty": "The world setting can be verified, but there are no player-facing changes to show yet. Check the scenario dates and world setting.",
+    "consequences": {
+      "scenarioWorld": {
+        "title": "Players start in your scenario world",
+        "description": "The opening world follows the setting you created for this scenario."
+      },
+      "baseWorld": {
+        "title": "Base world changes stay out",
+        "description": "Later world changes from the original game or base mod will not be applied automatically at the opening date."
+      }
+    }
+  },
+  "campaignOpening": {
+    "title": "Campaign opening",
+    "intro": "Players can choose several scenarios, so HOI4 uses the earliest valid saved Bookmark as the campaign opening. Later Bookmarks remain selectable scenarios, not a new global opening.",
+    "currentLabel": "Saved campaign opening date",
+    "notSelected": "No opening date selected yet",
+    "linked": "This matches the earliest saved scenario, {bookmark}.",
+    "unlinked": "The earliest saved scenario starts on {date}. Sync the campaign opening before export.",
+    "noValidBookmark": "Save at least one Bookmark with a valid date before setting the campaign opening.",
+    "syncEarliest": "Sync to earliest saved scenario",
+    "synced": "Synced to earliest scenario",
+    "saveCampaignSettings": "Save campaign settings",
+    "workspaceTitle": "Opening for the entire Mod",
+    "workspaceIntro": "These rules apply to every scenario. Edit each scenario's own date and country-selection presentation below.",
+    "editWorkspace": "Edit opening rules",
+    "closeWorkspace": "Close opening rules",
+    "notSet": "Not set"
+  }
+}

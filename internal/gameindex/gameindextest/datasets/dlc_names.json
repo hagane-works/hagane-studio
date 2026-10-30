@@ -1,0 +1,47 @@
+{
+ "dlcs": [
+  {
+   "name": "Man the Guns",
+   "kind": "expansion",
+   "prefix": "MTG",
+   "source": "dlc023_man_the_guns · vanilla 2x"
+  },
+  {
+   "name": "La Resistance",
+   "kind": "expansion",
+   "prefix": "LAR",
+   "source": "dlc028_la_resistance · vanilla 3x"
+  },
+  {
+   "name": "No Step Back",
+   "kind": "expansion",
+   "prefix": "NSB",
+   "source": "dlc034_no_step_back"
+  },
+  {
+   "name": "By Blood Alone",
+   "kind": "expansion",
+   "prefix": "BBA",
+   "source": "dlc036_by_blood_alone"
+  },
+  {
+   "name": "Poland: United and Ready",
+   "kind": "cosmetic",
+   "prefix": "",
+   "source": "dlc002_polish_content_pack"
+  },
+  {
+   "name": "Test Music Pack",
+   "kind": "cosmetic",
+   "prefix": "",
+   "source": "dlc013 (dlc_info, not installed)"
+  }
+ ],
+ "game_version": "1.19.3",
+ "sources": [
+  "dlc/*/*.dlc and integrated_dlc/*/*.dlc `name =` (the installation)",
+  "dlc_metadata/dlc_info/*.txt (every DLC the game knows)",
+  "`has_dlc = \"...\"` in the game's common/ events/ history/ scripts",
+  "prefix: the product's namespace prefixes (informational only)"
+ ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "圈出你的舞台",
+  "subtitle": "圈出你的故事发生的舞台；舞台外的世界仍然存在，但 AI 和校验会聚焦在这里。",
+  "selectedCount": "{count, plural, =0 {尚未圈选 —— 整个世界都是你的舞台} other {已圈选 # 个州}}",
+  "clear": "清空",
+  "toolPan": "拖动地图",
+  "toolBox": "框选州",
+  "loading": "地图加载中…",
+  "unavailable": "该项目暂无地图几何，暂时没有可圈选的地图。你可以继续创作 —— 舞台会保持为整个世界。",
+  "close": "关闭",
+  "cancel": "取消",
+  "save": "保存舞台",
+  "saving": "保存中…",
+  "saved": "舞台已保存",
+  "saveFailed": "舞台保存失败：{msg}"
+}

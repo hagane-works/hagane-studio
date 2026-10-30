@@ -1,0 +1,21 @@
+{
+  "button": "从原版补齐({count} 个州)",
+  "buttonBusy": "正在检查…",
+  "dialogTitle": "从原版补齐",
+  "dialogIntro": "原版为这些州带着一段额外脚本，而这个项目当初没有收到。这次会把它写回目前是空的 {count} 个州。现在还什么都没改。",
+  "willRestoreHeading": "会补回",
+  "willRestoreLine": "{navalBases} 个海军基地 · {bunkers} 座碉堡 · {dams} 座水坝 · {landmarks} 处地标 · {datedBlocks} 个带日期的历史块 · {hasDlc} 个 DLC 门控块",
+  "willNotTouchHeading": "不会动",
+  "willNotTouchLine": "归属、核心、宣称、建筑、人力、省份一律保持原样。",
+  "skippedNote": "另有 {count} 个州已经带着你自己的脚本，一个字节都不碰。",
+  "missingNote": "另有 {count} 个州，原版这边没有东西可补。",
+  "confirm": "补齐这 {count} 个州",
+  "cancel": "取消",
+  "successTitle": "已从原版补齐",
+  "successBody": "{count} 个州重新完整了 —— 补回了 {navalBases} 个海军基地和 {landmarks} 处地标。",
+  "nothingToRestore": "没有可补的内容：这些州已经带着原版的全部内容了。",
+  "errorVanillaRootUnconfigured": "还没有设置钢铁雄心 4 安装目录，读不到原版的州文件，所以补不了。这次一行都没改。请在 设置 → 钢铁雄心 4 安装目录 中选择游戏目录。",
+  "errorVanillaStatesDirMissing": "设置里的钢铁雄心 4 目录不是游戏的安装目录 —— history/states 读不到。这次一行都没改。请在 设置 → 钢铁雄心 4 安装目录 中选择包含 hoi4.exe 的文件夹。",
+  "errorVanillaStatesEmpty": "找到了游戏的 history/states 目录，但一个州都读不出来。这次一行都没改。请在 Steam 中验证游戏文件完整性，或在 设置 → 钢铁雄心 4 安装目录 中换一个安装目录。",
+  "errorGeneric": "从原版补齐失败，这次一行都没改。可以再试一次。"
+}

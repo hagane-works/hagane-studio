@@ -1,0 +1,37 @@
+{
+  "headline": "<mono>{count}</mono> references point to content from countries you haven't imported. That's normal.",
+  "tooltipTitle": "Cross-country reference semantics",
+  "tooltipContent": "A cross-country reference means one country's mod file references another country's entity (character / idea / focus, etc.).\n\nHOI4 engine mod-loading rule: the engine loads all mod files together, and any country's event can fire for any country, as long as its trigger is met.\n\nIn the editor: references are filtered by the active country, and viewing them doesn't switch your primary country. Adding a secondary country pulls the related entities in without affecting your primary view.\n\nExample: britain.1 (the Tizard mission) in Britain.txt has trigger tag = USA. The event's \"owner\" is USA, but the file lives in Britain.txt and its namespace is britain, so the cross-ref banner suggests adding USA or ENG as a secondary country to pull the entity in.",
+  "reason": "These almost always reference other countries' content, and they're harmless. A <b>“merge back into the original mod” (Path B) export keeps them intact</b>, so nothing is lost. Want that content in the editor too? Add a country below. <b>Your primary country won't change.</b>",
+  "suggestLabel": "Suggested countries to add (by reference count):",
+  "alreadyInProject": "{tag} is already in the project",
+  "expandTitle": "Adding {tag} as a secondary country expands the project's country list. It doesn't switch your primary country; the primary view stays unchanged.",
+  "added": "(added)",
+  "expandAddCountry": "Add country",
+  "addingCountry": "Adding {tag}…",
+  "collapseDetails": "Collapse details",
+  "viewDetails": "View details ({count} kinds)",
+  "hideScope": "Hide check scope",
+  "showScope": "Check scope",
+  "currentScope": "Current check scope:",
+  "none": "(none)",
+  "scopeNote": "Reference types not yet covered (focus / decision / trait / tech, etc.) will be added in later batches. \"Not reported\" doesn't mean \"no problem\".",
+  "moreHidden": "…and {hidden} more kinds not shown (of {total} total)",
+  "egPrefix": "e.g. ",
+  "unmodeled": {
+    "headline": "Found <mono>{count}</mono> references to content the program doesn't model",
+    "tooltipTitle": "What is \"unmodeled content\"?",
+    "tooltipContent": "The program models 9 entity types (idea / event / focus / decision / character / trait / technology / opinion modifier / MIO). Other HOI4 categories — scripted effects/triggers, ideologies, cosmetic tags, game rules, equipment, special projects — aren't modeled, so the program can't re-emit their definition files.\n\nReferences to them are valid HOI4 script. A \"merge back into the original mod\" (Path B) export keeps the original definition files, so the references resolve. A from-scratch (Path A) export can't reproduce them, so they would dangle.\n\nThis is informational, not an error — the program just wants you to know which export path keeps these intact.",
+    "note": "These references point at content the program doesn't model yet (e.g. custom scripted_effect / scripted_trigger, custom ideologies, cosmetic tags). They are kept <b>only by the “merge back into the original mod” (Path B) export</b>; a from-scratch (Path A) export leaves them dangling. If you export via Path B, no action is needed.",
+    "viewDetails": "View details ({count} kinds)",
+    "collapseDetails": "Collapse details",
+    "cat": {
+      "scripted_effect_trigger": "Custom scripted_effect / trigger",
+      "ideology": "Custom ideology (sub-ideology)",
+      "cosmetic_tag": "Cosmetic tag (country renaming)",
+      "game_rule": "Game rule",
+      "equipment": "Custom equipment",
+      "special_project": "Special project"
+    }
+  }
+}

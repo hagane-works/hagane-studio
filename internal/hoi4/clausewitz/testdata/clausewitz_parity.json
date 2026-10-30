@@ -1,0 +1,3365 @@
+{
+ "cases": [
+  {
+   "name": "plain|root0",
+   "text": "focus = { id = a cost = 10 }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 28,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a cost = 10 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 17,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 18,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "cost = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "fd476bbf77fb3d19706e31faac4af231668d3b9b01551bb80cbfd85560082314"
+   }
+  },
+  {
+   "name": "plain|root1",
+   "text": "focus = { id = a cost = 10 }",
+   "root_path": [
+    "focus_tree"
+   ],
+   "source_name": null,
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 28,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a cost = 10 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 17,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 18,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "cost = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "fd476bbf77fb3d19706e31faac4af231668d3b9b01551bb80cbfd85560082314"
+   }
+  },
+  {
+   "name": "plain|root2",
+   "text": "focus = { id = a cost = 10 }",
+   "root_path": [
+    "a",
+    "b"
+   ],
+   "source_name": null,
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 28,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a cost = 10 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 17,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 18,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "cost = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "fd476bbf77fb3d19706e31faac4af231668d3b9b01551bb80cbfd85560082314"
+   }
+  },
+  {
+   "name": "scalar-only|root0",
+   "text": "id = my_focus",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 13,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": "my_focus",
+      "excerpt": "id = my_focus",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "9f4b1b5213e7a3103ca280c922d28528f545fe3fffcadeeacf84be9a9f246722"
+   }
+  },
+  {
+   "name": "empty|root0",
+   "text": "",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [],
+    "findings": [],
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "name": "blank-lines|root0",
+   "text": "\n\n\n",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [],
+    "findings": [],
+    "source_sha256": "6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167"
+   }
+  },
+  {
+   "name": "numbers|root0",
+   "text": "cost = 10\nx = 10.0\ny = 1.5\nz = -3\nw = 0.25\nbig = 1e3",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 9,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 10
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "cost = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 18,
+       "start_line": 2,
+       "start_column": 1,
+       "end_line": 2,
+       "end_column": 9
+      },
+      "operator": "=",
+      "value": 10.0,
+      "excerpt": "x = 10.0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "y",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 19,
+       "end_offset": 26,
+       "start_line": 3,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": 1.5,
+      "excerpt": "y = 1.5",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "z",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 27,
+       "end_offset": 33,
+       "start_line": 4,
+       "start_column": 1,
+       "end_line": 4,
+       "end_column": 7
+      },
+      "operator": "=",
+      "value": -3,
+      "excerpt": "z = -3",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "w",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 34,
+       "end_offset": 42,
+       "start_line": 5,
+       "start_column": 1,
+       "end_line": 5,
+       "end_column": 9
+      },
+      "operator": "=",
+      "value": 0.25,
+      "excerpt": "w = 0.25",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "big",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 43,
+       "end_offset": 52,
+       "start_line": 6,
+       "start_column": 1,
+       "end_line": 6,
+       "end_column": 10
+      },
+      "operator": "=",
+      "value": "1e3",
+      "excerpt": "big = 1e3",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "4d1faa1012d6fc6c2a267b088a0990c0de3969d6c06ee859ae4cbc7bd6af7ccd"
+   }
+  },
+  {
+   "name": "comment|root0",
+   "text": "# leading\nfocus = { # trailing\n  id = a\n}\n",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 41,
+       "start_line": 2,
+       "start_column": 1,
+       "end_line": 4,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { # trailing\n  id = a\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 33,
+       "end_offset": 39,
+       "start_line": 3,
+       "start_column": 3,
+       "end_line": 3,
+       "end_column": 9
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "6fd973728cdfc6ff479abec7f9206bd564ed00b4d96fe7f09dd3db596b6b238a"
+   }
+  },
+  {
+   "name": "bom|root0",
+   "text": "﻿focus_tree = { id = t }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "﻿focus_tree",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 1,
+       "end_offset": 24,
+       "start_line": 1,
+       "start_column": 2,
+       "end_line": 1,
+       "end_column": 25
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus_tree = { id = t }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "﻿focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 16,
+       "end_offset": 22,
+       "start_line": 1,
+       "start_column": 17,
+       "end_line": 1,
+       "end_column": 23
+      },
+      "operator": "=",
+      "value": "t",
+      "excerpt": "id = t",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.analysis_token_alignment",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 1,
+        "end_offset": 2,
+        "start_line": 1,
+        "start_column": 2,
+        "end_line": 1,
+        "end_column": 3
+       }
+      },
+      "evidence": {
+       "token_type": "STRING",
+       "token_value": "﻿focus_tree",
+       "source_excerpt": "focus_tree = { id = t }"
+      },
+      "repair_route": "clausewitz.reparse_source"
+     }
+    ],
+    "source_sha256": "4a78f27b789bbbb45661036573857d4537782547ef8b7a98f2d288c05ffd7bee"
+   }
+  },
+  {
+   "name": "exotic-space|root0",
+   "text": "a\u001c=\u001d1\u001e b\u001f= 2",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "a\u001c",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 7,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": "\u001d1\u001e",
+      "excerpt": "a\u001c=\u001d1\u001e ",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "b\u001f",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 7,
+       "end_offset": 12,
+       "start_line": 1,
+       "start_column": 8,
+       "end_line": 1,
+       "end_column": 13
+      },
+      "operator": "=",
+      "value": 2,
+      "excerpt": "b\u001f= 2",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.analysis_token_alignment",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 4,
+        "end_offset": 5,
+        "start_line": 1,
+        "start_column": 5,
+        "end_line": 1,
+        "end_column": 6
+       }
+      },
+      "evidence": {
+       "token_type": "STRING",
+       "token_value": "\u001d1\u001e",
+       "source_excerpt": "1\u001e b\u001f= 2"
+      },
+      "repair_route": "clausewitz.reparse_source"
+     }
+    ],
+    "source_sha256": "ca1cc52fe6207da510ee9cefd4471e678cb832674bc31572da44f679b15e6a70"
+   }
+  },
+  {
+   "name": "nbsp|root0",
+   "text": "a = 1　b = 2",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "a ",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 7,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": "1　b",
+      "excerpt": "a = 1　b",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "4233801c60baa04805a8149aaf75fd9109b2c5d8f09948216f560006359ad253"
+   }
+  },
+  {
+   "name": "cjk|root0",
+   "text": "name = \"德意志国\" id = 焦点_一 cost = 3",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "name",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 13,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": "德意志国",
+      "excerpt": "name = \"德意志国\"",
+      "key_quoted": false,
+      "value_quoted": true
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 14,
+       "end_offset": 23,
+       "start_line": 1,
+       "start_column": 15,
+       "end_line": 1,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": "焦点_一",
+      "excerpt": "id = 焦点_一",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 24,
+       "end_offset": 32,
+       "start_line": 1,
+       "start_column": 25,
+       "end_line": 1,
+       "end_column": 33
+      },
+      "operator": "=",
+      "value": 3,
+      "excerpt": "cost = 3",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "bc94ebf52bfcce767a6d8eaa4a9b5521caa5d43be6f5a8e4d8ddad32e6da1e23"
+   }
+  },
+  {
+   "name": "emoji|root0",
+   "text": "desc = \"战争🔥爆发\" x = 1",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "desc",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 14,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 15
+      },
+      "operator": "=",
+      "value": "战争🔥爆发",
+      "excerpt": "desc = \"战争🔥爆发\"",
+      "key_quoted": false,
+      "value_quoted": true
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 15,
+       "end_offset": 20,
+       "start_line": 1,
+       "start_column": 16,
+       "end_line": 1,
+       "end_column": 21
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "x = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "9148ff0824144afcc84866489d566c9d9636063ae206477ca35f45be914a3e65"
+   }
+  },
+  {
+   "name": "cjk-comment|root0",
+   "text": "# 中文注释一行\nid = a\n",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 9,
+       "end_offset": 15,
+       "start_line": 2,
+       "start_column": 1,
+       "end_line": 2,
+       "end_column": 7
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "e3fa53e005f888966978be57120ba4eaa7fdaf34784d8da28c8b18e9a7098cb9"
+   }
+  },
+  {
+   "name": "quoted|root0",
+   "text": "title = \"hello world\" other = 1",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "title",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 21,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": "hello world",
+      "excerpt": "title = \"hello world\"",
+      "key_quoted": false,
+      "value_quoted": true
+     },
+     {
+      "key": "other",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 22,
+       "end_offset": 31,
+       "start_line": 1,
+       "start_column": 23,
+       "end_line": 1,
+       "end_column": 32
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "other = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "33f471c0f404fea0d7575110590efef23ca5b82a5dcb067807c257a5dbcca9de"
+   }
+  },
+  {
+   "name": "quoted-escape|root0",
+   "text": "title = \"say \\\"hi\\\" ok\" x = 1",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "title",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 23,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": "say \\\"hi\\\" ok",
+      "excerpt": "title = \"say \\\"hi\\\" ok\"",
+      "key_quoted": false,
+      "value_quoted": true
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 24,
+       "end_offset": 29,
+       "start_line": 1,
+       "start_column": 25,
+       "end_line": 1,
+       "end_column": 30
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "x = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "83a879b86e9a46e62e91c65b9a54c2eaaf92cac42f53446b936d8eb41d12bebd"
+   }
+  },
+  {
+   "name": "unterminated-quote|root0",
+   "text": "title = \"never closed\nid = a",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "title",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 28,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 2,
+       "end_column": 7
+      },
+      "operator": "=",
+      "value": "never closed\nid = a",
+      "excerpt": "title = \"never closed\nid = a",
+      "key_quoted": false,
+      "value_quoted": true
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.unterminated_quote",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 8,
+        "end_offset": 28,
+        "start_line": 1,
+        "start_column": 9,
+        "end_line": 2,
+        "end_column": 7
+       }
+      },
+      "evidence": {
+       "source_excerpt": "\"never closed\nid = a"
+      },
+      "repair_route": "clausewitz.close_quote"
+     }
+    ],
+    "source_sha256": "7e1c2deb57352ec25cb4b80fa7ba3a0de38687049833cba98bc23011069ef525"
+   }
+  },
+  {
+   "name": "stray-rbrace|root0",
+   "text": "id = a } cost = 1",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 6,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 7
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 9,
+       "end_offset": 17,
+       "start_line": 1,
+       "start_column": 10,
+       "end_line": 1,
+       "end_column": 18
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "cost = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.stray_closing_brace",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 7,
+        "end_offset": 8,
+        "start_line": 1,
+        "start_column": 8,
+        "end_line": 1,
+        "end_column": 9
+       }
+      },
+      "evidence": {
+       "source_excerpt": "}"
+      },
+      "repair_route": "clausewitz.remove_or_match_closing_brace"
+     }
+    ],
+    "source_sha256": "629aca287a28d852fa8a353205d5a31b3d22d9902d14b8a7135ea12961400c46"
+   }
+  },
+  {
+   "name": "unclosed-block|root0",
+   "text": "focus = { id = a",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [
+        "focus"
+       ],
+       "span": {
+        "start_offset": 8,
+        "end_offset": 16,
+        "start_line": 1,
+        "start_column": 9,
+        "end_line": 1,
+        "end_column": 17
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{ id = a"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.parse_error",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 16,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 17
+       }
+      },
+      "evidence": {
+       "error": "Expected RBRACE, got EOF '' at line 1"
+      },
+      "repair_route": "clausewitz.fix_syntax"
+     }
+    ],
+    "source_sha256": "82bc82000eb3c402005ade32f39a9fcaec3a241bb5023b0b00f12e96f5ef5ba3"
+   }
+  },
+  {
+   "name": "unclosed-block|root1",
+   "text": "focus = { id = a",
+   "root_path": [
+    "focus_tree"
+   ],
+   "source_name": null,
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "field_path": [
+        "focus_tree",
+        "focus"
+       ],
+       "span": {
+        "start_offset": 8,
+        "end_offset": 16,
+        "start_line": 1,
+        "start_column": 9,
+        "end_line": 1,
+        "end_column": 17
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{ id = a"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.parse_error",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "field_path": [
+        "focus_tree"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 16,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 17
+       }
+      },
+      "evidence": {
+       "error": "Expected RBRACE, got EOF '' at line 1"
+      },
+      "repair_route": "clausewitz.fix_syntax"
+     }
+    ],
+    "source_sha256": "82bc82000eb3c402005ade32f39a9fcaec3a241bb5023b0b00f12e96f5ef5ba3"
+   }
+  },
+  {
+   "name": "unclosed-block|root2",
+   "text": "focus = { id = a",
+   "root_path": [
+    "a",
+    "b"
+   ],
+   "source_name": null,
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "field_path": [
+        "a",
+        "b",
+        "focus"
+       ],
+       "span": {
+        "start_offset": 8,
+        "end_offset": 16,
+        "start_line": 1,
+        "start_column": 9,
+        "end_line": 1,
+        "end_column": 17
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{ id = a"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.parse_error",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "field_path": [
+        "a",
+        "b"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 16,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 17
+       }
+      },
+      "evidence": {
+       "error": "Expected RBRACE, got EOF '' at line 1"
+      },
+      "repair_route": "clausewitz.fix_syntax"
+     }
+    ],
+    "source_sha256": "82bc82000eb3c402005ade32f39a9fcaec3a241bb5023b0b00f12e96f5ef5ba3"
+   }
+  },
+  {
+   "name": "unclosed-nested|root0",
+   "text": "outer = { inner = { id = a",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "outer",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "outer = { inner = { id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "inner",
+      "value_kind": "block",
+      "parent_path": [
+       "outer"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "inner = { id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "outer",
+       "inner"
+      ],
+      "source_span": {
+       "start_offset": 20,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 21,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [
+        "outer",
+        "inner"
+       ],
+       "span": {
+        "start_offset": 18,
+        "end_offset": 26,
+        "start_line": 1,
+        "start_column": 19,
+        "end_line": 1,
+        "end_column": 27
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{ id = a"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [
+        "outer",
+        "inner"
+       ],
+       "span": {
+        "start_offset": 8,
+        "end_offset": 26,
+        "start_line": 1,
+        "start_column": 9,
+        "end_line": 1,
+        "end_column": 27
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{ inner = { id = a"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.parse_error",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 26,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 27
+       }
+      },
+      "evidence": {
+       "error": "Expected RBRACE, got EOF '' at line 1"
+      },
+      "repair_route": "clausewitz.fix_syntax"
+     }
+    ],
+    "source_sha256": "fce0bd61ba5879c8c2c2415512b82233028d245b31c9da0e3e67924b64f9affc"
+   }
+  },
+  {
+   "name": "anonymous-block|root0",
+   "text": "{ id = a }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "{anonymous}"
+      ],
+      "source_span": {
+       "start_offset": 2,
+       "end_offset": 8,
+       "start_line": 1,
+       "start_column": 3,
+       "end_line": 1,
+       "end_column": 9
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "8673c5b9a4a25f3dc22eba11eda75b38e550adc8caeab8851329bfb06a784f80"
+   }
+  },
+  {
+   "name": "missing-value-rbrace|root0",
+   "text": "focus = { id = }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "missing",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 14,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 15
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "id =",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.missing_assignment_value",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [
+        "focus",
+        "id"
+       ],
+       "span": {
+        "start_offset": 10,
+        "end_offset": 14,
+        "start_line": 1,
+        "start_column": 11,
+        "end_line": 1,
+        "end_column": 15
+       }
+      },
+      "evidence": {
+       "assignment": "id ="
+      },
+      "repair_route": "clausewitz.fill_assignment_value"
+     }
+    ],
+    "source_sha256": "04f88025f9c78ccdb6139c529aa54ffeacf82a35e40d2e1f2df0b94ef8f099b0"
+   }
+  },
+  {
+   "name": "missing-value-eof|root0",
+   "text": "focus = { id = a } cost =",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 18,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 19
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 10,
+       "end_offset": 16,
+       "start_line": 1,
+       "start_column": 11,
+       "end_line": 1,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "missing",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 19,
+       "end_offset": 25,
+       "start_line": 1,
+       "start_column": 20,
+       "end_line": 1,
+       "end_column": 26
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "cost =",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.missing_assignment_value",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [
+        "cost"
+       ],
+       "span": {
+        "start_offset": 19,
+        "end_offset": 25,
+        "start_line": 1,
+        "start_column": 20,
+        "end_line": 1,
+        "end_column": 26
+       }
+      },
+      "evidence": {
+       "assignment": "cost ="
+      },
+      "repair_route": "clausewitz.fill_assignment_value"
+     }
+    ],
+    "source_sha256": "2489db1f4986b712f08d04a117e2e3ed0cf8c492cd0fa549cec64e9ca7c1e24b"
+   }
+  },
+  {
+   "name": "rgb|root0",
+   "text": "color = rgb { 10 20 30 }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "color",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 24,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 25
+      },
+      "operator": "=",
+      "value": "rgb",
+      "excerpt": "color = rgb { 10 20 30 }",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "63d931084e9abfe2a98d2ca1bf9f15d2e6e099065dfcba74b97dfefb38018664"
+   }
+  },
+  {
+   "name": "hsv|root0",
+   "text": "color = hsv { 0.1 0.2 0.3 }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "color",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 27,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 28
+      },
+      "operator": "=",
+      "value": "hsv",
+      "excerpt": "color = hsv { 0.1 0.2 0.3 }",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "b0df1682b5f8e8a4b11f703762d797e4fe73f1f212fd1cf3392e3cf923bdd057"
+   }
+  },
+  {
+   "name": "rgb-not-block|root0",
+   "text": "color = rgb",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "color",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 11,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 12
+      },
+      "operator": "=",
+      "value": "rgb",
+      "excerpt": "color = rgb",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "d80facf71db2eaa94560b4377c9f37f26b107649ba1467618c7f2dfe9c3e0c9a"
+   }
+  },
+  {
+   "name": "operators|root0",
+   "text": "a > 1\nb >= 2\nc < 3\nd <= 4\ne == 5",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "a",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 5,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 6
+      },
+      "operator": ">",
+      "value": 1,
+      "excerpt": "a > 1",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "b",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 6,
+       "end_offset": 12,
+       "start_line": 2,
+       "start_column": 1,
+       "end_line": 2,
+       "end_column": 7
+      },
+      "operator": ">=",
+      "value": 2,
+      "excerpt": "b >= 2",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "c",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 13,
+       "end_offset": 18,
+       "start_line": 3,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 6
+      },
+      "operator": "<",
+      "value": 3,
+      "excerpt": "c < 3",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "d",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 19,
+       "end_offset": 25,
+       "start_line": 4,
+       "start_column": 1,
+       "end_line": 4,
+       "end_column": 7
+      },
+      "operator": "<=",
+      "value": 4,
+      "excerpt": "d <= 4",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "e",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 26,
+       "end_offset": 32,
+       "start_line": 5,
+       "start_column": 1,
+       "end_line": 5,
+       "end_column": 7
+      },
+      "operator": "==",
+      "value": 5,
+      "excerpt": "e == 5",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "1e8fc4fb37cabe2dea6ee90224d0cdc0362ad9b1074d181717bbaceead68f8de"
+   }
+  },
+  {
+   "name": "nested-path|root0",
+   "text": "focus_tree = { focus = { id = a completion_reward = { add_pp = 1 } } }",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus_tree",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 70,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 71
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus_tree = { focus = { id = a completion_reward = { add_pp = 1 } } }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 15,
+       "end_offset": 68,
+       "start_line": 1,
+       "start_column": 16,
+       "end_line": 1,
+       "end_column": 69
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = { id = a completion_reward = { add_pp = 1 } }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 25,
+       "end_offset": 31,
+       "start_line": 1,
+       "start_column": 26,
+       "end_line": 1,
+       "end_column": 32
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "completion_reward",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 32,
+       "end_offset": 66,
+       "start_line": 1,
+       "start_column": 33,
+       "end_line": 1,
+       "end_column": 67
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "completion_reward = { add_pp = 1 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_pp",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 54,
+       "end_offset": 64,
+       "start_line": 1,
+       "start_column": 55,
+       "end_line": 1,
+       "end_column": 65
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "add_pp = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "6aab06bce60097fef2fbb72d86defd970152fd4ab894d9dc47f8f82315ca3cf4"
+   }
+  },
+  {
+   "name": "realistic|root0",
+   "text": "focus_tree = {\n\tid = germany_focus\n\tcountry = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}\n\tfocus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}\n}\n",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus_tree",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 339,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 18,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus_tree = {\n\tid = germany_focus\n\tcountry = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}\n\tfocus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 16,
+       "end_offset": 34,
+       "start_line": 2,
+       "start_column": 2,
+       "end_line": 2,
+       "end_column": 20
+      },
+      "operator": "=",
+      "value": "germany_focus",
+      "excerpt": "id = germany_focus",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "country",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 36,
+       "end_offset": 99,
+       "start_line": 3,
+       "start_column": 2,
+       "end_line": 6,
+       "end_column": 3
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "country = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "factor",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "country"
+      ],
+      "source_span": {
+       "start_offset": 50,
+       "end_offset": 60,
+       "start_line": 4,
+       "start_column": 3,
+       "end_line": 4,
+       "end_column": 13
+      },
+      "operator": "=",
+      "value": 0,
+      "excerpt": "factor = 0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "modifier",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "country"
+      ],
+      "source_span": {
+       "start_offset": 63,
+       "end_offset": 96,
+       "start_line": 5,
+       "start_column": 3,
+       "end_line": 5,
+       "end_column": 36
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "modifier = { add = 10 tag = GER }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "country",
+       "modifier"
+      ],
+      "source_span": {
+       "start_offset": 76,
+       "end_offset": 84,
+       "start_line": 5,
+       "start_column": 16,
+       "end_line": 5,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "tag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "country",
+       "modifier"
+      ],
+      "source_span": {
+       "start_offset": 85,
+       "end_offset": 94,
+       "start_line": 5,
+       "start_column": 25,
+       "end_line": 5,
+       "end_column": 34
+      },
+      "operator": "=",
+      "value": "GER",
+      "excerpt": "tag = GER",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 101,
+       "end_offset": 337,
+       "start_line": 7,
+       "start_column": 2,
+       "end_line": 17,
+       "end_column": 3
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 113,
+       "end_offset": 132,
+       "start_line": 8,
+       "start_column": 3,
+       "end_line": 8,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": "GER_rearmament",
+      "excerpt": "id = GER_rearmament",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "icon",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 135,
+       "end_offset": 173,
+       "start_line": 9,
+       "start_column": 3,
+       "end_line": 9,
+       "end_column": 41
+      },
+      "operator": "=",
+      "value": "GFX_goal_generic_army_doctrines",
+      "excerpt": "icon = GFX_goal_generic_army_doctrines",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 176,
+       "end_offset": 187,
+       "start_line": 10,
+       "start_column": 3,
+       "end_line": 10,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 10.0,
+      "excerpt": "cost = 10.0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 190,
+       "end_offset": 195,
+       "start_line": 11,
+       "start_column": 3,
+       "end_line": 11,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": 3,
+      "excerpt": "x = 3",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "y",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 196,
+       "end_offset": 201,
+       "start_line": 11,
+       "start_column": 9,
+       "end_line": 11,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 0,
+      "excerpt": "y = 0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "available",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 204,
+       "end_offset": 232,
+       "start_line": 12,
+       "start_column": 3,
+       "end_line": 12,
+       "end_column": 31
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "available = { has_war = no }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "has_war",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus",
+       "available"
+      ],
+      "source_span": {
+       "start_offset": 218,
+       "end_offset": 230,
+       "start_line": 12,
+       "start_column": 17,
+       "end_line": 12,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": "no",
+      "excerpt": "has_war = no",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "completion_reward",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 235,
+       "end_offset": 334,
+       "start_line": 13,
+       "start_column": 3,
+       "end_line": 16,
+       "end_column": 4
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "completion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 260,
+       "end_offset": 285,
+       "start_line": 14,
+       "start_column": 4,
+       "end_line": 14,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": 120,
+      "excerpt": "add_political_power = 120",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "custom_effect_tooltip",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 289,
+       "end_offset": 330,
+       "start_line": 15,
+       "start_column": 4,
+       "end_line": 15,
+       "end_column": 45
+      },
+      "operator": "=",
+      "value": "GER_rearmament_tt",
+      "excerpt": "custom_effect_tooltip = GER_rearmament_tt",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "350ce0ee7750bb971214df8dfb4c2d8b6ef95f0ff782037c743dbb5864fd3a52"
+   }
+  },
+  {
+   "name": "realistic|root1",
+   "text": "focus_tree = {\n\tid = germany_focus\n\tcountry = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}\n\tfocus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}\n}\n",
+   "root_path": [
+    "focus_tree"
+   ],
+   "source_name": null,
+   "result": {
+    "assignments": [
+     {
+      "key": "focus_tree",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 339,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 18,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus_tree = {\n\tid = germany_focus\n\tcountry = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}\n\tfocus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 16,
+       "end_offset": 34,
+       "start_line": 2,
+       "start_column": 2,
+       "end_line": 2,
+       "end_column": 20
+      },
+      "operator": "=",
+      "value": "germany_focus",
+      "excerpt": "id = germany_focus",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "country",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 36,
+       "end_offset": 99,
+       "start_line": 3,
+       "start_column": 2,
+       "end_line": 6,
+       "end_column": 3
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "country = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "factor",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "country"
+      ],
+      "source_span": {
+       "start_offset": 50,
+       "end_offset": 60,
+       "start_line": 4,
+       "start_column": 3,
+       "end_line": 4,
+       "end_column": 13
+      },
+      "operator": "=",
+      "value": 0,
+      "excerpt": "factor = 0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "modifier",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "country"
+      ],
+      "source_span": {
+       "start_offset": 63,
+       "end_offset": 96,
+       "start_line": 5,
+       "start_column": 3,
+       "end_line": 5,
+       "end_column": 36
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "modifier = { add = 10 tag = GER }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "country",
+       "modifier"
+      ],
+      "source_span": {
+       "start_offset": 76,
+       "end_offset": 84,
+       "start_line": 5,
+       "start_column": 16,
+       "end_line": 5,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "tag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "country",
+       "modifier"
+      ],
+      "source_span": {
+       "start_offset": 85,
+       "end_offset": 94,
+       "start_line": 5,
+       "start_column": 25,
+       "end_line": 5,
+       "end_column": 34
+      },
+      "operator": "=",
+      "value": "GER",
+      "excerpt": "tag = GER",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 101,
+       "end_offset": 337,
+       "start_line": 7,
+       "start_column": 2,
+       "end_line": 17,
+       "end_column": 3
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 113,
+       "end_offset": 132,
+       "start_line": 8,
+       "start_column": 3,
+       "end_line": 8,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": "GER_rearmament",
+      "excerpt": "id = GER_rearmament",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "icon",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 135,
+       "end_offset": 173,
+       "start_line": 9,
+       "start_column": 3,
+       "end_line": 9,
+       "end_column": 41
+      },
+      "operator": "=",
+      "value": "GFX_goal_generic_army_doctrines",
+      "excerpt": "icon = GFX_goal_generic_army_doctrines",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 176,
+       "end_offset": 187,
+       "start_line": 10,
+       "start_column": 3,
+       "end_line": 10,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 10.0,
+      "excerpt": "cost = 10.0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 190,
+       "end_offset": 195,
+       "start_line": 11,
+       "start_column": 3,
+       "end_line": 11,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": 3,
+      "excerpt": "x = 3",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "y",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 196,
+       "end_offset": 201,
+       "start_line": 11,
+       "start_column": 9,
+       "end_line": 11,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 0,
+      "excerpt": "y = 0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "available",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 204,
+       "end_offset": 232,
+       "start_line": 12,
+       "start_column": 3,
+       "end_line": 12,
+       "end_column": 31
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "available = { has_war = no }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "has_war",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus",
+       "available"
+      ],
+      "source_span": {
+       "start_offset": 218,
+       "end_offset": 230,
+       "start_line": 12,
+       "start_column": 17,
+       "end_line": 12,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": "no",
+      "excerpt": "has_war = no",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "completion_reward",
+      "value_kind": "block",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 235,
+       "end_offset": 334,
+       "start_line": 13,
+       "start_column": 3,
+       "end_line": 16,
+       "end_column": 4
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "completion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 260,
+       "end_offset": 285,
+       "start_line": 14,
+       "start_column": 4,
+       "end_line": 14,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": 120,
+      "excerpt": "add_political_power = 120",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "custom_effect_tooltip",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus_tree",
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 289,
+       "end_offset": 330,
+       "start_line": 15,
+       "start_column": 4,
+       "end_line": 15,
+       "end_column": 45
+      },
+      "operator": "=",
+      "value": "GER_rearmament_tt",
+      "excerpt": "custom_effect_tooltip = GER_rearmament_tt",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "350ce0ee7750bb971214df8dfb4c2d8b6ef95f0ff782037c743dbb5864fd3a52"
+   }
+  },
+  {
+   "name": "realistic|root2",
+   "text": "focus_tree = {\n\tid = germany_focus\n\tcountry = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}\n\tfocus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}\n}\n",
+   "root_path": [
+    "a",
+    "b"
+   ],
+   "source_name": null,
+   "result": {
+    "assignments": [
+     {
+      "key": "focus_tree",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 339,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 18,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus_tree = {\n\tid = germany_focus\n\tcountry = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}\n\tfocus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 16,
+       "end_offset": 34,
+       "start_line": 2,
+       "start_column": 2,
+       "end_line": 2,
+       "end_column": 20
+      },
+      "operator": "=",
+      "value": "germany_focus",
+      "excerpt": "id = germany_focus",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "country",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 36,
+       "end_offset": 99,
+       "start_line": 3,
+       "start_column": 2,
+       "end_line": 6,
+       "end_column": 3
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "country = {\n\t\tfactor = 0\n\t\tmodifier = { add = 10 tag = GER }\n\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "factor",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "country"
+      ],
+      "source_span": {
+       "start_offset": 50,
+       "end_offset": 60,
+       "start_line": 4,
+       "start_column": 3,
+       "end_line": 4,
+       "end_column": 13
+      },
+      "operator": "=",
+      "value": 0,
+      "excerpt": "factor = 0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "modifier",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "country"
+      ],
+      "source_span": {
+       "start_offset": 63,
+       "end_offset": 96,
+       "start_line": 5,
+       "start_column": 3,
+       "end_line": 5,
+       "end_column": 36
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "modifier = { add = 10 tag = GER }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "country",
+       "modifier"
+      ],
+      "source_span": {
+       "start_offset": 76,
+       "end_offset": 84,
+       "start_line": 5,
+       "start_column": 16,
+       "end_line": 5,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "tag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "country",
+       "modifier"
+      ],
+      "source_span": {
+       "start_offset": 85,
+       "end_offset": 94,
+       "start_line": 5,
+       "start_column": 25,
+       "end_line": 5,
+       "end_column": 34
+      },
+      "operator": "=",
+      "value": "GER",
+      "excerpt": "tag = GER",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree"
+      ],
+      "source_span": {
+       "start_offset": 101,
+       "end_offset": 337,
+       "start_line": 7,
+       "start_column": 2,
+       "end_line": 17,
+       "end_column": 3
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = {\n\t\tid = GER_rearmament\n\t\ticon = GFX_goal_generic_army_doctrines\n\t\tcost = 10.0\n\t\tx = 3 y = 0\n\t\tavailable = { has_war = no }\n\t\tcompletion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}\n\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 113,
+       "end_offset": 132,
+       "start_line": 8,
+       "start_column": 3,
+       "end_line": 8,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": "GER_rearmament",
+      "excerpt": "id = GER_rearmament",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "icon",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 135,
+       "end_offset": 173,
+       "start_line": 9,
+       "start_column": 3,
+       "end_line": 9,
+       "end_column": 41
+      },
+      "operator": "=",
+      "value": "GFX_goal_generic_army_doctrines",
+      "excerpt": "icon = GFX_goal_generic_army_doctrines",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "cost",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 176,
+       "end_offset": 187,
+       "start_line": 10,
+       "start_column": 3,
+       "end_line": 10,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 10.0,
+      "excerpt": "cost = 10.0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 190,
+       "end_offset": 195,
+       "start_line": 11,
+       "start_column": 3,
+       "end_line": 11,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": 3,
+      "excerpt": "x = 3",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "y",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 196,
+       "end_offset": 201,
+       "start_line": 11,
+       "start_column": 9,
+       "end_line": 11,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 0,
+      "excerpt": "y = 0",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "available",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 204,
+       "end_offset": 232,
+       "start_line": 12,
+       "start_column": 3,
+       "end_line": 12,
+       "end_column": 31
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "available = { has_war = no }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "has_war",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus",
+       "available"
+      ],
+      "source_span": {
+       "start_offset": 218,
+       "end_offset": 230,
+       "start_line": 12,
+       "start_column": 17,
+       "end_line": 12,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": "no",
+      "excerpt": "has_war = no",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "completion_reward",
+      "value_kind": "block",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 235,
+       "end_offset": 334,
+       "start_line": 13,
+       "start_column": 3,
+       "end_line": 16,
+       "end_column": 4
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "completion_reward = {\n\t\t\tadd_political_power = 120\n\t\t\tcustom_effect_tooltip = GER_rearmament_tt\n\t\t}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 260,
+       "end_offset": 285,
+       "start_line": 14,
+       "start_column": 4,
+       "end_line": 14,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": 120,
+      "excerpt": "add_political_power = 120",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "custom_effect_tooltip",
+      "value_kind": "scalar",
+      "parent_path": [
+       "a",
+       "b",
+       "focus_tree",
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 289,
+       "end_offset": 330,
+       "start_line": 15,
+       "start_column": 4,
+       "end_line": 15,
+       "end_column": 45
+      },
+      "operator": "=",
+      "value": "GER_rearmament_tt",
+      "excerpt": "custom_effect_tooltip = GER_rearmament_tt",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "350ce0ee7750bb971214df8dfb4c2d8b6ef95f0ff782037c743dbb5864fd3a52"
+   }
+  },
+  {
+   "name": "crlf|root0",
+   "text": "focus = {\r\n\tid = a\r\n}\r\n",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "focus",
+      "value_kind": "block",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 21,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "focus = {\r\n\tid = a\r\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [
+       "focus"
+      ],
+      "source_span": {
+       "start_offset": 12,
+       "end_offset": 18,
+       "start_line": 2,
+       "start_column": 2,
+       "end_line": 2,
+       "end_column": 8
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "5acd7e74bbb38018e2d74092f68c7c359f64ae19be572f8c1e6f65597a3a7d39"
+   }
+  },
+  {
+   "name": "comment-only|root0",
+   "text": "# nothing here",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [],
+    "findings": [],
+    "source_sha256": "4f2aed78e645a16fe1fbce3717ef9a6beb4dad8991bb7983e68bbd93cff9b1f0"
+   }
+  },
+  {
+   "name": "comment-no-newline-eof|root0",
+   "text": "id = a # tail",
+   "root_path": [],
+   "source_name": "f.txt",
+   "result": {
+    "assignments": [
+     {
+      "key": "id",
+      "value_kind": "scalar",
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 6,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 7
+      },
+      "operator": "=",
+      "value": "a",
+      "excerpt": "id = a",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "source_sha256": "7d1b36a3cadb94c327214f39a138c74bda7d320827af998372db301dab5a799c"
+   }
+  }
+ ],
+ "spans": [
+  {
+   "text": "abc\ndef",
+   "start": 0,
+   "end": 3,
+   "span": {
+    "start_offset": 0,
+    "end_offset": 3,
+    "start_line": 1,
+    "start_column": 1,
+    "end_line": 1,
+    "end_column": 4
+   }
+  },
+  {
+   "text": "abc\ndef",
+   "start": 4,
+   "end": 7,
+   "span": {
+    "start_offset": 4,
+    "end_offset": 7,
+    "start_line": 2,
+    "start_column": 1,
+    "end_line": 2,
+    "end_column": 4
+   }
+  },
+  {
+   "text": "abc\ndef",
+   "start": 0,
+   "end": 7,
+   "span": {
+    "start_offset": 0,
+    "end_offset": 7,
+    "start_line": 1,
+    "start_column": 1,
+    "end_line": 2,
+    "end_column": 4
+   }
+  },
+  {
+   "text": "abc\ndef",
+   "start": -5,
+   "end": 100,
+   "span": {
+    "start_offset": 0,
+    "end_offset": 7,
+    "start_line": 1,
+    "start_column": 1,
+    "end_line": 2,
+    "end_column": 4
+   }
+  },
+  {
+   "text": "abc\ndef",
+   "start": 5,
+   "end": 2,
+   "span": {
+    "start_offset": 5,
+    "end_offset": 5,
+    "start_line": 2,
+    "start_column": 2,
+    "end_line": 2,
+    "end_column": 2
+   }
+  },
+  {
+   "text": "",
+   "start": 0,
+   "end": 0,
+   "span": {
+    "start_offset": 0,
+    "end_offset": 0,
+    "start_line": 1,
+    "start_column": 1,
+    "end_line": 1,
+    "end_column": 1
+   }
+  },
+  {
+   "text": "德意志\n国",
+   "start": 0,
+   "end": 3,
+   "span": {
+    "start_offset": 0,
+    "end_offset": 3,
+    "start_line": 1,
+    "start_column": 1,
+    "end_line": 1,
+    "end_column": 4
+   }
+  },
+  {
+   "text": "德意志\n国",
+   "start": 4,
+   "end": 5,
+   "span": {
+    "start_offset": 4,
+    "end_offset": 5,
+    "start_line": 2,
+    "start_column": 1,
+    "end_line": 2,
+    "end_column": 2
+   }
+  },
+  {
+   "text": "a\n\n\nb",
+   "start": 3,
+   "end": 4,
+   "span": {
+    "start_offset": 3,
+    "end_offset": 4,
+    "start_line": 3,
+    "start_column": 1,
+    "end_line": 4,
+    "end_column": 1
+   }
+  }
+ ]
+}

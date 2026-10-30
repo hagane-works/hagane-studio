@@ -1,0 +1,17 @@
+{
+  "noPicture": "aucune image",
+  "empty": "(vide)",
+  "noOptions": "Aucune option : l'événement reste à l'écran jusqu'à sa fermeture manuelle",
+  "conditionalOption": "Option conditionnelle (le déclencheur contrôle sa visibilité)",
+  "alwaysVisibleOption": "Option toujours visible",
+  "timeout": "délai · {days} jours",
+  "immediateEffects": "effets immédiats · oui",
+  "afterEffects": "effets ultérieurs · oui",
+  "editPicture": "Modifier l'image de l'événement",
+  "editTitle": "Modifier le titre de l'événement",
+  "editDescription": "Modifier la description de l'événement",
+  "editOption": "Modifier l'option {n}",
+  "previewUnavailableTitle": "Impossible d’afficher l’aperçu de l’événement",
+  "previewUnavailableBody": "Votre événement et les modifications non enregistrées sont toujours en sécurité. Vous pouvez continuer ou réessayer l’aperçu.",
+  "previewUnavailableRetry": "Réessayer l’aperçu"
+}

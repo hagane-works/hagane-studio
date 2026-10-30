@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Description language tabs",
+  "addLanguage": "Add language",
+  "addingLanguage": "Adding {language}…",
+  "addLanguageError": "Couldn’t add {language} to this project. Try again.",
+  "legacyFallbackHint": "Showing the old description field — type to override it; your text is saved per language.",
+  "fullName": {
+    "en": "English",
+    "zh": "Chinese (Simplified)",
+    "ru": "Russian",
+    "fr": "French",
+    "de": "German",
+    "es": "Spanish",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "pl": "Polish",
+    "pt": "Portuguese (Brazil)"
+  }
+}

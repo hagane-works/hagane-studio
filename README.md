@@ -155,24 +155,6 @@ Pushing a `v*` tag runs the same checks and publishes the archives through GitHu
 search. See [the CLI guide](docs/cli.md) for commands, JSON input, exit codes and the local API security
 model.
 
-## Architecture
-
-```text
-cmd/haganeworks/       desktop entry point, settings, local server and WebView2 window
-cmd/hw/                command-line client for the local tool API
-internal/api/          application routes for projects, imports, exports and installation
-internal/domains/      backends for the individual editing workbenches
-internal/hoi4/         parsers, importers, exporters, previews and image codecs
-internal/project/      local project storage
-internal/toolapi/      editing and knowledge tools used by hw.exe
-web/                   React and Vite user interface
-third_party/           optional CWTools rules supplied as a Git submodule
-```
-
-The server listens only on the loopback interface and protects a run with a session cookie and origin
-checks. Settings are stored in `%APPDATA%\Hagane Works\settings.json`; project content stays in the
-creation folder selected by the user.
-
 ## Contributing and security
 
 Bug reports and focused pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before

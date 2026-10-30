@@ -145,23 +145,6 @@ npm --prefix web run build
 `hw.exe` 可以把编辑器工具和离线知识检索提供给本机脚本及其他程序。命令、JSON 输入、退出码和接口
 安全机制见[命令行说明](docs/cli.md)。
 
-## 代码结构
-
-```text
-cmd/haganeworks/       桌面入口、设置、本机服务和 WebView2 窗口
-cmd/hw/                调用本机工具接口的命令行程序
-internal/api/          项目、导入、导出和安装等程序接口
-internal/domains/      各编辑工作台的后端
-internal/hoi4/         解析器、导入器、导出器、预览与图片编解码
-internal/project/      本地项目存储
-internal/toolapi/      hw.exe 使用的编辑工具和知识工具
-web/                   React 与 Vite 界面
-third_party/           以子模块提供的可选 CWTools 规则
-```
-
-服务只监听本机回环地址，并使用本次运行的会话 Cookie 和来源检查保护接口。设置保存在
-`%APPDATA%\Hagane Works\settings.json`，项目内容只保存在用户选择的创作目录中。
-
 ## 参与贡献与安全问题
 
 欢迎提交问题报告和范围清楚的 Pull Request。修改前请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。

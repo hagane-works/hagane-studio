@@ -1,0 +1,39 @@
+{
+  "save": "저장",
+  "cancel": "취소",
+  "delete": "삭제",
+  "create": "생성",
+  "loading": "불러오는 중…",
+  "unnamed": "이름 없음",
+  "all": "모두",
+  "clear": "지우기",
+  "saving": "저장 중…",
+  "revert": "되돌리기",
+  "search": "검색",
+  "discardUnsavedConfirm": "저장하지 않은 변경 사항을 버리시겠습니까?",
+  "countBadgeTooltip": "전체 {total}개 중 {count}개 표시",
+  "copiedToClipboard": "클립보드에 복사했습니다",
+  "theme": {
+    "switchToDark": "어두운 테마로 전환",
+    "switchToLight": "밝은 테마로 전환"
+  },
+  "language": {
+    "label": "언어",
+    "heading": "언어 / LANGUAGE",
+    "publicHeading": "인터페이스 언어",
+    "current": "현재 언어: {language}",
+    "description": "언어를 선택하면 인터페이스가 해당 언어로 바뀝니다. 모드 콘텐츠 언어는 별도로 선택합니다."
+  },
+  "emptyCtaCreate": "+ 새로 만들기",
+  "emptyCtaAi": "AI에게 맡기기",
+  "emptyCtaAddCountry": "+ 먼저 국가 추가",
+  "vocabulary": {
+    "customOption": "사용자 지정…(직접 입력)",
+    "customChip": "사용자 지정",
+    "vanillaGroup": "바닐라",
+    "baseModGroup": "베이스 모드에서"
+  },
+  "chooseFile": "파일 선택",
+  "noFileChosen": "선택한 파일 없음",
+  "gameFolderMissing": "이 작업에는 기본 게임이 필요합니다. 설정 → Hearts of Iron IV 설치 폴더에서 Hearts of Iron IV 폴더를 선택하세요."
+}

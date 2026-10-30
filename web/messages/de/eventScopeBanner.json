@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount} {tag} {ownCount, plural, one {Veranstaltung} other {Veranstaltungen}}",
+  "sharedSuffix": "· +{sharedCount} geteilte / globale Übertragung",
+  "filteredNote": "Vanilla DLC und per-Country-Dateien werden beim Import herausgefiltert — nur {tag}s eigene Ereignisse werden gehalten.",
+  "vanillaCta": "VANILLA-VERANSTALTUNGEN zur Referenz öffnen",
+  "hiddenHint": "{hiddenCount} geteilte/globale {hiddenCount, plural, one {Ereignis ist} other {Ereignisse sind}} ausgeblendet · rechts auf <emph>Alle</emph> klicken, um sie anzuzeigen.",
+  "dismiss": "Wegtreten",
+  "dontShowAgain": "Nicht wiederkommen"
+}

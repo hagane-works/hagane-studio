@@ -1,0 +1,932 @@
+{
+ "cases": [
+  {
+   "name": "empty-groups",
+   "export_languages": null,
+   "groups": {},
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "no-locales",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {}
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "zh-populated-not-enabled",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "en": "N",
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "en",
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "characters[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "zh-enabled",
+   "export_languages": [
+    "en",
+    "zh"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "en": "N",
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en",
+     "zh"
+    ],
+    "populated_languages": [
+     "en",
+     "zh"
+    ],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "en-always-enabled",
+   "export_languages": [],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "en": "N"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "en"
+    ],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "unknown-locale-ignored",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "en": "N",
+       "xx": "??"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "en"
+    ],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "blank-text-ignored",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "zh": "   "
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "non-string-ignored",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "zh": 123
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "enabled-normalised",
+   "export_languages": [
+    " ZH ",
+    "RU"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "zh": "名",
+       "ru": "И"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en",
+     "zh",
+     "ru"
+    ],
+    "populated_languages": [
+     "zh",
+     "ru"
+    ],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "multi-missing",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "en": "Name",
+       "zh": "名字",
+       "ru": "Имя",
+       "de": "Der Name"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "en",
+     "zh",
+     "ru",
+     "de"
+    ],
+    "missing_languages": [
+     "zh",
+     "ru",
+     "de"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "characters[].display_name_locs"
+      ]
+     },
+     {
+      "language": "ru",
+      "fields": [
+       "characters[].display_name_locs"
+      ]
+     },
+     {
+      "language": "de",
+      "fields": [
+       "characters[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "multi-group-paths",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ],
+    "ideas": [
+     {
+      "description_locs": {
+       "zh": "描述"
+      }
+     }
+    ],
+    "events": [
+     {
+      "display_name_locs": {
+       "zh": "事件"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "characters[].display_name_locs",
+       "events[].display_name_locs",
+       "ideas[].description_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "unknown-group-skipped",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "not_a_real_group": [
+     {
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "iterable-generic",
+   "export_languages": [
+    "en"
+   ],
+   "groups": [
+    {
+     "display_name_locs": {
+      "zh": "名"
+     }
+    }
+   ],
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "entities[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "placeholder-display-name",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "tag": "GER_x",
+      "display_name_locs": {
+       "zh": "GER_x"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "placeholder-only-display-name",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "tag": "GER_x",
+      "description_locs": {
+       "zh": "GER_x"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "characters[].description_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "bookmark-without-id",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "bookmarks": [
+     {
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "bookmark-with-id",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "bookmarks[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "state-placeholder",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "states": [
+     {
+      "state_id": 16,
+      "display_name_locs": {
+       "zh": "STATE_16"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "state-real-name",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "states": [
+     {
+      "state_id": 16,
+      "display_name_locs": {
+       "zh": "柏林"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "states[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "doctrine-key-with-space",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "doctrines": [
+     {
+      "name": "my doctrine",
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "doctrine-key-ok",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "doctrines": [
+     {
+      "name": "my_doctrine",
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "doctrines[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "panel-control-text-kind",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "ui_panels": [
+     {
+      "token": "p1",
+      "controls": [
+       {
+        "kind": "text",
+        "text_locs": {
+         "zh": "文"
+        },
+        "tooltip_locs": {
+         "zh": "提示"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "ui_panels[].controls[].text_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "panel-control-button-kind",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "ui_panels": [
+     {
+      "token": "p1",
+      "controls": [
+       {
+        "kind": "button",
+        "text_locs": {
+         "zh": "文"
+        },
+        "tooltip_locs": {
+         "zh": "提示"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "ui_panels[].controls[].text_locs",
+       "ui_panels[].controls[].tooltip_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "panel-control-other-kind",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "ui_panels": [
+     {
+      "token": "p1",
+      "controls": [
+       {
+        "kind": "image",
+        "text_locs": {
+         "zh": "文"
+        },
+        "tooltip_locs": {
+         "zh": "提示"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "intel-agency-with-names",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "intel_agencies": [
+     {
+      "names": [
+       "AGENCY_ONE"
+      ],
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "intel_agencies[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "intel-agency-bad-names",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "intel_agencies": [
+     {
+      "names": [
+       "has space"
+      ],
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "intel-agency-fallback-id",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "intel_agencies": [
+     {
+      "agency_id": "AG1",
+      "display_name_locs": {
+       "zh": "名"
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "intel_agencies[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "nested-locale-map",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "characters": [
+     {
+      "tag": "c1",
+      "ideology_name_locs": {
+       "fascism": {
+        "zh": "法西斯"
+       }
+      }
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [],
+    "missing_languages": [],
+    "is_closed": true,
+    "diagnostics": []
+   }
+  },
+  {
+   "name": "child-entities",
+   "export_languages": [
+    "en"
+   ],
+   "groups": {
+    "trees": [
+     {
+      "nodes": [
+       {
+        "display_name_locs": {
+         "zh": "国策"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "enabled_languages": [
+     "en"
+    ],
+    "populated_languages": [
+     "zh"
+    ],
+    "missing_languages": [
+     "zh"
+    ],
+    "is_closed": false,
+    "diagnostics": [
+     {
+      "language": "zh",
+      "fields": [
+       "trees[].nodes[].display_name_locs"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

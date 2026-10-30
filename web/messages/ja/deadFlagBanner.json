@@ -1,0 +1,5 @@
+{
+  "summary": "⚠ 設定後に読み取られていないフラグが {count}件あります",
+  "summaryNote": "（国家方針、イベント、ディシジョンの連鎖が壊れている可能性を示す初期警告）",
+  "fix": "修正：国家方針、ディシジョン、イベントの trigger / available / visible で <code>has_country_flag = {flag}</code> を使用してフラグを読み取るか、不要なら <code>set_country_flag</code> を削除してください。この検査は <code>modify_country_flag</code> または <code>clr_country_flag</code> による変更をまだ追跡しません。"
+}

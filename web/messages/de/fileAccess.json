@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows hat das Speichern von Dateien durch Hagane Works blockiert",
+  "writeBlockedDescription": "Schreiben in {folder} wurde verweigert. Wenn in der Windows-Sicherheit der Ransomware-Schutz (Überwachter Ordnerzugriff) aktiv ist, lassen Sie HaganeWorks.exe zu oder wählen Sie in den Einstellungen einen Projektordner außerhalb geschützter Ordner wie Dokumente."
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Monde de départ et limites de campagne",
+  "intro": "Ces règles s’appliquent à tous les scénarios disponibles. Choisissez le monde de départ des joueurs et la date de fin de la campagne.",
+  "worldQuestion": "Au début de la partie, quel réglage du monde faut-il utiliser ?",
+  "worldOptions": {
+    "inherit": {
+      "title": "Utiliser le monde du jeu original ou du mod de base",
+      "description": "Convient aux mods qui ajoutent du contenu ou ne modifient qu'une partie d'un monde existant."
+    },
+    "own": {
+      "title": "Prévoir le monde de mon scénario",
+      "description": "Enregistre votre intention de créer un monde alternatif ou une époque particulière. Les fichiers d'historique ne sont pas réécrits automatiquement."
+    }
+  },
+  "startDate": {
+    "label": "Date de début du scénario",
+    "hint": "Utilisez la même date que celle choisie par les joueurs au lancement du scénario."
+  },
+  "endDate": {
+    "label": "Date de fin du scénario",
+    "hint": "Une date valide postérieure à tous les scénarios enregistrés devient la fin de campagne dans HOI4."
+  },
+  "compatibilityNotice": "Votre scénario sélectionnable le plus tardif commence à la date de fin de la campagne d'origine de 1949 ou après. Tant que vous ne fixez pas une date de fin ultérieure, l'export ajoute une date compatible clairement signalée pour éviter une fin immédiate.",
+  "timelineBaseline": {
+    "vanilla": "Projet autonome : la référence est HOI4 d'origine (fin de campagne : 1er janvier 1949).",
+    "unregistered": "Chronologie du mod de base : source non enregistrée. Le programme ne supposera pas que le mod de base se termine en 1949.",
+    "rawBookmarkCoverage": "Ce panneau utilise les scénarios enregistrés dans l’atelier. Les fichiers Bookmark bruts conservés sont contrôlés séparément lors de l’export."
+  },
+  "saveFailed": "Impossible d'enregistrer les paramètres du scénario.",
+  "saveReadbackMismatch": "La relecture n'a pas renvoyé les valeurs qui viennent d'être enregistrées. Rien n'est marqué comme enregistré ; réessayez.",
+  "ownWorldSummary": {
+    "title": "Votre choix de monde",
+    "description": "Vous souhaitez faire entrer les joueurs dans le monde de votre scénario. Ce réglage ne fait qu'enregistrer ce choix ; vérifiez et créez vous-même les fichiers de monde initial requis avant la publication."
+  },
+  "submodNotice": "Ce projet dépend d'un mod de base dont la chronologie n'est pas encore enregistrée. L'analyse reste en lecture seule et ne réécrit pas automatiquement son monde.",
+  "riskPreview": {
+    "title": "Aperçu des risques du monde de départ",
+    "inherit": "Vous conservez le monde du jeu original ou du mod de base. Le programme signalera seulement les risques possibles liés aux réglages du monde ; il ne modifiera pas ce monde à votre place.",
+    "unverified": "Source non enregistrée : aucun aperçu vérifié n'est encore connecté pour ce monde. Le programme ne prétendra pas connaître le résultat et ne modifiera pas le monde automatiquement.",
+    "verifiedIntro": "Ce réglage du monde peut être vérifié. Si vous le confirmez pour le scénario, les joueurs rencontreront les résultats suivants :",
+    "verifiedEmpty": "Ce réglage du monde peut être vérifié, mais aucune modification n'est encore à montrer aux joueurs. Vérifiez les dates et le réglage du monde du scénario.",
+    "consequences": {
+      "scenarioWorld": {
+        "title": "Les joueurs commencent dans le monde de votre scénario",
+        "description": "Le monde de départ suivra le réglage que vous avez créé pour ce scénario."
+      },
+      "baseWorld": {
+        "title": "Les changements ultérieurs du monde de base restent absents",
+        "description": "Les changements ultérieurs du monde du jeu original ou du mod de base ne seront pas appliqués automatiquement à la date de départ."
+      }
+    }
+  },
+  "campaignOpening": {
+    "title": "Début de la campagne",
+    "intro": "Les joueurs peuvent choisir plusieurs scénarios ; HOI4 utilise donc le signet enregistré valide le plus ancien comme début de campagne. Les signets ultérieurs restent des scénarios sélectionnables.",
+    "currentLabel": "Date de début de campagne enregistrée",
+    "notSelected": "Aucune date de début sélectionnée",
+    "linked": "Cette date correspond au scénario enregistré le plus ancien, {bookmark}.",
+    "unlinked": "Le scénario enregistré le plus ancien commence le {date}. Synchronisez le début avant l'export.",
+    "noValidBookmark": "Enregistrez au moins un signet avec une date valide avant de définir le début de campagne.",
+    "syncEarliest": "Synchroniser avec le premier scénario",
+    "synced": "Synchronisé avec le premier scénario",
+    "saveCampaignSettings": "Enregistrer les paramètres de campagne",
+    "workspaceTitle": "Départ de l’ensemble du mod",
+    "workspaceIntro": "Ces règles s’appliquent à tous les scénarios. Modifiez plus bas la date et la présentation de sélection des pays de chaque scénario.",
+    "editWorkspace": "Modifier les règles de départ",
+    "closeWorkspace": "Replier les règles de départ",
+    "notSet": "Non défini"
+  }
+}

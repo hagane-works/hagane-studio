@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "技術ファイルは完全に同じパスだけを基準に統合",
+  "technologyMergeBody": "Append が上書きするのは完全に同じパスのファイルだけです。プロジェクトの技術ファイルにある technology block を vanilla のソースファイルへ意味的に統合することはありません。",
+  "toastWarning": "追加が完了しました。競合したベース Mod のファイル {conflictCount}件を上書きしました。ファイルごとに制御する場合は「差分マージ」を使用してください。",
+  "toastSuccess": "追加が完了しました。パスの競合はなく、すべてのコンテンツを新規ファイルとしてベース Mod に追加しました。",
+  "description": "このプロジェクトを既存の Mod zip に重ねます。パスが競合した場合は、このプロジェクトの編集内容が優先されます。「Mod を読み込み、ここで編集し、マージ済み zip をダウンロードする」流れに適しています。",
+  "naiveMergeTitle": "上書きマージ — 競合時は編集内容を優先",
+  "naiveMergeBody": "パスが競合した場合、編集内容でベース Mod の同名ファイルを上書きします。ベース Mod だけにあるファイルはそのまま残り、追加したファイルはこのプロジェクトの内容で書き込まれます。競合をファイルごとに確認する場合は「差分マージ」を使用してください。",
+  "pickBaseZip": "ベース Mod の zip を選択...",
+  "pickBaseFolder": "Mod フォルダーを選択...",
+  "folderPickerTitle": "ベース Mod のフォルダーを選択",
+  "folderPickerHint": "Mod の descriptor.mod があるフォルダーを開いてください。たとえば steamapps\\workshop\\content\\394360 以下の Steam ワークショップのアイテムや、Mod フォルダー内の Mod です。プログラムは読み込むだけで、変更はしません。",
+  "folderNotAMod": "このフォルダーは Hearts of Iron IV の Mod ではありません。Mod 名が書かれた descriptor.mod がありません。descriptor.mod があるフォルダーを選んでください。",
+  "supportNote": "任意の HOI4 Mod zip または Mod フォルダーを使用できます。プログラムはベースを読み取るだけで変更せず、マージ済み zip は「ダウンロード」フォルダーに保存されます。",
+  "title": "既存の Mod に追加",
+  "baseZipLabel": "ベース Mod",
+  "cancel": "キャンセル",
+  "merging": "マージ中...",
+  "confirmAppend": "追加を確定してダウンロード"
+}

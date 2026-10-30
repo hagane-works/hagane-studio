@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "控件",
+  "paletteContainer": "容器",
+  "paletteIcon": "图",
+  "paletteText": "文字",
+  "paletteProgressbar": "进度条",
+  "paletteButton": "按钮",
+  "stageLoading": "正在渲染 1:1 预览...",
+  "stageNotSavedTitle": "尚未编译",
+  "stageNotSavedBody": "保存面板后即可看到 1:1 游戏内预览；草稿控件先以下方琥珀虚线占位框展示。",
+  "stageEmpty": "从上方工具条添加控件。",
+  "stageError": "预览加载失败",
+  "ghostBadge": "草稿",
+  "ghostHint": "尚未进入编译预览。保存后按 1:1 渲染。",
+  "ribbonEmpty": "在画布上选中一个控件，绑定信息会显示在这里。",
+  "ribbonGhost": "未保存草稿",
+  "mockPreviewOn": "实时预览：示例变量值",
+  "addIntoPanel": "加到面板上",
+  "addIntoContainer": "加到「{name}」里"
+}

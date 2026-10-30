@@ -1,0 +1,1026 @@
+{
+ "cases": [
+  {
+   "name": "tech-unnamed",
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "technology",
+      "count": 1,
+      "sample_ids": [
+       "t_a"
+      ]
+     },
+     "message": "1 technology has no display name yet (t_a) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "tech-named",
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [],
+     "display_name_locs": {
+      "en": "Real Name"
+     },
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": []
+  },
+  {
+   "name": "tech-literal-name",
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "Literal",
+     "source": "created"
+    }
+   ],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": []
+  },
+  {
+   "name": "tech-imported-skipped",
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "imported"
+    }
+   ],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": []
+  },
+  {
+   "name": "tech-id-echo",
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "t_a",
+     "source": "created"
+    }
+   ],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "technology",
+      "count": 1,
+      "sample_ids": [
+       "t_a"
+      ]
+     },
+     "message": "1 technology has no display name yet (t_a) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "tech-many",
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_1",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 2,
+     "tech_id": "t_2",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 3,
+     "tech_id": "t_3",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 4,
+     "tech_id": "t_4",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 5,
+     "tech_id": "t_5",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 6,
+     "tech_id": "t_6",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 7,
+     "tech_id": "t_7",
+     "prerequisites": [],
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "technology",
+      "count": 7,
+      "sample_ids": [
+       "t_1",
+       "t_2",
+       "t_3",
+       "t_4",
+       "t_5"
+      ]
+     },
+     "message": "7 technologies have no display name yet (t_1, t_2, t_3, t_4, t_5, …) — the export writes no name line for them, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "focus-unnamed",
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "source": "created",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [],
+       "mutually_exclusive": [],
+       "display_name_locs": {},
+       "name_en": "",
+       "name_zh": "",
+       "name": "",
+       "source": "created"
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "focus",
+      "count": 1,
+      "sample_ids": [
+       "f1"
+      ]
+     },
+     "message": "1 focus has no display name yet (f1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "focus-imported-node-in-created-tree",
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "source": "created",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [],
+       "mutually_exclusive": [],
+       "display_name_locs": {},
+       "name_en": "",
+       "name_zh": "",
+       "name": "",
+       "source": "imported"
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "focus",
+      "count": 1,
+      "sample_ids": [
+       "f1"
+      ]
+     },
+     "message": "1 focus has no display name yet (f1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "focus-imported-tree-skipped",
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "source": "imported",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [],
+       "mutually_exclusive": [],
+       "display_name_locs": {},
+       "name_en": "",
+       "name_zh": "",
+       "name": "",
+       "source": "created"
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": []
+  },
+  {
+   "name": "idea-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "i1",
+     "modifier": {
+      "a": 1
+     },
+     "is_designer": false,
+     "raw_extras": null,
+     "research_bonus": null,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "idea",
+      "count": 1,
+      "sample_ids": [
+       "i1"
+      ]
+     },
+     "message": "1 idea has no display name yet (i1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "decision-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [
+    {
+     "id": 1,
+     "decision_id": "d1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "decision",
+      "count": 1,
+      "sample_ids": [
+       "d1"
+      ]
+     },
+     "message": "1 decision has no display name yet (d1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "equipment-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [
+    {
+     "id": 1,
+     "equipment_id": "e1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "equipment",
+      "count": 1,
+      "sample_ids": [
+       "e1"
+      ]
+     },
+     "message": "1 equipment has no display name yet (e1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "equipment-two",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [
+    {
+     "id": 1,
+     "equipment_id": "e1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    },
+    {
+     "id": 2,
+     "equipment_id": "e2",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "equipment",
+      "count": 2,
+      "sample_ids": [
+       "e1",
+       "e2"
+      ]
+     },
+     "message": "2 equipment have no display name yet (e1, e2) — the export writes no name line for them, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "custom-trait-imported-counted",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [
+    {
+     "id": 1,
+     "trait_id": "ct1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "imported"
+    }
+   ],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "custom_trait",
+      "count": 1,
+      "sample_ids": [
+       "ct1"
+      ]
+     },
+     "message": "1 custom trait has no display name yet (ct1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "dynamic-modifier-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [
+    {
+     "id": 1,
+     "dm_id": "dm1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "dynamic_modifier",
+      "count": 1,
+      "sample_ids": [
+       "dm1"
+      ]
+     },
+     "message": "1 dynamic modifier has no display name yet (dm1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "autonomy-state-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [
+    {
+     "id": 1,
+     "autonomy_id": "as1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "autonomy_state",
+      "count": 1,
+      "sample_ids": [
+       "as1"
+      ]
+     },
+     "message": "1 autonomy state has no display name yet (as1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "bookmark-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [
+    {
+     "id": 1,
+     "bookmark_id": "bm1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "bookmark",
+      "count": 1,
+      "sample_ids": [
+       "bm1"
+      ]
+     },
+     "message": "1 bookmark has no display name yet (bm1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "mio-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [
+    {
+     "id": 1,
+     "mio_id": "m1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "decision_categories": [],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "mio",
+      "count": 1,
+      "sample_ids": [
+       "m1"
+      ]
+     },
+     "message": "1 military industrial organization has no display name yet (m1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "doctrine-unnamed",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [
+    {
+     "id": 1,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "GRAND_DOCTRINE_X",
+     "source": "created"
+    }
+   ],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "doctrine",
+      "count": 1,
+      "sample_ids": [
+       "GRAND_DOCTRINE_X"
+      ]
+     },
+     "message": "1 doctrine entry has no display name yet (GRAND_DOCTRINE_X) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "doctrine-blank-key-skipped",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [
+    {
+     "id": 1,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "doctrine-spaced-key-skipped",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [
+    {
+     "id": 1,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "Two Words",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "doctrine-same-key-one-named",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [],
+   "doctrines": [
+    {
+     "id": 1,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "GD_X",
+     "source": "created"
+    },
+    {
+     "id": 2,
+     "display_name_locs": {
+      "en": "Real Name"
+     },
+     "name_en": "",
+     "name_zh": "",
+     "name": "GD_X",
+     "source": "created"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "name": "category-no-decisions-skipped",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [
+    {
+     "id": 1,
+     "category_id": "c1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "doctrines": [],
+   "issues": []
+  },
+  {
+   "name": "category-with-created-decision",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [
+    {
+     "id": 1,
+     "decision_id": "d1",
+     "display_name_locs": {
+      "en": "Real Name"
+     },
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [
+    {
+     "id": 2,
+     "category_id": "c1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "doctrines": [],
+   "issues": [
+    {
+     "level": "info",
+     "code": "display_name_placeholder",
+     "entity_ref": null,
+     "detail": {
+      "kind": "decision_category",
+      "count": 1,
+      "sample_ids": [
+       "c1"
+      ]
+     },
+     "message": "1 decision category has no display name yet (c1) — the export writes no name line for it, so HOI4 shows the id in-game. That is intended when the id is a vanilla one (the game's own name shows instead); otherwise fill in a name."
+    }
+   ]
+  },
+  {
+   "name": "category-only-imported-decisions",
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "decisions": [
+    {
+     "id": 1,
+     "decision_id": "d1",
+     "display_name_locs": {
+      "en": "Real Name"
+     },
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "imported"
+    }
+   ],
+   "equipments": [],
+   "custom_traits": [],
+   "dynamic_modifiers": [],
+   "autonomy_states": [],
+   "bookmarks": [],
+   "mios": [],
+   "decision_categories": [
+    {
+     "id": 2,
+     "category_id": "c1",
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": "",
+     "source": "created"
+    }
+   ],
+   "doctrines": [],
+   "issues": []
+  }
+ ]
+}

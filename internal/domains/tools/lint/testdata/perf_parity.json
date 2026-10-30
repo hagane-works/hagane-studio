@@ -1,0 +1,146 @@
+{
+ "cases": [
+  {
+   "text": "every_country = { add_political_power = 1 }",
+   "iterators": [
+    "every_country"
+   ],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "every_country = { every_state = { add_manpower = 1 } }",
+   "iterators": [
+    "every_country",
+    "every_state"
+   ],
+   "nested": [
+    "every_country",
+    "every_state"
+   ],
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "any_neighbor_country = { has_war_with = ROOT }",
+   "iterators": [
+    "any_neighbor_country"
+   ],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": [
+    "has_war_with"
+   ]
+  },
+  {
+   "text": "if = { any_country = { is_major = yes } } random_state = { }",
+   "iterators": [
+    "any_country",
+    "random_state"
+   ],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "every_owned_state = { every_core_state = { } } any_country = { }",
+   "iterators": [
+    "every_owned_state",
+    "every_core_state",
+    "any_country"
+   ],
+   "nested": [
+    "every_owned_state",
+    "every_core_state"
+   ],
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "no loops here",
+   "iterators": [],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "factor = 0.5 modifier = { factor = 2 has_war = yes }",
+   "iterators": [],
+   "nested": null,
+   "days": false,
+   "factor": true,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "days = 30 factor = 0.5",
+   "iterators": [],
+   "nested": null,
+   "days": true,
+   "factor": true,
+   "months_years": false,
+   "fanout": []
+  },
+  {
+   "text": "months = 2 factor = 1",
+   "iterators": [],
+   "nested": null,
+   "days": false,
+   "factor": true,
+   "months_years": true,
+   "fanout": []
+  },
+  {
+   "text": "num_of_factories > 50 has_war_with = GER",
+   "iterators": [],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": [
+    "has_war_with",
+    "num_of_factories"
+   ]
+  },
+  {
+   "text": "every_country = { } any_state = { } every_state = { } any_country = { } random_country = { } any_war = yes every_owned_state = { }",
+   "iterators": [
+    "every_country",
+    "any_state",
+    "every_state",
+    "any_country",
+    "random_country",
+    "every_owned_state"
+   ],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": [
+    "any_war"
+   ]
+  },
+  {
+   "text": "any_countryX = { } xevery_state = { }",
+   "iterators": [],
+   "nested": null,
+   "days": false,
+   "factor": false,
+   "months_years": false,
+   "fanout": []
+  }
+ ]
+}

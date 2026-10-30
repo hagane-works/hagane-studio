@@ -1,0 +1,26 @@
+{
+  "title": "가져오기 전 요약",
+  "subtitle": "가져오기를 시작하기 전에 스캔 결과를 확인하세요. 대형 모드는 시간이 걸릴 수 있습니다. 백그라운드 실행을 켜면 가져오는 동안에도 계속 작업할 수 있습니다.",
+  "stat": {
+    "countries": "국가(TAG)",
+    "characters": "캐릭터",
+    "ideas": "국민정신",
+    "focus_trees": "국가중점 트리",
+    "events": "이벤트",
+    "decisions": "결정",
+    "dynamic_modifiers": "동적 보정치",
+    "superevents": "슈퍼 이벤트"
+  },
+  "etaLabel": "예상 시간",
+  "etaUnitMinutes": "{minutes}분",
+  "etaUnitSeconds": "약 {seconds}초",
+  "etaUnit": "(파일 {files}개, {mb} MB)",
+  "etaFallback": "— (데이터 없음)",
+  "etaHint": "전체 파일 크기를 바탕으로 한 대략적인 예상치입니다. 실제 시간은 디스크와 컴퓨터 성능에 따라 달라집니다.",
+  "backgroundToggleLabel": "백그라운드에서 가져오기 실행",
+  "backgroundToggleHint": "이 창을 닫고 계속 작업할 수 있습니다. 오른쪽 아래 위젯에 진행 상황이 표시됩니다.",
+  "ctaContinue": "가져오기 시작",
+  "ctaCancel": "취소",
+  "statFallback": "—",
+  "notAvailableHint": "'—'로 표시된 수량은 스캔 중에 확인할 수 없으며 가져오기 후 요약에 표시됩니다."
+}

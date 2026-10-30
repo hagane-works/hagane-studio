@@ -1,0 +1,20 @@
+{
+  "heading": "Porträt & Vermögenswerte",
+  "uploading": "Hochladen...",
+  "uploadButton": "Hochladen von Portrait-Bild",
+  "ratioHint": "PNG / JPG, empfohlenes Verhältnis 3:4",
+  "resetConfirm": "Zurücksetzen des {tag}-Porträts auf Vanille? Dein hochgeladenes Portrait wird entfernt.",
+  "resetFailed": "Zurücksetzen fehlgeschlagen",
+  "resetting": "Zurücksetzen...",
+  "resetButton": ". Zurücksetzen auf Vanilla Portrait",
+  "generatedPreview": "Generierte Vorschau",
+  "leaderPortraitAlt": "Porträt des Führers",
+  "leaderPortrait": "Porträt des Führers",
+  "advisorIconAlt": "Symbol für den Berater",
+  "advisorIcon": "Berater-Ikone",
+  "notImported": ". Portrait nicht importiert",
+  "referencesSprite": "Dieses Zeichen verweist auf das Porträt Sprite",
+  "notImportedDetail": "aber der Import löste ihn nicht auf ein Bild – die eigene.gfx/.dds art des Mods für dieses Sprite kam wahrscheinlich nicht durch (üblicherweise nur bei Verwendung von \"Import.txt\"). Klicken Sie oben auf \"Portraitbild hochladen\", um ein benutzerdefiniertes Portrait hinzuzufügen oder den kompletten Mod-Ordner neu zu importieren, um das Kunstwerk zu importieren.",
+  "noPortrait": "Kein Portrait hochgeladen",
+  "noPortraitHint": "Hochladen, um Portrait / Advisor-Symbol / Merkmal-Symbol automatisch zu generieren"
+}

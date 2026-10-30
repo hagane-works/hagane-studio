@@ -1,0 +1,142 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+ideologies = {
+
+	democratic = {
+
+		types = {
+
+			conservatism = {
+				can_be_randomly_selected = no
+			}
+
+			liberalism = {
+			}
+
+			socialism = {
+			}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+		}
+
+		color = { 0 0 255 }
+
+		rules = {
+			can_force_government = no
+		}
+
+		can_be_boosted = no
+		can_collaborate = no
+
+		ai_democratic = yes
+	}
+
+	communism = {
+
+		types = {
+
+			marxism = {
+			}
+
+			leninism = {
+			}
+
+			stalinism = {
+			}
+
+			anti_revisionism = {
+			}
+
+			anarchist_communism = {
+			}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+		}
+
+		color = { 255 0 0 }
+
+		rules = {
+			can_force_government = yes
+		}
+
+		can_be_boosted = yes
+		can_collaborate = no
+
+		ai_communist = yes
+	}
+
+	fascism = {
+
+		types = {
+
+			nazism = {
+			}
+
+			gen_nazism = {
+			}
+
+			fascism_ideology = {
+			}
+
+			falangism = {
+			}
+
+			rexism = {
+			}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_FASCIST_1"
+		}
+
+		color = { 100 50 20 }
+
+		rules = {
+			can_force_government = yes
+		}
+
+		can_be_boosted = yes
+		can_collaborate = yes
+
+		ai_fascist = yes
+	}
+
+	neutrality = {
+
+		types = {
+
+			despotism = {
+			}
+
+			oligarchism = {
+			}
+
+			anarchism = {
+			}
+
+			moderatism = {
+			}
+
+			centrism = {
+			}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+		}
+
+		color = { 128 128 128 }
+
+		rules = {
+			can_force_government = yes
+		}
+
+		can_be_boosted = no
+		can_collaborate = yes
+
+		ai_neutral = yes
+	}
+}

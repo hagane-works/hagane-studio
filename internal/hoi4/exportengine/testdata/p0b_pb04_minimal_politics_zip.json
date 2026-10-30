@@ -1,0 +1,97 @@
+{
+  "project": {
+    "id": 404,
+    "name": "Hagane Works minimal politics fixture",
+    "country_tag": "GER",
+    "country_tags": ["GER"],
+    "dependencies": [],
+    "version": "1.0.0",
+    "supported_version": "1.19.*",
+    "tags": ["Alternative History"],
+    "export_languages": ["en", "zh"],
+    "ideology_registry": {
+      "groups": ["pb04_civic_coalition"],
+      "root_definitions": [
+        {
+          "id": "pb04_civic_coalition",
+          "body": "types = {\n}\ncolor = { 45 95 135 }",
+          "name": {
+            "en": "Civic Coalition",
+            "zh": "公民联合阵营"
+          },
+          "desc": {
+            "en": "PB-04 project-managed political group.",
+            "zh": "PB-04 项目管理政治阵营。"
+          }
+        }
+      ],
+      "sub_ideologies": [
+        {
+          "id": "pb04_civic_reformism",
+          "group": "pb04_civic_coalition",
+          "name": {
+            "en": "Civic Reformism",
+            "zh": "公民改革主义"
+          },
+          "desc": {
+            "en": "PB-04 project-managed political stance.",
+            "zh": "PB-04 项目管理具体政治立场。"
+          },
+          "random_disabled": false
+        }
+      ]
+    }
+  },
+  "tables": {
+    "project_obs_assets": [
+      {
+        "asset_type": "country_flag_ideology",
+        "gfx_name": "GER_pb04_civic_coalition",
+        "obs_key": "pb04_civic_coalition_flag.png"
+      }
+    ],
+    "characters": [
+      {
+        "id": 4041,
+        "tag": "GER_pb04_civic_leader",
+        "character_id": "GER_pb04_civic_leader",
+        "country_tag": "GER",
+        "name": "PB-04 Civic Leader",
+        "name_en": "PB-04 Civic Leader",
+        "name_zh": "PB-04 公民领袖",
+        "description": "PB-04 incumbent country leader.",
+        "desc_en": "PB-04 incumbent country leader.",
+        "desc_zh": "PB-04 现任国家领导人。",
+        "role_type": "country_leader",
+        "ideology": "pb04_civic_reformism",
+        "expire": "1965.1.1",
+        "traits": [],
+        "advisor_traits": [],
+        "raw_extras": {},
+        "source": "created",
+        "replaces_vanilla_id": false
+      }
+    ],
+    "history_files": [
+      {
+        "id": 4042,
+        "country_tag": "GER",
+        "set_politics_ruling_party": "pb04_civic_coalition",
+        "set_popularities": {
+          "pb04_civic_coalition": 60,
+          "democratic": 40
+        },
+        "source": "created"
+      }
+    ]
+  },
+  "expect": {
+    "root_id": "pb04_civic_coalition",
+    "subtype_id": "pb04_civic_reformism",
+    "country_tag": "GER",
+    "character_tag": "GER_pb04_civic_leader",
+    "root_support": 60,
+    "vanilla_support": 40,
+    "replace_path": "common/ideologies"
+  }
+}

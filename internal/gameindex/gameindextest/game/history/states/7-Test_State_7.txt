@@ -1,0 +1,16 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+state = {
+	id = 7
+	name = "STATE_7"
+	manpower = 100000
+	state_category = town
+	history = {
+		owner = SOV
+		add_core_of = SOV
+		victory_points = { 70 1 }
+		buildings = { infrastructure = 2 }
+	}
+	provinces = { 70 71 }
+	impassable = yes
+	force_link_ownership_to = 6
+}

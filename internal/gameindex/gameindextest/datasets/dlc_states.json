@@ -1,0 +1,16 @@
+{
+ "dlc_names": [
+  "La Resistance",
+  "Man the Guns"
+ ],
+ "game_version": "1.19.3.0",
+ "states": {
+  "2": [
+   "La Resistance"
+  ],
+  "4": [
+   "Man the Guns",
+   "La Resistance"
+  ]
+ }
+}

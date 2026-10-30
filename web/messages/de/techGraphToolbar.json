@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "Auszoomen",
+  "toolbarZoomIn": "Vergrößern",
+  "toolbarZoomReset": "Zoom auf 100% zurücksetzen",
+  "toolbarFitView": "Diagramm anzeigen",
+  "toolbarUndo": "Rückgängig (Strg+Z)",
+  "toolbarRedo": "Redo (Strg+Y)",
+  "toolbarAutoLayout": "Automatisches Layout — Alle Technologien neu ordnen",
+  "toolbarCreateTech": "Neue Technologie"
+}

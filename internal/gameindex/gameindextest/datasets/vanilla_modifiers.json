@@ -1,0 +1,12 @@
+{
+ "extracted_at": "2026-10-30",
+ "game_version": "1.19.3.0",
+ "modifiers": [
+  "army_attack_factor",
+  "political_power_gain",
+  "research_speed_factor",
+  "stability_factor"
+ ],
+ "source": "HOI4 game-shipped documentation/*.md (via app.kb.hoi4_docs_parser)",
+ "total": 4
+}

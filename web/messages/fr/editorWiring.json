@@ -1,0 +1,18 @@
+{
+  "cwtoolError": "Erreur Cwtool · problèmes bloquants : {count}",
+  "parsing": "Analyse…",
+  "parsedWithWarnings": "Analyse réussie · avertissements Cwtool : {count} · prêt à appliquer",
+  "parsedReady": "Analyse réussie · prêt à appliquer",
+  "parseErrorLine": "Erreur d’analyse · ligne {line} ({count})",
+  "parseError": "Erreur d’analyse ({count})",
+  "diagnosticLine": "Diagnostic · ligne {line} ({count})",
+  "diagnostics": "Diagnostics : {count}",
+  "editedWarnings": "Modifié · avertissements Cwtool : {count} (analyse en attente)",
+  "editedPending": "Modifié (analyse en attente)",
+  "stalePrompt": "Cet élément a été mis à jour ailleurs après le début de la modification de son script.\n\nConserver les modifications non enregistrées de l’éditeur ?\n\nOK = conserver le brouillon de l’éditeur (le formulaire sera écrasé lors de l’application)\nAnnuler = abandonner le brouillon et charger le formulaire le plus récent",
+  "networkHint": "La requête n’a pas atteint le programme. Il vient peut-être de redémarrer ; essayez de nouveau d’appliquer les changements.",
+  "applyFailed": "Échec de l’application : {message}{hint}",
+  "applyReseedTitle": "Script appliqué",
+  "applyReseedSynced": "Le formulaire de gauche a été actualisé en conséquence.",
+  "applyReseedClobbered": "Le formulaire a été rechargé depuis le script. Vos modifications non enregistrées dans le formulaire ont été écrasées."
+}

@@ -1,0 +1,7 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+continents = {
+	europe
+	north_america
+	asia
+	africa
+}

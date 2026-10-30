@@ -1,0 +1,5 @@
+{
+  "summary": "⚠ {count} banderas se definen, pero nunca se leen",
+  "summaryNote": "(indicio temprano de que una cadena de Enfoques Nacionales, eventos o decisiones puede estar rota)",
+  "fix": "Solución: lee la bandera con <code>has_country_flag = {flag}</code> en trigger, available o visible de un Enfoque Nacional, decisión o evento; o elimina <code>set_country_flag</code> si nada la necesita. Esta comprobación aún no rastrea las banderas modificadas mediante <code>modify_country_flag</code> o <code>clr_country_flag</code>."
+}

@@ -1,0 +1,125 @@
+{
+  "decision": {
+    "kind": "Decisión · {id}",
+    "categoryKind": "Categoría de decisiones · {id}",
+    "loading": "Cargando la decisión del proyecto…",
+    "confirmDelete": "¿Eliminar esta decisión?",
+    "delete": "Eliminar decisión",
+    "notDeletable": "Esta decisión viene del juego o de un archivo original del mod: el juego la seguiría mostrando desde ese archivo si se borrara la fila del proyecto, así que aquí no se puede eliminar.",
+    "loadingCategory": "Cargando la categoría de decisiones del proyecto…",
+    "newLog": "Creación · {name}",
+    "add": "+ Nueva decisión en esta categoría",
+    "addNote": "La nueva decisión es solo para {tag}, cuesta 0 y no tiene condiciones ni efectos; una vez creada se abre aquí para seguir editándola.",
+    "hitCategory": "Categoría de decisiones {name}",
+    "hitDecision": "Decisión {name}",
+    "hitCost": "Coste de la decisión {name}"
+  },
+  "override": {
+    "heading": "Copiar a mi mod para editar",
+    "vanillaNote": "Al guardar se copia {file} completo a tu mod (la primera vez se te pregunta); el resto del archivo se mantiene igual. El cambio afecta a todos los países que usan esta decisión.",
+    "modNote": "Esto cambia {file} en tu mod, y solo esta decisión.",
+    "cost": "Coste",
+    "icon": "Icono",
+    "daysRemove": "Duración (días)",
+    "daysReEnable": "Tiempo de espera (días)",
+    "fireOnce": "Solo se puede tomar una vez",
+    "placeholder": "Sin definir",
+    "note": "Los scripts como las condiciones y los efectos aún no se pueden cambiar aquí; un error se puede deshacer en el «Registro de cambios».",
+    "confirmTitle": "Copiar el archivo del juego base a tu mod",
+    "confirmLabel": "Copiar y guardar",
+    "confirmBody": "El archivo del juego base {file} se copiará completo a tu mod y reemplazará al archivo del mismo nombre; las demás decisiones y el contenido de otros países que contiene se mantienen igual.\nEste cambio afecta a todos los países que usan esta decisión; si una actualización del juego cambia este archivo, tu copia no se actualizará sola.",
+    "fileFallback": "el archivo que declara esta decisión",
+    "importedDone": "Se copió {file} a tu mod y se aplicó el cambio.",
+    "done": "Se cambió {file}.",
+    "problem": {
+      "cost": "El coste debe ser un número igual o mayor que 0",
+      "icon": "Escribe el icono con su nombre en los archivos (letras, números, guiones bajos)",
+      "days": "Los días deben ser un número entero igual o mayor que 0"
+    }
+  },
+  "focus": {
+    "kind": "Enfoque nacional · {tree} · {id}",
+    "newChildLog": "Nuevo enfoque hijo · {name}",
+    "loading": "Cargando el enfoque del proyecto…",
+    "notInTree": "Este árbol del proyecto no tiene este enfoque.",
+    "prereqs": "Requisitos previos",
+    "prereqHint": "Un grupo por línea: basta con cualquier enfoque del grupo; hay que cumplir todos los grupos.",
+    "or": "o",
+    "addOr": "+ o",
+    "addPrereq": "+ Requisito",
+    "mutex": "Mutuamente excluyentes",
+    "addMutex": "+ Excluyente",
+    "newChild": "Nuevo enfoque hijo",
+    "confirmDelete": "Confirmar eliminación",
+    "delete": "Eliminar enfoque",
+    "remove": "Quitar {id}",
+    "picking": "Haz clic en uno del árbol…",
+    "createHere": "Nuevo enfoque aquí",
+    "link": {
+      "self": "Un enfoque no puede enlazarse consigo mismo.",
+      "alreadyMutex": "Ya son mutuamente excluyentes.",
+      "alreadyPrereq": "Ya es un requisito previo.",
+      "loop": "Eso crearía un bucle: ese enfoque necesita que este se complete primero."
+    }
+  },
+  "focusTree": {
+    "created": "Árbol de enfoques {id} creado; haz clic derecho en un espacio vacío para colocar el primer enfoque",
+    "label": "Árbol de enfoques de {tag}",
+    "none": "Ningún árbol está declarado para {tag}.",
+    "count": "{count, plural, one {# enfoque} other {# enfoques}}",
+    "gameDefault": "predeterminado del juego",
+    "newIdPlaceholder": "Id del nuevo árbol (déjalo vacío para nombrarlo automáticamente)",
+    "create": "Nuevo árbol de enfoques",
+    "createNote": "El nuevo árbol se añade al proyecto para {tag}; el juego elige el árbol por peso, así que un árbol vacío no reemplazará al existente."
+  },
+  "event": {
+    "kind": "Evento · {id}",
+    "loading": "Cargando el evento del proyecto…",
+    "unreadable": "Este evento no está en los datos del proyecto y no se pudo leer cómo se ve en el juego.",
+    "hitOption": "Opción {name}",
+    "hitTitle": "Título del evento",
+    "hitDesc": "Descripción del evento",
+    "problem": {
+      "timeoutDays": "Los días de tiempo límite deben ser un número entero igual o mayor que 0",
+      "mtth": "Un evento que no se activa solo por script necesita un tiempo medio hasta que sucede (p. ej. days = 30)"
+    }
+  },
+  "eventSwitcher": {
+    "superCreated": "Superevento #{number} creado",
+    "notInProject": "El evento en pantalla no está en los datos del proyecto, así que no hay espacio de nombres donde poner uno nuevo.",
+    "created": "Evento {id} creado",
+    "superEvent": "Superevento",
+    "event": "Evento",
+    "search": "Buscar por id o título",
+    "scopeLabel": "Qué eventos mostrar",
+    "countryEvents": "Eventos de {tag}",
+    "allEvents": "Todos los eventos",
+    "totalPartial": "Eventos: {total} · se listan los primeros {shown}, busca el resto",
+    "totalAll": "Eventos: {total} · arrastra la barra de desplazamiento de la derecha para recorrerlos",
+    "genericEvents": "Eventos genéricos (cualquier país puede recibirlos)",
+    "noCountryEvents": "Este país no tiene eventos; cambia a «Todos los eventos» para verlos.",
+    "noMatch": "No hay eventos que coincidan.",
+    "newEvent": "Nuevo evento",
+    "newEventNote": "Se coloca en el espacio de nombres del evento en pantalla, numerado tras el último; solo lo activan scripts, nunca aparece por sí solo.",
+    "superAria": "Superevento {label}",
+    "noSuperEvents": "El proyecto aún no tiene supereventos.",
+    "newSuperEvent": "Nuevo superevento"
+  },
+  "superEvent": {
+    "kind": "Superevento · #{number} · {tag}",
+    "projectCountry": "país del proyecto",
+    "saved": "Superevento «{title}» guardado",
+    "pictureSaved": "Imagen del superevento cambiada",
+    "deleted": "Superevento «{title}» eliminado"
+  },
+  "bookmark": {
+    "fallbackName": "Marcador",
+    "kind": "Marcador · {id}",
+    "loading": "Cargando el marcador del proyecto…",
+    "notInProject": "Este marcador no está en los datos del proyecto (viene del juego base o de un archivo del mod); impórtalo al proyecto para editarlo aquí.",
+    "pictureLog": "Nuevo fondo · {name}",
+    "problem": {
+      "date": "Escribe la fecha como 1936.1.1 o 1936.1.1.12"
+    }
+  }
+}

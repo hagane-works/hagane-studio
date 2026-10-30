@@ -1,0 +1,32 @@
+{
+ "game_version": "1.19.3.0",
+ "states": {
+  "1": {
+   "navalBases": 1,
+   "coastalBunkers": 1
+  },
+  "2": {
+   "bunkers": 1,
+   "landmarks": [
+    "landmark_test_tower"
+   ],
+   "hasDlc": 1
+  },
+  "3": {
+   "datedBlocks": 1
+  },
+  "4": {
+   "hasDlc": 2
+  },
+  "5": {
+   "dams": 1,
+   "otherContent": 1
+  },
+  "6": {
+   "resistance": 1
+  },
+  "7": {
+   "forceLink": true
+  }
+ }
+}

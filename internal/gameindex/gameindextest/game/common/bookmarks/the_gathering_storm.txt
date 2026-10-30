@@ -1,0 +1,9 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		date = 1936.1.1.12
+		default = yes
+		GER = { history = "GER_GATHERING_STORM_DESC" }
+	}
+}

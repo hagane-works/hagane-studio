@@ -1,0 +1,9 @@
+{
+  "message": "\"{id}\" already exists in {dependency}. Reusing this ID will make the {entityLabel} you create here not work in game.",
+  "fixHint": "Pick an ID that is not taken yet, or reference the one that already exists in {dependency}.",
+  "unknownDependency": "the base mod",
+  "entityCharacter": "character",
+  "entityFocus": "focus",
+  "entityIdea": "idea",
+  "entityDecision": "decision"
+}

@@ -1,0 +1,39 @@
+{
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "create": "Create",
+  "loading": "Loading…",
+  "unnamed": "Unnamed",
+  "all": "All",
+  "clear": "Clear",
+  "saving": "Saving…",
+  "revert": "Revert",
+  "search": "Search",
+  "discardUnsavedConfirm": "Discard unsaved changes?",
+  "countBadgeTooltip": "Showing {count} of {total}",
+  "copiedToClipboard": "Copied to clipboard",
+  "theme": {
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
+  },
+  "language": {
+    "label": "Language",
+    "heading": "LANGUAGE / 语言",
+    "publicHeading": "Interface language",
+    "current": "Current language: {language}",
+    "description": "Selecting a language switches the interface to it. Mod content languages are selected separately."
+  },
+  "emptyCtaCreate": "+ New",
+  "emptyCtaAi": "Let AI do it",
+  "emptyCtaAddCountry": "+ Add a country first",
+  "vocabulary": {
+    "customOption": "Custom… (type your own)",
+    "customChip": "Custom",
+    "vanillaGroup": "Vanilla",
+    "baseModGroup": "From the base mod"
+  },
+  "chooseFile": "Choose file",
+  "noFileChosen": "No file chosen",
+  "gameFolderMissing": "This needs the base game: choose your Hearts of Iron IV folder in Settings → Hearts of Iron IV installation."
+}

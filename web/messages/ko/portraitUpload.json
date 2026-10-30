@@ -1,0 +1,20 @@
+{
+  "heading": "초상화 및 자산",
+  "uploading": "업로드 중…",
+  "uploadButton": "초상화 이미지 업로드",
+  "ratioHint": "PNG / JPG, 권장 비율 3:4",
+  "resetConfirm": "{tag}의 초상화를 바닐라로 되돌릴까요? 업로드한 초상화가 제거됩니다.",
+  "resetFailed": "초기화 실패",
+  "resetting": "초기화 중…",
+  "resetButton": "↺ 바닐라 초상화로 초기화",
+  "generatedPreview": "생성된 미리보기",
+  "leaderPortraitAlt": "지도자 초상화",
+  "leaderPortrait": "지도자 초상화",
+  "advisorIconAlt": "고문 아이콘",
+  "advisorIcon": "고문 아이콘",
+  "notImported": "⚠ 초상화를 가져오지 못함",
+  "referencesSprite": "이 캐릭터가 참조하는 초상화 스프라이트",
+  "notImportedDetail": "하지만 가져올 때 이미지로 해석하지 못했습니다. 이 스프라이트의 모드 전용 .gfx/.dds 아트가 누락되었을 가능성이 큽니다(\".txt만 가져오기\"에서 흔함). 위의 '초상화 이미지 업로드'를 눌러 사용자 지정 초상화를 추가하거나 전체 모드 폴더를 다시 가져와 아트를 포함하세요.",
+  "noPortrait": "업로드한 초상화 없음",
+  "noPortraitHint": "업로드하면 초상화 / 고문 아이콘 / 특성 아이콘을 자동 생성합니다"
+}

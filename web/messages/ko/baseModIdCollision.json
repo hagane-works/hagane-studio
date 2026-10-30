@@ -1,0 +1,9 @@
+{
+  "message": "\"{id}\"은(는) {dependency}에 이미 존재합니다. 이 ID를 그대로 쓰면 여기서 만든 {entityLabel}은(는) 게임에서 작동하지 않습니다.",
+  "fixHint": "아직 사용되지 않은 ID로 바꾸거나, {dependency}에 이미 있는 것을 참조하세요.",
+  "unknownDependency": "베이스 모드",
+  "entityCharacter": "인물",
+  "entityFocus": "국가 중점",
+  "entityIdea": "이념",
+  "entityDecision": "결정"
+}

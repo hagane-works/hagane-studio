@@ -1,0 +1,16 @@
+{
+  "entityDecision": "Entscheidung",
+  "entityEvent": "Veranstaltung",
+  "entityFocus": "fokussieren",
+  "entityIdea": "Idee",
+  "searchPlaceholder": "Suche {entity} ID oder Name...",
+  "all": "Insgesamt",
+  "searchingBase": "Suche nach Basismod...",
+  "projectBadge": "Projekt",
+  "baseBadge": "Basismod",
+  "noResults": "Keine Ergebnisse gefunden.",
+  "emptyProject": "Keine {entity} Einträge in diesem Projekt.",
+  "emptyCategory": "Nein{entity}Einträge in dieser Kategorie.",
+  "promptManual": "Geben Sie die {entity} ID manuell ein:",
+  "enterManually": "+ manuell eingeben..."
+}

@@ -1,0 +1,14 @@
+{
+  "roleCountryLeader": "국가 지도자",
+  "roleFieldMarshal": "원수",
+  "roleCorpsCommander": "장군",
+  "roleAdmiral": "제독",
+  "roleScientist": "과학자",
+  "roleOperative": "공작원",
+  "roleAdvisor": "고문",
+  "draft": "초안",
+  "noPortrait": "초상화 없음",
+  "traits": "특성",
+  "advisorSlot": "고문 슬롯",
+  "cost": "비용 {amount}"
+}

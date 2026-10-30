@@ -1,0 +1,1 @@
+Untranslated text: 10 of 20 keys (50.0%) still show the English text in french, german, polish, simp_chinese, spanish. Translate them to clear the list in _LOC_EN_FALLBACK.log.

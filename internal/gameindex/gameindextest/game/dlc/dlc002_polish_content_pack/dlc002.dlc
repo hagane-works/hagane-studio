@@ -1,0 +1,5 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+name = "Poland: United and Ready"
+path = "dlc/dlc002_polish_content_pack"
+affects_checksum = no
+category = "content"

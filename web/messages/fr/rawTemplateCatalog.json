@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "Panneau d’interface scriptée",
+    "description": "Panneau initial de vue d’ensemble des variables : interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt."
+  },
+  "on_actions": {
+    "label": "Liaisons on_actions",
+    "description": "Fichier de liaisons contenant des squelettes d’effets on_startup + on_monthly (fusion additive)."
+  },
+  "game_rules": {
+    "label": "Règle de partie",
+    "description": "Ligne de Règles de partie à deux options pour l’écran Nouvelle partie (fusion additive)."
+  },
+  "ai_strategy": {
+    "label": "Stratégie de l’IA",
+    "description": "Bloc de stratégie de l’IA conditionné par le TAG d’un pays (fusion additive)."
+  },
+  "gfx_sprite": {
+    "label": "Sprite GFX",
+    "description": "Fragment de sprite associant GFX_'<key>' à un fichier de texture (fournissez l’image séparément)."
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "Correctif de taille des emplacements de signets",
+    "description": "Squelette de remplacement de frontendgamesetupview.gui qui corrige la visibilité de plusieurs signets dans les mods de conversion totale servant de base."
+  },
+  "defines": {
+    "label": "Ajustements des Defines (Lua)",
+    "description": "Remplace des constantes individuelles du moteur NDefines en Lua (ne copiez jamais 00_defines.lua)."
+  },
+  "bop": {
+    "label": "Rapport de force",
+    "description": "Barre de rapport de force à deux camps, avec plages et modificateurs légers ; activez-la avec set_power_balance."
+  },
+  "music": {
+    "label": "Morceaux de station musicale",
+    "description": "Les fichiers associés .asset + .txt ajoutent des morceaux à la station base_music ; téléversez le fichier .ogg séparément."
+  },
+  "peace_conference": {
+    "label": "Modificateur de coût de conférence de paix",
+    "description": "Ligne de modificateur du coût des actions de paix (livrée comme opération neutre à 1.0 ; fusion additive)."
+  }
+}

@@ -1,0 +1,23 @@
+{
+ "game_version": "1.19.3",
+ "ids": [
+  "ai_communist",
+  "ai_democratic",
+  "ai_fascist",
+  "ai_neutral",
+  "can_be_boosted",
+  "can_be_randomly_selected",
+  "can_collaborate",
+  "can_create_factions",
+  "can_force_government",
+  "designer",
+  "dynamic_tags",
+  "instant_build",
+  "keep_completed",
+  "trade",
+  "transfer_troops"
+ ],
+ "rule": "every key K of a scalar `K = yes|no` entry anywhere in the game's own script that passes raw scripted-token predicate",
+ "source": "the game's common/ + events/ + history/ *.txt",
+ "total": 15
+}

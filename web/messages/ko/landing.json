@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "기존 모드 불러오기",
+  "newProject": "+ 새 프로젝트",
+  "newProjectFromScratch": "새 프로젝트(처음부터)",
+  "dashboardTitle": "내 프로젝트",
+  "ctaLoadExisting": "기존 모드 가져오기",
+  "ctaNewProject": "빈 프로젝트 만들기",
+  "statProjects": "프로젝트",
+  "statCountries": "국가",
+  "statEntities": "엔티티",
+  "statRecentEdit": "최근 편집",
+  "statRecentNone": "없음",
+  "timeJustNow": "방금",
+  "timeMinutesAgo": "{n}분 전",
+  "timeHoursAgo": "{n}시간 전",
+  "timeToday": "오늘",
+  "timeYesterday": "어제",
+  "timeDaysAgo": "{n}일 전",
+  "modNamingTitle": "자동으로 처리되는 작업",
+  "modNamingContent": "ID에 프로젝트 태그를 자동으로 붙여 바닐라와 충돌하지 않습니다. 이름 충돌은 자동으로 해결합니다. 내보낼 때 descriptor.mod와 표준 폴더 구조도 생성합니다. 창작에만 집중하세요.",
+  "emptyState": "아직 프로젝트가 없습니다. 처음부터 시작하거나 기존 모드를 가져와 새롭게 작업하세요.",
+  "loadedBadge": "불러온 모드",
+  "docsNavLink": "사용 설명서",
+  "dashboardNavigationLabel": "작업대 탐색",
+  "languageLabel": "언어",
+  "confirmDeleteProject": "이 프로젝트를 삭제하시겠습니까?",
+  "deleteFailed": "삭제 실패: {msg}",
+  "modNameLabel": "모드 이름",
+  "modNamePlaceholder": "예: 삼국지 모드",
+  "modNameHint": "우선 이름만 입력하세요. 프로젝트를 연 뒤 국가를 추가할 수 있습니다.",
+  "supportedVersionLabel": "호환 HOI4 버전",
+  "supportedVersionHint": "모드가 대상으로 삼는 HOI4 엔진 버전이며 descriptor.mod에 supported_version으로 기록됩니다. 1.19.*는 모든 1.19.x 패치를 포함합니다. 기본값은 최신 버전이고 나중에 모드 설명자 설정에서 바꿀 수 있습니다.",
+  "supportedVersionDefault": "최신",
+  "creating": "생성 중...",
+  "createProject": "프로젝트 만들기",
+  "baseModShelf": {
+    "dialogTitle": "새 프로젝트",
+    "sectionTitle": "기본 모드",
+    "sectionHint": "기본 모드의 캐릭터, 국가중점, 아트를 참조해 만들거나 처음부터 시작하세요.",
+    "fromScratch": {
+      "title": "처음부터",
+      "subtitle": "기본 모드가 없는 독립 모드"
+    },
+    "buildOnThis": "이 모드를 기반으로 만들기",
+    "workshopLink": "창작마당",
+    "otherMod": {
+      "title": "다른 모드를 기반으로 하나요?",
+      "subtitle": "내 기본 모드를 비공개 샌드박스로 가져오기"
+    },
+    "createFailed": "프로젝트를 만들지 못했습니다: {msg}"
+  },
+  "gridLoading": "불러오는 중...",
+  "cardNoCountries": "아직 국가 없음",
+  "cardMore": "+{n}개 더",
+  "cardDelete": "삭제",
+  "cardCharacters": "캐릭터 {n}명",
+  "cardFocusNodes": "국가중점 노드 {n}개",
+  "cardTechnologies": "기술 {n}개",
+  "cardUpdated": "업데이트: {date}",
+  "statEntitiesTooltipTitle": "엔티티 구성",
+  "entityType": {
+    "country": "국가",
+    "character": "캐릭터",
+    "custom_trait": "사용자 지정 특성",
+    "opinion_modifier": "관계 보정치",
+    "dynamic_modifier": "동적 보정치",
+    "modifier_definition": "보정치 정의",
+    "ai_strategy_plan": "AI 전략 계획",
+    "ai_template": "AI 사단 편제",
+    "wargoal": "전쟁 목표",
+    "idea": "국민정신",
+    "focus_tree": "국가중점 트리",
+    "focus_node": "국가중점 노드",
+    "technology": "기술",
+    "event_namespace": "이벤트 네임스페이스",
+    "event": "이벤트",
+    "super_event": "슈퍼 이벤트",
+    "decision_category": "결정 카테고리",
+    "decision": "결정",
+    "bookmark": "북마크",
+    "mio": "군수산업체",
+    "history_file": "역사 파일"
+  },
+  "recentOpened": "최근에 연 프로젝트",
+  "continueEditing": "계속 편집",
+  "recentlyEdited": "최근 편집",
+  "editingNow": "편집 중",
+  "justNow": "방금",
+  "minAgo": "{n}분 전",
+  "hourAgo": "{n}시간 전",
+  "dayAgo": "{n}일 전",
+  "noCountries": "아직 국가 없음",
+  "moreCountries": "+{n}개 더",
+  "entityCharacters": "캐릭터 {n}명",
+  "entityFocusNodes": "국가중점 노드 {n}개",
+  "entityTechnologies": "기술 {n}개",
+  "toolbar": {
+    "searchPlaceholder": "프로젝트 이름 / 국가 TAG / 기본 모드 검색...",
+    "sortLabel": "정렬:",
+    "sortOption": {
+      "recent": "최근 편집순",
+      "name": "이름 A-Z",
+      "countries": "국가 수",
+      "created": "최근 생성순"
+    },
+    "filterGroupLabel": "프로젝트 필터",
+    "filterOption": {
+      "all": "전체",
+      "in_progress": "진행 중",
+      "by_mod_base": "기본 모드별"
+    },
+    "noMatch": "현재 필터와 일치하는 프로젝트가 없습니다.",
+    "clearFilters": "필터 지우기"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "The New Order",
+    "tfr": "The Fire Rises",
+    "other": "오리지널"
+  },
+  "emptyHero": {
+    "title": "첫 HOI4 모드를 만들어 봅시다",
+    "subtitle": "가지고 있는 모드를 가져오거나 빈 프로젝트에서 시작하세요.",
+    "load": {
+      "title": "기존 HOI4 모드 폴더가 있나요?",
+      "blurb": "모드 폴더를 선택하면 자동으로 분석되고, 시각적 작업대에서 계속 편집할 수 있습니다.",
+      "cta": "기존 모드 가져오기"
+    },
+    "scratch": {
+      "title": "빈 프로젝트에서 시작할까요?",
+      "blurb": "모드 이름과 기본 국가를 정한 뒤 빈 상태에서 자유롭게 만드세요.",
+      "cta": "빈 프로젝트 만들기"
+    }
+  },
+  "settings": "설정",
+  "public": {
+    "brandHome": "Hagane Works 홈"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "Alejar",
+  "toolbarZoomIn": "Acercar",
+  "toolbarZoomReset": "Restablecer zoom al 100 %",
+  "toolbarFitView": "Ajustar el gráfico a la vista",
+  "toolbarUndo": "Deshacer (Ctrl+Z)",
+  "toolbarRedo": "Rehacer (Ctrl+Y)",
+  "toolbarAutoLayout": "Disposición automática · reorganizar todas las tecnologías",
+  "toolbarCreateTech": "Nueva tecnología"
+}

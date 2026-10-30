@@ -1,0 +1,33 @@
+{
+ "game_version": "1.19.3.0",
+ "names": {
+  "INFANTRY_TITLE_MOTORISED": {
+   "en": "Motorised"
+  },
+  "INFANTRY_TITLE_WEAPONS": {
+   "en": "Weapons and\nEquipment",
+   "zh": "武器和装备"
+  },
+  "SUPPORT_TITLE_TRAINS": {
+   "en": "Trains"
+  },
+  "fighter": {
+   "en": "Fighter"
+  },
+  "infantry": {
+   "en": "Infantry",
+   "zh": "步兵"
+  },
+  "infantry_equipment": {
+   "en": "Infantry Equipment",
+   "zh": "步兵装备"
+  },
+  "infantry_equipment_1": {
+   "en": "Infantry Equipment I",
+   "zh": "步兵装备 I"
+  },
+  "small_plane_cas_airframe": {
+   "en": "Fighter (CAS)"
+  }
+ }
+}

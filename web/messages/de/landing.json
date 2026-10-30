@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "Bestehende Mod laden",
+  "newProject": "+ Neues Projekt",
+  "newProjectFromScratch": "Neues Projekt (von Grund auf)",
+  "dashboardTitle": "Meine Projekte",
+  "ctaLoadExisting": "Mod importieren",
+  "ctaNewProject": "Leeres Projekt erstellen",
+  "statProjects": "Projekte",
+  "statCountries": "Länder",
+  "statEntities": "Entitäten",
+  "statRecentEdit": "Zuletzt bearbeitet",
+  "statRecentNone": "Keine",
+  "timeJustNow": "gerade jetzt",
+  "timeMinutesAgo": "vor {n} Min.",
+  "timeHoursAgo": "vor {n} Std.",
+  "timeToday": "heute",
+  "timeYesterday": "gestern",
+  "timeDaysAgo": "vor {n} Tagen",
+  "modNamingTitle": "Was ist für dich erledigt?",
+  "modNamingContent": "IDs werden automatisch mit Ihrem Projekttag vorfixiert, so dass sie nie mit Vanille zu kämpfen. Naming Konflikte lösen sich. Beim Export werden descriptor.mod und das Standard-Ordnerlayout für Sie generiert. Sie erstellen einfach.",
+  "emptyState": "Noch keine Projekte. Starten Sie von Grund auf oder importieren Sie eine bestehende Mod, um zu rework.",
+  "loadedBadge": "Lademodus",
+  "docsNavLink": "Handbuch",
+  "dashboardNavigationLabel": "Werkstattnavigation",
+  "languageLabel": "Sprache",
+  "confirmDeleteProject": "Sind Sie sicher, dass Sie dieses Projekt löschen möchten?",
+  "deleteFailed": "Löschen fehlgeschlagen: {msg}",
+  "modNameLabel": "Bezeichnung der Änderung",
+  "modNamePlaceholder": "z.B. Drei Königreiche Mod",
+  "modNameHint": "Beginnen Sie mit nur einem Namen. Sie werden Länder nach dem Öffnen des Projekts hinzufügen.",
+  "supportedVersionLabel": "Kompatible HOI4-Version",
+  "supportedVersionHint": "Die HOI4-Engineversion Ihrer Mod-Ziele – geschrieben auf descriptor.mod als unterstützte_Version. 1.19.* deckt jeden Patch ab 1.19.x. Standardwerte, die Sie später in Mod Descriptor-Einstellungen ändern können.",
+  "supportedVersionDefault": "letzte",
+  "creating": "Erstellen...",
+  "createProject": "Projekt erstellen",
+  "baseModShelf": {
+    "dialogTitle": "Neues Projekt",
+    "sectionTitle": "Basis-Mod",
+    "sectionHint": "Baue auf einem Basismod auf, um seine Charaktere, Schwerpunkte und Kunst zu verweisen – oder beginne von Grund auf.",
+    "fromScratch": {
+      "title": "Von Grund auf",
+      "subtitle": "Ein Standalone Mod ohne Basis"
+    },
+    "buildOnThis": "Aufbauen Sie darauf",
+    "workshopLink": "Workshop",
+    "otherMod": {
+      "title": "Auf einer anderen Mod?",
+      "subtitle": "Bringen Sie Ihren eigenen Basis-Mod in eine private Sandbox"
+    },
+    "createFailed": "Projekt kann nicht erstellt werden: {msg}"
+  },
+  "gridLoading": "Laden...",
+  "cardNoCountries": "Noch keine Länder",
+  "cardMore": "+{n} weitere",
+  "cardDelete": "Löschen",
+  "cardCharacters": "{n} Charaktere",
+  "cardFocusNodes": "{n} Fokus-Knoten",
+  "cardTechnologies": "{n} Technologien",
+  "cardUpdated": "Aktualisiert: {date}",
+  "statEntitiesTooltipTitle": "Entitäten nach Typ",
+  "entityType": {
+    "country": "Länder",
+    "character": "Zeichen",
+    "custom_trait": "Benutzerdefinierte Merkmale",
+    "opinion_modifier": "Stellungnahmemodifikatoren",
+    "dynamic_modifier": "Dynamische Modifikatoren",
+    "modifier_definition": "Begriffsbestimmungen für die Modifikatoren",
+    "ai_strategy_plan": "KI-Strategiepläne",
+    "ai_template": "Vorlagen für die KI-Abteilung",
+    "wargoal": "Kriegsziele",
+    "idea": "Nationalgeister",
+    "focus_tree": "Brennbäume",
+    "focus_node": "Knoten im Fokus",
+    "technology": "Technologien",
+    "event_namespace": "Ereignisnamenräume",
+    "event": "Veranstaltungen",
+    "super_event": "Super Events",
+    "decision_category": "Entscheidungskategorien",
+    "decision": "Entscheidungen",
+    "bookmark": "Lesezeichen",
+    "mio": "MIOs",
+    "history_file": "Dateien der Historie"
+  },
+  "recentOpened": "Kürzlich geöffnet",
+  "continueEditing": "Bearbeiten fortsetzen",
+  "recentlyEdited": "Kürzlich bearbeitet",
+  "editingNow": "Jetzt bearbeiten",
+  "justNow": "gerade jetzt",
+  "minAgo": "vor {n} Min.",
+  "hourAgo": "vor {n} Std.",
+  "dayAgo": "vor {n} Tagen",
+  "noCountries": "Noch keine Länder",
+  "moreCountries": "+{n} weitere",
+  "entityCharacters": "{n} Charaktere",
+  "entityFocusNodes": "{n} Fokus-Knoten",
+  "entityTechnologies": "{n} Technologien",
+  "toolbar": {
+    "searchPlaceholder": "Projektname / Land TAG / Mod Base suchen...",
+    "sortLabel": "Sortieren:",
+    "sortOption": {
+      "recent": "Kürzlich bearbeitet",
+      "name": "Name A-Z",
+      "countries": "Länderzahl",
+      "created": "Kürzlich erstellt"
+    },
+    "filterGroupLabel": "Projekte filtern",
+    "filterOption": {
+      "all": "Alle",
+      "in_progress": "In Bearbeitung",
+      "by_mod_base": "Nach Basis-Mod"
+    },
+    "noMatch": "Keine Projekte entsprechen den aktuellen Filtern.",
+    "clearFilters": "Filter löschen"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "Die neue Ordnung",
+    "tfr": "Das Feuer steigt",
+    "other": "Ursprünglich"
+  },
+  "emptyHero": {
+    "title": "Erstellen Sie Ihren ersten HOI4-Mod",
+    "subtitle": "Importieren Sie einen vorhandenen Mod oder beginnen Sie mit einem leeren Projekt.",
+    "load": {
+      "title": "Sie haben bereits einen HOI4-Mod-Ordner?",
+      "blurb": "Wählen Sie Ihren Mod-Ordner. Er wird automatisch eingelesen, und Sie bearbeiten ihn in den visuellen Werkbänken weiter.",
+      "cta": "Mod importieren"
+    },
+    "scratch": {
+      "title": "Mit einem leeren Projekt beginnen?",
+      "blurb": "Benennen Sie Ihren Mod, wählen Sie ein Ausgangsland und bauen Sie auf einer leeren Grundlage weiter.",
+      "cta": "Leeres Projekt erstellen"
+    }
+  },
+  "settings": "Einstellungen",
+  "public": {
+    "brandHome": "Hagane Works – Startseite"
+  }
+}

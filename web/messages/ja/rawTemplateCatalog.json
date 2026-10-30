@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "Scripted GUI パネル",
+    "description": "変数一覧パネルの開始用テンプレート: interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt。"
+  },
+  "on_actions": {
+    "label": "on_actions フック",
+    "description": "on_startup と on_monthly のエフェクト骨格を含むフックファイル（追加マージ）。"
+  },
+  "game_rules": {
+    "label": "ゲームルール",
+    "description": "ニューゲーム画面に表示する二択のゲームルール（追加マージ）。"
+  },
+  "ai_strategy": {
+    "label": "AI ストラテジー",
+    "description": "国家 TAG を条件とする AI ストラテジーブロック（追加マージ）。"
+  },
+  "gfx_sprite": {
+    "label": "GFX スプライト",
+    "description": "GFX_'<key>' をテクスチャファイルに対応付ける sprite 断片です。画像は別途アップロードしてください。"
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "ブックマーク枠の幅を修正",
+    "description": "大型 MOD をベースにしたプロジェクトで複数のブックマークを表示するための frontendgamesetupview.gui 上書き用ひな形です。"
+  },
+  "defines": {
+    "label": "Defines の調整（Lua）",
+    "description": "Lua で個別の NDefines エンジン定数を上書きします。00_defines.lua 全体はコピーしないでください。"
+  },
+  "bop": {
+    "label": "勢力均衡",
+    "description": "範囲と軽度の補正を備えた二陣営の勢力均衡バーです。set_power_balance で有効化します。"
+  },
+  "music": {
+    "label": "音楽ステーションの楽曲",
+    "description": ".asset と .txt の組み合わせで base_music ステーションに楽曲を追加します。.ogg は別途アップロードしてください。"
+  },
+  "peace_conference": {
+    "label": "講和会議コスト補正",
+    "description": "講和アクションのコスト補正行です（初期値 1.0 で効果なし、追加マージ）。"
+  }
+}

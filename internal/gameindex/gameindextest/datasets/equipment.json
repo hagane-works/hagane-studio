@@ -1,0 +1,12 @@
+{
+ "archetypes": [
+  "artillery_equipment",
+  "infantry_equipment"
+ ],
+ "game_version": "1.19.3.0",
+ "source": "common/units/equipment/*.txt · is_archetype=yes top-level keys",
+ "tech_to_archetype_picture": {
+  "infantry_weapons": "archetype_infantry_equipment"
+ },
+ "total": 2
+}

@@ -1,0 +1,10 @@
+{
+  "titleSuffix": "是 vanilla HOI4 TAG",
+  "description": "继续将用你 mod 的内容替换 vanilla {tag}（{vanillaName}）的内容。这正是架空历史 mod（KR / TNO / TFR）的做法——mod 加载时你的 idea/focus/event 条目会覆盖 vanilla 的。",
+  "ifGoalLabel": "如果这正是你的目的",
+  "ifGoalText": "（改写 vanilla {tag}）：点击继续。",
+  "ifCustomLabel": "如果你想要一个自定义 TAG",
+  "ifCustomText": "（vanilla 未使用的）：取消并另选一个 2–5 字母的代码。",
+  "cancel": "取消",
+  "confirm": "继续 · 替换 vanilla"
+}

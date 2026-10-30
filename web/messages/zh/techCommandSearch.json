@@ -1,0 +1,12 @@
+{
+  "heading": "搜索科技",
+  "inputAriaLabel": "搜索所有科技线",
+  "placeholder": "输入科技名称或 ID…",
+  "paletteTitle": "快速找到科技",
+  "paletteHint": "输入科技名称或 ID，点击结果即可打开它所在的科技线并选中该科技。",
+  "navHint": "也可以使用上方的陆军、空军、海军和工业装备页面浏览。",
+  "projectTotal": "共 {techCount} 项科技，分布在 {lineCount} 条科技线",
+  "noMatches": "没有找到“{query}”。",
+  "firstMatches": "显示前 {count} 项结果，请继续输入以缩小范围",
+  "matches": "找到 {count} 项结果"
+}

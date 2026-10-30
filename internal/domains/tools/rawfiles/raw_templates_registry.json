@@ -1,0 +1,265 @@
+{
+ "templates": [
+  {
+   "key": "scripted_gui",
+   "label_en": "Scripted GUI panel",
+   "label_zh": "Scripted GUI 变量面板",
+   "desc_en": "Starting-point variable-overview panel: interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt.",
+   "desc_zh": "变量总览面板起步文件：interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt。",
+   "labels": {
+    "en": "Scripted GUI panel",
+    "zh": "Scripted GUI 变量面板",
+    "ru": "Панель Scripted GUI",
+    "de": "Scripted-GUI-Panel",
+    "es": "Panel de Scripted GUI",
+    "fr": "Panneau Scripted GUI",
+    "ja": "Scripted GUI パネル",
+    "ko": "Scripted GUI 패널"
+   },
+   "descriptions": {
+    "en": "Starting-point variable-overview panel: interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt.",
+    "zh": "变量总览面板起步文件：interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt。",
+    "ru": "Стартовая панель обзора переменных с GUI, scripted_gui и файлами локализации.",
+    "de": "Startpunkt für eine Variablenübersicht mit GUI, scripted_gui und Lokalisierung.",
+    "es": "Panel inicial de variables con GUI, scripted_gui y localización.",
+    "fr": "Panneau initial de variables avec GUI, scripted_gui et localisation.",
+    "ja": "GUI・scripted_gui・ローカライズを含む変数概要パネルの開始テンプレートです。",
+    "ko": "GUI, scripted_gui, 현지화 파일을 포함한 변수 개요 패널 시작점입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": ""
+  },
+  {
+   "key": "on_actions",
+   "label_en": "on_actions hooks",
+   "label_zh": "on_actions 钩子",
+   "desc_en": "Hook file with on_startup + on_monthly effect skeletons (additive merge).",
+   "desc_zh": "含 on_startup / on_monthly 骨架的钩子文件(叠加合并)。",
+   "labels": {
+    "en": "on_actions hooks",
+    "zh": "on_actions 钩子",
+    "ru": "Хуки on_actions",
+    "de": "on_actions-Hooks",
+    "es": "Ganchos de on_actions",
+    "fr": "Hooks on_actions",
+    "ja": "on_actions フック",
+    "ko": "on_actions 훅"
+   },
+   "descriptions": {
+    "en": "Hook file with on_startup + on_monthly effect skeletons (additive merge).",
+    "zh": "含 on_startup / on_monthly 骨架的钩子文件(叠加合并)。",
+    "ru": "Файл хуков с каркасами эффектов on_startup и on_monthly.",
+    "de": "Hook-Datei mit Effektgerüsten für on_startup und on_monthly.",
+    "es": "Archivo de ganchos con esqueletos de efectos on_startup y on_monthly.",
+    "fr": "Fichier de hooks avec squelettes d’effets on_startup et on_monthly.",
+    "ja": "on_startup と on_monthly の効果枠を含むフックファイルです。",
+    "ko": "on_startup 및 on_monthly 효과 골격이 있는 훅 파일입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "on-actions"
+  },
+  {
+   "key": "game_rules",
+   "label_en": "Game rule",
+   "label_zh": "自定义游戏规则",
+   "desc_en": "A two-option Game Rules row for the New Game screen (additive merge).",
+   "desc_zh": "新开局「游戏规则」界面的双选项规则行(叠加合并)。",
+   "labels": {
+    "en": "Game rule",
+    "zh": "自定义游戏规则",
+    "ru": "Игровое правило",
+    "de": "Spielregel",
+    "es": "Regla de juego",
+    "fr": "Règle de jeu",
+    "ja": "ゲームルール",
+    "ko": "게임 규칙"
+   },
+   "descriptions": {
+    "en": "A two-option Game Rules row for the New Game screen (additive merge).",
+    "zh": "新开局「游戏规则」界面的双选项规则行(叠加合并)。",
+    "ru": "Двухвариантное правило для экрана новой игры с локализацией.",
+    "de": "Spielregel mit zwei Optionen und Lokalisierung für den Neues-Spiel-Bildschirm.",
+    "es": "Regla de dos opciones para Nueva partida con localización.",
+    "fr": "Règle à deux options pour Nouvelle partie, avec localisation.",
+    "ja": "ローカライズ付きの二択ゲームルールです。",
+    "ko": "현지화가 포함된 2개 선택지 게임 규칙입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "game-rules"
+  },
+  {
+   "key": "ai_strategy",
+   "label_en": "AI strategy",
+   "label_zh": "AI 策略",
+   "desc_en": "AI strategy block gated on a country tag (additive merge).",
+   "desc_zh": "按国家 tag 生效的 AI 策略块(叠加合并)。",
+   "labels": {
+    "en": "AI strategy",
+    "zh": "AI 策略",
+    "ru": "Стратегия ИИ",
+    "de": "KI-Strategie",
+    "es": "Estrategia de IA",
+    "fr": "Stratégie de l’IA",
+    "ja": "AI 戦略",
+    "ko": "AI 전략"
+   },
+   "descriptions": {
+    "en": "AI strategy block gated on a country tag (additive merge).",
+    "zh": "按国家 tag 生效的 AI 策略块(叠加合并)。",
+    "ru": "Блок стратегии ИИ, ограниченный тегом страны.",
+    "de": "KI-Strategieblock, der auf einen Länder-TAG begrenzt ist.",
+    "es": "Bloque de estrategia de IA limitado por una etiqueta de país.",
+    "fr": "Bloc de stratégie IA limité à un TAG de pays.",
+    "ja": "国タグで制限する AI 戦略ブロックです。",
+    "ko": "국가 태그로 제한되는 AI 전략 블록입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "ai-strategy"
+  },
+  {
+   "key": "gfx_sprite",
+   "label_en": "GFX sprite",
+   "label_zh": "GFX 贴图注册",
+   "desc_en": "Sprite fragment mapping GFX_<key> to a texturefile (ship the image separately).",
+   "desc_zh": "把 GFX_<key> 映射到贴图路径的 sprite 片段(图片需另行上传)。",
+   "labels": {
+    "en": "GFX sprite",
+    "zh": "GFX 贴图注册",
+    "ru": "Спрайт GFX",
+    "de": "GFX-Sprite",
+    "es": "Sprite GFX",
+    "fr": "Sprite GFX",
+    "ja": "GFX スプライト",
+    "ko": "GFX 스프라이트"
+   },
+   "descriptions": {
+    "en": "Sprite fragment mapping GFX_<key> to a texturefile (ship the image separately).",
+    "zh": "把 GFX_<key> 映射到贴图路径的 sprite 片段(图片需另行上传)。",
+    "ru": "Фрагмент спрайта GFX_<key>; изображение добавляется отдельно.",
+    "de": "Sprite-Fragment für GFX_<key>; Bild separat bereitstellen.",
+    "es": "Fragmento que asigna GFX_<key> a una textura; añade la imagen aparte.",
+    "fr": "Fragment associant GFX_<key> à une texture ; image fournie séparément.",
+    "ja": "GFX_<key> をテクスチャへ割り当てます。画像は別途追加します。",
+    "ko": "GFX_<key>를 텍스처에 연결합니다. 이미지는 별도로 추가합니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "gfx"
+  },
+  {
+   "key": "defines",
+   "label_en": "Defines tweaks (Lua)",
+   "label_zh": "Defines 常数微调(Lua)",
+   "desc_en": "Override single NDefines engine constants in Lua (never copy 00_defines.lua).",
+   "desc_zh": "以 Lua 覆盖单个 NDefines 引擎常数(切勿整抄 00_defines.lua)。",
+   "labels": {
+    "en": "Defines tweaks (Lua)",
+    "zh": "Defines 常数微调(Lua)",
+    "ru": "Настройки Defines (Lua)",
+    "de": "Defines-Anpassungen (Lua)",
+    "es": "Ajustes de Defines (Lua)",
+    "fr": "Ajustements des Defines (Lua)",
+    "ja": "Defines 調整（Lua）",
+    "ko": "Defines 조정(Lua)"
+   },
+   "descriptions": {
+    "en": "Override single NDefines engine constants in Lua (never copy 00_defines.lua).",
+    "zh": "以 Lua 覆盖单个 NDefines 引擎常数(切勿整抄 00_defines.lua)。",
+    "ru": "Переопределение отдельных констант NDefines в Lua.",
+    "de": "Einzelne NDefines-Konstanten in Lua überschreiben.",
+    "es": "Sobrescribe constantes NDefines individuales en Lua.",
+    "fr": "Remplace des constantes NDefines individuelles en Lua.",
+    "ja": "Lua で個別の NDefines 定数を上書きします。",
+    "ko": "Lua에서 개별 NDefines 상수를 덮어씁니다."
+   },
+   "main_param": "key",
+   "route_path": "defines"
+  },
+  {
+   "key": "bop",
+   "label_en": "Balance of power",
+   "label_zh": "权力平衡(BoP)",
+   "desc_en": "A two-side balance-of-power bar with ranges + mild modifiers; activate via set_power_balance.",
+   "desc_zh": "双阵营权力平衡条(含区间与温和 modifier),需 set_power_balance 激活。",
+   "labels": {
+    "en": "Balance of power",
+    "zh": "权力平衡(BoP)",
+    "ru": "Баланс сил",
+    "de": "Machtgleichgewicht",
+    "es": "Equilibrio de poder",
+    "fr": "Équilibre des pouvoirs",
+    "ja": "勢力均衡",
+    "ko": "권력 균형"
+   },
+   "descriptions": {
+    "en": "A two-side balance-of-power bar with ranges + mild modifiers; activate via set_power_balance.",
+    "zh": "双阵营权力平衡条(含区间与温和 modifier),需 set_power_balance 激活。",
+    "ru": "Двусторонняя шкала баланса сил с диапазонами и локализацией.",
+    "de": "Zweiseitiges Machtgleichgewicht mit Bereichen und Lokalisierung.",
+    "es": "Barra de equilibrio de poder con dos lados, rangos y localización.",
+    "fr": "Barre d’équilibre des pouvoirs à deux camps avec plages et localisation.",
+    "ja": "範囲とローカライズを含む二陣営の勢力均衡バーです。",
+    "ko": "범위와 현지화를 포함한 양측 권력 균형 막대입니다."
+   },
+   "main_param": "key",
+   "route_path": "bop"
+  },
+  {
+   "key": "music",
+   "label_en": "Music station songs",
+   "label_zh": "音乐电台曲目",
+   "desc_en": "Paired .asset + .txt adding songs to the base_music station; upload the .ogg separately.",
+   "desc_zh": ".asset+.txt 成对把曲目挂到 base_music 电台;.ogg 音频需另行上传。",
+   "labels": {
+    "en": "Music station songs",
+    "zh": "音乐电台曲目",
+    "ru": "Музыкальные композиции",
+    "de": "Musiksender-Titel",
+    "es": "Pistas de la emisora",
+    "fr": "Morceaux de la station",
+    "ja": "音楽ステーションの曲",
+    "ko": "음악 방송국 트랙"
+   },
+   "descriptions": {
+    "en": "Paired .asset + .txt adding songs to the base_music station; upload the .ogg separately.",
+    "zh": ".asset+.txt 成对把曲目挂到 base_music 电台;.ogg 音频需另行上传。",
+    "ru": "Пара .asset и .txt с локализацией; файл .ogg добавляется отдельно.",
+    "de": "Gekoppelte .asset- und .txt-Dateien mit Lokalisierung; .ogg separat hochladen.",
+    "es": "Par .asset y .txt con localización; sube el .ogg por separado.",
+    "fr": "Paire .asset + .txt avec localisation ; téléversez le .ogg séparément.",
+    "ja": "ローカライズ付き .asset + .txt。ogg は別途アップロードします。",
+    "ko": "현지화가 포함된 .asset + .txt 쌍이며 .ogg는 별도로 업로드합니다."
+   },
+   "main_param": "key",
+   "route_path": "music"
+  },
+  {
+   "key": "peace_conference",
+   "label_en": "Peace conference cost modifier",
+   "label_zh": "和会成本修正",
+   "desc_en": "A peace-action cost modifier row (ships as a 1.0 no-op; additive merge).",
+   "desc_zh": "和会行动成本修正(默认 1.0 无副作用起步;叠加合并)。",
+   "labels": {
+    "en": "Peace conference cost modifier",
+    "zh": "和会成本修正",
+    "ru": "Модификатор стоимости мирной конференции",
+    "de": "Kostenmodifikator für Friedenskonferenzen",
+    "es": "Modificador de coste de conferencia de paz",
+    "fr": "Modificateur de coût de conférence de paix",
+    "ja": "講和会議コスト補正",
+    "ko": "평화 회담 비용 보정"
+   },
+   "descriptions": {
+    "en": "A peace-action cost modifier row (ships as a 1.0 no-op; additive merge).",
+    "zh": "和会行动成本修正(默认 1.0 无副作用起步;叠加合并)。",
+    "ru": "Стартовый модификатор стоимости действия на мирной конференции.",
+    "de": "Startpunkt für einen Kostenmodifikator einer Friedensaktion.",
+    "es": "Modificador inicial del coste de una acción de paz.",
+    "fr": "Modificateur initial du coût d’une action de paix.",
+    "ja": "講和アクションのコスト補正テンプレートです。",
+    "ko": "평화 회담 행동 비용 보정 시작 템플릿입니다."
+   },
+   "main_param": "key",
+   "route_path": "peace-conference"
+  }
+ ]
+}

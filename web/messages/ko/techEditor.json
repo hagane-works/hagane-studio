@@ -1,0 +1,207 @@
+{
+  "basicInfo": "기본 정보",
+  "displayName": "표시 이름",
+  "techIdLabel": "기술 ID(HOI4 내부)",
+  "statusSaving": "저장 중...",
+  "statusSaved": "저장됨",
+  "statusError": "저장 실패",
+  "statusUnsaved": "저장하지 않은 변경 사항",
+  "addPrerequisitePlaceholder": "선행 기술 추가...",
+  "advancedFieldsLabel": "고급 필드",
+  "saveTechButton": "기술 저장",
+  "deleteTechButton": "기술 삭제",
+  "section": {
+    "categories": "카테고리",
+    "aiWillDo": "AI 선택 가중치",
+    "description": "설명"
+  },
+  "statDesc": {
+    "soft_attack": "비장갑 대상 피해이며 보병 사단의 핵심 공격 수치입니다. 중간 단계 기술은 보통 +10~30%이고 장갑 대상에는 hard_attack이 필요합니다.",
+    "hard_attack": "전차 등 장갑 대상 피해입니다. 보병은 대전차 무기가 있어야 얻고 중후반 보너스는 보통 +15~40%입니다.",
+    "defense": "정지 상태에서 공격을 회피하는 정적 방어 핵심 수치입니다. 정지 시 defense, 진격 시 breakthrough를 사용합니다.",
+    "breakthrough": "공격하며 이동할 때 피해를 흡수하는 수치입니다. 전차와 기계화 부대가 높고 중후반 보너스는 보통 +20~50%입니다.",
+    "armor_value": "적 ap_attack과 비교하는 장갑 두께입니다. 장갑이 관통력보다 높으면 피해를 크게 막습니다.",
+    "ap_attack": "적 armor_value와 비교하는 관통력입니다. 장갑 이상이면 정상 피해, 낮으면 피해가 크게 감소합니다.",
+    "max_organisation": "패주를 견디는 사기 풀입니다. 전투마다 줄고 0이면 강제로 이탈합니다. 보병은 보통 60~80입니다.",
+    "max_strength": "부대의 실제 충원 인원을 나타내며 0이면 사단이 파괴됩니다. 후방 충원으로 회복합니다.",
+    "reliability": "0.0~1.0 장비 신뢰도입니다. 낮으면 전투와 행군 중 장비 소모가 큽니다.",
+    "maximum_speed": "전략 지도 이동 속도(km/h)로 재배치, 포위, 후퇴 효율을 정합니다. 날씨, 지형, 보급이 낮춥니다.",
+    "build_cost_ic": "부대/장비 산업 능력(IC) 비용입니다. `build_cost_ic = -0.1`처럼 음수는 비용을 줄이는 좋은 효과이고 양수는 더 비싸게 만듭니다.",
+    "suppression": "점령지 저항을 억제하는 능력입니다. 부족하면 공장 생산량과 자원이 줄어듭니다.",
+    "air_attack": "적 항공기에 대한 육군 대공 능력입니다. 대공 장비가 있어야 의미가 있고 공습 피해를 줄입니다.",
+    "naval_speed": "함선의 전략 이동 속도(노트)로 재배치, 요격, 후퇴, 수송선 호위에 영향을 줍니다.",
+    "surface_detection": "적 수상함 탐지 능력으로 선제 타격과 탐지 거리에 영향을 줍니다. sub_detection과 다릅니다.",
+    "sub_detection": "잠수함을 찾는 핵심 대잠 수치입니다. 부족하면 수송선이 큰 피해를 입습니다."
+  },
+  "techId": {
+    "placeholder": "예: 향상된 보병 장비",
+    "tooltipTitle": "기술 ID · HOI4 내부 고유 식별자",
+    "tooltipContent": "모드 전체에서 고유한 기술 ID입니다. 소문자와 밑줄을 사용하세요. 이름 변경은 모든 참조와 이전 저장 파일을 깨뜨립니다."
+  },
+  "collision": {
+    "sameName": "바닐라 기술과 이름이 같아 조용히 재정의됩니다. 혼동을 막기 위해 이름을 바꾸세요.",
+    "renameTo": "다음으로 이름 변경",
+    "recommended": "(권장)"
+  },
+  "banner": {
+    "showAs": "배너 노드로 표시(200×60 · 텍스트 + 아이콘)",
+    "tooltipTitle": "배너와 아이콘 노드 크기",
+    "tooltipContent": "배너는 이름과 아이콘을 표시해 대표 장비에 적합하고, 소형 아이콘은 하위 기술이나 추상 업그레이드에 적합합니다."
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout(게임 내 소형 노드)",
+    "tooltipTitle": "force_use_small_tech_layout · 게임 내 소형 배치",
+    "tooltipContent": "실제 HOI4 연구 화면에서 `force_use_small_tech_layout = yes`를 내보내 소형 노드 배치를 강제합니다. 프로그램 캔버스 전용 배너 표시와 다른 실제 내보내기 설정입니다."
+  },
+  "researchCost": {
+    "label": "연구 비용",
+    "tooltipTitle": "연구 비용 · 연구 시간 배수",
+    "tooltipContent": "절대 일수가 아닌 연구 시간 상대 배수입니다. 바닐라는 보통 1.5~2.5이며 start_year와 함께 시대 선행 불이익을 조절합니다."
+  },
+  "startYear": {
+    "label": "시작 연도",
+    "tooltipTitle": "시작 연도 · 기술 역사 연도",
+    "tooltipContent": "기술의 역사적 이용 가능 연도입니다. 이전에 연구하면 시대 선행 불이익을 받습니다.",
+    "balanceWarn": "⚠ 바닐라 균형: 1년 앞설 때마다 비용 약 +200%"
+  },
+  "xPosition": {
+    "label": "X 위치",
+    "tooltipTitle": "X 위치 · 연구 화면의 세로(행) 오프셋",
+    "tooltipContent": "직관과 반대지만 게임에서 확인됨: HOI4 연구 화면에서 **x 가 세로축, y 가 가로축**입니다. x 는 상위 기술 기준 **행 오프셋**으로 +1 = 한 행 아래이며, 병렬 분기는 이것으로 벌립니다. 가로 위치는 y 가 정합니다(원본 게임은 관례상 연도 단계를 y 에 씁니다. 예 @1936. start_year 와는 무관). 원본의 infantry_weapons1 → 2 → improved 는 모두 x = 0 이고 y 만 증가하며, armored_car1 은 x = 4 로 한 행 아래에 있습니다. 같은 위치는 겹칩니다. 선행 기술이 없으면 폴더 원점 기준입니다."
+  },
+  "folder": {
+    "label": "연구 폴더",
+    "tooltipTitle": "폴더 · 연구 화면 탭 배치",
+    "tooltipContent": "`common/technology_tags/00_technology.txt`의 `technology_folders` 블록이 이 기술을 표시할 연구 탭을 정합니다. 잘못 고르면 기술은 작동하지만 잘못된 탭에 표시됩니다.",
+    "customCurrent": "현재(사용자 지정): {folder}",
+    "none": "연구 트리에 없음(하위 기술)"
+  },
+  "prerequisites": {
+    "heading": "선행 조건",
+    "tooltipContent": "이 기술의 선행 조건 목록입니다. 연구 전에 모두 완료해야 하는 AND 논리이며 순환 조건은 허용되지 않습니다."
+  },
+  "effects": {
+    "title": "기술 효과(해금 효과)",
+    "tooltipContent": "기술 완료 시 영구 해금하는 게임 콘텐츠입니다. 장비, 부대 유형, 장비 모듈을 생산선과 사단 편제에서 사용할 수 있게 합니다.",
+    "hint": "기술이 해금할 장비, 부대, 모듈을 HOI4 내부 이름으로 줄마다 하나씩 입력하세요."
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments(장비 해금)",
+    "tooltipTitle": "enable_equipments · 장비 해금",
+    "tooltipContent": "완료 시 해금할 장비 ID 목록입니다. common/units/equipment/의 정의와 일치해야 하며 해금 후 생산선에서 선택할 수 있습니다.",
+    "field": "enable_equipments · 장비 ID 해금(줄마다 하나 / 공백 구분)"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits(부대 해금)",
+    "tooltipTitle": "enable_subunits · 부대 해금",
+    "tooltipContent": "완료 시 해금할 사단 내 대대/중대 유형 목록입니다. common/units/ 정의와 일치해야 하며 해금 후 사단 편제에 추가할 수 있습니다.",
+    "field": "enable_subunits · 하위 부대 해금(motorized / marines / paratrooper …)"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules(모듈 해금)",
+    "tooltipTitle": "enable_equipment_modules · 모듈 해금",
+    "tooltipContent": "완료 시 해금할 전차/항공기/함선 설계용 장비 모듈 목록입니다. common/units/equipment_modules/ 정의와 일치해야 합니다.",
+    "field": "enable_equipment_modules · NSB 설계 모듈"
+  },
+  "globalModifier": {
+    "title": "전역 보정치",
+    "tooltipContent": "기술 완료 후 국가에 계속 적용되는 보정치 블록입니다. 소수(0.03 = +3%)를 사용하며 여러 항목은 중첩됩니다.",
+    "hint": "연구 속도나 공장 효율처럼 기술 완료 후 국가에 적용할 전역 보정치입니다."
+  },
+  "researchScripts": {
+    "title": "연구 스크립트",
+    "tooltipContent": "기술 완료 순간 실행되는 스크립트입니다. on_research_complete는 효과, on_research_complete_limit는 조건, allow는 연구 허가 조건입니다."
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete(완료 시 실행)",
+    "tooltipTitle": "on_research_complete · 완료 시 실행",
+    "tooltipContent": "기술 완료 순간 한 번 실행되는 효과 블록입니다. OOB 불러오기, 도움말 표시, 후속 이벤트 발생 등에 사용합니다.",
+    "hint": "연구 완료 후 부대 편제 자동 생성이나 안내 표시 등에 실행할 효과입니다.",
+    "field": "on_research_complete · 완료 시 일회성 효과 블록"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit(발동 조건)",
+    "tooltipTitle": "on_research_complete_limit · 발동 조건",
+    "tooltipContent": "on_research_complete 효과를 실행할 조건입니다. 중복 실행 방지에 사용하며 비어 있으면 항상 실행합니다.",
+    "hint": "on_research_complete 실행 시점을 제어해 반복 실행을 막습니다.",
+    "field": "on_research_complete_limit · 효과 제한 발동 조건"
+  },
+  "allow": {
+    "heading": "allow(연구 허가)",
+    "tooltipTitle": "allow · 연구 허가",
+    "tooltipContent": "이 기술을 연구할 수 있는지 제어하는 발동 조건 블록입니다. 충족하지 않으면 회색으로 표시되고 클릭할 수 없습니다. always = no는 스크립트로만 해금됨을 뜻합니다.",
+    "hint": "연구 가능 여부를 제어합니다. 비어 있으면 누구나 가능하고 always = no면 국가중점으로만 해금할 수 있습니다.",
+    "field": "allow · 연구 가능 발동 조건 블록"
+  },
+  "enableBuilding": {
+    "tooltipContent": "완료 시 해금할 건물 ID 하나입니다. common/buildings/와 일치해야 하며 여러 건물은 기술 노드를 나누세요."
+  },
+  "enableTactic": {
+    "tooltipContent": "해금할 육상 전투 전술 ID입니다. common/combat_tactics.txt와 일치하며 AI가 지형과 교리에 따라 자동 선택합니다."
+  },
+  "xor": {
+    "heading": "xor(상호 배타 기술 목록)",
+    "tooltipTitle": "xor · 상호 배타 기술",
+    "tooltipContent": "이 기술을 연구하면 목록의 기술을 연구할 수 없고 그 반대도 같습니다. 줄마다 tech_id 하나를 입력하세요.",
+    "field": "xor · 상호 배타 기술 ID(A 선택 시 B 제외)"
+  },
+  "subTechnologies": {
+    "heading": "sub_technologies(하위 기술)",
+    "tooltipTitle": "sub_technologies · 하위 기술",
+    "tooltipContent": "상위 기술 카드 안에 중첩되는 소형 업그레이드 기술입니다. 줄마다 tech_id 하나이며 같은 모드에 별도로 정의해야 합니다."
+  },
+  "allowBranch": {
+    "heading": "allow_branch(분기 표시 조건)",
+    "tooltipTitle": "allow_branch · 분기 표시 조건",
+    "tooltipContent": "전체 기술 분기를 플레이어에게 표시할지 정합니다. allow는 연구 허가, allow_branch는 UI 표시를 제어합니다.",
+    "field": "allow_branch · 전체 분기 표시/숨김 발동 조건"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type(NSB 설계팀 경험치)",
+    "tooltipTitle": "xp_research_type · 설계팀 경험치 비용",
+    "tooltipContent": "NSB 장비 설계 기능으로 육군/해군/공군 경험치를 사용해 연구를 가속합니다. 비어 있으면 경험치를 사용하지 않습니다.",
+    "optNone": "없음(비어 있음)",
+    "optLand": "land · 육군 경험치",
+    "optNaval": "naval · 해군 경험치",
+    "optAir": "air · 공군 경험치"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · 경험치 가속 비용",
+    "tooltipContent": "연구를 가속할 때마다 필요한 경험치입니다. 바닐라는 보통 25~50이며 xp_research_type이 필요합니다."
+  },
+  "dependencies": {
+    "heading": "dependencies(병렬 연구 의존성)",
+    "tooltipTitle": "dependencies · 병렬 연구 의존성",
+    "tooltipContent": "드문 기능입니다. 병렬 연구할 때 이 기술을 가속하는 다른 기술을 줄마다 `tech_id = factor`로 지정합니다. 선행 조건과 달리 강제 조건은 아닙니다."
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus(경험치 비용 배수)",
+    "tooltipTitle": "xp_research_bonus · 경험치 비용 배수",
+    "tooltipContent": "이 기술 연구에 드는 육군/해군/공군 경험치의 고정 배수입니다. 비워 두면 생략하며 교리 경험치를 소비하는 기술에만 관련됩니다.",
+    "blockFormNote": "이 기술에는 가져온 카테고리별 xp_research_bonus가 있습니다. 원문 그대로 보존하고 내보내며 덮어쓰지 않도록 읽기 전용으로 표시합니다."
+  },
+  "doctrine": {
+    "heading": "doctrine(이전 형식 · NCNS 이전 교리 플래그)",
+    "tooltipContent": "NCNS 이전 교리 플래그입니다. 현대 바닐라 교리는 common/doctrines/의 독립 경험치+숙련도 체계로 옮겨졌으므로 새 모드에는 권장하지 않으며 호환성을 위해 유지합니다."
+  },
+  "statBonuses": {
+    "title": "능력치 보너스",
+    "tooltipContent": "특정 부대 카테고리에 적용할 전투 능력치 보너스입니다. 부대 카테고리 → 능력치 → 값(0.05 = +5%) 구조이며 여러 능력치를 추가할 수 있습니다.",
+    "hint": "혜택을 받을 부대 카테고리 → 능력치 → 값(예: 0.05 = +5%)을 고르고 +를 클릭하세요.",
+    "category": "부대 카테고리",
+    "categoryPlaceholder": "부대 카테고리 선택...",
+    "stat": "능력치",
+    "statPlaceholder": "능력치 선택...",
+    "value": "값"
+  },
+  "advanced": {
+    "pathField": "path · 나가는 연결 + research_cost_coeff(AI는 add_path로 편집)"
+  },
+  "rawExtras": {
+    "badge": "일부 필드는 고급 스크립트로 보존됩니다",
+    "count": "{count}개 보존",
+    "hint": "이 가져온 필드에는 아직 시각적 편집기가 없습니다. 원문 그대로 보존되며 내보낼 때 변경 없이 다시 기록됩니다.",
+    "keysLabel": "보존된 필드",
+    "jsonLabel": "원시 JSON"
+  }
+}

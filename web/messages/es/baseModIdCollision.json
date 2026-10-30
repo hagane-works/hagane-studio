@@ -1,0 +1,9 @@
+{
+  "message": "«{id}» ya existe en {dependency}. Si reutilizas este ID, el elemento que creas aquí ({entityLabel}) no funcionará en el juego.",
+  "fixHint": "Elige un ID que no esté ocupado, o haz referencia al que ya existe en {dependency}.",
+  "unknownDependency": "el mod base",
+  "entityCharacter": "personaje",
+  "entityFocus": "foco nacional",
+  "entityIdea": "idea",
+  "entityDecision": "decisión"
+}

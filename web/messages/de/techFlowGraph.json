@@ -1,0 +1,9 @@
+{
+  "footerHint": "Doppelklicken Sie auf leeren Raum → Erstellen · Ziehen Sie einen Knoten → Ändern start_year / column · Wählen Sie dann <kbd>Löschen </kbd>, oder schweben Sie die oben rechts × zu löschen",
+  "footerHintAria": "Hilfe für die Leinwandsteuerung",
+  "footerHintRowAxis": "Doppelklicken Sie auf leeren Raum → Erstellen · Ziehen Sie einen Knoten → Zeile ändern / Spalte · Wählen Sie dann <kbd>Delete </kbd>, oder schweben Sie die oben rechts × zu löschen",
+  "orphanNoFolder": "Nicht in jedem Tech-Baum · {count} Techs haben keinen Ordnerblock (mit Fokus/Ereignis)",
+  "orphanUnmatched": "Nicht auf eine Gitterbox in der.gui abgestimmt ·{count}techs",
+  "footerHintBrowse": "Forschungstafel durchsuchen: Technologie wählen, Ansicht verschieben oder zoomen. Für eine Platzierungsänderung den Layoutmodus verwenden.",
+  "footerHintLayout": "Layoutmodus: Nur in zulässigen Feldern des gewählten Forschungsordners platzieren. Ziehen ändert nie das Forschungsjahr."
+}

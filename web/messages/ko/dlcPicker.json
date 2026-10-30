@@ -1,0 +1,12 @@
+{
+  "title": "보유한 DLC",
+  "summaryAll": "모든 DLC",
+  "summaryNone": "DLC 없음",
+  "summarySome": "{count}/{total}개",
+  "selectAll": "모두 선택",
+  "selectNone": "선택 해제",
+  "integrated": "기본 게임에 통합되어 모두가 보유: {names}",
+  "hint": "게임 미리보기는 여기서 고른 DLC 기준의 시작 상태를 보여줍니다(스크립트의 has_dlc). 내보낸 모드는 플레이어가 실제로 가진 DLC로 실행됩니다. 나중에 프로젝트 설정에서 바꿀 수 있습니다.",
+  "badge": "DLC: {summary}",
+  "badgeTip": "미리보기는 이 DLC 기준의 시작 상태를 보여줍니다: {names}. 프로젝트 설정에서 변경할 수 있습니다."
+}

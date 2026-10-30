@@ -1,0 +1,4 @@
+{
+  "title": "HOI4 text markup",
+  "legend": "§Y…§!  —  color code (§ + a letter starts a color, §! resets)\n$VAR$  —  variable / nested loc substitution\n[ROOT.GetName]  —  dynamic scope function\n\\n  —  line break\n\nThese are HOI4 text markup — they render in-game and are NOT typos. Leave them intact."
+}

@@ -1,0 +1,6 @@
+{
+  "uploadHint": "Folder upload works in your browser. Saving changes directly back into a folder needs Chrome, Edge, or Opera — on other browsers, use Zip export instead.",
+  "writeHint": "Your browser can't write files into a folder directly. Use Zip export to download the mod, then unzip it into your HOI4 mod folder. (Direct folder save needs Chrome, Edge, or Opera.)",
+  "largeFolderConfirm": "This folder contains {count} mod files. Reading a very large folder may take a while. Continue?",
+  "noRelevantFiles": "No mod files (.txt / .gfx / .yml / images) were found in the selected folder. Make sure you picked the mod root — the folder that contains descriptor.mod, common, and events."
+}

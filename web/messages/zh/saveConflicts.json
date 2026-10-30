@@ -1,0 +1,6 @@
+{
+  "save_conflict": "这份内容在你打开后已被修改。草稿已保留。请先复制你的修改，再重新载入并核对最新内容后保存。",
+  "save_precondition_required": "这份草稿缺少保存时的版本记录。请先复制你的修改，再重新打开该内容后保存。",
+  "save_committed_host_publish_deferred": "内容已保存，但图片预览尚未更新。请刷新后查看。",
+  "save_committed_host_publish_failed": "内容已保存，但图片预览尚未更新。请刷新后查看。"
+}

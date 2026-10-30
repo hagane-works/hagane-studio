@@ -1,0 +1,12 @@
+{
+  "title": "DLC que tienes",
+  "summaryAll": "Todos los DLC",
+  "summaryNone": "Ningún DLC",
+  "summarySome": "{count} de {total}",
+  "selectAll": "Seleccionar todo",
+  "selectNone": "Ninguno",
+  "integrated": "Incluidos en el juego base, los tiene todo el mundo: {names}",
+  "hint": "La vista previa del juego muestra el inicio con estos DLC (has_dlc en los scripts). El mod exportado sigue funcionando con los DLC que el jugador tenga realmente. Puedes cambiarlo luego en los ajustes del proyecto.",
+  "badge": "DLC: {summary}",
+  "badgeTip": "La vista previa muestra el inicio con estos DLC: {names}. Cámbialo en los ajustes del proyecto."
+}

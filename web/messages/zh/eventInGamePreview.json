@@ -1,0 +1,17 @@
+{
+  "noPicture": "无图片",
+  "empty": "(空)",
+  "noOptions": "无选项，事件会一直停留，直到手动关闭",
+  "conditionalOption": "条件选项(由 trigger 控制是否可见)",
+  "alwaysVisibleOption": "始终可见的选项",
+  "timeout": "超时 · {days} 天",
+  "immediateEffects": "立即效果 · 有",
+  "afterEffects": "后续效果 · 有",
+  "editPicture": "编辑事件图片",
+  "editTitle": "编辑事件标题",
+  "editDescription": "编辑事件描述",
+  "editOption": "编辑选项 {n}",
+  "previewUnavailableTitle": "事件预览暂时无法显示",
+  "previewUnavailableBody": "你的事件和未保存编辑仍然安全，可以继续编辑或重试预览。",
+  "previewUnavailableRetry": "重试预览"
+}

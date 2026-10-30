@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "Идентификатор идеи поиска...",
+  "tabProject": "Проект",
+  "tabCountry": "Страна",
+  "tabShared": "Совместное",
+  "tabLaws": "Законы",
+  "tabDesign": "Дизайнеры",
+  "tabOldAdvisors": "Старые советники",
+  "tabOther": "Прочие",
+  "otherHint": "Используйте поисковую рамку, чтобы найти идеи из других стран.",
+  "loadingVanilla": "Загрузка ванильных идей...",
+  "noResults": "Результаты не найдены.",
+  "emptyCategory": "Никаких идей в этой категории.",
+  "projectBadge": "проект",
+  "promptManual": "Введите ID идеи вручную:",
+  "enterManually": "+ Введите вручную..."
+}

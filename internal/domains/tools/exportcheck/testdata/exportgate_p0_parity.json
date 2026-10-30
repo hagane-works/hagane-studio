@@ -1,0 +1,615 @@
+{
+ "policy": [
+  {
+   "name": "empty",
+   "rows": [],
+   "by_tree_id": {},
+   "duplicates": {}
+  },
+  {
+   "name": "single",
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a"
+     ]
+    }
+   ],
+   "by_tree_id": {
+    "a": 1
+   },
+   "duplicates": {}
+  },
+  {
+   "name": "two-trees-one-row",
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "b"
+     ]
+    }
+   ],
+   "by_tree_id": {
+    "a": 1,
+    "b": 1
+   },
+   "duplicates": {}
+  },
+  {
+   "name": "conflict-lower-id-wins",
+   "rows": [
+    {
+     "id": 2,
+     "tree_ids": [
+      "a"
+     ]
+    },
+    {
+     "id": 1,
+     "tree_ids": [
+      "a"
+     ]
+    }
+   ],
+   "by_tree_id": {
+    "a": 1
+   },
+   "duplicates": {
+    "a": [
+     2,
+     1
+    ]
+   }
+  },
+  {
+   "name": "conflict-unsorted-input",
+   "rows": [
+    {
+     "id": 5,
+     "tree_ids": [
+      "x"
+     ]
+    },
+    {
+     "id": 3,
+     "tree_ids": [
+      "x"
+     ]
+    },
+    {
+     "id": 9,
+     "tree_ids": [
+      "x"
+     ]
+    }
+   ],
+   "by_tree_id": {
+    "x": 3
+   },
+   "duplicates": {
+    "x": [
+     5,
+     3,
+     9
+    ]
+   }
+  },
+  {
+   "name": "no-tree-ids",
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": []
+    }
+   ],
+   "by_tree_id": {},
+   "duplicates": {}
+  },
+  {
+   "name": "three-way-conflict",
+   "rows": [
+    {
+     "id": 7,
+     "tree_ids": [
+      "z"
+     ]
+    },
+    {
+     "id": 2,
+     "tree_ids": [
+      "z"
+     ]
+    },
+    {
+     "id": 4,
+     "tree_ids": [
+      "z"
+     ]
+    }
+   ],
+   "by_tree_id": {
+    "z": 2
+   },
+   "duplicates": {
+    "z": [
+     7,
+     2,
+     4
+    ]
+   }
+  }
+ ],
+ "cohorts": [
+  {
+   "name": "no-policy",
+   "selected": [
+    "a"
+   ],
+   "all": [
+    "a",
+    "b",
+    "c"
+   ],
+   "rows": [],
+   "expanded": [
+    "a"
+   ]
+  },
+  {
+   "name": "cohort-expands",
+   "selected": [
+    "a"
+   ],
+   "all": [
+    "a",
+    "b",
+    "c"
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "b"
+     ]
+    }
+   ],
+   "expanded": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "name": "cohort-not-hit",
+   "selected": [
+    "c"
+   ],
+   "all": [
+    "a",
+    "b",
+    "c"
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "b"
+     ]
+    }
+   ],
+   "expanded": [
+    "c"
+   ]
+  },
+  {
+   "name": "multi-policy",
+   "selected": [
+    "a"
+   ],
+   "all": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "b"
+     ]
+    },
+    {
+     "id": 2,
+     "tree_ids": [
+      "c",
+      "d"
+     ]
+    }
+   ],
+   "expanded": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "name": "chained-not-transitive",
+   "selected": [
+    "a"
+   ],
+   "all": [
+    "a",
+    "b",
+    "c"
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "b"
+     ]
+    },
+    {
+     "id": 2,
+     "tree_ids": [
+      "b",
+      "c"
+     ]
+    }
+   ],
+   "expanded": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "name": "selected-not-in-all",
+   "selected": [
+    "z"
+   ],
+   "all": [
+    "a",
+    "b"
+   ],
+   "rows": [],
+   "expanded": [
+    "z"
+   ]
+  },
+  {
+   "name": "all-order-preserved",
+   "selected": [
+    "c",
+    "a"
+   ],
+   "all": [
+    "a",
+    "b",
+    "c"
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "c"
+     ]
+    }
+   ],
+   "expanded": [
+    "a",
+    "c"
+   ]
+  },
+  {
+   "name": "empty-selection",
+   "selected": [],
+   "all": [
+    "a",
+    "b"
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "tree_ids": [
+      "a",
+      "b"
+     ]
+    }
+   ],
+   "expanded": []
+  }
+ ],
+ "findings": [
+  {
+   "name": "full",
+   "finding": {
+    "code": "x.y",
+    "severity": "blocker",
+    "repair_route": "do.this",
+    "source": {
+     "kind": "bookmark",
+     "identifier": "bm1"
+    },
+    "evidence": {
+     "a": 1
+    }
+   },
+   "issue": {
+    "level": "error",
+    "code": "x.y",
+    "severity": "blocker",
+    "entity_ref": {
+     "type": "bookmark",
+     "id": "bm1"
+    },
+    "source": {
+     "kind": "bookmark",
+     "identifier": "bm1"
+    },
+    "evidence": {
+     "a": 1
+    },
+    "repair_route": "do.this",
+    "detail": {
+     "a": 1
+    },
+    "message": "x.y",
+    "fix_hint": "do.this"
+   }
+  },
+  {
+   "name": "entity-in-source",
+   "finding": {
+    "code": "x.y",
+    "severity": "warning",
+    "source": {
+     "kind": "k",
+     "entity": {
+      "type": "focus",
+      "id": 7
+     }
+    }
+   },
+   "issue": {
+    "level": "warning",
+    "code": "x.y",
+    "severity": "warning",
+    "entity_ref": {
+     "type": "focus",
+     "id": 7
+    },
+    "source": {
+     "kind": "k",
+     "entity": {
+      "type": "focus",
+      "id": 7
+     }
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "string-source",
+   "finding": {
+    "code": "x.y",
+    "severity": "info",
+    "source": "str_src"
+   },
+   "issue": {
+    "level": "info",
+    "code": "x.y",
+    "severity": "info",
+    "entity_ref": {
+     "type": "focus_policy",
+     "id": "str_src"
+    },
+    "source": {
+     "kind": "focus_policy",
+     "identifier": "str_src"
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "no-source",
+   "finding": {
+    "code": "x.y",
+    "severity": "warning"
+   },
+   "issue": {
+    "level": "warning",
+    "code": "x.y",
+    "severity": "warning",
+    "entity_ref": {
+     "type": "focus_policy",
+     "id": "x.y"
+    },
+    "source": {
+     "kind": "focus_policy",
+     "identifier": "x.y"
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "no-code",
+   "finding": {
+    "severity": "warning"
+   },
+   "issue": {
+    "level": "warning",
+    "code": "p0_export_gate",
+    "severity": "warning",
+    "entity_ref": {
+     "type": "focus_policy",
+     "id": "p0_export_gate"
+    },
+    "source": {
+     "kind": "focus_policy",
+     "identifier": "p0_export_gate"
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "p0_export_gate",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "no-severity",
+   "finding": {
+    "code": "x.y"
+   },
+   "issue": {
+    "level": "info",
+    "code": "x.y",
+    "severity": "warning",
+    "entity_ref": {
+     "type": "focus_policy",
+     "id": "x.y"
+    },
+    "source": {
+     "kind": "focus_policy",
+     "identifier": "x.y"
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "file-fallback",
+   "finding": {
+    "code": "x.y",
+    "severity": "warning",
+    "source": {
+     "kind": "raw",
+     "file": "common/x.txt"
+    }
+   },
+   "issue": {
+    "level": "warning",
+    "code": "x.y",
+    "severity": "warning",
+    "entity_ref": {
+     "type": "raw",
+     "id": "common/x.txt"
+    },
+    "source": {
+     "kind": "raw",
+     "file": "common/x.txt"
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "identifier-empty",
+   "finding": {
+    "code": "x.y",
+    "severity": "warning",
+    "source": {
+     "kind": "raw",
+     "identifier": ""
+    }
+   },
+   "issue": {
+    "level": "warning",
+    "code": "x.y",
+    "severity": "warning",
+    "entity_ref": {
+     "type": "raw",
+     "id": "x.y"
+    },
+    "source": {
+     "kind": "raw",
+     "identifier": ""
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "unknown-severity",
+   "finding": {
+    "code": "x.y",
+    "severity": "nonsense"
+   },
+   "issue": {
+    "level": "info",
+    "code": "x.y",
+    "severity": "nonsense",
+    "entity_ref": {
+     "type": "focus_policy",
+     "id": "x.y"
+    },
+    "source": {
+     "kind": "focus_policy",
+     "identifier": "x.y"
+    },
+    "evidence": {},
+    "repair_route": "",
+    "detail": {},
+    "message": "x.y",
+    "fix_hint": ""
+   }
+  }
+ ],
+ "safe_paths": [
+  {
+   "input": "common/x.txt",
+   "output": "common/x.txt"
+  },
+  {
+   "input": "common\\x.txt",
+   "output": "common/x.txt"
+  },
+  {
+   "input": "/common/x.txt/",
+   "output": "common/x.txt"
+  },
+  {
+   "input": "  common/x.txt  ",
+   "output": "common/x.txt"
+  },
+  {
+   "input": "",
+   "output": ""
+  },
+  {
+   "input": "///",
+   "output": ""
+  },
+  {
+   "input": "a//b",
+   "output": ""
+  }
+ ]
+}

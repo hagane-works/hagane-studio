@@ -1,0 +1,6 @@
+{
+  "save_conflict": "Ce contenu a été modifié depuis son ouverture. Votre brouillon est conservé. Copiez vos modifications, rechargez le contenu et vérifiez la version actuelle avant d’enregistrer.",
+  "save_precondition_required": "Ce brouillon ne dispose pas d’une version enregistrée à comparer. Copiez vos modifications, puis rouvrez l’élément avant d’enregistrer.",
+  "save_committed_host_publish_deferred": "Le contenu a été enregistré, mais l’aperçu de l’image n’est pas encore à jour. Actualisez la page pour le voir.",
+  "save_committed_host_publish_failed": "Le contenu a été enregistré, mais l’aperçu de l’image n’est pas encore à jour. Actualisez la page pour le voir."
+}

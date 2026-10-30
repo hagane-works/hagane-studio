@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "Buscar ID de espíritu nacional…",
+  "tabProject": "Proyecto",
+  "tabCountry": "País",
+  "tabShared": "Compartidos",
+  "tabLaws": "Leyes",
+  "tabDesign": "Diseñadores",
+  "tabOldAdvisors": "Asesores antiguos",
+  "tabOther": "Otros",
+  "otherHint": "Usa el cuadro de búsqueda para encontrar espíritus nacionales de otros países.",
+  "loadingVanilla": "Cargando espíritus nacionales del juego base…",
+  "noResults": "No se encontraron resultados.",
+  "emptyCategory": "No hay espíritus nacionales en esta categoría.",
+  "projectBadge": "proyecto",
+  "promptManual": "Introduce manualmente el ID del espíritu nacional:",
+  "enterManually": "+ Introducir manualmente…"
+}

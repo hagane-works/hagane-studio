@@ -1,0 +1,18 @@
+{
+  "cwtoolError": "Error de Cwtool · problemas bloqueantes: {count}",
+  "parsing": "Analizando…",
+  "parsedWithWarnings": "Análisis correcto · avisos de Cwtool: {count} · listo para aplicar",
+  "parsedReady": "Análisis correcto · listo para aplicar",
+  "parseErrorLine": "Error de análisis · línea {line} ({count})",
+  "parseError": "Error de análisis ({count})",
+  "diagnosticLine": "Diagnóstico · línea {line} ({count})",
+  "diagnostics": "Diagnósticos: {count}",
+  "editedWarnings": "Editado · avisos de Cwtool: {count} (análisis pendiente)",
+  "editedPending": "Editado (análisis pendiente)",
+  "stalePrompt": "Este elemento se actualizó en otro lugar después de que empezaras a editar su script.\n\n¿Quieres conservar los cambios sin guardar del editor?\n\nAceptar = conservar el borrador del editor (el formulario se sobrescribirá al aplicar)\nCancelar = descartar el borrador y cargar el formulario más reciente",
+  "networkHint": "La solicitud no llegó al programa. Puede que acabe de reiniciarse; prueba a aplicar de nuevo.",
+  "applyFailed": "No se pudo aplicar: {message}{hint}",
+  "applyReseedTitle": "Script aplicado",
+  "applyReseedSynced": "El formulario de la izquierda se ha actualizado.",
+  "applyReseedClobbered": "El formulario se recargó desde el script. Se sobrescribieron los cambios sin guardar del formulario."
+}

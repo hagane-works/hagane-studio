@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount} de {tag} ({ownCount, plural, one {evento} other {eventos}})",
+  "sharedSuffix": " · +{sharedCount} compartidos / emisión global",
+  "filteredNote": "Los archivos de DLC del juego base y de otros países se excluyen al importar; solo se conservan los eventos propios de {tag}.",
+  "vanillaCta": "Abrir EVENTOS DEL JUEGO BASE como referencia",
+  "hiddenHint": "{hiddenCount} {hiddenCount, plural, one {evento compartido/global oculto} other {eventos compartidos/globales ocultos}} · pulsa <emph>Todos</emph> a la derecha para mostrarlos.",
+  "dismiss": "Cerrar",
+  "dontShowAgain": "No volver a mostrar"
+}

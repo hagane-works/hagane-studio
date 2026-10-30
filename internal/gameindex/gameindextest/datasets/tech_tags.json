@@ -1,0 +1,51 @@
+{
+ "categories": {
+  "ids": [
+   "armor",
+   "industry",
+   "infantry_weapons",
+   "land_doctrine",
+   "support_tech"
+  ],
+  "total": 5
+ },
+ "folder_meta": {
+  "electronics_folder": {
+   "ledger": "civilian",
+   "doctrine": false,
+   "dlc_gate": null
+  },
+  "infantry_folder": {
+   "ledger": "army",
+   "doctrine": false,
+   "dlc_gate": null
+  },
+  "land_doctrine_folder": {
+   "ledger": "army",
+   "doctrine": true,
+   "dlc_gate": null
+  },
+  "naval_folder": {
+   "ledger": "navy",
+   "doctrine": false,
+   "dlc_gate": "Man the Guns"
+  },
+  "support_folder": {
+   "ledger": "army",
+   "doctrine": false,
+   "dlc_gate": null
+  }
+ },
+ "folders": {
+  "ids": [
+   "electronics_folder",
+   "infantry_folder",
+   "land_doctrine_folder",
+   "naval_folder",
+   "support_folder"
+  ],
+  "total": 5
+ },
+ "game_version": "1.19.3.0",
+ "source": "common/technology_tags/*.txt"
+}

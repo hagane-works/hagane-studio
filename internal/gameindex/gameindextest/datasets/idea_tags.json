@@ -1,0 +1,45 @@
+{
+ "all_categories": [
+  "army_spirit",
+  "country",
+  "economy",
+  "government",
+  "hidden_ideas",
+  "military_staff",
+  "mobilization_laws",
+  "political_advisor",
+  "research_production",
+  "tank_manufacturer",
+  "trade_laws"
+ ],
+ "game_version": "1.19.3",
+ "idea_categories": [
+  "army_spirit",
+  "country",
+  "government",
+  "hidden_ideas",
+  "military_staff",
+  "research_production"
+ ],
+ "idea_slots": [
+  "army_chief",
+  "army_spirit",
+  "economy",
+  "high_command",
+  "mobilization_laws",
+  "political_advisor",
+  "tank_manufacturer",
+  "theorist",
+  "trade_laws"
+ ],
+ "runtime_categories": [
+  "country",
+  "economy",
+  "hidden_ideas",
+  "mobilization_laws",
+  "political_advisor",
+  "tank_manufacturer",
+  "trade_laws"
+ ],
+ "source": "common/idea_tags/*.txt idea_categories + the categories of common/ideas/*.txt"
+}

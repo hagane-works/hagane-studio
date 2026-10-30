@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "コントロール",
+  "paletteContainer": "コンテナ",
+  "paletteIcon": "アイコン",
+  "paletteText": "テキスト",
+  "paletteProgressbar": "進捗バー",
+  "paletteButton": "ボタン",
+  "stageLoading": "1:1 プレビューを描画中...",
+  "stageNotSavedTitle": "未コンパイル",
+  "stageNotSavedBody": "パネルを保存すると1:1のゲーム内プレビューを表示できます。下書きのコントロールは下に琥珀色のプレースホルダーで表示されます。",
+  "stageEmpty": "上のパレットからコントロールを追加してください。",
+  "stageError": "プレビューを読み込めませんでした",
+  "ghostBadge": "下書き",
+  "ghostHint": "コンパイル済みプレビューにはまだ含まれていません。保存すると1:1で描画されます。",
+  "ribbonEmpty": "キャンバス上のコントロールを選択してください。バインディングがここに表示されます。",
+  "ribbonGhost": "未保存の下書き",
+  "mockPreviewOn": "変数のサンプル値を使ったライブプレビュー",
+  "addIntoPanel": "パネルに追加",
+  "addIntoContainer": "「{name}」の中に追加"
+}

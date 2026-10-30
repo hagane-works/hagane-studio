@@ -1,0 +1,9 @@
+{
+ "source": "common/units/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 2,
+ "ids": [
+  "air.txt",
+  "infantry.txt"
+ ]
+}

@@ -1,0 +1,5183 @@
+{
+  "ai_strategy_plans": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "plan_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "desc",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "allowed",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "enable",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "abort",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "ai_national_focuses",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "focus_factors",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "research",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "ideas",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "traits",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "ai_strategy",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "weight",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "field_order",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "raw_block",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    }
+  ],
+  "ai_templates": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "template_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "role",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "blocked_for",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "available_for",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "upgrade_prio",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "enable",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "front_role_override",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "target_templates",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "field_order",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "raw_block",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    }
+  ],
+  "autonomy_states": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "autonomy_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "is_puppet",
+      "type": "boolean"
+    },
+    {
+      "name": "is_default",
+      "type": "boolean"
+    },
+    {
+      "name": "manpower_influence",
+      "type": "double precision"
+    },
+    {
+      "name": "min_freedom_level",
+      "type": "integer"
+    },
+    {
+      "name": "rule",
+      "type": "text"
+    },
+    {
+      "name": "ai_weights",
+      "type": "json"
+    },
+    {
+      "name": "modifier",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "bookmarks": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "edit_revision",
+      "type": "bigint",
+      "not_null": true,
+      "default": 1
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "bookmark_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "date",
+      "type": "character varying"
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "default_country",
+      "type": "character varying"
+    },
+    {
+      "name": "default_flag",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "selectable_countries",
+      "type": "json"
+    },
+    {
+      "name": "filters",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "characters": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "localisation_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "role_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "has_advisor_role",
+      "type": "boolean"
+    },
+    {
+      "name": "is_replacement",
+      "type": "boolean"
+    },
+    {
+      "name": "replaces_vanilla_id",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "is_portrait_modified",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "skill",
+      "type": "integer"
+    },
+    {
+      "name": "attack_skill",
+      "type": "integer"
+    },
+    {
+      "name": "defense_skill",
+      "type": "integer"
+    },
+    {
+      "name": "planning_skill",
+      "type": "integer"
+    },
+    {
+      "name": "logistics_skill",
+      "type": "integer"
+    },
+    {
+      "name": "maneuvering_skill",
+      "type": "integer"
+    },
+    {
+      "name": "coordination_skill",
+      "type": "integer"
+    },
+    {
+      "name": "military_visible",
+      "type": "text"
+    },
+    {
+      "name": "traits",
+      "type": "json"
+    },
+    {
+      "name": "advisor_traits",
+      "type": "json"
+    },
+    {
+      "name": "advisor_slot",
+      "type": "character varying"
+    },
+    {
+      "name": "advisor_idea_token",
+      "type": "character varying"
+    },
+    {
+      "name": "advisor_cost",
+      "type": "integer"
+    },
+    {
+      "name": "advisor_available",
+      "type": "text"
+    },
+    {
+      "name": "advisor_visible",
+      "type": "text"
+    },
+    {
+      "name": "advisor_removal_cost",
+      "type": "integer"
+    },
+    {
+      "name": "advisor_modifier",
+      "type": "text"
+    },
+    {
+      "name": "advisor_on_add",
+      "type": "text"
+    },
+    {
+      "name": "advisor_on_remove",
+      "type": "text"
+    },
+    {
+      "name": "gender",
+      "type": "character varying"
+    },
+    {
+      "name": "can_be_captured",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "always_show_on_actions_tooltip",
+      "type": "boolean"
+    },
+    {
+      "name": "ideology",
+      "type": "character varying"
+    },
+    {
+      "name": "expire",
+      "type": "character varying"
+    },
+    {
+      "name": "scientist_data",
+      "type": "json"
+    },
+    {
+      "name": "scientist_visible",
+      "type": "text"
+    },
+    {
+      "name": "operative_skill_level",
+      "type": "integer"
+    },
+    {
+      "name": "operative_traits",
+      "type": "json"
+    },
+    {
+      "name": "operative_nationalities",
+      "type": "json"
+    },
+    {
+      "name": "operative_available",
+      "type": "text"
+    },
+    {
+      "name": "operative_bg",
+      "type": "character varying"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "large_portrait",
+      "type": "character varying"
+    },
+    {
+      "name": "small_portrait",
+      "type": "character varying"
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "countries": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "color",
+      "type": "json"
+    },
+    {
+      "name": "color_ui",
+      "type": "json"
+    },
+    {
+      "name": "ideology",
+      "type": "character varying"
+    },
+    {
+      "name": "graphical_culture",
+      "type": "character varying"
+    },
+    {
+      "name": "graphical_culture_2d",
+      "type": "character varying"
+    },
+    {
+      "name": "use_legacy_ai_pp_spend",
+      "type": "boolean"
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "adjective_en",
+      "type": "character varying"
+    },
+    {
+      "name": "adjective_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "adjective_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "ideology_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "name_democratic_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_democratic_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "name_fascism_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_fascism_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "name_communism_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_communism_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "name_neutrality_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_neutrality_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "flag_image_path",
+      "type": "character varying"
+    },
+    {
+      "name": "flag_paths_by_ideology",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "auto_added",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "custom_traits": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "trait_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "trait_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "modifier",
+      "type": "json"
+    },
+    {
+      "name": "ai_will_do",
+      "type": "text"
+    },
+    {
+      "name": "targeted_modifier",
+      "type": "json"
+    },
+    {
+      "name": "random",
+      "type": "boolean"
+    },
+    {
+      "name": "extra_fields",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "decision_categories": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "category_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "priority",
+      "type": "integer"
+    },
+    {
+      "name": "on_map_area",
+      "type": "text"
+    },
+    {
+      "name": "allowed",
+      "type": "text"
+    },
+    {
+      "name": "visible",
+      "type": "text"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "visibility",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "decisions": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "category_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "decision_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "allowed",
+      "type": "text"
+    },
+    {
+      "name": "available",
+      "type": "text"
+    },
+    {
+      "name": "visible",
+      "type": "text"
+    },
+    {
+      "name": "cost",
+      "type": "integer"
+    },
+    {
+      "name": "fire_only_once",
+      "type": "boolean"
+    },
+    {
+      "name": "cancel_if_not_visible",
+      "type": "boolean"
+    },
+    {
+      "name": "days_remove",
+      "type": "integer"
+    },
+    {
+      "name": "days_re_enable",
+      "type": "integer"
+    },
+    {
+      "name": "complete_effect",
+      "type": "text"
+    },
+    {
+      "name": "remove_effect",
+      "type": "text"
+    },
+    {
+      "name": "cancel_trigger",
+      "type": "text"
+    },
+    {
+      "name": "cancel_effect",
+      "type": "text"
+    },
+    {
+      "name": "modifier",
+      "type": "text"
+    },
+    {
+      "name": "activation",
+      "type": "text"
+    },
+    {
+      "name": "timeout_effect",
+      "type": "text"
+    },
+    {
+      "name": "days_mission_timeout",
+      "type": "integer"
+    },
+    {
+      "name": "selectable_mission",
+      "type": "boolean"
+    },
+    {
+      "name": "is_good",
+      "type": "boolean"
+    },
+    {
+      "name": "targeted_modifier",
+      "type": "json"
+    },
+    {
+      "name": "targets",
+      "type": "json"
+    },
+    {
+      "name": "target_array",
+      "type": "json"
+    },
+    {
+      "name": "target_root_trigger",
+      "type": "text"
+    },
+    {
+      "name": "target_trigger",
+      "type": "text"
+    },
+    {
+      "name": "state_target",
+      "type": "character varying"
+    },
+    {
+      "name": "highlight_states",
+      "type": "json"
+    },
+    {
+      "name": "priority",
+      "type": "integer"
+    },
+    {
+      "name": "custom_cost_trigger",
+      "type": "text"
+    },
+    {
+      "name": "custom_cost_text",
+      "type": "character varying"
+    },
+    {
+      "name": "on_map_mode",
+      "type": "character varying"
+    },
+    {
+      "name": "war_with_on_add",
+      "type": "character varying"
+    },
+    {
+      "name": "war_with_on_remove",
+      "type": "character varying"
+    },
+    {
+      "name": "ai_will_do",
+      "type": "text"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "name_en",
+      "type": "text"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "effect_tooltip_locs",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "division_deployments": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "oob_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "division_template",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "location",
+      "type": "integer"
+    },
+    {
+      "name": "count",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "division_name",
+      "type": "character varying"
+    },
+    {
+      "name": "start_experience_factor",
+      "type": "double precision"
+    },
+    {
+      "name": "start_equipment_factor",
+      "type": "double precision"
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "division_templates": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "oob_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "template_name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "division_names_group",
+      "type": "character varying"
+    },
+    {
+      "name": "regiments",
+      "type": "json"
+    },
+    {
+      "name": "support",
+      "type": "json"
+    },
+    {
+      "name": "is_locked",
+      "type": "boolean"
+    },
+    {
+      "name": "priority",
+      "type": "integer"
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "oob_units_tail",
+      "type": "text"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "doctrines": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "entity_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "entity_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "folder_key",
+      "type": "character varying"
+    },
+    {
+      "name": "track_key",
+      "type": "character varying"
+    },
+    {
+      "name": "name",
+      "type": "character varying"
+    },
+    {
+      "name": "description",
+      "type": "character varying"
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "xp_cost",
+      "type": "integer"
+    },
+    {
+      "name": "xp_type",
+      "type": "character varying"
+    },
+    {
+      "name": "xor",
+      "type": "text"
+    },
+    {
+      "name": "allow_in_multiple_tracks",
+      "type": "boolean"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "dynamic_modifiers": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "dm_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "text"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "remove_trigger",
+      "type": "text"
+    },
+    {
+      "name": "enable",
+      "type": "text"
+    },
+    {
+      "name": "modifier",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "entity_obs_paths": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "entity_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "entity_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "obs_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "equipments": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "equipment_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "equipment_type",
+      "type": "character varying"
+    },
+    {
+      "name": "year",
+      "type": "integer"
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "archetype",
+      "type": "character varying"
+    },
+    {
+      "name": "parent",
+      "type": "character varying"
+    },
+    {
+      "name": "is_archetype",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "is_buildable",
+      "type": "boolean"
+    },
+    {
+      "name": "soft_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "hard_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "ap_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "air_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "breakthrough",
+      "type": "double precision"
+    },
+    {
+      "name": "defense",
+      "type": "double precision"
+    },
+    {
+      "name": "armor_value",
+      "type": "double precision"
+    },
+    {
+      "name": "hardness",
+      "type": "double precision"
+    },
+    {
+      "name": "max_strength",
+      "type": "double precision"
+    },
+    {
+      "name": "build_cost_ic",
+      "type": "double precision"
+    },
+    {
+      "name": "manpower",
+      "type": "integer"
+    },
+    {
+      "name": "reliability",
+      "type": "double precision"
+    },
+    {
+      "name": "maximum_speed",
+      "type": "double precision"
+    },
+    {
+      "name": "can_license",
+      "type": "boolean"
+    },
+    {
+      "name": "naval_speed",
+      "type": "double precision"
+    },
+    {
+      "name": "fire_range",
+      "type": "double precision"
+    },
+    {
+      "name": "lg_armor_piercing",
+      "type": "double precision"
+    },
+    {
+      "name": "lg_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "hg_armor_piercing",
+      "type": "double precision"
+    },
+    {
+      "name": "hg_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "torpedo_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "anti_air_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "shore_bombardment",
+      "type": "double precision"
+    },
+    {
+      "name": "evasion",
+      "type": "double precision"
+    },
+    {
+      "name": "surface_detection",
+      "type": "double precision"
+    },
+    {
+      "name": "sub_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "sub_detection",
+      "type": "double precision"
+    },
+    {
+      "name": "surface_visibility",
+      "type": "double precision"
+    },
+    {
+      "name": "sub_visibility",
+      "type": "double precision"
+    },
+    {
+      "name": "naval_range",
+      "type": "double precision"
+    },
+    {
+      "name": "port_capacity_usage",
+      "type": "double precision"
+    },
+    {
+      "name": "search_and_destroy_coordination",
+      "type": "double precision"
+    },
+    {
+      "name": "convoy_raiding_coordination",
+      "type": "double precision"
+    },
+    {
+      "name": "air_defence",
+      "type": "double precision"
+    },
+    {
+      "name": "air_range",
+      "type": "double precision"
+    },
+    {
+      "name": "air_agility",
+      "type": "double precision"
+    },
+    {
+      "name": "air_ground_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "air_bombing",
+      "type": "double precision"
+    },
+    {
+      "name": "air_superiority",
+      "type": "double precision"
+    },
+    {
+      "name": "naval_strike_attack",
+      "type": "double precision"
+    },
+    {
+      "name": "naval_strike_targetting",
+      "type": "double precision"
+    },
+    {
+      "name": "carrier_size",
+      "type": "double precision"
+    },
+    {
+      "name": "default_carrier_composition_weight",
+      "type": "double precision"
+    },
+    {
+      "name": "carrier_capable",
+      "type": "boolean"
+    },
+    {
+      "name": "resources",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "event_namespaces": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "namespace",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "events": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "namespace_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "event_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "event_number",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "event_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "title",
+      "type": "json"
+    },
+    {
+      "name": "description",
+      "type": "json"
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "is_triggered_only",
+      "type": "boolean"
+    },
+    {
+      "name": "fire_only_once",
+      "type": "boolean"
+    },
+    {
+      "name": "hidden",
+      "type": "boolean"
+    },
+    {
+      "name": "major",
+      "type": "boolean"
+    },
+    {
+      "name": "trigger",
+      "type": "text"
+    },
+    {
+      "name": "mean_time_to_happen",
+      "type": "text"
+    },
+    {
+      "name": "immediate",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "after",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "options",
+      "type": "json"
+    },
+    {
+      "name": "timeout_days",
+      "type": "integer"
+    },
+    {
+      "name": "auto_fire_on_startup",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "auto_fire_after_days",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "on_action_attach",
+      "type": "character varying",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "title_en",
+      "type": "character varying"
+    },
+    {
+      "name": "title_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "focus_file_policies": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "origin_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "tree_ids",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "matched_tree_ids",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "registry_version",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "registry_sha256",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "emit_mode",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "target_path",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "target_layer",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "decision_source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "focus_nodes": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "focus_tree_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "focus_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "cost",
+      "type": "double precision"
+    },
+    {
+      "name": "x",
+      "type": "integer"
+    },
+    {
+      "name": "y",
+      "type": "integer"
+    },
+    {
+      "name": "relative_position_id",
+      "type": "character varying"
+    },
+    {
+      "name": "prerequisites",
+      "type": "json"
+    },
+    {
+      "name": "mutually_exclusive",
+      "type": "json"
+    },
+    {
+      "name": "completion_reward",
+      "type": "text"
+    },
+    {
+      "name": "available",
+      "type": "text"
+    },
+    {
+      "name": "bypass",
+      "type": "text"
+    },
+    {
+      "name": "cancel",
+      "type": "text"
+    },
+    {
+      "name": "select_effect",
+      "type": "text"
+    },
+    {
+      "name": "ai_will_do",
+      "type": "text"
+    },
+    {
+      "name": "search_filters",
+      "type": "json"
+    },
+    {
+      "name": "cancel_if_invalid",
+      "type": "boolean",
+      "not_null": true,
+      "default": true
+    },
+    {
+      "name": "continue_if_invalid",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "available_if_capitulated",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "will_lead_to_war_with",
+      "type": "json"
+    },
+    {
+      "name": "allow_branch_ast",
+      "type": "json"
+    },
+    {
+      "name": "load_focus_tree_rules",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "effect_tooltip_locs",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "offset",
+      "type": "json"
+    },
+    {
+      "name": "dynamic_icon",
+      "type": "json"
+    },
+    {
+      "name": "text_icon",
+      "type": "character varying"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "focus_trees": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "edit_revision",
+      "type": "bigint",
+      "not_null": true,
+      "default": 1
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "tree_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "is_default",
+      "type": "boolean"
+    },
+    {
+      "name": "tree_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_focus_refs",
+      "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "continuous_focus_position_x",
+      "type": "integer"
+    },
+    {
+      "name": "continuous_focus_position_y",
+      "type": "integer"
+    },
+    {
+      "name": "initial_show_position",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "initial_show_focus",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "gui_overlays": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "scaffold_hash",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "edits",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "schema_version",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "history_files": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "capital",
+      "type": "integer"
+    },
+    {
+      "name": "set_politics_ruling_party",
+      "type": "character varying"
+    },
+    {
+      "name": "set_politics_last_election",
+      "type": "character varying"
+    },
+    {
+      "name": "set_politics_election_frequency",
+      "type": "integer"
+    },
+    {
+      "name": "set_politics_elections_allowed",
+      "type": "boolean"
+    },
+    {
+      "name": "set_popularities",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "set_popularities_democratic",
+      "type": "integer"
+    },
+    {
+      "name": "set_popularities_communism",
+      "type": "integer"
+    },
+    {
+      "name": "set_popularities_fascism",
+      "type": "integer"
+    },
+    {
+      "name": "set_popularities_neutrality",
+      "type": "integer"
+    },
+    {
+      "name": "set_research_slots",
+      "type": "integer"
+    },
+    {
+      "name": "set_convoys",
+      "type": "integer"
+    },
+    {
+      "name": "set_stability",
+      "type": "double precision"
+    },
+    {
+      "name": "set_war_support",
+      "type": "double precision"
+    },
+    {
+      "name": "add_ideas_extra",
+      "type": "json"
+    },
+    {
+      "name": "remove_ideas",
+      "type": "json"
+    },
+    {
+      "name": "complete_national_focus_ids",
+      "type": "json"
+    },
+    {
+      "name": "set_technology_ids",
+      "type": "json"
+    },
+    {
+      "name": "startup_flags",
+      "type": "json"
+    },
+    {
+      "name": "give_guarantee_tags",
+      "type": "json"
+    },
+    {
+      "name": "add_to_faction",
+      "type": "character varying"
+    },
+    {
+      "name": "set_autonomy",
+      "type": "json"
+    },
+    {
+      "name": "diplomatic_relation",
+      "type": "json"
+    },
+    {
+      "name": "add_to_faction_tags",
+      "type": "json"
+    },
+    {
+      "name": "set_cosmetic_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "set_oob",
+      "type": "character varying"
+    },
+    {
+      "name": "set_air_oob",
+      "type": "character varying"
+    },
+    {
+      "name": "set_naval_oob",
+      "type": "character varying"
+    },
+    {
+      "name": "date_blocks",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "raw_script",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "ideas": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "idea_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "idea_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying"
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "modifier",
+      "type": "json"
+    },
+    {
+      "name": "ai_will_do",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "removal_cost",
+      "type": "integer"
+    },
+    {
+      "name": "auto_attach_on_start",
+      "type": "boolean",
+      "not_null": true,
+      "default": true
+    },
+    {
+      "name": "allowed",
+      "type": "text"
+    },
+    {
+      "name": "allowed_civil_war",
+      "type": "text"
+    },
+    {
+      "name": "is_designer",
+      "type": "boolean"
+    },
+    {
+      "name": "research_bonus",
+      "type": "json"
+    },
+    {
+      "name": "designer_traits",
+      "type": "json"
+    },
+    {
+      "name": "available",
+      "type": "text"
+    },
+    {
+      "name": "visible",
+      "type": "text"
+    },
+    {
+      "name": "allowed_to_remove",
+      "type": "text"
+    },
+    {
+      "name": "cancel",
+      "type": "text"
+    },
+    {
+      "name": "do_effect",
+      "type": "text"
+    },
+    {
+      "name": "on_add",
+      "type": "text"
+    },
+    {
+      "name": "on_remove",
+      "type": "text"
+    },
+    {
+      "name": "cancel_if_invalid",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "targeted_modifier",
+      "type": "json"
+    },
+    {
+      "name": "equipment_bonus",
+      "type": "json"
+    },
+    {
+      "name": "rule",
+      "type": "json"
+    },
+    {
+      "name": "level",
+      "type": "integer"
+    },
+    {
+      "name": "ledger",
+      "type": "character varying"
+    },
+    {
+      "name": "cost",
+      "type": "integer"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "category_flags",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "name_en",
+      "type": "text"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "intelligence_agencies": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "agency_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "names",
+      "type": "json"
+    },
+    {
+      "name": "default_trigger",
+      "type": "text"
+    },
+    {
+      "name": "available",
+      "type": "text"
+    },
+    {
+      "name": "upgrade_branches",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "localisation_overrides": [
+    {
+      "name": "id",
+      "type": "bigint",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "baseline_id",
+      "type": "uuid",
+      "not_null": true
+    },
+    {
+      "name": "dest_path",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "locale",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "loc_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "value",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "is_deleted",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "base_sha256",
+      "type": "character"
+    },
+    {
+      "name": "overlay_revision",
+      "type": "bigint",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "text",
+      "not_null": true,
+      "default": "manual"
+    },
+    {
+      "name": "updated_by",
+      "type": "integer"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp with time zone",
+      "not_null": true,
+      "default": "now"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp with time zone",
+      "not_null": true,
+      "default": "now"
+    }
+  ],
+  "military_industrial_organizations": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "mio_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "include",
+      "type": "character varying"
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "equipment_type",
+      "type": "json"
+    },
+    {
+      "name": "research_categories",
+      "type": "json"
+    },
+    {
+      "name": "allowed",
+      "type": "text"
+    },
+    {
+      "name": "available",
+      "type": "text"
+    },
+    {
+      "name": "visible",
+      "type": "text"
+    },
+    {
+      "name": "traits",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "scope_kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "shared_country_tags",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "modifier_definitions": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "modifier_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "color_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "value_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "precision",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "postfix",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "categories",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "explicit_fields",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "oob_air_wing_groups": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "oob_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "location",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "layout",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "oob_air_wings": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "equipment_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "owner",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "amount",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "body_ast",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "oob_fleets": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "oob_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "naval_base",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "layout",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "oob_ships": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "task_force_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "definition",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "start_experience_factor",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "equipment_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "amount",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "owner",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "version_name",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "body_ast",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "oob_task_forces": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "fleet_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "location",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "layout",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "opinion_modifiers": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "modifier_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "body",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "project_cosmetic_tag_names": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "cosmetic_tag_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "locale",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "suffix",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "value",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true,
+      "default": "created"
+    }
+  ],
+  "project_cosmetic_tags": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "color",
+      "type": "json"
+    },
+    {
+      "name": "color_ui",
+      "type": "json"
+    },
+    {
+      "name": "imported_color",
+      "type": "json"
+    },
+    {
+      "name": "imported_color_ui",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true,
+      "default": "created"
+    },
+    {
+      "name": "revision",
+      "type": "integer",
+      "not_null": true,
+      "default": 1
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "project_file_baseline_entries": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "not_null": true
+    },
+    {
+      "name": "baseline_id",
+      "type": "uuid",
+      "not_null": true
+    },
+    {
+      "name": "dest_path",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "file_kind",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "locale",
+      "type": "character varying"
+    },
+    {
+      "name": "object_key",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "sha256",
+      "type": "character",
+      "not_null": true
+    },
+    {
+      "name": "size_bytes",
+      "type": "bigint",
+      "not_null": true
+    },
+    {
+      "name": "content_type",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "key_count",
+      "type": "integer"
+    },
+    {
+      "name": "index_object_key",
+      "type": "text"
+    },
+    {
+      "name": "index_sha256",
+      "type": "character"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp with time zone",
+      "not_null": true,
+      "default": "now"
+    }
+  ],
+  "project_file_baselines": [
+    {
+      "name": "id",
+      "type": "uuid",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "import_job_id",
+      "type": "uuid"
+    },
+    {
+      "name": "revision_no",
+      "type": "bigint",
+      "not_null": true
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "not_null": true,
+      "default": "staging"
+    },
+    {
+      "name": "manifest_object_key",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "manifest_sha256",
+      "type": "character",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "compression",
+      "type": "text",
+      "not_null": true,
+      "default": "tar.zstd"
+    },
+    {
+      "name": "parser_version",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "created_by",
+      "type": "integer"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp with time zone",
+      "not_null": true,
+      "default": "now"
+    },
+    {
+      "name": "ready_at",
+      "type": "timestamp with time zone"
+    }
+  ],
+  "project_loc_entries": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "locale",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "value",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "version",
+      "type": "integer"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "replace_priority",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "source_order",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "entry_order",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "is_replace",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "project_obs_assets": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "asset_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "gfx_name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "obs_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "provenance",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "project_obs_icons": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "gfx_name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "obs_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "project_overlay_state": [
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "overlay_revision",
+      "type": "bigint",
+      "not_null": true,
+      "default": 0
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp with time zone",
+      "not_null": true,
+      "default": "now"
+    }
+  ],
+  "project_raw_files": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "dest_path",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "content",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "generate_replace_path",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "raw_kind",
+      "type": "character varying",
+      "not_null": true,
+      "default": "verbatim_override"
+    },
+    {
+      "name": "target_layer",
+      "type": "character varying"
+    },
+    {
+      "name": "target_sha256",
+      "type": "character varying"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "is_binary",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "content_binary",
+      "type": "bytea"
+    },
+    {
+      "name": "content_sha256",
+      "type": "character varying"
+    },
+    {
+      "name": "content_obs_key",
+      "type": "character varying"
+    },
+    {
+      "name": "source",
+      "type": "character varying"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "projects": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "uuid",
+      "type": "character varying"
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tags",
+      "type": "json"
+    },
+    {
+      "name": "mod_path",
+      "type": "character varying"
+    },
+    {
+      "name": "ideology_icon_paths",
+      "type": "json"
+    },
+    {
+      "name": "version",
+      "type": "character varying"
+    },
+    {
+      "name": "picture",
+      "type": "character varying"
+    },
+    {
+      "name": "tags",
+      "type": "json"
+    },
+    {
+      "name": "dependencies",
+      "type": "json"
+    },
+    {
+      "name": "supported_version",
+      "type": "character varying"
+    },
+    {
+      "name": "imported_descriptor_replace_paths",
+      "type": "json",
+      "not_null": true,
+      "default": []
+    },
+    {
+      "name": "basemod_template_id",
+      "type": "integer"
+    },
+    {
+      "name": "basemod_pinned_version",
+      "type": "character varying"
+    },
+    {
+      "name": "is_loaded_existing_mod",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "start_date",
+      "type": "character varying"
+    },
+    {
+      "name": "end_date",
+      "type": "character varying"
+    },
+    {
+      "name": "scenario_history_policy",
+      "type": "character varying",
+      "not_null": true,
+      "default": "inherit_base_history"
+    },
+    {
+      "name": "stage_state_ids",
+      "type": "text"
+    },
+    {
+      "name": "tech_year_columns",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "export_languages",
+      "type": "json",
+      "not_null": true,
+      "default": [
+        "en"
+      ]
+    },
+    {
+      "name": "ideology_registry",
+      "type": "json"
+    },
+    {
+      "name": "tech_surface_manifest",
+      "type": "json"
+    },
+    {
+      "name": "ideology_source_manifest",
+      "type": "json",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "owner_user_id",
+      "type": "integer"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "first_entity_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "owned_dlcs",
+      "type": "json"
+    }
+  ],
+  "scripted_localisations": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "body",
+      "type": "text"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "scripted_snippets": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "kind",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "body",
+      "type": "text"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "special_project_specializations": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "specialization_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "color",
+      "type": "json"
+    },
+    {
+      "name": "blueprint_image",
+      "type": "character varying"
+    },
+    {
+      "name": "program_background",
+      "type": "character varying"
+    },
+    {
+      "name": "facility_model",
+      "type": "character varying"
+    },
+    {
+      "name": "sub_specializations",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "special_projects": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "project_token",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "specialization",
+      "type": "character varying"
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "icon",
+      "type": "character varying"
+    },
+    {
+      "name": "blueprint_image",
+      "type": "character varying"
+    },
+    {
+      "name": "complexity",
+      "type": "character varying"
+    },
+    {
+      "name": "prototype_time",
+      "type": "character varying"
+    },
+    {
+      "name": "project_tags",
+      "type": "json"
+    },
+    {
+      "name": "special_project_parent",
+      "type": "json"
+    },
+    {
+      "name": "allowed",
+      "type": "text"
+    },
+    {
+      "name": "visible",
+      "type": "text"
+    },
+    {
+      "name": "available",
+      "type": "text"
+    },
+    {
+      "name": "resource_cost",
+      "type": "text"
+    },
+    {
+      "name": "project_output",
+      "type": "text"
+    },
+    {
+      "name": "generic_prototype_rewards",
+      "type": "json"
+    },
+    {
+      "name": "x",
+      "type": "integer"
+    },
+    {
+      "name": "y",
+      "type": "integer"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "states": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "state_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "manpower",
+      "type": "bigint"
+    },
+    {
+      "name": "state_category",
+      "type": "character varying"
+    },
+    {
+      "name": "resources",
+      "type": "json"
+    },
+    {
+      "name": "provinces",
+      "type": "json"
+    },
+    {
+      "name": "owner",
+      "type": "character varying"
+    },
+    {
+      "name": "controller",
+      "type": "character varying"
+    },
+    {
+      "name": "add_core_of",
+      "type": "json"
+    },
+    {
+      "name": "add_claim_by",
+      "type": "json"
+    },
+    {
+      "name": "remove_core_of",
+      "type": "json"
+    },
+    {
+      "name": "victory_points",
+      "type": "json"
+    },
+    {
+      "name": "set_province_controller",
+      "type": "json"
+    },
+    {
+      "name": "buildings",
+      "type": "json"
+    },
+    {
+      "name": "local_supplies",
+      "type": "double precision"
+    },
+    {
+      "name": "buildings_max_level_factor",
+      "type": "double precision"
+    },
+    {
+      "name": "impassable",
+      "type": "boolean"
+    },
+    {
+      "name": "impassable_ignored_links",
+      "type": "text"
+    },
+    {
+      "name": "force_link_ownership_to",
+      "type": "integer"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "sub_units": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "sub_unit_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "ordering",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "abbreviation",
+      "type": "character varying"
+    },
+    {
+      "name": "sprite",
+      "type": "character varying"
+    },
+    {
+      "name": "map_icon_category",
+      "type": "character varying"
+    },
+    {
+      "name": "priority",
+      "type": "integer"
+    },
+    {
+      "name": "ai_priority",
+      "type": "integer"
+    },
+    {
+      "name": "transport",
+      "type": "character varying"
+    },
+    {
+      "name": "group",
+      "type": "character varying"
+    },
+    {
+      "name": "active",
+      "type": "boolean"
+    },
+    {
+      "name": "cavalry",
+      "type": "boolean"
+    },
+    {
+      "name": "special_forces",
+      "type": "boolean"
+    },
+    {
+      "name": "marines",
+      "type": "boolean"
+    },
+    {
+      "name": "can_exfiltrate_from_coast",
+      "type": "boolean"
+    },
+    {
+      "name": "mountaineers",
+      "type": "boolean"
+    },
+    {
+      "name": "can_be_parachuted",
+      "type": "boolean"
+    },
+    {
+      "name": "affects_speed",
+      "type": "boolean"
+    },
+    {
+      "name": "unit_types",
+      "type": "json"
+    },
+    {
+      "name": "categories",
+      "type": "json"
+    },
+    {
+      "name": "essential",
+      "type": "json"
+    },
+    {
+      "name": "need",
+      "type": "json"
+    },
+    {
+      "name": "stats",
+      "type": "json"
+    },
+    {
+      "name": "terrain_modifiers",
+      "type": "json"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "super_events": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "number",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "title_en",
+      "type": "character varying"
+    },
+    {
+      "name": "title_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "quote_en",
+      "type": "character varying"
+    },
+    {
+      "name": "quote_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "btn_en",
+      "type": "character varying"
+    },
+    {
+      "name": "btn_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "quote_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "button_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "picture_path",
+      "type": "character varying"
+    },
+    {
+      "name": "song_token",
+      "type": "character varying"
+    },
+    {
+      "name": "options",
+      "type": "json"
+    },
+    {
+      "name": "auto_fire_on_startup",
+      "type": "boolean",
+      "not_null": true
+    },
+    {
+      "name": "auto_fire_after_days",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "technologies": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "tech_id",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "tech_line",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "research_cost",
+      "type": "double precision"
+    },
+    {
+      "name": "start_year",
+      "type": "integer"
+    },
+    {
+      "name": "folder",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "position_x",
+      "type": "double precision"
+    },
+    {
+      "name": "position_y",
+      "type": "double precision"
+    },
+    {
+      "name": "position_y_is_explicit",
+      "type": "boolean"
+    },
+    {
+      "name": "folder_placements",
+      "type": "json"
+    },
+    {
+      "name": "prerequisites",
+      "type": "json"
+    },
+    {
+      "name": "categories",
+      "type": "json"
+    },
+    {
+      "name": "modifiers",
+      "type": "json"
+    },
+    {
+      "name": "ai_will_do",
+      "type": "text"
+    },
+    {
+      "name": "raw_extras",
+      "type": "json"
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "is_banner",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "force_use_small_tech_layout",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "name_en",
+      "type": "text"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "desc_en",
+      "type": "text"
+    },
+    {
+      "name": "desc_zh",
+      "type": "text"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "description_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "enable_equipments",
+      "type": "json"
+    },
+    {
+      "name": "enable_subunits",
+      "type": "json"
+    },
+    {
+      "name": "enable_equipment_modules",
+      "type": "json"
+    },
+    {
+      "name": "enable_building",
+      "type": "character varying"
+    },
+    {
+      "name": "enable_tactic",
+      "type": "character varying"
+    },
+    {
+      "name": "xor",
+      "type": "json"
+    },
+    {
+      "name": "dependencies",
+      "type": "json"
+    },
+    {
+      "name": "sub_technologies",
+      "type": "json"
+    },
+    {
+      "name": "doctrine",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "allow",
+      "type": "text"
+    },
+    {
+      "name": "allow_branch",
+      "type": "text"
+    },
+    {
+      "name": "on_research_complete",
+      "type": "text"
+    },
+    {
+      "name": "on_research_complete_limit",
+      "type": "text"
+    },
+    {
+      "name": "path",
+      "type": "json"
+    },
+    {
+      "name": "xp_research_type",
+      "type": "character varying"
+    },
+    {
+      "name": "xp_boost_cost",
+      "type": "integer"
+    },
+    {
+      "name": "xp_research_bonus",
+      "type": "json"
+    },
+    {
+      "name": "has_obs",
+      "type": "boolean",
+      "not_null": true,
+      "default": false
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone"
+    }
+  ],
+  "ui_panels": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "country_tag",
+      "type": "character varying"
+    },
+    {
+      "name": "token",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "name_en",
+      "type": "character varying"
+    },
+    {
+      "name": "name_zh",
+      "type": "character varying"
+    },
+    {
+      "name": "display_name_locs",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "context_type",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "parent_window_token",
+      "type": "character varying"
+    },
+    {
+      "name": "visible_trigger",
+      "type": "text"
+    },
+    {
+      "name": "window_props",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "controls",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "raw_extras",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    }
+  ],
+  "wargoal_types": [
+    {
+      "name": "id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "wargoal_key",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "war_name",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "safe_scalars",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "allowed",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "available",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "take_states",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "puppet",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "liberate",
+      "type": "text",
+      "not_null": true
+    },
+    {
+      "name": "ordered_entries",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "definition_leading_comments",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "definition_trailing_comments",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "file_trivia",
+      "type": "json",
+      "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source",
+      "type": "character varying",
+      "not_null": true
+    },
+    {
+      "name": "source_snapshot",
+      "type": "json"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone",
+      "not_null": true
+    }
+  ],
+  "world_map_additions": [
+    {
+      "name": "id",
+      "type": "bigint",
+      "not_null": true
+    },
+    {
+      "name": "project_id",
+      "type": "integer",
+      "not_null": true
+    },
+    {
+      "name": "placement",
+      "type": "jsonb",
+      "not_null": true
+    },
+    {
+      "name": "seed",
+      "type": "bigint",
+      "not_null": true
+    },
+    {
+      "name": "options",
+      "type": "jsonb",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "owner",
+      "type": "text",
+      "not_null": true,
+      "default": ""
+    },
+    {
+      "name": "provinces",
+      "type": "jsonb",
+      "not_null": true,
+      "default": []
+    },
+    {
+      "name": "state_ids",
+      "type": "jsonb",
+      "not_null": true,
+      "default": []
+    },
+    {
+      "name": "region_id",
+      "type": "integer",
+      "not_null": true,
+      "default": 0
+    },
+    {
+      "name": "raw_paths",
+      "type": "jsonb",
+      "not_null": true,
+      "default": []
+    },
+    {
+      "name": "text_keys",
+      "type": "jsonb",
+      "not_null": true,
+      "default": []
+    },
+    {
+      "name": "summary",
+      "type": "jsonb",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp with time zone",
+      "not_null": true,
+      "default": "now"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "not_null": true,
+      "default": "land"
+    },
+    {
+      "name": "state_before",
+      "type": "jsonb",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "previous",
+      "type": "jsonb",
+      "not_null": true,
+      "default": {}
+    },
+    {
+      "name": "states_replaced",
+      "type": "json",
+      "not_null": true,
+      "default": []
+    },
+    {
+      "name": "histories_before",
+      "type": "jsonb",
+      "not_null": true,
+      "default": {}
+    }
+  ]
+}

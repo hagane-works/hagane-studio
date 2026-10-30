@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "Zoom out",
+  "toolbarZoomIn": "Zoom in",
+  "toolbarZoomReset": "Reset zoom to 100%",
+  "toolbarFitView": "Fit graph to view",
+  "toolbarUndo": "Undo (Ctrl+Z)",
+  "toolbarRedo": "Redo (Ctrl+Y)",
+  "toolbarAutoLayout": "Auto layout — re-arrange all technologies",
+  "toolbarCreateTech": "New technology"
+}

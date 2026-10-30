@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "Panel de GUI con scripts",
+    "description": "Panel inicial de resumen de variables: interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt."
+  },
+  "on_actions": {
+    "label": "Enlaces on_actions",
+    "description": "Archivo de enlaces con esqueletos de efectos on_startup + on_monthly (fusión aditiva)."
+  },
+  "game_rules": {
+    "label": "Regla de partida",
+    "description": "Fila de Reglas de partida con dos opciones para la pantalla de Nueva partida (fusión aditiva)."
+  },
+  "ai_strategy": {
+    "label": "Estrategia de la IA",
+    "description": "Bloque de estrategia de la IA condicionado por el TAG de un país (fusión aditiva)."
+  },
+  "gfx_sprite": {
+    "label": "Sprite GFX",
+    "description": "Fragmento de sprite que vincula GFX_'<key>' con un archivo de textura (incluye la imagen por separado)."
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "Corrección del tamaño de ranuras de marcadores",
+    "description": "Plantilla de sustitución de frontendgamesetupview.gui que corrige la visibilidad de varios marcadores en mods base de conversión total."
+  },
+  "defines": {
+    "label": "Ajustes de Defines (Lua)",
+    "description": "Sustituye constantes individuales del motor NDefines en Lua (no copies nunca 00_defines.lua)."
+  },
+  "bop": {
+    "label": "Equilibrio de poder",
+    "description": "Barra de equilibrio de poder con dos bandos, intervalos y modificadores moderados; actívala con set_power_balance."
+  },
+  "music": {
+    "label": "Canciones de emisora musical",
+    "description": "Los archivos emparejados .asset + .txt añaden canciones a la emisora base_music; sube el archivo .ogg por separado."
+  },
+  "peace_conference": {
+    "label": "Modificador de coste de conferencia de paz",
+    "description": "Fila de modificador del coste de acciones de paz (se entrega como operación neutra 1.0; fusión aditiva)."
+  }
+}

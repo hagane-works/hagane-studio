@@ -1,0 +1,13 @@
+{
+  "promote": "Promote character",
+  "recruit": "Recruit character",
+  "retire": "Retire character",
+  "searchPlaceholder": "Search by name or ID…",
+  "searchingBase": "Searching base mod…",
+  "noResults": "No results found.",
+  "empty": "No characters yet — type to search the base mod.",
+  "projectBadge": "project",
+  "baseBadge": "base mod",
+  "promptManual": "Enter character ID manually:",
+  "enterManually": "+ Enter manually…"
+}

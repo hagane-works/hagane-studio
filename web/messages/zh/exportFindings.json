@@ -1,0 +1,696 @@
+{
+  "focus_display_name_missing_created": {
+    "what": "国策 {id} 缺少名称",
+    "impact": "游戏内该国策显示为 ID，悬停无说明。",
+    "action": "设置名称",
+    "jump": "国策工作台 › 该国策 › 名称"
+  },
+  "focus_display_name_missing_enabled_locale": {
+    "what": "国策 {id} 缺少 {locale} 名称",
+    "impact": "使用该语言的玩家将看到 ID。",
+    "action": "补充该语言",
+    "jump": "国策 › 名称 › 语言页签"
+  },
+  "focus_initial_position_unknown_kind": {
+    "what": "{tree} 的起始位置类型无法识别",
+    "impact": "国策树可能整体偏移或相互重叠。",
+    "action": "重设起始位置",
+    "jump": "国策树 › 布局"
+  },
+  "focus_reward_modifier_in_effect_position": {
+    "what": "国策 {id} 的完成奖励中，{token} 为修正但写在效果位置",
+    "impact": "游戏加载时忽略该行，<b>该行不生效</b>。",
+    "action": "改为修正载体",
+    "jump": "国策 › 完成奖励"
+  },
+  "focus_reward_scalar_effect_block_value": {
+    "what": "国策 {id} 的 {token} 需要数值，实际为代码块(或相反)",
+    "impact": "该行不生效。",
+    "action": "修正写法",
+    "jump": "国策 › 完成奖励"
+  },
+  "focus_reward_trigger_in_effect_position": {
+    "what": "国策 {id} 的完成奖励中包含条件判断 {token}，该位置仅接受效果",
+    "impact": "<b>该行不生效</b>,条件不会被判定。",
+    "action": "移至条件区",
+    "jump": "国策 › 完成奖励"
+  },
+  "focus_reward_unsupported_scope": {
+    "what": "国策 {id} 的 {effect} 在当前作用域({scope})下不受支持",
+    "impact": "效果不触发。支持的作用域：{supported}。",
+    "action": "包裹支持的作用域",
+    "jump": "国策 › 完成奖励"
+  },
+  "focus_base_default_provider_unresolved": {
+    "what": "未找到基础 Mod 提供的默认国策树",
+    "impact": "国策树可能无法挂载到正确国家，游戏内不可见。",
+    "action": "刷新基础 Mod 索引",
+    "jump": "项目设置 › 依赖"
+  },
+  "focus_effective_default_missing": {
+    "what": "{country} 未设置默认国策树",
+    "impact": "该国回落到通用国策树，<b>玩家看不到你制作的树</b>。",
+    "action": "设为默认",
+    "jump": "国策树列表"
+  },
+  "focus_file_policy_applied": {
+    "what": "国策树输出文件已按记录写入",
+    "impact": "通过项，计入 ✅ 计数。"
+  },
+  "focus_file_policy_cohort_incomplete": {
+    "what": "{tree} 与同文件的其它国策树未一同导出",
+    "impact": "该文件仅写入部分内容，<b>缺失的树在游戏内不显示</b>。",
+    "action": "同时选中导出",
+    "jump": "导出页 › 内容选择"
+  },
+  "focus_file_policy_drift": {
+    "what": "{tree_ids} 的文件配置与版本记录不一致",
+    "impact": "不影响产物，已按配置导出。该字段由系统维护，无需修改。"
+  },
+  "focus_file_policy_duplicate_membership": {
+    "what": "内部记录冲突：同一棵树存在两条落盘策略",
+    "impact": "界面将显示「检查未完整」,已自动上报。"
+  },
+  "focus_file_policy_missing": {
+    "what": "{id} 未指定输出文件，已自动分配一个",
+    "impact": "不影响游戏，内容完整。"
+  },
+  "focus_initial_position_target_missing": {
+    "what": "{tree} 的起始位置指向国策 {id}，该树中不存在此国策",
+    "impact": "国策树初始视角错位，打开后显示空白区域。",
+    "action": "重新选择起始国策",
+    "jump": "国策树 › 布局"
+  },
+  "focus_raw_file_parse_failed": {
+    "what": "国策文件 {path} 存在语法错误，无法读取",
+    "impact": "<b>该文件中的国策将全部缺失。</b>",
+    "action": "修复语法(定位到出错行)",
+    "jump": "原始文件编辑器"
+  },
+  "focus_registry_unavailable": {
+    "what": "原版国策注册表加载失败，落盘检查未完成",
+    "impact": "界面将显示「检查未完整」,本次按保守方式导出；已自动上报。"
+  },
+  "timeline_bookmark_path_shadow_date_mismatch": {
+    "what": "两个书签文件写入同一路径且日期不同，仅一个生效",
+    "impact": "<b>开局日期可能与设置不符。</b>",
+    "action": "查看两个书签",
+    "jump": "书签工作台"
+  },
+  "timeline_custom_start_without_bookmark": {
+    "what": "已设置自定义开局日期，但无对应书签",
+    "impact": "<b>玩家在选择战役界面看不到该开局。</b>",
+    "action": "创建书签",
+    "jump": "书签工作台 › 新建"
+  },
+  "timeline_project_earliest_bookmark_mismatch": {
+    "what": "项目开局日期({a})与最早书签日期({b})不一致",
+    "impact": "游戏将从书签日期开始。",
+    "action": "对齐日期",
+    "jump": "项目设置 › 开局日期"
+  },
+  "timeline_project_start_date_unknown": {
+    "what": "项目未设置开局日期",
+    "impact": "导出将使用默认日期。",
+    "action": "设置开局日期",
+    "jump": "项目设置"
+  },
+  "timeline_raw_bookmark_date_unknown": {
+    "what": "书签文件中未解析出日期",
+    "impact": "该书签按原样导出，不参与日期一致性检查。"
+  },
+  "timeline_raw_bookmark_hash_mismatch": {
+    "what": "书签文件在本程序外被修改，与记录不一致",
+    "impact": "检查结果可能不反映文件真实内容。",
+    "action": "刷新记录",
+    "jump": "原始文件 › 重新读取"
+  },
+  "timeline_raw_defines_start_date_conflict": {
+    "what": "defines 文件的开局日期({a})与项目设置({b})冲突",
+    "impact": "游戏从书签日期开局，但时长、世界张力等机制以 defines 日期为基准，<b>不一致时整体错位</b>。",
+    "action": "对齐日期",
+    "jump": "项目设置 › 开局日期"
+  },
+  "timeline_start_date_ok": {
+    "what": "开局日期检查通过",
+    "impact": "游戏会从这个项目设定的开局日期开始。"
+  },
+  "timeline_structured_bookmark_date_unknown": {
+    "what": "书签中未解析出日期",
+    "impact": "该书签不参与日期一致性检查。"
+  },
+  "clausewitz_parse_error": {
+    "what": "{file} 存在语法错误，无法读取",
+    "impact": "<b>整个文件将不包含在 Mod 中。</b>",
+    "action": "定位到出错处",
+    "jump": "原始文件编辑器"
+  },
+  "clausewitz_unclosed_block": {
+    "what": "{file} 第 {line} 的 { 未闭合",
+    "impact": "<b>该行之后的内容将全部丢失。</b>",
+    "action": "定位到该行",
+    "jump": "原始文件编辑器"
+  },
+  "clausewitz_stray_closing_brace": {
+    "what": "{file} 第 {line} 存在多余的 }，找不到与之配对的 {",
+    "impact": "后续内容可能被归入错误的块。",
+    "action": "定位到该行",
+    "jump": "原始文件编辑器"
+  },
+  "clausewitz_unterminated_quote": {
+    "what": "{file} 第 {line} 的引号未闭合",
+    "impact": "该行及后续内容将被视为同一字符串。",
+    "action": "定位到该行",
+    "jump": "原始文件编辑器"
+  },
+  "raw_content_literal_escape_newline": {
+    "what": "{file} 第 {line} 行：脚本文本里出现字面 \\n(反斜杠 + n)",
+    "impact": "HOI4 脚本不解析转义 —— 玩家会原样看到 \\n 两个字符。",
+    "action": "改用真实换行，或把文本挪到本地化 yml 值里(那里 \\n 才是换行)",
+    "jump": "原始文件编辑器"
+  },
+  "clausewitz_missing_assignment_value": {
+    "what": "{file} 第 {line} 的 {key} = 缺少值",
+    "impact": "该设置不生效。",
+    "action": "定位到该行",
+    "jump": "原始文件编辑器"
+  },
+  "clausewitz_analysis_ast_mismatch": {
+    "what": "解析器自检不一致，本文件检查结果可能不完整",
+    "impact": "界面将显示「检查未完整」,已自动上报。"
+  },
+  "clausewitz_analysis_token_alignment": {
+    "what": "解析器 token 对齐失败，本文件检查结果可能不完整",
+    "impact": "界面将显示「检查未完整」,已自动上报。"
+  },
+  "country_capital_missing": {
+    "what": "{country} 未设置首都",
+    "impact": "<b>投降判定、补给网络、政治影响力均以首都为锚</b>,缺失时这些机制全部异常。",
+    "action": "设置首都",
+    "jump": "历史档 › 首都"
+  },
+  "country_capital_invalid_state": {
+    "what": "{country} 的首都值 {value} 不是有效的州 ID",
+    "impact": "该国无可用首都，后果同上。",
+    "action": "重新选择州",
+    "jump": "历史档 › 首都"
+  },
+  "country_capital_not_owned": {
+    "what": "{country} 的首都 {state} 归属 {owner}",
+    "impact": "游戏拒绝该首都设置并记录错误，<b>实际首都由引擎回落指定</b>。",
+    "action": "修改首都或归属",
+    "jump": "历史档 / 地块"
+  },
+  "map_state_no_land": {
+    "what": "州 {name}（#{state_id}）只剩湖泊，没有陆地",
+    "impact": "游戏放不下这个州的机场、火箭发射场和要塞，<b>开局时直接闪退</b>，正常启动时 error.log 是空的。",
+    "action": "打开地图创作点「修复」，或让助手修复，然后重新导出",
+    "jump": "地图创作"
+  },
+  "country_history_final_winner_ambiguous": {
+    "what": "{country} 的历史文件存在多个来源，无法确定生效版本",
+    "impact": "<b>生效的开局设定可能非最近编辑的版本。</b>",
+    "action": "选择生效来源",
+    "jump": "历史档 › 来源"
+  },
+  "country_history_final_winner_inferred": {
+    "what": "{country} 的历史文件存在多个来源，已按加载顺序选定 {path}",
+    "impact": "通常为正确版本。"
+  },
+  "country_research_slots_missing": {
+    "what": "{id} 未设置研究槽数量",
+    "impact": "游戏将使用默认值。",
+    "action": "设置研究槽",
+    "jump": "历史档"
+  },
+  "country_research_slots_invalid": {
+    "what": "{country} 的研究槽数量 {value} 无效",
+    "impact": "该行不生效，研究槽回落到默认值。",
+    "action": "修改为有效数值",
+    "jump": "历史档"
+  },
+  "playtest_crash": {
+    "what": "试玩时游戏崩溃(类型：{exception})",
+    "impact": "报告包含崩溃类型与游戏版本，通常可定位到具体内容。",
+    "action": "查看崩溃分析",
+    "jump": "Mod 体检 › 试玩报告"
+  },
+  "playtest_start_date_mismatch": {
+    "what": "游戏实际加载的开局日期({a})与设计({b})不一致",
+    "impact": "<b>玩家进入了错误的开局年代</b>,按 {b} 设计的历史内容可能全部乱序。常见根因:外层 .mod 缺少 replace_path=\"common/bookmarks\"。",
+    "action": "查看修复建议",
+    "jump": "Mod 体检 › 试玩报告"
+  },
+  "playtest_runtime_diagnostics_input_invalid": {
+    "what": "试玩日志无法读取",
+    "impact": "本次试玩诊断无结果。",
+    "action": "重新上传日志",
+    "jump": "Mod 体检 › 试玩报告"
+  },
+  "playtest_loaded_start_date": {
+    "what": "已确认游戏加载的开局日期：{date}",
+    "impact": "确认信息，与设计一致时计入 ✅。"
+  },
+  "playtest_enabled_mods": {
+    "what": "已确认试玩时启用的 Mod 列表",
+    "impact": "确认信息，用于排除 Mod 冲突。"
+  },
+  "playtest_start_date_ok": {
+    "what": "开局日期与设计一致",
+    "impact": "通过项。"
+  },
+  "oob_air_location_missing": {
+    "what": "空军联队 {name} 未设置所在州",
+    "impact": "<b>该联队不会出现在开局。</b>",
+    "action": "设置所在州(需有空军基地)",
+    "jump": "初始部队 › 空军"
+  },
+  "oob_air_location_invalid": {
+    "what": "空军联队 {name} 的所在州 {id} 无效",
+    "impact": "该联队不会出现在开局；联队须部署在设有空军基地的州。",
+    "action": "重新选择州",
+    "jump": "初始部队 › 空军"
+  },
+  "oob_air_equipment_type_missing": {
+    "what": "空军联队 {name} 未设置装备类型",
+    "impact": "<b>该联队不会出现在开局。</b>",
+    "action": "选择装备类型",
+    "jump": "初始部队 › 空军"
+  },
+  "oob_air_equipment_type_invalid": {
+    "what": "空军联队 {name} 的装备类型 {value} 不存在",
+    "impact": "该联队不会出现在开局。",
+    "action": "重新选择装备",
+    "jump": "初始部队 › 空军"
+  },
+  "building_state_coordinate_mismatch": {
+    "what": "建筑 {id} 声明在州 {a}，坐标位于州 {b}",
+    "impact": "<b>该建筑被游戏忽略，不会出现</b>;错误写入日志。",
+    "action": "修正坐标或州",
+    "jump": "地块 › 建筑"
+  },
+  "building_coordinate_membership_missing": {
+    "what": "建筑 {id} 的坐标位于省份 {province}，该省份不属于任何州",
+    "impact": "产生地图错误，<b>该建筑被忽略</b>。",
+    "action": "为省份指定州",
+    "jump": "地块 › 州归属"
+  },
+  "building_reference_province_invalid": {
+    "what": "建筑 {id} 需要有效的 {kind} 参考省份，当前值为 {value}",
+    "impact": "海军基地必须指向邻接的海洋省份；<b>无效时该港口无法使用</b>。",
+    "action": "重新选择参考省份",
+    "jump": "地块 › 建筑"
+  },
+  "duplicate_expected_province": {
+    "what": "程序参考数据自检异常(省份清单重复)",
+    "impact": "界面将显示「检查未完整」,已自动上报。"
+  },
+  "duplicate_province_within_state": {
+    "what": "州 {id} 重复列出省份 {province}({count} 次)",
+    "impact": "重复项被忽略，通常无害，但提示数据来源存在问题。",
+    "action": "去重",
+    "jump": "地块 › 州"
+  },
+  "duplicate_state_input": {
+    "what": "州 {id} 出现在 {count} 份输入中",
+    "impact": "<b>仅一份生效，编辑可能被另一份覆盖。</b>",
+    "action": "查看冲突来源",
+    "jump": "地块 › 州 › 来源"
+  },
+  "province_in_multiple_states": {
+    "what": "省份 {province} 同时属于州 {a} 与州 {b}",
+    "impact": "<b>游戏崩溃。</b>",
+    "action": "从其中一个州移除",
+    "jump": "地块 › 州"
+  },
+  "province_without_state": {
+    "what": "省份 {province} 不属于任何州",
+    "impact": "游戏可运行，但<b>游戏内弹出 MAP_ERROR 警告</b>。",
+    "action": "分配所属州",
+    "jump": "地块 › 州"
+  },
+  "unknown_province": {
+    "what": "州 {state} 引用了不存在的省份 {province}",
+    "impact": "该引用被当作无效 token 丢弃并记录错误，州的其余部分正常加载。",
+    "action": "移除或修正",
+    "jump": "地块 › 州"
+  },
+  "bookmark_raw_no_bookmark": {
+    "what": "书签文件 {path} 未解析出任何书签",
+    "impact": "<b>选择战役界面看不到该开局。</b>",
+    "action": "检查文件结构",
+    "jump": "原始文件编辑器"
+  },
+  "bookmark_raw_path_case_collision": {
+    "what": "两个书签文件仅大小写不同({a} / {b})",
+    "impact": "Windows 仅一个生效，Linux 两个都在，<b>跨平台表现不一致</b>。",
+    "action": "重命名其中一个",
+    "jump": "原始文件列表"
+  },
+  "descriptor_imported_replace_paths_require_full_export": {
+    "what": "该 Mod 含目录级 replace_path 规则，当前选择「仅导出自建内容」",
+    "impact": "<b>游戏将卸载整个原版目录且无替代文件，大面积内容将缺失。</b>",
+    "action": "切换为完整导出",
+    "jump": "导出页 › 导出方式"
+  },
+  "descriptor_replace_path_empty": {
+    "what": "replace_path「{path}」将卸载原版目录，但导出包中该目录下无任何文件",
+    "impact": "<b>游戏内该目录内容将全部缺失。</b>",
+    "action": "补充文件或移除该规则",
+    "jump": "导出页 › replace_path"
+  },
+  "ideology_root_invalid": {
+    "what": "自定义 ROOT 意识形态「{id}」不合法：{reason}",
+    "impact": "写出损坏的 common/ideologies,<b>所有引用它的国家执政党设定失效</b>。",
+    "action": "修复意识形态注册表",
+    "jump": "意识形态工作台"
+  },
+  "ideology_root_submod_blocked": {
+    "what": "子 Mod 中替换 ROOT 意识形态",
+    "impact": "<b>将清除基础 Mod 的意识形态定义。</b>",
+    "action": "使用基础 Mod 提供的 ROOT，或改为独立 Mod",
+    "jump": "项目设置 › 依赖"
+  },
+  "raid_path_unsafe": {
+    "what": "突袭文件 {path} 因路径不安全被跳过",
+    "impact": "<b>该文件的内容未导入项目。</b>",
+    "action": "查看被跳过的文件",
+    "jump": "导入报告"
+  },
+  "raid_deps_not_carried": {
+    "what": "突袭依赖的文件未一同导入",
+    "impact": "突袭在游戏内可能不可用。",
+    "action": "补充依赖文件",
+    "jump": "导入 › 依赖"
+  },
+  "unit_path_unsafe": {
+    "what": "兵种文件 {path} 因路径不安全被跳过",
+    "impact": "<b>该文件的内容未导入项目。</b>",
+    "action": "查看被跳过的文件",
+    "jump": "导入报告"
+  },
+  "factions_path_unsafe": {
+    "what": "阵营文件 {path} 因路径不安全被跳过",
+    "impact": "<b>该文件的内容未导入项目。</b>",
+    "action": "查看被跳过的文件",
+    "jump": "导入报告"
+  },
+  "loc_entry_unpreserved": {
+    "what": "导入时 {count} 条本地化未被保留",
+    "impact": "这些文本不会包含在导出中。",
+    "action": "查看未保留清单",
+    "jump": "导入报告"
+  },
+  "state_raw_parse_failed": {
+    "what": "州文件 {path} 存在语法错误",
+    "impact": "<b>该文件中的州将全部缺失。</b>",
+    "action": "定位到出错处",
+    "jump": "原始文件编辑器"
+  },
+  "sub_unit_classification_invalid": {
+    "what": "兵种「{id}」的分类无效：{reason}",
+    "impact": "<b>游戏加载兵种时报错。</b>",
+    "action": "使用支持的类型",
+    "jump": "兵种工作台"
+  },
+  "sub_unit_source_file_collision": {
+    "what": "兵种「{id}」将写入「{path}」,覆盖已有兵种定义文件",
+    "impact": "<b>原文件中的其它兵种将缺失。</b>",
+    "action": "由程序分配文件名",
+    "jump": "兵种工作台"
+  },
+  "base_id_collision_rerouted": {
+    "what": "新建 ID 与基础 Mod 冲突，已自动改名：{oldId} → {newId}",
+    "impact": "不影响游戏，基础 Mod 内容不变。<b>后续引用请使用新 ID。</b>"
+  },
+  "non_additive_base_history_override": {
+    "what": "已阻止直接改写基础 Mod 国家 {tag} 的历史档案",
+    "impact": "<b>直接改写将覆盖原 Mod 设定，可能冲突甚至导致 CTD</b>;已提供叠加式替代方案。",
+    "action": "查看替代方案",
+    "jump": "AI 对话"
+  },
+  "gateway_tool_passthrough_failed_sdk_emit": {
+    "what": "AI 网关路由错误，本次工具调用未执行",
+    "impact": "该步 AI 操作未生效。",
+    "action": "重试或更换模型",
+    "jump": "AI 对话"
+  },
+  "content_language_export_languages_missing": {
+    "what": "存在 {language} 内容，但该语言未开启导出",
+    "impact": "<b>相关内容不会打包，游戏内显示为本地化 key。</b>",
+    "action": "开启该语言",
+    "jump": "项目设置 › Mod 内容语言"
+  },
+  "display_name_placeholder": {
+    "what": "{count} 个 {kind} 缺少名称({samples})",
+    "impact": "游戏内显示为 ID。",
+    "action": "批量补充名称",
+    "jump": "对应工作台"
+  },
+  "effect_typo": {
+    "what": "「{token}」疑似拼写错误，建议改为「{suggestion}」",
+    "impact": "<b>该行不生效</b>,游戏内无提示；排查需查看 error.log。",
+    "action": "修正",
+    "jump": "脚本编辑处"
+  },
+  "preserved_raw": {
+    "what": "原始文件已原样保留",
+    "impact": "通过项，计入 ✅ 计数。"
+  },
+  "research_bonus_as_effect": {
+    "what": "research_bonus 被写在效果位置",
+    "impact": "<b>不生效</b>;必须写在修正位置。",
+    "action": "修正写法",
+    "jump": "脚本编辑处"
+  },
+  "script_position_swap_ideas_child_outside_parent": {
+    "what": "swap_ideas 的子项位于父块之外",
+    "impact": "<b>替换不生效。</b>",
+    "action": "移入父块",
+    "jump": "脚本编辑处"
+  },
+  "unknown_tech_category": {
+    "what": "科技分类「{name}」不存在",
+    "impact": "<b>该科技不会出现在任何科技树页签</b>,无法被研究。",
+    "action": "选择已有分类",
+    "jump": "科技工作台"
+  },
+  "vanilla_seed_dlc_effects_absent": {
+    "what": "从 vanilla 起步的项目不含原版脚本里额外保存的那部分内容({count} 个州受影响)",
+    "impact": "那段脚本里保存的省级建筑会一并丢失 —— 海军基地、碉堡、水坝、地标 —— 还有带日期的历史块、DLC 条件下的归属转移、抵抗与顺从设定，以及少数我们没有按名字识别的条目。导出这些州会覆盖掉游戏自带的对应文件。可以在「州」页面从原版把这些内容补齐。"
+  },
+  "ideology_undefined_standalone": {
+    "what": "角色 {id} 使用了项目中未定义的意识形态",
+    "impact": "<b>这个意识形态的定义不会被写进导出的 mod</b>;用它的角色在游戏里会变成一个没有政党的领袖。",
+    "action": "定义该意识形态",
+    "jump": "意识形态工作台 › 新建"
+  },
+  "ideology_registry_parent_missing": {
+    "what": "意识形态 {id} 未指定所属阵营",
+    "impact": "<b>这个意识形态的定义不会被写进导出的 mod</b>;用它的角色在游戏里会变成一个没有政党的领袖。",
+    "action": "选择所属阵营",
+    "jump": "意识形态工作台 › 该意识形态 › 所属阵营"
+  },
+  "focus_layout_same_cell": {
+    "what": "国策 {focus_ids} 位于同一格({position})",
+    "impact": "<b>你导入的 mod 里有两个国策叠在一起，游戏里只会出现一个。</b>",
+    "action": "移开其中一个",
+    "jump": "国策树工作台 › 布局"
+  },
+  "focus_layout_adjacent_same_row": {
+    "what": "有国策在同一行相邻，横向间距只有 1",
+    "impact": "国策图标会互相遮挡，看不清也不好点。内容不丢。",
+    "action": "拉开横向间距",
+    "jump": "国策树工作台 › 布局"
+  },
+  "focus_display_name_unproven_fallback": {
+    "what": "国策 {focus_id} 的 {locale} 名称未在本项目中填写",
+    "impact": "<b>游戏里这个国策的名字可能没有被本地化。</b>",
+    "action": "填写名称",
+    "jump": "国策工作台 › 该国策 › 名称"
+  },
+  "idea_no_modifier": {
+    "what": "理念 {idea_id} 未配置任何修正",
+    "impact": "能看到它挂在国家上，但不产生任何加成或惩罚。",
+    "action": "添加修正",
+    "jump": "理念工作台 › 该理念 › 修正"
+  },
+  "character_no_military_traits": {
+    "what": "将领 {tag} 未配置军事特质",
+    "impact": "人物可以被任命，但不会带来任何加成。",
+    "action": "添加军事特质",
+    "jump": "角色工作台 › 该角色 › 特质"
+  },
+  "bookmark_selectable_ideology_missing": {
+    "what": "书签中可选国家 {country_tag} 未指定意识形态",
+    "impact": "选国界面上这个国家的领袖、政党图标和国名可能显示不正确。",
+    "action": "指定意识形态",
+    "jump": "书签工作台 › 该国家 › 意识形态"
+  },
+  "focus_tree_no_nodes": {
+    "what": "国策树 {tree_id} 中没有任何国策",
+    "impact": "这棵树是空的，打开国策界面看不到内容。",
+    "action": "添加国策",
+    "jump": "国策树工作台 › 该树"
+  },
+  "localisation_reference_not_in_project": {
+    "what": "{id} 引用的文本键 {loc_key} 不在本项目中",
+    "impact": "这段文字会显示成键名本身。",
+    "action": "补齐该文本",
+    "jump": "本地化工作台 › 新建条目"
+  },
+  "mod_folder_name": {
+    "what": "Mod 文件夹名 {folder} 含 HOI4 不接受的字符",
+    "impact": "导出的文件夹名会被改；启动器里显示的名字不变。",
+    "action": "改用字母、数字与下划线",
+    "jump": "导出设置 › 文件夹名"
+  },
+  "province_double_mapping": {
+    "what": "省份 {province_id} 同时归属州 {state_ids}",
+    "impact": "<b>游戏加载时崩溃。</b>",
+    "action": "从其中一个州移除该省份",
+    "jump": "地块工作台 › 该州 › 省份"
+  },
+  "doctrine_track_unresolved": {
+    "what": "学说 {id} 指向的轨道不在项目与基础 mod 中",
+    "impact": "base mod 移除了那条轨道的话，学说树可能显示异常。",
+    "action": "改指到已有轨道",
+    "jump": "军事学说工作台 › 该学说 › 轨道"
+  },
+  "event_namespace_mismatch": {
+    "what": "事件的 ID 前缀与所在命名空间不一致",
+    "impact": "触发它的地方可能找不到它，事件不会弹出。",
+    "action": "统一前缀与命名空间",
+    "jump": "事件工作台 › 该事件 › ID"
+  },
+  "event_no_options": {
+    "what": "事件 {event_id} 没有任何选项",
+    "impact": "事件弹出后玩家没有按钮可点。",
+    "action": "添加选项",
+    "jump": "事件工作台 › 该事件 › 选项"
+  },
+  "tech_circular_prereq": {
+    "what": "科技 {tech_id} 与其它科技互为前置",
+    "impact": "未实测，影响不确定。",
+    "action": "解开其中一条前置",
+    "jump": "科技工作台 › 该科技 › 前置"
+  },
+  "tech_folder_unknown": {
+    "what": "科技 {id} 的分类不在游戏已知的科技页中",
+    "impact": "未实测，影响不确定。",
+    "action": "改填已知分类",
+    "jump": "科技工作台 › 该科技 › 分类"
+  },
+  "focus_effective_default_multiple": {
+    "what": "有多棵国策树同时被标为默认({default_tree_ids})",
+    "impact": "未实测，影响不确定。",
+    "action": "只保留一棵默认",
+    "jump": "国策树列表 › 默认标记"
+  },
+  "focus_created_primary_id_collision": {
+    "what": "国策树 {tree_id} 要写入的文件 {canonical_path} 与已有内容冲突",
+    "impact": "未实测，影响不确定。",
+    "action": "改为不冲突的 ID",
+    "jump": "国策工作台 › 该国策 › ID"
+  },
+  "focus_shared_pool_scope_ignored": {
+    "what": "国策树 {tree_id} 设置的共享范围在导出时未生效",
+    "impact": "未实测，影响不确定。",
+    "action": "",
+    "jump": "国策树工作台 › 该树 › 共享范围"
+  },
+  "impassable_category_mismatch": {
+    "what": "{count} 个不可通行的州，分类是原版从不与不可通行搭配的",
+    "impact": "不可通行会让部队进不去、也不能建省级建筑，游戏里这块地显示成不可通行地形。原版只把它配 wasteland 或 enclave，所以用别的分类通常意味着这个勾是误点的。不拦你导出，也没有改动任何数据 —— 发布前值得看一眼。"
+  },
+  "impassable_without_force_link": {
+    "what": "{count} 个不可通行的州，没说归属跟着哪个邻州走",
+    "impact": "不可通行的地自己没有归属，需要指定一个邻州来继承。原版 21 个不可通行州 21/21 都写了 force_link_ownership_to（1.19.2 实测，该字段 wiki 未记载）。不拦你导出，也没有改动任何数据 —— 只有新保存的州才要求填。",
+    "action": "打开这些州，选一个应当拥有它的邻州",
+    "jump": "州工作台 › 该州 › 归属跟随"
+  },
+  "bookmark_filter_registry_missing": {
+    "what": "暂时无法检查剧本筛选项",
+    "impact": "项目尚未指定受支持的游戏版本，无法确认筛选项是否适用。",
+    "action": "查看剧本设置",
+    "jump": "剧本 › 战役设置"
+  },
+  "bookmark_default_multiple": {
+    "what": "有 {default_count} 个剧本被设为默认",
+    "impact": "游戏开场要选中哪个剧本还不明确。",
+    "action": "选择预期的默认剧本",
+    "jump": "剧本 › 默认剧本"
+  },
+  "bookmark_default_country_not_interesting": {
+    "what": "默认国家 {default_country} 不在这个剧本的可选国家中",
+    "impact": "游戏可能无法预选你指定的国家。",
+    "action": "查看可选国家",
+    "jump": "剧本 › 可选国家"
+  },
+  "bookmark_country_label_invalid": {
+    "what": "剧本中的国家使用了不受支持的筛选标签",
+    "impact": "该国家可能不会出现在预期的筛选结果中。",
+    "action": "查看国家标签",
+    "jump": "剧本 › 可选国家 › 标签"
+  },
+  "bookmark_country_labels_filter_missing": {
+    "what": "国家已设置标签，但剧本未启用标签筛选",
+    "impact": "玩家无法通过这些标签筛选国家列表。",
+    "action": "查看剧本筛选项",
+    "jump": "剧本 › 筛选项"
+  },
+  "bookmark_filter_invalid_for_target": {
+    "what": "剧本使用了目标游戏版本不支持的筛选项",
+    "impact": "这个筛选项在游戏中可能无法按预期工作。",
+    "action": "查看剧本筛选项",
+    "jump": "剧本 › 筛选项"
+  },
+  "bookmark_filter_country_label_semantics": {
+    "what": "国家标签被当作剧本筛选项使用",
+    "impact": "筛选按钮可能无法显示预期的国家。",
+    "action": "查看筛选项与标签",
+    "jump": "剧本 › 筛选项与国家标签"
+  },
+  "focus_layout_missing_focus_id": {
+    "what": "有一个国策缺少脚本 ID",
+    "impact": "游戏无法可靠地识别或引用这个国策。",
+    "action": "查看国策 ID",
+    "jump": "国策树 › 国策详情"
+  },
+  "focus_layout_duplicate_focus_id": {
+    "what": "多个国策使用了同一个 ID：{focus_id}",
+    "impact": "引用这个 ID 时可能指向错误的国策。",
+    "action": "查看重复 ID",
+    "jump": "国策树 › 国策详情"
+  },
+  "focus_layout_relative_cycle": {
+    "what": "国策的位置引用形成了循环：{cycle}",
+    "impact": "游戏无法解析这个循环中的全部相对位置。",
+    "action": "查看位置引用",
+    "jump": "国策树 › 位置"
+  },
+  "focus_layout_missing_anchor": {
+    "what": "国策 {focus_id} 引用了不存在的位置参照 {relative_position_id}",
+    "impact": "无法在本次输出中解析它的相对位置。",
+    "action": "查看位置参照",
+    "jump": "国策树 › 位置"
+  },
+  "focus_layout_replacement_global_shift": {
+    "what": "替换原树的国策树被整体移动了",
+    "impact": "它与其他分支的对齐关系可能已经改变。",
+    "action": "查看国策树布局",
+    "jump": "国策树 › 布局"
+  },
+  "focus_layout_unknown_mode": {
+    "what": "暂时无法完成国策布局检查",
+    "impact": "本程序无法识别这棵树的布局模式，布局尚未得到验证。",
+    "action": "查看国策树",
+    "jump": "国策树 › 布局"
+  },
+  "timeline_base_timeline_source_unregistered": {
+    "what": "尚未核实基础 Mod 的战役日期",
+    "impact": "所选日期可能与基础 Mod 的时间线不同。",
+    "action": "查看战役日期",
+    "jump": "剧本 › 战役设置"
+  }
+}

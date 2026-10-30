@@ -1,0 +1,12 @@
+{
+  "title": "所有している DLC",
+  "summaryAll": "すべての DLC",
+  "summaryNone": "DLC なし",
+  "summarySome": "{count}/{total} 個",
+  "selectAll": "すべて選択",
+  "selectNone": "選択解除",
+  "integrated": "本体に統合済みで全員が所有：{names}",
+  "hint": "ゲームプレビューはここで選んだ DLC での開始状態を表示します（スクリプトの has_dlc）。エクスポートした mod はプレイヤーが実際に持っている DLC で動きます。あとでプロジェクト設定から変更できます。",
+  "badge": "DLC：{summary}",
+  "badgeTip": "プレビューはこれらの DLC での開始を表示します：{names}。プロジェクト設定で変更できます。"
+}

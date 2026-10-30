@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "일괄 적용",
+  "undonePrefix": "실행 취소됨 ·",
+  "undoFailedPrefix": "실행 취소 실패: ",
+  "justCreatedPrefix": "방금 생성",
+  "justCreatedSuffix": "개 · 마음에 들지 않으면 전체 일괄 작업을 취소하세요",
+  "justUpdatedPrefix": "방금 업데이트",
+  "justUpdatedSuffix": "개 국가중점 조건 · 실행 취소하면 저장된 이전 값으로 복원합니다",
+  "undoBatchTitle": "이 일괄 작업 취소 · 방금 만든 항목 모두 삭제",
+  "undoRestoreTitle": "이 업데이트 취소 · 저장된 이전 국가중점 조건 복원",
+  "undoing": "실행 취소 중…",
+  "undo": "실행 취소",
+  "dismissTitle": "배너 숨기기(취소하지 않음)",
+  "itemsFallback": "항목 {count}개",
+  "cannotUndoTitle": "일괄 변경 · 실행 취소 불가",
+  "cannotUndoNote": "변경 전 모습이 저장되어 있지 않아 이 일괄 작업을 되돌릴 수 없습니다. 실행 취소를 눌러도 복원되지 않습니다. 해당 작업대를 열어 변경 사항을 확인하세요.",
+  "nothingUndoneNote": "실행 취소로 바뀐 내용이 없습니다. 항목이 프로젝트에 더는 없습니다(이미 삭제했거나 이전에 취소함). 해당 작업대를 열어 확인하세요.",
+  "undoUnavailableTitle": "이 일괄 작업은 취소할 수 없습니다"
+}

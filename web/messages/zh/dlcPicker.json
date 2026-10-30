@@ -1,0 +1,12 @@
+{
+  "title": "拥有的 DLC",
+  "summaryAll": "全部 DLC",
+  "summaryNone": "无 DLC",
+  "summarySome": "{count}/{total} 个",
+  "selectAll": "全选",
+  "selectNone": "全不选",
+  "integrated": "已并入本体、所有玩家都有：{names}",
+  "hint": "游戏预览按这里选的 DLC 显示开局（脚本里的 has_dlc 判断）。导出的 mod 在游戏里仍按玩家实际拥有的 DLC 运行。之后可以在项目设置里改。",
+  "badge": "DLC：{summary}",
+  "badgeTip": "游戏预览按这些 DLC 显示开局：{names}。在项目设置里修改。"
+}

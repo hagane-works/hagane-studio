@@ -1,0 +1,28 @@
+{
+ "extracted_at": "2026-10-30",
+ "game_version": "1.19.3.0",
+ "ids": [
+  "AND",
+  "NOT",
+  "OR",
+  "always",
+  "date",
+  "exists",
+  "has_capitulated",
+  "has_completed_focus",
+  "has_country_flag",
+  "has_dlc",
+  "has_global_flag",
+  "has_government",
+  "has_idea",
+  "has_war",
+  "is_ai",
+  "is_in_faction",
+  "is_major",
+  "is_subject",
+  "original_tag",
+  "tag"
+ ],
+ "source": "HOI4 game-shipped documentation/*.md (via app.kb.hoi4_docs_parser)",
+ "total": 20
+}

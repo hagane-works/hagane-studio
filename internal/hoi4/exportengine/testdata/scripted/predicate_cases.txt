@@ -1,0 +1,36 @@
+# One `key = value` per line inside a focus-reward-shaped block. Lines are
+# annotated with the expected verdict so the test reads as a table:
+#   FLAG  → the CAT_SCRIPTED predicate reports this key
+#   SKIP  → it does not (and why)
+scripted_fixture = {
+	my_custom_effect = yes                 # FLAG · genuinely custom scripted call
+	GER_custom_trigger = no                # FLAG · TAG prefix is not all-caps as a whole
+	Mixed_Case_call = yes                  # FLAG · has lowercase → not isupper()
+	nor_aat = No                           # FLAG · scalar compared case-insensitively (lowercased)
+	add_ideas = yes                        # SKIP · vanilla effect (also a cross-ref name)
+	set_country_flag = yes                 # SKIP · vanilla effect
+	has_war = yes                          # SKIP · vanilla trigger
+	is_ai = no                             # SKIP · vanilla trigger
+	cancel_if_invalid = yes                # SKIP · structural field
+	available_if_capitulated = yes         # SKIP · structural field
+	fire_only_once = yes                   # SKIP · _SCRIPT_WRAP_KEYS
+	hidden = yes                           # SKIP · _SCRIPT_WRAP_KEYS
+	is_border_war = yes                    # SKIP · _SCRIPT_WRAP_KEYS supplement
+	has_completed_focus = yes              # SKIP · cross-ref name (CROSS_REFS key)
+	activate_decision = yes                # SKIP · cross-ref name (CROSS_REFS key)
+	ger.1 = yes                            # SKIP · has a "."
+	ROOT = yes                             # SKIP · all-caps
+	GFX_FOO = yes                          # SKIP · all-caps (digits/underscore ignored)
+	SOV = no                               # SKIP · all-caps
+	maybe_call = maybe                     # SKIP · not yes/no
+	numeric_call = 1                       # SKIP · not yes/no
+	instant_build = yes                    # SKIP · Go narrowing: vanilla yes/no key (effect parameter)
+	keep_completed = yes                   # SKIP · Go narrowing: vanilla yes/no key (effect parameter)
+	transfer_troops = yes                  # SKIP · Go narrowing: vanilla yes/no key (effect parameter)
+	designer = yes                         # SKIP · Go narrowing: vanilla yes/no key (idea structure, exporter emits it)
+	defined_here = yes                     # SKIP · defined by this artifact under common/scripted_effects/
+	nested = {
+		deeper_custom_call = yes           # FLAG · nested blocks are walked
+		limit = { another_custom_check = yes }   # FLAG · walked through wrap keys too
+	}
+}

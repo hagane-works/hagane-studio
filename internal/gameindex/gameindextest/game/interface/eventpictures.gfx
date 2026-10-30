@@ -1,0 +1,5 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+spriteTypes = {
+	spriteType = { name = "GFX_report_event_generic_rally" texturefile = "gfx/event_pictures/test_rally.dds" }
+	spriteType = { name = "GFX_news_event_generic_parade" texturefile = "gfx/event_pictures/test_parade.dds" }
+}

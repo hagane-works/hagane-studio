@@ -1,0 +1,6 @@
+{
+  "autoSuffixedTitle": "Suffixe ajouté automatiquement à l'ID",
+  "autoSuffixedFallback": "Cet ID entrait en conflit avec une entité existante ; un suffixe a été ajouté pour le rendre unique.",
+  "alreadyExistsTitle": "L'ID existe déjà",
+  "alreadyExistsFallback": "Cet ID est déjà utilisé dans ce projet. Choisissez-en un autre."
+}

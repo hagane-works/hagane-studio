@@ -1,0 +1,207 @@
+{
+  "basicInfo": "基本情報",
+  "displayName": "表示名",
+  "techIdLabel": "技術 ID（HOI4 内部）",
+  "statusSaving": "保存中...",
+  "statusSaved": "保存済み",
+  "statusError": "保存に失敗しました",
+  "statusUnsaved": "未保存の変更",
+  "addPrerequisitePlaceholder": "前提技術を追加...",
+  "advancedFieldsLabel": "詳細項目",
+  "saveTechButton": "技術を保存",
+  "deleteTechButton": "技術を削除",
+  "section": {
+    "categories": "カテゴリー",
+    "aiWillDo": "AI Will Do",
+    "description": "説明"
+  },
+  "statDesc": {
+    "soft_attack": "非装甲目標（歩兵、砲兵、非装甲陣地）への攻撃力です。ほぼすべての陸上部隊、とりわけ歩兵師団が頼る中心的な出力です。中級技術では +10～30%、+50%以上は最上位ドクトリン + 高級装備の組み合わせで見られます。装甲目標には hard_attack が必要で、役割は明確に分かれます。",
+    "hard_attack": "装甲目標（戦車、装甲車、ハーフトラック）への攻撃力です。歩兵師団は対戦車砲 / 対装甲兵器の装備で得られ、戦車師団は元から持ちます。中～後期では +15～40%。hard_attack のない純歩兵は装甲師団に押し潰されるため、専用兵器または CAS 支援が必要です。",
+    "defense": "移動していないときに攻撃をかわす能力で、静的防御の中心値です。中級で +10～30%、最上位ドクトリン + 地形 + 要塞の累積で +100%以上にもなります。breakthrough とは使う場面が排他的で、陣地保持は defense、前進は breakthrough です。",
+    "breakthrough": "移動攻撃中に損害を吸収する値です。高突破の師団は反撃を受けながら前進できます。戦車 / 機械化は元から高く、歩兵は工兵 + 指揮統制に頼ります。中～後期戦車技術で +20～50%。停止時の defense に対し、前進時は breakthrough を使います。",
+    "armor_value": "装甲部隊の物理的な装甲厚で、敵の ap_attack（貫徹力）と比較して貫通可否を決めます。armor > 敵貫徹なら攻撃を大幅に抑え、貫徹されれば通常損害を受けます。中戦車は歩兵用対戦車ライフルを弾く一方、大口径対戦車砲は軽戦車を容易に貫通します。目安 10～100 以上。",
+    "ap_attack": "攻撃側の貫徹能力で、敵の armor_value と比較します。piercing ≥ armor なら通常損害、低ければ損害が大幅減少します。対戦車砲と戦車砲の中心値です。歩兵師団は対戦車兵器がなければほぼ持たず、装甲師団へ効果的に対抗できません。",
+    "max_organisation": "潰走に耐える部隊の「士気プール」です。戦闘ごとに減り、0 になると離脱し、その後すばやく回復します。目安： 歩兵 60～80、機械化 40～60、戦車師団 30～45。技術 / ドクトリンでは +5～15 が一般的。低指揮統制は瞬間火力、高指揮統制は粘り強さと、師団設計の重要なトレードオフです。",
+    "max_strength": "部隊の実際の「兵員」値で、充足時の戦力を表します。損害で減り、0 で師団が消滅し、後方からの補充で回復します。目安： 歩兵大隊 25、戦車大隊 40、砲兵大隊 35、完全な師団 200～400 以上。技術で +5～20% が一般的。戦力 0 では指揮統制が残っていても戦闘力をほぼ失います。",
+    "reliability": "装備故障率の逆指標（0.0～1.0）です。信頼性が低いほど戦闘 / 行軍での装備損耗が増えます。目安： 歩兵装備 0.7～0.9、戦車 0.5～0.8、航空機 0.6～0.85。技術ボーナスは +5～15% が一般的。低信頼性の装甲 / 航空部隊は大量の予備部品を必要とし、兵站負担が増します。",
+    "maximum_speed": "戦略マップ上の移動速度（km/h）です。再配置、包囲、退却効率に影響します。目安： 歩兵 4、自動車化 8、機械化 10、戦車 6～10。ドクトリン / 技術で +10～25% が一般的。高速師団は突破包囲の先鋒となり、低速師団は輸送拠点を必要とします。天候、地形、補給で大きく低下します。",
+    "build_cost_ic": "部隊 / 装備の工業力（IC）コストです。**負値がボーナス**で、`build_cost_ic = -0.1` はコスト -10%。技術 / ドクトリンでは -5～-15% が一般的です。+build_cost_ic は高価格化なので符号に注意してください。「生産工程の合理化」「軍需産業効率改善」分岐でよく使います。",
+    "suppression": "占領地のレジスタンス活動を鎮圧する能力です。高鎮圧師団を配備するとレジスタンス出力を抑えます。騎兵 / 憲兵 / 機械化は元から高く、目安は歩兵 2、騎兵 / 憲兵 4～6。植民地 / 敵中核州の占領には高い鎮圧が必要で、不足すると工場出力と資源を失います。駐屯政策と併用します。",
+    "air_attack": "陸上部隊の敵航空機に対する対空能力（専用対空装備に依存）です。歩兵師団が対空砲を装備して初めて有効で、なければ 0。制空権がない戦場では air_attack の高い師団が空爆損害を減らします。目安： 歩兵 +2～5、専用対空大隊 +15～30、対空技術 +20～50%。最も有効なのは戦闘機による敵 CAS 抑制です。",
+    "naval_speed": "海軍ユニットの戦略移動速度（ノット）です。艦隊再配置、迎撃、退却、船団護衛効率に影響します。目安： 戦艦 25～30、巡洋艦 28～34、駆逐艦 35～40。機関技術で +5～15%。高速小型艦は護衛 / 偵察、低速主力艦は護衛を必要とします。航続距離と速度が戦略的な展開範囲を決めます。",
+    "surface_detection": "艦艇の水上目標探知能力です。交戦時の先制攻撃命中率と、敵を発見できる距離に影響します。目安： 駆逐艦 20～30、巡洋艦 25～40、戦艦 15～25。レーダー技術で +10～30%。高探知の駆逐艦は偵察スクリーンを作り、主力艦へ目標を提供します。sub_detection は潜水艦専用です。",
+    "sub_detection": "潜水艦を発見する中核的な対潜値です。駆逐艦 / 護衛艦 / 対潜航空機が主に提供します。目安： 通常駆逐艦 10～20、専用対潜駆逐艦 30～50。ソナー技術で +20～50%。sub_detection が不足する護衛艦隊はウルフパックに船団を大量撃沈され、戦略資源輸入に直撃します。"
+  },
+  "techId": {
+    "placeholder": "例： Improved Infantry Equipment",
+    "tooltipTitle": "技術 ID · HOI4 内部の一意識別子",
+    "tooltipContent": "MOD 全体で一意となる内部識別子です。小文字 + アンダースコアを使い、空白や日本語は使用できません。技術系統を示す接頭辞（infantry_weapons_1 / armor_medium_1 / ca_early_fighter）を付けます。has_tech = X、add_tech_bonus technology = X、set_technology = { X = 1 } はすべてこの ID を参照します。改名すると全参照が壊れ、古いセーブと互換性がなくなるため注意してください。"
+  },
+  "collision": {
+    "sameName": "バニラ技術と同名です。MOD 読み込み時に黙ってバニラを上書きし混乱を招くため、改名してください。",
+    "renameTo": "変更先",
+    "recommended": "（推奨）"
+  },
+  "banner": {
+    "showAs": "バナーノードとして表示（200×60 · テキスト + アイコン）",
+    "tooltipTitle": "バナーとアイコンのノード寸法",
+    "tooltipContent": "バナー（200×60 横長）は名前 + アイコンを表示し、M1 ガーランド / 初期駆逐艦 / 戦間期戦車開発など**代表的な具体装備**に適します。アイコン（64×64）はアイコン + レベルだけで、cat_radar III / 工業生産 II など**下位技術 / 抽象強化**に適します。バニラでは支援装備 / 工業はほぼアイコン、海空の代表装備はバナー、装甲は混在します。"
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout（ゲーム内の小型ノード）",
+    "tooltipTitle": "force_use_small_tech_layout · ゲーム内小型レイアウト",
+    "tooltipContent": "`force_use_small_tech_layout = yes` を出力し、実際の HOI4 研究画面で**小型ノード**を強制します。上の「バナーノード」は本プログラム上の表示だけを制御し何も出力しませんが、こちらはゲームが読む実データです。バニラでも約 50 技術だけの明示上書きなので、通常大きく表示される技術を小型化したい場合だけオンにします。"
+  },
+  "researchCost": {
+    "label": "研究コスト",
+    "tooltipTitle": "研究コスト · 研究時間の乗数",
+    "tooltipContent": "研究時間の**相対乗数**です。絶対日数ではなく、cost × 研究スタッフ × speed_factor × 時代先行ペナルティで実日数が決まります。**バニラは 1.5～2.5 に集中**し、歩兵主要系統は 1.5、幹技術は 2、ドクトリンは 2.5 が一般的。特殊ドクトリンは 4 以上、特別計画はまれに 0.5。高すぎると AI が研究せず、低すぎると 1 日で完了します。start_year と組み合わせます。"
+  },
+  "startYear": {
+    "label": "開始年",
+    "tooltipTitle": "開始年 · 技術の史実年",
+    "tooltipContent": "技術が史実上利用可能になる年です。年より前の研究には**時代先行ペナルティ**（ahead_of_time_research_factor、通常 -50～-70%）が掛かります。1936 年基準のバニラは 1936 年に最多（106 技術）、1939～1945 年も密集し、支援技術は 1918/1922、最早は 1910、最遅は 1950（6 技術）。歴史改変 / 現代 MOD は 1960 年以降を現代 / 未来技術に使えます。",
+    "balanceWarn": "⚠ バニラのバランス： 1 年先行ごとに約 +200% コスト（研究速度は約半分）"
+  },
+  "xPosition": {
+    "label": "X 位置",
+    "tooltipTitle": "X 位置 · 研究画面の縦方向（行）オフセット",
+    "tooltipContent": "直感に反しますがゲーム内で確認済み：HOI4 の研究画面では **x が縦軸、y が横軸**です。x は親技術に対する**行オフセット**で、+1 = 一行下。並列する分岐はこれで分けます。横位置は y が決めます（本体では慣習として年代を y に書きます。例 @1936。start_year とは無関係）。本体の infantry_weapons1 → 2 → improved はすべて x = 0 で y だけ増え、armored_car1 は x = 4 で一行下にあります。同じ位置は重なります。前提がない場合はフォルダ原点基準です。"
+  },
+  "folder": {
+    "label": "研究フォルダー",
+    "tooltipTitle": "フォルダー · 研究画面タブの配置",
+    "tooltipContent": "`common/technology_tags/00_technology.txt` の `technology_folders` ブロックが、研究画面のタブ（陸軍 / 空軍 / 海軍 / 工業 / 電子 / 特殊部隊）を決めます。infantry_folder、mtgnavalfolder など各トークンはゲーム内サブタブへ対応し、誤ると技術は動作しても別タブへ表示されます。作成時に現在のサブタブから自動設定され、ここで別タブへ移動できます。MOD 独自 technology_tags のフォルダーはそのまま保持されます。",
+    "customCurrent": "現在（独自）: {folder}",
+    "none": "研究ツリーに表示しない（下位技術）"
+  },
+  "prerequisites": {
+    "heading": "前提技術",
+    "tooltipContent": "この技術の前提一覧です。研究可能になるには**すべて研究済み**である必要があります（AND）。OR 前提はここでは設定せず、同じ位置に複数経路を置くと自動 OR になります。直線系統は通常 1～2 個、分岐 / 合流は 3 個以上。循環すると HOI4 が行き詰まります。"
+  },
+  "effects": {
+    "title": "技術効果（解除効果）",
+    "tooltipContent": "研究完了時に恒久解除する内容 — 装備（enable_equipments）、部隊タイプ（enable_subunits）、装備モジュール（enable_equipment_modules）です。全体補正がなくても、新装備を生産ラインへ、新部隊を師団編制へ追加できる技術の長期的な成果です。歩兵 / 装甲 / 海軍 / 空軍系統の中心項目です。",
+    "hint": "技術が解除する装備、部隊、モジュール。1 行に 1 ID、HOI4 内部名を直接記述。"
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments（装備を解除）",
+    "tooltipTitle": "enable_equipments · 装備を解除",
+    "tooltipContent": "完了時に解除する装備 ID を 1 行ずつ記述します。common/units/equipment/ の定義と一致する HOI4 内部名を直接入力します。解除後に生産ラインで選択できます。例: infantry_equipment_1、medium_tank_chassis_1、fighter_equipment_1。誤名はエラーになりませんが生産ラインが見つけません。装備世代は通常 _1 _2 _3 接尾辞。",
+    "field": "enable_equipments · 装備 ID を解除（1 行 / 空白区切り）"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits（部隊を解除）",
+    "tooltipTitle": "enable_subunits · 部隊を解除",
+    "tooltipContent": "完了時に解除する subunit（師団内の大隊単位部隊）一覧です。common/units/ の定義と一致し、解除後に師団編制へ追加できます。例: infantry、motorized、mechanized、artillery、anti_tank、anti_air、engineer、recon、signal_company、maintenance_company、field_hospital、military_police。subunit は「師団に置く大隊 / 中隊タイプ」、equipment は「その部隊が持つ兵器」です。",
+    "field": "enable_subunits · subunit を解除（motorized / marines / paratrooper …）"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules（モジュールを解除）",
+    "tooltipTitle": "enable_equipment_modules · モジュールを解除",
+    "tooltipContent": "完了時に解除する装備モジュール一覧です。モジュールは戦車 / 航空機 / 艦艇設計で選ぶ部品で、common/units/equipment_modules/ と一致します。1 行に 1 ID。例: tank_heavy_machine_gun、additional_machine_guns、large_plane_airframe、ship_torpedo_medium_1。MIO と装備型式システムと併用し、装備設計がない MOD では不要です。",
+    "field": "enable_equipment_modules · NSB 設計モジュール"
+  },
+  "globalModifier": {
+    "title": "全体補正",
+    "tooltipContent": "研究完了後、自国へ**継続的**に適用される modifier ブロックです。国民精神と同じ構造ですが出所が異なります。例： 工業の research_speed_factor / production_factory_max_efficiency_factor、電子の encryption / decryption、陸海空ドクトリンの分岐効率補正。小数（0.03 = +3%）を使い、複数は累積します。",
+    "hint": "研究完了後に国家へ適用する全体補正。例： research_speed_factor、production_factory_efficiency_gain_factor。工業 / 電子系統の中心効果。"
+  },
+  "researchScripts": {
+    "title": "研究スクリプト",
+    "tooltipContent": "研究完了の瞬間に実行するスクリプトです（全体補正の継続効果と違い、1 度だけ）。3 ブロック：\n• on_research_complete: 実行する effect\n• on_research_complete_limit: trigger 条件（再入防止）\n• allow: 研究許可条件\nDLC 専用技術、国家方針解除技術、師団編制の自動解除に使います。"
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete（完了時に実行）",
+    "tooltipTitle": "on_research_complete · 完了時に実行",
+    "tooltipContent": "研究完了の瞬間に 1 度実行する effect ブロックです。例:\n• load_oob = OOB_FILE（師団編制 / 装備を自動読み込み）\n• custom_effect_tooltip = LOC_KEY（解除ヒント）\n• country_event = { id = X days = 7 }（後続イベント）\nhidden_effect = { ... } でプレイヤーから効果文を隠せます。on_research_complete_limit と組み合わせて再入を防ぎます。",
+    "hint": "研究完了後に発火する効果。例： 部隊編制を自動作成、ヒント表示。",
+    "field": "on_research_complete · 完了時の単発 effect ブロック"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit（トリガー条件）",
+    "tooltipTitle": "on_research_complete_limit · トリガー条件",
+    "tooltipContent": "on_research_complete の実行条件です。条件成立時だけ効果を実行します。主用途は**再入防止**。例: NOT = { has_template_containing_unit = paratrooper }（再研究時に同じ師団編制を二重解除しない）。空欄では常に発火し、セーブ読み込みごとに再実行される可能性があります。",
+    "hint": "on_research_complete の発火条件を制御し、反復実行を防ぎます。",
+    "field": "on_research_complete_limit · effect 制限の trigger 条件"
+  },
+  "allow": {
+    "heading": "allow（研究許可）",
+    "tooltipTitle": "allow · 研究許可",
+    "tooltipContent": "研究可能か制御する trigger ブロックです。未達なら研究画面でグレー表示され選択できません。**always = no** は**スクリプトからのみ解除可能**で、国家方針の set_technology = { X = 1 } または add_tech_bonus と組み合わせます。DLC 専用、物語解除、隠し技術（特別計画）で一般的。空欄なら全国家が研究可能。",
+    "hint": "研究可否を制御。空欄 = 誰でも研究可能、always = no = 国家方針などからのみ解除。",
+    "field": "allow · 研究可否 trigger ブロック"
+  },
+  "enableBuilding": {
+    "tooltipContent": "完了時に解除する建造物 ID（単一値 · common/buildings/ と一致）。バニラ例: synthetic_refinery / radar_station / rocket_site / nuclear_reactor / mega_gun_emplacement。技術 1 個につき建造物 1 個なので、複数は技術ノードを連結します。"
+  },
+  "enableTactic": {
+    "tooltipContent": "解除する陸戦戦術 ID（common/combat_tactics.txt）。例: encirclement / breakthrough / tactical_withdrawal。戦闘中、地形 + ドクトリンに応じて AI が自動選択します。"
+  },
+  "xor": {
+    "heading": "xor（排他的な技術一覧）",
+    "tooltipTitle": "xor · 排他的な技術",
+    "tooltipContent": "この技術を研究すると一覧の技術は研究できません（逆も同様。記述は一方向でも意味は双方向）。バニラ例： steel_chassis と aluminium_chassis（鋼 / アルミ機体の二者択一）。1 行に 1 tech_id。",
+    "field": "xor · 排他的技術 ID（A を選ぶと兄弟 B を除外）"
+  },
+  "subTechnologies": {
+    "heading": "sub_technologies（下位技術）",
+    "tooltipTitle": "sub_technologies · 下位技術",
+    "tooltipContent": "親技術カード内に入れ子で表示する小強化技術です（1 行に 1 tech_id、同じ MOD で別途定義が必要）。バニラ例： infantry_at（歩兵対戦車、infantry_weapons カード内の二重リング UI）。下位技術は親の研究後に UI へ表示されます。"
+  },
+  "allowBranch": {
+    "heading": "allow_branch（分岐表示条件）",
+    "tooltipTitle": "allow_branch · 分岐表示条件",
+    "tooltipContent": "技術分岐全体をプレイヤーへ表示するか決める trigger ブロックです。未達なら UI から完全に隠れます。バニラ例： has_dlc = \"Man the Guns\" は非 DLC プレイヤーから MTG 海軍系統を隠します。allow は研究許可、allow_branch は UI 表示を制御します。",
+    "field": "allow_branch · 分岐全体の表示 / 非表示 trigger"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type（NSB 設計チーム XP）",
+    "tooltipTitle": "xp_research_type · 設計チーム XP コスト",
+    "tooltipContent": "NSB DLC の装備設計機能で、陸軍 / 海軍 / 空軍 XP により研究を加速できます。空欄 = XP 不使用。xp_boost_cost と組み合わせて 1 回の加速コストを設定します。",
+    "optNone": "なし（空欄）",
+    "optLand": "land · 陸軍 XP",
+    "optNaval": "naval · 海軍 XP",
+    "optAir": "air · 空軍 XP"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · XP 加速コスト",
+    "tooltipContent": "この技術を 1 回加速するために必要な分野 XP。バニラは通常 25～50。0 = 加速不可。XP 種別には xp_research_type が必要です。"
+  },
+  "dependencies": {
+    "heading": "dependencies（並行研究の依存）",
+    "tooltipTitle": "dependencies · 並行研究の依存",
+    "tooltipContent": "まれな項目です。並行研究するとこの技術を加速する別技術を指定します。1 行に `tech_id = factor`（factor 既定 1）。参照技術は同じ MOD で定義が必要です。研究を必須にする prerequisites とは異なります。"
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus（XP コスト乗数）",
+    "tooltipTitle": "xp_research_bonus · XP コスト乗数",
+    "tooltipContent": "この技術の研究に必要な陸 / 海 / 空 XP の固定乗数です（バニラの裸スカラー形式、例： 1.50）。省略するなら空欄。ドクトリン XP を消費する技術だけに関係します。",
+    "blockFormNote": "この技術にはインポート済みのカテゴリー別 xp_research_bonus 内訳があります。そのまま保持 / 出力され、内訳を上書きしないようここでは読み取り専用です。"
+  },
+  "doctrine": {
+    "heading": "doctrine（旧式 · NCNS 以前のドクトリンフラグ）",
+    "tooltipContent": "NCNS DLC 以前のドクトリンフラグです。現在のバニラドクトリンは独立した XP + 熟練度システムを持つ common/doctrines/ へ移動しました。新規 MOD には非推奨で、既存 MOD 互換のため保持します。"
+  },
+  "statBonuses": {
+    "title": "能力ボーナス",
+    "tooltipContent": "特定部隊カテゴリーへの戦闘能力ボーナスです。構造： 部隊カテゴリー（infantry / armor / cat_cas / ...）→ 能力（soft_attack / defense / breakthrough / ...）→ 値（0.05 = +5%）。各カテゴリーに複数能力を追加できます。中～後期技術の中心効果で、新装備を解除する enable_equipments と相補的です。各能力の意味は下のドロップダウンにホバーして確認できます。",
+    "hint": "対象部隊カテゴリー → 能力 → 値（例： 0.05 = +5%）を選び、+ で追加",
+    "category": "部隊カテゴリー",
+    "categoryPlaceholder": "部隊カテゴリーを選択...",
+    "stat": "能力",
+    "statPlaceholder": "能力を選択...",
+    "value": "値"
+  },
+  "advanced": {
+    "pathField": "path · 出ていく辺 + research_cost_coeff（AI は add_path で編集）"
+  },
+  "rawExtras": {
+    "badge": "一部のフィールドは高度なスクリプトとして保持",
+    "count": "{count} 件を保持",
+    "hint": "これらのインポート済みフィールドにはまだビジュアルエディタがありません。原文のまま保持され、エクスポート時にそのまま書き戻されます。",
+    "keysLabel": "保持フィールド",
+    "jsonLabel": "生 JSON"
+  }
+}

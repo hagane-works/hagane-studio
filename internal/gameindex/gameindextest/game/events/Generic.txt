@@ -1,0 +1,19 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+add_namespace = generic
+
+country_event = {
+	id = generic.1
+	title = generic.1.t
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = generic.1.a
+		add_political_power = 10
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			transfer_state = { state = 1 transfer_troops = yes }
+			set_rule = { can_create_factions = yes }
+		}
+	}
+}

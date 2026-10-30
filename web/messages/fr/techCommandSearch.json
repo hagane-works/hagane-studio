@@ -1,0 +1,12 @@
+{
+  "heading": "Rechercher des technologies",
+  "inputAriaLabel": "Rechercher dans toutes les lignes technologiques",
+  "placeholder": "Saisissez un nom ou un ID de technologie…",
+  "paletteTitle": "Trouver une technologie",
+  "paletteHint": "Saisissez le nom ou l’ID d’une technologie. Sélectionnez un résultat pour ouvrir sa ligne technologique et la mettre en évidence.",
+  "navHint": "Vous pouvez aussi parcourir les pages Armée, Aviation, Marine et Équipement industriel ci-dessus.",
+  "projectTotal": "{techCount} technologies dans {lineCount} lignes technologiques",
+  "noMatches": "Aucun résultat pour « {query} ».",
+  "firstMatches": "Les {count} premiers résultats sont affichés. Continuez à saisir pour les affiner.",
+  "matches": "{count} résultats"
+}

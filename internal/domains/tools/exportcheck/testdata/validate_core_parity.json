@@ -1,0 +1,1250 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "non-ascii-name",
+   "project": {
+    "id": 7,
+    "name": "德意志之路",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "mod_folder_name",
+     "entity_ref": null,
+     "detail": {
+      "name": "德意志之路",
+      "folder": "mod_GER"
+     },
+     "message": "Mod folder name: project name '德意志之路' is not ASCII — HOI4 needs an ASCII mod path, so the exported folder / .mod will be 'mod_GER' (the launcher display name stays '德意志之路'). Set an ASCII project name to control the folder name."
+    }
+   ]
+  },
+  {
+   "name": "non-ascii-no-tag",
+   "project": {
+    "id": 7,
+    "name": "德意志之路",
+    "country_tag": ""
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "mod_folder_name",
+     "entity_ref": null,
+     "detail": {
+      "name": "德意志之路",
+      "folder": "mod_7"
+     },
+     "message": "Mod folder name: project name '德意志之路' is not ASCII — HOI4 needs an ASCII mod path, so the exported folder / .mod will be 'mod_7' (the launcher display name stays '德意志之路'). Set an ASCII project name to control the folder name."
+    }
+   ]
+  },
+  {
+   "name": "ascii-name-ok",
+   "project": {
+    "id": 7,
+    "name": "Road to War",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "char-no-name",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 1,
+     "tag": "GER_x",
+     "country_tag": "GER",
+     "role_type": "general",
+     "traits": [
+      "brave"
+     ],
+     "advisor_traits": [],
+     "source": "created",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": ""
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "character_missing_name",
+     "entity_ref": {
+      "type": "character",
+      "id": 1
+     },
+     "detail": {
+      "tag": "GER_x"
+     },
+     "message": "Character GER_x: no display name in any language — the export writes no name line, so HOI4 shows the raw tag 'GER_x' in-game."
+    }
+   ]
+  },
+  {
+   "name": "char-imported-skipped",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 2,
+     "tag": "GER_y",
+     "country_tag": "GER",
+     "role_type": "general",
+     "traits": [
+      "brave"
+     ],
+     "advisor_traits": [],
+     "source": "imported",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": ""
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "char-replaces-vanilla-skipped",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 3,
+     "tag": "GER_z",
+     "country_tag": "GER",
+     "role_type": "general",
+     "traits": [
+      "brave"
+     ],
+     "advisor_traits": [],
+     "source": "created",
+     "replaces_vanilla_id": true,
+     "display_name_locs": {},
+     "name_en": "",
+     "name_zh": "",
+     "name": ""
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "char-no-traits-general",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 4,
+     "tag": "GER_g",
+     "country_tag": "GER",
+     "role_type": "general",
+     "traits": [],
+     "advisor_traits": [],
+     "source": "created",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "Name",
+     "name_zh": "",
+     "name": "Name"
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "character_no_military_traits",
+     "entity_ref": {
+      "type": "character",
+      "id": 4
+     },
+     "detail": {
+      "tag": "GER_g"
+     },
+     "message": "Character GER_g: no traits selected"
+    }
+   ]
+  },
+  {
+   "name": "char-no-traits-advisor",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 5,
+     "tag": "GER_a",
+     "country_tag": "GER",
+     "role_type": "advisor",
+     "traits": [],
+     "advisor_traits": [],
+     "source": "created",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "Name",
+     "name_zh": "",
+     "name": "Name"
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "char-advisor-fallback",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 6,
+     "tag": "GER_b",
+     "country_tag": "GER",
+     "role_type": "advisor",
+     "traits": [],
+     "advisor_traits": [
+      "t"
+     ],
+     "source": "created",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "Name",
+     "name_zh": "",
+     "name": "Name"
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "character_advisor_traits_fallback",
+     "entity_ref": {
+      "type": "character",
+      "id": 6
+     },
+     "detail": {
+      "tag": "GER_b"
+     },
+     "message": "Character GER_b: advisor traits filled but primary traits empty — using advisor_traits"
+    }
+   ]
+  },
+  {
+   "name": "char-leader-no-traits-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 7,
+     "tag": "GER_c",
+     "country_tag": "GER",
+     "role_type": "country_leader",
+     "traits": [],
+     "advisor_traits": [],
+     "source": "created",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "Name",
+     "name_zh": "",
+     "name": "Name"
+    }
+   ],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "focus-empty-tree",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": []
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "focus_tree_no_nodes",
+     "entity_ref": {
+      "type": "focus",
+      "id": 1
+     },
+     "detail": {
+      "tree_id": "t1"
+     },
+     "message": "Focus tree 't1': no nodes"
+    }
+   ]
+  },
+  {
+   "name": "focus-missing-id",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "",
+       "prerequisites": [],
+       "mutually_exclusive": []
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "focus_missing_id",
+     "entity_ref": {
+      "type": "focus",
+      "id": 10,
+      "tree_id": 1
+     },
+     "detail": {
+      "node_id": 10
+     },
+     "message": "Focus node ID=10: missing focus_id"
+    }
+   ]
+  },
+  {
+   "name": "focus-broken-prereq",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [
+        [
+         "ghost"
+        ]
+       ],
+       "mutually_exclusive": []
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "focus_prereq_not_found",
+     "entity_ref": {
+      "type": "focus",
+      "id": 10,
+      "tree_id": 1
+     },
+     "detail": {
+      "focus_id": "f1",
+      "prereq": "ghost"
+     },
+     "message": "Focus 'f1': prerequisite 'ghost' not found in project"
+    }
+   ]
+  },
+  {
+   "name": "focus-broken-prereq-shared-pool",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "shared_pool",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [
+        [
+         "ghost"
+        ]
+       ],
+       "mutually_exclusive": []
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "focus_prereq_not_found",
+     "entity_ref": {
+      "type": "focus",
+      "id": 10,
+      "tree_id": 1
+     },
+     "detail": {
+      "focus_id": "f1",
+      "prereq": "ghost"
+     },
+     "message": "Focus 'f1': prerequisite 'ghost' not found in project"
+    }
+   ]
+  },
+  {
+   "name": "focus-cross-tree-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [
+        [
+         "f2"
+        ]
+       ],
+       "mutually_exclusive": []
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "tree_id": "t2",
+     "tree_kind": "own",
+     "nodes": [
+      {
+       "id": 20,
+       "focus_id": "f2",
+       "prerequisites": [],
+       "mutually_exclusive": []
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "focus-broken-mutex",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [],
+       "mutually_exclusive": [
+        "ghost"
+       ]
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "focus_mutex_not_found",
+     "entity_ref": {
+      "type": "focus",
+      "id": 10,
+      "tree_id": 1
+     },
+     "detail": {
+      "focus_id": "f1",
+      "mutex": "ghost"
+     },
+     "message": "Focus 'f1': mutually_exclusive 'ghost' not found in project"
+    }
+   ]
+  },
+  {
+   "name": "focus-empty-string-refs",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": [
+      {
+       "id": 10,
+       "focus_id": "f1",
+       "prerequisites": [
+        [
+         ""
+        ]
+       ],
+       "mutually_exclusive": [
+        ""
+       ]
+      }
+     ]
+    }
+   ],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "tech-missing-id",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "",
+     "prerequisites": []
+    }
+   ],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "tech_missing_id",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {},
+     "message": "Technology ID=1: missing tech_id"
+    }
+   ]
+  },
+  {
+   "name": "tech-broken-prereq",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [
+      "ghost"
+     ]
+    }
+   ],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_prereq_not_found",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {
+      "tech_id": "t_a",
+      "prereq": "ghost"
+     },
+     "message": "Tech 't_a': prerequisite 'ghost' not found (may be vanilla tech)"
+    }
+   ]
+  },
+  {
+   "name": "tech-prereq-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "t_a",
+     "prerequisites": [
+      "t_b"
+     ]
+    },
+    {
+     "id": 2,
+     "tech_id": "t_b",
+     "prerequisites": []
+    }
+   ],
+   "ideas": [],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "idea-missing-id",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "",
+     "modifier": null,
+     "is_designer": false,
+     "raw_extras": null,
+     "research_bonus": null
+    }
+   ],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "idea_missing_id",
+     "entity_ref": {
+      "type": "idea",
+      "id": 1
+     },
+     "detail": {},
+     "message": "Idea ID=1: missing idea_id"
+    },
+    {
+     "level": "warning",
+     "code": "idea_no_modifier",
+     "entity_ref": {
+      "type": "idea",
+      "id": 1
+     },
+     "detail": {
+      "idea_id": ""
+     },
+     "message": "Idea '': no modifier defined"
+    }
+   ]
+  },
+  {
+   "name": "idea-no-modifier",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "i1",
+     "modifier": null,
+     "is_designer": false,
+     "raw_extras": null,
+     "research_bonus": null
+    }
+   ],
+   "events": [],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "idea_no_modifier",
+     "entity_ref": {
+      "type": "idea",
+      "id": 1
+     },
+     "detail": {
+      "idea_id": "i1"
+     },
+     "message": "Idea 'i1': no modifier defined"
+    }
+   ]
+  },
+  {
+   "name": "idea-designer-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "i1",
+     "modifier": null,
+     "is_designer": true,
+     "raw_extras": null,
+     "research_bonus": null
+    }
+   ],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "idea-raw-extras-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "i1",
+     "modifier": null,
+     "is_designer": false,
+     "raw_extras": {
+      "a": 1
+     },
+     "research_bonus": null
+    }
+   ],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "idea-research-bonus-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "i1",
+     "modifier": null,
+     "is_designer": false,
+     "raw_extras": null,
+     "research_bonus": {
+      "a": 1
+     }
+    }
+   ],
+   "events": [],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "event-missing-id",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [
+    {
+     "id": 1,
+     "event_id": "",
+     "options": [],
+     "hidden": false,
+     "namespace_id": 3
+    }
+   ],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "event_missing_id",
+     "entity_ref": {
+      "type": "event",
+      "id": 1,
+      "namespace_id": 3
+     },
+     "detail": {},
+     "message": "Event ID=1: missing event_id"
+    },
+    {
+     "level": "warning",
+     "code": "event_no_options",
+     "entity_ref": {
+      "type": "event",
+      "id": 1,
+      "namespace_id": 3
+     },
+     "detail": {
+      "event_id": ""
+     },
+     "message": "Event '': no options defined"
+    }
+   ]
+  },
+  {
+   "name": "event-no-options",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [
+    {
+     "id": 1,
+     "event_id": "e.1",
+     "options": [],
+     "hidden": false,
+     "namespace_id": 3
+    }
+   ],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "event_no_options",
+     "entity_ref": {
+      "type": "event",
+      "id": 1,
+      "namespace_id": 3
+     },
+     "detail": {
+      "event_id": "e.1"
+     },
+     "message": "Event 'e.1': no options defined"
+    }
+   ]
+  },
+  {
+   "name": "event-hidden-ok",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [
+    {
+     "id": 1,
+     "event_id": "e.1",
+     "options": [],
+     "hidden": true,
+     "namespace_id": 3
+    }
+   ],
+   "decisions": [],
+   "issues": []
+  },
+  {
+   "name": "event-null-namespace",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [
+    {
+     "id": 1,
+     "event_id": "",
+     "options": [],
+     "hidden": false,
+     "namespace_id": null
+    }
+   ],
+   "decisions": [],
+   "issues": [
+    {
+     "level": "error",
+     "code": "event_missing_id",
+     "entity_ref": {
+      "type": "event",
+      "id": 1,
+      "namespace_id": null
+     },
+     "detail": {},
+     "message": "Event ID=1: missing event_id"
+    },
+    {
+     "level": "warning",
+     "code": "event_no_options",
+     "entity_ref": {
+      "type": "event",
+      "id": 1,
+      "namespace_id": null
+     },
+     "detail": {
+      "event_id": ""
+     },
+     "message": "Event '': no options defined"
+    }
+   ]
+  },
+  {
+   "name": "decision-missing-id",
+   "project": {
+    "id": 7,
+    "name": "Mod",
+    "country_tag": "GER"
+   },
+   "characters": [],
+   "trees": [],
+   "techs": [],
+   "ideas": [],
+   "events": [],
+   "decisions": [
+    {
+     "id": 1,
+     "decision_id": ""
+    }
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "decision_missing_id",
+     "entity_ref": {
+      "type": "decision",
+      "id": 1
+     },
+     "detail": {},
+     "message": "Decision ID=1: missing decision_id"
+    }
+   ]
+  },
+  {
+   "name": "mixed",
+   "project": {
+    "id": 7,
+    "name": "混合",
+    "country_tag": "GER"
+   },
+   "characters": [
+    {
+     "id": 1,
+     "tag": "GER_g",
+     "country_tag": "GER",
+     "role_type": "general",
+     "traits": [],
+     "advisor_traits": [],
+     "source": "created",
+     "replaces_vanilla_id": false,
+     "display_name_locs": {},
+     "name_en": "Name",
+     "name_zh": "",
+     "name": "Name"
+    }
+   ],
+   "trees": [
+    {
+     "id": 1,
+     "tree_id": "t1",
+     "tree_kind": "own",
+     "nodes": []
+    }
+   ],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "",
+     "prerequisites": []
+    }
+   ],
+   "ideas": [
+    {
+     "id": 1,
+     "idea_id": "i1",
+     "modifier": null,
+     "is_designer": false,
+     "raw_extras": null,
+     "research_bonus": null
+    }
+   ],
+   "events": [
+    {
+     "id": 1,
+     "event_id": "e.1",
+     "options": [],
+     "hidden": false,
+     "namespace_id": 3
+    }
+   ],
+   "decisions": [
+    {
+     "id": 1,
+     "decision_id": ""
+    }
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "mod_folder_name",
+     "entity_ref": null,
+     "detail": {
+      "name": "混合",
+      "folder": "mod_GER"
+     },
+     "message": "Mod folder name: project name '混合' is not ASCII — HOI4 needs an ASCII mod path, so the exported folder / .mod will be 'mod_GER' (the launcher display name stays '混合'). Set an ASCII project name to control the folder name."
+    },
+    {
+     "level": "warning",
+     "code": "character_no_military_traits",
+     "entity_ref": {
+      "type": "character",
+      "id": 1
+     },
+     "detail": {
+      "tag": "GER_g"
+     },
+     "message": "Character GER_g: no traits selected"
+    },
+    {
+     "level": "warning",
+     "code": "focus_tree_no_nodes",
+     "entity_ref": {
+      "type": "focus",
+      "id": 1
+     },
+     "detail": {
+      "tree_id": "t1"
+     },
+     "message": "Focus tree 't1': no nodes"
+    },
+    {
+     "level": "error",
+     "code": "tech_missing_id",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {},
+     "message": "Technology ID=1: missing tech_id"
+    },
+    {
+     "level": "warning",
+     "code": "idea_no_modifier",
+     "entity_ref": {
+      "type": "idea",
+      "id": 1
+     },
+     "detail": {
+      "idea_id": "i1"
+     },
+     "message": "Idea 'i1': no modifier defined"
+    },
+    {
+     "level": "warning",
+     "code": "event_no_options",
+     "entity_ref": {
+      "type": "event",
+      "id": 1,
+      "namespace_id": 3
+     },
+     "detail": {
+      "event_id": "e.1"
+     },
+     "message": "Event 'e.1': no options defined"
+    },
+    {
+     "level": "error",
+     "code": "decision_missing_id",
+     "entity_ref": {
+      "type": "decision",
+      "id": 1
+     },
+     "detail": {},
+     "message": "Decision ID=1: missing decision_id"
+    }
+   ]
+  }
+ ],
+ "core_codes": [
+  "character_advisor_traits_fallback",
+  "character_missing_name",
+  "character_no_military_traits",
+  "decision_missing_id",
+  "event_missing_id",
+  "event_no_options",
+  "focus_missing_id",
+  "focus_mutex_not_found",
+  "focus_prereq_not_found",
+  "focus_tree_no_nodes",
+  "idea_missing_id",
+  "idea_no_modifier",
+  "mod_folder_name",
+  "tech_missing_id",
+  "tech_prereq_not_found"
+ ]
+}

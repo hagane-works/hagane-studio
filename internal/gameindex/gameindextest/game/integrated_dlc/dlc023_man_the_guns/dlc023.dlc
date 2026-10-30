@@ -1,0 +1,5 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+name = "Man the Guns"
+path = "dlc/dlc023_man_the_guns"
+affects_checksum = yes
+category = "expansion"

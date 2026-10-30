@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "Scripted-GUI-Panel",
+    "description": "Startvorlage für eine Variablenübersicht: interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt."
+  },
+  "on_actions": {
+    "label": "on_actions-Hooks",
+    "description": "Hook-Datei mit Gerüsten für on_startup- und on_monthly-Effekte (additive Zusammenführung)."
+  },
+  "game_rules": {
+    "label": "Spielregel",
+    "description": "Spielregel mit zwei Optionen für den Bildschirm „Neues Spiel“ (additive Zusammenführung)."
+  },
+  "ai_strategy": {
+    "label": "KI-Strategie",
+    "description": "KI-Strategieblock, der für ein Länder-TAG gilt (additive Zusammenführung)."
+  },
+  "gfx_sprite": {
+    "label": "GFX-Sprite",
+    "description": "Sprite-Fragment, das GFX_'<key>' einer Texturdatei zuordnet; das Bild wird separat hochgeladen."
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "Breite der Lesezeichenplätze korrigieren",
+    "description": "Vorlage zum Überschreiben von frontendgamesetupview.gui, die mehrere Lesezeichen in Total-Conversion-Basismodifikationen sichtbar macht."
+  },
+  "defines": {
+    "label": "Defines-Anpassungen (Lua)",
+    "description": "Überschreibt einzelne NDefines-Enginekonstanten in Lua; kopiere niemals die gesamte 00_defines.lua."
+  },
+  "bop": {
+    "label": "Machtgleichgewicht",
+    "description": "Zweiseitige Leiste für das Machtgleichgewicht mit Bereichen und milden Modifikatoren; Aktivierung über set_power_balance."
+  },
+  "music": {
+    "label": "Titel für einen Musiksender",
+    "description": "Ein .asset- und ein .txt-Dateipaar fügt dem Sender base_music Titel hinzu; die .ogg-Datei wird separat hochgeladen."
+  },
+  "peace_conference": {
+    "label": "Kostenmodifikator der Friedenskonferenz",
+    "description": "Zeile für den Kostenmodifikator einer Friedensaktion (Startwert 1.0 ohne Auswirkung; additive Zusammenführung)."
+  }
+}

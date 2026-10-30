@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "Contrôles",
+  "paletteContainer": "Conteneur",
+  "paletteIcon": "Icône",
+  "paletteText": "Texte",
+  "paletteProgressbar": "Barre de progression",
+  "paletteButton": "Bouton",
+  "stageLoading": "Rendu de l'aperçu 1:1...",
+  "stageNotSavedTitle": "Pas encore compilé",
+  "stageNotSavedBody": "Enregistrez le panneau pour afficher l'aperçu 1:1 dans le jeu. Les contrôles provisoires apparaissent ci-dessous comme repères ambrés.",
+  "stageEmpty": "Ajoutez des contrôles depuis la palette ci-dessus.",
+  "stageError": "Échec du chargement de l'aperçu",
+  "ghostBadge": "brouillon",
+  "ghostHint": "Pas encore dans l'aperçu compilé. Enregistrez pour le rendre en 1:1.",
+  "ribbonEmpty": "Sélectionnez un contrôle sur le canevas. Ses liaisons apparaîtront ici.",
+  "ribbonGhost": "brouillon non enregistré",
+  "mockPreviewOn": "Aperçu en direct avec des exemples de valeurs de variables",
+  "addIntoPanel": "Ajoute au panneau",
+  "addIntoContainer": "Ajoute dans « {name} »"
+}

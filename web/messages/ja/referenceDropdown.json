@@ -1,0 +1,16 @@
+{
+  "entityDecision": "ディシジョン",
+  "entityEvent": "イベント",
+  "entityFocus": "国家方針",
+  "entityIdea": "国民精神",
+  "searchPlaceholder": "{entity} の ID または名前を検索…",
+  "all": "すべて",
+  "searchingBase": "ベース Mod を検索中…",
+  "projectBadge": "プロジェクト",
+  "baseBadge": "ベース Mod",
+  "noResults": "結果が見つかりませんでした。",
+  "emptyProject": "このプロジェクトに {entity} はありません。",
+  "emptyCategory": "このカテゴリに {entity} はありません。",
+  "promptManual": "{entity} ID を手動入力：",
+  "enterManually": "+ 手動で入力…"
+}

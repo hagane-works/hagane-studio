@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "espíritu nacional",
+    "character": "personaje",
+    "event": "evento",
+    "decision": "decisión",
+    "focus_node": "Enfoque Nacional (nodo del árbol)",
+    "tech": "tecnología"
+  },
+  "title": "Editar {noun} importado",
+  "desc": "<mono>{label}</mono> procede del juego base o de un mod cargado. ¿Qué ocurre si lo editas?",
+  "keepImportedTitle": "Conservar el original importado",
+  "keepImportedDesc": "Descartar este cambio. La exportación conserva el original del juego base o del mod.",
+  "overrideTitle": "Sobrescribir como edición del creador",
+  "overrideDesc": "Tras guardar, pasa a ser una edición propia y la exportación sobrescribe el original. El ID no cambia.",
+  "createCopyTitle": "Crear una copia nueva (cambiar ID)",
+  "createCopyDesc": "Tras guardar, se conserva el original importado y obtienes una {entityType} independiente. Ambos existen en la compilación."
+}

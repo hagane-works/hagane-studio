@@ -1,0 +1,494 @@
+[
+ {
+  "inputs": [
+   {
+    "bookmark_id": "scenario_1936",
+    "countries": [
+     {
+      "ideology": "fascism",
+      "interesting": true,
+      "labels": [],
+      "tag": "GER"
+     },
+     {
+      "ideology": "democratic",
+      "interesting": true,
+      "labels": [],
+      "tag": "USA"
+     }
+    ],
+    "default": true,
+    "default_country": "GER",
+    "emitted": true,
+    "filters": [
+     "new_content",
+     "continent"
+    ],
+    "path": "common/bookmarks/scenario_1936.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   },
+   {
+    "bookmark_id": "scenario_1939",
+    "countries": [
+     {
+      "ideology": "communism",
+      "interesting": true,
+      "labels": [],
+      "tag": "SOV"
+     }
+    ],
+    "default": false,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/scenario_1939.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "clean_two_bookmarks_one_default",
+  "result": {
+   "blocker_codes": [],
+   "findings": [],
+   "target_version": "1.19.2"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "a_start",
+    "countries": [],
+    "default": true,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/a_start.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   },
+   {
+    "bookmark_id": "b_start",
+    "countries": [],
+    "default": true,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/b_start.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "default_multiple",
+  "result": {
+   "blocker_codes": [
+    "bookmark.default_multiple"
+   ],
+   "findings": [
+    {
+     "code": "bookmark.default_multiple",
+     "evidence": {
+      "bookmark_ids": [
+       "a_start",
+       "b_start"
+      ],
+      "default_count": 2,
+      "paths": [
+       "common/bookmarks/a_start.txt",
+       "common/bookmarks/b_start.txt"
+      ]
+     },
+     "repair_route": "bookmarks.default.select_one",
+     "severity": "blocker",
+     "source": {
+      "identifier": "effective",
+      "kind": "bookmark_set"
+     }
+    }
+   ],
+   "target_version": "1.19.2"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "solo",
+    "countries": [
+     {
+      "ideology": "fascism",
+      "interesting": true,
+      "labels": [],
+      "tag": "GER"
+     }
+    ],
+    "default": false,
+    "default_country": "ITA",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/solo.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "default_country_not_interesting",
+  "result": {
+   "blocker_codes": [
+    "bookmark.default_country_not_interesting"
+   ],
+   "findings": [
+    {
+     "code": "bookmark.default_country_not_interesting",
+     "evidence": {
+      "default_country": "ITA",
+      "interesting_countries": [
+       "GER"
+      ]
+     },
+     "repair_route": "bookmark.default_country.choose_interesting",
+     "severity": "blocker",
+     "source": {
+      "identifier": "solo",
+      "kind": "bookmark",
+      "path": "common/bookmarks/solo.txt",
+      "provider": "created"
+     }
+    }
+   ],
+   "target_version": "1.19.2"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "labelled",
+    "countries": [
+     {
+      "ideology": "fascism",
+      "interesting": true,
+      "labels": [
+       "ok_label",
+       "bad label",
+       "q\"uote"
+      ],
+      "tag": "GER"
+     }
+    ],
+    "default": false,
+    "default_country": "",
+    "emitted": true,
+    "filters": [
+     "mystery_token",
+     "OK_LABEL",
+     "label"
+    ],
+    "path": "common/bookmarks/labelled.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "invalid_label_and_filter_created_blocks",
+  "result": {
+   "blocker_codes": [
+    "bookmark.country_label_invalid",
+    "bookmark.filter_invalid_for_target"
+   ],
+   "findings": [
+    {
+     "code": "bookmark.country_label_invalid",
+     "evidence": {
+      "invalid_labels": [
+       "bad label",
+       "q\"uote"
+      ],
+      "preserved": false
+     },
+     "repair_route": "bookmark.countries.labels.repair",
+     "severity": "blocker",
+     "source": {
+      "identifier": "labelled",
+      "kind": "bookmark",
+      "path": "common/bookmarks/labelled.txt",
+      "provider": "created"
+     }
+    },
+    {
+     "code": "bookmark.filter_invalid_for_target",
+     "evidence": {
+      "allowed_new_choices": [
+       "new_content",
+       "continent",
+       "label"
+      ],
+      "preserved": false,
+      "target_version": "1.19.2",
+      "tokens": [
+       "mystery_token",
+       "OK_LABEL"
+      ]
+     },
+     "repair_route": "bookmark.filters.choose_versioned",
+     "severity": "blocker",
+     "source": {
+      "identifier": "labelled",
+      "kind": "bookmark",
+      "path": "common/bookmarks/labelled.txt",
+      "provider": "created"
+     }
+    },
+    {
+     "code": "bookmark.filter_country_label_semantics",
+     "evidence": {
+      "country_labels": [
+       "ok_label"
+      ],
+      "filter_tokens": [
+       "OK_LABEL"
+      ],
+      "recommended_filter": "label"
+     },
+     "repair_route": "bookmark.filters.replace_country_values_with_label",
+     "severity": "warning",
+     "source": {
+      "identifier": "labelled",
+      "kind": "bookmark",
+      "path": "common/bookmarks/labelled.txt",
+      "provider": "created"
+     }
+    }
+   ],
+   "target_version": "1.19.2"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "old_import",
+    "countries": [
+     {
+      "ideology": "fascism",
+      "interesting": true,
+      "labels": [
+       "bad label"
+      ],
+      "tag": "GER"
+     }
+    ],
+    "default": false,
+    "default_country": "",
+    "emitted": true,
+    "filters": [
+     "mystery_token"
+    ],
+    "path": "common/bookmarks/old_import.txt",
+    "source": "imported",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "legacy_source_preserves",
+  "result": {
+   "blocker_codes": [],
+   "findings": [
+    {
+     "code": "bookmark.country_label_legacy_invalid_preserved",
+     "evidence": {
+      "invalid_labels": [
+       "bad label"
+      ],
+      "preserved": true
+     },
+     "repair_route": "bookmark.countries.labels.repair",
+     "severity": "warning",
+     "source": {
+      "identifier": "old_import",
+      "kind": "bookmark",
+      "path": "common/bookmarks/old_import.txt",
+      "provider": "imported"
+     }
+    },
+    {
+     "code": "bookmark.country_labels_filter_missing",
+     "evidence": {
+      "country_labels": [
+       "bad label"
+      ],
+      "filters": [
+       "mystery_token"
+      ]
+     },
+     "repair_route": "bookmark.filters.enable_label",
+     "severity": "warning",
+     "source": {
+      "identifier": "old_import",
+      "kind": "bookmark",
+      "path": "common/bookmarks/old_import.txt",
+      "provider": "imported"
+     }
+    },
+    {
+     "code": "bookmark.filter_legacy_unknown_preserved",
+     "evidence": {
+      "allowed_new_choices": [
+       "new_content",
+       "continent",
+       "label"
+      ],
+      "preserved": true,
+      "target_version": "1.19.2",
+      "tokens": [
+       "mystery_token"
+      ]
+     },
+     "repair_route": "bookmark.filters.choose_versioned",
+     "severity": "warning",
+     "source": {
+      "identifier": "old_import",
+      "kind": "bookmark",
+      "path": "common/bookmarks/old_import.txt",
+      "provider": "imported"
+     }
+    }
+   ],
+   "target_version": "1.19.2"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "no_ideology",
+    "countries": [
+     {
+      "ideology": null,
+      "interesting": true,
+      "labels": [],
+      "tag": "GER"
+     },
+     {
+      "ideology": null,
+      "interesting": true,
+      "labels": [],
+      "tag": " "
+     }
+    ],
+    "default": false,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/no_ideology.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "ideology_missing_warning_only",
+  "result": {
+   "blocker_codes": [],
+   "findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set",
+     "severity": "warning",
+     "source": {
+      "identifier": "no_ideology:GER",
+      "kind": "bookmark_country",
+      "path": "common/bookmarks/no_ideology.txt",
+      "provider": "created"
+     }
+    }
+   ],
+   "target_version": "1.19.2"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "future",
+    "countries": [],
+    "default": false,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/future.txt",
+    "source": "created",
+    "target_version": "1.20.0"
+   }
+  ],
+  "name": "unknown_version_registry_missing",
+  "result": {
+   "blocker_codes": [
+    "bookmark.filter_registry_missing"
+   ],
+   "findings": [
+    {
+     "code": "bookmark.filter_registry_missing",
+     "evidence": {
+      "target_versions": [
+       "1.20.0"
+      ]
+     },
+     "repair_route": "project.target_version.select_supported",
+     "severity": "blocker",
+     "source": {
+      "identifier": "future",
+      "kind": "bookmark",
+      "path": "common/bookmarks/future.txt",
+      "provider": "created"
+     }
+    }
+   ],
+   "target_version": "1.20.0"
+  }
+ },
+ {
+  "inputs": [
+   {
+    "bookmark_id": "  ",
+    "countries": [],
+    "default": true,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   },
+   {
+    "bookmark_id": "ghost",
+    "countries": [],
+    "default": true,
+    "default_country": "",
+    "emitted": false,
+    "filters": [],
+    "path": "common/bookmarks/ghost.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   },
+   {
+    "bookmark_id": "real",
+    "countries": [],
+    "default": true,
+    "default_country": "",
+    "emitted": true,
+    "filters": [],
+    "path": "common/bookmarks/real.txt",
+    "source": "created",
+    "target_version": "1.19.2"
+   }
+  ],
+  "name": "unemitted_and_blank_ignored",
+  "result": {
+   "blocker_codes": [],
+   "findings": [],
+   "target_version": "1.19.2"
+  }
+ }
+]

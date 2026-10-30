@@ -1,0 +1,26 @@
+{
+  "title": "Zusammenfassung der Flugvorbereitung",
+  "subtitle": "Überprüfen Sie, was vor dem Start des Imports gescannt wurde. Big Mods können eine Weile dauern — Hintergrundlauf einschalten, um während des Imports weiterzuarbeiten.",
+  "stat": {
+    "countries": "Länder (TAG)",
+    "characters": "Zeichen",
+    "ideas": "Nationalgeister",
+    "focus_trees": "Brennbäume",
+    "events": "Veranstaltungen",
+    "decisions": "Entscheidungen",
+    "dynamic_modifiers": "Dynamische Modifikatoren",
+    "superevents": "Super-Events"
+  },
+  "etaLabel": "Geschätzte Zeit",
+  "etaUnitMinutes": "{minutes}min",
+  "etaUnitSeconds": "~{seconds}s",
+  "etaUnit": "({mb} MBüber{files}Dateien)",
+  "etaFallback": "— (keine Angaben)",
+  "etaHint": "Grobe Schätzung basierend auf der Gesamtdateigröße. Die tatsächliche Zeit hängt von Festplatte und Computer ab.",
+  "backgroundToggleLabel": "Import im Hintergrund ausführen",
+  "backgroundToggleHint": "Schließen Sie diesen Dialog und arbeiten Sie weiter. Ein Widget unten rechts zeigt Fortschritt.",
+  "ctaContinue": "Import starten",
+  "ctaCancel": "Abbrechen",
+  "statFallback": "—",
+  "notAvailableHint": "Zähler mit    - -   -, sind während des Scans nicht verfügbar; sie werden in der Zusammenfassung nach dem Import erscheinen."
+}

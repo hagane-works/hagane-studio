@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows blocked Hagane Works from saving files",
+  "writeBlockedDescription": "Writing to {folder} was denied. If Ransomware protection (Controlled folder access) is on in Windows Security, allow HaganeWorks.exe through it, or pick a Creation folder outside protected folders such as Documents in Settings."
+}

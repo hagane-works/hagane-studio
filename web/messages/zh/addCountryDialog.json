@@ -1,0 +1,20 @@
+{
+  "title": "添加国家",
+  "sourceAriaLabel": "国家来源",
+  "tabVanilla": "原版",
+  "tabCustom": "自定义",
+  "countryTagLabel": "国家 TAG",
+  "displayNameLabel": "显示名称(可选)",
+  "vanillaNamePlaceholder": "默认使用原版国家名称",
+  "vanillaNameHint": "留空则使用原版 HOI4 名称。之后可以修改。",
+  "adding": "添加中...",
+  "addButton": "添加国家",
+  "customHint": "用于原版没有的架空国家(巴伐利亚、威尔士、得州……)。输入 2-5 位大写字母代码；若与原版 TAG 冲突，覆盖前会有提示。",
+  "customNamePlaceholder": "例如： 巴伐利亚王国",
+  "mapColorLabel": "地图颜色(可选)",
+  "mapColorAriaLabel": "地图颜色",
+  "mapColorAuto": "自动",
+  "graphicalCultureLabel": "美术风格(可选)",
+  "graphicalCultureAriaLabel": "美术风格",
+  "graphicalCultureAuto": "自动 (western_european_gfx)"
+}

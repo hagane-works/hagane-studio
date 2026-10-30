@@ -1,0 +1,10 @@
+﻿l_english:
+ infantry:0 "Infantry"
+ fighter:0 "Fighter"
+ infantry_equipment:0 "Infantry Equipment"
+ infantry_equipment_1:0 "$infantry_equipment$ I"
+ small_plane_airframe:0 "$fighter$"
+ small_plane_cas_airframe:0 "$small_plane_airframe$ (CAS)"
+ INFANTRY_TITLE_WEAPONS:0 "Weapons and\nEquipment"
+ INFANTRY_TITLE_MOTORISED:0 "Motorised"
+ SUPPORT_TITLE_TRAINS:0 "Trains"

@@ -1,0 +1,14 @@
+{
+  "roleCountryLeader": "Руководитель странового отделения",
+  "roleFieldMarshal": "Полевой маршал",
+  "roleCorpsCommander": "Командующий корпусом",
+  "roleAdmiral": "Адмирал",
+  "roleScientist": "Научный сотрудник",
+  "roleOperative": "Оперативная",
+  "roleAdvisor": "Советник",
+  "draft": "Проект",
+  "noPortrait": "Нет портрета",
+  "traits": "Произвольные",
+  "advisorSlot": "Слот советника",
+  "cost": "Стоимость{amount}"
+}

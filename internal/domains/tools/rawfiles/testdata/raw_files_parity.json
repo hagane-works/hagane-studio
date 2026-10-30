@@ -1,0 +1,669 @@
+{
+ "templates_registry": [
+  {
+   "key": "scripted_gui",
+   "label_en": "Scripted GUI panel",
+   "label_zh": "Scripted GUI 变量面板",
+   "desc_en": "Starting-point variable-overview panel: interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt.",
+   "desc_zh": "变量总览面板起步文件：interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt。",
+   "labels": {
+    "en": "Scripted GUI panel",
+    "zh": "Scripted GUI 变量面板",
+    "ru": "Панель Scripted GUI",
+    "de": "Scripted-GUI-Panel",
+    "es": "Panel de Scripted GUI",
+    "fr": "Panneau Scripted GUI",
+    "ja": "Scripted GUI パネル",
+    "ko": "Scripted GUI 패널"
+   },
+   "descriptions": {
+    "en": "Starting-point variable-overview panel: interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt.",
+    "zh": "变量总览面板起步文件：interface/<key>_hagane.gui + common/scripted_guis/<key>_hagane.txt。",
+    "ru": "Стартовая панель обзора переменных с GUI, scripted_gui и файлами локализации.",
+    "de": "Startpunkt für eine Variablenübersicht mit GUI, scripted_gui und Lokalisierung.",
+    "es": "Panel inicial de variables con GUI, scripted_gui y localización.",
+    "fr": "Panneau initial de variables avec GUI, scripted_gui et localisation.",
+    "ja": "GUI・scripted_gui・ローカライズを含む変数概要パネルの開始テンプレートです。",
+    "ko": "GUI, scripted_gui, 현지화 파일을 포함한 변수 개요 패널 시작점입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": ""
+  },
+  {
+   "key": "on_actions",
+   "label_en": "on_actions hooks",
+   "label_zh": "on_actions 钩子",
+   "desc_en": "Hook file with on_startup + on_monthly effect skeletons (additive merge).",
+   "desc_zh": "含 on_startup / on_monthly 骨架的钩子文件(叠加合并)。",
+   "labels": {
+    "en": "on_actions hooks",
+    "zh": "on_actions 钩子",
+    "ru": "Хуки on_actions",
+    "de": "on_actions-Hooks",
+    "es": "Ganchos de on_actions",
+    "fr": "Hooks on_actions",
+    "ja": "on_actions フック",
+    "ko": "on_actions 훅"
+   },
+   "descriptions": {
+    "en": "Hook file with on_startup + on_monthly effect skeletons (additive merge).",
+    "zh": "含 on_startup / on_monthly 骨架的钩子文件(叠加合并)。",
+    "ru": "Файл хуков с каркасами эффектов on_startup и on_monthly.",
+    "de": "Hook-Datei mit Effektgerüsten für on_startup und on_monthly.",
+    "es": "Archivo de ganchos con esqueletos de efectos on_startup y on_monthly.",
+    "fr": "Fichier de hooks avec squelettes d’effets on_startup et on_monthly.",
+    "ja": "on_startup と on_monthly の効果枠を含むフックファイルです。",
+    "ko": "on_startup 및 on_monthly 효과 골격이 있는 훅 파일입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "on-actions"
+  },
+  {
+   "key": "game_rules",
+   "label_en": "Game rule",
+   "label_zh": "自定义游戏规则",
+   "desc_en": "A two-option Game Rules row for the New Game screen (additive merge).",
+   "desc_zh": "新开局「游戏规则」界面的双选项规则行(叠加合并)。",
+   "labels": {
+    "en": "Game rule",
+    "zh": "自定义游戏规则",
+    "ru": "Игровое правило",
+    "de": "Spielregel",
+    "es": "Regla de juego",
+    "fr": "Règle de jeu",
+    "ja": "ゲームルール",
+    "ko": "게임 규칙"
+   },
+   "descriptions": {
+    "en": "A two-option Game Rules row for the New Game screen (additive merge).",
+    "zh": "新开局「游戏规则」界面的双选项规则行(叠加合并)。",
+    "ru": "Двухвариантное правило для экрана новой игры с локализацией.",
+    "de": "Spielregel mit zwei Optionen und Lokalisierung für den Neues-Spiel-Bildschirm.",
+    "es": "Regla de dos opciones para Nueva partida con localización.",
+    "fr": "Règle à deux options pour Nouvelle partie, avec localisation.",
+    "ja": "ローカライズ付きの二択ゲームルールです。",
+    "ko": "현지화가 포함된 2개 선택지 게임 규칙입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "game-rules"
+  },
+  {
+   "key": "ai_strategy",
+   "label_en": "AI strategy",
+   "label_zh": "AI 策略",
+   "desc_en": "AI strategy block gated on a country tag (additive merge).",
+   "desc_zh": "按国家 tag 生效的 AI 策略块(叠加合并)。",
+   "labels": {
+    "en": "AI strategy",
+    "zh": "AI 策略",
+    "ru": "Стратегия ИИ",
+    "de": "KI-Strategie",
+    "es": "Estrategia de IA",
+    "fr": "Stratégie de l’IA",
+    "ja": "AI 戦略",
+    "ko": "AI 전략"
+   },
+   "descriptions": {
+    "en": "AI strategy block gated on a country tag (additive merge).",
+    "zh": "按国家 tag 生效的 AI 策略块(叠加合并)。",
+    "ru": "Блок стратегии ИИ, ограниченный тегом страны.",
+    "de": "KI-Strategieblock, der auf einen Länder-TAG begrenzt ist.",
+    "es": "Bloque de estrategia de IA limitado por una etiqueta de país.",
+    "fr": "Bloc de stratégie IA limité à un TAG de pays.",
+    "ja": "国タグで制限する AI 戦略ブロックです。",
+    "ko": "국가 태그로 제한되는 AI 전략 블록입니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "ai-strategy"
+  },
+  {
+   "key": "gfx_sprite",
+   "label_en": "GFX sprite",
+   "label_zh": "GFX 贴图注册",
+   "desc_en": "Sprite fragment mapping GFX_<key> to a texturefile (ship the image separately).",
+   "desc_zh": "把 GFX_<key> 映射到贴图路径的 sprite 片段(图片需另行上传)。",
+   "labels": {
+    "en": "GFX sprite",
+    "zh": "GFX 贴图注册",
+    "ru": "Спрайт GFX",
+    "de": "GFX-Sprite",
+    "es": "Sprite GFX",
+    "fr": "Sprite GFX",
+    "ja": "GFX スプライト",
+    "ko": "GFX 스프라이트"
+   },
+   "descriptions": {
+    "en": "Sprite fragment mapping GFX_<key> to a texturefile (ship the image separately).",
+    "zh": "把 GFX_<key> 映射到贴图路径的 sprite 片段(图片需另行上传)。",
+    "ru": "Фрагмент спрайта GFX_<key>; изображение добавляется отдельно.",
+    "de": "Sprite-Fragment für GFX_<key>; Bild separat bereitstellen.",
+    "es": "Fragmento que asigna GFX_<key> a una textura; añade la imagen aparte.",
+    "fr": "Fragment associant GFX_<key> à une texture ; image fournie séparément.",
+    "ja": "GFX_<key> をテクスチャへ割り当てます。画像は別途追加します。",
+    "ko": "GFX_<key>를 텍스처에 연결합니다. 이미지는 별도로 추가합니다."
+   },
+   "main_param": "panel_key",
+   "route_path": "gfx"
+  },
+  {
+   "key": "defines",
+   "label_en": "Defines tweaks (Lua)",
+   "label_zh": "Defines 常数微调(Lua)",
+   "desc_en": "Override single NDefines engine constants in Lua (never copy 00_defines.lua).",
+   "desc_zh": "以 Lua 覆盖单个 NDefines 引擎常数(切勿整抄 00_defines.lua)。",
+   "labels": {
+    "en": "Defines tweaks (Lua)",
+    "zh": "Defines 常数微调(Lua)",
+    "ru": "Настройки Defines (Lua)",
+    "de": "Defines-Anpassungen (Lua)",
+    "es": "Ajustes de Defines (Lua)",
+    "fr": "Ajustements des Defines (Lua)",
+    "ja": "Defines 調整（Lua）",
+    "ko": "Defines 조정(Lua)"
+   },
+   "descriptions": {
+    "en": "Override single NDefines engine constants in Lua (never copy 00_defines.lua).",
+    "zh": "以 Lua 覆盖单个 NDefines 引擎常数(切勿整抄 00_defines.lua)。",
+    "ru": "Переопределение отдельных констант NDefines в Lua.",
+    "de": "Einzelne NDefines-Konstanten in Lua überschreiben.",
+    "es": "Sobrescribe constantes NDefines individuales en Lua.",
+    "fr": "Remplace des constantes NDefines individuelles en Lua.",
+    "ja": "Lua で個別の NDefines 定数を上書きします。",
+    "ko": "Lua에서 개별 NDefines 상수를 덮어씁니다."
+   },
+   "main_param": "key",
+   "route_path": "defines"
+  },
+  {
+   "key": "bop",
+   "label_en": "Balance of power",
+   "label_zh": "权力平衡(BoP)",
+   "desc_en": "A two-side balance-of-power bar with ranges + mild modifiers; activate via set_power_balance.",
+   "desc_zh": "双阵营权力平衡条(含区间与温和 modifier),需 set_power_balance 激活。",
+   "labels": {
+    "en": "Balance of power",
+    "zh": "权力平衡(BoP)",
+    "ru": "Баланс сил",
+    "de": "Machtgleichgewicht",
+    "es": "Equilibrio de poder",
+    "fr": "Équilibre des pouvoirs",
+    "ja": "勢力均衡",
+    "ko": "권력 균형"
+   },
+   "descriptions": {
+    "en": "A two-side balance-of-power bar with ranges + mild modifiers; activate via set_power_balance.",
+    "zh": "双阵营权力平衡条(含区间与温和 modifier),需 set_power_balance 激活。",
+    "ru": "Двусторонняя шкала баланса сил с диапазонами и локализацией.",
+    "de": "Zweiseitiges Machtgleichgewicht mit Bereichen und Lokalisierung.",
+    "es": "Barra de equilibrio de poder con dos lados, rangos y localización.",
+    "fr": "Barre d’équilibre des pouvoirs à deux camps avec plages et localisation.",
+    "ja": "範囲とローカライズを含む二陣営の勢力均衡バーです。",
+    "ko": "범위와 현지화를 포함한 양측 권력 균형 막대입니다."
+   },
+   "main_param": "key",
+   "route_path": "bop"
+  },
+  {
+   "key": "music",
+   "label_en": "Music station songs",
+   "label_zh": "音乐电台曲目",
+   "desc_en": "Paired .asset + .txt adding songs to the base_music station; upload the .ogg separately.",
+   "desc_zh": ".asset+.txt 成对把曲目挂到 base_music 电台;.ogg 音频需另行上传。",
+   "labels": {
+    "en": "Music station songs",
+    "zh": "音乐电台曲目",
+    "ru": "Музыкальные композиции",
+    "de": "Musiksender-Titel",
+    "es": "Pistas de la emisora",
+    "fr": "Morceaux de la station",
+    "ja": "音楽ステーションの曲",
+    "ko": "음악 방송국 트랙"
+   },
+   "descriptions": {
+    "en": "Paired .asset + .txt adding songs to the base_music station; upload the .ogg separately.",
+    "zh": ".asset+.txt 成对把曲目挂到 base_music 电台;.ogg 音频需另行上传。",
+    "ru": "Пара .asset и .txt с локализацией; файл .ogg добавляется отдельно.",
+    "de": "Gekoppelte .asset- und .txt-Dateien mit Lokalisierung; .ogg separat hochladen.",
+    "es": "Par .asset y .txt con localización; sube el .ogg por separado.",
+    "fr": "Paire .asset + .txt avec localisation ; téléversez le .ogg séparément.",
+    "ja": "ローカライズ付き .asset + .txt。ogg は別途アップロードします。",
+    "ko": "현지화가 포함된 .asset + .txt 쌍이며 .ogg는 별도로 업로드합니다."
+   },
+   "main_param": "key",
+   "route_path": "music"
+  },
+  {
+   "key": "peace_conference",
+   "label_en": "Peace conference cost modifier",
+   "label_zh": "和会成本修正",
+   "desc_en": "A peace-action cost modifier row (ships as a 1.0 no-op; additive merge).",
+   "desc_zh": "和会行动成本修正(默认 1.0 无副作用起步;叠加合并)。",
+   "labels": {
+    "en": "Peace conference cost modifier",
+    "zh": "和会成本修正",
+    "ru": "Модификатор стоимости мирной конференции",
+    "de": "Kostenmodifikator für Friedenskonferenzen",
+    "es": "Modificador de coste de conferencia de paz",
+    "fr": "Modificateur de coût de conférence de paix",
+    "ja": "講和会議コスト補正",
+    "ko": "평화 회담 비용 보정"
+   },
+   "descriptions": {
+    "en": "A peace-action cost modifier row (ships as a 1.0 no-op; additive merge).",
+    "zh": "和会行动成本修正(默认 1.0 无副作用起步;叠加合并)。",
+    "ru": "Стартовый модификатор стоимости действия на мирной конференции.",
+    "de": "Startpunkt für einen Kostenmodifikator einer Friedensaktion.",
+    "es": "Modificador inicial del coste de una acción de paz.",
+    "fr": "Modificateur initial du coût d’une action de paix.",
+    "ja": "講和アクションのコスト補正テンプレートです。",
+    "ko": "평화 회담 행동 비용 보정 시작 템플릿입니다."
+   },
+   "main_param": "key",
+   "route_path": "peace-conference"
+  }
+ ],
+ "builder_cases": [
+  {
+   "template": "scripted_gui",
+   "files": [
+    {
+     "dest_path": "interface/my_panel_hagane.gui",
+     "content": "# TEMPLATE generated by Hagane Works.\n# STARTING POINT — adjust positions/sprites/variables and VERIFY IN-GAME.\n# Numeric variables are shown via [?var|N] inside generated localisation. If you add a\n# close button, its clickable hitbox MUST come from a buttonType's\n# quadTextureSprite (a bare spriteType renders but isn't clickable) — see the\n# Hagane Works superevent template for the working idiom.\nguiTypes = {\n\n\tcontainerWindowType = {\n\t\tname = \"my_panel_window\"\n\t\torientation = upper_right\n\t\tOrigo = upper_right\n\t\tsize = { width = 420 height = 144 }\n\t\tposition = { x = -20 y = 120 }\n\t\tmoveable = yes\n\n\t\tbackground = {\n\t\t\tname = \"Background\"\n\t\t\tquadTextureSprite = \"GFX_tiled_window_transparent\"\n\t\t}\n\n\t\tinstantTextBoxType = {\n\t\t\tname = \"my_panel_title\"\n\t\t\tposition = { x = 0 y = 16 }\n\t\t\tfont = \"hoi_30header\"\n\t\t\ttext = \"my_panel_TITLE\"\n\t\t\tmaxWidth = 420\n\t\t\tmaxHeight = 36\n\t\t\tfixedsize = yes\n\t\t\tformat = center\n\t\t}\n\n\t\tinstantTextBoxType = {\n\t\t\tname = \"my_panel_row_0\"\n\t\t\tposition = { x = 24 y = 64 }\n\t\t\tfont = \"hoi_18mbs\"\n\t\t\ttext = \"my_panel_ROW_0\"\n\t\t\tmaxWidth = 372\n\t\t\tmaxHeight = 24\n\t\t}\n\n\t\tinstantTextBoxType = {\n\t\t\tname = \"my_panel_row_1\"\n\t\t\tposition = { x = 24 y = 92 }\n\t\t\tfont = \"hoi_18mbs\"\n\t\t\ttext = \"my_panel_ROW_1\"\n\t\t\tmaxWidth = 372\n\t\t\tmaxHeight = 24\n\t\t}\n\t}\n}\n"
+    },
+    {
+     "dest_path": "common/scripted_guis/my_panel_hagane.txt",
+     "content": "# TEMPLATE generated by Hagane Works.\n# Binds my_panel.gui. context_type = player_context shows it for the human player;\n# `visible = always` shows it unconditionally — GATE this with your own trigger\n# (e.g. `tag = FNG` or `has_country_flag = ...`) so it only appears for the\n# relevant country. [?var] text updates live, so no `dirty` refresh is needed for\n# a read-only overview.\nscripted_gui = {\n\tmy_panel = {\n\t\tcontext_type = player_context\n\t\twindow_name = \"my_panel_window\"\n\n\t\tvisible = {\n\t\t\talways = yes\n\t\t}\n\t}\n}\n"
+    },
+    {
+     "dest_path": "localisation/english/my_panel_scripted_gui_l_english.yml",
+     "content": "﻿l_english:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/simp_chinese/my_panel_scripted_gui_l_simp_chinese.yml",
+     "content": "﻿l_simp_chinese:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/russian/my_panel_scripted_gui_l_russian.yml",
+     "content": "﻿l_russian:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/german/my_panel_scripted_gui_l_german.yml",
+     "content": "﻿l_german:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/spanish/my_panel_scripted_gui_l_spanish.yml",
+     "content": "﻿l_spanish:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/french/my_panel_scripted_gui_l_french.yml",
+     "content": "﻿l_french:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/japanese/my_panel_scripted_gui_l_japanese.yml",
+     "content": "﻿l_japanese:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    },
+    {
+     "dest_path": "localisation/korean/my_panel_scripted_gui_l_korean.yml",
+     "content": "﻿l_korean:\n my_panel_TITLE:0 \"My Panel\"\n my_panel_ROW_0:0 \"My Var: [?my_var|0]\"\n my_panel_ROW_1:0 \"第二个: [?second_var|0]\"\n"
+    }
+   ]
+  },
+  {
+   "template": "on_actions",
+   "files": [
+    {
+     "dest_path": "common/on_actions/my_hooks_on_actions.txt",
+     "content": "# TEMPLATE generated by Hagane Works.\n# STARTING POINT — fill the effect block(s) and VERIFY IN-GAME.\n# on_actions MERGES additively across files, so this NEW file is added to the\n# base mod's hooks (it does NOT replace them). Each hook below fires its\n# `effect = { ... }` at the matching game moment. Real hook tokens include\n# on_startup, on_monthly, on_weekly, on_daily, on_government_change,\n# on_capitulation, on_war, etc. — see common/on_actions/00_on_actions.txt.\n# DELETE the hooks you don't need; an empty effect block is a harmless no-op.\non_actions = {\n\n\ton_startup = {\n\t\teffect = {\n\t\t\t# Fired once when the game / save starts. Scope is no country —\n\t\t\t# use `every_country`, a TAG scope, or `random_country` inside.\n\t\t\t# Example:\n\t\t\t# GER = { set_country_flag = my_hooks_started }\n\t\t}\n\t}\n\n\ton_monthly = {\n\t\teffect = {\n\t\t\t# Fired once per in-game month, scoped to each country in turn\n\t\t\t# (ROOT = the country being pulsed). GATE with a `limit` /\n\t\t\t# `if = { limit = { ... } ... }` so it only runs where relevant.\n\t\t\t# Example:\n\t\t\t# if = { limit = { tag = GER } add_political_power = 5 }\n\t\t}\n\t}\n}\n"
+    }
+   ]
+  },
+  {
+   "template": "game_rules",
+   "files": [
+    {
+     "dest_path": "common/game_rules/my_rules_game_rules.txt",
+     "content": "# TEMPLATE generated by Hagane Works.\n# STARTING POINT — adjust the options + loc keys and VERIFY IN-GAME.\n# Each top-level token is one rule row in the New Game > Game Rules screen.\n# Rule `name` / `group` and option `text` / `desc` are LOCALISATION KEYS.\n# Each option `name` is its script token for `has_game_rule`, not localisation.\n# Hagane Works emits language-specific YML companions for every key below.\n# The first option is the default unless a `default = { ... }` block overrides\n# it. Read the rule the engine sets via `has_game_rule = { rule = my_rules option = OPTION_TOKEN }`.\n# See common/game_rules/00_game_rules.txt for the full schema.\nmy_rules = {\n\tname = \"my_rules_RULE_NAME\"\n\tgroup = \"my_rules_RULE_GROUP\"\n\n\toption = {\n\t\tname = \"DEFAULT\"\n\t\ttext = \"my_rules_OPTION_DEFAULT\"\n\t\tdesc = \"my_rules_OPTION_DEFAULT_DESC\"\n\t}\n\toption = {\n\t\tname = \"ALT\"\n\t\ttext = \"my_rules_OPTION_ALT\"\n\t\tdesc = \"my_rules_OPTION_ALT_DESC\"\n\t}\n}\n"
+    },
+    {
+     "dest_path": "localisation/english/my_rules_game_rules_l_english.yml",
+     "content": "﻿l_english:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"Default\"\n my_rules_OPTION_DEFAULT_DESC:0 \"Use the default setting.\"\n my_rules_OPTION_ALT:0 \"Alternative\"\n my_rules_OPTION_ALT_DESC:0 \"Use the alternative setting.\"\n my_rules_RULE_GROUP:0 \"My Rule Title — Group\"\n"
+    },
+    {
+     "dest_path": "localisation/simp_chinese/my_rules_game_rules_l_simp_chinese.yml",
+     "content": "﻿l_simp_chinese:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"默认\"\n my_rules_OPTION_DEFAULT_DESC:0 \"使用默认设置。\"\n my_rules_OPTION_ALT:0 \"替代\"\n my_rules_OPTION_ALT_DESC:0 \"使用替代设置。\"\n my_rules_RULE_GROUP:0 \"My Rule Title — 分组\"\n"
+    },
+    {
+     "dest_path": "localisation/russian/my_rules_game_rules_l_russian.yml",
+     "content": "﻿l_russian:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"По умолчанию\"\n my_rules_OPTION_DEFAULT_DESC:0 \"Использовать настройку по умолчанию.\"\n my_rules_OPTION_ALT:0 \"Альтернатива\"\n my_rules_OPTION_ALT_DESC:0 \"Использовать альтернативную настройку.\"\n my_rules_RULE_GROUP:0 \"My Rule Title — Группа\"\n"
+    },
+    {
+     "dest_path": "localisation/german/my_rules_game_rules_l_german.yml",
+     "content": "﻿l_german:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"Standard\"\n my_rules_OPTION_DEFAULT_DESC:0 \"Standardeinstellung verwenden.\"\n my_rules_OPTION_ALT:0 \"Alternative\"\n my_rules_OPTION_ALT_DESC:0 \"Alternative Einstellung verwenden.\"\n my_rules_RULE_GROUP:0 \"My Rule Title — Gruppe\"\n"
+    },
+    {
+     "dest_path": "localisation/spanish/my_rules_game_rules_l_spanish.yml",
+     "content": "﻿l_spanish:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"Predeterminada\"\n my_rules_OPTION_DEFAULT_DESC:0 \"Usar la configuración predeterminada.\"\n my_rules_OPTION_ALT:0 \"Alternativa\"\n my_rules_OPTION_ALT_DESC:0 \"Usar la configuración alternativa.\"\n my_rules_RULE_GROUP:0 \"My Rule Title — Grupo\"\n"
+    },
+    {
+     "dest_path": "localisation/french/my_rules_game_rules_l_french.yml",
+     "content": "﻿l_french:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"Par défaut\"\n my_rules_OPTION_DEFAULT_DESC:0 \"Utiliser le réglage par défaut.\"\n my_rules_OPTION_ALT:0 \"Alternative\"\n my_rules_OPTION_ALT_DESC:0 \"Utiliser le réglage alternatif.\"\n my_rules_RULE_GROUP:0 \"My Rule Title — Groupe\"\n"
+    },
+    {
+     "dest_path": "localisation/japanese/my_rules_game_rules_l_japanese.yml",
+     "content": "﻿l_japanese:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"デフォルト\"\n my_rules_OPTION_DEFAULT_DESC:0 \"デフォルト設定を使用します。\"\n my_rules_OPTION_ALT:0 \"代替\"\n my_rules_OPTION_ALT_DESC:0 \"代替設定を使用します。\"\n my_rules_RULE_GROUP:0 \"My Rule Title — グループ\"\n"
+    },
+    {
+     "dest_path": "localisation/korean/my_rules_game_rules_l_korean.yml",
+     "content": "﻿l_korean:\n my_rules_RULE_NAME:0 \"My Rule Title\"\n my_rules_OPTION_DEFAULT:0 \"기본값\"\n my_rules_OPTION_DEFAULT_DESC:0 \"기본 설정을 사용합니다.\"\n my_rules_OPTION_ALT:0 \"대안\"\n my_rules_OPTION_ALT_DESC:0 \"대안 설정을 사용합니다.\"\n my_rules_RULE_GROUP:0 \"My Rule Title — 그룹\"\n"
+    }
+   ]
+  },
+  {
+   "template": "ai_strategy",
+   "files": [
+    {
+     "dest_path": "common/ai_strategy/my_strat_ai_strategy.txt",
+     "content": "# TEMPLATE generated by Hagane Works.\n# STARTING POINT — set the strategy type/id/value rows and VERIFY IN-GAME.\n# `allowed` gates WHICH country this block applies to (original_tag = GER);\n# `enable` is a trigger re-checked over time (always = yes = always on).\n# Each `ai_strategy = { type = X id = Y value = N }` row nudges the AI — the\n# valid `type` tokens (befriend, conquer, role_ratio, build_army, ignore, …)\n# and what `id` means depend on the type. See common/ai_strategy/*.txt\n# (e.g. ENG.txt) for working rows to copy.\nmy_strat_strategy = {\n\n\tallowed = { original_tag = GER }\n\tenable = {\n\t\talways = yes\n\t}\n\tabort_when_not_enabled = yes\n\n\t# Example row — replace type/id/value with a real strategy:\n\tai_strategy = {\n\t\ttype = role_ratio\n\t\tid = garrison\n\t\tvalue = 5\n\t}\n}\n"
+    }
+   ]
+  },
+  {
+   "template": "gfx",
+   "files": [
+    {
+     "dest_path": "interface/my_sprite_hagane.gfx",
+     "content": "# TEMPLATE generated by Hagane Works.\n# STARTING POINT — point each texturefile at a real asset and VERIFY IN-GAME.\n# Each SpriteType maps a `GFX_*` name (referenced from .gui / focus icon /\n# event picture / decision icon) to a texturefile path RELATIVE TO THE MOD ROOT.\n# The .dds / .png must actually ship at that path (upload it as a binary raw\n# override, or place it under gfx/ in your export). A name with no file behind\n# it renders as a missing-texture placeholder. See interface/goals.gfx for the\n# vanilla idiom.\nspriteTypes = {\n\n\tSpriteType = {\n\t\tname = \"GFX_my_sprite\"\n\t\ttexturefile = \"gfx/interface/my_sprite.dds\"\n\t}\n}\n"
+    }
+   ]
+  },
+  {
+   "template": "defines",
+   "files": [
+    {
+     "dest_path": "common/defines/my_tweaks_tweaks.lua",
+     "content": "-- TEMPLATE generated by Hagane Works (domain: common/defines).\n-- File: common/defines/my_tweaks_tweaks.lua\n-- STARTING POINT — change the values (or add more NDefines lines) and VERIFY IN-GAME.\n--\n-- Defines are Lua, not PDXscript: each line stands alone and there is NO comma\n-- at the end of a line (a stray comma CRASHES the game on launch). Override\n-- only the single constants you need — NEVER copy the whole vanilla\n-- 00_defines.lua / 00_graphics.lua into a mod (they change even in minor game\n-- patches; a stale copy with a missing define makes the game unstable).\n--\n-- 开局日期请用项目设置的「开局时间」,不要在此写 START_DATE(END_DATE 同理,\n-- 请用项目设置管理时间线)。 / Set the campaign start date in the project\n-- settings — do NOT assign the game start/end date constants in this file.\n--\n-- The lines below ship the VANILLA DEFAULTS (1.19), so this file is a safe\n-- no-op as-is — edit a number and THAT is the change (takes effect on the\n-- next game launch). Full catalogue of names: the game's\n-- common/defines/00_defines.lua (read it as reference only — never copy it).\n\n-- Days before an un-scripted event popup times out (vanilla: 13; e.g. 30 = popups linger longer).\nNDefines.NGame.EVENT_TIMEOUT_DEFAULT = 13\n\n-- Base research slots per country (vanilla: 2; e.g. 3 = everyone researches faster).\nNDefines.NCountry.BASE_RESEARCH_SLOTS = 2\n\n-- Days a truce lasts after a peace (vanilla: 180; e.g. 365 = a full year).\nNDefines.NDiplomacy.BASE_TRUCE_PERIOD = 180\n"
+    }
+   ]
+  },
+  {
+   "template": "bop",
+   "files": [
+    {
+     "dest_path": "common/bop/my_bop_bop.txt",
+     "content": "# TEMPLATE generated by Hagane Works (domain: common/bop).\n# STARTING POINT — rename the sides/ranges, set real modifiers + icons, and VERIFY IN-GAME.\n# A balance of power shows NOTHING until a script activates it on a country:\n#   set_power_balance = { id = my_bop_balance }\n# (fire that from a focus completion_reward / event option / on_action), then push it with\n#   add_power_balance_value = { id = my_bop_balance value = 0.05 }\n# The bar/side names read localisation keys (the BoP id + side/range ids).\n# Hagane Works emits language-specific YML companions for every generated key.\n# `icon` must be an existing sprite (interface/*.gfx); GFX_idea_unknown always exists.\n# Vanilla covers the FULL [-1, 1] with ranges (centre + one per side) — keep it covered\n# so every value the bar can reach lands in a range.\nmy_bop_balance = {\n\tinitial_value = 0\n\tleft_side = my_bop_left\n\tright_side = my_bop_right\n\t# Optional: pull a decision category into the balance-of-power view:\n\t# decision_category = my_bop_decisions\n\n\trange = {\n\t\tid = my_bop_centre\n\t\tmin = -0.1\n\t\tmax = 0.1\n\t\t# The centre range is deliberately neutral — no modifier.\n\t}\n\n\tside = {\n\t\tid = my_bop_left\n\t\ticon = GFX_idea_unknown\n\t\trange = {\n\t\t\tid = my_bop_left_range\n\t\t\tmin = -1\n\t\t\tmax = -0.1\n\t\t\tmodifier = {\n\t\t\t\t# Mild placeholder — replace with this side's real effects.\n\t\t\t\tstability_weekly = 0.001\n\t\t\t}\n\t\t}\n\t}\n\n\tside = {\n\t\tid = my_bop_right\n\t\ticon = GFX_idea_unknown\n\t\trange = {\n\t\t\tid = my_bop_right_range\n\t\t\tmin = 0.1\n\t\t\tmax = 1\n\t\t\tmodifier = {\n\t\t\t\twar_support_weekly = 0.001\n\t\t\t}\n\t\t}\n\t}\n}\n"
+    },
+    {
+     "dest_path": "localisation/english/my_bop_bop_l_english.yml",
+     "content": "﻿l_english:\n my_bop_balance:0 \"Balance of Power\"\n my_bop_left:0 \"Left\"\n my_bop_right:0 \"Right\"\n my_bop_centre:0 \"Centre\"\n my_bop_left_range:0 \"Left Ascendant\"\n my_bop_right_range:0 \"Right Ascendant\"\n"
+    },
+    {
+     "dest_path": "localisation/simp_chinese/my_bop_bop_l_simp_chinese.yml",
+     "content": "﻿l_simp_chinese:\n my_bop_balance:0 \"权力平衡\"\n my_bop_left:0 \"左翼\"\n my_bop_right:0 \"右翼\"\n my_bop_centre:0 \"中间\"\n my_bop_left_range:0 \"左翼占优\"\n my_bop_right_range:0 \"右翼占优\"\n"
+    },
+    {
+     "dest_path": "localisation/russian/my_bop_bop_l_russian.yml",
+     "content": "﻿l_russian:\n my_bop_balance:0 \"Баланс сил\"\n my_bop_left:0 \"Левая сторона\"\n my_bop_right:0 \"Правая сторона\"\n my_bop_centre:0 \"Центр\"\n my_bop_left_range:0 \"Преимущество левых\"\n my_bop_right_range:0 \"Преимущество правых\"\n"
+    },
+    {
+     "dest_path": "localisation/german/my_bop_bop_l_german.yml",
+     "content": "﻿l_german:\n my_bop_balance:0 \"Machtgleichgewicht\"\n my_bop_left:0 \"Linke Seite\"\n my_bop_right:0 \"Rechte Seite\"\n my_bop_centre:0 \"Mitte\"\n my_bop_left_range:0 \"Linke Seite überlegen\"\n my_bop_right_range:0 \"Rechte Seite überlegen\"\n"
+    },
+    {
+     "dest_path": "localisation/spanish/my_bop_bop_l_spanish.yml",
+     "content": "﻿l_spanish:\n my_bop_balance:0 \"Equilibrio de poder\"\n my_bop_left:0 \"Izquierda\"\n my_bop_right:0 \"Derecha\"\n my_bop_centre:0 \"Centro\"\n my_bop_left_range:0 \"Predominio de la izquierda\"\n my_bop_right_range:0 \"Predominio de la derecha\"\n"
+    },
+    {
+     "dest_path": "localisation/french/my_bop_bop_l_french.yml",
+     "content": "﻿l_french:\n my_bop_balance:0 \"Équilibre des pouvoirs\"\n my_bop_left:0 \"Gauche\"\n my_bop_right:0 \"Droite\"\n my_bop_centre:0 \"Centre\"\n my_bop_left_range:0 \"Ascendant de la gauche\"\n my_bop_right_range:0 \"Ascendant de la droite\"\n"
+    },
+    {
+     "dest_path": "localisation/japanese/my_bop_bop_l_japanese.yml",
+     "content": "﻿l_japanese:\n my_bop_balance:0 \"勢力均衡\"\n my_bop_left:0 \"左派\"\n my_bop_right:0 \"右派\"\n my_bop_centre:0 \"中央\"\n my_bop_left_range:0 \"左派優勢\"\n my_bop_right_range:0 \"右派優勢\"\n"
+    },
+    {
+     "dest_path": "localisation/korean/my_bop_bop_l_korean.yml",
+     "content": "﻿l_korean:\n my_bop_balance:0 \"권력 균형\"\n my_bop_left:0 \"좌측\"\n my_bop_right:0 \"우측\"\n my_bop_centre:0 \"중앙\"\n my_bop_left_range:0 \"좌측 우세\"\n my_bop_right_range:0 \"우측 우세\"\n"
+    }
+   ]
+  },
+  {
+   "template": "music",
+   "files": [
+    {
+     "dest_path": "music/my_music_music.txt",
+     "content": "# TEMPLATE generated by Hagane Works (domain: music/).\n# STARTING POINT — assigns the song(s) defined in my_music_music.asset to a radio station.\n# `base_music` is the vanilla soundtrack station, so this file needs NO extra UI:\n# once the .ogg is in place your track joins the default in-game rotation.\n# For a NAMED custom station instead, change music_station to \"my_music_station\" AND ship\n# the station UI (an interface/*.gui faceplate + a .gfx album sprite + a loc key) —\n# without that UI a custom station is not selectable in the music player.\nmusic_station = \"base_music\"\n\nmusic = {\n\tsong = \"my_music_track_1\"\n\tchance = {\n\t\tbase = 1\n\t\t# Weighted-shuffle weighting — e.g. make it peace-time only:\n\t\t# modifier = { factor = 0 has_war = yes }\n\t}\n}\n\n# Add one music = { song = ... } block per extra track (song ids come from the .asset).\n"
+    },
+    {
+     "dest_path": "music/my_music_music.asset",
+     "content": "# TEMPLATE generated by Hagane Works (domain: music/).\n# STARTING POINT — one song definition per track. `name` is the song id AND its\n# localisation key; language-specific YML companions are generated automatically.\n# `file` is the .ogg filename in THIS same music/ folder.\n# The audio itself is NOT generated: upload your audio as a raw BINARY override\n# at dest_path music/my_music_track_1.ogg (OGG Vorbis). A missing .ogg logs an\n# error and the track is skipped — not a crash — but ship it before release.\nmusic = {\n\tname = \"my_music_track_1\"\n\tfile = \"my_music_track_1.ogg\"\n\tvolume = 0.65\n}\n\n# Add more music = { ... } blocks here, one per track (name must stay unique).\n"
+    },
+    {
+     "dest_path": "localisation/english/my_music_music_l_english.yml",
+     "content": "﻿l_english:\n my_music_track_1:0 \"Track 1\"\n"
+    },
+    {
+     "dest_path": "localisation/simp_chinese/my_music_music_l_simp_chinese.yml",
+     "content": "﻿l_simp_chinese:\n my_music_track_1:0 \"曲目 1\"\n"
+    },
+    {
+     "dest_path": "localisation/russian/my_music_music_l_russian.yml",
+     "content": "﻿l_russian:\n my_music_track_1:0 \"Композиция 1\"\n"
+    },
+    {
+     "dest_path": "localisation/german/my_music_music_l_german.yml",
+     "content": "﻿l_german:\n my_music_track_1:0 \"Titel 1\"\n"
+    },
+    {
+     "dest_path": "localisation/spanish/my_music_music_l_spanish.yml",
+     "content": "﻿l_spanish:\n my_music_track_1:0 \"Pista 1\"\n"
+    },
+    {
+     "dest_path": "localisation/french/my_music_music_l_french.yml",
+     "content": "﻿l_french:\n my_music_track_1:0 \"Piste 1\"\n"
+    },
+    {
+     "dest_path": "localisation/japanese/my_music_music_l_japanese.yml",
+     "content": "﻿l_japanese:\n my_music_track_1:0 \"トラック 1\"\n"
+    },
+    {
+     "dest_path": "localisation/korean/my_music_music_l_korean.yml",
+     "content": "﻿l_korean:\n my_music_track_1:0 \"트랙 1\"\n"
+    }
+   ]
+  },
+  {
+   "template": "peace_conference",
+   "files": [
+    {
+     "dest_path": "common/peace_conference/cost_modifiers/my_peace_peace_cost_modifiers.txt",
+     "content": "# TEMPLATE generated by Hagane Works (domain: common/peace_conference/cost_modifiers).\n# STARTING POINT — point `enable` at your case, tune cost_multiplier, and VERIFY IN-GAME.\n# Scripted COST MODIFIERS for peace-conference actions. All modifiers active on an\n# action MULTIPLY together — keep values near 1.0 (roughly 0.4-3.0; must be > 0).\n# Scopes available inside `enable` (peace-conference specific):\n#   ROOT           = negotiator (whose conference turn it is)\n#   FROM           = taker (owner AFTER the conference)\n#   FROM.FROM      = giver (owner BEFORE the conference)\n#   FROM.FROM.FROM = the state (for state-targeted actions)\n# peace_action_type: take_states / puppet / force_government / liberate — one token\n# or an array like { puppet liberate }.\n# Ownership/diplomacy do NOT update mid-conference: use the pc_* triggers\n# (e.g. pc_is_puppeted_by) to check conference-time facts.\n# This file MERGES additively with the base game's modifiers (net-new names only).\npeace_action_modifiers = {\n\n\tmy_peace_claim_discount = {\n\t\t# `category` groups rows in the cost tooltip; an unknown category lands under\n\t\t# \"other\". Vanilla categories: is_core / has_claim / occupation / ideology / ...\n\t\tcategory = has_claim\n\t\tpeace_action_type = take_states\n\n\t\tenable = {\n\t\t\t# Active when the taker has a claim on the state being taken.\n\t\t\tFROM.FROM.FROM = { is_claimed_by = ROOT.FROM }\n\t\t}\n\n\t\t# 1.0 = deliberately a NO-OP until you tune it (0.9 = 10% cheaper,\n\t\t# 1.5 = 50% dearer). Must be > 0.\n\t\tcost_multiplier = 1.0\n\t}\n}\n"
+    }
+   ]
+  },
+  {
+   "template": "frontendgamesetup",
+   "files": [
+    {
+     "dest_path": "interface/frontendgamesetupview.gui",
+     "content": "guiTypes = {\n\tcontainerWindowType = {\n\t\tname = \"gamesetup_scenario_window\"\n\t\tcontainerWindowType = {\n\t\t\tname = \"bookmarks\"\n\t\t\tgridBoxType = {\n\t\t\t\tname = \"bookmarks_grid\"\n\t\t\t\tslotsize = {\n\t\t\t\t\twidth = 240\n\t\t\t\t\theight = 120\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\tcontainerWindowType = {\n\t\tname = \"other_window\"\n\t}\n}\n"
+    }
+   ],
+   "error": null
+  }
+ ],
+ "sanitize_cases": [
+  {
+   "input": "common/on_actions/x.txt",
+   "output": "common/on_actions/x.txt"
+  },
+  {
+   "input": "common\\on_actions\\y.txt",
+   "output": "common/on_actions/y.txt"
+  },
+  {
+   "input": "  common/defines/z.lua  ",
+   "output": "common/defines/z.lua"
+  },
+  {
+   "input": "common//double//slash.txt",
+   "output": "common/double/slash.txt"
+  },
+  {
+   "input": "../escape.txt",
+   "error": true,
+   "message": "dest_path may not contain '..' (path traversal)"
+  },
+  {
+   "input": "/absolute/path.txt",
+   "output": "absolute/path.txt"
+  },
+  {
+   "input": "C:/drive/path.txt",
+   "error": true,
+   "message": "dest_path must be mod-relative (no drive letter)"
+  },
+  {
+   "input": "",
+   "error": true,
+   "message": "dest_path is required (e.g. 'common/on_actions/TNO_Reich_on_actions.txt')"
+  },
+  {
+   "input": "common/./dot/file.txt",
+   "output": "common/dot/file.txt"
+  },
+  {
+   "input": "interface/ok_hagane.gui",
+   "output": "interface/ok_hagane.gui"
+  }
+ ],
+ "intent_cases": [
+  {
+   "raw_kind": "verbatim_override",
+   "dest_path": "common/on_actions/x.txt",
+   "content": "on_actions = {}",
+   "is_binary": false,
+   "generate_replace_path": false,
+   "game_version": "1.19.2",
+   "target_layer": null,
+   "target_sha256": null,
+   "decision": {
+    "raw_kind": "verbatim_override",
+    "dest_path": "common/on_actions/x.txt",
+    "content": "on_actions = {}",
+    "generate_replace_path": false,
+    "target_layer": null,
+    "target_sha256": null
+   }
+  },
+  {
+   "raw_kind": "verbatim_override",
+   "dest_path": "common/on_actions/x.txt",
+   "content": "",
+   "is_binary": false,
+   "generate_replace_path": false,
+   "game_version": "1.19.2",
+   "target_layer": null,
+   "target_sha256": null,
+   "decision": {
+    "raw_kind": "verbatim_override",
+    "dest_path": "common/on_actions/x.txt",
+    "content": "",
+    "generate_replace_path": false,
+    "target_layer": null,
+    "target_sha256": null
+   }
+  },
+  {
+   "raw_kind": "verbatim_override",
+   "dest_path": "gfx/interface/pic.dds",
+   "content": "",
+   "is_binary": true,
+   "generate_replace_path": false,
+   "game_version": "1.19.2",
+   "target_layer": null,
+   "target_sha256": null,
+   "decision": {
+    "raw_kind": "verbatim_override",
+    "dest_path": "gfx/interface/pic.dds",
+    "content": "",
+    "generate_replace_path": false,
+    "target_layer": null,
+    "target_sha256": null
+   }
+  },
+  {
+   "raw_kind": "verbatim_override",
+   "dest_path": "common/x.txt",
+   "content": "content",
+   "is_binary": false,
+   "generate_replace_path": true,
+   "game_version": "1.19.2",
+   "target_layer": null,
+   "target_sha256": null,
+   "decision": {
+    "raw_kind": "verbatim_override",
+    "dest_path": "common/x.txt",
+    "content": "content",
+    "generate_replace_path": true,
+    "target_layer": null,
+    "target_sha256": null
+   }
+  },
+  {
+   "raw_kind": "empty_shadow",
+   "dest_path": "common/on_actions/x.txt",
+   "content": "",
+   "is_binary": false,
+   "generate_replace_path": false,
+   "game_version": "1.19.2",
+   "target_layer": null,
+   "target_sha256": null,
+   "error": {
+    "code": "target_layer_required",
+    "message": "empty_shadow requires target_layer"
+   }
+  },
+  {
+   "raw_kind": "empty_shadow",
+   "dest_path": "common/on_actions/x.txt",
+   "content": "",
+   "is_binary": false,
+   "generate_replace_path": false,
+   "game_version": "1.19.*",
+   "target_layer": "base",
+   "target_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+   "error": {
+    "code": "empty_shadow_game_version_not_allowlisted",
+    "message": "empty_shadow game_version does not match the verified policy"
+   }
+  },
+  {
+   "raw_kind": "empty_shadow",
+   "dest_path": "common/on_actions/x.txt",
+   "content": "not empty",
+   "is_binary": false,
+   "generate_replace_path": false,
+   "game_version": "1.19.2",
+   "target_layer": "base",
+   "target_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+   "error": {
+    "code": "empty_shadow_requires_canonical_empty",
+    "message": "empty_shadow content must be the canonical empty string"
+   }
+  },
+  {
+   "raw_kind": "bogus_kind",
+   "dest_path": "common/x.txt",
+   "content": "",
+   "is_binary": false,
+   "generate_replace_path": false,
+   "game_version": "1.19.2",
+   "target_layer": null,
+   "target_sha256": null,
+   "error": {
+    "code": "raw_kind_invalid",
+    "message": "raw_kind must be verbatim_override or empty_shadow"
+   }
+  }
+ ]
+}

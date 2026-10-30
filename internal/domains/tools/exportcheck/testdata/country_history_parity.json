@@ -1,0 +1,2091 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "requirements": [],
+   "providers": [],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [],
+   "entries": []
+  },
+  {
+   "name": "vanilla-only",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "v1",
+     "tag": "GER",
+     "kind": "vanilla",
+     "path": "p/v1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": true,
+     "research_slots": 4
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/v1.txt",
+      "provider_id": "v1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "v1",
+     "final_winner_explicit": false,
+     "capital_provider": "v1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": "v1",
+     "research_slots": 4,
+     "source_hashes": [
+      "08aef434eeaa3246e79a8867f26a7d5c1c4c494c0214d245194b555f372a4133"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-missing-authored-selectable",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "authored": true,
+      "interesting": false,
+      "providers": [
+       {
+        "kind": "project_structured",
+        "path": "p/p1.txt",
+        "provider_id": "p1",
+        "source_hash": "7788e2f983d6087de2b4d41d474d5452707297a5e15ea391fc6c5426911ae847"
+       }
+      ],
+      "selectable": true
+     },
+     "repair_route": "country.history.capital.add"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "7788e2f983d6087de2b4d41d474d5452707297a5e15ea391fc6c5426911ae847"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-missing-authored-only",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "7788e2f983d6087de2b4d41d474d5452707297a5e15ea391fc6c5426911ae847"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-missing-interesting",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": false,
+     "interesting": true
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "authored": true,
+      "interesting": true,
+      "providers": [
+       {
+        "kind": "project_structured",
+        "path": "p/p1.txt",
+        "provider_id": "p1",
+        "source_hash": "7788e2f983d6087de2b4d41d474d5452707297a5e15ea391fc6c5426911ae847"
+       }
+      ],
+      "selectable": false
+     },
+     "repair_route": "country.history.capital.add"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "7788e2f983d6087de2b4d41d474d5452707297a5e15ea391fc6c5426911ae847"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-missing-not-authored",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "f4eeb28b1e3e46ee741f4bae167a51b17fbf7d52325016122728b1d75dfa944f"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-invalid-state",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 99999,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_invalid_state",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "p/p1.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "capital_token": 99999,
+      "parsed_capital": 99999,
+      "provider_id": "p1",
+      "source_hash": "1555ff40ec6a9a0832a0b0a80a6fbf6934c77222e0a646c067e73105ac4beb96",
+      "valid_state_id": false
+     },
+     "repair_route": "country.history.capital.choose_state_id"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": 99999,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "1555ff40ec6a9a0832a0b0a80a6fbf6934c77222e0a646c067e73105ac4beb96"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-zero",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 0,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_invalid_state",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "p/p1.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "capital_token": 0,
+      "parsed_capital": null,
+      "provider_id": "p1",
+      "source_hash": "cebf0225427efc33a8960028f9de88237b54dd507101661d95d294d7f28cc84d",
+      "valid_state_id": false
+     },
+     "repair_route": "country.history.capital.choose_state_id"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "cebf0225427efc33a8960028f9de88237b54dd507101661d95d294d7f28cc84d"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-bool",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": true,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_invalid_state",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "p/p1.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "capital_token": true,
+      "parsed_capital": null,
+      "provider_id": "p1",
+      "source_hash": "9b7946e3b217d21b48502800a56be1b1d2de31b4b5a38f6be86c7c9b3a4e628c",
+      "valid_state_id": false
+     },
+     "repair_route": "country.history.capital.choose_state_id"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "9b7946e3b217d21b48502800a56be1b1d2de31b4b5a38f6be86c7c9b3a4e628c"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-string-digits",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": "16",
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "dfce5f52adf32cf2b6d911e3feb50e10cce79e7dad1a20d17b651be088765108"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-string-garbage",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": "abc",
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_invalid_state",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "p/p1.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "capital_token": "abc",
+      "parsed_capital": null,
+      "provider_id": "p1",
+      "source_hash": "c7a69d6d4911f305f6f7479b489c9e9cc8acbef97f26d4f9cf1de07ddfa8b5f6",
+      "valid_state_id": false
+     },
+     "repair_route": "country.history.capital.choose_state_id"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "c7a69d6d4911f305f6f7479b489c9e9cc8acbef97f26d4f9cf1de07ddfa8b5f6"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-not-owned",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {
+    "16": "FRA"
+   },
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_not_owned",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history",
+      "identifier": "XXX",
+      "path": "p/p1.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "capital": 16,
+      "country_tag": "XXX",
+      "owner": "FRA",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.capital.review_ownership"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "b183cf4dd7caa89ea4fb71b1a1d1585627e64d406e0474d07b191c37632429d9"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "capital-owned-ok",
+   "requirements": [
+    {
+     "tag": "XXX",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "p1",
+     "tag": "XXX",
+     "kind": "project_structured",
+     "path": "p/p1.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {
+    "16": "XXX"
+   },
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/p1.txt",
+      "provider_id": "p1"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "XXX"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "p1"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "XXX",
+     "final_winner": "p1",
+     "final_winner_explicit": false,
+     "capital_provider": "p1",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "b183cf4dd7caa89ea4fb71b1a1d1585627e64d406e0474d07b191c37632429d9"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "winner-explicit-one",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    },
+    {
+     "provider_id": "b",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/b.txt",
+     "source_hash": "",
+     "load_order": 200,
+     "applies": true,
+     "final_winner": true,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "b",
+     "final_winner_explicit": true,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "1f865405f2b736f5ed9252546db7690fb3415d26eef335322230e206c03392dd",
+      "299212dbdb31b9955890144f2a23a93b457cc8e5e2e61b37c2ecd696e83bcea2"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "winner-ambiguous",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": true,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    },
+    {
+     "provider_id": "b",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/b.txt",
+     "source_hash": "",
+     "load_order": 200,
+     "applies": true,
+     "final_winner": true,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_ambiguous",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "paths": [
+       "p/a.txt",
+       "p/b.txt"
+      ],
+      "provider_ids": [
+       "a",
+       "b"
+      ]
+     },
+     "repair_route": "country.history.manifest.resolve_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "b",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "1f865405f2b736f5ed9252546db7690fb3415d26eef335322230e206c03392dd",
+      "299212dbdb31b9955890144f2a23a93b457cc8e5e2e61b37c2ecd696e83bcea2"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "winner-inferred",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    },
+    {
+     "provider_id": "b",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/b.txt",
+     "source_hash": "",
+     "load_order": 200,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 200,
+      "path": "p/b.txt",
+      "provider_id": "b"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "b",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "1f865405f2b736f5ed9252546db7690fb3415d26eef335322230e206c03392dd",
+      "299212dbdb31b9955890144f2a23a93b457cc8e5e2e61b37c2ecd696e83bcea2"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "winner-none-no-providers",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": null,
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": []
+    }
+   ]
+  },
+  {
+   "name": "applies-false-excluded",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": false,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": null,
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": []
+    }
+   ]
+  },
+  {
+   "name": "field-latest-wins",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    },
+    {
+     "provider_id": "b",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/b.txt",
+     "source_hash": "",
+     "load_order": 300,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 17,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16,
+    17
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 300,
+      "path": "p/b.txt",
+      "provider_id": "b"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "a",
+       "b"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "b",
+     "final_winner_explicit": false,
+     "capital_provider": "b",
+     "capital": 17,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "438371e713665d289bea64904584c57197dfbfcb243a939466e8ca4e146e6e38",
+      "81b074c014fb8c237efd2ea90e0754fb2c7ed7c95ba2f4b300c3435fa0e17a10"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "load-order-tie-provider-id",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "z",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/z.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    },
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/z.txt",
+      "provider_id": "z"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "z",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "1f865405f2b736f5ed9252546db7690fb3415d26eef335322230e206c03392dd",
+      "0b2a3e05d40398f84960cc6e7b2db298fd6fb0a8c49de4107e08768d16e7bd36"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "research-missing-selectable",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "a"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "438371e713665d289bea64904584c57197dfbfcb243a939466e8ca4e146e6e38"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "research-invalid",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": true,
+     "research_slots": "abc"
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.research_slots_invalid",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history",
+      "identifier": "GER",
+      "path": "p/a.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "provider_id": "a",
+      "research_slots_token": "abc"
+     },
+     "repair_route": "country.history.research_slots.repair"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": "a",
+     "research_slots": null,
+     "source_hashes": [
+      "e0c1a6af07f4e71e5a233a913a8db1abb87e378bbb179143391710a71bc9bd93"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "research-ok",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": true,
+     "research_slots": 4
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": "a",
+     "research_slots": 4,
+     "source_hashes": [
+      "0b23aafcd6f7dc21b7adc9701f4e2c17d614e8208bbb2ac0643adf6eba20128e"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "research-not-selectable-silent",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "438371e713665d289bea64904584c57197dfbfcb243a939466e8ca4e146e6e38"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "tag-normalisation",
+   "requirements": [
+    {
+     "tag": " ger ",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "ger",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "f30618bd1872151194e7eae3fa4adc0a67b414d40c9a73e570f4e6a61fb5ee30"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "provider-without-requirement",
+   "requirements": [],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "FRA",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 16,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "FRA"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "FRA",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 16,
+     "capital_is_valid_state": true,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "0ea275f451b9081874483b9c2808fce2f3282052b71145ae10a487db5bc571a1"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "multi-tag-sorted",
+   "requirements": [
+    {
+     "tag": "ZZZ",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    },
+    {
+     "tag": "AAA",
+     "authored": false,
+     "selectable": false,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "ZZZ",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    },
+    {
+     "provider_id": "b",
+     "tag": "AAA",
+     "kind": "project_structured",
+     "path": "p/b.txt",
+     "source_hash": "",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": false,
+     "capital": null,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "AAA"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/b.txt",
+      "provider_id": "b"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "ZZZ"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "AAA",
+     "final_winner": "b",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "e9b1f695a87a929cd7001d73902b62c33ae03bfbbba1afbcecfc4a770d7fcd40"
+     ]
+    },
+    {
+     "tag": "ZZZ",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": null,
+     "capital": null,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "85719432c08ba4fe239666d44b77290fdcc8f9297c4a661dfe4a40ce19006614"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "explicit-source-hash",
+   "requirements": [
+    {
+     "tag": "GER",
+     "authored": true,
+     "selectable": true,
+     "interesting": false
+    }
+   ],
+   "providers": [
+    {
+     "provider_id": "a",
+     "tag": "GER",
+     "kind": "project_structured",
+     "path": "p/a.txt",
+     "source_hash": "  deadbeef  ",
+     "load_order": 100,
+     "applies": true,
+     "final_winner": false,
+     "capital_present": true,
+     "capital": 999,
+     "research_slots_present": false,
+     "research_slots": null
+    }
+   ],
+   "valid_state_ids": [
+    16
+   ],
+   "state_owner_by_id": {},
+   "findings": [
+    {
+     "code": "country.history_final_winner_inferred",
+     "severity": "warning",
+     "source": {
+      "kind": "country_history_set",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "load_order": 100,
+      "path": "p/a.txt",
+      "provider_id": "a"
+     },
+     "repair_route": "country.history.manifest.attach_final_winner"
+    },
+    {
+     "code": "country.capital_invalid_state",
+     "severity": "blocker",
+     "source": {
+      "kind": "country_history",
+      "identifier": "GER",
+      "path": "p/a.txt",
+      "provider": "project_structured"
+     },
+     "evidence": {
+      "capital_token": 999,
+      "parsed_capital": 999,
+      "provider_id": "a",
+      "source_hash": "deadbeef",
+      "valid_state_id": false
+     },
+     "repair_route": "country.history.capital.choose_state_id"
+    },
+    {
+     "code": "country.research_slots_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "country",
+      "identifier": "GER"
+     },
+     "evidence": {
+      "engine_blocker": false,
+      "providers": [
+       "a"
+      ]
+     },
+     "repair_route": "country.history.research_slots.add"
+    }
+   ],
+   "entries": [
+    {
+     "tag": "GER",
+     "final_winner": "a",
+     "final_winner_explicit": false,
+     "capital_provider": "a",
+     "capital": 999,
+     "capital_is_valid_state": false,
+     "research_slots_provider": null,
+     "research_slots": null,
+     "source_hashes": [
+      "deadbeef"
+     ]
+    }
+   ]
+  }
+ ]
+}

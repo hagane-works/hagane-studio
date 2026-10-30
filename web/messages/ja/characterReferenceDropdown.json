@@ -1,0 +1,13 @@
+{
+  "promote": "キャラクターを昇格",
+  "recruit": "キャラクターを登用",
+  "retire": "キャラクターを引退させる",
+  "searchPlaceholder": "名前または ID で検索…",
+  "searchingBase": "ベース Mod を検索中…",
+  "noResults": "結果が見つかりませんでした。",
+  "empty": "キャラクターはまだいません。入力してベース Mod を検索できます。",
+  "projectBadge": "プロジェクト",
+  "baseBadge": "ベース Mod",
+  "promptManual": "キャラクター ID を手動入力：",
+  "enterManually": "+ 手動で入力…"
+}

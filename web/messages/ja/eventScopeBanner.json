@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount}件 · {tag} · {ownCount, plural, one {イベント} other {イベント}}",
+  "sharedSuffix": " · +{sharedCount}件の共有 / グローバル配信",
+  "filteredNote": "バニラ DLC と国家別ファイルはインポート時に除外され、{tag} 自身のイベントだけが保持されます。",
+  "vanillaCta": "参照用に「バニライベント」を開く",
+  "hiddenHint": "共有/グローバルの {hiddenCount, plural, one {イベント} other {イベント}} {hiddenCount}件を非表示中 · 右側の <emph>すべて</emph> をクリックして表示します。",
+  "dismiss": "閉じる",
+  "dontShowAgain": "今後表示しない"
+}

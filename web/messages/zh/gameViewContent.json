@@ -1,0 +1,125 @@
+{
+  "decision": {
+    "kind": "决议 · {id}",
+    "categoryKind": "决议分类 · {id}",
+    "loading": "读取项目里的决议…",
+    "confirmDelete": "删除这个决议?",
+    "delete": "删除决议",
+    "notDeletable": "这个决议来自游戏或 mod 原文件,删掉项目里的这一行游戏仍会从原文件显示它,所以这里不提供删除。",
+    "loadingCategory": "读取项目里的决议分类…",
+    "newLog": "新建 · {name}",
+    "add": "+ 在这个分类里新建决议",
+    "addNote": "新决议只给 {tag} 用,花费 0,没有条件与效果;建好就在这里打开它接着改。",
+    "hitCategory": "决议分类 {name}",
+    "hitDecision": "决议 {name}",
+    "hitCost": "决议 {name} 的花费"
+  },
+  "override": {
+    "heading": "复制到我的 mod 修改",
+    "vanillaNote": "保存时会把 {file} 整份复制进你的 mod(第一次会先问你),文件里其他内容原样保留;改动对所有用到这个决议的国家生效。",
+    "modNote": "改的是你 mod 里的 {file},只动这一个决议。",
+    "cost": "花费",
+    "icon": "图标",
+    "daysRemove": "持续天数",
+    "daysReEnable": "冷却天数",
+    "fireOnce": "只能执行一次",
+    "placeholder": "没写",
+    "note": "条件和效果这些脚本现在还不能在这里改;改错了可以在「改动记录」里撤销。",
+    "confirmTitle": "复制原版文件到你的 mod",
+    "confirmLabel": "复制并保存",
+    "confirmBody": "会把原版文件 {file} 整份复制进你的 mod,替换原版的同名文件;文件里其他决议、其他国家的内容原样保留。\n这次改动对所有用到这个决议的国家生效;游戏以后更新这个文件,你的副本不会自动跟着更新。",
+    "fileFallback": "这个决议所在的文件",
+    "importedDone": "已把 {file} 复制进你的 mod 并改好。",
+    "done": "已改好 {file}。",
+    "problem": {
+      "cost": "花费要填 0 或以上的数字",
+      "icon": "图标写文件里的图标名(英文字母、数字、下划线)",
+      "days": "天数要填 0 或以上的整数"
+    }
+  },
+  "focus": {
+    "kind": "国策 · {tree} · {id}",
+    "newChildLog": "新建子国策 · {name}",
+    "loading": "读取项目里的国策…",
+    "notInTree": "项目里的这棵树没有这个国策。",
+    "prereqs": "前置",
+    "prereqHint": "每行一组:组内完成任一个即可,各组都要满足。",
+    "or": "或",
+    "addOr": "+ 或",
+    "addPrereq": "+ 前置",
+    "mutex": "互斥",
+    "addMutex": "+ 互斥",
+    "newChild": "新建子国策",
+    "confirmDelete": "确认删除",
+    "delete": "删除国策",
+    "remove": "移除 {id}",
+    "picking": "在树上点选…",
+    "createHere": "在这里新建国策",
+    "link": {
+      "self": "不能连到自己。",
+      "alreadyMutex": "已经互斥了。",
+      "alreadyPrereq": "已经是它的前置了。",
+      "loop": "会成环:那个国策本身就要先完成这个。"
+    }
+  },
+  "focusTree": {
+    "created": "已新建国策树 {id},在空白处右键放第一个国策",
+    "label": "{tag} 的国策树",
+    "none": "没有哪棵树写明给 {tag}。",
+    "count": "{count} 个",
+    "gameDefault": "游戏默认",
+    "newIdPlaceholder": "新树 id(留空自动命名)",
+    "create": "新建国策树",
+    "createNote": "新树放进项目里,归 {tag};游戏按权重选树,空树不会盖过原来的树。"
+  },
+  "event": {
+    "kind": "事件 · {id}",
+    "loading": "读取项目里的事件…",
+    "unreadable": "这个事件不在项目数据里,也读不到它在游戏里的样子。",
+    "hitOption": "选项 {name}",
+    "hitTitle": "事件标题",
+    "hitDesc": "事件描述",
+    "problem": {
+      "timeoutDays": "超时天数要是不小于 0 的整数",
+      "mtth": "不是只由脚本触发的事件,要写平均触发时间(如 days = 30)"
+    }
+  },
+  "eventSwitcher": {
+    "superCreated": "已新建超级事件 #{number}",
+    "notInProject": "屏幕上这个事件不在项目数据里,没有命名空间可放新事件。",
+    "created": "已新建事件 {id}",
+    "superEvent": "超级事件",
+    "event": "事件",
+    "search": "按 id 或标题搜索",
+    "scopeLabel": "列出哪些事件",
+    "countryEvents": "{tag} 的事件",
+    "allEvents": "全部事件",
+    "totalPartial": "共 {total} 个事件,列出前 {shown} 个,其余请搜索",
+    "totalAll": "共 {total} 个事件,拖右侧滚动条快速翻",
+    "genericEvents": "通用事件(每个国家都可能遇到)",
+    "noCountryEvents": "这个国家没有事件,切到「全部事件」看看。",
+    "noMatch": "没有匹配的事件。",
+    "newEvent": "新建事件",
+    "newEventNote": "放进屏幕上这个事件的命名空间,编号接在最后一个后面;只由脚本触发,不会自己弹出。",
+    "superAria": "超级事件 {label}",
+    "noSuperEvents": "项目里还没有超级事件。",
+    "newSuperEvent": "新建超级事件"
+  },
+  "superEvent": {
+    "kind": "超级事件 · #{number} · {tag}",
+    "projectCountry": "项目国家",
+    "saved": "已保存超级事件「{title}」",
+    "pictureSaved": "已换上超级事件的图片",
+    "deleted": "已删除超级事件「{title}」"
+  },
+  "bookmark": {
+    "fallbackName": "剧本",
+    "kind": "剧本 · {id}",
+    "loading": "读取项目里的剧本…",
+    "notInProject": "这个剧本不在项目数据里(来自原版或 mod 原文件),导入项目后才能在这里改。",
+    "pictureLog": "换背景图 · {name}",
+    "problem": {
+      "date": "日期要写成 1936.1.1 或 1936.1.1.12"
+    }
+  }
+}

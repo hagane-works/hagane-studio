@@ -1,0 +1,18 @@
+{
+  "cwtoolError": "Cwtool error · blocking issues: {count}",
+  "parsing": "Parsing…",
+  "parsedWithWarnings": "Parsed OK · Cwtool warnings: {count} · ready to Apply",
+  "parsedReady": "Parsed OK · ready to Apply",
+  "parseErrorLine": "Parse error · line {line} ({count})",
+  "parseError": "Parse error ({count})",
+  "diagnosticLine": "Diagnostic · line {line} ({count})",
+  "diagnostics": "Diagnostics: {count}",
+  "editedWarnings": "Edited · Cwtool warnings: {count} (parse pending)",
+  "editedPending": "Edited (parse pending)",
+  "stalePrompt": "This item was updated elsewhere after you started editing its script.\n\nKeep your unsaved editor changes?\n\nOK = keep the editor draft (the form will be overwritten when you apply)\nCancel = discard the draft and load the latest form",
+  "networkHint": "The request did not reach the program. It may have just restarted — try Apply again.",
+  "applyFailed": "Apply failed: {message}{hint}",
+  "applyReseedTitle": "Script applied",
+  "applyReseedSynced": "The form on the left has been refreshed to match.",
+  "applyReseedClobbered": "The form was refreshed from the script. Your unsaved form edits were overwritten."
+}

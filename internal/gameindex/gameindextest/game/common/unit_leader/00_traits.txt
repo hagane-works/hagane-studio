@@ -1,0 +1,6 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+leader_traits = {
+	test_general_trait = { type = corps_commander trait_type = personality_trait }
+	brilliant_strategist = { type = { corps_commander field_marshal } trait_type = personality_trait }
+	test_terrain_trait = { type = { corps_commander field_marshal } trait_type = basic_terrain_trait }
+}

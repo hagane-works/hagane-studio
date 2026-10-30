@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Pestañas de idioma del nombre mostrado",
+  "addLanguage": "Añadir idioma",
+  "addingLanguage": "Se está añadiendo {language}…",
+  "addLanguageError": "No se ha podido añadir {language} al proyecto. Inténtalo de nuevo.",
+  "legacyFallbackHint": "Se muestra el campo de nombre heredado. Escribe para sustituirlo; el nuevo valor se guarda en display_name_locs.",
+  "fullName": {
+    "en": "Inglés",
+    "zh": "Chino simplificado",
+    "ru": "Ruso",
+    "fr": "Francés",
+    "de": "Alemán",
+    "es": "Español",
+    "ja": "Japonés",
+    "ko": "Coreano",
+    "pl": "Polaco",
+    "pt": "Portugués de Brasil"
+  }
+}

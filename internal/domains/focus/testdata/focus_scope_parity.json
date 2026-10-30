@@ -1,0 +1,247 @@
+{
+ "cases": [
+  {
+   "blocked": false,
+   "country_tag": null,
+   "findings": [
+    {
+     "code": "focus_shared_pool_scope_ignored",
+     "evidence": {
+      "country_tag": "GER",
+      "scope_kind": "own",
+      "shared_country_tags": [
+       "SOV"
+      ],
+      "tree_id": "pool_a"
+     },
+     "message": "A shared-pool focus file has no country of its own, so the scope_kind / country_tag / shared_country_tags you sent were ignored. Nothing is lost — countries reach these focuses through their own tree. Drop those fields to silence this warning.",
+     "repair_route": "focus_shared_pool_review",
+     "severity": "warning",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "shared_pool_scope_ignored",
+   "project_country_tags": [
+    "GER"
+   ],
+   "scope_kind": "shared_pool",
+   "shared_country_tags": [],
+   "tree": {
+    "country_tag": "ger",
+    "scope_kind": "own",
+    "shared_country_tags": [
+     "sov"
+    ],
+    "tree_id": "pool_a",
+    "tree_kind": "shared_pool"
+   },
+   "tree_kind": "shared_pool"
+  },
+  {
+   "blocked": true,
+   "country_tag": null,
+   "findings": [
+    {
+     "code": "focus_scope_unknown_kind",
+     "evidence": {
+      "scope_kind": "nonsense",
+      "tree_id": "t1"
+     },
+     "message": "scope_kind \"nonsense\" is not a scope Hagane Works knows. Use one of: own (the tree belongs to a single country), explicit (only the countries you list), global (every country), global_except (every country except the ones you list).",
+     "repair_route": "focus_scope_repair",
+     "severity": "blocker",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "unknown_scope_kind",
+   "project_country_tags": [
+    "GER"
+   ],
+   "scope_kind": "nonsense",
+   "shared_country_tags": [],
+   "tree": {
+    "scope_kind": "nonsense",
+    "tree_id": "t1",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  },
+  {
+   "blocked": true,
+   "country_tag": null,
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "evidence": {
+      "country_tags": [],
+      "tree_id": "t2"
+     },
+     "message": "A scope_kind=own tree belongs to exactly one country, and none was given. Set country_tag to the country whose tree this is.",
+     "repair_route": "focus_scope_choose_country",
+     "severity": "blocker",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "own_missing_country",
+   "project_country_tags": [
+    "GER"
+   ],
+   "scope_kind": "own",
+   "shared_country_tags": [],
+   "tree": {
+    "scope_kind": "own",
+    "tree_id": "t2",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  },
+  {
+   "blocked": true,
+   "country_tag": null,
+   "findings": [
+    {
+     "code": "focus_scope_explicit_missing_countries",
+     "evidence": {
+      "tree_id": "t3"
+     },
+     "message": "A scope_kind=explicit tree is offered only to the countries you list, and the list is empty. Put at least one country tag in shared_country_tags.",
+     "repair_route": "focus_scope_choose_country",
+     "severity": "blocker",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "explicit_missing_countries",
+   "project_country_tags": [
+    "GER"
+   ],
+   "scope_kind": "explicit",
+   "shared_country_tags": [],
+   "tree": {
+    "scope_kind": "explicit",
+    "tree_id": "t3",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  },
+  {
+   "blocked": true,
+   "country_tag": null,
+   "findings": [
+    {
+     "code": "focus_scope_global_except_missing_countries",
+     "evidence": {
+      "tree_id": "t4"
+     },
+     "message": "A scope_kind=global_except tree is offered to every country EXCEPT the ones you list, and the list is empty. Either list the countries to exclude in shared_country_tags, or use scope_kind=global.",
+     "repair_route": "focus_scope_choose_country",
+     "severity": "blocker",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "global_except_missing_countries",
+   "project_country_tags": [
+    "GER"
+   ],
+   "scope_kind": "global_except",
+   "shared_country_tags": [],
+   "tree": {
+    "scope_kind": "global_except",
+    "tree_id": "t4",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  },
+  {
+   "blocked": true,
+   "country_tag": null,
+   "findings": [
+    {
+     "code": "focus_scope_invalid_country_tag",
+     "evidence": {
+      "country_tags": [
+       "TOOLONGTAG"
+      ],
+      "tree_id": "t5"
+     },
+     "message": "Not a usable HOI4 country tag: TOOLONGTAG. A tag is 2-5 characters, uppercase letters and digits only (GER, SOV, D01).",
+     "repair_route": "focus_scope_choose_country",
+     "severity": "blocker",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "invalid_country_tag",
+   "project_country_tags": [
+    "GER"
+   ],
+   "scope_kind": "explicit",
+   "shared_country_tags": [
+    "TOOLONGTAG"
+   ],
+   "tree": {
+    "scope_kind": "explicit",
+    "shared_country_tags": [
+     "toolongtag"
+    ],
+    "tree_id": "t5",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  },
+  {
+   "blocked": true,
+   "country_tag": "ENG",
+   "findings": [
+    {
+     "code": "focus_scope_own_foreign_country",
+     "evidence": {
+      "country_tag": "ENG",
+      "project_country_tags": [
+       "GER",
+       "SOV",
+       "USA"
+      ],
+      "tree_id": "pvp_eng_tree"
+     },
+     "message": "This project has no country ENG, so a focus tree cannot belong to it. Create ENG in the project first, then create the tree — or point country_tag at one of the 3 countries the project already has (they are listed in evidence.project_country_tags).",
+     "repair_route": "focus_scope_choose_country",
+     "severity": "blocker",
+     "source": "focus_tree:create"
+    }
+   ],
+   "name": "own_foreign_country",
+   "project_country_tags": [
+    "GER",
+    "SOV",
+    "USA"
+   ],
+   "scope_kind": "own",
+   "shared_country_tags": [],
+   "tree": {
+    "country_tag": "ENG",
+    "scope_kind": "own",
+    "tree_id": "pvp_eng_tree",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  },
+  {
+   "blocked": false,
+   "country_tag": "GER",
+   "findings": [],
+   "name": "clean_own",
+   "project_country_tags": [
+    "GER",
+    "SOV"
+   ],
+   "scope_kind": "own",
+   "shared_country_tags": [],
+   "tree": {
+    "country_tag": "GER",
+    "scope_kind": "own",
+    "tree_id": "ger_focus",
+    "tree_kind": "primary"
+   },
+   "tree_kind": "primary"
+  }
+ ]
+}

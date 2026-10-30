@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "Cargar un mod existente",
+  "newProject": "+ Nuevo proyecto",
+  "newProjectFromScratch": "Nuevo proyecto (desde cero)",
+  "dashboardTitle": "Mis proyectos",
+  "ctaLoadExisting": "Importar un mod existente",
+  "ctaNewProject": "Nuevo proyecto vacío",
+  "statProjects": "Proyectos",
+  "statCountries": "Países",
+  "statEntities": "Entidades",
+  "statRecentEdit": "Edición reciente",
+  "statRecentNone": "Ninguna",
+  "timeJustNow": "ahora mismo",
+  "timeMinutesAgo": "hace {n} min",
+  "timeHoursAgo": "hace {n} h",
+  "timeToday": "hoy",
+  "timeYesterday": "ayer",
+  "timeDaysAgo": "hace {n} d",
+  "modNamingTitle": "Lo que hacemos por ti",
+  "modNamingContent": "Los ID reciben automáticamente el prefijo del TAG de tu proyecto para que nunca entren en conflicto con el juego base. Los conflictos de nombres se resuelven solos. Al exportar, generamos descriptor.mod y la estructura estándar de carpetas. Tú solo tienes que crear.",
+  "emptyState": "Todavía no hay proyectos. Empieza desde cero o importa un mod existente para modificarlo.",
+  "loadedBadge": "Modo de carga",
+  "docsNavLink": "Guía de uso",
+  "dashboardNavigationLabel": "Navegación del área de trabajo",
+  "languageLabel": "Idioma",
+  "confirmDeleteProject": "¿Seguro que quieres eliminar este proyecto?",
+  "deleteFailed": "Error al eliminar: {msg}",
+  "modNameLabel": "Nombre del mod",
+  "modNamePlaceholder": "p. ej., Mod de los Tres Reinos",
+  "modNameHint": "Empieza solo con un nombre. Añadirás países después de abrir el proyecto.",
+  "supportedVersionLabel": "Versión compatible de HOI4",
+  "supportedVersionHint": "Versión del motor de HOI4 a la que se dirige el mod; se escribe en descriptor.mod como supported_version. 1.19.* incluye todos los parches 1.19.x. La versión más reciente es la predeterminada y puedes cambiarla después en los ajustes del descriptor del mod.",
+  "supportedVersionDefault": "más reciente",
+  "creating": "Creando...",
+  "createProject": "Crear proyecto",
+  "baseModShelf": {
+    "dialogTitle": "Nuevo proyecto",
+    "sectionTitle": "Mod base",
+    "sectionHint": "Construye sobre un mod base para usar sus personajes, enfoques e ilustraciones como referencia, o empieza desde cero.",
+    "fromScratch": {
+      "title": "Desde cero",
+      "subtitle": "Un mod independiente sin base"
+    },
+    "buildOnThis": "Usar como base",
+    "workshopLink": "Workshop",
+    "otherMod": {
+      "title": "¿Se basa en otro mod?",
+      "subtitle": "Trae tu propio mod base a un entorno privado"
+    },
+    "createFailed": "No se ha podido crear el proyecto: {msg}"
+  },
+  "gridLoading": "Cargando...",
+  "cardNoCountries": "Todavía no hay países",
+  "cardMore": "+{n} más",
+  "cardDelete": "Eliminar",
+  "cardCharacters": "{n} personajes",
+  "cardFocusNodes": "{n} nodos de enfoque",
+  "cardTechnologies": "{n} tecnologías",
+  "cardUpdated": "Actualizado: {date}",
+  "statEntitiesTooltipTitle": "Desglose de entidades",
+  "entityType": {
+    "country": "Países",
+    "character": "Personajes",
+    "custom_trait": "Rasgos personalizados",
+    "opinion_modifier": "Modificadores de opinión",
+    "dynamic_modifier": "Modificadores dinámicos",
+    "modifier_definition": "Definiciones de modificadores",
+    "ai_strategy_plan": "Planes estratégicos de la IA",
+    "ai_template": "Plantillas de divisiones de la IA",
+    "wargoal": "Objetivos de guerra",
+    "idea": "Espíritus nacionales",
+    "focus_tree": "Árboles de enfoques",
+    "focus_node": "Nodos de enfoque",
+    "technology": "Tecnologías",
+    "event_namespace": "Espacios de nombres de eventos",
+    "event": "Eventos",
+    "super_event": "Supereventos",
+    "decision_category": "Categorías de decisiones",
+    "decision": "Decisiones",
+    "bookmark": "Marcadores",
+    "mio": "Organizaciones industriales militares",
+    "history_file": "Archivos de historial"
+  },
+  "recentOpened": "Abiertos recientemente",
+  "continueEditing": "Continuar editando",
+  "recentlyEdited": "Editados recientemente",
+  "editingNow": "Editando ahora",
+  "justNow": "ahora mismo",
+  "minAgo": "hace {n} min",
+  "hourAgo": "hace {n} h",
+  "dayAgo": "hace {n} d",
+  "noCountries": "Todavía no hay países",
+  "moreCountries": "+{n} más",
+  "entityCharacters": "{n} personajes",
+  "entityFocusNodes": "{n} nodos de enfoque",
+  "entityTechnologies": "{n} tecnologías",
+  "toolbar": {
+    "searchPlaceholder": "Buscar nombre del proyecto / TAG de país / mod base...",
+    "sortLabel": "Ordenar:",
+    "sortOption": {
+      "recent": "Editados recientemente",
+      "name": "Nombre A-Z",
+      "countries": "Cantidad de países",
+      "created": "Creados recientemente"
+    },
+    "filterGroupLabel": "Filtrar proyectos",
+    "filterOption": {
+      "all": "Todos",
+      "in_progress": "En curso",
+      "by_mod_base": "Por mod base"
+    },
+    "noMatch": "Ningún proyecto coincide con los filtros actuales.",
+    "clearFilters": "Borrar filtros"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "The New Order",
+    "tfr": "The Fire Rises",
+    "other": "Original"
+  },
+  "emptyHero": {
+    "title": "Vamos a crear tu primer mod de HOI4",
+    "subtitle": "Importa un mod que ya tengas o empieza con un proyecto vacío.",
+    "load": {
+      "title": "¿Ya tienes una carpeta de mod de HOI4?",
+      "blurb": "Elige la carpeta de tu mod. Se analiza automáticamente y sigues editándolo en los bancos de trabajo visuales.",
+      "cta": "Importar un mod existente"
+    },
+    "scratch": {
+      "title": "¿Quieres empezar con un proyecto vacío?",
+      "blurb": "Ponle nombre al mod, elige un país base y crea libremente desde cero.",
+      "cta": "Nuevo proyecto vacío"
+    }
+  },
+  "settings": "Ajustes",
+  "public": {
+    "brandHome": "Inicio de Hagane Works"
+  }
+}

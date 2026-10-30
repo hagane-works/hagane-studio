@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "축소",
+  "toolbarZoomIn": "확대",
+  "toolbarZoomReset": "확대/축소를 100%로 초기화",
+  "toolbarFitView": "그래프를 화면에 맞추기",
+  "toolbarUndo": "실행 취소(Ctrl+Z)",
+  "toolbarRedo": "다시 실행(Ctrl+Y)",
+  "toolbarAutoLayout": "자동 배치 — 모든 기술 다시 정렬",
+  "toolbarCreateTech": "새 기술"
+}

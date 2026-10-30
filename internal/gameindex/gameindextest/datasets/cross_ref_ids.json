@@ -1,0 +1,49 @@
+{
+ "ids": {
+  "character": [
+   "GER_franz_seldte",
+   "GER_test_general",
+   "GER_test_leader",
+   "ROM_ion_antonescu",
+   "SOV_iosif_stalin"
+  ],
+  "dynamic_modifier": [
+   "fallout_atomic",
+   "test_dynamic_modifier"
+  ],
+  "event": [
+   "generic.1"
+  ],
+  "idea": [
+   "GER_hidden_test",
+   "GER_plain_spirit",
+   "GER_reused_picture",
+   "GER_test_advisor",
+   "GER_test_spirit",
+   "GER_test_tank_company",
+   "civilian_economy",
+   "limited_conscription",
+   "limited_exports",
+   "sour_loser",
+   "war_economy"
+  ],
+  "opinion_modifier": [
+   "embargo",
+   "test_opinion_modifier",
+   "test_trade_modifier"
+  ],
+  "technology": [
+   "infantry_weapons",
+   "support_weapons"
+  ],
+  "trait": [
+   "brilliant_strategist",
+   "test_general_trait",
+   "test_leader_trait",
+   "test_scientist_trait",
+   "test_second_leader_trait",
+   "test_terrain_trait"
+  ]
+ },
+ "source": "ids of the base game's ideas, events, traits, technologies, characters, opinion modifiers and dynamic modifiers · game 1.19.3.0"
+}

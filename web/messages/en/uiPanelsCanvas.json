@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "Controls",
+  "paletteContainer": "Container",
+  "paletteIcon": "Icon",
+  "paletteText": "Text",
+  "paletteProgressbar": "Progress bar",
+  "paletteButton": "Button",
+  "stageLoading": "Rendering 1:1 preview...",
+  "stageNotSavedTitle": "Not compiled yet",
+  "stageNotSavedBody": "Save the panel to see the 1:1 in-game preview. Draft controls show as amber placeholders below.",
+  "stageEmpty": "Add controls from the palette above.",
+  "stageError": "Preview failed to load",
+  "ghostBadge": "draft",
+  "ghostHint": "Not in the compiled preview yet. Save to render it 1:1.",
+  "ribbonEmpty": "Select a control on the canvas. Its bindings show here.",
+  "ribbonGhost": "unsaved draft",
+  "mockPreviewOn": "Live preview with sample variable values",
+  "addIntoPanel": "Adds to the panel",
+  "addIntoContainer": "Adds into “{name}”"
+}

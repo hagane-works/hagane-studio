@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "このブラウザーは File System Access API に対応していません。Chrome または Edge を使用するか、「Mod を完全エクスポート」から操作してください。",
+  "savedToFolder": "Mod フォルダーに書き込みました",
+  "saveFailed": "Mod フォルダーへの保存に失敗しました。{msg}",
+  "titleWithFolder": "{tag} の3ファイルを {dir}/ に保存（ファイルを直接書き込みます。HOI4 で Mod を再起動すると反映されます）",
+  "titleNoFolder": "初回は Mod フォルダーの選択画面が開きます",
+  "saving": "保存中...",
+  "saveToFolderNamed": "{dir} に保存",
+  "saveToModFolder": "Mod フォルダーに保存",
+  "changeFolderTitle": "Mod フォルダーを変更",
+  "changeFolder": "フォルダーを変更",
+  "saved": "保存済み ✓"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Balisage de texte HOI4",
+  "legend": "§Y…§!  —  code de couleur (§ + une lettre commence une couleur, §! la réinitialise)\n$VAR$  —  variable ou substitution de localisation imbriquée\n[ROOT.GetName]  —  fonction de portée dynamique\n\\n  —  saut de ligne\n\nCes éléments sont du balisage de texte HOI4 : ils s'affichent dans le jeu et NE sont PAS des erreurs. Conservez-les intacts."
+}

@@ -1,0 +1,12 @@
+{
+  "loadingEditor": "Chargement de l'éditeur…",
+  "copyTooltip": "Copier le script dans le presse-papiers",
+  "copiedLabel": "Copié",
+  "copyLabel": "Copier",
+  "resetTooltip": "Abandonner les modifications de l'éditeur et recharger le formulaire",
+  "resetLabel": "Réinitialiser",
+  "applyTooltip": "Enregistrer les modifications de l'éditeur dans l'entité (écrase les champs du formulaire)",
+  "applyErrorTooltip": "Corrigez d'abord les erreurs d'analyse pour pouvoir appliquer",
+  "unknownTokenWithSuggestion": "⚠ « {token} » n'est pas un déclencheur ou effet du jeu de base. Faute possible : vouliez-vous dire {suggestion} ?",
+  "unknownToken": "⚠ « {token} » n'est pas un déclencheur ou effet du jeu de base. S'il est propre à un mod, vous pouvez ignorer cet avertissement."
+}

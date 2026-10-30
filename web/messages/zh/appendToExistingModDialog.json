@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "科技文件只按完全相同的路径合并",
+  "technologyMergeBody": "Append 只会覆盖路径完全相同的文件，不会把项目文件中的 technology block 合并进原版源文件。",
+  "toastWarning": "追加完成。有冲突时覆盖了 {conflictCount} 个 base mod 文件。想逐文件控制？改用「差异合并」。",
+  "toastSuccess": "追加完成。没有路径冲突，你的内容全部作为新文件写入 base mod。",
+  "description": "把当前项目叠加到一个已有的 mod zip 上。路径冲突时以你的改动为准。适合“载入现有 mod → 在这里编辑 → 下载合并后的 zip”。",
+  "naiveMergeTitle": "叠加合并 —— 冲突时以你的改动为准",
+  "naiveMergeBody": "路径冲突时，你的改动覆盖 base mod 同名文件；base mod 独有的文件原样保留；你新增的文件按你的版本写入。想逐文件审阅冲突？改用「差异合并」。",
+  "pickBaseZip": "选 base mod zip...",
+  "pickBaseFolder": "选 mod 文件夹...",
+  "folderPickerTitle": "选择 base mod 的文件夹",
+  "folderPickerHint": "打开存放该 mod 的 descriptor.mod 的文件夹，例如 steamapps\\workshop\\content\\394360 下的创意工坊条目，或 mod 目录里的 mod。程序只读取，不会修改它。",
+  "folderNotAMod": "这个文件夹不是钢铁雄心 4 的 mod：里面没有写明 mod 名称的 descriptor.mod。请选择存放 descriptor.mod 的那一层文件夹。",
+  "supportNote": "支持任意 HOI4 mod zip 或 mod 文件夹。程序只读取 base，不会改动它，合并后的 zip 会保存到你的“下载”文件夹。",
+  "title": "追加到已有 mod",
+  "baseZipLabel": "Base mod",
+  "cancel": "取消",
+  "merging": "合并中...",
+  "confirmAppend": "确认追加 + 下载"
+}

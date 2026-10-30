@@ -1,0 +1,20 @@
+{
+  "heading": "立绘与资源",
+  "uploading": "上传中…",
+  "uploadButton": "上传立绘图片",
+  "ratioHint": "PNG / JPG，推荐比例 3:4",
+  "resetConfirm": "把 {tag} 的立绘重置回原版？你上传的立绘将被移除。",
+  "resetFailed": "重置失败",
+  "resetting": "重置中…",
+  "resetButton": "↺ 重置为原版立绘",
+  "generatedPreview": "生成预览",
+  "leaderPortraitAlt": "领袖立绘",
+  "leaderPortrait": "领袖立绘",
+  "advisorIconAlt": "顾问图标",
+  "advisorIcon": "顾问图标",
+  "notImported": "⚠ 立绘未导入",
+  "referencesSprite": "该角色引用了立绘精灵",
+  "notImportedDetail": "但导入未能把它解析成图片 —— 该精灵对应的 mod 自带 .gfx/.dds 美术很可能没一起导进来(用「仅导入 .txt」时常见)。点上方「上传立绘图片」添加自定义立绘,或重新导入完整 mod 文件夹以带入其美术资源。",
+  "noPortrait": "尚未上传立绘",
+  "noPortraitHint": "上传后自动生成 立绘 / 顾问图标 / 特质图标"
+}

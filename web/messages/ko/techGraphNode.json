@@ -1,0 +1,16 @@
+{
+  "startYear": "시작 연도",
+  "cost": "연구 비용",
+  "costValue": "{cost} ({days}일)",
+  "source": "출처",
+  "level": "단계",
+  "unlockPath": "잠금 해제 경로",
+  "loading": "불러오는 중…",
+  "noPath": "아직 잠금 해제 경로가 없습니다. 이 기술을 해제하는 국가중점, 이벤트 또는 결정을 추가하세요.",
+  "moreCount": "+{n}개 더",
+  "unlockPathTitle": "잠금 해제 경로 · 마우스를 올리면 전체 경로 표시",
+  "deleteTitle": "이 기술 삭제",
+  "noIconTitle": "이 기술에 사용할 수 있는 아이콘이 없습니다",
+  "iconLoadFailedTitle": "이 기술에는 업로드된 아이콘이 있지만 불러오지 못했습니다",
+  "unlockKind": { "focus": "국가중점", "event": "이벤트", "decision": "결정" }
+}

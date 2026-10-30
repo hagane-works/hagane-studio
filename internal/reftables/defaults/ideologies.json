@@ -1,0 +1,27 @@
+{
+  "groups": ["democratic", "communism", "fascism", "neutrality"],
+  "sub_ideologies": [
+    {"id": "conservatism", "group": "democratic", "name": {"en": "Conservatism", "zh": "保守主义"}},
+    {"id": "liberalism", "group": "democratic", "name": {"en": "Liberalism", "zh": "自由主义"}},
+    {"id": "socialism", "group": "democratic", "name": {"en": "Socialism", "zh": "社会主义"}},
+    {"id": "populism", "group": "democratic", "name": {"en": "Populism", "zh": "民粹主义"}},
+    {"id": "marxism", "group": "communism", "name": {"en": "Marxism", "zh": "马克思主义"}},
+    {"id": "leninism", "group": "communism", "name": {"en": "Leninism", "zh": "列宁主义"}},
+    {"id": "stalinism", "group": "communism", "name": {"en": "Stalinism", "zh": "斯大林主义"}},
+    {"id": "anti_revisionism", "group": "communism", "name": {"en": "Anti-Revisionism", "zh": "反修正主义"}},
+    {"id": "anarchist_communism", "group": "communism", "name": {"en": "Anarchist Communism", "zh": "安那其共产主义"}},
+    {"id": "buddhist_socialism", "group": "communism", "name": {"en": "Buddhist Socialism", "zh": "佛教社会主义"}, "random_disabled": true},
+    {"id": "nazism", "group": "fascism", "name": {"en": "Nazism", "zh": "纳粹主义"}},
+    {"id": "gen_nazism", "group": "fascism", "name": {"en": "Nazism", "zh": "纳粹主义"}},
+    {"id": "fascism_ideology", "group": "fascism", "name": {"en": "Fascism", "zh": "法西斯主义"}},
+    {"id": "falangism", "group": "fascism", "name": {"en": "Falangism", "zh": "长枪党主义"}},
+    {"id": "rexism", "group": "fascism", "name": {"en": "Rexism", "zh": "雷克斯主义"}},
+    {"id": "emperor_fascism", "group": "fascism", "name": {"en": "Emperor Fascism", "zh": "皇道法西斯主义"}, "random_disabled": true},
+    {"id": "despotism", "group": "neutrality", "name": {"en": "Despotic", "zh": "专制主义"}},
+    {"id": "oligarchism", "group": "neutrality", "name": {"en": "Oligarchic", "zh": "寡头政治"}},
+    {"id": "anarchism", "group": "neutrality", "name": {"en": "Anarchism", "zh": "安那其主义"}},
+    {"id": "moderatism", "group": "neutrality", "name": {"en": "Moderatism", "zh": "温和主义"}},
+    {"id": "centrism", "group": "neutrality", "name": {"en": "Centrism", "zh": "中间主义"}},
+    {"id": "japan_militarism_ideology", "group": "neutrality", "name": {"en": "Militarism", "zh": "军国主义"}, "random_disabled": true}
+  ]
+}

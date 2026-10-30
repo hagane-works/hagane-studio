@@ -1,0 +1,4 @@
+{
+  "writeBlockedTitle": "Windows impidió que Hagane Works guardara archivos",
+  "writeBlockedDescription": "Se denegó la escritura en {folder}. Si la Protección contra ransomware (Acceso controlado a carpetas) está activada en Seguridad de Windows, permite HaganeWorks.exe o elige en Ajustes una Carpeta de proyectos fuera de carpetas protegidas como Documentos."
+}

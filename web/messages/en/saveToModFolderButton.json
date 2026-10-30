@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "Your browser doesn't support the File System Access API. Use Chrome or Edge, or go through the full Export Mod flow.",
+  "savedToFolder": "Written to mod folder",
+  "saveFailed": "Save to mod folder failed. {msg}",
+  "titleWithFolder": "Save {tag}'s file trio to {dir}/ (writes the files directly; takes effect after you restart the mod in HOI4)",
+  "titleNoFolder": "First use will prompt you to pick a mod folder",
+  "saving": "Saving...",
+  "saveToFolderNamed": "Save to {dir}",
+  "saveToModFolder": "Save to Mod Folder",
+  "changeFolderTitle": "Change mod folder",
+  "changeFolder": "Change folder",
+  "saved": "Saved ✓"
+}

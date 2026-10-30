@@ -1,0 +1,18 @@
+{
+  "expandPreview": "Vorschau vergrößern",
+  "collapsePreview": "Vorschau zum Zusammenbruch",
+  "tabLivePreview": "Live-Vorschau",
+  "tabScript": "Skript",
+  "tabReferencesHint": "Sehen Sie, welche anderen Entitäten auf diese verweisen und was sie darauf beziehen.",
+  "tabScriptHint": "Die exportierten Mod-Skriptdateien für diese Entity (fortgeschritten).",
+  "livePreviewSelectHint": "Wählen Sie einen Eintrag aus der Liste, um die Vorschau im Spiel zu sehen.",
+  "livePreviewCreateFirstHint": "Noch nichts zu sehen — erstellen Sie Ihr erstes Element aus der Liste links.",
+  "liveDraftBadge": "Live-Entwurf",
+  "previewLabel": "Vorschau",
+  "openInGame": "Im Spiel ansehen",
+  "previewUnavailableGeneric": "Diese Workbench hat noch keine Ingame-Vorschau – jedes Feld ist im Editor sichtbar.",
+  "noSelectionGeneric": "Nichts ausgewählt",
+  "backFromNew": "Zurück",
+  "searchPlaceholderGeneric": "Name suchen...",
+  "noMatchesGeneric": "Keine passenden Einträge"
+}

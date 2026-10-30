@@ -1,0 +1,70 @@
+{
+  "title": "Mundo inicial y límites de campaña",
+  "intro": "Estas reglas se aplican a todos los escenarios seleccionables. Elige el mundo al que entrarán los jugadores y la fecha final de la campaña.",
+  "worldQuestion": "Al comenzar la partida, ¿qué configuración del mundo debe usarse?",
+  "worldOptions": {
+    "inherit": {
+      "title": "Usar el mundo del juego original o del mod base",
+      "description": "Ideal si tu mod añade contenido o modifica solo una parte de un mundo existente."
+    },
+    "own": {
+      "title": "Planificar el mundo de mi escenario",
+      "description": "Registra tu intención de crear un mundo alternativo o una época especial. No reescribe archivos históricos automáticamente."
+    }
+  },
+  "startDate": {
+    "label": "Fecha de inicio del escenario",
+    "hint": "Usa la misma fecha que los jugadores elegirán al iniciar el escenario."
+  },
+  "endDate": {
+    "label": "Fecha de finalización del escenario",
+    "hint": "Una fecha válida posterior a todos los escenarios guardados se convierte en el final de la campaña en HOI4."
+  },
+  "compatibilityNotice": "Tu escenario seleccionable más tardío empieza en o después del final de la campaña original de 1949. Hasta que definas una fecha final posterior, la exportación añadirá una fecha compatible claramente indicada para evitar que la partida termine de inmediato.",
+  "timelineBaseline": {
+    "vanilla": "Proyecto independiente: la referencia es HOI4 original (fin de campaña: 1 de enero de 1949).",
+    "unregistered": "Cronología del mod base: fuente aún no registrada. El programa no supondrá que el mod base termina en 1949.",
+    "rawBookmarkCoverage": "Este panel usa los escenarios guardados en el área de trabajo. Los archivos Bookmark originales conservados se revisan aparte durante la exportación."
+  },
+  "saveFailed": "No se pudieron guardar los ajustes del escenario.",
+  "saveReadbackMismatch": "Al volver a leerlos no se obtuvieron los valores recién guardados. No se marca nada como guardado; inténtalo de nuevo.",
+  "ownWorldSummary": {
+    "title": "Tu elección de mundo",
+    "description": "Quieres que los jugadores entren en el mundo de tu escenario. Este ajuste solo registra la elección; revisa y crea por tu cuenta los archivos de mundo inicial necesarios antes de publicar."
+  },
+  "submodNotice": "Este proyecto usa un mod base cuya cronología aún no está registrada. El análisis es de solo lectura y no reescribirá automáticamente el mundo del mod base.",
+  "riskPreview": {
+    "title": "Vista previa de riesgos del mundo inicial",
+    "inherit": "Mantienes el mundo del juego original o del mod base. El programa solo señalará posibles riesgos de la configuración del mundo; no cambiará ese mundo por ti.",
+    "unverified": "Fuente aún no registrada: todavía no hay una vista previa verificada conectada para este mundo. El programa no fingirá conocer el resultado ni cambiará el mundo automáticamente.",
+    "verifiedIntro": "Esta configuración del mundo se puede verificar. Si la confirmas para el escenario, los jugadores encontrarán estos resultados:",
+    "verifiedEmpty": "Esta configuración del mundo se puede verificar, pero aún no hay cambios que mostrar a los jugadores. Revisa las fechas y la configuración del mundo del escenario.",
+    "consequences": {
+      "scenarioWorld": {
+        "title": "Los jugadores comienzan en el mundo de tu escenario",
+        "description": "El mundo inicial seguirá la configuración que creaste para este escenario."
+      },
+      "baseWorld": {
+        "title": "Los cambios posteriores del mundo base no se aplican",
+        "description": "Los cambios posteriores del mundo del juego original o del mod base no se aplicarán automáticamente en la fecha de inicio."
+      }
+    }
+  },
+  "campaignOpening": {
+    "title": "Inicio de la campaña",
+    "intro": "Los jugadores pueden elegir varios escenarios, así que HOI4 usa el marcador guardado válido más temprano como inicio de campaña. Los marcadores posteriores siguen siendo escenarios seleccionables.",
+    "currentLabel": "Fecha guardada de inicio de la campaña",
+    "notSelected": "Aún no se ha elegido una fecha de inicio",
+    "linked": "Esta fecha coincide con el escenario guardado más temprano, {bookmark}.",
+    "unlinked": "El escenario guardado más temprano empieza el {date}. Sincroniza el inicio antes de exportar.",
+    "noValidBookmark": "Guarda al menos un marcador con una fecha válida antes de definir el inicio de campaña.",
+    "syncEarliest": "Sincronizar con el escenario más temprano",
+    "synced": "Sincronizado con el escenario más temprano",
+    "saveCampaignSettings": "Guardar ajustes de campaña",
+    "workspaceTitle": "Inicio de todo el mod",
+    "workspaceIntro": "Estas reglas se aplican a todos los escenarios. Edita abajo la fecha y la presentación de selección de país de cada escenario.",
+    "editWorkspace": "Editar reglas de inicio",
+    "closeWorkspace": "Cerrar reglas de inicio",
+    "notSet": "Sin definir"
+  }
+}

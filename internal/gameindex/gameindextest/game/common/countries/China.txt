@@ -1,0 +1,4 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+graphical_culture = asian_gfx
+graphical_culture_2d = asian_2d
+color = { 180 140 60 }

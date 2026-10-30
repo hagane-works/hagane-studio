@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "国民精神（国家方針 / 国民精神）",
+    "character": "キャラクター",
+    "event": "イベント",
+    "decision": "ディシジョン",
+    "focus_node": "国家方針（国家方針ツリーのノード）",
+    "tech": "技術"
+  },
+  "title": "インポートした {noun} を編集",
+  "desc": "<mono>{label}</mono> はバニラまたは読み込んだ Mod に由来します。編集するとどうなるか選択してください。",
+  "keepImportedTitle": "インポートした元データを保持",
+  "keepImportedDesc": "この変更を破棄します。エクスポートではバニラまたは Mod の元データを保持します。",
+  "overrideTitle": "制作者の編集として上書き",
+  "overrideDesc": "保存すると自分の編集となり、エクスポート時にバニラまたは Mod の元データを上書きします。ID は変わりません。",
+  "createCopyTitle": "新しいコピーを作成（ID を変更）",
+  "createCopyDesc": "保存後もインポートした元データは残り、独立した {entityType} が追加されます。ビルドには両方が存在します。"
+}

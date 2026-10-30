@@ -1,0 +1,12 @@
+{
+  "title": "Eigene DLCs",
+  "summaryAll": "Alle DLCs",
+  "summaryNone": "Kein DLC",
+  "summarySome": "{count} von {total}",
+  "selectAll": "Alle wählen",
+  "selectNone": "Keine",
+  "integrated": "Teil des Grundspiels, jeder besitzt sie: {names}",
+  "hint": "Die Spielvorschau zeigt den Start mit diesen DLCs (has_dlc in den Skripten). Die exportierte Mod läuft weiterhin mit den DLCs, die ein Spieler tatsächlich besitzt. Du kannst das später in den Projekteinstellungen ändern.",
+  "badge": "DLC: {summary}",
+  "badgeTip": "Die Vorschau zeigt den Start mit diesen DLCs: {names}. Änderbar in den Projekteinstellungen."
+}

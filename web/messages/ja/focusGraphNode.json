@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "条件分岐 — allow_branch 条件を満たした場合だけ表示される非表示のルートです。",
+  "allowBranchBadge": "分岐",
+  "loadTreeTitle": "この国家方針が完了すると別の国家方針ツリーへ移動します。",
+  "loadTreeBadge": "移動",
+  "relativePositionTitle": "相対位置",
+  "addChildTitle": "接続された子国家方針を追加",
+  "addMutexChildTitle": "相互排他の国家方針を追加"
+}

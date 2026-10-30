@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "국민정신(국가중점 / 국민정신)",
+    "character": "캐릭터",
+    "event": "이벤트",
+    "decision": "결정",
+    "focus_node": "국가중점(국가중점 트리 노드)",
+    "tech": "기술"
+  },
+  "title": "가져온 {noun} 편집",
+  "desc": "<mono>{label}</mono>은(는) 바닐라 또는 불러온 모드에서 왔습니다. 편집하면 어떻게 되는지 선택하세요.",
+  "keepImportedTitle": "가져온 원본 유지",
+  "keepImportedDesc": "이 변경을 버립니다. 내보낼 때 바닐라 또는 모드 원본을 유지합니다.",
+  "overrideTitle": "제작자 편집으로 덮어쓰기",
+  "overrideDesc": "저장하면 내 편집 내용이 되고, 내보낼 때 바닐라 또는 모드 원본을 덮어씁니다. ID는 그대로입니다.",
+  "createCopyTitle": "새 사본 만들기(ID 변경)",
+  "createCopyDesc": "저장한 뒤에도 가져온 원본은 남고 독립된 {entityType}이(가) 추가됩니다. 빌드에 둘 다 존재합니다."
+}

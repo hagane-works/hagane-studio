@@ -1,0 +1,39 @@
+{
+  "save": "保存",
+  "cancel": "キャンセル",
+  "delete": "削除",
+  "create": "作成",
+  "loading": "読み込み中…",
+  "unnamed": "名前なし",
+  "all": "すべて",
+  "clear": "クリア",
+  "saving": "保存中…",
+  "revert": "元に戻す",
+  "search": "検索",
+  "discardUnsavedConfirm": "未保存の変更を破棄しますか？",
+  "countBadgeTooltip": "{total} 件中 {count} 件を表示",
+  "copiedToClipboard": "クリップボードにコピーしました",
+  "theme": {
+    "switchToDark": "ダークテーマに切り替え",
+    "switchToLight": "ライトテーマに切り替え"
+  },
+  "language": {
+    "label": "言語",
+    "heading": "言語 / LANGUAGE",
+    "publicHeading": "表示言語",
+    "current": "現在の言語：{language}",
+    "description": "言語を選択すると、画面表示がその言語に切り替わります。Mod コンテンツの言語は別に選択します。"
+  },
+  "emptyCtaCreate": "+ 新規作成",
+  "emptyCtaAi": "AI に任せる",
+  "emptyCtaAddCountry": "+ 先に国を追加",
+  "vocabulary": {
+    "customOption": "カスタム…(自分で入力)",
+    "customChip": "カスタム",
+    "vanillaGroup": "バニラ",
+    "baseModGroup": "ベース MOD から"
+  },
+  "chooseFile": "ファイルを選択",
+  "noFileChosen": "ファイルが選択されていません",
+  "gameFolderMissing": "この操作にはベースゲームが必要です。設定 → Hearts of Iron IV のインストール先 で Hearts of Iron IV のフォルダーを選んでください。"
+}

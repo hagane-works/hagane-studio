@@ -1,0 +1,4 @@
+{
+  "advisorSlotNote": "„{value}“ ist keiner der Berater-Slots, die diese Basis-Mod bereitstellt. Das ist nur dann relevant, wenn keine geladene Mod ihn definiert — wenn du ihn selbst definierst, ist alles in Ordnung. Slots der Basis-Mod: {list}",
+  "ideaTypeNote": "„{value}“ ist keine der Ideen-Kategorien, die diese Basis-Mod bereitstellt. Das ist nur dann relevant, wenn keine geladene Mod sie definiert — wenn du sie selbst definierst, ist alles in Ordnung. Kategorien der Basis-Mod: {list}"
+}

@@ -1,0 +1,18 @@
+{
+  "expandPreview": "展开预览",
+  "collapsePreview": "收起预览",
+  "tabLivePreview": "实时预览",
+  "tabScript": "脚本",
+  "tabReferencesHint": "看它被哪些国策、事件、决议引用，以及它引用了谁。",
+  "tabScriptHint": "它导出到 mod 的脚本文件(进阶，不用也能正常导出)。",
+  "livePreviewSelectHint": "从左侧列表选择一项，查看它的游戏内预览。",
+  "livePreviewCreateFirstHint": "还没有可预览的内容——先在左侧列表创建第一项。",
+  "liveDraftBadge": "实时草稿",
+  "previewLabel": "预览",
+  "openInGame": "在游戏里看",
+  "previewUnavailableGeneric": "这个工作台暂时没有游戏内预览 —— 所有字段都在中间编辑区直接可见。",
+  "noSelectionGeneric": "还没有选中条目",
+  "backFromNew": "返回",
+  "searchPlaceholderGeneric": "搜名称…",
+  "noMatchesGeneric": "没有匹配的条目"
+}

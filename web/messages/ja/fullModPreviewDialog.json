@@ -1,0 +1,11 @@
+{
+  "description": "Mod 全体がエクスポートする実際のファイルツリーと内容を表示します。ダウンロードする zip の内容と同一です。",
+  "includeImportedTitleOn": "元の Mod（バニラまたは旧 Mod）からインポートしたコンテンツを含め、Mod 全体をプレビュー",
+  "includeImportedTitleOff": "ユーザーが作成 / 変更したエンティティだけをプレビュー",
+  "includeImportedLabel": "インポート済みを含める（元の Mod から）",
+  "binaryNote": "バイナリファイル（{size}）— プレビューできません。「Mod フォルダーに保存」ではバイト単位でそのまま書き込みます。",
+  "selectFileHint": "左側でファイルを選択すると内容をプレビューできます",
+  "buttonTitle": "Mod 全体のエクスポート先ファイルツリーと内容をプレビュー",
+  "buttonLabel": "ファイルをプレビュー",
+  "loading": "読み込み中…"
+}

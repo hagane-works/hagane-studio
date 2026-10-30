@@ -1,0 +1,12 @@
+{
+  "loadingEditor": "Cargando editor…",
+  "copyTooltip": "Copiar script al portapapeles",
+  "copiedLabel": "Copiado",
+  "copyLabel": "Copiar",
+  "resetTooltip": "Descartar cambios del editor y volver a cargar el formulario",
+  "resetLabel": "Restablecer",
+  "applyTooltip": "Guardar los cambios del editor en la entidad (sobrescribe los campos del formulario)",
+  "applyErrorTooltip": "Resuelve primero los errores de análisis para poder aplicar",
+  "unknownTokenWithSuggestion": "⚠ «{token}» no es un activador o efecto del juego base. Puede ser un error; ¿querías decir {suggestion}?",
+  "unknownToken": "⚠ «{token}» no es un activador o efecto del juego base. Si es propio de un mod, puedes ignorar este aviso."
+}

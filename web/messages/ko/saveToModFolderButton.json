@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "이 브라우저는 File System Access API를 지원하지 않습니다. Chrome이나 Edge를 사용하거나 전체 모드 내보내기 흐름을 이용하세요.",
+  "savedToFolder": "모드 폴더에 기록했습니다",
+  "saveFailed": "모드 폴더에 저장하지 못했습니다. {msg}",
+  "titleWithFolder": "{tag}의 파일 3개를 {dir}/에 저장(파일을 직접 기록하며 HOI4에서 모드를 다시 시작하면 적용됩니다)",
+  "titleNoFolder": "처음 사용할 때 모드 폴더 선택 창이 열립니다",
+  "saving": "저장 중...",
+  "saveToFolderNamed": "{dir}에 저장",
+  "saveToModFolder": "모드 폴더에 저장",
+  "changeFolderTitle": "모드 폴더 변경",
+  "changeFolder": "폴더 변경",
+  "saved": "저장됨 ✓"
+}

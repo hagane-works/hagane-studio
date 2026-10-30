@@ -1,0 +1,974 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "idea-custom-missing",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "GFX_idea_custom",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 1,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "idea-vanilla-skipped",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "GFX_idea_vanilla_pic",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "idea-blank-picture",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "idea-submod-trusted",
+   "input": {
+    "deps": [
+     "Base"
+    ],
+    "include_imported": false,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "GFX_idea_custom",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "idea-imported-filtered",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "GFX_idea_custom",
+      "source": "imported",
+      "country_tag": ""
+     }
+    ],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "idea-imported-included",
+   "input": {
+    "deps": [],
+    "include_imported": true,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "GFX_idea_custom",
+      "source": "imported",
+      "country_tag": ""
+     }
+    ],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 1,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "event-custom-missing",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [
+     {
+      "id": 1,
+      "event_id": "my.1",
+      "picture": "GFX_event_custom",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 1,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "event-non-gfx-skipped",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [
+     {
+      "id": 1,
+      "event_id": "my.1",
+      "picture": "plain.png",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "event-submod-trusted",
+   "input": {
+    "deps": [
+     "Base"
+    ],
+    "include_imported": false,
+    "ideas": [],
+    "events": [
+     {
+      "id": 1,
+      "event_id": "my.1",
+      "picture": "GFX_event_custom",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "decision-custom-missing",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [
+     {
+      "id": 1,
+      "decision_id": "my_dec",
+      "icon": "custom_icon",
+      "source": "created"
+     }
+    ],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 1,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "decision-blank-icon",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [
+     {
+      "id": 1,
+      "decision_id": "my_dec",
+      "icon": "",
+      "source": "created"
+     }
+    ],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "decision-submod-still-counts",
+   "input": {
+    "deps": [
+     "Base"
+    ],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [
+     {
+      "id": 1,
+      "decision_id": "my_dec",
+      "icon": "custom_icon",
+      "source": "created"
+     }
+    ],
+    "techs": [],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 1,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "tech-custom-missing",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [
+     {
+      "id": 1,
+      "tech_id": "my_tech",
+      "source": "created"
+     }
+    ],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 1,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "tech-blank-id",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [
+     {
+      "id": 1,
+      "tech_id": "",
+      "source": "created"
+     }
+    ],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "tech-submod-still-counts",
+   "input": {
+    "deps": [
+     "Base"
+    ],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [
+     {
+      "id": 1,
+      "tech_id": "my_tech",
+      "source": "created"
+     }
+    ],
+    "characters": [],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 1,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "focus-custom-missing",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": [
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": ""
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 1,
+    "portraits_missing": 0,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "focus-vanilla-icon-skipped",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": [
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": "GFX_goal_generic_alliance"
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "focus-sprite-dedup",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": [
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": ""
+       },
+       {
+        "focus_id": "f2",
+        "icon": ""
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 2,
+    "portraits_missing": 0,
+    "total_missing": 2
+   }
+  },
+  {
+   "name": "focus-blank-id",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": [
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "",
+        "icon": ""
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "focus-submod-trusted",
+   "input": {
+    "deps": [
+     "Base"
+    ],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": [
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": ""
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "focus-imported-tree-filtered",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [],
+    "trees": [
+     {
+      "source": "imported",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": ""
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "portrait-custom-missing",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [
+     {
+      "id": 1,
+      "tag": "GER_max",
+      "large_portrait": "uploads/x.png",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 1,
+    "total_missing": 1
+   }
+  },
+  {
+   "name": "portrait-blank-skipped",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [
+     {
+      "id": 1,
+      "tag": "GER_max",
+      "large_portrait": "",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "portrait-gfx-prefix-skipped",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [
+     {
+      "id": 1,
+      "tag": "GER_max",
+      "large_portrait": "GFX_portrait_x",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "portrait-gfx-path-skipped",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [
+     {
+      "id": 1,
+      "tag": "GER_max",
+      "large_portrait": "gfx/portraits/x.png",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "portrait-submod-trusted",
+   "input": {
+    "deps": [
+     "Base"
+    ],
+    "include_imported": false,
+    "ideas": [],
+    "events": [],
+    "decisions": [],
+    "techs": [],
+    "characters": [
+     {
+      "id": 1,
+      "tag": "GER_max",
+      "large_portrait": "uploads/x.png",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "trees": []
+   },
+   "expected": {
+    "idea_pictures_missing": 0,
+    "event_pictures_missing": 0,
+    "decision_icons_missing": 0,
+    "tech_icons_missing": 0,
+    "focus_icons_missing": 0,
+    "portraits_missing": 0,
+    "total_missing": 0
+   }
+  },
+  {
+   "name": "all-kinds-total",
+   "input": {
+    "deps": [],
+    "include_imported": false,
+    "ideas": [
+     {
+      "id": 1,
+      "idea_id": "my_idea",
+      "picture": "GFX_idea_custom",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "events": [
+     {
+      "id": 2,
+      "event_id": "my.1",
+      "picture": "GFX_event_custom",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "decisions": [
+     {
+      "id": 3,
+      "decision_id": "my_dec",
+      "icon": "custom_icon",
+      "source": "created"
+     }
+    ],
+    "techs": [
+     {
+      "id": 4,
+      "tech_id": "my_tech",
+      "source": "created"
+     }
+    ],
+    "characters": [
+     {
+      "id": 5,
+      "tag": "GER_max",
+      "large_portrait": "uploads/x.png",
+      "source": "created",
+      "country_tag": ""
+     }
+    ],
+    "trees": [
+     {
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "icon": ""
+       }
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "idea_pictures_missing": 1,
+    "event_pictures_missing": 1,
+    "decision_icons_missing": 1,
+    "tech_icons_missing": 1,
+    "focus_icons_missing": 1,
+    "portraits_missing": 1,
+    "total_missing": 6
+   }
+  }
+ ],
+ "namers": [
+  {
+   "name": "idea_picture_filename",
+   "args": [
+    "GER",
+    "my idea"
+   ],
+   "result": "idea_GER_my_idea.png"
+  },
+  {
+   "name": "idea_picture_filename-spaces",
+   "args": [
+    "fra",
+    "Idea Forte"
+   ],
+   "result": "idea_FRA_idea_forte.png"
+  },
+  {
+   "name": "event_picture_filename",
+   "args": [
+    "GER",
+    "my.event.1"
+   ],
+   "result": "event_GER_myevent1.png"
+  },
+  {
+   "name": "decision_icon_filename",
+   "args": [
+    "my dec"
+   ],
+   "result": "decision_my_dec.png"
+  },
+  {
+   "name": "tech_icon_filename",
+   "args": [
+    "Tech Name!"
+   ],
+   "result": "tech_name.png"
+  },
+  {
+   "name": "focus_icon_sprite_name",
+   "args": [
+    "my_focus"
+   ],
+   "result": "GFX_focus_my_focus"
+  },
+  {
+   "name": "portrait_filename",
+   "args": [
+    "GER",
+    "max"
+   ],
+   "result": "portrait_GER_max.png"
+  },
+  {
+   "name": "extract_slug-prefixed",
+   "args": [
+    "GER_max",
+    "GER"
+   ],
+   "result": "max"
+  },
+  {
+   "name": "extract_slug-plain",
+   "args": [
+    "Max Mustermann",
+    "GER"
+   ],
+   "result": "max_mustermann"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Befehl der Kampfeinheiten (konserviert)",
+  "subtitle": "Ihre handgeschriebenen OOB, Einheiten, Divisionsvorlagen und Geräte werden wörtlich gehalten und Byte-for-Byte wieder exportiert.",
+  "preservedBadge": "Auf Hin- und Rückfahrt erhalten",
+  "detectedHeading": "In dieser Datei gefunden",
+  "stat": {
+    "set_oob": "GrundstückeOOBref",
+    "set_air_oob": "Luft-OOB-Rückspiegel",
+    "set_naval_oob": "Marine OOB ref",
+    "units": "Einheiten",
+    "division_template": "partition_template",
+    "equipment": "Ausrüstung / Produktion"
+  },
+  "editLabel": "OOB / Einheiten rohes Skript",
+  "editHelp": "Frei bearbeiten – dieser genaue Text wird beim Export in die Geschichte/Länder/[TAG].txt geschrieben. Kommentare und Inline-Blöcke werden als-is gehalten.",
+  "emptyTitle": "Noch keine OOB oder Einheiten",
+  "emptyBody": "Fügen Sie hier eine set_oob-Referenz oder einen units-Block ein — beides übersteht den Export unverändert. set_oob benennt eine Datei unter history/units/: Das Programm erzeugt diese Datei aus Ihren Werkbänken „Divisionsvorlagen“ und „Anfangsarmee“, und eine gleichnamige Datei aus einem importierten Mod wird unverändert übernommen. Benennen Sie sie nach Länder-Tag + Startjahr (z. B. ROM_1936) — alles Weitere liest das Land aus diesem Präfix.",
+  "emptyInsert": "OOB-Starter einfügen",
+  "starterComment": "# Kampforden — geschrieben wörtlich in die Geschichte dieses Landes",
+  "starterNeedsTag": "Tragen Sie zuerst das Länder-Tag dieser History-Datei ein — der OOB-Dateiname muss damit beginnen (z. B. ROM_1936), sonst ist nicht erkennbar, zu welchem Land diese Einheiten gehören."
+}

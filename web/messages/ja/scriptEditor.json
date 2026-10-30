@@ -1,0 +1,12 @@
+{
+  "loadingEditor": "エディターを読み込み中…",
+  "copyTooltip": "スクリプトをクリップボードにコピー",
+  "copiedLabel": "コピーしました",
+  "copyLabel": "コピー",
+  "resetTooltip": "エディターの変更を破棄してフォームから再読み込み",
+  "resetLabel": "リセット",
+  "applyTooltip": "エディターの変更をエンティティに保存（フォームのフィールドを上書き）",
+  "applyErrorTooltip": "適用するには先に解析エラーを解決してください",
+  "unknownTokenWithSuggestion": "⚠ 「{token}」はバニラの trigger/effect ではありません。入力ミスの可能性があります。{suggestion} ではありませんか？",
+  "unknownToken": "⚠ 「{token}」はバニラの trigger/effect ではありません。Mod 独自のトークンであれば無視しても問題ありません。"
+}

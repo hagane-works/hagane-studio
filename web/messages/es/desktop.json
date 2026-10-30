@@ -1,0 +1,97 @@
+{
+  "setup": {
+    "title": "Bienvenido a Hagane Works",
+    "intro": "Elige dónde guardar tus proyectos. Cada proyecto es una carpeta normal que puedes copiar, respaldar o poner bajo control de versiones.",
+    "projectsDirTitle": "Carpeta de proyectos",
+    "projectsDirHelp": "Cada proyecto se guarda aquí como una carpeta. Elige una carpeta vacía o una que ya uses para Hagane Works.",
+    "gameDirTitle": "Instalación de Hearts of Iron IV",
+    "gameDirHelp": "La vista previa del juego y los datos del juego base se leen de tu propia copia del juego. Este programa no incluye archivos del juego.",
+    "gameFound": "{dir} (versión {version})",
+    "gameMissing": "No se encontró automáticamente. Elige la carpeta que contiene hoi4.exe.",
+    "notChosen": "Aún no elegida",
+    "choose": "Elegir…",
+    "start": "Empezar"
+  },
+  "folderPicker": {
+    "up": "Subir un nivel",
+    "pathPlaceholder": "Escribe la ruta de una carpeta",
+    "go": "Ir",
+    "empty": "No hay carpetas aquí.",
+    "cancel": "Cancelar",
+    "choose": "Usar esta carpeta"
+  },
+  "settings": {
+    "open": "Ajustes",
+    "title": "Ajustes de Hagane Works",
+    "legalTitle": "Proyecto independiente de fans",
+    "legalNotice": "Hagane Works no está afiliado, respaldado ni patrocinado por Paradox Interactive. Hearts of Iron IV y las marcas relacionadas pertenecen a sus respectivos propietarios.",
+    "version": "Versión {version}",
+    "projectsDir": "Carpeta de proyectos",
+    "gameDir": "Instalación de Hearts of Iron IV",
+    "modDir": "Carpeta de mods para «Instalar»",
+    "change": "Cambiar…",
+    "cwtools": "Reglas de CWTools (opcional)",
+    "cwtoolsMissing": "No encontradas",
+    "cwtoolsModifiers": "{count, plural, one {# nombre de modificador leído} other {# nombres de modificadores leídos}}",
+    "cwtoolsAutomatic": "Buscar automáticamente",
+    "cwtoolsAbout": "Opcionales y solo sirven para comprobar los nombres de los modificadores al exportar: son reglas del proyecto externo CWTools (licencia MIT) y se pueden descargar desde <link>github.com/cwtools/cwtools-hoi4-config</link>.",
+    "port": "Puerto",
+    "portSave": "Guardar",
+    "portInUse": "En uso ahora: {port}",
+    "portAbout": "El puerto local en el que escucha Hagane Works; déjalo vacío para usar el predeterminado. El cambio se aplica la próxima vez que inicies el programa. Lo que recuerda la ventana (tema, idioma, favoritos) va ligado a su dirección, así que con un puerto nuevo empieza de cero.",
+    "cpu": "Uso de CPU",
+    "cpuOne": "1 núcleo",
+    "cpuHalf": "50 % ({cores, plural, one {# núcleo} other {# núcleos}})",
+    "cpuAll": "100 % ({cores, plural, one {# núcleo} other {# núcleos}})",
+    "cpuAbout": "Cuántos núcleos del procesador puede ocupar Hagane Works al importar un mod o leer tu juego. Menos deja más para otros programas; todos es lo más rápido.",
+    "avatar": {
+      "title": "Tu avatar local",
+      "about": "Elige un compañero incluido o tu propia imagen. Solo se guarda en este equipo y nunca se exporta con un mod.",
+      "currentAlt": "Avatar actual",
+      "upload": "Usar tu propia imagen",
+      "processing": "Procesando…",
+      "uploadHelp": "PNG, JPEG o WebP de hasta 10 MB. La imagen se recorta en forma cuadrada.",
+      "invalidType": "Elige una imagen PNG, JPEG o WebP.",
+      "tooLarge": "La imagen debe ocupar 10 MB o menos.",
+      "failed": "No se pudo usar o guardar esta imagen en el equipo.",
+      "pets": {
+        "field_engineer_dog": "Perro ingeniero",
+        "infantry_rabbit": "Conejo de infantería",
+        "logistics_panda": "Panda logístico",
+        "air_ace_fox": "Zorro as del aire",
+        "tank_commander_bear": "Oso comandante de tanque",
+        "codebreaker_owl": "Búho criptógrafo",
+        "admiral_penguin": "Pingüino almirante",
+        "medic_deer": "Ciervo médico"
+      }
+    },
+    "quit": "Salir de Hagane Works"
+  },
+  "gameIndex": {
+    "title": "Listas de referencia de tu juego",
+    "about": "Hagane Works lee tu propia copia del juego para crear sus listas de referencia: países, espíritus nacionales, equipo y más. El programa no incluye nada del juego.",
+    "missing": "Elige primero la carpeta del juego.",
+    "building": "Leyendo tu juego… {done} de {total}",
+    "step": "Ahora: {step}",
+    "buildingHint": "Puedes seguir trabajando. Las páginas que necesitan estas listas esperan a que estén listas.",
+    "importWaiting": "Esperando las listas de referencia de tu juego…",
+    "ready": "Listo · versión del juego {version} · creado el {time}",
+    "failed": "No se pudieron crear las listas.",
+    "rebuild": "Volver a crear"
+  },
+  "install": {
+    "title": "Instalar en el juego",
+    "hint": "Genera el mod y lo coloca en {folder} para que aparezca en el lanzador.",
+    "installedTo": "Instalado en {folder}",
+    "install": "Instalar",
+    "reinstall": "Instalar de nuevo",
+    "installing": "Instalando…",
+    "done": "Instalado. Actívalo en el conjunto de mods del lanzador.",
+    "failed": "No se pudo instalar el mod"
+  },
+  "unsaved": {
+    "title": "Cambios sin guardar",
+    "body": "Hay cambios que aún no se han guardado. ¿Cerrar Hagane Works de todos modos? Se perderán.",
+    "close": "Cerrar sin guardar"
+  }
+}

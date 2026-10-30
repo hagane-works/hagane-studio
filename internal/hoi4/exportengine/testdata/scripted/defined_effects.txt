@@ -1,0 +1,9 @@
+# Ships at common/scripted_effects/ in the fixture artifact: names defined
+# here are resolved calls, not un-modeled references.
+defined_here = {
+	add_political_power = 10
+	sibling_helper = yes
+}
+sibling_helper = {
+	add_stability = 0.01
+}

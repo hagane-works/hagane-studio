@@ -1,0 +1,25 @@
+{
+  "title": "Avant de commencer : trois choses à savoir",
+  "subtitle": "Environ une minute de lecture.",
+  "c1": {
+    "title": "Votre mod se construit pays par pays, en ajoutant du contenu au jeu",
+    "b1": "Commencez par ajouter un pays : choisissez-en un qui existe déjà dans le jeu de base, comme l’Allemagne (GER), ou créez votre propre TAG de pays.",
+    "b2": "Les personnages, priorités nationales, événements et décisions appartiennent tous à un pays. Les ateliers à gauche affichent le pays actuel.",
+    "b3": "Par défaut, l’export ne contient que ce que vous avez ajouté ou modifié. Il ne copie jamais tout le jeu de base dans votre mod.",
+    "b3Loaded": "Les projets chargés depuis un mod existant exportent tout le contenu par défaut.",
+    "addCountry": "+ Ajouter un pays",
+    "currentCountry": "Pays actuel : {tag} · {name}"
+  },
+  "c2": {
+    "title": "Import et export en cours d’amélioration ; TNO est déjà utilisable",
+    "b1": "L’import de mods existants et l’export sont encore en cours d’amélioration. Avec les gros mods, une partie du contenu peut manquer après l’import : <b>testez toujours votre mod exporté en jeu</b>.",
+    "b2Base": "Ce projet est basé sur <b>{baseMod}</b>. Ajoutez du contenu par TAG de pays. L’export est un sous-mod : les joueurs doivent aussi activer {baseMod}."
+  },
+  "ctaAddFirst": "Ajouter votre premier pays",
+  "ctaCharacters": "Aller aux Personnages",
+  "local": {
+    "title": "Tout reste sur votre ordinateur",
+    "b1": "Chaque projet est un dossier dans votre dossier de création : <b>project.json</b> et un fichier de données par type de contenu. Vous pouvez le copier, le sauvegarder ou le versionner.",
+    "b2": "Le jeu de base est lu depuis votre propre installation de Hearts of Iron IV. Exportez un ZIP ou installez le mod directement dans le dossier des mods du jeu."
+  }
+}

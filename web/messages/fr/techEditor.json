@@ -1,0 +1,207 @@
+{
+  "basicInfo": "Informations de base",
+  "displayName": "Nom affiché",
+  "techIdLabel": "ID de Technologie (interne à HOI4)",
+  "statusSaving": "Enregistrement...",
+  "statusSaved": "Enregistré",
+  "statusError": "Échec de l’enregistrement",
+  "statusUnsaved": "Modifications non enregistrées",
+  "addPrerequisitePlaceholder": "Ajouter une Technologie préalable...",
+  "advancedFieldsLabel": "Champs avancés",
+  "saveTechButton": "Enregistrer la Technologie",
+  "deleteTechButton": "Supprimer la Technologie",
+  "section": {
+    "categories": "Catégories",
+    "aiWillDo": "Préférence de l’IA",
+    "description": "Description"
+  },
+  "statDesc": {
+    "soft_attack": "Dégâts infligés aux cibles non blindées (infanterie, artillerie et positions non blindées). C’est la statistique dont dépendent le plus presque toutes les unités terrestres, et la principale source de dégâts d’une division d’infanterie. +10%~+30% représente la plage technologique intermédiaire habituelle ; +50% ou plus provient de combinaisons de Doctrine terrestre d’élite et de Matériel de dernier niveau. Les cibles blindées nécessitent hard_attack : les deux statistiques ont des rôles bien distincts.",
+    "hard_attack": "Dégâts infligés aux cibles blindées (chars, automitrailleuses et semi-chenillés). Les divisions d’infanterie n’obtiennent hard_attack qu’avec des canons antichars ou des armes antiblindage ; les divisions blindées en disposent naturellement. +15%~+40% représente la plage intermédiaire et tardive. Une infanterie sans hard_attack est rapidement écrasée par les divisions blindées : la guerre blindée exige des armes dédiées ou un appui aérien CAS.",
+    "defense": "Capacité à esquiver les attaques reçues sans se déplacer. C’est la statistique centrale de la défense statique, utilisée par le défenseur dans la guerre de positions. +10%~+30% représente la plage intermédiaire ; l’accumulation d’une Doctrine terrestre avancée, du terrain et des fortifications peut dépasser +100%. Son usage s’oppose à breakthrough : defense sert à tenir le terrain, breakthrough à avancer ; une division n’en utilise généralement qu’une à la fois.",
+    "breakthrough": "Statistique qui absorbe les dégâts lors d’une attaque en mouvement. L’assaillant l’utilise pendant sa progression : une division dotée d’un breakthrough élevé peut avancer sous les contre-attaques. Les chars et unités mécanisées en ont naturellement beaucoup ; l’infanterie dépend des ingénieurs et de l’organisation. +20%~+50% représente la plage intermédiaire et tardive des Technologies de chars. Son usage s’oppose à defense : defense à l’arrêt, breakthrough en progression.",
+    "armor_value": "Épaisseur physique du blindage d’une unité, comparée à l’ap_attack (perforation) adverse pour déterminer s’il peut être pénétré. Quand armor > perforation ennemie, l’attaque est **entièrement bloquée** ; sinon, la pénétration est complète. Le blindage d’un char moyen peut être invulnérable aux fusils antichars de l’infanterie, tandis que les canons AT de gros calibre détruisent les chars légers. Échelle courante : 10~100+.",
+    "ap_attack": "Capacité de perforation de l’attaquant, comparée à l’armor_value adverse : perforation ≥ armor entraîne des dégâts normaux ; perforation < armor réduit fortement les dégâts (environ 50% ou moins). C’est la statistique centrale des canons AT et des canons de char. Les divisions d’infanterie n’obtiennent ap_attack qu’avec des armes AT ; l’infanterie pure reste largement inefficace contre les divisions blindées.",
+    "max_organisation": "La « réserve de moral » d’une unité pour résister à la déroute. Chaque tour de combat consomme de l’organisation ; à zéro, l’unité doit se désengager puis récupère rapidement. Valeurs courantes : infanterie 60~80, mécanisée 40~60, divisions blindées 30~45. Les bonus de Technologie ou de Doctrine terrestre apportent souvent +5~+15. Une organisation faible cherche la victoire rapide par des dégâts explosifs ; une organisation élevée prolonge le combat par l’endurance : c’est un arbitrage essentiel des Modèles de divisions.",
+    "max_strength": "La valeur réelle d’« effectifs » d’une unité à pleine puissance. Les pertes de combat réduisent la force ; à zéro, la division est détruite ; les renforts arrière la rétablissent avec le temps. Valeurs courantes : bataillon d’infanterie 25, de chars 40, d’artillerie 35 ; division complète 200~400+. La plage technologique habituelle est de +5~+20%. Une division à force nulle mais avec de l’organisation se désengage et a pratiquement perdu toute capacité de combat.",
+    "reliability": "Indicateur inverse du taux de panne du Matériel (décimal 0.0~1.0). Il représente l’inverse de la probabilité de panne au combat ou en marche : faible fiabilité = forte attrition du Matériel. Valeurs courantes : armes d’infanterie 0.7~0.9, chars 0.5~0.8, avions 0.6~0.85. Un bonus technologique apporte souvent +5%~+15%. Les unités blindées ou aériennes peu fiables exigent beaucoup de pièces de rechange, une lourde charge logistique.",
+    "maximum_speed": "Vitesse de déplacement d’une unité sur la carte stratégique (km/h). Elle détermine la réactivité du redéploiement, les encerclements et l’efficacité des retraites. Valeurs courantes : infanterie 4, motorisée 8, mécanisée 10, chars 6~10. Les bonus de Doctrine terrestre ou de Technologie atteignent souvent +10%~+25%. Les divisions rapides mènent les percées et les encerclements ; les lentes dépendent des nœuds logistiques. Météo, terrain et ravitaillement ralentissent fortement les mouvements.",
+    "build_cost_ic": "Coût en capacité industrielle (IC) d’une unité ou d’un Matériel. **Une valeur négative est avantageuse** : `build_cost_ic = -0.1` signifie -10% de coût. Les Technologies et Doctrines accordent souvent -5%~-15%. Vérifiez que le signe correspond à l’intention : +build_cost_ic renchérit l’unité. Les grands mods l’utilisent souvent pour représenter des « chaînes de Production rationalisées » ou des branches de Priorités nationales consacrées à une « meilleure efficacité militaro-industrielle ».",
+    "suppression": "Capacité à contenir l’activité de la Résistance dans les territoires occupés. Les divisions à forte suppression déployées dans les États occupés réduisent l’activité de la Résistance et influencent la progression de l’obéissance. La cavalerie, la police militaire et les unités mécanisées ont naturellement des valeurs élevées. Valeurs courantes : infanterie 2, cavalerie/MP 4~6. L’occupation de régions complexes, comme les colonies ou les territoires nationaux ennemis, exige beaucoup de suppression ; un manque réduit usines et ressources. À utiliser avec la politique de garnison.",
+    "air_attack": "Capacité antiaérienne d’une unité terrestre contre les avions ennemis, liée à du Matériel AA dédié. Elle n’a d’effet que si une division d’infanterie est équipée d’un canon AA ; sinon elle vaut 0. Sans supériorité aérienne, une valeur air_attack élevée réduit sensiblement les pertes dues aux frappes aériennes. Valeurs courantes : infanterie +2~5, bataillon AA dédié +15~30. Plage technologique AA : +20%~+50%. Néanmoins, des chasseurs neutralisant le CAS ennemi restent la solution la plus efficace.",
+    "naval_speed": "Vitesse de déplacement stratégique d’une unité navale (nœuds). Elle influe sur le redéploiement des flottes, l’interception, la retraite et l’efficacité de l’escorte des convois. Valeurs courantes : cuirassé 25~30, croiseur 28~34, destroyer 35~40. Plage technologique des moteurs navals : +5%~+15%. Les navires légers rapides escortent et reconnaissent ; les navires capitaux lents ont besoin d’escortes. Portée et vitesse déterminent ensemble la couverture stratégique.",
+    "surface_detection": "Capacité d’un navire à détecter les cibles de surface. Elle influe sur les chances de frapper en premier et sur la distance à laquelle une flotte repère l’ennemi. Valeurs courantes : destroyer 20~30, croiseur 25~40, cuirassé 15~25. Plage technologique du radar : +10%~+30%. Les destroyers à forte détection forment un écran d’éclaireurs ; les navires capitaux dépendent d’eux pour recevoir des cibles. À distinguer de sub_detection, qui repère précisément les sous-marins.",
+    "sub_detection": "Capacité d’un navire à détecter les sous-marins, statistique centrale de la lutte anti-sous-marine. Les destroyers, escorteurs et avions ASM en sont les principales sources. Valeurs courantes : destroyer ordinaire 10~20, destroyer ASM spécialisé 30~50. Plage technologique du sonar : +20%~+50%. Une flotte d’escorte avec une sub_detection insuffisante laisse les meutes de sous-marins couler massivement ses convois, ce qui frappe directement les importations de ressources stratégiques."
+  },
+  "techId": {
+    "placeholder": "p. ex. improved_infantry_equipment",
+    "tooltipTitle": "ID de Technologie · identifiant interne unique de HOI4",
+    "tooltipContent": "Identifiant interne unique de la Technologie dans tout le mod. Convention : minuscules et tirets bas, sans espaces ni caractères chinois. Ajoutez un préfixe pour indiquer sa ligne (infantry_weapons_1 / armor_medium_1 / ca_early_fighter). Les scripts has_tech = X, add_tech_bonus technology = X et set_technology = { X = 1 } font tous référence à cet ID. Le renommer rompt toutes les références et rend les anciennes sauvegardes incompatibles : soyez prudent."
+  },
+  "collision": {
+    "sameName": "Même nom qu’une Technologie vanilla : le chargement du mod la remplace silencieusement et crée de la confusion. Renommez-la.",
+    "renameTo": "renommer en",
+    "recommended": "(recommandé)"
+  },
+  "banner": {
+    "showAs": "Afficher comme nœud bannière (200×60 · texte + icône)",
+    "tooltipTitle": "Dimension d’un nœud bannière ou icône",
+    "tooltipContent": "Bannière (horizontale, 200×60) : affiche le nom textuel + l’icône ; adaptée au **Matériel concret emblématique** (p. ex. M1 Garand / premiers destroyers / développement des chars de l’entre-deux-guerres). Icône (compacte, 64×64) : icône + badge de niveau uniquement ; adaptée aux **Technologies secondaires ou améliorations abstraites** (p. ex. cat_radar III / Production industrielle II). Dans le contenu vanilla, le Matériel de soutien et l’industrie utilisent presque toujours des icônes ; les équipements navals et aériens emblématiques, des bannières ; les blindés mélangent les deux."
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout (nœud compact EN JEU)",
+    "tooltipTitle": "force_use_small_tech_layout · disposition compacte en jeu",
+    "tooltipContent": "Émet `force_use_small_tech_layout = yes` pour imposer la **disposition compacte du nœud sur le véritable écran de recherche de HOI4**. C’est DISTINCT de \"Afficher comme nœud bannière\" : cette option contrôle seulement l’apparence du nœud **sur le canevas du programme** (interface uniquement, aucune exportation), tandis que celle-ci est une véritable surcharge exportée et lue par le jeu. Le contenu vanilla ne l’utilise que sur une cinquantaine de Technologies ; laissez-la DÉSACTIVÉE sauf si vous voulez qu’une Technologie normalement grande emploie un petit nœud en jeu."
+  },
+  "researchCost": {
+    "label": "Coût de recherche",
+    "tooltipTitle": "Coût de recherche · multiplicateur du coût",
+    "tooltipContent": "**Multiplicateur relatif** du temps de recherche, et non un nombre absolu de jours : la durée réelle résulte de coût × personnel de recherche × speed_factor × pénalité d’avance. **Les valeurs vanilla habituelles se concentrent entre 1.5 et 2.5** : la ligne principale d’infanterie utilise souvent 1.5, les Technologies centrales 2 et les Doctrines 2.5. Aux extrêmes : nœuds spéciaux de Doctrine 4+, Projets Spéciaux jusqu’à 0.5, mais très rarement. Une valeur trop haute décourage toute recherche par l’IA ; trop basse, le joueur termine en un jour. Associez-la à start_year pour contrôler la pénalité d’avance."
+  },
+  "startYear": {
+    "label": "Année de départ",
+    "tooltipTitle": "Année de départ · année historique de la Technologie",
+    "tooltipContent": "Année historique de disponibilité de la Technologie. La rechercher plus tôt déclenche une **pénalité d’avance** : ahead_of_time_research_factor la ralentit fortement, généralement de -50% à -70%. Distribution vanilla avec référence 1936 : **pic principal en 1936 (106 Technologies)**, forte densité de 1939 à 1945, quelques Technologies de soutien précoces en 1918/1922, premières en 1910 (moins de dix), dernières en 1950 (6). Les mods d’uchronie ou modernes, comme Fire Rise, peuvent utiliser 1960+ pour marquer des Technologies « contemporaines ou futures ».",
+    "balanceWarn": "⚠ équilibrage vanilla : chaque année d’avance ≈ +200% de coût (recherche environ 2 fois plus lente pour le joueur)"
+  },
+  "xPosition": {
+    "label": "Position X",
+    "tooltipTitle": "Position X · décalage de ligne (vertical) sur l’écran de recherche",
+    "tooltipContent": "Contre-intuitif mais vérifié en jeu : sur l’écran de recherche de HOI4, **x est l’axe vertical, y l’axe horizontal**. x est le **décalage de ligne** par rapport à la technologie parente : +1 = une ligne plus bas, et c’est lui qui écarte les branches parallèles. La position horizontale est décidée par y (le jeu de base écrit par habitude le palier d’année dans y, par ex. @1936 ; sans lien avec start_year). Dans le jeu de base, infantry_weapons1 → 2 → improved sont tous sur x = 0 avec y croissant, tandis que armored_car1 est sur x = 4, une ligne plus bas. Une même position se superpose. Sans prérequis, la référence est l’origine du dossier."
+  },
+  "folder": {
+    "label": "Dossier de recherche",
+    "tooltipTitle": "Dossier · onglet de l’écran de recherche",
+    "tooltipContent": "Le bloc `technology_folders` de `common/technology_tags/00_technology.txt` décide dans quel onglet de recherche (army / air / navy / industry / electronics / special_forces) apparaît la Technologie. Chaque jeton, comme infantry_folder ou mtgnavalfolder, correspond à un sous-onglet du jeu. Un mauvais choix n’empêche pas son fonctionnement, mais la place au mauvais endroit. Il est défini automatiquement d’après le sous-onglet actif lors de la création ; modifiez-le ici pour la déplacer. Les dossiers personnalisés définis dans le fichier technology_tags du mod sont conservés tels quels.",
+    "customCurrent": "Actuel (personnalisé) : {folder}",
+    "none": "Hors de l’arbre de recherche (Technologie secondaire)"
+  },
+  "prerequisites": {
+    "heading": "Prérequis",
+    "tooltipContent": "Liste des Technologies préalables. **Elles doivent toutes être recherchées** avant celle-ci (logique AND). Les prérequis OR ne se configurent pas ici : placez plusieurs chemins à la même position ; deux ensembles de prérequis partageant dossier+position forment automatiquement un OR. Les Technologies linéaires ont généralement 1~2 prérequis ; les embranchements ou jonctions centrales peuvent en avoir 3 ou plus. Aucun cycle n’est permis, sous peine de blocage dans HOI4."
+  },
+  "effects": {
+    "title": "Effets de Technologie (déblocages)",
+    "tooltipContent": "Contenu du jeu débloqué définitivement à l’achèvement de la Technologie : Matériel (enable_equipments), types d’unité (enable_subunits) et modules de Matériel (enable_equipment_modules). C’est son « bénéfice à long terme » : même sans modificateur global, le contenu débloqué ajoute du Matériel à la chaîne de Production et de nouveaux types d’unité aux Modèles de divisions. Champ essentiel des lignes d’infanterie, de blindés, navales et aériennes.",
+    "hint": "Matériel, unités et modules débloqués par la Technologie. Un ID par ligne, saisi directement comme nom interne de HOI4."
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments (débloquer du Matériel)",
+    "tooltipTitle": "enable_equipments · débloquer du Matériel",
+    "tooltipContent": "Liste des ID de Matériel débloqués à l’achèvement, un par ligne. Saisissez directement les noms internes de HOI4 correspondant aux définitions de common/units/equipment/. Ce n’est qu’après déblocage que le Matériel peut être choisi sur une chaîne de Production. Exemples : infantry_equipment_1, medium_tank_chassis_1, fighter_equipment_1. Un nom incorrect ne déclenche pas d’erreur, mais la chaîne de Production ne le trouve pas. La progression des versions de Matériel utilise généralement les suffixes _1 _2 _3.",
+    "field": "enable_equipments · ID de Matériel à débloquer (par ligne / séparés par des espaces)"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits (débloquer des unités)",
+    "tooltipTitle": "enable_subunits · débloquer des unités",
+    "tooltipContent": "Liste des sous-unités — types d’unité de niveau bataillon dans une division — débloquées à l’achèvement. Elles correspondent aux définitions de common/units/. L’éditeur de Modèles de divisions ne peut les ajouter qu’après leur déblocage. ID courants : infantry, motorized, mechanized, artillery, anti_tank, anti_air, engineer, recon, signal_company, maintenance_company, field_hospital, military_police. Différence avec enable_equipments : une sous-unité est « le type de bataillon ou compagnie placé dans une division » ; le Matériel désigne « les armes qu’elle emporte ».",
+    "field": "enable_subunits · débloquer des sous-unités (motorized / marines / paratrooper …)"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules (débloquer des modules)",
+    "tooltipTitle": "enable_equipment_modules · débloquer des modules",
+    "tooltipContent": "Liste des modules de Matériel débloqués à l’achèvement. Un module est un sous-composant sélectionnable dans le concepteur de Matériel (char / avion / navire). Il correspond aux définitions de common/units/equipment_modules/. Un ID de module par ligne. Exemples : tank_heavy_machine_gun, additional_machine_guns, large_plane_airframe, ship_torpedo_medium_1. À utiliser avec les MIO (organisations militaro-industrielles) et le système de versions du Matériel ; les mods sans concepteur de Matériel n’ont rien à saisir ici.",
+    "field": "enable_equipment_modules · module du concepteur NSB"
+  },
+  "globalModifier": {
+    "title": "Modificateur global",
+    "tooltipContent": "Bloc de modificateur appliqué **en continu** au pays après l’achèvement de la Technologie. Il suit la même structure qu’un modificateur d’Esprit national, mais provient d’une autre source. Statistiques courantes : research_speed_factor / production_factory_max_efficiency_factor pour l’industrie ; encryption / decryption pour l’électronique ; bonus d’efficacité des branches de Doctrines terrestres, navales et aériennes. Saisissez des décimales (0.03 = +3%). Plusieurs peuvent se cumuler.",
+    "hint": "Modificateurs globaux appliqués au pays après l’achèvement de la Technologie, comme research_speed_factor ou production_factory_efficiency_gain_factor. C’est l’effet central des lignes technologiques industrielles et électroniques."
+  },
+  "researchScripts": {
+    "title": "Scripts de recherche",
+    "tooltipContent": "Logique de script exécutée à l’instant où la Technologie s’achève. Contrairement à l’effet continu du Modificateur global, elle ne se déclenche qu’une fois. Trois sous-blocs :\n• on_research_complete : effet à exécuter (débloquer automatiquement des Modèles de divisions, déclencher des événements)\n• on_research_complete_limit : condition de déclenchement (protection contre la répétition)\n• allow : condition d’autorisation de recherche (détermine si elle peut être recherchée)\nC’est le point d’entrée central des Technologies réservées à un DLC, débloquées par une Priorité nationale et des Modèles de divisions débloqués automatiquement."
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete (exécuter à l’achèvement)",
+    "tooltipTitle": "on_research_complete · exécuter à l’achèvement",
+    "tooltipContent": "Bloc d’effet exécuté une seule fois à l’achèvement de la Technologie, et non en continu. Usages courants :\n• load_oob = OOB_FILE (charger automatiquement des Modèles de divisions et du Matériel)\n• custom_effect_tooltip = LOC_KEY (afficher une indication de déblocage)\n• country_event = { id = X days = 7 } (déclencher un événement ultérieur)\nL’encapsuler dans hidden_effect = { ... } masque le texte de l’effet au joueur, souvent pour gérer des indicateurs internes. Associez-le à on_research_complete_limit pour éviter les répétitions.",
+    "hint": "Effets déclenchés après l’achèvement de la recherche, par exemple créer automatiquement des Modèles de divisions ou afficher des indications.",
+    "field": "on_research_complete · bloc d’effet ponctuel à l’achèvement"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit (condition de déclenchement)",
+    "tooltipTitle": "on_research_complete_limit · condition de déclenchement",
+    "tooltipContent": "Condition de déclenchement de on_research_complete. L’effet de on_research_complete ne s’exécute que si ce bloc de déclencheurs est satisfait. Usage principal : **protection contre la répétition**. Exemple courant : NOT = { has_template_containing_unit = paratrooper } pour éviter de redébloquer le même Modèle de division lors d’une nouvelle recherche. Vide = toujours déclenché, avec un risque de répétition à chaque chargement de sauvegarde.",
+    "hint": "Détermine quand on_research_complete se déclenche et empêche les exécutions répétées.",
+    "field": "on_research_complete_limit · condition limitant le déclenchement de l’effet"
+  },
+  "allow": {
+    "heading": "allow (autorisation de recherche)",
+    "tooltipTitle": "allow · autorisation de recherche",
+    "tooltipContent": "Bloc de déclencheurs déterminant si la Technologie peut être recherchée. Si la condition n’est pas satisfaite, elle est grisée et impossible à sélectionner sur l’écran de recherche. **always = no** signifie qu’elle ne peut être **débloquée que par script**, avec set_technology = { X = 1 } ou add_tech_bonus dans l’effet d’une Priorité nationale. Usage courant pour les Technologies réservées à un DLC, débloquées par le récit ou masquées (Projets Spéciaux). Vide = tout pays peut la rechercher.",
+    "hint": "Détermine si cette Technologie peut être recherchée. Vide = tout le monde ; always = no signifie que seule une Priorité nationale peut la débloquer.",
+    "field": "allow · bloc déclencheur de disponibilité de la recherche"
+  },
+  "enableBuilding": {
+    "tooltipContent": "ID du bâtiment débloqué à l’achèvement (valeur unique, correspondant à common/buildings/). Exemples vanilla : synthetic_refinery / radar_station / rocket_site / nuclear_reactor / mega_gun_emplacement. Un seul bâtiment par Technologie ; enchaînez plusieurs nœuds pour en débloquer plusieurs."
+  },
+  "enableTactic": {
+    "tooltipContent": "ID de tactique de combat terrestre débloquée (common/combat_tactics.txt). Exemples : encirclement / breakthrough / tactical_withdrawal. L’IA choisit automatiquement les tactiques en combat selon le terrain et la Doctrine terrestre."
+  },
+  "xor": {
+    "heading": "xor (liste de Technologies exclusives)",
+    "tooltipTitle": "xor · Technologies mutuellement exclusives",
+    "tooltipContent": "Après avoir recherché cette Technologie, vous ne pouvez plus rechercher celles de la liste, et réciproquement ; la relation est écrite dans un seul sens mais sa signification est bidirectionnelle. Exemple vanilla : steel_chassis contre aluminium_chassis, branches alternatives de cellule en acier ou en aluminium. Un tech_id par ligne.",
+    "field": "xor · ID de Technologies mutuellement exclusives (choisir A exclut la sœur B)"
+  },
+  "subTechnologies": {
+    "heading": "sub_technologies (Technologies secondaires)",
+    "tooltipTitle": "sub_technologies · Technologies secondaires",
+    "tooltipContent": "Petites Technologies d’amélioration imbriquées dans la carte d’une Technologie parente, un tech_id par ligne ; elles doivent être définies séparément dans le même mod. Exemple vanilla : infantry_at, amélioration antichar de l’infanterie imbriquée dans la carte infantry_weapons avec un nœud à double anneau. Elles n’apparaissent dans l’interface qu’après la recherche de la Technologie parente."
+  },
+  "allowBranch": {
+    "heading": "allow_branch (condition de visibilité de la branche)",
+    "tooltipTitle": "allow_branch · condition de visibilité de la branche",
+    "tooltipContent": "Bloc de déclencheurs déterminant si toute la branche technologique est visible pour le joueur ; si la condition échoue, l’interface masque entièrement la branche. Exemple vanilla : has_dlc = \"Man the Guns\" masque la ligne navale MTG aux joueurs sans ce DLC. Différence avec allow : allow contrôle l’autorisation de recherche, allow_branch la visibilité dans l’interface.",
+    "field": "allow_branch · déclencheur d’affichage ou de masquage de toute la branche"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type (XP d’équipe de conception NSB)",
+    "tooltipTitle": "xp_research_type · coût en XP d’équipe de conception",
+    "tooltipContent": "Mécanique du concepteur de Matériel du DLC NSB : cette Technologie peut être accélérée avec de l’XP terrestre, navale ou aérienne. Vide = aucune XP utilisée. Associez-la à xp_boost_cost pour définir la quantité consommée à chaque accélération.",
+    "optNone": "aucun (vide)",
+    "optLand": "land · XP terrestre",
+    "optNaval": "naval · XP navale",
+    "optAir": "air · XP aérienne"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · coût en XP de l’accélération",
+    "tooltipContent": "Quantité d’XP de branche nécessaire à chaque accélération de la recherche de cette Technologie. Valeur vanilla habituelle : 25~50. 0 = aucune accélération possible. Nécessite xp_research_type pour définir le type d’XP."
+  },
+  "dependencies": {
+    "heading": "dependencies (dépendances de recherche parallèle)",
+    "tooltipTitle": "dependencies · dépendances de recherche parallèle",
+    "tooltipContent": "Usage rare. Autres Technologies dont la progression accélère celle-ci lorsqu’elles sont recherchées en parallèle. Un `tech_id = factor` par ligne ; factor vaut 1 par défaut. Les Technologies référencées doivent être définies dans le même mod. À distinguer des prerequisites, qui sont des conditions obligatoires."
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus (multiplicateur du coût en XP)",
+    "tooltipTitle": "xp_research_bonus · multiplicateur du coût en XP",
+    "tooltipContent": "Multiplicateur fixe de l’XP terrestre, navale ou aérienne nécessaire pour rechercher cette Technologie, selon la syntaxe scalaire vanilla, p. ex. 1.50. Laissez vide pour l’omettre. Ne concerne que les Technologies consommant de l’XP de Doctrine.",
+    "blockFormNote": "Cette Technologie contient un détail importé de xp_research_bonus par catégorie. Il est conservé et exporté tel quel. Il s’affiche ici en lecture seule pour éviter de l’écraser."
+  },
+  "doctrine": {
+    "heading": "doctrine (hérité · indicateur de Doctrine antérieur à NCNS)",
+    "tooltipContent": "Indicateur de Doctrine antérieur au DLC NCNS. Les Doctrines vanilla se trouvent désormais dans common/doctrines/ avec un système indépendant d’XP et de maîtrise. Déconseillé pour les nouveaux mods, mais conservé pour la compatibilité avec les mods existants."
+  },
+  "statBonuses": {
+    "title": "Bonus de statistiques",
+    "tooltipContent": "Bonus de combat pour des catégories d’unité précises. Structure : catégorie (infantry / armor / cat_cas / ...) → statistique (soft_attack / defense / breakthrough / ...) → valeur (0.05 = +5%). Chaque catégorie peut recevoir plusieurs statistiques. C’est l’effet central des Technologies intermédiaires et tardives, complémentaire à enable_equipments : l’un améliore les unités existantes, l’autre ouvre du nouveau Matériel. Consultez la signification de chaque statistique dans les infobulles de la liste.",
+    "hint": "Choisissez une catégorie bénéficiaire → une statistique → saisissez une valeur (p. ex. 0.05 = +5%) → cliquez sur + pour l’ajouter",
+    "category": "Catégorie d’unité",
+    "categoryPlaceholder": "Sélectionner une catégorie d’unité...",
+    "stat": "Statistique",
+    "statPlaceholder": "Sélectionner une statistique...",
+    "value": "Valeur"
+  },
+  "advanced": {
+    "pathField": "path · arête sortante + research_cost_coeff (l’IA modifie via add_path)"
+  },
+  "rawExtras": {
+    "badge": "Certains champs sont conservés comme script avancé",
+    "count": "{count} conservés",
+    "hint": "Ces champs importés n'ont pas encore d'éditeur visuel. Ils sont conservés tels quels et réécrits sans modification à l'export.",
+    "keysLabel": "Champs conservés",
+    "jsonLabel": "JSON brut"
+  }
+}

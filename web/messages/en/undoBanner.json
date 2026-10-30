@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "Batch apply",
+  "undonePrefix": "Undone ·",
+  "undoFailedPrefix": "Undo failed: ",
+  "justCreatedPrefix": "Just created",
+  "justCreatedSuffix": "items · undo the whole batch if you're not happy",
+  "justUpdatedPrefix": "Just updated",
+  "justUpdatedSuffix": "focus conditions · Undo restores the saved previous values",
+  "undoBatchTitle": "Undo this batch · delete everything it just created",
+  "undoRestoreTitle": "Undo this update · restore the saved previous focus conditions",
+  "undoing": "Undoing…",
+  "undo": "Undo",
+  "dismissTitle": "Hide banner (don't undo)",
+  "itemsFallback": "{count} items",
+  "cannotUndoTitle": "Bulk change · can't be undone",
+  "cannotUndoNote": "There's no saved copy of what these looked like before, so this batch can't be reverted — pressing Undo won't bring anything back. Open the matching workbench and check what changed.",
+  "nothingUndoneNote": "This undo changed nothing: the items are no longer in the project (already deleted or undone earlier). Please open the matching workbench to confirm.",
+  "undoUnavailableTitle": "This batch can't be undone"
+}

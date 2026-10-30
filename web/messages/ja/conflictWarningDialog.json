@@ -1,0 +1,10 @@
+{
+  "titleSuffix": "はバニラ HOI4 の TAG です",
+  "description": "続行すると、バニラの {tag}（{vanillaName}）コンテンツが Mod の内容で置き換わります。これは歴史改変 Mod（KR / TNO / TFR）が行うものと同じです。Mod の読み込み時に、国民精神/国家方針/イベントの項目がバニラ版を上書きします。",
+  "ifGoalLabel": "それが目的の場合",
+  "ifGoalText": "（バニラの {tag} を書き換える）：続行してください。",
+  "ifCustomLabel": "カスタム TAG を作る場合",
+  "ifCustomText": "（バニラで未使用のもの）：キャンセルし、別の2～5文字のコードを選択してください。",
+  "cancel": "キャンセル",
+  "confirm": "続行 · バニラを置き換える"
+}

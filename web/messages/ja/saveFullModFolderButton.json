@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "このブラウザーは File System Access API に対応していません。Chrome または Edge を使用してください。",
+  "syncing": "同期中...",
+  "syncToNamed": "{dir} に同期",
+  "syncToFolder": "ゲームフォルダーに書き込む",
+  "titleWithFolder": "Mod 全体を {dir}/ に同期（HOI4 で Mod を再起動すると反映されます）",
+  "titleNoFolder": "初回は Mod フォルダーを選択します。このセッション中は同じフォルダーが使用されます。",
+  "tooltipTitle": "エクスポート後：完全なテスト手順",
+  "tooltipContent": "HOI4 Mod のテスト手順（作成 + Debug + ログ）：\n1. 選択した Mod フォルダーを %userprofile%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\ に配置\n2. ランチャー → Mod ライブラリ → この Mod にチェック\n3. 次のいずれかで Debug モードを有効化：\n   • Steam · HOI4 を右クリック → プロパティ → 一般 → 起動オプションに -debug を入力\n   • ローカル · dowser.exe のショートカットを作成 → プロパティ → リンク先の末尾に「 -debug」を追加（ハイフンの前に半角スペースが必要）\n4. ゲームを起動 · メインメニューの読み込みが終わると error.log が自動的にメモ帳で開く\n5. エラーの切り分け · error.log の3分類：\n   • Family · Mod 間 / エンティティ間の命名規則のずれ\n   • Vanilla compatible · バニラ版との互換性（DLC フィールド / バージョン）\n   • Mod-internal · Mod 内部の問題（壊れた ID / 循環参照）\n6. ログの場所 · %userprofile%\\Documents\\...\\logs\\（error.log + game.log）\n> 注：深刻なエラーではクラッシュ前にログが残らない場合があります。ゲーム内の症状と game.log を併せて診断してください。",
+  "includeImportedTitleOn": "元の Mod からインポートしたコンテンツ（バニラ版または旧 Mod 由来）も含めます。Mod フォルダー全体を書き込みます。",
+  "includeImportedTitleOff": "作成または変更したエンティティだけを同期します。インポートした古いコンテンツは上書きしません。",
+  "includeImportedLabel": "インポートした項目を含める",
+  "changeFolderTitle": "Mod フォルダーを変更",
+  "changeFolder": "フォルダーを変更",
+  "wroteFiles": "✓ {count}ファイルを書き込みました",
+  "wrotePartial": "⚠ {ok}/{total}ファイルを書き込み、{failed}件が失敗しました（例：{firstError}）。Mod フォルダーは一部だけ更新されています。",
+  "illegalPathSegment": "{path} に不正なパス要素「{segment}」があります",
+  "additiveCaption": "同期は書き込みまたは上書きだけを行い、削除はしません。",
+  "additiveTitle": "同期は追加方式です",
+  "additiveWarning": "同期ではファイルの書き込みまたは上書きだけを行い、削除はしません。エンティティの名前変更、削除、TAG の変更を行った場合、古い .txt/.yml/.dds がフォルダーに残り、ゲームは新旧両方を読み込みます。そのような変更後は、同期する前に Mod の生成フォルダー（common/、events/、history/、localisation/、gfx/）を手動で空にするか、新しいフォルダーに同期してください。"
+}

@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "지도 만들기 · 왼쪽 클릭으로 그리기, 오른쪽 드래그로 지도 이동, 휠로 확대/축소"
+  },
+  "refresh": "새로고침",
+  "refreshing": "게임 미리보기를 새로고치는 중…",
+  "refreshed": "새로고침 완료",
+  "startScreens": "시나리오 (F2)",
+  "startScreensBack": "게임으로 돌아가기 (F2)",
+  "startScreensHint": "시나리오와 국가 선택을 열어 시나리오나 국가를 바꿉니다. 단축키 F2",
+  "unsupportedControl": "‘{control}’ 기능은 아직 Game View에서 사용할 수 없습니다.",
+  "uiEdit": "UI 편집",
+  "exitUIEdit": "UI 편집 종료",
+  "textEdit": "콘텐츠 편집",
+  "exitTextEdit": "콘텐츠 편집 종료",
+  "mapStudio": "지도 만들기",
+  "exitMapStudio": "지도 만들기 종료",
+  "mapStudioHint": "세계 지도 위에 직접 나만의 세계를 그립니다. 지형과 국가를 그린 뒤 생성해 새 세계로 저장하세요.",
+  "mapStudioSaved": "새 세계를 저장했습니다",
+  "mapStudioSavedBody": "주 {states}개. 이제 지도는 당신이 그린 세계입니다.",
+  "uiEditHint": "인터페이스 이미지와 텍스트를 편집합니다. 클릭하면 버튼이 실행되지 않고 요소가 선택됩니다.",
+  "textEditHint": "결정, 인물, 중점 등의 콘텐츠를 편집합니다. 버튼은 계속 작동하며 지도 프로빈스를 클릭해 지형, 주, 이름을 편집할 수 있습니다.",
+  "inspect": {
+    "viewHint": "보기 모드: 기술을 클릭하면 세부 정보를 볼 수 있습니다. 변경하거나 저장하려면 콘텐츠 편집을 여세요.",
+    "startYear": "시작 연도",
+    "status": "상태",
+    "researchCost": "연구 비용",
+    "approxDays": "예상 기간",
+    "days": "{days}일",
+    "position": "트리 위치",
+    "icon": "아이콘",
+    "leadsTo": "후속 기술",
+    "mutuallyExclusive": "상호 배타",
+    "subTechnologies": "하위 기술",
+    "none": "없음",
+    "enterEdit": "콘텐츠 편집 열기",
+    "states": {
+      "researched": "연구 완료",
+      "available": "연구 가능",
+      "unavailable": "잠김"
+    }
+  },
+  "backToWorkbench": "작업대로 돌아가기",
+  "loadingTitle": "게임 화면을 불러오는 중",
+  "loadingProgress": "{done}/{total} 준비됨",
+  "loadingStarting": "연결 중…",
+  "loadingBusy": "불러오는 중…",
+  "continuousPanelMove": "드래그해서 지속 중점 패널을 옮길 수 있습니다(이 창에서만, 모드는 바뀌지 않음). 더블클릭하면 제자리로 돌아갑니다",
+  "continuousPanelPlace": "드래그해서 모드에서 지속 중점 패널이 놓일 위치를 정합니다",
+  "alertsMore": "모든 경고 보기({count}개 더)",
+  "alertsLess": "경고 접기"
+}

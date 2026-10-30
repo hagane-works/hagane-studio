@@ -1,0 +1,20 @@
+{
+  "title": "Add Country",
+  "sourceAriaLabel": "Country source",
+  "tabVanilla": "Vanilla",
+  "tabCustom": "Custom",
+  "countryTagLabel": "Country TAG",
+  "displayNameLabel": "Display Name (optional)",
+  "vanillaNamePlaceholder": "Default uses the vanilla country name",
+  "vanillaNameHint": "Leave blank to use the vanilla HOI4 name. You can edit this later.",
+  "adding": "Adding...",
+  "addButton": "Add Country",
+  "customHint": "Use this for alt-history nations vanilla doesn't ship (Bavaria, Wales, Texas, ...). Type a 2-5 letter uppercase code; if it collides with a vanilla TAG you'll get a soft warning before override.",
+  "customNamePlaceholder": "e.g. Kingdom of Bavaria",
+  "mapColorLabel": "Map color (optional)",
+  "mapColorAriaLabel": "Map color",
+  "mapColorAuto": "auto",
+  "graphicalCultureLabel": "Graphical culture (optional)",
+  "graphicalCultureAriaLabel": "Graphical culture",
+  "graphicalCultureAuto": "Auto (western_european_gfx)"
+}

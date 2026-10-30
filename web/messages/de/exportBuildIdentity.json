@@ -1,0 +1,5 @@
+{
+  "label": "Sichtbare Build-ID hinzufügen",
+  "badge": "Export-Nachverfolgung",
+  "hint": "Schreibt eine eindeutige ID in Manifest, Nachweisdatei und Szenariobeschreibungen, damit Screenshots und Protokolle dem exakten ZIP zugeordnet werden können. Standardmäßig deaktiviert."
+}

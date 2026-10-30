@@ -1,0 +1,20 @@
+{
+  "heading": "肖像画とアセット",
+  "uploading": "アップロード中…",
+  "uploadButton": "肖像画をアップロード",
+  "ratioHint": "PNG / JPG、推奨比率 3:4",
+  "resetConfirm": "{tag} の肖像画をバニラに戻しますか？アップロードした肖像画は削除されます。",
+  "resetFailed": "リセットに失敗しました",
+  "resetting": "リセット中…",
+  "resetButton": "↺ バニラの肖像画に戻す",
+  "generatedPreview": "生成プレビュー",
+  "leaderPortraitAlt": "指導者の肖像画",
+  "leaderPortrait": "指導者の肖像画",
+  "advisorIconAlt": "顧問アイコン",
+  "advisorIcon": "顧問アイコン",
+  "notImported": "⚠ 肖像画はインポートされていません",
+  "referencesSprite": "このキャラクターが参照する肖像画スプライト",
+  "notImportedDetail": "ですが、インポート時に画像として解決できませんでした。このスプライト用の Mod 独自 .gfx/.dds アートを取り込めなかった可能性があります（「.txt のみインポート」でよく起こります）。上の「肖像画をアップロード」をクリックしてカスタム肖像画を追加するか、Mod フォルダー全体を再インポートしてアートを取り込んでください。",
+  "noPortrait": "肖像画は未アップロード",
+  "noPortraitHint": "アップロードすると肖像画 / 顧問アイコン / 特性アイコンを自動生成します"
+}

@@ -1,0 +1,18 @@
+{
+  "cwtoolError": "Cwtool 错误 · 阻塞问题：{count}",
+  "parsing": "正在解析…",
+  "parsedWithWarnings": "解析成功 · Cwtool 警告：{count} · 可以应用",
+  "parsedReady": "解析成功 · 可以应用",
+  "parseErrorLine": "解析错误 · 第 {line} 行（{count}）",
+  "parseError": "解析错误（{count}）",
+  "diagnosticLine": "诊断 · 第 {line} 行（{count}）",
+  "diagnostics": "诊断：{count}",
+  "editedWarnings": "已编辑 · Cwtool 警告：{count}（等待解析）",
+  "editedPending": "已编辑（等待解析）",
+  "stalePrompt": "你开始编辑脚本后，此项目已在其他位置更新。\n\n要保留尚未保存的编辑器更改吗？\n\n确定 = 保留编辑器草稿（应用时会覆盖表单）\n取消 = 丢弃草稿并载入最新表单",
+  "networkHint": "请求未到达程序。程序可能刚刚重新启动，请再试一次“应用”。",
+  "applyFailed": "应用失败：{message}{hint}",
+  "applyReseedTitle": "脚本已应用",
+  "applyReseedSynced": "左侧表单已同步刷新。",
+  "applyReseedClobbered": "左侧表单已按脚本内容刷新，你在表单里未保存的改动被覆盖了。"
+}

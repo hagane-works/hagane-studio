@@ -1,0 +1,16 @@
+{
+  "ownLabel": "Own",
+  "ownTitle": "This country's own (country_tag = {tag}). Affects only the current country — safe to edit.",
+  "explicitLabel": "Cross-country shared",
+  "explicitTitle": "Cross-country shared (shared_country_tags = {tags}). Editing affects all of these countries at once.",
+  "globalLabel": "Global",
+  "globalTitle": "Global shared. Every country in the mod is affected — edit with care.",
+  "globalExceptLabel": "Global except",
+  "globalExceptTitle": "Global shared, except ({tags}). Editing affects every other country.",
+  "sectionOwnLabel": "This country's own",
+  "sectionOwnHint": "Only affects the current country",
+  "sectionSharedLabel": "Shared / Global / Cross-country",
+  "sectionSharedHint": "Editing may affect other countries",
+  "sectionAllLabel": "All countries",
+  "sectionAllHint": "Showing entries from every country. The badge on each row shows which country it belongs to."
+}

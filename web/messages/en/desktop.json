@@ -1,0 +1,97 @@
+{
+  "setup": {
+    "title": "Welcome to Hagane Works",
+    "intro": "Choose where your projects live. Each project is a normal folder in it that you can copy, back up or put under version control.",
+    "projectsDirTitle": "Creation folder",
+    "projectsDirHelp": "Every project is saved as a folder here. Pick an empty folder or one you already use for Hagane Works.",
+    "gameDirTitle": "Hearts of Iron IV installation",
+    "gameDirHelp": "The game preview and the base-game data are read from your own copy of the game. Nothing from the game is included in this program.",
+    "gameFound": "{dir} (version {version})",
+    "gameMissing": "Not found automatically. Choose the folder that contains hoi4.exe.",
+    "notChosen": "Not chosen yet",
+    "choose": "Choose…",
+    "start": "Start"
+  },
+  "folderPicker": {
+    "up": "Up one folder",
+    "pathPlaceholder": "Type a folder path",
+    "go": "Go",
+    "empty": "No folders here.",
+    "cancel": "Cancel",
+    "choose": "Use this folder"
+  },
+  "settings": {
+    "open": "Settings",
+    "title": "Hagane Works settings",
+    "legalTitle": "Independent fan project",
+    "legalNotice": "Hagane Works is not affiliated with, endorsed by or sponsored by Paradox Interactive. Hearts of Iron IV and related marks belong to their respective owners.",
+    "version": "Version {version}",
+    "projectsDir": "Creation folder",
+    "gameDir": "Hearts of Iron IV installation",
+    "modDir": "Mod folder used by “Install”",
+    "change": "Change…",
+    "cwtools": "CWTools rules (optional)",
+    "cwtoolsMissing": "Not found",
+    "cwtoolsModifiers": "{count, plural, one {# modifier name read} other {# modifier names read}}",
+    "cwtoolsAutomatic": "Find automatically",
+    "cwtoolsAbout": "Optional, and used only to check modifier names when exporting: these rules come from the third-party CWTools project (MIT license) and can be downloaded from <link>github.com/cwtools/cwtools-hoi4-config</link>.",
+    "port": "Port",
+    "portSave": "Save",
+    "portInUse": "In use now: {port}",
+    "portAbout": "The local port Hagane Works listens on; leave it empty for the default. A change takes effect the next time you start the program. What the window remembers (theme, language, favorites) belongs to its address, so on a new port it starts fresh.",
+    "cpu": "CPU use",
+    "cpuOne": "1 core",
+    "cpuHalf": "50% ({cores, plural, one {# core} other {# cores}})",
+    "cpuAll": "100% ({cores, plural, one {# core} other {# cores}})",
+    "cpuAbout": "How many processor cores Hagane Works may keep busy while it imports a mod or reads your game. Fewer leaves more for other programs; all is fastest.",
+    "avatar": {
+      "title": "Your local avatar",
+      "about": "Choose a built-in companion or your own image. It stays on this computer and is never added to a mod export.",
+      "currentAlt": "Current avatar",
+      "upload": "Use your own image",
+      "processing": "Processing…",
+      "uploadHelp": "PNG, JPEG or WebP, up to 10 MB. The image is cropped to a square.",
+      "invalidType": "Choose a PNG, JPEG or WebP image.",
+      "tooLarge": "The image must be 10 MB or smaller.",
+      "failed": "This image could not be used or saved on this computer.",
+      "pets": {
+        "field_engineer_dog": "Engineer Dog",
+        "infantry_rabbit": "Infantry Rabbit",
+        "logistics_panda": "Logistics Panda",
+        "air_ace_fox": "Air Ace Fox",
+        "tank_commander_bear": "Tank Commander Bear",
+        "codebreaker_owl": "Codebreaker Owl",
+        "admiral_penguin": "Admiral Penguin",
+        "medic_deer": "Medic Deer"
+      }
+    },
+    "quit": "Quit Hagane Works"
+  },
+  "gameIndex": {
+    "title": "Reference lists from your game",
+    "about": "Hagane Works reads your own copy of the game to build its reference lists: countries, ideas, equipment and more. Nothing from the game is shipped with the program.",
+    "missing": "Choose the game folder first.",
+    "building": "Reading your game… {done} of {total}",
+    "step": "Now reading: {step}",
+    "buildingHint": "You can keep working. Pages that need these lists wait until they are ready.",
+    "importWaiting": "Waiting for the reference lists from your game…",
+    "ready": "Ready · game version {version} · built {time}",
+    "failed": "The lists could not be built.",
+    "rebuild": "Rebuild"
+  },
+  "install": {
+    "title": "Install into the game",
+    "hint": "Builds the mod and puts it into {folder}, so the game launcher lists it.",
+    "installedTo": "Installed to {folder}",
+    "install": "Install",
+    "reinstall": "Install again",
+    "installing": "Installing…",
+    "done": "Installed. Enable it in the game launcher's playset.",
+    "failed": "Could not install the mod"
+  },
+  "unsaved": {
+    "title": "Unsaved changes",
+    "body": "Some changes are not saved yet. Close Hagane Works anyway? They will be lost.",
+    "close": "Close without saving"
+  }
+}

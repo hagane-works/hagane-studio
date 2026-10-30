@@ -1,0 +1,4 @@
+{
+  "saveDone": "Guardado. {failed} fallos.",
+  "dragHint": "Arrastra las tarjetas de categorías a izquierda o derecha para reordenarlas. La prioridad se actualiza al soltarlas; los números menores aparecen primero. Guardar aplica todos los cambios a la vez. Restablecer recupera la secuencia alfabética 0/10/20…"
+}

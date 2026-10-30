@@ -1,0 +1,97 @@
+{
+  "setup": {
+    "title": "Hagane Works에 오신 것을 환영합니다",
+    "intro": "프로젝트를 저장할 위치를 고르세요. 각 프로젝트는 그 안의 일반 폴더라서 복사하거나 백업하거나 버전 관리를 할 수 있습니다.",
+    "projectsDirTitle": "작업 폴더",
+    "projectsDirHelp": "각 프로젝트는 여기에 폴더로 저장됩니다. 빈 폴더나 이전에 Hagane Works에 쓰던 폴더를 고르세요.",
+    "gameDirTitle": "Hearts of Iron IV 설치 폴더",
+    "gameDirHelp": "게임 미리보기와 기본 게임 데이터는 직접 설치한 게임에서 읽어 옵니다. 이 프로그램에는 게임 파일이 포함되어 있지 않습니다.",
+    "gameFound": "{dir} (버전 {version})",
+    "gameMissing": "자동으로 찾지 못했습니다. hoi4.exe가 있는 폴더를 고르세요.",
+    "notChosen": "아직 선택하지 않음",
+    "choose": "선택…",
+    "start": "시작"
+  },
+  "folderPicker": {
+    "up": "상위 폴더",
+    "pathPlaceholder": "폴더 경로 입력",
+    "go": "이동",
+    "empty": "여기에는 폴더가 없습니다.",
+    "cancel": "취소",
+    "choose": "이 폴더 사용"
+  },
+  "settings": {
+    "open": "설정",
+    "title": "Hagane Works 설정",
+    "legalTitle": "팬이 만든 독립 프로젝트",
+    "legalNotice": "Hagane Works는 Paradox Interactive와 제휴·승인·후원 관계가 없습니다. Hearts of Iron IV 및 관련 표장은 각 권리자에게 있습니다.",
+    "version": "버전 {version}",
+    "projectsDir": "작업 폴더",
+    "gameDir": "Hearts of Iron IV 설치 폴더",
+    "modDir": "“설치”에 쓰는 모드 폴더",
+    "change": "변경…",
+    "cwtools": "CWTools 규칙(선택 사항)",
+    "cwtoolsMissing": "찾을 수 없음",
+    "cwtoolsModifiers": "보정치 이름 {count}개를 읽었습니다",
+    "cwtoolsAutomatic": "자동으로 찾기",
+    "cwtoolsAbout": "내보낼 때 보정치 이름을 확인하는 데만 쓰이는 선택 사항으로, 서드파티 프로젝트 CWTools(MIT 라이선스)의 규칙이며 <link>github.com/cwtools/cwtools-hoi4-config</link>에서 내려받을 수 있습니다.",
+    "port": "포트",
+    "portSave": "저장",
+    "portInUse": "현재 사용 중: {port}",
+    "portAbout": "Hagane Works가 사용하는 로컬 포트입니다. 비워 두면 기본 포트를 씁니다. 변경 사항은 다음에 프로그램을 시작할 때 적용됩니다. 창이 기억하는 설정(테마, 언어, 즐겨찾기)은 주소마다 따로 저장되므로 새 포트에서는 처음부터 다시 시작합니다.",
+    "cpu": "CPU 사용량",
+    "cpuOne": "코어 1개",
+    "cpuHalf": "50%(코어 {cores}개)",
+    "cpuAll": "100%(코어 {cores}개)",
+    "cpuAbout": "모드를 가져오거나 게임을 읽을 때 Hagane Works가 사용할 수 있는 프로세서 코어 수입니다. 적게 쓰면 다른 프로그램에 여유가 남고, 모두 쓰면 가장 빠릅니다.",
+    "avatar": {
+      "title": "로컬 아바타",
+      "about": "기본 동료나 내 이미지를 선택하세요. 이 컴퓨터에만 저장되며 모드에 내보내지지 않습니다.",
+      "currentAlt": "현재 아바타",
+      "upload": "내 이미지 사용",
+      "processing": "처리 중…",
+      "uploadHelp": "PNG, JPEG 또는 WebP, 최대 10 MB. 이미지는 정사각형으로 잘립니다.",
+      "invalidType": "PNG, JPEG 또는 WebP 이미지를 선택하세요.",
+      "tooLarge": "이미지는 10 MB 이하여야 합니다.",
+      "failed": "이 이미지를 사용하거나 이 컴퓨터에 저장할 수 없습니다.",
+      "pets": {
+        "field_engineer_dog": "공병 개",
+        "infantry_rabbit": "보병 토끼",
+        "logistics_panda": "병참 판다",
+        "air_ace_fox": "에이스 조종사 여우",
+        "tank_commander_bear": "전차장 곰",
+        "codebreaker_owl": "암호 해독 부엉이",
+        "admiral_penguin": "제독 펭귄",
+        "medic_deer": "의무병 사슴"
+      }
+    },
+    "quit": "Hagane Works 종료"
+  },
+  "gameIndex": {
+    "title": "게임에서 만든 참조 목록",
+    "about": "Hagane Works는 직접 설치한 게임을 읽어 국가, 국민정신, 장비 등의 참조 목록을 만듭니다. 프로그램에는 게임의 내용이 전혀 포함되어 있지 않습니다.",
+    "missing": "먼저 게임 폴더를 고르세요.",
+    "building": "게임을 읽는 중… {done}/{total}",
+    "step": "현재: {step}",
+    "buildingHint": "계속 작업할 수 있습니다. 이 목록이 필요한 페이지는 준비될 때까지 기다립니다.",
+    "importWaiting": "게임에서 만든 참조 목록을 기다리는 중…",
+    "ready": "준비 완료 · 게임 버전 {version} · {time}에 생성",
+    "failed": "목록을 만들지 못했습니다.",
+    "rebuild": "다시 만들기"
+  },
+  "install": {
+    "title": "게임에 설치",
+    "hint": "모드를 만들어 {folder}에 넣습니다. 게임 런처에 표시됩니다.",
+    "installedTo": "{folder}에 설치함",
+    "install": "설치",
+    "reinstall": "다시 설치",
+    "installing": "설치 중…",
+    "done": "설치했습니다. 런처의 플레이셋에서 활성화하세요.",
+    "failed": "모드를 설치하지 못했습니다"
+  },
+  "unsaved": {
+    "title": "저장하지 않은 변경 사항",
+    "body": "아직 저장하지 않은 변경 사항이 있습니다. 그래도 Hagane Works를 닫으시겠습니까? 변경 사항은 사라집니다.",
+    "close": "저장하지 않고 닫기"
+  }
+}

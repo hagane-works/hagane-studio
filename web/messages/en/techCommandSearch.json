@@ -1,0 +1,12 @@
+{
+  "heading": "Search Techs",
+  "inputAriaLabel": "Search every technology line",
+  "placeholder": "Enter a technology name or ID…",
+  "paletteTitle": "Find a technology",
+  "paletteHint": "Enter a technology name or ID. Select a result to open its technology line and highlight it.",
+  "navHint": "You can also browse with the Army, Air Force, Navy, and Industrial Equipment pages above.",
+  "projectTotal": "{techCount} technologies across {lineCount} technology lines",
+  "noMatches": "No results for “{query}”.",
+  "firstMatches": "Showing the first {count} results. Keep typing to narrow them down.",
+  "matches": "{count} results"
+}

@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "Technology files are merged by exact path",
+  "technologyMergeBody": "Append overwrites only files with the exact same path. It does not merge technology blocks from a project file into the vanilla source file.",
+  "toastWarning": "Append done. On conflicts, {conflictCount} base-mod file(s) were overwritten. Want per-file control? Use Differential merge instead.",
+  "toastSuccess": "Append done. No path conflicts — all your content was added to the base mod as new files.",
+  "description": "Overlay this project onto an existing mod zip. On a path conflict, your edits win. Best for the \"load a mod, edit it here, download a merged zip\" flow.",
+  "naiveMergeTitle": "Overlay merge — your edits win on conflicts",
+  "naiveMergeBody": "On a path conflict, your edits overwrite the base mod's same-named file. Files unique to the base mod are kept as-is, and files you add are written in your version. Want to review conflicts file by file? Use Differential merge.",
+  "pickBaseZip": "Pick base mod zip...",
+  "pickBaseFolder": "Choose mod folder...",
+  "folderPickerTitle": "Choose the base mod's folder",
+  "folderPickerHint": "Open the folder that holds the mod's descriptor.mod, such as a Steam Workshop item under steamapps\\workshop\\content\\394360 or a mod in your mod folder. The program only reads it and never changes it.",
+  "folderNotAMod": "This folder is not a Hearts of Iron IV mod: it has no descriptor.mod with a mod name. Choose the folder that holds descriptor.mod.",
+  "supportNote": "Any HOI4 mod zip or mod folder works. The program only reads the base and never changes it; the merged zip is saved to your Downloads folder.",
+  "title": "Append to existing mod",
+  "baseZipLabel": "Base mod",
+  "cancel": "Cancel",
+  "merging": "Merging...",
+  "confirmAppend": "Confirm append + download"
+}

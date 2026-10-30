@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "一括適用",
+  "undonePrefix": "取り消しました ·",
+  "undoFailedPrefix": "取り消しに失敗：",
+  "justCreatedPrefix": "作成直後",
+  "justCreatedSuffix": "件 · 内容に問題があれば一括で取り消せます",
+  "justUpdatedPrefix": "更新直後",
+  "justUpdatedSuffix": "件の国家方針条件 · 取り消すと保存済みの以前の値に戻ります",
+  "undoBatchTitle": "この一括処理を取り消す · 作成したものをすべて削除",
+  "undoRestoreTitle": "この更新を取り消す · 保存済みの以前の国家方針条件に戻す",
+  "undoing": "取り消し中…",
+  "undo": "取り消す",
+  "dismissTitle": "バナーを隠す（取り消さない）",
+  "itemsFallback": "{count}件",
+  "cannotUndoTitle": "一括変更 · 取り消し不可",
+  "cannotUndoNote": "変更前の状態が保存されていないため、この一括処理は元に戻せません。「取り消す」を押しても復元されません。該当するワークベンチを開いて変更内容を確認してください。",
+  "nothingUndoneNote": "取り消しによる変更はありませんでした。対象はプロジェクトに存在しません（すでに削除または取り消し済み）。該当するワークベンチを開いて確認してください。",
+  "undoUnavailableTitle": "この一括処理は取り消せません"
+}

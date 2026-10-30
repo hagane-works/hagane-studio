@@ -1,0 +1,73 @@
+{
+ "by_file": {
+  "finland.txt": "finnish_focus",
+  "generic.txt": "generic_focus",
+  "germany.txt": "german_focus"
+ },
+ "extracted_at": "2026-10-30",
+ "file_count": 4,
+ "game_branch": "test",
+ "game_version": "hoi4-1.19.3",
+ "generated_at": "2026-10-30T03:26:19Z",
+ "generator_version": "focus-path-registry-v2",
+ "ids": [
+  "finnish_focus",
+  "generic_focus",
+  "german_focus"
+ ],
+ "ignored_file_count": 0,
+ "ignored_files": [],
+ "path_by_tree_id": {
+  "finnish_focus": "common/national_focus/finland.txt",
+  "generic_focus": "common/national_focus/generic.txt",
+  "german_focus": "common/national_focus/germany.txt"
+ },
+ "primary_count": 3,
+ "primary_paths": {
+  "finnish_focus": "common/national_focus/finland.txt",
+  "generic_focus": "common/national_focus/generic.txt",
+  "german_focus": "common/national_focus/germany.txt"
+ },
+ "primary_records": [
+  {
+   "canonical_path": "common/national_focus/finland.txt",
+   "content_sha256": "580bd0d43f611aeb807c30735c274f283881021609a29112180e993778b467c7",
+   "source_file": "finland.txt",
+   "tree_id": "finnish_focus"
+  },
+  {
+   "canonical_path": "common/national_focus/generic.txt",
+   "content_sha256": "ac5198037d1c844cb2376f4131e8d0c4d78b2f2271b2b833fe42e6326c25c83c",
+   "source_file": "generic.txt",
+   "tree_id": "generic_focus"
+  },
+  {
+   "canonical_path": "common/national_focus/germany.txt",
+   "content_sha256": "3921924acc0d1a1a570565550549b6da020208bd1a184a0765d7f4e14b9c4c19",
+   "source_file": "germany.txt",
+   "tree_id": "german_focus"
+  }
+ ],
+ "schema_version": 2,
+ "shared_pool_file_count": 1,
+ "shared_pool_files": [
+  {
+   "canonical_path": "common/national_focus/test_shared.txt",
+   "content_sha256": "6e572f043845926e7c28023025da3a473672127985730c57ee412a86dab2981a",
+   "focus_count": 1,
+   "pool_ids": [
+    "test_shared"
+   ],
+   "source_file": "test_shared.txt"
+  }
+ ],
+ "source": "live HOI4 installation parsed by app.services.import_service.import_focus_file",
+ "source_directory": "Hearts of Iron IV/common/national_focus/*.txt",
+ "source_hashes": {
+  "common/national_focus/finland.txt": "580bd0d43f611aeb807c30735c274f283881021609a29112180e993778b467c7",
+  "common/national_focus/generic.txt": "ac5198037d1c844cb2376f4131e8d0c4d78b2f2271b2b833fe42e6326c25c83c",
+  "common/national_focus/germany.txt": "3921924acc0d1a1a570565550549b6da020208bd1a184a0765d7f4e14b9c4c19",
+  "common/national_focus/test_shared.txt": "6e572f043845926e7c28023025da3a473672127985730c57ee412a86dab2981a"
+ },
+ "total": 3
+}

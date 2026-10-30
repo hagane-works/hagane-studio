@@ -1,0 +1,14 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+state = {
+	id = 11
+	name = "STATE_11"
+	manpower = 100000
+	state_category = town
+	history = {
+		owner = HUN
+		add_core_of = HUN
+		victory_points = { 110 1 }
+		buildings = { infrastructure = 2 }
+	}
+	provinces = { 110 111 }
+}

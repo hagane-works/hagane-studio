@@ -1,0 +1,4 @@
+{
+  "saveDone": "Enregistrement terminé. {failed} échecs.",
+  "dragHint": "Faites glisser les cartes de catégories vers la gauche ou la droite pour les réordonner. La priorité se met à jour au relâchement ; les nombres les plus faibles apparaissent d'abord. Enregistrer applique toutes vos modifications à la fois. Réinitialiser rétablit la suite alphabétique 0/10/20…"
+}

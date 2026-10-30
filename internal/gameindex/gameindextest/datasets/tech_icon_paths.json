@@ -1,0 +1,9 @@
+{
+ "game_version": "1.19.3.0",
+ "paths": {
+  "infantry_weapons": "gfx/interface/technologies/test_infantry_weapons.dds",
+  "support_weapons": "gfx/interface/technologies/test_support_weapons.dds"
+ },
+ "source": "Technologies.gfx + dlc/*/interface/*_technologies.gfx",
+ "total": 2
+}

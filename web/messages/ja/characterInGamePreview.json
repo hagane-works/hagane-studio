@@ -1,0 +1,14 @@
+{
+  "roleCountryLeader": "国家指導者",
+  "roleFieldMarshal": "元帥",
+  "roleCorpsCommander": "将軍",
+  "roleAdmiral": "提督",
+  "roleScientist": "科学者",
+  "roleOperative": "諜報員",
+  "roleAdvisor": "顧問",
+  "draft": "下書き",
+  "noPortrait": "肖像画なし",
+  "traits": "特性",
+  "advisorSlot": "顧問枠",
+  "cost": "コスト {amount}"
+}

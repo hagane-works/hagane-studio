@@ -1,0 +1,18 @@
+Hagane Works portable release for Windows
+
+1. Extract the entire ZIP into a normal folder. Do not run it from inside the archive.
+2. Double-click HaganeWorks.exe.
+3. Select a workspace and confirm the Hearts of Iron IV installation folder on first launch.
+4. Create or import a mod, then use Export to build a ZIP or install it into the game.
+
+No Node.js, Go, Python, database, account, or server is required. The interface and bilingual knowledge base are embedded.
+
+Windows 10/11 normally includes Microsoft Edge WebView2. If it is unavailable, Hagane Works opens its local interface in the default browser.
+
+Choose windows-x64 for most Intel/AMD PCs, windows-x86 only for 32-bit Windows, and windows-arm64 for Windows on ARM.
+
+For local automation, hw.exe exposes the editor tools to scripts and other programs. Read docs/cli.md for commands, JSON input and the local API security model.
+
+An unknown-publisher SmartScreen warning can appear because releases are not currently signed with a commercial code-signing certificate. Download only from the official release page and verify SHA256SUMS.txt.
+
+License: GNU GPL v3.0 only. See LICENSE and THIRD_PARTY_NOTICES.md.

@@ -1,0 +1,1305 @@
+{
+ "cases": [
+  {
+   "name": "authored-both",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": "Rearm",
+     "zh": "重整军备"
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [
+     "en",
+     "zh"
+    ],
+    "fallback_locales": [],
+    "author_visible": false
+   }
+  },
+  {
+   "name": "flat-name-promotion",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": null,
+    "name_en": "Rearm",
+    "name_zh": "重整军备",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [
+     "en",
+     "zh"
+    ],
+    "fallback_locales": [],
+    "author_visible": false
+   }
+  },
+  {
+   "name": "flat-does-not-override",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": "FromLocs"
+    },
+    "name_en": "FromFlat",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [
+     "en"
+    ],
+    "fallback_locales": [],
+    "author_visible": false
+   }
+  },
+  {
+   "name": "placeholder-new-focus",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": "New Focus"
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "name-equals-id",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": "  focus_a  "
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "non-string-value",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": 123,
+     "zh": null
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en",
+        "zh"
+       ],
+       "missing_locales": [
+        "en",
+        "zh"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "new-id-nothing",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en",
+        "zh"
+       ],
+       "missing_locales": [
+        "en",
+        "zh"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "new-id-partial",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": "Rearm"
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_enabled_locale",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs",
+        "zh"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "locale": "zh",
+       "fallback_allowed": false,
+       "fallback_candidates": [],
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [
+     "en"
+    ],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "created-severity-map-max",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh",
+     "ja"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": {
+     "en": "info",
+     "zh": "blocker",
+     "ja": "warning"
+    },
+    "severity_fixed": null,
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en",
+        "zh",
+        "ja"
+       ],
+       "missing_locales": [
+        "en",
+        "zh",
+        "ja"
+       ],
+       "is_new_id": false,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "created-severity-scalar",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "info",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "info",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en",
+        "zh"
+       ],
+       "missing_locales": [
+        "en",
+        "zh"
+       ],
+       "is_new_id": false,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "severity-invalid-falls-back",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "fatal",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": false,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "imported-proven-fallback",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [],
+    "fallback_locales": [
+     "en"
+    ],
+    "author_visible": false
+   }
+  },
+  {
+   "name": "imported-unproven-kind",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "created",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.unproven_fallback",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs",
+        "en"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "imported",
+       "focus_id": "focus_a",
+       "locale": "en",
+       "fallback_allowed": true,
+       "fallback_candidates": [],
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.register_or_author_fallback"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "imported-unproven-nohash",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": ""
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.unproven_fallback",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs",
+        "en"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "imported",
+       "focus_id": "focus_a",
+       "locale": "en",
+       "fallback_allowed": true,
+       "fallback_candidates": [],
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.register_or_author_fallback"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "provider-other-key",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_b",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.unproven_fallback",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs",
+        "en"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "imported",
+       "focus_id": "focus_a",
+       "locale": "en",
+       "fallback_allowed": true,
+       "fallback_candidates": [],
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.register_or_author_fallback"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "provider-locale-case",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "EN"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "EN",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [],
+    "fallback_locales": [
+     "en"
+    ],
+    "author_visible": false
+   }
+  },
+  {
+   "name": "imported-material-change",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": true,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "imported",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": false,
+       "reuses_base_id": false,
+       "material_name_changed": true
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "reuses-base-id",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": true,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [],
+    "fallback_locales": [
+     "en"
+    ],
+    "author_visible": false
+   }
+  },
+  {
+   "name": "reuses-but-new",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": true,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": true,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "imported-partial-unproven",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {
+     "en": "Rearm"
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.unproven_fallback",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs",
+        "zh"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "imported",
+       "focus_id": "focus_a",
+       "locale": "zh",
+       "fallback_allowed": true,
+       "fallback_candidates": [],
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.register_or_author_fallback"
+     }
+    ],
+    "authored_locales": [
+     "en"
+    ],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "locale-dedup-lower",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {
+     "en": "Rearm"
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "EN",
+     " en ",
+     "ZH",
+     "zh",
+     ""
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_enabled_locale",
+      "severity": "warning",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs",
+        "zh"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "locale": "zh",
+       "fallback_allowed": false,
+       "fallback_candidates": [],
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [
+     "en"
+    ],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "locale-empty-defaults-en",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "with-source-name",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "created",
+    "display_name_locs": {},
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en"
+    ],
+    "is_new_id": true,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": "common/national_focus/mod.txt"
+   },
+   "expected": {
+    "findings": [
+     {
+      "code": "focus.display_name.missing_created",
+      "severity": "blocker",
+      "source": {
+       "file": "common/national_focus/mod.txt",
+       "entity": {
+        "type": "focus",
+        "id": "focus_a"
+       },
+       "field_path": [
+        "focus",
+        "focus_a",
+        "display_name_locs"
+       ],
+       "span": null
+      },
+      "evidence": {
+       "source": "created",
+       "focus_id": "focus_a",
+       "enabled_content_locales": [
+        "en"
+       ],
+       "missing_locales": [
+        "en"
+       ],
+       "is_new_id": true,
+       "reuses_base_id": false,
+       "material_name_changed": false
+      },
+      "repair_route": "focus.display_name.author_enabled_locale"
+     }
+    ],
+    "authored_locales": [],
+    "fallback_locales": [],
+    "author_visible": true
+   }
+  },
+  {
+   "name": "multiple-providers-evidence",
+   "input": {
+    "focus_id": "focus_a",
+    "source": "imported",
+    "display_name_locs": {
+     "en": "Rearm"
+    },
+    "name_en": "",
+    "name_zh": "",
+    "enabled_content_locales": [
+     "en",
+     "zh"
+    ],
+    "is_new_id": false,
+    "reuses_base_id": false,
+    "material_name_changed": false,
+    "fallback_providers": [
+     {
+      "locale": "en",
+      "key": "focus_a",
+      "provider_kind": "vanilla",
+      "path": "loc/en.yml",
+      "content_hash": "h1"
+     },
+     {
+      "locale": "zh",
+      "key": "focus_a",
+      "provider_kind": "base_mod",
+      "path": "loc/zh.yml",
+      "content_hash": "h2"
+     }
+    ],
+    "severity_map": null,
+    "severity_fixed": "warning",
+    "source_name": null
+   },
+   "expected": {
+    "findings": [],
+    "authored_locales": [
+     "en"
+    ],
+    "fallback_locales": [
+     "zh"
+    ],
+    "author_visible": false
+   }
+  }
+ ]
+}

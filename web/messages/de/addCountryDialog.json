@@ -1,0 +1,20 @@
+{
+  "title": "Land hinzufügen",
+  "sourceAriaLabel": "Quelle des Landes",
+  "tabVanilla": "Vanille",
+  "tabCustom": "Benutzerdefiniert",
+  "countryTagLabel": "Länder-TAG",
+  "displayNameLabel": "Anzeigename (optional)",
+  "vanillaNamePlaceholder": "Standard verwendet den Namen des Vanillelandes",
+  "vanillaNameHint": "Lassen Sie leer, um den Namen der Vanille HOI4 zu verwenden.",
+  "adding": "Hinzufügen...",
+  "addButton": "Land hinzufügen",
+  "customHint": "Verwenden Sie dies für alte Nationen Vanille nicht versenden (Bavaria, Wales, Texas,...). Geben Sie einen 2-5 Buchstaben Großbuchstaben Code; wenn es mit einer Vanille TAG kollidiert, erhalten Sie eine sanfte Warnung vor Überschreiben.",
+  "customNamePlaceholder": "z.B. Königreich Bayern",
+  "mapColorLabel": "Kartenfarbe (optional)",
+  "mapColorAriaLabel": "Farbe der Karte",
+  "mapColorAuto": "automatisch",
+  "graphicalCultureLabel": "Grafische Kultur (fakultativ)",
+  "graphicalCultureAriaLabel": "Grafische Kultur",
+  "graphicalCultureAuto": "Auto (westlich_europäisch_gfx)"
+}

@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "idea(国策 / 民族精神)",
+    "character": "character(角色)",
+    "event": "event(事件)",
+    "decision": "decision(决议)",
+    "focus_node": "focus(国策节点)",
+    "tech": "technology(科技)"
+  },
+  "title": "编辑 imported {noun}",
+  "desc": "<mono>{label}</mono> 来自 vanilla 或已加载的 mod。改动它会怎样？",
+  "keepImportedTitle": "保留原 imported",
+  "keepImportedDesc": "放弃此次改动，导出时仍用 vanilla 或 mod 原版。",
+  "overrideTitle": "覆盖为 creator 修改",
+  "overrideDesc": "保存后，它就成为你自己的修改版，导出时会覆盖 vanilla 或 mod 原版。原 id 不变。",
+  "createCopyTitle": "创建新副本(改 id)",
+  "createCopyDesc": "保存后保留 imported 原版，并新建一个独立的 {entityType};build 后两者并存。"
+}

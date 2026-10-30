@@ -1,0 +1,9 @@
+{
+  "message": "«{id}» уже есть в {dependency}. Если оставить этот ID, созданный здесь объект ({entityLabel}) не будет работать в игре.",
+  "fixHint": "Выберите свободный ID или сошлитесь на тот, что уже есть в {dependency}.",
+  "unknownDependency": "базовом моде",
+  "entityCharacter": "персонаж",
+  "entityFocus": "фокус",
+  "entityIdea": "идея",
+  "entityDecision": "решение"
+}

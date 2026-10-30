@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "国民精神 ID を検索…",
+  "tabProject": "プロジェクト",
+  "tabCountry": "国家",
+  "tabShared": "共有",
+  "tabLaws": "法律",
+  "tabDesign": "設計社",
+  "tabOldAdvisors": "旧顧問",
+  "tabOther": "その他",
+  "otherHint": "検索欄を使ってほかの国家の国民精神を検索できます。",
+  "loadingVanilla": "バニラの国民精神を読み込み中…",
+  "noResults": "結果が見つかりませんでした。",
+  "emptyCategory": "このカテゴリに国民精神はありません。",
+  "projectBadge": "プロジェクト",
+  "promptManual": "国民精神 ID を手動入力：",
+  "enterManually": "+ 手動で入力…"
+}

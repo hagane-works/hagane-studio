@@ -1,0 +1,47 @@
+{
+ "folders": {
+  "electronics_folder": {
+   "count": 0,
+   "sub_sections": []
+  },
+  "infantry_folder": {
+   "count": 2,
+   "sub_sections": [
+    {
+     "name": "infantry_subtitle_weapons",
+     "sub_key": "weapons",
+     "y": 100,
+     "text_key": "INFANTRY_TITLE_WEAPONS",
+     "names": {
+      "en": "Weapons and Equipment",
+      "zh": "武器和装备"
+     }
+    },
+    {
+     "name": "infantry_subtitle_motorized",
+     "sub_key": "motorized",
+     "y": 510,
+     "text_key": "INFANTRY_TITLE_MOTORISED",
+     "names": {
+      "en": "Motorised"
+     }
+    }
+   ]
+  },
+  "support_folder": {
+   "count": 1,
+   "sub_sections": [
+    {
+     "name": "support_subtitle_trains",
+     "sub_key": "trains",
+     "y": 300,
+     "text_key": "SUPPORT_TITLE_TRAINS",
+     "names": {
+      "en": "Trains"
+     }
+    }
+   ]
+  }
+ },
+ "game_version": "1.19.3.0"
+}

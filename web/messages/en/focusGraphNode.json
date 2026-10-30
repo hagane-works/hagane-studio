@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "Conditional branch — a hidden path that appears only when its allow_branch conditions are met.",
+  "allowBranchBadge": "Branch",
+  "loadTreeTitle": "Jumps to another focus tree when this focus completes.",
+  "loadTreeBadge": "Jump",
+  "relativePositionTitle": "Relative position",
+  "addChildTitle": "Add connected child focus",
+  "addMutexChildTitle": "Add mutually exclusive focus"
+}

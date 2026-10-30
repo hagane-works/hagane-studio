@@ -1,0 +1,18 @@
+{
+  "expandPreview": "Расширить просмотр",
+  "collapsePreview": "Просмотр скачкообразной системы",
+  "tabLivePreview": "Живой просмотр",
+  "tabScript": "Скрипт",
+  "tabReferencesHint": "Посмотрим, что другие образования ссылаются на этот и что он ссылается.",
+  "tabScriptHint": "Экспортировать файлы списка мод для этого предприятия (обновлен).",
+  "livePreviewSelectHint": "Выберите из списка пункт, чтобы увидеть его в игре.",
+  "livePreviewCreateFirstHint": "Пока нет ничего, что можно было бы представить — создать первый пункт из списка слева.",
+  "liveDraftBadge": "Живой черновик",
+  "previewLabel": "Просмотр",
+  "openInGame": "Открыть в игре",
+  "previewUnavailableGeneric": "В этом рабочем месте пока нет предварительного просмотра — в редакторе видно все области.",
+  "noSelectionGeneric": "Ничего не выбрано",
+  "backFromNew": "Назад",
+  "searchPlaceholderGeneric": "Поиск по имени...",
+  "noMatchesGeneric": "Несовпадающие записи"
+}

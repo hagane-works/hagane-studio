@@ -1,0 +1,7 @@
+{
+  "hintEmpty": "2–5 characters, first a letter, then A–Z or 0–9. E.g. GER / FL2 / USSR2",
+  "hintShort": "Too short — need 2–5 characters.",
+  "hintValid": "{tag} — ok",
+  "hintInvalid": "First character must be A–Z, then only A–Z or 0–9 (no spaces or underscores).",
+  "placeholder": "e.g. BAV"
+}

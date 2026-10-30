@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Onglets de langue du nom affiché",
+  "addLanguage": "Ajouter une langue",
+  "addingLanguage": "Ajout de {language}…",
+  "addLanguageError": "Impossible d’ajouter {language} au projet. Réessayez.",
+  "legacyFallbackHint": "Le champ de nom hérité est affiché. Saisissez du texte pour le remplacer ; la nouvelle valeur est enregistrée dans display_name_locs.",
+  "fullName": {
+    "en": "Anglais",
+    "zh": "Chinois simplifié",
+    "ru": "Russe",
+    "fr": "Français",
+    "de": "Allemand",
+    "es": "Espagnol",
+    "ja": "Japonais",
+    "ko": "Coréen",
+    "pl": "Polonais",
+    "pt": "Portugais du Brésil"
+  }
+}

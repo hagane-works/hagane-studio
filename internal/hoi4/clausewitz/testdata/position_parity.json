@@ -1,0 +1,462 @@
+{
+ "cases": [
+  {
+   "name": "legal",
+   "text": "swap_ideas = { remove_idea = old_one add_idea = new_one }",
+   "root_path": [],
+   "report": {
+    "findings": [],
+    "parser_findings": [],
+    "source_sha256": "44528cee2852f50dacf7876dc2a557e8f58d9d546ba8b924e040505bf3c344fa",
+    "is_valid": true
+   }
+  },
+  {
+   "name": "root-level",
+   "text": "add_idea = new_one",
+   "root_path": [],
+   "report": {
+    "findings": [
+     {
+      "code": "script.position.swap_ideas_child_outside_parent",
+      "severity": "warning",
+      "key": "add_idea",
+      "expected_parent": "swap_ideas",
+      "actual_parent": null,
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 18,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 19
+      },
+      "excerpt": "add_idea = new_one",
+      "repair_route": "script.position.move_into_swap_ideas"
+     }
+    ],
+    "parser_findings": [],
+    "source_sha256": "ce25bd302092808e806dacf6e38f489f5ff7960f9ac277a42738931d2211c311",
+    "is_valid": false
+   }
+  },
+  {
+   "name": "wrong-parent",
+   "text": "completion_reward = { add_idea = new_one }",
+   "root_path": [],
+   "report": {
+    "findings": [
+     {
+      "code": "script.position.swap_ideas_child_outside_parent",
+      "severity": "warning",
+      "key": "add_idea",
+      "expected_parent": "swap_ideas",
+      "actual_parent": "completion_reward",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 22,
+       "end_offset": 40,
+       "start_line": 1,
+       "start_column": 23,
+       "end_line": 1,
+       "end_column": 41
+      },
+      "excerpt": "add_idea = new_one",
+      "repair_route": "script.position.move_into_swap_ideas"
+     }
+    ],
+    "parser_findings": [],
+    "source_sha256": "23ffe6ebfb55b7a0c894ac556446c87dec232266f7acc39466de5233cc7d0b1d",
+    "is_valid": false
+   }
+  },
+  {
+   "name": "mixed",
+   "text": "completion_reward = {\n\tswap_ideas = { remove_idea = a add_idea = b }\n\tremove_idea = stray\n}",
+   "root_path": [],
+   "report": {
+    "findings": [
+     {
+      "code": "script.position.swap_ideas_child_outside_parent",
+      "severity": "warning",
+      "key": "remove_idea",
+      "expected_parent": "swap_ideas",
+      "actual_parent": "completion_reward",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 70,
+       "end_offset": 89,
+       "start_line": 3,
+       "start_column": 2,
+       "end_line": 3,
+       "end_column": 21
+      },
+      "excerpt": "remove_idea = stray",
+      "repair_route": "script.position.move_into_swap_ideas"
+     }
+    ],
+    "parser_findings": [],
+    "source_sha256": "a48a062d2895a39fe771821b51edf462022f269d808b5628656e3df5d024d497",
+    "is_valid": false
+   }
+  },
+  {
+   "name": "root-path-prefix",
+   "text": "add_idea = x",
+   "root_path": [
+    "focus",
+    "completion_reward"
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "script.position.swap_ideas_child_outside_parent",
+      "severity": "warning",
+      "key": "add_idea",
+      "expected_parent": "swap_ideas",
+      "actual_parent": null,
+      "parent_path": [
+       "focus",
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 12,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 13
+      },
+      "excerpt": "add_idea = x",
+      "repair_route": "script.position.move_into_swap_ideas"
+     }
+    ],
+    "parser_findings": [],
+    "source_sha256": "17bb15c9e3a160165994210be11491d3b61f8abe9acbe8bedb116823060ca97e",
+    "is_valid": false
+   }
+  },
+  {
+   "name": "root-path-legal",
+   "text": "swap_ideas = { add_idea = x }",
+   "root_path": [
+    "focus"
+   ],
+   "report": {
+    "findings": [],
+    "parser_findings": [],
+    "source_sha256": "14e51dd3690f25dae9046795f3991ec0dc0ccd0c29f13721a4a0138bc858df9c",
+    "is_valid": true
+   }
+  },
+  {
+   "name": "with-parse-error",
+   "text": "swap_ideas = { add_idea = x",
+   "root_path": [],
+   "report": {
+    "findings": [],
+    "parser_findings": [
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [
+        "swap_ideas"
+       ],
+       "span": {
+        "start_offset": 13,
+        "end_offset": 27,
+        "start_line": 1,
+        "start_column": 14,
+        "end_line": 1,
+        "end_column": 28
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{ add_idea = x"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.parse_error",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 27,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 28
+       }
+      },
+      "evidence": {
+       "error": "Expected RBRACE, got EOF '' at line 1"
+      },
+      "repair_route": "clausewitz.fix_syntax"
+     }
+    ],
+    "source_sha256": "07b5e140db3d921d98457d36f51b0c38bba8038545037ebbf8c2a96c4d93df97",
+    "is_valid": true
+   }
+  },
+  {
+   "name": "stray-brace",
+   "text": "add_idea = x }",
+   "root_path": [],
+   "report": {
+    "findings": [
+     {
+      "code": "script.position.swap_ideas_child_outside_parent",
+      "severity": "warning",
+      "key": "add_idea",
+      "expected_parent": "swap_ideas",
+      "actual_parent": null,
+      "parent_path": [],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 12,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 13
+      },
+      "excerpt": "add_idea = x",
+      "repair_route": "script.position.move_into_swap_ideas"
+     }
+    ],
+    "parser_findings": [
+     {
+      "code": "clausewitz.stray_closing_brace",
+      "severity": "blocker",
+      "source": {
+       "file": "f.txt",
+       "field_path": [],
+       "span": {
+        "start_offset": 13,
+        "end_offset": 14,
+        "start_line": 1,
+        "start_column": 14,
+        "end_line": 1,
+        "end_column": 15
+       }
+      },
+      "evidence": {
+       "source_excerpt": "}"
+      },
+      "repair_route": "clausewitz.remove_or_match_closing_brace"
+     }
+    ],
+    "source_sha256": "b39cc193326975b194a6b1db011fec19e914c405a4680a364cc4e6c01399f2cb",
+    "is_valid": false
+   }
+  },
+  {
+   "name": "irrelevant",
+   "text": "add_ideas = x remove_ideas = y",
+   "root_path": [],
+   "report": {
+    "findings": [],
+    "parser_findings": [],
+    "source_sha256": "c3e0f986a50d9e94d48ef5c52a17ee772b78789af51f7cf8dc96d458cb0446dd",
+    "is_valid": true
+   }
+  },
+  {
+   "name": "empty",
+   "text": "",
+   "root_path": [],
+   "report": {
+    "findings": [],
+    "parser_findings": [],
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "is_valid": true
+   }
+  }
+ ],
+ "registries": [
+  {
+   "name": "prod-unverified-empty",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1.19.2",
+    "verified": false,
+    "verification_source": null,
+    "entries": []
+   },
+   "game_version": "1.19.2",
+   "verified": false,
+   "verification_source": null,
+   "fatal_kinds": []
+  },
+  {
+   "name": "verified-with-entries",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1.19.2",
+    "verified": true,
+    "verification_source": "controlled engine run 2026-08-07",
+    "entries": [
+     {
+      "effect_name": "add_ideas",
+      "target_type": "idea"
+     },
+     {
+      "effect_name": "unlock_decision_tooltip",
+      "target_type": "decision"
+     }
+    ]
+   },
+   "game_version": "1.19.2",
+   "verified": true,
+   "verification_source": "controlled engine run 2026-08-07",
+   "fatal_kinds": [
+    [
+     "add_ideas",
+     "idea"
+    ],
+    [
+     "unlock_decision_tooltip",
+     "decision"
+    ]
+   ]
+  }
+ ],
+ "errors": [
+  {
+   "name": "bad-schema",
+   "payload": {
+    "schema_version": "nope",
+    "game_version": "1",
+    "verified": false,
+    "entries": []
+   },
+   "error": "unsupported cross-ref fatal registry schema"
+  },
+  {
+   "name": "no-game-version",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "  ",
+    "verified": false,
+    "entries": []
+   },
+   "error": "cross-ref fatal registry requires game_version"
+  },
+  {
+   "name": "verified-not-bool",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1",
+    "verified": "yes",
+    "entries": []
+   },
+   "error": "cross-ref fatal registry verified must be boolean"
+  },
+  {
+   "name": "entries-not-array",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1",
+    "verified": false,
+    "entries": {}
+   },
+   "error": "cross-ref fatal registry entries must be an array"
+  },
+  {
+   "name": "verified-no-source",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1",
+    "verified": true,
+    "verification_source": null,
+    "entries": []
+   },
+   "error": "verified cross-ref fatal registry requires evidence source"
+  },
+  {
+   "name": "unverified-with-entries",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1",
+    "verified": false,
+    "entries": [
+     {
+      "effect_name": "a",
+      "target_type": "b"
+     }
+    ]
+   },
+   "error": "unverified cross-ref fatal registry must remain empty"
+  },
+  {
+   "name": "entry-missing-field",
+   "payload": {
+    "schema_version": "hagane.cross-ref-fatal-registry.v1",
+    "game_version": "1",
+    "verified": true,
+    "verification_source": "s",
+    "entries": [
+     {
+      "effect_name": "a"
+     }
+    ]
+   },
+   "error": "fatal registry entry requires effect_name and target_type"
+  }
+ ],
+ "evidence": [
+  {
+   "requested": "1.19.2",
+   "evidence": {
+    "status": "unverified",
+    "requested_game_version": "1.19.2",
+    "registry_game_version": "1.19.2",
+    "verification_source": null,
+    "fatal_reference_kinds": [],
+    "reason": "exact verified engine evidence is not available"
+   }
+  },
+  {
+   "requested": "1.18.3",
+   "evidence": {
+    "status": "unverified",
+    "requested_game_version": "1.18.3",
+    "registry_game_version": "1.19.2",
+    "verification_source": null,
+    "fatal_reference_kinds": [],
+    "reason": "exact verified engine evidence is not available"
+   }
+  },
+  {
+   "requested": "",
+   "evidence": {
+    "status": "unverified",
+    "requested_game_version": "",
+    "registry_game_version": "1.19.2",
+    "verification_source": null,
+    "fatal_reference_kinds": [],
+    "reason": "exact verified engine evidence is not available"
+   }
+  },
+  {
+   "requested": null,
+   "evidence": {
+    "status": "unverified",
+    "requested_game_version": "",
+    "registry_game_version": "1.19.2",
+    "verification_source": null,
+    "fatal_reference_kinds": [],
+    "reason": "exact verified engine evidence is not available"
+   }
+  }
+ ]
+}

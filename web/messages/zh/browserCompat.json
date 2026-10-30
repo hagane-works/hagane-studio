@@ -1,0 +1,6 @@
+{
+  "uploadHint": "你的浏览器支持上传文件夹。把改动直接写回文件夹需要 Chrome、Edge 或 Opera——其他浏览器请改用 Zip 导出。",
+  "writeHint": "你的浏览器无法直接把文件写入文件夹。请用 Zip 导出下载 mod，再解压到你的 HOI4 mod 目录。(直接写入文件夹需要 Chrome、Edge 或 Opera。)",
+  "largeFolderConfirm": "这个文件夹包含 {count} 个 mod 文件。读取超大文件夹可能需要一些时间，确定继续吗？",
+  "noRelevantFiles": "在所选文件夹里没找到 mod 文件(.txt / .gfx / .yml / 图片)。请确认你选的是 mod 根目录——也就是包含 descriptor.mod、common 和 events 的那一层。"
+}

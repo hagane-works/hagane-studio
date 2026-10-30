@@ -1,0 +1,9 @@
+{
+  "footerHint": "空白部分をダブルクリック → 作成 · ノードをドラッグ → start_year / 列を変更 · 選択して <kbd>Delete</kbd>、またはノード右上の × にカーソルを合わせて削除",
+  "footerHintAria": "キャンバス操作のヘルプ",
+  "footerHintRowAxis": "空白部分をダブルクリック → 作成 · ノードをドラッグ → 行 / 列を変更 · 選択して <kbd>Delete</kbd>、またはノード右上の × にカーソルを合わせて削除",
+  "orphanNoFolder": "どの技術ツリーにも属さない · folder ブロックがない技術 {count}件（国家方針/イベントから付与）",
+  "orphanUnmatched": ".gui のどの gridbox にも一致しない · 技術 {count}件",
+  "footerHintBrowse": "研究ボードを閲覧します。技術を選択し、表示を移動またはズームします。配置を変えるには配置モードを使います。",
+  "footerHintLayout": "配置モードでは、選択した研究フォルダーの有効なスロットだけに配置します。ドラッグしても研究年は変わりません。"
+}

@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "Bedingter Zweig — ein versteckter Pfad, der nur erscheint, wenn seine award_branchen-Bedingungen erfüllt sind.",
+  "allowBranchBadge": "Zweig",
+  "loadTreeTitle": "Springt zu einem anderen Fokusbaum, wenn dieser Fokus abgeschlossen ist.",
+  "loadTreeBadge": "Springen",
+  "relativePositionTitle": "Relative Position",
+  "addChildTitle": "Verbindung mit dem Kind-Fokus hinzufügen",
+  "addMutexChildTitle": "Für beide Seiten ausschließender Fokus hinzufügen"
+}

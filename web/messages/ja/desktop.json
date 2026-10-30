@@ -1,0 +1,97 @@
+{
+  "setup": {
+    "title": "Hagane Works へようこそ",
+    "intro": "プロジェクトの保存先を選んでください。各プロジェクトはその中の普通のフォルダなので、コピーやバックアップ、バージョン管理ができます。",
+    "projectsDirTitle": "作成フォルダ",
+    "projectsDirHelp": "各プロジェクトはここにフォルダとして保存されます。空のフォルダか、以前 Hagane Works で使ったフォルダを選んでください。",
+    "gameDirTitle": "Hearts of Iron IV のインストール先",
+    "gameDirHelp": "ゲームプレビューと本編データは、お手持ちのゲームから読み込みます。本プログラムにゲームのファイルは含まれていません。",
+    "gameFound": "{dir}（バージョン {version}）",
+    "gameMissing": "自動では見つかりませんでした。hoi4.exe があるフォルダを選んでください。",
+    "notChosen": "未選択",
+    "choose": "選択…",
+    "start": "開始"
+  },
+  "folderPicker": {
+    "up": "一つ上へ",
+    "pathPlaceholder": "フォルダのパスを入力",
+    "go": "移動",
+    "empty": "ここにはフォルダがありません。",
+    "cancel": "キャンセル",
+    "choose": "このフォルダを使う"
+  },
+  "settings": {
+    "open": "設定",
+    "title": "Hagane Works の設定",
+    "legalTitle": "ファンによる非公式プロジェクト",
+    "legalNotice": "Hagane Works は Paradox Interactive との提携、承認、後援関係にありません。Hearts of Iron IV および関連する商標は各権利者に帰属します。",
+    "version": "バージョン {version}",
+    "projectsDir": "作成フォルダ",
+    "gameDir": "Hearts of Iron IV のインストール先",
+    "modDir": "「インストール」で使う mod フォルダ",
+    "change": "変更…",
+    "cwtools": "CWTools ルール（任意）",
+    "cwtoolsMissing": "見つかりません",
+    "cwtoolsModifiers": "補正名を {count} 件読み込みました",
+    "cwtoolsAutomatic": "自動で探す",
+    "cwtoolsAbout": "エクスポート時に補正名を確認するためだけに使う任意のルールで、サードパーティの CWTools プロジェクト（MIT ライセンス）が提供しており、<link>github.com/cwtools/cwtools-hoi4-config</link> からダウンロードできます。",
+    "port": "ポート",
+    "portSave": "保存",
+    "portInUse": "現在使用中：{port}",
+    "portAbout": "Hagane Works が待ち受けるローカルポートです。空欄にすると既定のポートを使います。変更は次にプログラムを起動したときに反映されます。ウィンドウが覚えている設定（テーマ、言語、お気に入り）はアドレスごとに保存されるため、新しいポートでは最初からになります。",
+    "cpu": "CPU 使用量",
+    "cpuOne": "1 コア",
+    "cpuHalf": "50%（{cores} コア）",
+    "cpuAll": "100%（{cores} コア）",
+    "cpuAbout": "Mod のインポートやゲームの読み込みで Hagane Works が使ってよいプロセッサーのコア数です。少なくすると他のプログラムに余裕が残り、すべて使うと最も速くなります。",
+    "avatar": {
+      "title": "ローカルアバター",
+      "about": "内蔵の相棒または自分の画像を選べます。このPCだけに保存され、MODには出力されません。",
+      "currentAlt": "現在のアバター",
+      "upload": "自分の画像を使う",
+      "processing": "処理中…",
+      "uploadHelp": "PNG、JPEG、WebP（最大10 MB）。画像は正方形に切り抜かれます。",
+      "invalidType": "PNG、JPEG、WebP画像を選択してください。",
+      "tooLarge": "画像は10 MB以下にしてください。",
+      "failed": "この画像を使用またはこのPCに保存できませんでした。",
+      "pets": {
+        "field_engineer_dog": "工兵犬",
+        "infantry_rabbit": "歩兵ウサギ",
+        "logistics_panda": "兵站パンダ",
+        "air_ace_fox": "エースパイロット狐",
+        "tank_commander_bear": "戦車長クマ",
+        "codebreaker_owl": "暗号解読フクロウ",
+        "admiral_penguin": "提督ペンギン",
+        "medic_deer": "衛生兵シカ"
+      }
+    },
+    "quit": "Hagane Works を終了"
+  },
+  "gameIndex": {
+    "title": "ゲームから作る参照リスト",
+    "about": "Hagane Works はお手持ちのゲームを読み込み、国・国民精神・装備などの参照リストを作ります。本プログラムにゲームの内容は一切含まれていません。",
+    "missing": "先にゲームのフォルダを選んでください。",
+    "building": "ゲームを読み込み中… {done}/{total}",
+    "step": "処理中：{step}",
+    "buildingHint": "このまま作業を続けられます。これらのリストを使うページは、準備ができるまで待ちます。",
+    "importWaiting": "ゲームから作る参照リストを待っています…",
+    "ready": "準備完了 · ゲームバージョン {version} · {time} 作成",
+    "failed": "リストを作成できませんでした。",
+    "rebuild": "作り直す"
+  },
+  "install": {
+    "title": "ゲームにインストール",
+    "hint": "mod を生成して {folder} に置きます。ゲームのランチャーに表示されます。",
+    "installedTo": "{folder} にインストールしました",
+    "install": "インストール",
+    "reinstall": "再インストール",
+    "installing": "インストール中…",
+    "done": "インストールしました。ランチャーのプレイセットで有効にしてください。",
+    "failed": "mod をインストールできませんでした"
+  },
+  "unsaved": {
+    "title": "未保存の変更",
+    "body": "まだ保存されていない変更があります。このまま Hagane Works を閉じますか？変更は失われます。",
+    "close": "保存せずに閉じる"
+  }
+}

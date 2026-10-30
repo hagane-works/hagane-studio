@@ -1,0 +1,7 @@
+{
+  "costTextTooltip": "custom_cost_text · remplace l'affichage de la PP",
+  "selectableMissionTooltip": "selectable_mission · mission activée manuellement par l'utilisateur",
+  "ppCost": "{amount} PP",
+  "ppRefund": "Remboursement de +{amount} PP",
+  "approximateLabel": "aperçu approximatif dans le jeu"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "전투 서열 및 부대(보존)",
+  "subtitle": "직접 작성한 OOB, 부대, 사단 편제, 장비를 그대로 보존하고 바이트 단위로 동일하게 다시 내보냅니다.",
+  "preservedBadge": "왕복 변환 시 보존",
+  "detectedHeading": "이 파일에서 감지됨",
+  "stat": {
+    "set_oob": "육군 OOB 참조",
+    "set_air_oob": "공군 OOB 참조",
+    "set_naval_oob": "해군 OOB 참조",
+    "units": "units 블록",
+    "division_template": "division_template",
+    "equipment": "equipment / production"
+  },
+  "editLabel": "OOB / units raw 스크립트",
+  "editHelp": "자유롭게 편집하세요. 내보낼 때 이 텍스트를 그대로 history/countries/[TAG].txt에 기록합니다. 주석과 인라인 블록도 보존합니다.",
+  "emptyTitle": "아직 OOB 또는 부대 없음",
+  "emptyBody": "여기에 set_oob 참조 또는 units 블록을 붙여 넣으면 변경 없이 내보냅니다. set_oob는 history/units/ 아래의 파일을 가리킵니다. 그 파일은 사단 편제·초기 배치 워크벤치에서 프로그램이 생성하며, 가져온 모드에 같은 이름의 파일이 있으면 그대로 유지됩니다. 파일 이름은 국가 태그 + 시작 연도(예: ROM_1936)로 지정하세요. 이후 처리는 모두 이 접두사로 국가를 판별합니다.",
+  "emptyInsert": "OOB 시작 틀 삽입",
+  "starterComment": "# 전투 서열 — 이 국가의 역사 파일에 그대로 기록",
+  "starterNeedsTag": "먼저 이 역사 파일의 국가 태그를 지정하세요. OOB 파일 이름은 그 국가 태그로 시작해야 하며(예: ROM_1936), 그렇지 않으면 이 부대가 어느 국가의 것인지 알 수 없습니다."
+}

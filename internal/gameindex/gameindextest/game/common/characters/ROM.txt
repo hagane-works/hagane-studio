@@ -1,0 +1,7 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+characters = {
+	ROM_ion_antonescu = {
+		name = ROM_ion_antonescu
+		field_marshal = { skill = 3 }
+	}
+}

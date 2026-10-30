@@ -1,0 +1,3 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+name = "No Step Back"
+affects_checksum = yes

@@ -1,0 +1,250 @@
+{
+ "from_records": [
+  {
+   "records": [],
+   "script": ""
+  },
+  {
+   "records": [
+    {
+     "key": "war_name",
+     "script": "war_name = SKIPPED"
+    },
+    {
+     "key": "custom",
+     "script": "custom = 1"
+    },
+    {
+     "key": "expire",
+     "script": "expire = 5"
+    },
+    {
+     "key": "blocky",
+     "script": "blocky = {\n\ta = 1\n}"
+    }
+   ],
+   "script": "custom = 1\nblocky = {\n\ta = 1\n}"
+  },
+  {
+   "records": [
+    {
+     "key": "x",
+     "script": "  \n"
+    }
+   ],
+   "script": ""
+  }
+ ],
+ "parse": [
+  {
+   "input": "",
+   "records": []
+  },
+  {
+   "input": "   \n  ",
+   "records": []
+  },
+  {
+   "input": "custom_field = 42",
+   "records": [
+    {
+     "key": "custom_field",
+     "script": "custom_field = 42"
+    }
+   ]
+  },
+  {
+   "input": "icon = GFX_wargoal_annex\ncustom = \"quoted value\"",
+   "records": [
+    {
+     "key": "icon",
+     "script": "icon = GFX_wargoal_annex"
+    },
+    {
+     "key": "custom",
+     "script": "custom = \"quoted value\""
+    }
+   ]
+  },
+  {
+   "input": "modifier = {\n\tstability_factor = -0.1\n\tarmy_morale_factor = 0.05\n}",
+   "records": [
+    {
+     "key": "modifier",
+     "script": "modifier = {\n\tstability_factor = -0.1\n\tarmy_morale_factor = 0.05\n}"
+    }
+   ]
+  },
+  {
+   "input": "# leading comment\ncustom_block = { a = 1 b = { c = yes } } # inline",
+   "records": [
+    {
+     "key": "custom_block",
+     "script": "# leading comment\ncustom_block = {\n\ta = 1\n\tb = {\n\t\tc = yes\n\t}\n} # inline"
+    }
+   ]
+  },
+  {
+   "input": "deep = { l1 = { l2 = { l3 = fine } } }\nnumbers = { f = 0.5 neg = -3 }",
+   "records": [
+    {
+     "key": "deep",
+     "script": "deep = {\n\tl1 = {\n\t\tl2 = {\n\t\t\tl3 = fine\n\t\t}\n\t}\n}"
+    },
+    {
+     "key": "numbers",
+     "script": "numbers = {\n\tf = 0.5\n\tneg = -3\n}"
+    }
+   ]
+  },
+  {
+   "input": "empty_block = {}",
+   "records": [
+    {
+     "key": "empty_block",
+     "script": "empty_block = {  }"
+    }
+   ]
+  },
+  {
+   "input": "list_block = { TAG1 TAG2 TAG3 }",
+   "records": [
+    {
+     "key": "list_block",
+     "script": "list_block = { TAG1 TAG2 TAG3 }"
+    }
+   ]
+  },
+  {
+   "input": "dotted.key = value\ncolon:key = other",
+   "records": [
+    {
+     "key": "dotted.key",
+     "script": "dotted.key = value"
+    },
+    {
+     "key": "colon:key",
+     "script": "colon:key = other"
+    }
+   ]
+  },
+  {
+   "input": "@constant_ref = @MY_CONST",
+   "records": [
+    {
+     "key": "@constant_ref",
+     "script": "@constant_ref = @MY_CONST"
+    }
+   ]
+  },
+  {
+   "error": "war_name belongs in the visual fields, not Advanced raw script",
+   "input": "war_name = should_fail"
+  },
+  {
+   "error": "allowed belongs in the visual fields, not Advanced raw script",
+   "input": "allowed = { always = yes }"
+  },
+  {
+   "error": "expire belongs in the visual fields, not Advanced raw script",
+   "input": "expire = 5"
+  },
+  {
+   "error": "Advanced script only accepts key = value entries",
+   "input": "bare_value_without_key"
+  },
+  {
+   "error": "Advanced script contains malformed HOI4 script",
+   "input": "unclosed = {"
+  }
+ ],
+ "replace": [
+  {
+   "advanced": [
+    {
+     "key": "fresh",
+     "script": "fresh = 9"
+    }
+   ],
+   "existing": [
+    {
+     "key": "war_name",
+     "script": "war_name = WAR_X"
+    },
+    {
+     "key": "old_custom",
+     "script": "old_custom = 1"
+    },
+    {
+     "key": "allowed",
+     "script": "allowed = { always = yes }"
+    },
+    {
+     "key": "another_old",
+     "script": "another_old = 2"
+    }
+   ],
+   "result": [
+    {
+     "key": "war_name",
+     "script": "war_name = WAR_X"
+    },
+    {
+     "key": "fresh",
+     "script": "fresh = 9"
+    },
+    {
+     "key": "allowed",
+     "script": "allowed = { always = yes }"
+    }
+   ]
+  },
+  {
+   "advanced": [
+    {
+     "key": "a",
+     "script": "a = 1"
+    },
+    {
+     "key": "b",
+     "script": "b = { c = 2 }"
+    }
+   ],
+   "existing": [
+    {
+     "key": "war_name",
+     "script": "war_name = WAR_X"
+    }
+   ],
+   "result": [
+    {
+     "key": "war_name",
+     "script": "war_name = WAR_X"
+    },
+    {
+     "key": "a",
+     "script": "a = 1"
+    },
+    {
+     "key": "b",
+     "script": "b = { c = 2 }"
+    }
+   ]
+  },
+  {
+   "advanced": [],
+   "existing": [],
+   "result": []
+  },
+  {
+   "advanced": [],
+   "existing": [
+    {
+     "key": "unknown_only",
+     "script": "unknown_only = 7"
+    }
+   ],
+   "result": []
+  }
+ ]
+}

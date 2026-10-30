@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount} {tag} {ownCount, plural, one {мероприятие} other {мероприятия}}",
+  "sharedSuffix": " · +{sharedCount}:: совместное/общемировое вещание",
+  "filteredNote": "ВанильнаяDLCи файлы по каждой стране фильтруются при импорте — только{tag}\"Свои события сохраняются.",
+  "vanillaCta": "ВАНИЛЬЯ СВЯЗИ С ОТКРЫТОМ",
+  "hiddenHint": "Скрытая{hiddenCount}Совместное использование/global {hiddenCount, plural, one {мероприятие} other {мероприятия}}· щелчок<emph>Все</emph>на право показать их.",
+  "dismiss": "Расторжение",
+  "dontShowAgain": "Не показывайся снова"
+}

@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "Kontrollen",
+  "paletteContainer": "Behälter",
+  "paletteIcon": "Symbol",
+  "paletteText": "Wortlaut",
+  "paletteProgressbar": "Fortschrittsanzeige",
+  "paletteButton": "Knopf",
+  "stageLoading": "1:1 Vorschau anzeigen...",
+  "stageNotSavedTitle": "Noch nicht zusammengestellt",
+  "stageNotSavedBody": "Speichern Sie das Panel, um die 1:1 in-game-Vorschau zu sehen. Draft Controls zeigen als bernsteinfarbene Platzhalter unten.",
+  "stageEmpty": "Fügen Sie die Steuerelemente aus der Palette oben hinzu.",
+  "stageError": "Vorschau zum Laden fehlgeschlagen",
+  "ghostBadge": "Entwurf",
+  "ghostHint": "Noch nicht in der kompilierten Vorschau. Speichern, um es 1:1 zu rendern.",
+  "ribbonEmpty": "Wählen Sie eine Steuerung auf der Leinwand. Seine Bindungen zeigen hier.",
+  "ribbonGhost": "nicht gespeicherter Entwurf",
+  "mockPreviewOn": "Live-Vorschau mit Beispielvariablenwerten",
+  "addIntoPanel": "Fügt dem Panel hinzu",
+  "addIntoContainer": "Fügt in „{name}“ ein"
+}

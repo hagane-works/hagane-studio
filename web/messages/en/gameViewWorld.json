@@ -1,0 +1,144 @@
+{
+  "common": {
+    "notTags": "Not country tags: {tags}"
+  },
+  "ideology": {
+    "title": "Parties and ideologies",
+    "kind": "Politics · {tag} · Country history · Project ideologies",
+    "loadingPolitics": "Loading the project’s starting politics…",
+    "definitions": "Ideology definitions",
+    "definitionsHint": "Pick a ROOT or a sub-ideology; below is the same editor as in the ideology workbench.",
+    "target": "Ideology to edit",
+    "targetLabel": "Edit ideology",
+    "loadingDefinitions": "Loading the project’s ideologies…",
+    "none": "There is no ideology to edit.",
+    "workbenchNote": "Creating, deleting and checking what references an ideology stay in the ideology workbench.",
+    "politicsLog": "{tag} starting politics",
+    "politicsSaved": "Saved {tag}’s starting politics",
+    "leaderKind": "Person’s ideology · {token}",
+    "leaderSaved": "Saved the ideology of “{name}”",
+    "definitionLog": "Parties and ideologies · {name}",
+    "definitionKind": "Ideology · {id}",
+    "definitionSaved": "Ideology “{name}” saved",
+    "iconLog": "Parties and ideologies · {name} · Icon",
+    "iconSaved": "New icon set for “{name}”",
+    "saved": "Ideology saved",
+    "problem": {
+      "supportTotal": "Support has to add up to 100 (it is {total} now)",
+      "lastElectionDate": "Write the last election’s date like 1933.3.5",
+      "frequency": "The election interval has to be a whole number of months, 0 or more",
+      "rulingZero": "The ruling party’s support cannot be 0",
+      "idRequired": "Enter an id, for example technocracy",
+      "idInvalid": "The id may only use lowercase letters, digits and underscores, and cannot start with a digit",
+      "idTaken": "The project already has “{id}”",
+      "rootTakeover": "This project is built on a base mod and keeps its ideology groups; a new group cannot be created here",
+      "sourceLock": "This ideology comes from the base mod; import it and lock its source before creating a sub-ideology under it"
+    }
+  },
+  "warGoal": {
+    "field": {
+      "baseDays": "Base days to justify",
+      "perStateDays": "Extra days for each further state",
+      "stateLimit": "Most states that can be chosen",
+      "threat": "World tension per state"
+    },
+    "kind": "War goal · {id}",
+    "loading": "Loading the project’s war goals…",
+    "saved": "Saved war goal “{name}”",
+    "deleted": "Deleted war goal “{name}”",
+    "formula": "Days to justify = base + per state × states chosen; each day costs 0.2 political power (NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP).",
+    "problem": "Enter numbers of 0 or more",
+    "note": "Saving takes the whole file this war goal is in into the project.",
+    "hit": "War goal {name}"
+  },
+  "autonomy": {
+    "kind": "Autonomy level · {id}",
+    "saved": "Saved autonomy level “{name}”",
+    "loading": "Loading the project’s autonomy levels…",
+    "name": "Name (the level name the screens show)",
+    "minFreedom": "Minimum freedom (0 to 1; a subject moves up or down one level in this order)",
+    "manpower": "Share of the subject’s manpower its overlord gets (0 to 1)",
+    "unset": "Not set",
+    "rule": "Rules (rule: what the subject may do)",
+    "modifier": "Modifiers (modifier)",
+    "scriptNote": "Write rules and modifiers as game script; leave one empty to remove it.",
+    "problem": "The name cannot be empty, numbers must be between 0 and 1, and minimum freedom cannot be empty",
+    "note": "Saving takes the whole file this level is in into the project and changes only its block; a level made in the autonomy level workbench changes that row. The name is saved as the localisation of the level’s id, so every screen changes with it.",
+    "hit": "Autonomy level {tag} {name}"
+  },
+  "newCountry": {
+    "heading": "Country",
+    "summary": "Create a country and give it states",
+    "create": "+ New country",
+    "giveTitle": "Give {tag} states (makes it the owner and adds its core)",
+    "searchPlaceholder": "State name, number or current owner (e.g. GER)",
+    "searchLabel": "Search states",
+    "noMatch": "No matching states.",
+    "loading": "Loading states…",
+    "chosen": "Chosen: {list}",
+    "listSeparator": ", ",
+    "giving": "Giving…",
+    "give": "Give {count, plural, one {# state} other {# states}} to {tag}",
+    "gave": "Gave {count, plural, one {# state} other {# states}} to {tag}",
+    "gaveHint": "It can now be picked from the minor country list on the country selection screen.",
+    "giveFailed": "Could not give the states: {error}",
+    "hint": "Once it is created, give it states here; the game only lists countries that own states. You can also add a new piece of land for it in “World Map”.",
+    "gaveLog": "{tag} gets {count, plural, one {# state} other {# states}}",
+    "statesKind": "States · {ids}",
+    "createdLog": "New country {tag}",
+    "countryKind": "Country · {tag}"
+  },
+  "province": {
+    "stateSaved": "Saved state {id}",
+    "editKind": "Map · Properties",
+    "renameLog": "Rename · {key}",
+    "renameKind": "Map · Name",
+    "stateTitle": "State {id} · {name}",
+    "noStateTitle": "This place is not in any state",
+    "stateKind": "STATE_{id} · Owner {owner} · {count, plural, one {# province} other {# provinces}}",
+    "noOwner": "none",
+    "provinceKind": "Province {id} · {kind}",
+    "regionTitle": "Strategic region {id} · {name}",
+    "noRegionTitle": "This place is not in any strategic region",
+    "regionKind": "STRATEGICREGION_{id} · {count, plural, one {# province} other {# provinces}}",
+    "provinceId": "Province {id}",
+    "inState": "{kind} · in state {id} {name}",
+    "scope": "A map click picks",
+    "scopeState": "State",
+    "scopeProvince": "Province",
+    "scopeRegion": "Strategic region",
+    "landNoState": "Not in any state. Switch to “Province” to edit this block itself.",
+    "waterNoState": "Seas and lakes are not in any state. Switch to “Province” to edit this block itself.",
+    "noRegion": "This block is not in any strategic region.",
+    "openWorldMap": "Open in the World Map workbench ↗"
+  },
+  "state": {
+    "fallbackTitle": "State",
+    "kind": "State · {id}",
+    "countryStates": "This country’s states",
+    "pick": "Pick a state",
+    "logKind": "State · {id}",
+    "loadFailed": "Could not load this state: {error}",
+    "missing": "Neither the base game nor the project has state {id}; there is nothing to edit here.",
+    "adopting": "Pulling this state into the project… (it is not written into the exported mod unless you change it)",
+    "loading": "Loading the state from the project…",
+    "problem": {
+      "ownerRequired": "The owner cannot be empty"
+    }
+  },
+  "diplomacy": {
+    "title": "Starting diplomacy",
+    "problem": {
+      "self": "A country cannot do this with itself",
+      "subjectAutonomy": "Each subject needs an autonomy type",
+      "relationType": "Each treaty needs a treaty type"
+    }
+  },
+  "profile": {
+    "problem": {
+      "nameRequired": "The country name cannot be empty",
+      "adjectiveRequired": "The adjective cannot be empty (for example German)",
+      "capitalRequired": "The capital must be a state number"
+    }
+  }
+}

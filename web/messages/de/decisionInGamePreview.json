@@ -1,0 +1,7 @@
+{
+  "costTextTooltip": "custom_cost_text · ersetzt die PP-Anzeige",
+  "selectableMissionTooltip": "selectable_mission · Mission, die der Benutzer manuell aktiviert",
+  "ppCost": "{amount}PP",
+  "ppRefund": "+{amount}PP-Rückerstattung",
+  "approximateLabel": "Vorschau im Spiel · ungefähr"
+}

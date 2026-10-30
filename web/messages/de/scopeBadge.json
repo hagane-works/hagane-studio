@@ -1,0 +1,16 @@
+{
+  "ownLabel": "Eigene",
+  "ownTitle": "Dieses Land ist das eigene (Country_tag = {tag}). Befällt nur das aktuelle Land – sicher zu bearbeiten.",
+  "explicitLabel": "Länderübergreifende Zusammenarbeit",
+  "explicitTitle": "Länderübergreifende geteilte (shared_country_tags = {tags}). Die Bearbeitung betrifft alle diese Länder auf einmal.",
+  "globalLabel": "Global",
+  "globalTitle": "Global geteilt. Jedes Land in der Mod ist betroffen – mit Sorgfalt bearbeiten.",
+  "globalExceptLabel": "Globale",
+  "globalExceptTitle": "Global geteilt, außer ({tags}). Die Bearbeitung betrifft jedes andere Land.",
+  "sectionOwnLabel": "Dieses Land hat eigene",
+  "sectionOwnHint": "Nur das aktuelle Land betrifft",
+  "sectionSharedLabel": "Gemeinsam / Global / Cross-Country",
+  "sectionSharedHint": "Editing kann andere Länder betreffen",
+  "sectionAllLabel": "Alle Länder",
+  "sectionAllHint": "Zeigt Einträge aus jedem Land. Das Abzeichen in jeder Reihe zeigt, zu welchem Land es gehört."
+}

@@ -1,0 +1,12 @@
+{
+  "heading": "기술 검색",
+  "inputAriaLabel": "모든 기술 계통 검색",
+  "placeholder": "기술 이름 또는 ID 입력…",
+  "paletteTitle": "기술 찾기",
+  "paletteHint": "기술 이름 또는 ID를 입력하세요. 결과를 선택하면 해당 기술 계통을 열고 기술을 강조합니다.",
+  "navHint": "위쪽의 육군, 공군, 해군, 산업 장비 페이지에서도 둘러볼 수 있습니다.",
+  "projectTotal": "{lineCount}개 기술 계통에 기술 {techCount}개",
+  "noMatches": "‘{query}’에 대한 결과가 없습니다.",
+  "firstMatches": "처음 {count}개 결과를 표시합니다. 계속 입력하여 범위를 좁히세요.",
+  "matches": "결과 {count}개"
+}

@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "눌러서 확대",
+  "reviewTitle": "이미지 검토",
+  "referencedSpriteNoPreview": "참조된 스프라이트(로컬 미리보기 없음)",
+  "unsupportedFormat": "지원하지 않는 형식입니다. PNG / JPG / DDS / TGA / WEBP를 업로드하세요.",
+  "uploadFailed": "업로드 실패",
+  "selectedFile": "선택됨: {filename}",
+  "replaceImage": "이미지 교체",
+  "uploadImage": "이미지 업로드",
+  "defaultHint": "PNG / JPG / DDS · 목표 {width} × {height}",
+  "advisoryHeading": "{count, plural, one {주의 사항} other {주의 사항({count}개)}}",
+  "cropInstruction": "끌어서 자르기 · 화면 비율 {width}:{height}로 고정",
+  "cropSourceAlt": "자르기 원본",
+  "uploading": "업로드 중...",
+  "uploadWithCrop": "잘라서 업로드",
+  "cancel": "취소",
+  "currentUpload": "현재 업로드",
+  "emptyTitle": "아직 업로드한 이미지 없음",
+  "emptyHelp": "'이미지 업로드'를 누르세요. 파일 이름을 자동으로 정하고 {width} × {height}로 크기를 조절한 뒤 내보낼 때 DDS로 변환합니다."
+}

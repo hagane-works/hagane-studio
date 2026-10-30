@@ -1,0 +1,518 @@
+{
+ "derive": [
+  {
+   "token": "my_panel",
+   "control": null,
+   "names": {
+    "token": "my_panel",
+    "scripted_gui_key": "my_panel",
+    "window_name": "my_panel_panel",
+    "gui_path": "interface/zz_uipanel_my_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_my_panel.txt",
+    "loc_basename": "my_panel_panel",
+    "title_loc_key": "my_panel_title"
+   }
+  },
+  {
+   "token": "My Panel",
+   "control": null,
+   "names": {
+    "token": "My_Panel",
+    "scripted_gui_key": "My_Panel",
+    "window_name": "My_Panel_panel",
+    "gui_path": "interface/zz_uipanel_My_Panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_My_Panel.txt",
+    "loc_basename": "My_Panel_panel",
+    "title_loc_key": "My_Panel_title"
+   }
+  },
+  {
+   "token": "  spaced  ",
+   "control": null,
+   "names": {
+    "token": "spaced",
+    "scripted_gui_key": "spaced",
+    "window_name": "spaced_panel",
+    "gui_path": "interface/zz_uipanel_spaced.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_spaced.txt",
+    "loc_basename": "spaced_panel",
+    "title_loc_key": "spaced_title"
+   }
+  },
+  {
+   "token": "tok-en.with!chars",
+   "control": null,
+   "names": {
+    "token": "tok_en_with_chars",
+    "scripted_gui_key": "tok_en_with_chars",
+    "window_name": "tok_en_with_chars_panel",
+    "gui_path": "interface/zz_uipanel_tok_en_with_chars.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_tok_en_with_chars.txt",
+    "loc_basename": "tok_en_with_chars_panel",
+    "title_loc_key": "tok_en_with_chars_title"
+   }
+  },
+  {
+   "token": "",
+   "control": null,
+   "names": {
+    "token": "panel",
+    "scripted_gui_key": "panel",
+    "window_name": "panel_panel",
+    "gui_path": "interface/zz_uipanel_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_panel.txt",
+    "loc_basename": "panel_panel",
+    "title_loc_key": "panel_title"
+   }
+  },
+  {
+   "token": "___",
+   "control": null,
+   "names": {
+    "token": "panel",
+    "scripted_gui_key": "panel",
+    "window_name": "panel_panel",
+    "gui_path": "interface/zz_uipanel_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_panel.txt",
+    "loc_basename": "panel_panel",
+    "title_loc_key": "panel_title"
+   }
+  },
+  {
+   "token": "汉字面板",
+   "control": null,
+   "names": {
+    "token": "panel",
+    "scripted_gui_key": "panel",
+    "window_name": "panel_panel",
+    "gui_path": "interface/zz_uipanel_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_panel.txt",
+    "loc_basename": "panel_panel",
+    "title_loc_key": "panel_title"
+   }
+  },
+  {
+   "token": "a1_B2",
+   "control": null,
+   "names": {
+    "token": "a1_B2",
+    "scripted_gui_key": "a1_B2",
+    "window_name": "a1_B2_panel",
+    "gui_path": "interface/zz_uipanel_a1_B2.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_a1_B2.txt",
+    "loc_basename": "a1_B2_panel",
+    "title_loc_key": "a1_B2_title"
+   }
+  },
+  {
+   "token": "-leading",
+   "control": null,
+   "names": {
+    "token": "leading",
+    "scripted_gui_key": "leading",
+    "window_name": "leading_panel",
+    "gui_path": "interface/zz_uipanel_leading.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_leading.txt",
+    "loc_basename": "leading_panel",
+    "title_loc_key": "leading_title"
+   }
+  },
+  {
+   "token": "trailing-",
+   "control": null,
+   "names": {
+    "token": "trailing",
+    "scripted_gui_key": "trailing",
+    "window_name": "trailing_panel",
+    "gui_path": "interface/zz_uipanel_trailing.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_trailing.txt",
+    "loc_basename": "trailing_panel",
+    "title_loc_key": "trailing_title"
+   }
+  },
+  {
+   "token": "my_panel",
+   "control": "btn",
+   "names": {
+    "token": "my_panel",
+    "scripted_gui_key": "my_panel",
+    "window_name": "my_panel_panel",
+    "gui_path": "interface/zz_uipanel_my_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_my_panel.txt",
+    "loc_basename": "my_panel_panel",
+    "title_loc_key": "my_panel_title",
+    "control_short": "btn",
+    "control_name": "my_panel_btn",
+    "visible_trigger_key": "my_panel_btn_visible",
+    "text_loc_key": "my_panel_btn_loc",
+    "click_key": "my_panel_btn_click",
+    "click_enabled_key": "my_panel_btn_click_enabled",
+    "tooltip_loc_key": "my_panel_btn_tt"
+   }
+  },
+  {
+   "token": "my_panel",
+   "control": "My Button",
+   "names": {
+    "token": "my_panel",
+    "scripted_gui_key": "my_panel",
+    "window_name": "my_panel_panel",
+    "gui_path": "interface/zz_uipanel_my_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_my_panel.txt",
+    "loc_basename": "my_panel_panel",
+    "title_loc_key": "my_panel_title",
+    "control_short": "My_Button",
+    "control_name": "my_panel_My_Button",
+    "visible_trigger_key": "my_panel_My_Button_visible",
+    "text_loc_key": "my_panel_My_Button_loc",
+    "click_key": "my_panel_My_Button_click",
+    "click_enabled_key": "my_panel_My_Button_click_enabled",
+    "tooltip_loc_key": "my_panel_My_Button_tt"
+   }
+  },
+  {
+   "token": "my_panel",
+   "control": "",
+   "names": {
+    "token": "my_panel",
+    "scripted_gui_key": "my_panel",
+    "window_name": "my_panel_panel",
+    "gui_path": "interface/zz_uipanel_my_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_my_panel.txt",
+    "loc_basename": "my_panel_panel",
+    "title_loc_key": "my_panel_title",
+    "control_short": "control",
+    "control_name": "my_panel_control",
+    "visible_trigger_key": "my_panel_control_visible",
+    "text_loc_key": "my_panel_control_loc",
+    "click_key": "my_panel_control_click",
+    "click_enabled_key": "my_panel_control_click_enabled",
+    "tooltip_loc_key": "my_panel_control_tt"
+   }
+  },
+  {
+   "token": "my_panel",
+   "control": "x-y",
+   "names": {
+    "token": "my_panel",
+    "scripted_gui_key": "my_panel",
+    "window_name": "my_panel_panel",
+    "gui_path": "interface/zz_uipanel_my_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_my_panel.txt",
+    "loc_basename": "my_panel_panel",
+    "title_loc_key": "my_panel_title",
+    "control_short": "x_y",
+    "control_name": "my_panel_x_y",
+    "visible_trigger_key": "my_panel_x_y_visible",
+    "text_loc_key": "my_panel_x_y_loc",
+    "click_key": "my_panel_x_y_click",
+    "click_enabled_key": "my_panel_x_y_click_enabled",
+    "tooltip_loc_key": "my_panel_x_y_tt"
+   }
+  },
+  {
+   "token": "my_panel",
+   "control": "___",
+   "names": {
+    "token": "my_panel",
+    "scripted_gui_key": "my_panel",
+    "window_name": "my_panel_panel",
+    "gui_path": "interface/zz_uipanel_my_panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_my_panel.txt",
+    "loc_basename": "my_panel_panel",
+    "title_loc_key": "my_panel_title",
+    "control_short": "control",
+    "control_name": "my_panel_control",
+    "visible_trigger_key": "my_panel_control_visible",
+    "text_loc_key": "my_panel_control_loc",
+    "click_key": "my_panel_control_click",
+    "click_enabled_key": "my_panel_control_click_enabled",
+    "tooltip_loc_key": "my_panel_control_tt"
+   }
+  },
+  {
+   "token": "My Panel",
+   "control": "btn",
+   "names": {
+    "token": "My_Panel",
+    "scripted_gui_key": "My_Panel",
+    "window_name": "My_Panel_panel",
+    "gui_path": "interface/zz_uipanel_My_Panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_My_Panel.txt",
+    "loc_basename": "My_Panel_panel",
+    "title_loc_key": "My_Panel_title",
+    "control_short": "btn",
+    "control_name": "My_Panel_btn",
+    "visible_trigger_key": "My_Panel_btn_visible",
+    "text_loc_key": "My_Panel_btn_loc",
+    "click_key": "My_Panel_btn_click",
+    "click_enabled_key": "My_Panel_btn_click_enabled",
+    "tooltip_loc_key": "My_Panel_btn_tt"
+   }
+  },
+  {
+   "token": "My Panel",
+   "control": "My Button",
+   "names": {
+    "token": "My_Panel",
+    "scripted_gui_key": "My_Panel",
+    "window_name": "My_Panel_panel",
+    "gui_path": "interface/zz_uipanel_My_Panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_My_Panel.txt",
+    "loc_basename": "My_Panel_panel",
+    "title_loc_key": "My_Panel_title",
+    "control_short": "My_Button",
+    "control_name": "My_Panel_My_Button",
+    "visible_trigger_key": "My_Panel_My_Button_visible",
+    "text_loc_key": "My_Panel_My_Button_loc",
+    "click_key": "My_Panel_My_Button_click",
+    "click_enabled_key": "My_Panel_My_Button_click_enabled",
+    "tooltip_loc_key": "My_Panel_My_Button_tt"
+   }
+  },
+  {
+   "token": "My Panel",
+   "control": "",
+   "names": {
+    "token": "My_Panel",
+    "scripted_gui_key": "My_Panel",
+    "window_name": "My_Panel_panel",
+    "gui_path": "interface/zz_uipanel_My_Panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_My_Panel.txt",
+    "loc_basename": "My_Panel_panel",
+    "title_loc_key": "My_Panel_title",
+    "control_short": "control",
+    "control_name": "My_Panel_control",
+    "visible_trigger_key": "My_Panel_control_visible",
+    "text_loc_key": "My_Panel_control_loc",
+    "click_key": "My_Panel_control_click",
+    "click_enabled_key": "My_Panel_control_click_enabled",
+    "tooltip_loc_key": "My_Panel_control_tt"
+   }
+  },
+  {
+   "token": "My Panel",
+   "control": "x-y",
+   "names": {
+    "token": "My_Panel",
+    "scripted_gui_key": "My_Panel",
+    "window_name": "My_Panel_panel",
+    "gui_path": "interface/zz_uipanel_My_Panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_My_Panel.txt",
+    "loc_basename": "My_Panel_panel",
+    "title_loc_key": "My_Panel_title",
+    "control_short": "x_y",
+    "control_name": "My_Panel_x_y",
+    "visible_trigger_key": "My_Panel_x_y_visible",
+    "text_loc_key": "My_Panel_x_y_loc",
+    "click_key": "My_Panel_x_y_click",
+    "click_enabled_key": "My_Panel_x_y_click_enabled",
+    "tooltip_loc_key": "My_Panel_x_y_tt"
+   }
+  },
+  {
+   "token": "My Panel",
+   "control": "___",
+   "names": {
+    "token": "My_Panel",
+    "scripted_gui_key": "My_Panel",
+    "window_name": "My_Panel_panel",
+    "gui_path": "interface/zz_uipanel_My_Panel.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_My_Panel.txt",
+    "loc_basename": "My_Panel_panel",
+    "title_loc_key": "My_Panel_title",
+    "control_short": "control",
+    "control_name": "My_Panel_control",
+    "visible_trigger_key": "My_Panel_control_visible",
+    "text_loc_key": "My_Panel_control_loc",
+    "click_key": "My_Panel_control_click",
+    "click_enabled_key": "My_Panel_control_click_enabled",
+    "tooltip_loc_key": "My_Panel_control_tt"
+   }
+  },
+  {
+   "token": "  spaced  ",
+   "control": "btn",
+   "names": {
+    "token": "spaced",
+    "scripted_gui_key": "spaced",
+    "window_name": "spaced_panel",
+    "gui_path": "interface/zz_uipanel_spaced.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_spaced.txt",
+    "loc_basename": "spaced_panel",
+    "title_loc_key": "spaced_title",
+    "control_short": "btn",
+    "control_name": "spaced_btn",
+    "visible_trigger_key": "spaced_btn_visible",
+    "text_loc_key": "spaced_btn_loc",
+    "click_key": "spaced_btn_click",
+    "click_enabled_key": "spaced_btn_click_enabled",
+    "tooltip_loc_key": "spaced_btn_tt"
+   }
+  },
+  {
+   "token": "  spaced  ",
+   "control": "My Button",
+   "names": {
+    "token": "spaced",
+    "scripted_gui_key": "spaced",
+    "window_name": "spaced_panel",
+    "gui_path": "interface/zz_uipanel_spaced.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_spaced.txt",
+    "loc_basename": "spaced_panel",
+    "title_loc_key": "spaced_title",
+    "control_short": "My_Button",
+    "control_name": "spaced_My_Button",
+    "visible_trigger_key": "spaced_My_Button_visible",
+    "text_loc_key": "spaced_My_Button_loc",
+    "click_key": "spaced_My_Button_click",
+    "click_enabled_key": "spaced_My_Button_click_enabled",
+    "tooltip_loc_key": "spaced_My_Button_tt"
+   }
+  },
+  {
+   "token": "  spaced  ",
+   "control": "",
+   "names": {
+    "token": "spaced",
+    "scripted_gui_key": "spaced",
+    "window_name": "spaced_panel",
+    "gui_path": "interface/zz_uipanel_spaced.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_spaced.txt",
+    "loc_basename": "spaced_panel",
+    "title_loc_key": "spaced_title",
+    "control_short": "control",
+    "control_name": "spaced_control",
+    "visible_trigger_key": "spaced_control_visible",
+    "text_loc_key": "spaced_control_loc",
+    "click_key": "spaced_control_click",
+    "click_enabled_key": "spaced_control_click_enabled",
+    "tooltip_loc_key": "spaced_control_tt"
+   }
+  },
+  {
+   "token": "  spaced  ",
+   "control": "x-y",
+   "names": {
+    "token": "spaced",
+    "scripted_gui_key": "spaced",
+    "window_name": "spaced_panel",
+    "gui_path": "interface/zz_uipanel_spaced.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_spaced.txt",
+    "loc_basename": "spaced_panel",
+    "title_loc_key": "spaced_title",
+    "control_short": "x_y",
+    "control_name": "spaced_x_y",
+    "visible_trigger_key": "spaced_x_y_visible",
+    "text_loc_key": "spaced_x_y_loc",
+    "click_key": "spaced_x_y_click",
+    "click_enabled_key": "spaced_x_y_click_enabled",
+    "tooltip_loc_key": "spaced_x_y_tt"
+   }
+  },
+  {
+   "token": "  spaced  ",
+   "control": "___",
+   "names": {
+    "token": "spaced",
+    "scripted_gui_key": "spaced",
+    "window_name": "spaced_panel",
+    "gui_path": "interface/zz_uipanel_spaced.gui",
+    "txt_path": "common/scripted_guis/zz_uipanel_spaced.txt",
+    "loc_basename": "spaced_panel",
+    "title_loc_key": "spaced_title",
+    "control_short": "control",
+    "control_name": "spaced_control",
+    "visible_trigger_key": "spaced_control_visible",
+    "text_loc_key": "spaced_control_loc",
+    "click_key": "spaced_control_click",
+    "click_enabled_key": "spaced_control_click_enabled",
+    "tooltip_loc_key": "spaced_control_tt"
+   }
+  }
+ ],
+ "walk": [
+  {
+   "name": "flat",
+   "controls": [
+    {
+     "name": "a",
+     "kind": "text"
+    },
+    {
+     "name": "b",
+     "kind": "button"
+    }
+   ],
+   "order": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "name": "nested",
+   "controls": [
+    {
+     "name": "c",
+     "kind": "container",
+     "children": [
+      {
+       "name": "c1",
+       "kind": "text"
+      },
+      {
+       "name": "c2",
+       "kind": "container",
+       "children": [
+        {
+         "name": "c3",
+         "kind": "button"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "order": [
+    "c",
+    "c1",
+    "c2",
+    "c3"
+   ]
+  },
+  {
+   "name": "non-container-children-ignored",
+   "controls": [
+    {
+     "name": "d",
+     "kind": "text",
+     "children": [
+      {
+       "name": "hidden"
+      }
+     ]
+    }
+   ],
+   "order": [
+    "d"
+   ]
+  },
+  {
+   "name": "empty",
+   "controls": [],
+   "order": []
+  },
+  {
+   "name": "non-dict-skipped",
+   "controls": [
+    {
+     "name": "e",
+     "kind": "text"
+    }
+   ],
+   "order": [
+    "e"
+   ]
+  }
+ ]
+}

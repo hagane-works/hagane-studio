@@ -1,0 +1,16 @@
+{
+  "ownLabel": "自国",
+  "ownTitle": "この国家自身の項目（country_tag = {tag}）。現在の国家だけに影響するため、安全に編集できます。",
+  "explicitLabel": "国家間共有",
+  "explicitTitle": "国家間で共有（shared_country_tags = {tags}）。編集するとこれらすべての国家に影響します。",
+  "globalLabel": "グローバル",
+  "globalTitle": "グローバル共有。Mod 内のすべての国家に影響するため、注意して編集してください。",
+  "globalExceptLabel": "グローバル（除外あり）",
+  "globalExceptTitle": "グローバル共有。ただし（{tags}）を除きます。編集するとほかのすべての国家に影響します。",
+  "sectionOwnLabel": "この国家自身",
+  "sectionOwnHint": "現在の国家だけに影響します",
+  "sectionSharedLabel": "共有 / グローバル / 国家間",
+  "sectionSharedHint": "編集するとほかの国家に影響する場合があります",
+  "sectionAllLabel": "すべての国家",
+  "sectionAllHint": "すべての国家の項目を表示しています。各行のバッジに所属する国家が表示されます。"
+}

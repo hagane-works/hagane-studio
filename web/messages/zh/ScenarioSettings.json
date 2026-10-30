@@ -1,0 +1,70 @@
+{
+  "title": "开局世界与战役期限",
+  "intro": "这些规则对所有可选剧本生效。选择玩家进入的世界设定，以及战役结束日期。",
+  "worldQuestion": "开局时，使用哪套世界设定？",
+  "worldOptions": {
+    "inherit": {
+      "title": "沿用原版／基础 MOD 的世界设定",
+      "description": "适合增加内容，或只修改现有世界局部的 MOD。"
+    },
+    "own": {
+      "title": "按我的剧本世界来规划",
+      "description": "记录你要制作架空世界或特殊年代的意图，不会自动改写历史文件。"
+    }
+  },
+  "startDate": {
+    "label": "剧本开局日期",
+    "hint": "请与玩家实际选择的剧本开局日期保持一致。"
+  },
+  "endDate": {
+    "label": "剧本结束日期",
+    "hint": "填写一个晚于所有已保存剧本的有效日期，HOI4 会把它作为战役结束日期。"
+  },
+  "compatibilityNotice": "最晚可选的剧本开局已达到或晚于原版 1949 年结束日。你设置更晚的剧本结束日期前，导出会明确记录并补上兼容结束日，避免进入游戏后立即结算。",
+  "timelineBaseline": {
+    "vanilla": "独立 Mod：这里按原版 HOI4 时间线比较（战役结束日为 1949 年 1 月 1 日）。",
+    "unregistered": "基础 Mod 时间线：来源尚未登记。本程序不会擅自假定它也在 1949 年结束。",
+    "rawBookmarkCoverage": "这里按工作台中已保存的剧本提示；保留的原始 Bookmark 文件会在导出检查中另行核对。"
+  },
+  "saveFailed": "剧本设定保存失败。",
+  "saveReadbackMismatch": "读回的内容与刚保存的内容不一致，因此没有显示“已保存”；请重试。",
+  "ownWorldSummary": {
+    "title": "你的世界设定选择",
+    "description": "你希望玩家进入自己的剧本世界。这项设定只记录选择；发布前仍需由你检查并制作所需的开局世界文件。"
+  },
+  "submodNotice": "这个项目依赖的基础 Mod 时间线来源尚未登记。本程序只做只读分析，不会自动改写基础 Mod 的世界设定。",
+  "riskPreview": {
+    "title": "开局世界风险预览",
+    "inherit": "你正在沿用原版或基础 MOD 的世界设定。本程序只会提示可能的世界设定风险，不会替你改写这套世界。",
+    "unverified": "来源尚未登记：目前还没有接入可验证这套世界的预览接口。本程序不会假装已经知道结果，也不会自动改写世界。",
+    "verifiedIntro": "这套世界设定可以验证。确认使用此剧本设定后，玩家会遇到以下结果：",
+    "verifiedEmpty": "这套世界设定可以验证，但暂时没有可展示给玩家的变化。请检查剧本日期和世界设定。",
+    "consequences": {
+      "scenarioWorld": {
+        "title": "玩家会从你的剧本世界开始游戏",
+        "description": "开局世界会采用你为这个剧本设定的内容。"
+      },
+      "baseWorld": {
+        "title": "基础世界的后续变化不会套用",
+        "description": "原版或基础 MOD 在开局日期之后的世界变化，不会在开局时自动套用。"
+      }
+    }
+  },
+  "campaignOpening": {
+    "title": "战役开局",
+    "intro": "玩家可以选择多个剧本，因此 HOI4 以最早的有效、已保存剧本作为战役开局。较晚的剧本仍是可选剧本，不会变成新的全局开局。",
+    "currentLabel": "已保存的战役开局日期",
+    "notSelected": "尚未选定开局日期",
+    "linked": "这个日期与最早的已保存剧本“{bookmark}”一致。",
+    "unlinked": "最早的已保存剧本从 {date} 开始。请在导出前同步战役开局。",
+    "noValidBookmark": "请先保存至少一个日期有效的剧本，再设置战役开局。",
+    "syncEarliest": "同步到最早的已保存剧本",
+    "synced": "已同步到最早剧本",
+    "saveCampaignSettings": "保存战役设定",
+    "workspaceTitle": "整个 Mod 的开局",
+    "workspaceIntro": "这里的规则对所有剧本生效；每个剧本自己的日期和选国界面内容在下方编辑。",
+    "editWorkspace": "修改开局规则",
+    "closeWorkspace": "收起开局规则",
+    "notSet": "未设置"
+  }
+}

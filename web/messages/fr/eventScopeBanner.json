@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount} de {tag} ({ownCount, plural, one {événement} other {événements}})",
+  "sharedSuffix": " · +{sharedCount} partagés / diffusion globale",
+  "filteredNote": "Les fichiers de DLC du jeu de base et des autres pays sont exclus à l'importation ; seuls les événements propres à {tag} sont conservés.",
+  "vanillaCta": "Ouvrir les ÉVÉNEMENTS DU JEU DE BASE comme référence",
+  "hiddenHint": "{hiddenCount} {hiddenCount, plural, one {événement partagé/global masqué} other {événements partagés/globaux masqués}} · cliquez sur <emph>Tous</emph> à droite pour les afficher.",
+  "dismiss": "Fermer",
+  "dontShowAgain": "Ne plus afficher"
+}

@@ -1,0 +1,144 @@
+{
+  "common": {
+    "notTags": "Codes de pays invalides : {tags}"
+  },
+  "ideology": {
+    "title": "Partis et idéologies",
+    "kind": "Politique · {tag} · Historique du pays · Idéologies du projet",
+    "loadingPolitics": "Chargement de la politique de départ du projet…",
+    "definitions": "Définitions des idéologies",
+    "definitionsHint": "Choisissez un ROOT ou une sous-idéologie ; ci-dessous se trouve le même éditeur que dans l’atelier des idéologies.",
+    "target": "Idéologie à modifier",
+    "targetLabel": "Modifier l’idéologie",
+    "loadingDefinitions": "Chargement des idéologies du projet…",
+    "none": "Aucune idéologie à modifier.",
+    "workbenchNote": "La création, la suppression et la vérification des références restent dans l’atelier des idéologies.",
+    "politicsLog": "Politique de départ de {tag}",
+    "politicsSaved": "Politique de départ de {tag} enregistrée",
+    "leaderKind": "Idéologie du personnage · {token}",
+    "leaderSaved": "Idéologie de « {name} » enregistrée",
+    "definitionLog": "Partis et idéologies · {name}",
+    "definitionKind": "Idéologie · {id}",
+    "definitionSaved": "Idéologie « {name} » enregistrée",
+    "iconLog": "Partis et idéologies · {name} · Icône",
+    "iconSaved": "Nouvelle icône pour « {name} »",
+    "saved": "Idéologie enregistrée",
+    "problem": {
+      "supportTotal": "Le soutien doit totaliser 100 (actuellement {total})",
+      "lastElectionDate": "Écrivez la date de la dernière élection sous la forme 1933.3.5",
+      "frequency": "L’intervalle entre les élections doit être un nombre entier de mois, 0 ou plus",
+      "rulingZero": "Le soutien du parti au pouvoir ne peut pas être de 0",
+      "idRequired": "Saisissez un identifiant, par exemple technocracy",
+      "idInvalid": "L’identifiant ne peut contenir que des minuscules, des chiffres et des tirets bas, et ne peut pas commencer par un chiffre",
+      "idTaken": "Le projet contient déjà « {id} »",
+      "rootTakeover": "Ce projet repose sur un mod de base et en conserve les groupes d’idéologies ; impossible d’en créer un ici",
+      "sourceLock": "Cette idéologie vient du mod de base ; importez-la et verrouillez sa source avant de créer une sous-idéologie dessous"
+    }
+  },
+  "warGoal": {
+    "field": {
+      "baseDays": "Jours de base pour justifier",
+      "perStateDays": "Jours en plus pour chaque état supplémentaire",
+      "stateLimit": "Nombre maximal d’états sélectionnables",
+      "threat": "Tension mondiale par état"
+    },
+    "kind": "But de guerre · {id}",
+    "loading": "Chargement des buts de guerre du projet…",
+    "saved": "But de guerre « {name} » enregistré",
+    "deleted": "But de guerre « {name} » supprimé",
+    "formula": "Jours de justification = base + par état × états choisis ; chaque jour coûte 0,2 de poids politique (NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP).",
+    "problem": "Saisissez des nombres supérieurs ou égaux à 0",
+    "note": "L’enregistrement reprend dans le projet tout le fichier qui contient ce but de guerre.",
+    "hit": "But de guerre {name}"
+  },
+  "autonomy": {
+    "kind": "Niveau d’autonomie · {id}",
+    "saved": "Niveau d’autonomie « {name} » enregistré",
+    "loading": "Chargement des niveaux d’autonomie du projet…",
+    "name": "Nom (le nom du niveau affiché à l’écran)",
+    "minFreedom": "Liberté minimale (de 0 à 1 ; un sujet monte ou descend d’un niveau selon cet ordre)",
+    "manpower": "Part de la main-d’œuvre du sujet reçue par son suzerain (de 0 à 1)",
+    "unset": "Non défini",
+    "rule": "Règles (rule : ce que le sujet peut faire)",
+    "modifier": "Modificateurs (modifier)",
+    "scriptNote": "Écrivez les règles et les modificateurs en script du jeu ; laissez un champ vide pour le retirer.",
+    "problem": "Le nom ne peut pas être vide, les nombres doivent être entre 0 et 1 et la liberté minimale ne peut pas être vide",
+    "note": "L’enregistrement reprend dans le projet tout le fichier de ce niveau et ne modifie que son bloc ; un niveau créé dans l’atelier des niveaux d’autonomie modifie sa ligne. Le nom est enregistré comme localisation de l’identifiant du niveau, et tous les écrans changent avec lui.",
+    "hit": "Niveau d’autonomie {tag} {name}"
+  },
+  "newCountry": {
+    "heading": "Pays",
+    "summary": "Créer un pays et lui donner des états",
+    "create": "+ Nouveau pays",
+    "giveTitle": "Donner des états à {tag} (il en devient propriétaire et y reçoit un cœur)",
+    "searchPlaceholder": "Nom de l’état, numéro ou propriétaire actuel (ex. GER)",
+    "searchLabel": "Rechercher des états",
+    "noMatch": "Aucun état correspondant.",
+    "loading": "Chargement des états…",
+    "chosen": "Sélection : {list}",
+    "listSeparator": ", ",
+    "giving": "Attribution…",
+    "give": "Donner {count, plural, one {# état} other {# états}} à {tag}",
+    "gave": "{count, plural, one {# état donné} other {# états donnés}} à {tag}",
+    "gaveHint": "Il peut désormais être choisi dans la liste des pays mineurs de l’écran de sélection.",
+    "giveFailed": "Impossible de donner les états : {error}",
+    "hint": "Une fois créé, donnez-lui des états ici ; le jeu ne liste que les pays qui possèdent des états. Vous pouvez aussi lui ajouter une nouvelle terre dans « Carte du monde ».",
+    "gaveLog": "{tag} reçoit {count, plural, one {# état} other {# états}}",
+    "statesKind": "États · {ids}",
+    "createdLog": "Nouveau pays {tag}",
+    "countryKind": "Pays · {tag}"
+  },
+  "province": {
+    "stateSaved": "État {id} enregistré",
+    "editKind": "Carte · Propriétés",
+    "renameLog": "Renommage · {key}",
+    "renameKind": "Carte · Nom",
+    "stateTitle": "État {id} · {name}",
+    "noStateTitle": "Cet endroit n’appartient à aucun état",
+    "stateKind": "STATE_{id} · Propriétaire {owner} · {count, plural, one {# province} other {# provinces}}",
+    "noOwner": "aucun",
+    "provinceKind": "Province {id} · {kind}",
+    "regionTitle": "Région stratégique {id} · {name}",
+    "noRegionTitle": "Cet endroit n’appartient à aucune région stratégique",
+    "regionKind": "STRATEGICREGION_{id} · {count, plural, one {# province} other {# provinces}}",
+    "provinceId": "Province {id}",
+    "inState": "{kind} · dans l’état {id} {name}",
+    "scope": "Un clic sur la carte sélectionne",
+    "scopeState": "État",
+    "scopeProvince": "Province",
+    "scopeRegion": "Région stratégique",
+    "landNoState": "Dans aucun état. Passez à « Province » pour modifier ce bloc lui-même.",
+    "waterNoState": "Les mers et les lacs n’appartiennent à aucun état. Passez à « Province » pour modifier ce bloc lui-même.",
+    "noRegion": "Ce bloc n’appartient à aucune région stratégique.",
+    "openWorldMap": "Ouvrir dans l’atelier Carte du monde ↗"
+  },
+  "state": {
+    "fallbackTitle": "État",
+    "kind": "État · {id}",
+    "countryStates": "États de ce pays",
+    "pick": "Choisir un état",
+    "logKind": "État · {id}",
+    "loadFailed": "Impossible de charger cet état : {error}",
+    "missing": "Ni le jeu de base ni le projet n’ont d’état {id} ; il n’y a rien à modifier ici.",
+    "adopting": "Ajout de cet état au projet… (il n’est écrit dans le mod exporté que si vous le modifiez)",
+    "loading": "Chargement de l’état du projet…",
+    "problem": {
+      "ownerRequired": "Le propriétaire ne peut pas être vide"
+    }
+  },
+  "diplomacy": {
+    "title": "Diplomatie de départ",
+    "problem": {
+      "self": "Un pays ne peut pas le faire avec lui-même",
+      "subjectAutonomy": "Chaque pays dépendant doit avoir un type d’autonomie",
+      "relationType": "Chaque accord diplomatique doit avoir un type"
+    }
+  },
+  "profile": {
+    "problem": {
+      "nameRequired": "Le nom du pays ne peut pas être vide",
+      "adjectiveRequired": "L’adjectif ne peut pas être vide (par exemple German)",
+      "capitalRequired": "La capitale doit être un numéro d’état"
+    }
+  }
+}

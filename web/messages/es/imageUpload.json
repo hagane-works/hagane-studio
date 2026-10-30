@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "Pulsa para ampliar",
+  "reviewTitle": "Revisión de imagen",
+  "referencedSpriteNoPreview": "Sprite referenciado (sin vista previa local)",
+  "unsupportedFormat": "Formato no compatible. Carga PNG, JPG, DDS, TGA o WEBP.",
+  "uploadFailed": "Falló la carga",
+  "selectedFile": "Seleccionado: {filename}",
+  "replaceImage": "Sustituir imagen",
+  "uploadImage": "Cargar imagen",
+  "defaultHint": "PNG / JPG / DDS · objetivo {width} × {height}",
+  "advisoryHeading": "{count, plural, one {Aviso} other {Avisos ({count})}}",
+  "cropInstruction": "Arrastra para recortar · proporción fijada en {width}:{height}",
+  "cropSourceAlt": "Origen del recorte",
+  "uploading": "Cargando...",
+  "uploadWithCrop": "Cargar con recorte",
+  "cancel": "Cancelar",
+  "currentUpload": "Carga actual",
+  "emptyTitle": "Aún no se ha cargado ninguna imagen",
+  "emptyHelp": "Pulsa «Cargar imagen»; el archivo recibe un nombre automático, se redimensiona a {width} × {height} y se convierte a DDS al exportar."
+}

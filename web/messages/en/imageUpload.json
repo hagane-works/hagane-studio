@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "Click to enlarge",
+  "reviewTitle": "Image review",
+  "referencedSpriteNoPreview": "Referenced sprite (no local preview)",
+  "unsupportedFormat": "Unsupported format. Upload PNG / JPG / DDS / TGA / WEBP.",
+  "uploadFailed": "Upload failed",
+  "selectedFile": "Selected: {filename}",
+  "replaceImage": "Replace Image",
+  "uploadImage": "Upload Image",
+  "defaultHint": "PNG / JPG / DDS · target {width} × {height}",
+  "advisoryHeading": "{count, plural, one {Advisory} other {Advisories ({count})}}",
+  "cropInstruction": "Drag to crop · aspect locked to {width}:{height}",
+  "cropSourceAlt": "Crop source",
+  "uploading": "Uploading...",
+  "uploadWithCrop": "Upload with crop",
+  "cancel": "Cancel",
+  "currentUpload": "Current upload",
+  "emptyTitle": "No image uploaded yet",
+  "emptyHelp": "Click “Upload Image”; the file is auto-named, resized to {width} × {height}, and converted to DDS at export."
+}

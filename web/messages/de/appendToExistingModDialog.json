@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "Technologiedateien werden nach exaktem Pfad zusammengeführt",
+  "technologyMergeBody": "Append überschreibt nur Dateien mit exakt demselben Pfad. Technologieblöcke aus einer Projektdatei werden nicht in die Vanilla-Quelldatei zusammengeführt.",
+  "toastWarning": "Anhängen getan. Bei Konflikten wurden {conflictCount} base-mod file(s) überschrieben. Möchten Sie per Datei-Steuerung? Verwenden Sie stattdessen Differential-Merge.",
+  "toastSuccess": "Anhängen getan. Keine Pfadkonflikte — alle Ihre Inhalte wurden als neue Dateien in den Basismod hinzugefügt.",
+  "description": "Überspannen Sie dieses Projekt auf einen vorhandenen Mod Zip. Bei einem Pfadkonflikt gewinnen Sie Ihre Bearbeitungen. Am besten für den \"Lade einen Mod, editiere ihn hier, lade einen zusammengeführten Zip\"-Flow herunter.",
+  "naiveMergeTitle": "Overlay Merge — Ihre Bearbeitungen gewinnen Konflikte",
+  "naiveMergeBody": "Bei einem Pfadkonflikt überschreiben Ihre Edits die gleichnamige Datei des Basismods. Dateien, die auf dem Basismod eindeutig sind, werden als-is gespeichert und Dateien, die Sie hinzufügen, werden in Ihrer Version geschrieben.",
+  "pickBaseZip": "Wählen Sie Basis Mod Zip...",
+  "pickBaseFolder": "Mod-Ordner wählen...",
+  "folderPickerTitle": "Ordner des Basismods wählen",
+  "folderPickerHint": "Öffne den Ordner mit der descriptor.mod des Mods, etwa einen Steam-Workshop-Eintrag unter steamapps\\workshop\\content\\394360 oder einen Mod in deinem Mod-Ordner. Das Programm liest ihn nur und ändert ihn nie.",
+  "folderNotAMod": "Dieser Ordner ist kein Hearts-of-Iron-IV-Mod: Er enthält keine descriptor.mod mit einem Mod-Namen. Wähle den Ordner, in dem die descriptor.mod liegt.",
+  "supportNote": "Jedes HOI4-Mod-Zip und jeder Mod-Ordner funktioniert. Das Programm liest die Basis nur und ändert sie nie; das zusammengeführte Zip wird im Downloads-Ordner gespeichert.",
+  "title": "An bestehende Mod anhängen",
+  "baseZipLabel": "Basismod",
+  "cancel": "Abbrechen",
+  "merging": "Zusammenführen...",
+  "confirmAppend": "Hinzufügen + Herunterladen bestätigen"
+}

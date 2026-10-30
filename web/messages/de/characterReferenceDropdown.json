@@ -1,0 +1,13 @@
+{
+  "promote": "Charakter fördern",
+  "recruit": "Rekrutierungszeichen",
+  "retire": "In den Ruhestand tretende Person",
+  "searchPlaceholder": "Suche nach Namen oder ID...",
+  "searchingBase": "Suche nach Basismod...",
+  "noResults": "Keine Ergebnisse gefunden.",
+  "empty": "Noch keine Zeichen — geben Sie den Basis-Mod ein, um zu suchen.",
+  "projectBadge": "Projekt",
+  "baseBadge": "Basismod",
+  "promptManual": "Geben Sie die Zeichen-ID manuell ein:",
+  "enterManually": "+ manuell eingeben..."
+}

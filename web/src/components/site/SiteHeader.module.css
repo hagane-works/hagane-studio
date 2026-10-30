@@ -1,0 +1,214 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 82%, transparent);
+  backdrop-filter: blur(12px);
+  color: var(--foreground);
+}
+.inner {
+  container-type: inline-size;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.brandName {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+}
+.brandEnglish {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 20px;
+  align-items: center;
+  margin-inline: auto;
+  font-size: 14px;
+}
+.nav a {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  padding-block: 12px;
+  text-underline-offset: 6px;
+}
+
+.nav a svg {
+  width: 16px;
+  height: 16px;
+  color: var(--muted-foreground);
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.header svg {
+  flex-shrink: 0;
+}
+.header :is(a, button):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 5px;
+}
+
+.languageControl.languageControl {
+  min-height: 44px;
+  height: auto;
+  padding: 8px;
+  border-color: transparent;
+  background: transparent;
+  font-weight: 400;
+  font-size: 14px;
+}
+.languageControl.languageControl:hover {
+  background: var(--secondary);
+}
+.themeControl.themeControl {
+  width: 44px;
+  height: 44px;
+}
+.action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.action:hover {
+  background: var(--secondary);
+}
+.actionStrong {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 600;
+}
+.actionStrong:hover {
+  background: color-mix(in oklab, var(--accent) 90%, transparent);
+}
+
+.compactNav {
+  display: none;
+  margin-inline-start: auto;
+}
+.compactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.compactLinks a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.compactLinks a:hover {
+  background: var(--muted);
+}
+.compactLinks a svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--muted-foreground);
+}
+@container (max-width: 1100px) {
+  .nav {
+    display: none;
+  }
+  .compactNav {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .inner {
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-block: 12px;
+  }
+  .tools {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .inner {
+    gap: 8px;
+    row-gap: 12px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .brandName {
+    font-size: 16px;
+  }
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+  .tools {
+    gap: 0;
+  }
+  .languageControl.languageControl {
+    gap: 6px;
+  }
+  .languageControl > svg:first-child {
+    display: none;
+  }
+  .action {
+    padding-inline: 12px;
+  }
+
+  .action:not(:lang(zh)) {
+    padding-inline: 8px;
+  }
+  .languageControl:not(:lang(zh)) {
+    padding-inline: 4px;
+  }
+
+  .collapseLabel {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .brandName {
+    letter-spacing: 0;
+  }
+}

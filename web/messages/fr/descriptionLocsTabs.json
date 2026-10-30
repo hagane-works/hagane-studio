@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Onglets de langue de la description",
+  "addLanguage": "Ajouter une langue",
+  "addingLanguage": "Ajout de {language}…",
+  "addLanguageError": "Impossible d’ajouter {language} au projet. Réessayez.",
+  "legacyFallbackHint": "L'ancien champ de description est affiché ; saisissez du texte pour le remplacer. Votre texte est enregistré par langue.",
+  "fullName": {
+    "en": "Anglais",
+    "zh": "Chinois (simplifié)",
+    "ru": "Russe",
+    "fr": "Français",
+    "de": "Allemand",
+    "es": "Espagnol",
+    "ja": "Japonais",
+    "ko": "Coréen",
+    "pl": "Polonais",
+    "pt": "Portugais (Brésil)"
+  }
+}

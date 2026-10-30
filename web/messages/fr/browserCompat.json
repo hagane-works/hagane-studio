@@ -1,0 +1,6 @@
+{
+  "uploadHint": "Le téléversement de dossiers fonctionne dans votre navigateur. L'enregistrement direct dans un dossier exige Chrome, Edge ou Opera ; dans les autres navigateurs, exportez un ZIP.",
+  "writeHint": "Votre navigateur ne peut pas écrire directement dans un dossier. Exportez le mod en ZIP, puis décompressez-le dans votre dossier de mods HOI4. L'enregistrement direct exige Chrome, Edge ou Opera.",
+  "largeFolderConfirm": "Ce dossier contient {count} fichiers de mod. La lecture d'un très gros dossier peut prendre du temps. Continuer ?",
+  "noRelevantFiles": "Aucun fichier de mod (.txt, .gfx, .yml ou image) trouvé dans le dossier sélectionné. Choisissez la racine du mod, qui contient descriptor.mod, common et events."
+}

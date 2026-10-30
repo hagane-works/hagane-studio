@@ -1,0 +1,6 @@
+{
+  "autoSuffixedTitle": "ID 自动加后缀",
+  "autoSuffixedFallback": "ID 与已有 entity 冲突，已自动加后缀以保持唯一。",
+  "alreadyExistsTitle": "ID 已存在",
+  "alreadyExistsFallback": "该 ID 已在此项目使用，请换一个。"
+}

@@ -1,0 +1,200 @@
+{
+ "game_version": "1.19.3.0",
+ "tags": [
+  {
+   "tag": "CHI",
+   "name_en": "China",
+   "name_zh": "China (zh)",
+   "i18n_key": "china",
+   "ideology_default": "neutrality",
+   "flag_emoji": "",
+   "continent": "asia",
+   "names": {
+    "en": "China",
+    "zh": "China (zh)"
+   }
+  },
+  {
+   "tag": "COG",
+   "name_en": "Congo",
+   "name_zh": "Congo (zh)",
+   "i18n_key": "congo",
+   "ideology_default": "neutrality",
+   "flag_emoji": "",
+   "continent": "africa",
+   "names": {
+    "en": "Congo",
+    "zh": "Congo (zh)"
+   }
+  },
+  {
+   "tag": "ENG",
+   "name_en": "Britain",
+   "name_zh": "Britain (zh)",
+   "i18n_key": "britain",
+   "ideology_default": "democratic",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Britain",
+    "zh": "Britain (zh)"
+   }
+  },
+  {
+   "tag": "FIN",
+   "name_en": "Finland",
+   "name_zh": "Finland (zh)",
+   "i18n_key": "finland",
+   "ideology_default": "democratic",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Finland",
+    "zh": "Finland (zh)"
+   }
+  },
+  {
+   "tag": "FRA",
+   "name_en": "France",
+   "name_zh": "France (zh)",
+   "i18n_key": "france",
+   "ideology_default": "democratic",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "France",
+    "zh": "France (zh)"
+   }
+  },
+  {
+   "tag": "GER",
+   "name_en": "Germany",
+   "name_zh": "Germany (zh)",
+   "i18n_key": "germany",
+   "ideology_default": "fascism",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Germany",
+    "zh": "Germany (zh)"
+   }
+  },
+  {
+   "tag": "HAN",
+   "name_en": "Hanover",
+   "name_zh": "Hanover (zh)",
+   "i18n_key": "hanover",
+   "ideology_default": "neutrality",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Hanover",
+    "zh": "Hanover (zh)"
+   }
+  },
+  {
+   "tag": "HUN",
+   "name_en": "Hungary",
+   "name_zh": "Hungary (zh)",
+   "i18n_key": "hungary",
+   "ideology_default": "neutrality",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Hungary",
+    "zh": "Hungary (zh)"
+   }
+  },
+  {
+   "tag": "ITA",
+   "name_en": "Italy",
+   "name_zh": "Italy (zh)",
+   "i18n_key": "italy",
+   "ideology_default": "fascism",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Italy",
+    "zh": "Italy (zh)"
+   }
+  },
+  {
+   "tag": "JAP",
+   "name_en": "Japan",
+   "name_zh": "Japan (zh)",
+   "i18n_key": "japan",
+   "ideology_default": "fascism",
+   "flag_emoji": "",
+   "continent": "asia",
+   "names": {
+    "en": "Japan",
+    "zh": "Japan (zh)"
+   }
+  },
+  {
+   "tag": "NOR",
+   "name_en": "Norway",
+   "name_zh": "Norway (zh)",
+   "i18n_key": "norway",
+   "ideology_default": "democratic",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Norway",
+    "zh": "Norway (zh)"
+   }
+  },
+  {
+   "tag": "POL",
+   "name_en": "Poland",
+   "name_zh": "Poland (zh)",
+   "i18n_key": "poland",
+   "ideology_default": "neutrality",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Poland",
+    "zh": "Poland (zh)"
+   }
+  },
+  {
+   "tag": "ROM",
+   "name_en": "Romania",
+   "name_zh": "Romania (zh)",
+   "i18n_key": "romania",
+   "ideology_default": "neutrality",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Romania",
+    "zh": "Romania (zh)"
+   }
+  },
+  {
+   "tag": "SOV",
+   "name_en": "Soviet union",
+   "name_zh": "Soviet union (zh)",
+   "i18n_key": "sovietUnion",
+   "ideology_default": "communism",
+   "flag_emoji": "",
+   "continent": "europe",
+   "names": {
+    "en": "Soviet union",
+    "zh": "Soviet union (zh)"
+   }
+  },
+  {
+   "tag": "USA",
+   "name_en": "USA",
+   "name_zh": "USA (zh)",
+   "i18n_key": "usa",
+   "ideology_default": "democratic",
+   "flag_emoji": "",
+   "continent": "americas",
+   "names": {
+    "en": "USA",
+    "zh": "USA (zh)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,696 @@
+{
+  "focus_display_name_missing_created": {
+    "what": "La priorité {id} n’a pas de nom",
+    "impact": "En jeu, la priorité s’affiche sous son ID, sans texte au survol.",
+    "action": "Définir un nom",
+    "jump": "Atelier des priorités › Cette priorité › Nom"
+  },
+  "focus_display_name_missing_enabled_locale": {
+    "what": "La priorité {id} n’a pas de nom en {locale}",
+    "impact": "Les joueurs utilisant cette langue verront l’ID.",
+    "action": "Compléter cette langue",
+    "jump": "Priorité › Nom › Onglets de langue"
+  },
+  "focus_initial_position_unknown_kind": {
+    "what": "Le type de position initiale de {tree} n’est pas reconnu",
+    "impact": "L’arbre de priorités peut se décaler en bloc ou se chevaucher.",
+    "action": "Redéfinir la position initiale",
+    "jump": "Arbre de priorités › Disposition"
+  },
+  "focus_reward_modifier_in_effect_position": {
+    "what": "Dans la récompense d’accomplissement de la priorité {id}, {token} est un modificateur mais placé en position d’effet",
+    "impact": "Le jeu ignore la ligne au chargement — <b>elle est sans effet</b>.",
+    "action": "Déplacer vers un porteur de modificateurs",
+    "jump": "Priorité › Récompense d’accomplissement"
+  },
+  "focus_reward_scalar_effect_block_value": {
+    "what": "{token} dans la priorité {id} attend un nombre mais reçoit un bloc de code (ou l’inverse)",
+    "impact": "La ligne est sans effet.",
+    "action": "Corriger la syntaxe",
+    "jump": "Priorité › Récompense d’accomplissement"
+  },
+  "focus_reward_trigger_in_effect_position": {
+    "what": "La récompense d’accomplissement de la priorité {id} contient la condition {token} ; cette position n’accepte que des effets",
+    "impact": "<b>La ligne est sans effet</b> et la condition n’est jamais évaluée.",
+    "action": "Déplacer vers le bloc de conditions",
+    "jump": "Priorité › Récompense d’accomplissement"
+  },
+  "focus_reward_unsupported_scope": {
+    "what": "{effect} dans la priorité {id} n’est pas pris en charge dans la portée actuelle ({scope})",
+    "impact": "L’effet ne se déclenche pas. Portées prises en charge : {supported}.",
+    "action": "L’envelopper dans une portée prise en charge",
+    "jump": "Priorité › Récompense d’accomplissement"
+  },
+  "focus_base_default_provider_unresolved": {
+    "what": "L’arbre de priorités par défaut fourni par le mod de base est introuvable",
+    "impact": "L’arbre peut ne pas se rattacher au bon pays et rester invisible en jeu.",
+    "action": "Actualiser l’index du mod de base",
+    "jump": "Paramètres du projet › Dépendances"
+  },
+  "focus_effective_default_missing": {
+    "what": "{country} n’a pas d’arbre de priorités par défaut",
+    "impact": "Le pays retombe sur l’arbre générique — <b>les joueurs ne verront jamais l’arbre que vous avez construit</b>.",
+    "action": "Définir comme arbre par défaut",
+    "jump": "Liste des arbres de priorités"
+  },
+  "focus_file_policy_applied": {
+    "what": "Les fichiers de sortie des arbres de priorités ont été écrits comme consigné",
+    "impact": "Vérification réussie, comptée dans le total ✅."
+  },
+  "focus_file_policy_cohort_incomplete": {
+    "what": "{tree} n’a pas été exporté avec les autres arbres du même fichier",
+    "impact": "Le fichier n’est écrit qu’en partie — <b>les arbres manquants n’apparaissent pas en jeu</b>.",
+    "action": "Les sélectionner ensemble à l’export",
+    "jump": "Page d’export › Sélection du contenu"
+  },
+  "focus_file_policy_drift": {
+    "what": "La politique de fichier de {tree_ids} diverge de l’enregistrement de version",
+    "impact": "Sans incidence sur le résultat ; export effectué selon la politique actuelle. Ce champ est géré par le système, aucune modification nécessaire."
+  },
+  "focus_file_policy_duplicate_membership": {
+    "what": "Conflit d’enregistrements internes : un même arbre porte deux politiques d’écriture",
+    "impact": "L’interface affichera « vérification incomplète » ; signalé automatiquement."
+  },
+  "focus_file_policy_missing": {
+    "what": "{id} n’avait pas de fichier de sortie, un fichier a été attribué automatiquement",
+    "impact": "Sans incidence sur le jeu, le contenu est complet."
+  },
+  "focus_initial_position_target_missing": {
+    "what": "La position initiale de {tree} pointe vers la priorité {id}, absente de cet arbre",
+    "impact": "La vue initiale de l’arbre est décalée et s’ouvre sur une zone vide.",
+    "action": "Rechoisir la priorité initiale",
+    "jump": "Arbre de priorités › Disposition"
+  },
+  "focus_raw_file_parse_failed": {
+    "what": "Le fichier de priorités {path} contient une erreur de syntaxe et ne peut pas être lu",
+    "impact": "<b>Toutes les priorités de ce fichier manqueront.</b>",
+    "action": "Corriger la syntaxe (aller à l’erreur)",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "focus_registry_unavailable": {
+    "what": "Le registre des priorités vanilla n’a pas pu être chargé, la vérification des fichiers est restée incomplète",
+    "impact": "L’interface affichera « vérification incomplète », cet export a suivi la voie conservatrice ; signalé automatiquement."
+  },
+  "timeline_bookmark_path_shadow_date_mismatch": {
+    "what": "Deux fichiers de signets écrivent au même chemin avec des dates différentes, un seul prend effet",
+    "impact": "<b>La date de début peut différer de votre réglage.</b>",
+    "action": "Examiner les deux signets",
+    "jump": "Atelier des signets"
+  },
+  "timeline_custom_start_without_bookmark": {
+    "what": "Une date de début personnalisée est définie, mais sans signet correspondant",
+    "impact": "<b>Les joueurs ne verront pas ce départ sur l’écran de sélection de campagne.</b>",
+    "action": "Créer un signet",
+    "jump": "Atelier des signets › Nouveau"
+  },
+  "timeline_project_earliest_bookmark_mismatch": {
+    "what": "La date de début du projet ({a}) diffère de celle du signet le plus ancien ({b})",
+    "impact": "Le jeu commencera à la date du signet.",
+    "action": "Aligner les dates",
+    "jump": "Paramètres du projet › Date de début"
+  },
+  "timeline_project_start_date_unknown": {
+    "what": "Le projet n’a pas de date de début",
+    "impact": "L’export utilisera la date par défaut.",
+    "action": "Définir la date de début",
+    "jump": "Paramètres du projet"
+  },
+  "timeline_raw_bookmark_date_unknown": {
+    "what": "Aucune date n’a pu être extraite du fichier de signet",
+    "impact": "Le signet est exporté tel quel et ne participe pas à la vérification de cohérence des dates."
+  },
+  "timeline_raw_bookmark_hash_mismatch": {
+    "what": "Le fichier de signet a été modifié hors du programme et diverge de l’enregistrement",
+    "impact": "Le résultat de la vérification peut ne pas refléter le contenu réel du fichier.",
+    "action": "Actualiser l’enregistrement",
+    "jump": "Fichiers bruts › Relire"
+  },
+  "timeline_raw_defines_start_date_conflict": {
+    "what": "La date de début du fichier defines ({a}) entre en conflit avec le réglage du projet ({b})",
+    "impact": "Le jeu démarre à la date du signet, mais la durée, la tension mondiale et les mécaniques similaires partent de la date de defines — <b>en cas d’écart, tout se désaligne</b>.",
+    "action": "Aligner les dates",
+    "jump": "Paramètres du projet › Date de début"
+  },
+  "timeline_start_date_ok": {
+    "what": "Vérification de la date de début réussie",
+    "impact": "La partie démarre à la date de début de ce projet."
+  },
+  "timeline_structured_bookmark_date_unknown": {
+    "what": "Aucune date n’a pu être extraite du signet",
+    "impact": "Le signet ne participe pas à la vérification de cohérence des dates."
+  },
+  "clausewitz_parse_error": {
+    "what": "{file} contient une erreur de syntaxe et ne peut pas être lu",
+    "impact": "<b>Le fichier entier sera exclu du mod.</b>",
+    "action": "Aller à l’erreur",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "clausewitz_unclosed_block": {
+    "what": "{file}, ligne {line} : { non fermée",
+    "impact": "<b>Tout le contenu après cette ligne sera perdu.</b>",
+    "action": "Aller à la ligne",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "clausewitz_stray_closing_brace": {
+    "what": "{file}, ligne {line} : } en trop, sans { correspondante",
+    "impact": "Le contenu suivant peut se retrouver dans le mauvais bloc.",
+    "action": "Aller à la ligne",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "clausewitz_unterminated_quote": {
+    "what": "{file}, ligne {line} : guillemet non fermé",
+    "impact": "La ligne et tout ce qui suit sont lus comme une seule chaîne.",
+    "action": "Aller à la ligne",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "raw_content_literal_escape_newline": {
+    "what": "{file} line {line}: literal \\n (backslash + n) in script text",
+    "impact": "HOI4 script does not interpret escapes — players will see the two characters \\n verbatim.",
+    "action": "Use a real line break, or move the text into a localisation yml value where \\n is a newline",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_missing_assignment_value": {
+    "what": "{file}, ligne {line} : {key} = n’a pas de valeur",
+    "impact": "Ce réglage est sans effet.",
+    "action": "Aller à la ligne",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "clausewitz_analysis_ast_mismatch": {
+    "what": "Auto-contrôle du parseur incohérent, le résultat de ce fichier peut être incomplet",
+    "impact": "L’interface affichera « vérification incomplète » ; signalé automatiquement."
+  },
+  "clausewitz_analysis_token_alignment": {
+    "what": "L’alignement des tokens du parseur a échoué, le résultat de ce fichier peut être incomplet",
+    "impact": "L’interface affichera « vérification incomplète » ; signalé automatiquement."
+  },
+  "country_capital_missing": {
+    "what": "{country} n’a pas de capitale",
+    "impact": "<b>La capitulation, le réseau de ravitaillement et le pouvoir politique s’ancrent tous sur la capitale</b> — sans elle, toutes ces mécaniques déraillent.",
+    "action": "Définir la capitale",
+    "jump": "Fichier d’historique › Capitale"
+  },
+  "country_capital_invalid_state": {
+    "what": "La valeur de capitale {value} de {country} n’est pas un ID d’État valide",
+    "impact": "Le pays n’a pas de capitale utilisable ; mêmes conséquences que ci-dessus.",
+    "action": "Rechoisir l’État",
+    "jump": "Fichier d’historique › Capitale"
+  },
+  "country_capital_not_owned": {
+    "what": "La capitale {state} de {country} appartient à {owner}",
+    "impact": "Le jeu rejette ce réglage de capitale et journalise une erreur — <b>la capitale effective est choisie par le moteur en repli</b>.",
+    "action": "Changer la capitale ou la possession",
+    "jump": "Fichier d’historique / États"
+  },
+  "map_state_no_land": {
+    "what": "L’État {name} (#{state_id}) n’est qu’un lac, sans terre",
+    "impact": "Le jeu ne peut placer ni la base aérienne, ni le site de lancement, ni la forteresse de cet État et <b>plante au début de la partie</b> ; error.log reste vide lors d’un lancement normal.",
+    "action": "Ouvrez le studio de carte et cliquez sur Réparer, ou demandez à l’assistant, puis exportez à nouveau",
+    "jump": "Studio de carte"
+  },
+  "country_history_final_winner_ambiguous": {
+    "what": "{country} a des fichiers d’historique de plusieurs sources, impossible de déterminer lequel fait foi",
+    "impact": "<b>La mise en place de départ effective peut ne pas être votre dernière édition.</b>",
+    "action": "Choisir la source qui fait foi",
+    "jump": "Fichier d’historique › Sources"
+  },
+  "country_history_final_winner_inferred": {
+    "what": "{country} a des fichiers d’historique de plusieurs sources, {path} a été retenu selon l’ordre de chargement",
+    "impact": "Généralement la bonne version."
+  },
+  "country_research_slots_missing": {
+    "what": "{id} n’a pas de nombre d’emplacements de recherche défini",
+    "impact": "Le jeu utilisera la valeur par défaut.",
+    "action": "Définir les emplacements de recherche",
+    "jump": "Fichier d’historique"
+  },
+  "country_research_slots_invalid": {
+    "what": "Le nombre d’emplacements de recherche {value} de {country} est invalide",
+    "impact": "La ligne est sans effet, les emplacements retombent à la valeur par défaut.",
+    "action": "Saisir un nombre valide",
+    "jump": "Fichier d’historique"
+  },
+  "playtest_crash": {
+    "what": "Le jeu a planté pendant le test (type : {exception})",
+    "impact": "Le rapport contient le type de plantage et la version du jeu ; cela suffit généralement à cibler le contenu en cause.",
+    "action": "Voir l’analyse du plantage",
+    "jump": "Diagnostic du mod › Rapport de playtest"
+  },
+  "playtest_start_date_mismatch": {
+    "what": "La date de début réellement chargée par le jeu ({a}) diffère de celle prévue ({b})",
+    "impact": "<b>Les joueurs entrent dans la mauvaise époque</b> — le contenu historique conçu pour {b} peut se déclencher complètement dans le désordre. Cause fréquente : il manque replace_path=\"common/bookmarks\" au fichier .mod externe.",
+    "action": "Voir le correctif suggéré",
+    "jump": "Diagnostic du mod › Rapport de playtest"
+  },
+  "playtest_runtime_diagnostics_input_invalid": {
+    "what": "Le journal du test est illisible",
+    "impact": "Ce diagnostic de test reste sans résultat.",
+    "action": "Téléverser le journal à nouveau",
+    "jump": "Diagnostic du mod › Rapport de playtest"
+  },
+  "playtest_loaded_start_date": {
+    "what": "Date de début chargée par le jeu confirmée : {date}",
+    "impact": "Information ; comptée en ✅ quand elle correspond au design."
+  },
+  "playtest_enabled_mods": {
+    "what": "Liste des mods actifs pendant le test confirmée",
+    "impact": "Information ; sert à écarter les conflits de mods."
+  },
+  "playtest_start_date_ok": {
+    "what": "La date de début correspond au design",
+    "impact": "Vérification réussie."
+  },
+  "oob_air_location_missing": {
+    "what": "L’escadre aérienne {name} n’a pas d’État défini",
+    "impact": "<b>L’escadre n’apparaîtra pas au début de la partie.</b>",
+    "action": "Définir l’État (base aérienne requise)",
+    "jump": "Armée initiale › Armée de l’air"
+  },
+  "oob_air_location_invalid": {
+    "what": "L’État {id} de l’escadre aérienne {name} est invalide",
+    "impact": "L’escadre n’apparaîtra pas au début ; les escadres doivent être basées dans un État doté d’une base aérienne.",
+    "action": "Rechoisir l’État",
+    "jump": "Armée initiale › Armée de l’air"
+  },
+  "oob_air_equipment_type_missing": {
+    "what": "L’escadre aérienne {name} n’a pas de type d’équipement",
+    "impact": "<b>L’escadre n’apparaîtra pas au début de la partie.</b>",
+    "action": "Choisir un type d’équipement",
+    "jump": "Armée initiale › Armée de l’air"
+  },
+  "oob_air_equipment_type_invalid": {
+    "what": "Le type d’équipement {value} de l’escadre aérienne {name} n’existe pas",
+    "impact": "L’escadre n’apparaîtra pas au début de la partie.",
+    "action": "Rechoisir l’équipement",
+    "jump": "Armée initiale › Armée de l’air"
+  },
+  "building_state_coordinate_mismatch": {
+    "what": "Le bâtiment {id} est déclaré dans l’État {a}, mais ses coordonnées tombent dans l’État {b}",
+    "impact": "<b>Le jeu ignore le bâtiment, il n’apparaît pas</b> ; l’erreur est journalisée.",
+    "action": "Corriger les coordonnées ou l’État",
+    "jump": "États › Bâtiments"
+  },
+  "building_coordinate_membership_missing": {
+    "what": "Les coordonnées du bâtiment {id} tombent dans la province {province}, qui n’appartient à aucun État",
+    "impact": "Produit une erreur de carte et <b>le bâtiment est ignoré</b>.",
+    "action": "Rattacher la province à un État",
+    "jump": "États › Rattachement à un État"
+  },
+  "building_reference_province_invalid": {
+    "what": "Le bâtiment {id} requiert une province de référence {kind} valide, valeur actuelle : {value}",
+    "impact": "Les bases navales doivent pointer vers une province maritime adjacente ; <b>si elle est invalide, le port est inutilisable</b>.",
+    "action": "Rechoisir la province de référence",
+    "jump": "États › Bâtiments"
+  },
+  "duplicate_expected_province": {
+    "what": "Auto-contrôle des données de référence du programme en échec (liste de provinces dupliquée)",
+    "impact": "L’interface affichera « vérification incomplète » ; signalé automatiquement."
+  },
+  "duplicate_province_within_state": {
+    "what": "L’État {id} liste la province {province} en double ({count} fois)",
+    "impact": "Les doublons sont ignorés, c’est généralement sans danger, mais cela révèle un problème dans la source de données.",
+    "action": "Dédoublonner",
+    "jump": "États › État"
+  },
+  "duplicate_state_input": {
+    "what": "L’État {id} apparaît dans {count} entrées",
+    "impact": "<b>Une seule prend effet ; vos éditions peuvent être écrasées par l’autre.</b>",
+    "action": "Examiner les sources en conflit",
+    "jump": "États › État › Sources"
+  },
+  "province_in_multiple_states": {
+    "what": "La province {province} appartient à la fois à l’État {a} et à l’État {b}",
+    "impact": "<b>Le jeu plante.</b>",
+    "action": "La retirer de l’un des deux",
+    "jump": "États › État"
+  },
+  "province_without_state": {
+    "what": "La province {province} n’appartient à aucun État",
+    "impact": "Le jeu tourne, mais <b>affiche un avertissement MAP_ERROR en jeu</b>.",
+    "action": "Attribuer un État",
+    "jump": "États › État"
+  },
+  "unknown_province": {
+    "what": "L’État {state} référence la province inexistante {province}",
+    "impact": "La référence est rejetée comme token invalide et l’erreur journalisée ; le reste de l’État se charge normalement.",
+    "action": "Supprimer ou corriger",
+    "jump": "États › État"
+  },
+  "bookmark_raw_no_bookmark": {
+    "what": "Aucun signet n’a pu être extrait du fichier de signets {path}",
+    "impact": "<b>Ce départ n’apparaîtra pas sur l’écran de sélection de campagne.</b>",
+    "action": "Vérifier la structure du fichier",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "bookmark_raw_path_case_collision": {
+    "what": "Deux fichiers de signets ne diffèrent que par la casse ({a} / {b})",
+    "impact": "Sous Windows un seul prend effet, sous Linux les deux — <b>comportement incohérent entre plateformes</b>.",
+    "action": "Renommer l’un des deux",
+    "jump": "Liste des fichiers bruts"
+  },
+  "descriptor_imported_replace_paths_require_full_export": {
+    "what": "Ce mod contient des règles replace_path au niveau répertoire, alors que « exporter uniquement le contenu créé » est sélectionné",
+    "impact": "<b>Le jeu déchargera des répertoires vanilla entiers sans fichiers de remplacement — de larges pans de contenu manqueront.</b>",
+    "action": "Passer à l’export complet",
+    "jump": "Page d’export › Mode d’export"
+  },
+  "descriptor_replace_path_empty": {
+    "what": "replace_path « {path} » décharge un répertoire vanilla, mais le paquet exporté ne contient aucun fichier dans ce répertoire",
+    "impact": "<b>Tout le contenu de ce répertoire manquera en jeu.</b>",
+    "action": "Ajouter des fichiers ou retirer la règle",
+    "jump": "Page d’export › replace_path"
+  },
+  "ideology_root_invalid": {
+    "what": "L’idéologie ROOT personnalisée « {id} » est invalide : {reason}",
+    "impact": "Écrit un common/ideologies corrompu — <b>le réglage de parti au pouvoir de tous les pays qui y font référence casse</b>.",
+    "action": "Réparer le registre des idéologies",
+    "jump": "Atelier des idéologies"
+  },
+  "ideology_root_submod_blocked": {
+    "what": "Remplacement de l’idéologie ROOT dans un sous-mod",
+    "impact": "<b>Cela effacerait les définitions d’idéologies du mod de base.</b>",
+    "action": "Utiliser le ROOT du mod de base, ou rendre le mod autonome",
+    "jump": "Paramètres du projet › Dépendances"
+  },
+  "raid_path_unsafe": {
+    "what": "Le fichier de raids {path} a été ignoré pour chemin non sûr",
+    "impact": "<b>Son contenu n’a pas été importé dans le projet.</b>",
+    "action": "Voir les fichiers ignorés",
+    "jump": "Rapport d’import"
+  },
+  "raid_deps_not_carried": {
+    "what": "Les fichiers dont dépendent les raids n’ont pas été importés avec eux",
+    "impact": "Les raids peuvent être indisponibles en jeu.",
+    "action": "Ajouter les fichiers de dépendance",
+    "jump": "Import › Dépendances"
+  },
+  "unit_path_unsafe": {
+    "what": "Le fichier de sous-unités {path} a été ignoré pour chemin non sûr",
+    "impact": "<b>Son contenu n’a pas été importé dans le projet.</b>",
+    "action": "Voir les fichiers ignorés",
+    "jump": "Rapport d’import"
+  },
+  "factions_path_unsafe": {
+    "what": "Le fichier de factions {path} a été ignoré pour chemin non sûr",
+    "impact": "<b>Son contenu n’a pas été importé dans le projet.</b>",
+    "action": "Voir les fichiers ignorés",
+    "jump": "Rapport d’import"
+  },
+  "loc_entry_unpreserved": {
+    "what": "{count} entrées de localisation n’ont pas été conservées à l’import",
+    "impact": "Ces textes ne seront pas inclus dans l’export.",
+    "action": "Voir la liste des non conservées",
+    "jump": "Rapport d’import"
+  },
+  "state_raw_parse_failed": {
+    "what": "Le fichier d’États {path} contient une erreur de syntaxe",
+    "impact": "<b>Tous les États de ce fichier manqueront.</b>",
+    "action": "Aller à l’erreur",
+    "jump": "Éditeur de fichiers bruts"
+  },
+  "sub_unit_classification_invalid": {
+    "what": "La classification de la sous-unité « {id} » est invalide : {reason}",
+    "impact": "<b>Le jeu émet une erreur au chargement de la sous-unité.</b>",
+    "action": "Utiliser un type pris en charge",
+    "jump": "Atelier des sous-unités"
+  },
+  "sub_unit_source_file_collision": {
+    "what": "La sous-unité « {id} » serait écrite dans « {path} », écrasant un fichier de définitions existant",
+    "impact": "<b>Les autres sous-unités du fichier d’origine manqueront.</b>",
+    "action": "Laisser le programme attribuer le nom de fichier",
+    "jump": "Atelier des sous-unités"
+  },
+  "base_id_collision_rerouted": {
+    "what": "Un nouvel ID entrait en collision avec le mod de base et a été renommé automatiquement : {oldId} → {newId}",
+    "impact": "Sans incidence sur le jeu, le contenu du mod de base est intact. <b>Utilisez le nouvel ID dans les références ultérieures.</b>"
+  },
+  "non_additive_base_history_override": {
+    "what": "Réécriture directe du fichier d’historique du pays {tag} du mod de base bloquée",
+    "impact": "<b>Une réécriture directe écraserait la mise en place du mod d’origine et peut provoquer des conflits, voire un CTD</b> ; une alternative additive a été proposée.",
+    "action": "Voir l’alternative",
+    "jump": "Conversation IA"
+  },
+  "gateway_tool_passthrough_failed_sdk_emit": {
+    "what": "Erreur de routage de la passerelle IA, cet appel d’outil n’a pas été exécuté",
+    "impact": "Cette étape IA est restée sans effet.",
+    "action": "Réessayer ou changer de modèle",
+    "jump": "Conversation IA"
+  },
+  "content_language_export_languages_missing": {
+    "what": "Du contenu existe en {language}, mais cette langue n’est pas activée pour l’export",
+    "impact": "<b>Ce contenu ne sera pas empaqueté ; le jeu affichera des clés de localisation.</b>",
+    "action": "Activer la langue",
+    "jump": "Paramètres du projet › Langues du contenu du mod"
+  },
+  "display_name_placeholder": {
+    "what": "{count} éléments de type {kind} sans nom ({samples})",
+    "impact": "En jeu, ils s’affichent sous leur ID.",
+    "action": "Compléter les noms en masse",
+    "jump": "Atelier correspondant"
+  },
+  "effect_typo": {
+    "what": "« {token} » ressemble à une coquille, remplacement suggéré : « {suggestion} »",
+    "impact": "<b>La ligne est sans effet</b>, sans aucun indice en jeu ; le diagnostic passe par error.log.",
+    "action": "Corriger",
+    "jump": "Emplacement d’édition du script"
+  },
+  "preserved_raw": {
+    "what": "Fichiers bruts conservés tels quels",
+    "impact": "Vérification réussie, comptée dans le total ✅."
+  },
+  "research_bonus_as_effect": {
+    "what": "research_bonus est écrit en position d’effet",
+    "impact": "<b>Sans effet</b> ; il doit figurer en position de modificateur.",
+    "action": "Corriger la syntaxe",
+    "jump": "Emplacement d’édition du script"
+  },
+  "script_position_swap_ideas_child_outside_parent": {
+    "what": "Un élément enfant de swap_ideas se trouve hors de son bloc parent",
+    "impact": "<b>Le remplacement est sans effet.</b>",
+    "action": "Le déplacer dans le bloc parent",
+    "jump": "Emplacement d’édition du script"
+  },
+  "unknown_tech_category": {
+    "what": "La catégorie de technologie « {name} » n’existe pas",
+    "impact": "<b>La technologie n’apparaîtra dans aucun onglet de l’arbre technologique</b> et ne pourra pas être recherchée.",
+    "action": "Choisir une catégorie existante",
+    "jump": "Atelier des technologies"
+  },
+  "vanilla_seed_dlc_effects_absent": {
+    "what": "Les projets démarrés depuis vanilla ne contiennent pas le contenu supplémentaire que le script vanilla conserve pour ces États ({count} États concernés)",
+    "impact": "Les bâtiments au niveau des provinces enregistrés dans ce script disparaissent — bases navales, bunkers, barrages et monuments — ainsi que les blocs d'historique datés, les transferts de propriété conditionnés par un DLC, les valeurs de résistance et de docilité, et quelques entrées que nous ne lisons pas par leur nom. Exporter ces États écrase les fichiers correspondants du jeu. La page des États permet de restaurer ce contenu depuis vanilla."
+  },
+  "ideology_undefined_standalone": {
+    "what": "Le personnage {id} utilise une idéologie qui n’est pas définie dans ce projet",
+    "impact": "<b>La définition de cette idéologie ne sera pas écrite dans le mod exporté.</b> En jeu, les personnages qui l’utilisent deviennent un dirigeant sans parti politique.",
+    "action": "Définir l’idéologie",
+    "jump": "Atelier des idéologies › Nouvelle entrée"
+  },
+  "ideology_registry_parent_missing": {
+    "what": "L’idéologie {id} n’a pas d’idéologie parente",
+    "impact": "<b>La définition de cette idéologie ne sera pas écrite dans le mod exporté.</b> En jeu, les personnages qui l’utilisent deviennent un dirigeant sans parti politique.",
+    "action": "Choisir une idéologie parente",
+    "jump": "Atelier des idéologies › Cette idéologie › Idéologie parente"
+  },
+  "focus_layout_same_cell": {
+    "what": "Les priorités {focus_ids} occupent la même case ({position})",
+    "impact": "<b>Deux priorités se superposent ; le jeu n’en affiche qu’une.</b>",
+    "action": "Déplacer l’une des deux",
+    "jump": "Arbre de priorités › Disposition"
+  },
+  "focus_layout_adjacent_same_row": {
+    "what": "Deux priorités sont côte à côte sur la même ligne, à une colonne d’écart",
+    "impact": "Les icônes des priorités se chevauchent et deviennent difficiles à lire et à cliquer. Rien n’est perdu.",
+    "action": "Augmenter l’écart horizontal",
+    "jump": "Arbre de priorités › Disposition"
+  },
+  "focus_display_name_unproven_fallback": {
+    "what": "La priorité {focus_id} n’a pas de nom en {locale} dans ce projet",
+    "impact": "<b>Le nom de la priorité peut ne pas être localisé en jeu.</b>",
+    "action": "Compléter le nom",
+    "jump": "Atelier des priorités › Cette priorité › Nom"
+  },
+  "idea_no_modifier": {
+    "what": "L’Esprit national {idea_id} n’a aucun modificateur",
+    "impact": "Il apparaît sur le pays mais n’accorde aucun bonus ni malus.",
+    "action": "Ajouter un modificateur",
+    "jump": "Atelier des esprits nationaux › Cet esprit national › Modificateurs"
+  },
+  "character_no_military_traits": {
+    "what": "Le commandant {tag} n’a aucun trait militaire",
+    "impact": "Le personnage peut être nommé mais n’apporte aucun bonus.",
+    "action": "Ajouter un trait militaire",
+    "jump": "Atelier des personnages › Ce personnage › Traits"
+  },
+  "bookmark_selectable_ideology_missing": {
+    "what": "Le pays sélectionnable {country_tag} du signet n’a pas d’idéologie",
+    "impact": "Sur l’écran de sélection des pays, le dirigeant, l’icône du parti et le nom du pays peuvent s’afficher incorrectement.",
+    "action": "Définir une idéologie",
+    "jump": "Atelier des signets › Ce pays › Idéologie"
+  },
+  "focus_tree_no_nodes": {
+    "what": "L’arbre de priorités {tree_id} ne contient aucune priorité",
+    "impact": "L’arbre est vide ; l’écran des priorités n’affiche rien.",
+    "action": "Ajouter une priorité",
+    "jump": "Arbres de priorités › Cet arbre"
+  },
+  "localisation_reference_not_in_project": {
+    "what": "{id} référence la clé de localisation {loc_key}, absente de ce projet",
+    "impact": "Le texte s’affiche sous la forme de la clé elle-même.",
+    "action": "Ajouter le texte",
+    "jump": "Localisation › Nouvelle entrée"
+  },
+  "mod_folder_name": {
+    "what": "Le nom de dossier du mod {folder} contient des caractères que HOI4 n’accepte pas",
+    "impact": "Le dossier exporté est renommé ; le nom affiché dans le lanceur ne change pas.",
+    "action": "Utiliser des lettres, des chiffres et des tirets bas",
+    "jump": "Paramètres d’export › Nom du dossier"
+  },
+  "province_double_mapping": {
+    "what": "La province {province_id} appartient en même temps aux États {state_ids}",
+    "impact": "<b>Le jeu plante au chargement.</b>",
+    "action": "Retirer la province de l’un des États",
+    "jump": "États › Cet État › Provinces"
+  },
+  "doctrine_track_unresolved": {
+    "what": "La doctrine {id} pointe vers une branche absente du projet comme du mod de base",
+    "impact": "Si le mod de base a supprimé cette branche, l’arbre de doctrines peut s’afficher incorrectement.",
+    "action": "La faire pointer vers une branche existante",
+    "jump": "Atelier des doctrines › Cette doctrine › Branche"
+  },
+  "event_namespace_mismatch": {
+    "what": "Le préfixe de l’ID de l’événement ne correspond pas à son espace de noms",
+    "impact": "Les appelants peuvent ne pas le trouver et l’événement ne se déclenche jamais.",
+    "action": "Aligner le préfixe sur l’espace de noms",
+    "jump": "Atelier des événements › Cet événement › ID"
+  },
+  "event_no_options": {
+    "what": "L’événement {event_id} n’a aucune option",
+    "impact": "L’événement s’affiche sans aucun bouton à cliquer.",
+    "action": "Ajouter une option",
+    "jump": "Atelier des événements › Cet événement › Options"
+  },
+  "tech_circular_prereq": {
+    "what": "La technologie {tech_id} et une autre technologie sont mutuellement prérequises",
+    "impact": "Non mesuré ; l’effet en jeu est inconnu.",
+    "action": "Supprimer l’un des prérequis",
+    "jump": "Atelier des technologies › Cette technologie › Prérequis"
+  },
+  "tech_folder_unknown": {
+    "what": "La technologie {id} utilise un dossier de recherche que le jeu ne connaît pas",
+    "impact": "Non mesuré ; l’effet en jeu est inconnu.",
+    "action": "Utiliser un dossier de recherche connu",
+    "jump": "Atelier des technologies › Cette technologie › Dossier de recherche"
+  },
+  "focus_effective_default_multiple": {
+    "what": "Plusieurs arbres de priorités sont marqués par défaut en même temps ({default_tree_ids})",
+    "impact": "Non mesuré ; l’effet en jeu est inconnu.",
+    "action": "Ne garder qu’un seul arbre par défaut",
+    "jump": "Arbres de priorités › Marqueur par défaut"
+  },
+  "focus_created_primary_id_collision": {
+    "what": "L’arbre de priorités {tree_id} écrit dans {canonical_path}, qui contient déjà d’autres contenus",
+    "impact": "Non mesuré ; l’effet en jeu est inconnu.",
+    "action": "Choisir un ID sans conflit",
+    "jump": "Atelier des priorités › Cette priorité › ID"
+  },
+  "focus_shared_pool_scope_ignored": {
+    "what": "La portée de partage définie sur l’arbre de priorités {tree_id} n’a aucun effet à l’export",
+    "impact": "Non mesuré ; l’effet en jeu est inconnu.",
+    "action": "",
+    "jump": "Arbres de priorités › Cet arbre › Portée de partage"
+  },
+  "impassable_category_mismatch": {
+    "what": "{count} États infranchissables utilisent une catégorie que le jeu de base n'associe jamais à infranchissable",
+    "impact": "Infranchissable empêche l'entrée des troupes et la construction de bâtiments de province, et l'État apparaît comme terrain infranchissable en jeu. Le jeu de base ne l'associe qu'à wasteland ou enclave : une autre catégorie signifie souvent que la case a été cochée par erreur. Rien n'est bloqué et aucune donnée n'est modifiée — à vérifier avant publication."
+  },
+  "impassable_without_force_link": {
+    "what": "{count} états infranchissables n'indiquent pas quel état voisin les possède",
+    "impact": "Une terre infranchissable n'a pas de propriétaire propre : il lui faut un état voisin dont elle hérite la possession. Le jeu de base définit force_link_ownership_to sur ses 21 états infranchissables (mesuré sur 1.19.2 — ce champ ne figure pas dans le wiki). Rien n'est bloqué et aucune donnée n'est modifiée — seuls les états nouvellement enregistrés doivent le renseigner.",
+    "action": "Ouvre chaque état et choisis l'état voisin qui devrait le posséder",
+    "jump": "États › cet état › La possession suit"
+  },
+  "bookmark_filter_registry_missing": {
+    "what": "Les filtres du scénario n’ont pas pu être vérifiés",
+    "impact": "Aucune version du jeu prise en charge n’est définie pour ce projet. La compatibilité des filtres reste à vérifier.",
+    "action": "Voir les paramètres du scénario",
+    "jump": "Scénarios › Paramètres de campagne"
+  },
+  "bookmark_default_multiple": {
+    "what": "{default_count} scénarios sont définis par défaut",
+    "impact": "Le scénario à sélectionner au démarrage n’est pas clairement défini.",
+    "action": "Choisir le scénario par défaut",
+    "jump": "Scénarios › Scénario par défaut"
+  },
+  "bookmark_default_country_not_interesting": {
+    "what": "Le pays par défaut {default_country} ne figure pas parmi les pays sélectionnables de ce scénario",
+    "impact": "Le jeu risque de ne pas présélectionner le pays souhaité.",
+    "action": "Voir les pays sélectionnables",
+    "jump": "Scénarios › Pays sélectionnables"
+  },
+  "bookmark_country_label_invalid": {
+    "what": "Un pays du scénario utilise une étiquette de filtre non prise en charge",
+    "impact": "Ce pays risque de ne pas apparaître avec le filtre prévu.",
+    "action": "Vérifier les étiquettes des pays",
+    "jump": "Scénarios › Pays sélectionnables › Étiquettes"
+  },
+  "bookmark_country_labels_filter_missing": {
+    "what": "Les pays ont des étiquettes, mais le filtre par étiquette n’est pas activé",
+    "impact": "Les joueurs ne peuvent pas filtrer la liste des pays avec ces étiquettes.",
+    "action": "Voir les filtres du scénario",
+    "jump": "Scénarios › Filtres"
+  },
+  "bookmark_filter_invalid_for_target": {
+    "what": "Un filtre du scénario n’est pas pris en charge par la version cible du jeu",
+    "impact": "Ce filtre risque de ne pas fonctionner comme prévu en jeu.",
+    "action": "Voir les filtres du scénario",
+    "jump": "Scénarios › Filtres"
+  },
+  "bookmark_filter_country_label_semantics": {
+    "what": "Des étiquettes de pays sont utilisées comme filtres de scénario",
+    "impact": "Les boutons de filtre risquent de ne pas afficher les pays souhaités.",
+    "action": "Vérifier les filtres et étiquettes",
+    "jump": "Scénarios › Filtres et étiquettes des pays"
+  },
+  "focus_layout_missing_focus_id": {
+    "what": "Un focus n’a pas d’identifiant de script",
+    "impact": "Le jeu ne peut pas identifier ce focus ni le référencer de façon fiable.",
+    "action": "Vérifier les identifiants des focus",
+    "jump": "Arbre de focus › Détails du focus"
+  },
+  "focus_layout_duplicate_focus_id": {
+    "what": "Plusieurs focus utilisent l’identifiant {focus_id}",
+    "impact": "Les références à cet identifiant risquent de viser le mauvais focus.",
+    "action": "Vérifier les identifiants en double",
+    "jump": "Arbre de focus › Détails du focus"
+  },
+  "focus_layout_relative_cycle": {
+    "what": "Les références de position des focus forment une boucle : {cycle}",
+    "impact": "Le jeu ne peut pas résoudre toutes les positions relatives de cette boucle.",
+    "action": "Vérifier les références de position",
+    "jump": "Arbre de focus › Position"
+  },
+  "focus_layout_missing_anchor": {
+    "what": "Le focus {focus_id} utilise l’ancrage de position introuvable {relative_position_id}",
+    "impact": "Sa position relative ne peut pas être résolue dans cette sortie.",
+    "action": "Vérifier l’ancrage de position",
+    "jump": "Arbre de focus › Position"
+  },
+  "focus_layout_replacement_global_shift": {
+    "what": "L’arbre de focus de remplacement a été déplacé dans son ensemble",
+    "impact": "Son alignement avec les autres branches peut avoir changé.",
+    "action": "Vérifier la disposition de l’arbre",
+    "jump": "Arbre de focus › Disposition"
+  },
+  "focus_layout_unknown_mode": {
+    "what": "La vérification de la disposition des focus n’a pas pu aboutir",
+    "impact": "Le programme n’a pas pu interpréter le mode de disposition de cet arbre. Sa disposition reste à vérifier.",
+    "action": "Voir l’arbre de focus",
+    "jump": "Arbre de focus › Disposition"
+  },
+  "timeline_base_timeline_source_unregistered": {
+    "what": "Les dates de campagne du mod de base n’ont pas été vérifiées",
+    "impact": "Les dates choisies peuvent différer de la chronologie du mod de base.",
+    "action": "Vérifier les dates de campagne",
+    "jump": "Scénarios › Paramètres de campagne"
+  }
+}

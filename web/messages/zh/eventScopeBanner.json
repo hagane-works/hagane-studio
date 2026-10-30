@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount} 个 {tag} 事件",
+  "sharedSuffix": " · +{sharedCount} 个共享 / 全局广播",
+  "filteredNote": "导入时已过滤原版 DLC 与各国专属文件，只保留 {tag} 自己的事件。",
+  "vanillaCta": "打开 VANILLA EVENTS 查原版",
+  "hiddenHint": "已隐藏 {hiddenCount} 个共享/全局事件 · 点击右侧的 <emph>All</emph> 即可显示。",
+  "dismiss": "关闭",
+  "dontShowAgain": "不再显示"
+}

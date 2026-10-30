@@ -1,0 +1,7 @@
+{
+  "costTextTooltip": "custom_cost_text · 替代 PP 显示",
+  "selectableMissionTooltip": "selectable_mission · 用户主动激活的任务",
+  "ppCost": "{amount} PP",
+  "ppRefund": "+{amount} PP 返还",
+  "approximateLabel": "游戏内预览 · 近似"
+}

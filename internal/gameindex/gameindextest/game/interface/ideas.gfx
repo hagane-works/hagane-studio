@@ -1,0 +1,10 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+spriteTypes = {
+	spriteType = { name = "GFX_idea_generic_fascism_drift_2" texturefile = "gfx/interface/ideas/test_fascism.dds" }
+	spriteType = { name = "GFX_idea_war_economy" texturefile = "gfx/interface/ideas/test_war.dds" }
+	spriteType = { name = "GFX_idea_civilian_economy" texturefile = "gfx/interface/ideas/test_civilian.dds" }
+	spriteType = { name = "GFX_idea_generic_political_advisor_europe_1" texturefile = "gfx/interface/ideas/test_advisor.dds" }
+	spriteType = { name = "GFX_idea_tot_economic_mobilisation" texturefile = "gfx/interface/ideas/test_mob.dds" }
+	spriteType = { name = "GFX_idea_new_economic_policy" texturefile = "gfx/interface/ideas/test_nep.dds" }
+	spriteType = { name = "GFX_idea_generic_agrarian_society" texturefile = "gfx/interface/ideas/test_agrarian.dds" }
+}

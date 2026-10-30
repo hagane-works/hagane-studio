@@ -1,0 +1,13 @@
+{
+  "promote": "Ascender personaje",
+  "recruit": "Reclutar personaje",
+  "retire": "Retirar personaje",
+  "searchPlaceholder": "Buscar por nombre o ID…",
+  "searchingBase": "Buscando en el mod base…",
+  "noResults": "No se encontraron resultados.",
+  "empty": "Aún no hay personajes; escribe para buscar en el mod base.",
+  "projectBadge": "proyecto",
+  "baseBadge": "mod base",
+  "promptManual": "Introduce manualmente el ID del personaje:",
+  "enterManually": "+ Introducir manualmente…"
+}

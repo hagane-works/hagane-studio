@@ -1,0 +1,16 @@
+{
+  "entityDecision": "решение",
+  "entityEvent": "мероприятие",
+  "entityFocus": "фокус",
+  "entityIdea": "Идея",
+  "searchPlaceholder": "Поиск{entity}Идентификатор или имя...",
+  "all": "Все",
+  "searchingBase": "Поиск мода базы...",
+  "projectBadge": "проект",
+  "baseBadge": "базовый мод.",
+  "noResults": "Результаты не найдены.",
+  "emptyProject": "Нет{entity}Включает в этот проект.",
+  "emptyCategory": "Нет{entity}позиции в этой категории.",
+  "promptManual": "Введите{entity}Идентификатор вручную:",
+  "enterManually": "+ Введите вручную..."
+}

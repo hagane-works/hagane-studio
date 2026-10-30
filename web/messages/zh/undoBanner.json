@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "批量 apply",
+  "undonePrefix": "已撤销 ·",
+  "undoFailedPrefix": "撤销失败：",
+  "justCreatedPrefix": "刚创建",
+  "justCreatedSuffix": "项内容 · 不满意可整组撤销",
+  "justUpdatedPrefix": "刚更新",
+  "justUpdatedSuffix": "项国策条件 · 撤销会恢复已保存的旧值",
+  "undoBatchTitle": "撤销这个批次 · 删除刚创建的全部内容",
+  "undoRestoreTitle": "撤销这次更新 · 恢复已保存的旧国策条件",
+  "undoing": "撤销中…",
+  "undo": "撤销",
+  "dismissTitle": "隐藏 banner(不撤销)",
+  "itemsFallback": "{count} 项内容",
+  "cannotUndoTitle": "批量改动 · 无法撤销",
+  "cannotUndoNote": "这批改动之前的内容没有留存，所以撤不回来 —— 点撤销也不会恢复任何东西。请打开对应的工作台看一眼，确认改成了什么。",
+  "nothingUndoneNote": "这次撤销没有改动任何内容：相关内容已经不在项目里了(可能先前已被删除或撤销过)。请到对应的工作台确认一下。",
+  "undoUnavailableTitle": "这一批改动无法撤销"
+}

@@ -1,0 +1,39 @@
+{
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "delete": "Löschen",
+  "create": "Erstellen",
+  "loading": "Wird geladen…",
+  "unnamed": "Unbenannt",
+  "all": "Alle",
+  "clear": "Leeren",
+  "saving": "Wird gespeichert…",
+  "revert": "Zurücksetzen",
+  "search": "Suchen",
+  "discardUnsavedConfirm": "Ungespeicherte Änderungen verwerfen?",
+  "countBadgeTooltip": "{count} von {total} werden angezeigt",
+  "copiedToClipboard": "In die Zwischenablage kopiert",
+  "theme": {
+    "switchToDark": "Zum dunklen Design wechseln",
+    "switchToLight": "Zum hellen Design wechseln"
+  },
+  "language": {
+    "label": "Sprache",
+    "heading": "SPRACHE / LANGUAGE",
+    "publicHeading": "Sprache der Oberfläche",
+    "current": "Aktuelle Sprache: {language}",
+    "description": "Bei der Sprachauswahl wechselt die Oberfläche in diese Sprache. Die Sprachen der Mod-Inhalte werden separat ausgewählt."
+  },
+  "emptyCtaCreate": "+ Neu",
+  "emptyCtaAi": "Von der KI erstellen lassen",
+  "emptyCtaAddCountry": "+ Zuerst ein Land hinzufügen",
+  "vocabulary": {
+    "customOption": "Benutzerdefiniert… (selbst eingeben)",
+    "customChip": "Benutzerdefiniert",
+    "vanillaGroup": "Vanilla",
+    "baseModGroup": "Aus der Basis-Mod"
+  },
+  "chooseFile": "Datei auswählen",
+  "noFileChosen": "Keine Datei ausgewählt",
+  "gameFolderMissing": "Dafür wird das Grundspiel gebraucht: Wähle deinen Hearts-of-Iron-IV-Ordner unter Einstellungen → Hearts-of-Iron-IV-Installation."
+}

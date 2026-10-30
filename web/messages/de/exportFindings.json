@@ -1,0 +1,696 @@
+{
+  "focus_display_name_missing_created": {
+    "what": "Fokus {id} hat keinen Namen",
+    "impact": "Im Spiel erscheint der Fokus als ID, der Tooltip bleibt leer.",
+    "action": "Namen festlegen",
+    "jump": "Fokus-Arbeitsbereich › Dieser Fokus › Name"
+  },
+  "focus_display_name_missing_enabled_locale": {
+    "what": "Fokus {id} hat keinen Namen in {locale}",
+    "impact": "Spieler mit dieser Sprache sehen die ID.",
+    "action": "Diese Sprache ergänzen",
+    "jump": "Fokus › Name › Sprachreiter"
+  },
+  "focus_initial_position_unknown_kind": {
+    "what": "Der Typ der Startposition von {tree} wird nicht erkannt",
+    "impact": "Der Fokusbaum kann als Ganzes verschoben sein oder sich selbst überlappen.",
+    "action": "Startposition neu setzen",
+    "jump": "Fokusbaum › Layout"
+  },
+  "focus_reward_modifier_in_effect_position": {
+    "what": "In der Abschlussbelohnung von Fokus {id} ist {token} ein Modifikator, steht aber an einer Effekt-Position",
+    "impact": "Das Spiel ignoriert die Zeile beim Laden — <b>sie hat keine Wirkung</b>.",
+    "action": "In einen Modifikator-Träger verschieben",
+    "jump": "Fokus › Abschlussbelohnung"
+  },
+  "focus_reward_scalar_effect_block_value": {
+    "what": "{token} in Fokus {id} erwartet eine Zahl, erhielt aber einen Codeblock (oder umgekehrt)",
+    "impact": "Die Zeile hat keine Wirkung.",
+    "action": "Schreibweise korrigieren",
+    "jump": "Fokus › Abschlussbelohnung"
+  },
+  "focus_reward_trigger_in_effect_position": {
+    "what": "Die Abschlussbelohnung von Fokus {id} enthält die Bedingung {token}; diese Position akzeptiert nur Effekte",
+    "impact": "<b>Die Zeile hat keine Wirkung</b>, die Bedingung wird nie geprüft.",
+    "action": "In den Bedingungsblock verschieben",
+    "jump": "Fokus › Abschlussbelohnung"
+  },
+  "focus_reward_unsupported_scope": {
+    "what": "{effect} in Fokus {id} wird im aktuellen Scope ({scope}) nicht unterstützt",
+    "impact": "Der Effekt löst nicht aus. Unterstützte Scopes: {supported}.",
+    "action": "In einen unterstützten Scope einbetten",
+    "jump": "Fokus › Abschlussbelohnung"
+  },
+  "focus_base_default_provider_unresolved": {
+    "what": "Der vom Basis-Mod bereitgestellte Standard-Fokusbaum wurde nicht gefunden",
+    "impact": "Der Fokusbaum hängt sich womöglich nicht an das richtige Land und bleibt im Spiel unsichtbar.",
+    "action": "Basis-Mod-Index aktualisieren",
+    "jump": "Projekteinstellungen › Abhängigkeiten"
+  },
+  "focus_effective_default_missing": {
+    "what": "{country} hat keinen Standard-Fokusbaum",
+    "impact": "Das Land fällt auf den generischen Baum zurück — <b>Spieler sehen Ihren gebauten Baum nie</b>.",
+    "action": "Als Standard festlegen",
+    "jump": "Fokusbaum-Liste"
+  },
+  "focus_file_policy_applied": {
+    "what": "Die Ausgabedateien der Fokusbäume wurden wie vermerkt geschrieben",
+    "impact": "Bestanden, zählt zur ✅-Zählung."
+  },
+  "focus_file_policy_cohort_incomplete": {
+    "what": "{tree} wurde nicht zusammen mit den anderen Fokusbäumen derselben Datei exportiert",
+    "impact": "Die Datei ist nur teilweise geschrieben — <b>die fehlenden Bäume erscheinen im Spiel nicht</b>.",
+    "action": "Gemeinsam zum Export auswählen",
+    "jump": "Exportseite › Inhaltsauswahl"
+  },
+  "focus_file_policy_drift": {
+    "what": "Die Dateizuordnung von {tree_ids} weicht vom Versionsvermerk ab",
+    "impact": "Kein Einfluss auf das Ergebnis, exportiert nach aktueller Zuordnung. Das Feld pflegt das System — keine Änderung nötig."
+  },
+  "focus_file_policy_duplicate_membership": {
+    "what": "Interner Datenkonflikt: ein Baum trägt zwei Dateizuordnungen",
+    "impact": "Die Oberfläche zeigt „Prüfung unvollständig“; automatisch gemeldet."
+  },
+  "focus_file_policy_missing": {
+    "what": "{id} hat keine Ausgabedatei, eine wurde automatisch zugewiesen",
+    "impact": "Kein Einfluss auf das Spiel, der Inhalt ist vollständig."
+  },
+  "focus_initial_position_target_missing": {
+    "what": "Die Startposition von {tree} zeigt auf Fokus {id}, den es in diesem Baum nicht gibt",
+    "impact": "Die Anfangsansicht des Baums ist verschoben, nach dem Öffnen zeigt sich eine leere Fläche.",
+    "action": "Startfokus neu wählen",
+    "jump": "Fokusbaum › Layout"
+  },
+  "focus_raw_file_parse_failed": {
+    "what": "Die Fokusdatei {path} enthält einen Syntaxfehler und ist nicht lesbar",
+    "impact": "<b>Alle Fokusse dieser Datei werden fehlen.</b>",
+    "action": "Syntax korrigieren (zur Fehlerstelle springen)",
+    "jump": "Rohdatei-Editor"
+  },
+  "focus_registry_unavailable": {
+    "what": "Das Vanilla-Fokusregister ließ sich nicht laden, die Dateiprüfung blieb unvollständig",
+    "impact": "Die Oberfläche zeigt „Prüfung unvollständig“, dieser Export nahm den konservativen Weg; automatisch gemeldet."
+  },
+  "timeline_bookmark_path_shadow_date_mismatch": {
+    "what": "Zwei Lesezeichen-Dateien schreiben mit verschiedenen Daten in denselben Pfad, nur eine greift",
+    "impact": "<b>Das Startdatum kann von Ihrer Einstellung abweichen.</b>",
+    "action": "Beide Lesezeichen prüfen",
+    "jump": "Lesezeichen-Arbeitsbereich"
+  },
+  "timeline_custom_start_without_bookmark": {
+    "what": "Ein eigenes Startdatum ist gesetzt, aber es gibt kein passendes Lesezeichen",
+    "impact": "<b>Spieler sehen diesen Start im Kampagnen-Auswahlbildschirm nicht.</b>",
+    "action": "Lesezeichen anlegen",
+    "jump": "Lesezeichen-Arbeitsbereich › Neu"
+  },
+  "timeline_project_earliest_bookmark_mismatch": {
+    "what": "Das Projekt-Startdatum ({a}) weicht vom frühesten Lesezeichen-Datum ({b}) ab",
+    "impact": "Das Spiel beginnt am Lesezeichen-Datum.",
+    "action": "Daten angleichen",
+    "jump": "Projekteinstellungen › Startdatum"
+  },
+  "timeline_project_start_date_unknown": {
+    "what": "Das Projekt hat kein Startdatum",
+    "impact": "Der Export verwendet das Standarddatum.",
+    "action": "Startdatum festlegen",
+    "jump": "Projekteinstellungen"
+  },
+  "timeline_raw_bookmark_date_unknown": {
+    "what": "Aus der Lesezeichen-Datei ließ sich kein Datum lesen",
+    "impact": "Das Lesezeichen wird unverändert exportiert und nimmt an der Datumsabgleich-Prüfung nicht teil."
+  },
+  "timeline_raw_bookmark_hash_mismatch": {
+    "what": "Die Lesezeichen-Datei wurde außerhalb des Programms geändert und weicht vom Vermerk ab",
+    "impact": "Die Prüfergebnisse spiegeln womöglich nicht den echten Dateiinhalt.",
+    "action": "Vermerk aktualisieren",
+    "jump": "Rohdateien › Neu einlesen"
+  },
+  "timeline_raw_defines_start_date_conflict": {
+    "what": "Das Startdatum der defines-Datei ({a}) kollidiert mit der Projekteinstellung ({b})",
+    "impact": "Das Spiel startet am Lesezeichen-Datum, doch Spieldauer, Weltspannung und ähnliche Mechaniken rechnen ab dem defines-Datum — <b>bei Abweichung verschiebt sich alles</b>.",
+    "action": "Daten angleichen",
+    "jump": "Projekteinstellungen › Startdatum"
+  },
+  "timeline_start_date_ok": {
+    "what": "Startdatum-Prüfung bestanden",
+    "impact": "Das Spiel beginnt am Startdatum dieses Projekts."
+  },
+  "timeline_structured_bookmark_date_unknown": {
+    "what": "Aus dem Lesezeichen ließ sich kein Datum lesen",
+    "impact": "Das Lesezeichen nimmt an der Datumsabgleich-Prüfung nicht teil."
+  },
+  "clausewitz_parse_error": {
+    "what": "{file} enthält einen Syntaxfehler und ist nicht lesbar",
+    "impact": "<b>Die gesamte Datei bleibt aus dem Mod ausgeschlossen.</b>",
+    "action": "Zur Fehlerstelle springen",
+    "jump": "Rohdatei-Editor"
+  },
+  "clausewitz_unclosed_block": {
+    "what": "{file}, Zeile {line}: nicht geschlossene {",
+    "impact": "<b>Alles nach dieser Zeile geht verloren.</b>",
+    "action": "Zur Zeile springen",
+    "jump": "Rohdatei-Editor"
+  },
+  "clausewitz_stray_closing_brace": {
+    "what": "{file}, Zeile {line}: überzählige } ohne passende {",
+    "impact": "Nachfolgender Inhalt kann im falschen Block landen.",
+    "action": "Zur Zeile springen",
+    "jump": "Rohdatei-Editor"
+  },
+  "clausewitz_unterminated_quote": {
+    "what": "{file}, Zeile {line}: Anführungszeichen nicht geschlossen",
+    "impact": "Die Zeile und alles danach wird als eine einzige Zeichenkette gelesen.",
+    "action": "Zur Zeile springen",
+    "jump": "Rohdatei-Editor"
+  },
+  "raw_content_literal_escape_newline": {
+    "what": "{file} line {line}: literal \\n (backslash + n) in script text",
+    "impact": "HOI4 script does not interpret escapes — players will see the two characters \\n verbatim.",
+    "action": "Use a real line break, or move the text into a localisation yml value where \\n is a newline",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_missing_assignment_value": {
+    "what": "{file}, Zeile {line}: {key} = hat keinen Wert",
+    "impact": "Die Einstellung greift nicht.",
+    "action": "Zur Zeile springen",
+    "jump": "Rohdatei-Editor"
+  },
+  "clausewitz_analysis_ast_mismatch": {
+    "what": "Parser-Selbstprüfung uneinheitlich, Ergebnisse für diese Datei können unvollständig sein",
+    "impact": "Die Oberfläche zeigt „Prüfung unvollständig“; automatisch gemeldet."
+  },
+  "clausewitz_analysis_token_alignment": {
+    "what": "Token-Abgleich des Parsers fehlgeschlagen, Ergebnisse für diese Datei können unvollständig sein",
+    "impact": "Die Oberfläche zeigt „Prüfung unvollständig“; automatisch gemeldet."
+  },
+  "country_capital_missing": {
+    "what": "{country} hat keine Hauptstadt",
+    "impact": "<b>Kapitulation, Nachschubnetz und politische Macht hängen alle an der Hauptstadt</b> — ohne sie laufen diese Mechaniken sämtlich fehl.",
+    "action": "Hauptstadt festlegen",
+    "jump": "Historiendatei › Hauptstadt"
+  },
+  "country_capital_invalid_state": {
+    "what": "Der Hauptstadtwert {value} von {country} ist keine gültige Regions-ID",
+    "impact": "Das Land hat keine nutzbare Hauptstadt; Folgen wie oben.",
+    "action": "Region neu wählen",
+    "jump": "Historiendatei › Hauptstadt"
+  },
+  "country_capital_not_owned": {
+    "what": "Die Hauptstadt {state} von {country} gehört {owner}",
+    "impact": "Das Spiel verwirft die Hauptstadt-Einstellung und protokolliert einen Fehler — <b>die tatsächliche Hauptstadt bestimmt die Engine per Rückfall</b>.",
+    "action": "Hauptstadt oder Besitz ändern",
+    "jump": "Historiendatei / Regionen"
+  },
+  "map_state_no_land": {
+    "what": "Staat {name} (#{state_id}) besteht nur aus einem See, ohne Land",
+    "impact": "Das Spiel kann Luftwaffenstützpunkt, Raketenstartplatz und Festung dieses Staates nirgends platzieren und <b>stürzt beim Spielstart ab</b>; error.log bleibt bei normalem Start leer.",
+    "action": "Öffne das Kartenstudio und klicke auf Reparieren oder bitte den Assistenten darum, dann exportiere erneut",
+    "jump": "Kartenstudio"
+  },
+  "country_history_final_winner_ambiguous": {
+    "what": "{country} hat Historiendateien aus mehreren Quellen, die wirksame lässt sich nicht bestimmen",
+    "impact": "<b>Die wirksame Startaufstellung ist womöglich nicht Ihre letzte Bearbeitung.</b>",
+    "action": "Wirksame Quelle wählen",
+    "jump": "Historiendatei › Quellen"
+  },
+  "country_history_final_winner_inferred": {
+    "what": "{country} hat Historiendateien aus mehreren Quellen, nach Ladereihenfolge wurde {path} gewählt",
+    "impact": "In der Regel die richtige Version."
+  },
+  "country_research_slots_missing": {
+    "what": "{id} hat keine Anzahl an Forschungsplätzen festgelegt",
+    "impact": "Das Spiel verwendet den Standardwert.",
+    "action": "Forschungsplätze festlegen",
+    "jump": "Historiendatei"
+  },
+  "country_research_slots_invalid": {
+    "what": "Die Forschungsplatz-Anzahl {value} von {country} ist ungültig",
+    "impact": "Die Zeile greift nicht, die Plätze fallen auf den Standardwert zurück.",
+    "action": "Gültige Zahl eintragen",
+    "jump": "Historiendatei"
+  },
+  "playtest_crash": {
+    "what": "Das Spiel stürzte im Playtest ab (Typ: {exception})",
+    "impact": "Der Bericht enthält Absturztyp und Spielversion; meist genügt das, um den Inhalt einzugrenzen.",
+    "action": "Absturzanalyse öffnen",
+    "jump": "Mod-Diagnose › Playtest-Bericht"
+  },
+  "playtest_start_date_mismatch": {
+    "what": "Das tatsächlich geladene Startdatum ({a}) weicht vom Entwurf ({b}) ab",
+    "impact": "<b>Spieler landen in der falschen Epoche</b> — auf {b} ausgelegte historische Inhalte können völlig außer der Reihe feuern. Häufige Ursache: der äußeren .mod-Datei fehlt replace_path=\"common/bookmarks\".",
+    "action": "Korrekturvorschlag ansehen",
+    "jump": "Mod-Diagnose › Playtest-Bericht"
+  },
+  "playtest_runtime_diagnostics_input_invalid": {
+    "what": "Das Playtest-Protokoll ist nicht lesbar",
+    "impact": "Diese Playtest-Diagnose bleibt ohne Ergebnis.",
+    "action": "Protokoll erneut hochladen",
+    "jump": "Mod-Diagnose › Playtest-Bericht"
+  },
+  "playtest_loaded_start_date": {
+    "what": "Bestätigtes vom Spiel geladenes Startdatum: {date}",
+    "impact": "Zur Information; zählt bei Übereinstimmung mit dem Entwurf zu ✅."
+  },
+  "playtest_enabled_mods": {
+    "what": "Bestätigte Liste der im Playtest aktiven Mods",
+    "impact": "Zur Information; dient dem Ausschluss von Mod-Konflikten."
+  },
+  "playtest_start_date_ok": {
+    "what": "Startdatum stimmt mit dem Entwurf überein",
+    "impact": "Bestanden."
+  },
+  "oob_air_location_missing": {
+    "what": "Luftgeschwader {name} hat keine Region gesetzt",
+    "impact": "<b>Das Geschwader erscheint zum Spielstart nicht.</b>",
+    "action": "Region setzen (Luftwaffenbasis erforderlich)",
+    "jump": "Startarmee › Luftwaffe"
+  },
+  "oob_air_location_invalid": {
+    "what": "Die Region {id} von Luftgeschwader {name} ist ungültig",
+    "impact": "Das Geschwader erscheint zum Spielstart nicht; Geschwader brauchen eine Region mit Luftwaffenbasis.",
+    "action": "Region neu wählen",
+    "jump": "Startarmee › Luftwaffe"
+  },
+  "oob_air_equipment_type_missing": {
+    "what": "Luftgeschwader {name} hat keinen Ausrüstungstyp",
+    "impact": "<b>Das Geschwader erscheint zum Spielstart nicht.</b>",
+    "action": "Ausrüstungstyp wählen",
+    "jump": "Startarmee › Luftwaffe"
+  },
+  "oob_air_equipment_type_invalid": {
+    "what": "Der Ausrüstungstyp {value} von Luftgeschwader {name} existiert nicht",
+    "impact": "Das Geschwader erscheint zum Spielstart nicht.",
+    "action": "Ausrüstung neu wählen",
+    "jump": "Startarmee › Luftwaffe"
+  },
+  "building_state_coordinate_mismatch": {
+    "what": "Gebäude {id} ist in Region {a} deklariert, seine Koordinaten liegen aber in Region {b}",
+    "impact": "<b>Das Spiel ignoriert das Gebäude, es erscheint nicht</b>; der Fehler wird protokolliert.",
+    "action": "Koordinaten oder Region korrigieren",
+    "jump": "Regionen › Gebäude"
+  },
+  "building_coordinate_membership_missing": {
+    "what": "Die Koordinaten von Gebäude {id} liegen in Provinz {province}, die zu keiner Region gehört",
+    "impact": "Erzeugt einen Kartenfehler, <b>das Gebäude wird ignoriert</b>.",
+    "action": "Provinz einer Region zuweisen",
+    "jump": "Regionen › Regionszugehörigkeit"
+  },
+  "building_reference_province_invalid": {
+    "what": "Gebäude {id} braucht eine gültige {kind}-Referenzprovinz, aktueller Wert: {value}",
+    "impact": "Marinebasen müssen auf eine angrenzende Seeprovinz zeigen; <b>bei ungültigem Wert ist der Hafen unbrauchbar</b>.",
+    "action": "Referenzprovinz neu wählen",
+    "jump": "Regionen › Gebäude"
+  },
+  "duplicate_expected_province": {
+    "what": "Selbstprüfung der Referenzdaten des Programms fehlgeschlagen (doppelte Provinzliste)",
+    "impact": "Die Oberfläche zeigt „Prüfung unvollständig“; automatisch gemeldet."
+  },
+  "duplicate_province_within_state": {
+    "what": "Region {id} führt Provinz {province} mehrfach auf ({count}-mal)",
+    "impact": "Duplikate werden ignoriert — meist harmlos, deutet aber auf ein Problem in der Datenquelle.",
+    "action": "Duplikate entfernen",
+    "jump": "Regionen › Region"
+  },
+  "duplicate_state_input": {
+    "what": "Region {id} taucht in {count} Eingaben auf",
+    "impact": "<b>Nur eine greift; Bearbeitungen können von der anderen überschrieben werden.</b>",
+    "action": "Konfliktquellen prüfen",
+    "jump": "Regionen › Region › Quellen"
+  },
+  "province_in_multiple_states": {
+    "what": "Provinz {province} gehört gleichzeitig zu Region {a} und Region {b}",
+    "impact": "<b>Das Spiel stürzt ab.</b>",
+    "action": "Aus einer der Regionen entfernen",
+    "jump": "Regionen › Region"
+  },
+  "province_without_state": {
+    "what": "Provinz {province} gehört zu keiner Region",
+    "impact": "Das Spiel läuft, aber <b>im Spiel erscheint eine MAP_ERROR-Warnung</b>.",
+    "action": "Region zuweisen",
+    "jump": "Regionen › Region"
+  },
+  "unknown_province": {
+    "what": "Region {state} verweist auf die nicht existierende Provinz {province}",
+    "impact": "Der Verweis wird als ungültiger Token verworfen und protokolliert; der Rest der Region lädt normal.",
+    "action": "Entfernen oder korrigieren",
+    "jump": "Regionen › Region"
+  },
+  "bookmark_raw_no_bookmark": {
+    "what": "Aus der Lesezeichen-Datei {path} ließ sich kein Lesezeichen lesen",
+    "impact": "<b>Dieser Start erscheint im Kampagnen-Auswahlbildschirm nicht.</b>",
+    "action": "Dateistruktur prüfen",
+    "jump": "Rohdatei-Editor"
+  },
+  "bookmark_raw_path_case_collision": {
+    "what": "Zwei Lesezeichen-Dateien unterscheiden sich nur in der Groß-/Kleinschreibung ({a} / {b})",
+    "impact": "Unter Windows greift nur eine, unter Linux beide — <b>plattformübergreifend uneinheitliches Verhalten</b>.",
+    "action": "Eine davon umbenennen",
+    "jump": "Rohdatei-Liste"
+  },
+  "descriptor_imported_replace_paths_require_full_export": {
+    "what": "Dieser Mod enthält replace_path-Regeln auf Verzeichnisebene, gewählt ist aber „nur eigene Inhalte exportieren“",
+    "impact": "<b>Das Spiel entlädt ganze Vanilla-Verzeichnisse ohne Ersatzdateien — großflächig fehlende Inhalte.</b>",
+    "action": "Auf vollständigen Export umstellen",
+    "jump": "Exportseite › Exportmodus"
+  },
+  "descriptor_replace_path_empty": {
+    "what": "replace_path „{path}“ entlädt ein Vanilla-Verzeichnis, aber das Exportpaket enthält darunter keine Dateien",
+    "impact": "<b>Der gesamte Inhalt dieses Verzeichnisses wird im Spiel fehlen.</b>",
+    "action": "Dateien ergänzen oder Regel entfernen",
+    "jump": "Exportseite › replace_path"
+  },
+  "ideology_root_invalid": {
+    "what": "Eigene ROOT-Ideologie „{id}“ ist ungültig: {reason}",
+    "impact": "Schreibt ein defektes common/ideologies — <b>die Regierungspartei-Einstellungen aller Länder, die darauf verweisen, fallen aus</b>.",
+    "action": "Ideologie-Register reparieren",
+    "jump": "Ideologie-Arbeitsbereich"
+  },
+  "ideology_root_submod_blocked": {
+    "what": "Ersetzen der ROOT-Ideologie innerhalb eines Submods",
+    "impact": "<b>Das würde die Ideologie-Definitionen des Basis-Mods löschen.</b>",
+    "action": "ROOT des Basis-Mods verwenden oder den Mod eigenständig machen",
+    "jump": "Projekteinstellungen › Abhängigkeiten"
+  },
+  "raid_path_unsafe": {
+    "what": "Raid-Datei {path} wegen unsicheren Pfads übersprungen",
+    "impact": "<b>Ihr Inhalt wurde nicht ins Projekt importiert.</b>",
+    "action": "Übersprungene Dateien ansehen",
+    "jump": "Importbericht"
+  },
+  "raid_deps_not_carried": {
+    "what": "Dateien, von denen die Raids abhängen, wurden nicht mitimportiert",
+    "impact": "Die Raids sind im Spiel womöglich nicht verfügbar.",
+    "action": "Abhängigkeitsdateien ergänzen",
+    "jump": "Import › Abhängigkeiten"
+  },
+  "unit_path_unsafe": {
+    "what": "Untereinheiten-Datei {path} wegen unsicheren Pfads übersprungen",
+    "impact": "<b>Ihr Inhalt wurde nicht ins Projekt importiert.</b>",
+    "action": "Übersprungene Dateien ansehen",
+    "jump": "Importbericht"
+  },
+  "factions_path_unsafe": {
+    "what": "Fraktions-Datei {path} wegen unsicheren Pfads übersprungen",
+    "impact": "<b>Ihr Inhalt wurde nicht ins Projekt importiert.</b>",
+    "action": "Übersprungene Dateien ansehen",
+    "jump": "Importbericht"
+  },
+  "loc_entry_unpreserved": {
+    "what": "Beim Import wurden {count} Lokalisierungseinträge nicht übernommen",
+    "impact": "Diese Texte sind im Export nicht enthalten.",
+    "action": "Liste der nicht übernommenen ansehen",
+    "jump": "Importbericht"
+  },
+  "state_raw_parse_failed": {
+    "what": "Die Regionsdatei {path} enthält einen Syntaxfehler",
+    "impact": "<b>Alle Regionen dieser Datei werden fehlen.</b>",
+    "action": "Zur Fehlerstelle springen",
+    "jump": "Rohdatei-Editor"
+  },
+  "sub_unit_classification_invalid": {
+    "what": "Die Klassifizierung der Untereinheit „{id}“ ist ungültig: {reason}",
+    "impact": "<b>Das Spiel meldet beim Laden der Untereinheit einen Fehler.</b>",
+    "action": "Unterstützten Typ verwenden",
+    "jump": "Untereinheiten-Arbeitsbereich"
+  },
+  "sub_unit_source_file_collision": {
+    "what": "Untereinheit „{id}“ würde nach „{path}“ geschrieben und eine bestehende Untereinheiten-Datei überschreiben",
+    "impact": "<b>Die übrigen Untereinheiten der Originaldatei werden fehlen.</b>",
+    "action": "Dateinamen vom Programm vergeben lassen",
+    "jump": "Untereinheiten-Arbeitsbereich"
+  },
+  "base_id_collision_rerouted": {
+    "what": "Eine neue ID kollidierte mit dem Basis-Mod und wurde automatisch umbenannt: {oldId} → {newId}",
+    "impact": "Kein Einfluss auf das Spiel, der Basis-Mod bleibt unverändert. <b>Verwenden Sie in späteren Verweisen die neue ID.</b>"
+  },
+  "non_additive_base_history_override": {
+    "what": "Direktes Umschreiben der Historiendatei von Basis-Mod-Land {tag} wurde blockiert",
+    "impact": "<b>Direktes Umschreiben überdeckt die Einstellungen des Original-Mods und kann Konflikte bis hin zum CTD auslösen</b>; eine additive Alternative wurde bereitgestellt.",
+    "action": "Alternative ansehen",
+    "jump": "KI-Chat"
+  },
+  "gateway_tool_passthrough_failed_sdk_emit": {
+    "what": "Routing-Fehler des KI-Gateways, dieser Werkzeugaufruf wurde nicht ausgeführt",
+    "impact": "Dieser KI-Schritt blieb wirkungslos.",
+    "action": "Wiederholen oder Modell wechseln",
+    "jump": "KI-Chat"
+  },
+  "content_language_export_languages_missing": {
+    "what": "Es gibt Inhalte in {language}, aber diese Sprache ist für den Export nicht aktiviert",
+    "impact": "<b>Die Inhalte werden nicht paketiert, das Spiel zeigt Lokalisierungsschlüssel.</b>",
+    "action": "Sprache aktivieren",
+    "jump": "Projekteinstellungen › Mod-Inhaltssprachen"
+  },
+  "display_name_placeholder": {
+    "what": "{count} {kind}-Einträge ohne Namen ({samples})",
+    "impact": "Sie erscheinen im Spiel als IDs.",
+    "action": "Namen gesammelt nachtragen",
+    "jump": "Zugehöriger Arbeitsbereich"
+  },
+  "effect_typo": {
+    "what": "„{token}“ ist vermutlich ein Tippfehler, vorgeschlagene Korrektur: „{suggestion}“",
+    "impact": "<b>Die Zeile hat keine Wirkung</b>, ohne Hinweis im Spiel; zur Fehlersuche braucht es error.log.",
+    "action": "Korrigieren",
+    "jump": "Bearbeitungsstelle des Skripts"
+  },
+  "preserved_raw": {
+    "what": "Rohdateien unverändert übernommen",
+    "impact": "Bestanden, zählt zur ✅-Zählung."
+  },
+  "research_bonus_as_effect": {
+    "what": "research_bonus steht an einer Effekt-Position",
+    "impact": "<b>Wirkungslos</b>; es muss an einer Modifikator-Position stehen.",
+    "action": "Schreibweise korrigieren",
+    "jump": "Bearbeitungsstelle des Skripts"
+  },
+  "script_position_swap_ideas_child_outside_parent": {
+    "what": "Ein swap_ideas-Kindelement liegt außerhalb seines Elternblocks",
+    "impact": "<b>Der Austausch greift nicht.</b>",
+    "action": "In den Elternblock verschieben",
+    "jump": "Bearbeitungsstelle des Skripts"
+  },
+  "unknown_tech_category": {
+    "what": "Die Technologie-Kategorie „{name}“ existiert nicht",
+    "impact": "<b>Die Technologie erscheint auf keinem Forschungsbaum-Reiter</b> und kann nicht erforscht werden.",
+    "action": "Bestehende Kategorie wählen",
+    "jump": "Technologie-Arbeitsbereich"
+  },
+  "vanilla_seed_dlc_effects_absent": {
+    "what": "Auf vanilla aufgesetzte Projekte enthalten die zusätzlichen Inhalte aus dem Vanilla-Skript nicht ({count} Regionen betroffen)",
+    "impact": "Die in diesem Skript gespeicherten Gebäude auf Provinzebene fehlen — Marinestützpunkte, Bunker, Staudämme und Wahrzeichen — ebenso datierte Verlaufsblöcke, DLC-abhängige Besitzübergänge, Widerstands- und Gefügigkeitswerte sowie einige Einträge, die wir nicht namentlich auslesen. Der Export dieser Staaten überschreibt die zugehörigen Spieldateien. Auf der Staaten-Seite lassen sich diese Inhalte aus dem Original wiederherstellen."
+  },
+  "ideology_undefined_standalone": {
+    "what": "Charakter {id} verwendet eine Ideologie, die in diesem Projekt nicht definiert ist",
+    "impact": "<b>Die Definition dieser Ideologie wird nicht in den exportierten Mod geschrieben.</b> Charaktere mit dieser Ideologie werden im Spiel zu einem Anführer ohne politische Partei.",
+    "action": "Ideologie definieren",
+    "jump": "Ideologien › Neu"
+  },
+  "ideology_registry_parent_missing": {
+    "what": "Ideologie {id} hat keine übergeordnete Gruppe",
+    "impact": "<b>Die Definition dieser Ideologie wird nicht in den exportierten Mod geschrieben.</b> Charaktere mit dieser Ideologie werden im Spiel zu einem Anführer ohne politische Partei.",
+    "action": "Übergeordnete Gruppe wählen",
+    "jump": "Ideologien › Diese Ideologie › Übergeordnete Gruppe"
+  },
+  "focus_layout_same_cell": {
+    "what": "Die Fokusse {focus_ids} liegen in derselben Zelle ({position})",
+    "impact": "<b>Zwei Fokusse überlappen sich; das Spiel zeigt nur einen davon.</b>",
+    "action": "Einen davon verschieben",
+    "jump": "Fokusbaum › Layout"
+  },
+  "focus_layout_adjacent_same_row": {
+    "what": "Zwei Fokusse liegen in derselben Zeile direkt nebeneinander, eine Spalte auseinander",
+    "impact": "Die Fokus-Symbole überlappen sich und sind schwer lesbar und anklickbar. Es geht nichts verloren.",
+    "action": "Horizontalen Abstand vergrößern",
+    "jump": "Fokusbaum › Layout"
+  },
+  "focus_display_name_unproven_fallback": {
+    "what": "Fokus {focus_id} hat in diesem Projekt keinen Namen in {locale}",
+    "impact": "<b>Der Fokusname ist im Spiel möglicherweise nicht lokalisiert.</b>",
+    "action": "Namen eintragen",
+    "jump": "Fokusse › Dieser Fokus › Name"
+  },
+  "idea_no_modifier": {
+    "what": "Idee {idea_id} hat keine Modifikatoren",
+    "impact": "Sie erscheint am Land, gewährt aber weder Bonus noch Malus.",
+    "action": "Modifikator hinzufügen",
+    "jump": "Ideen › Diese Idee › Modifikatoren"
+  },
+  "character_no_military_traits": {
+    "what": "Befehlshaber {tag} hat keine Militär-Eigenschaften",
+    "impact": "Der Charakter kann ernannt werden, bringt aber keinen Bonus.",
+    "action": "Militär-Eigenschaft hinzufügen",
+    "jump": "Charaktere › Dieser Charakter › Eigenschaften"
+  },
+  "bookmark_selectable_ideology_missing": {
+    "what": "Das auswählbare Land {country_tag} im Lesezeichen hat keine Ideologie",
+    "impact": "Anführer, Parteisymbol und Ländername werden im Länderauswahl-Bildschirm möglicherweise falsch angezeigt.",
+    "action": "Ideologie festlegen",
+    "jump": "Lesezeichen › Dieses Land › Ideologie"
+  },
+  "focus_tree_no_nodes": {
+    "what": "Fokusbaum {tree_id} enthält keine Fokusse",
+    "impact": "Der Baum ist leer; der Fokus-Bildschirm zeigt nichts an.",
+    "action": "Fokus hinzufügen",
+    "jump": "Fokusbäume › Dieser Baum"
+  },
+  "localisation_reference_not_in_project": {
+    "what": "{id} verweist auf den Lokalisierungsschlüssel {loc_key}, der nicht in diesem Projekt liegt",
+    "impact": "Der Text erscheint als Schlüssel selbst.",
+    "action": "Text ergänzen",
+    "jump": "Lokalisierung › Neuer Eintrag"
+  },
+  "mod_folder_name": {
+    "what": "Der Mod-Ordnername {folder} enthält Zeichen, die HOI4 nicht akzeptiert",
+    "impact": "Der exportierte Ordner wird umbenannt; der im Launcher angezeigte Name ändert sich nicht.",
+    "action": "Buchstaben, Ziffern und Unterstriche verwenden",
+    "jump": "Exporteinstellungen › Ordnername"
+  },
+  "province_double_mapping": {
+    "what": "Provinz {province_id} gehört gleichzeitig zu den Regionen {state_ids}",
+    "impact": "<b>Das Spiel stürzt beim Laden ab.</b>",
+    "action": "Provinz aus einer der Regionen entfernen",
+    "jump": "Regionen › Diese Region › Provinzen"
+  },
+  "doctrine_track_unresolved": {
+    "what": "Doktrin {id} verweist auf einen Zweig, der weder in diesem Projekt noch im Basis-Mod liegt",
+    "impact": "Hat der Basis-Mod diesen Zweig entfernt, wird der Doktrinbaum möglicherweise fehlerhaft dargestellt.",
+    "action": "Auf einen vorhandenen Zweig verweisen",
+    "jump": "Doktrinen › Diese Doktrin › Zweig"
+  },
+  "event_namespace_mismatch": {
+    "what": "Das ID-Präfix des Ereignisses passt nicht zu seinem Namespace",
+    "impact": "Aufrufende Stellen finden es möglicherweise nicht, das Ereignis löst nie aus.",
+    "action": "Präfix an den Namespace angleichen",
+    "jump": "Ereignisse › Dieses Ereignis › ID"
+  },
+  "event_no_options": {
+    "what": "Ereignis {event_id} hat keine Optionen",
+    "impact": "Das Ereignis erscheint ohne anklickbare Schaltfläche.",
+    "action": "Option hinzufügen",
+    "jump": "Ereignisse › Dieses Ereignis › Optionen"
+  },
+  "tech_circular_prereq": {
+    "what": "Technologie {tech_id} und eine andere Technologie setzen einander voraus",
+    "impact": "Nicht gemessen; die Auswirkung im Spiel ist unbekannt.",
+    "action": "Eine der Voraussetzungen auflösen",
+    "jump": "Technologien › Diese Technologie › Voraussetzungen"
+  },
+  "tech_folder_unknown": {
+    "what": "Technologie {id} hat einen Ordner, den das Spiel nicht kennt",
+    "impact": "Nicht gemessen; die Auswirkung im Spiel ist unbekannt.",
+    "action": "Bekannten Ordner verwenden",
+    "jump": "Technologien › Diese Technologie › Ordner"
+  },
+  "focus_effective_default_multiple": {
+    "what": "Mehrere Fokusbäume sind gleichzeitig als Standard markiert ({default_tree_ids})",
+    "impact": "Nicht gemessen; die Auswirkung im Spiel ist unbekannt.",
+    "action": "Nur einen Standard behalten",
+    "jump": "Fokusbäume › Standard-Markierung"
+  },
+  "focus_created_primary_id_collision": {
+    "what": "Fokusbaum {tree_id} schreibt nach {canonical_path}, wo bereits andere Inhalte liegen",
+    "impact": "Nicht gemessen; die Auswirkung im Spiel ist unbekannt.",
+    "action": "Konfliktfreie ID verwenden",
+    "jump": "Fokusse › Dieser Fokus › ID"
+  },
+  "focus_shared_pool_scope_ignored": {
+    "what": "Der für Fokusbaum {tree_id} gesetzte Freigabebereich wirkt sich beim Export nicht aus",
+    "impact": "Nicht gemessen; die Auswirkung im Spiel ist unbekannt.",
+    "action": "",
+    "jump": "Fokusbäume › Dieser Baum › Freigabebereich"
+  },
+  "impassable_category_mismatch": {
+    "what": "{count} unpassierbare Staaten nutzen eine Kategorie, die das Grundspiel nie mit unpassierbar kombiniert",
+    "impact": "Unpassierbar verhindert das Einrücken von Truppen und den Bau von Gebäuden auf Provinzebene; im Spiel erscheint der Staat als unpassierbares Gelände. Das Grundspiel kombiniert dies nur mit wasteland oder enclave — eine andere Kategorie deutet meist auf ein versehentliches Setzen hin. Es wird nichts blockiert und keine Daten geändert — vor der Veröffentlichung einen Blick wert."
+  },
+  "impassable_without_force_link": {
+    "what": "{count} unpassierbare Staaten geben nicht an, welcher Nachbarstaat sie besitzt",
+    "impact": "Unpassierbares Land hat keinen eigenen Besitzer und braucht daher einen Nachbarstaat, von dem es den Besitz erbt. Das Original setzt force_link_ownership_to bei allen 21 unpassierbaren Staaten (gemessen an 1.19.2 — dieses Feld steht nicht im Wiki). Nichts wird blockiert und keine Daten werden geändert — nur neu gespeicherte Staaten müssen es ausfüllen.",
+    "action": "Öffne jeden Staat und wähle den Nachbarstaat, dem er gehören soll",
+    "jump": "Staaten › dieser Staat › Besitz folgt"
+  },
+  "bookmark_filter_registry_missing": {
+    "what": "Die Szenariofilter konnten nicht geprüft werden",
+    "impact": "Für das Projekt ist keine unterstützte Spielversion festgelegt. Die Filterkompatibilität ist daher ungeprüft.",
+    "action": "Szenarioeinstellungen prüfen",
+    "jump": "Szenarien › Kampagneneinstellungen"
+  },
+  "bookmark_default_multiple": {
+    "what": "{default_count} Szenarien sind als Standard markiert",
+    "impact": "Es ist nicht eindeutig, welches Szenario zu Beginn ausgewählt sein soll.",
+    "action": "Gewünschten Standard wählen",
+    "jump": "Szenarien › Standardszenario"
+  },
+  "bookmark_default_country_not_interesting": {
+    "what": "Das Standardland {default_country} gehört nicht zu den auswählbaren Ländern dieses Szenarios",
+    "impact": "Das Spiel wählt möglicherweise nicht das gewünschte Land vor.",
+    "action": "Auswählbare Länder prüfen",
+    "jump": "Szenarien › Auswählbare Länder"
+  },
+  "bookmark_country_label_invalid": {
+    "what": "Ein Land im Szenario hat eine nicht unterstützte Filterbezeichnung",
+    "impact": "Das Land erscheint möglicherweise nicht unter dem vorgesehenen Filter.",
+    "action": "Länderbezeichnungen prüfen",
+    "jump": "Szenarien › Auswählbare Länder › Bezeichnungen"
+  },
+  "bookmark_country_labels_filter_missing": {
+    "what": "Länder haben Bezeichnungen, aber der Bezeichnungsfilter ist nicht aktiviert",
+    "impact": "Spieler können die Länderliste nicht nach diesen Bezeichnungen filtern.",
+    "action": "Szenariofilter prüfen",
+    "jump": "Szenarien › Filter"
+  },
+  "bookmark_filter_invalid_for_target": {
+    "what": "Ein Szenariofilter wird von der Zielversion des Spiels nicht unterstützt",
+    "impact": "Der Filter funktioniert im Spiel möglicherweise nicht wie vorgesehen.",
+    "action": "Szenariofilter prüfen",
+    "jump": "Szenarien › Filter"
+  },
+  "bookmark_filter_country_label_semantics": {
+    "what": "Länderbezeichnungen werden als Szenariofilter verwendet",
+    "impact": "Die Filterschaltflächen zeigen möglicherweise nicht die gewünschten Länder.",
+    "action": "Filter und Bezeichnungen prüfen",
+    "jump": "Szenarien › Filter und Länderbezeichnungen"
+  },
+  "focus_layout_missing_focus_id": {
+    "what": "Einem Fokus fehlt die Skript-ID",
+    "impact": "Das Spiel kann diesen Fokus nicht zuverlässig identifizieren oder referenzieren.",
+    "action": "Fokus-IDs prüfen",
+    "jump": "Fokusbaum › Fokusdetails"
+  },
+  "focus_layout_duplicate_focus_id": {
+    "what": "Mehrere Foki verwenden die ID {focus_id}",
+    "impact": "Verweise auf diese ID können auf den falschen Fokus zeigen.",
+    "action": "Doppelte IDs prüfen",
+    "jump": "Fokusbaum › Fokusdetails"
+  },
+  "focus_layout_relative_cycle": {
+    "what": "Fokuspositionen verweisen im Kreis aufeinander: {cycle}",
+    "impact": "Das Spiel kann nicht alle relativen Positionen in diesem Kreis auflösen.",
+    "action": "Positionsverweise prüfen",
+    "jump": "Fokusbaum › Position"
+  },
+  "focus_layout_missing_anchor": {
+    "what": "Fokus {focus_id} verweist auf den fehlenden Positionsanker {relative_position_id}",
+    "impact": "Seine relative Position lässt sich in dieser Ausgabe nicht auflösen.",
+    "action": "Positionsanker prüfen",
+    "jump": "Fokusbaum › Position"
+  },
+  "focus_layout_replacement_global_shift": {
+    "what": "Der ersetzende Fokusbaum wurde als Ganzes verschoben",
+    "impact": "Seine Ausrichtung zu anderen Zweigen kann sich geändert haben.",
+    "action": "Baumlayout prüfen",
+    "jump": "Fokusbaum › Layout"
+  },
+  "focus_layout_unknown_mode": {
+    "what": "Die Prüfung des Fokuslayouts konnte nicht abgeschlossen werden",
+    "impact": "Das Programm konnte den Layoutmodus dieses Baums nicht interpretieren. Das Layout bleibt ungeprüft.",
+    "action": "Fokusbaum prüfen",
+    "jump": "Fokusbaum › Layout"
+  },
+  "timeline_base_timeline_source_unregistered": {
+    "what": "Die Kampagnendaten der Basis-Mod sind nicht verifiziert",
+    "impact": "Die gewählten Daten können vom Zeitrahmen der Basis-Mod abweichen.",
+    "action": "Kampagnendaten prüfen",
+    "jump": "Szenarien › Kampagneneinstellungen"
+  }
+}

@@ -1,0 +1,7 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+		GER_test_tank_company = { picture = idea_GER_orphan_picture }
+	}
+}

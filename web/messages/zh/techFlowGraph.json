@@ -1,0 +1,9 @@
+{
+  "footerHint": "双击空白 → 创建 · 拖节点 → 改 start_year / column · 选中按 <kbd>Delete</kbd> 或 hover 节点右上 × 删除",
+  "footerHintBrowse": "浏览研究面板：选择科技、平移或缩放。需要调整位置时进入排版模式。",
+  "footerHintLayout": "排版模式：只能落在所选科技分类的合法格位；拖动不会更改可研究年份。",
+  "footerHintAria": "画布操作帮助",
+  "footerHintRowAxis": "双击空白 → 创建 · 拖节点 → 改行 / 列 · 选中按 <kbd>Delete</kbd> 或 hover 节点右上 × 删除",
+  "orphanNoFolder": "不在任何科技树中 · {count} 个未写 folder 块(由国策/事件授予)",
+  "orphanUnmatched": "未匹配到 .gui 里的 gridbox · {count} 个"
+}

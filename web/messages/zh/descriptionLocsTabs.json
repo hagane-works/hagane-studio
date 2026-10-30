@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "描述语言切换",
+  "addLanguage": "添加语言",
+  "addingLanguage": "正在添加{language}…",
+  "addLanguageError": "无法将{language}添加到此项目。请重试。",
+  "legacyFallbackHint": "当前显示的是旧的描述字段。在这里输入即可覆盖，新文本会按语言分别保存。",
+  "fullName": {
+    "en": "英文",
+    "zh": "中文(简体)",
+    "ru": "俄文",
+    "fr": "法文",
+    "de": "德文",
+    "es": "西班牙文",
+    "ja": "日文",
+    "ko": "韩文",
+    "pl": "波兰文",
+    "pt": "葡萄牙文(巴西)"
+  }
+}

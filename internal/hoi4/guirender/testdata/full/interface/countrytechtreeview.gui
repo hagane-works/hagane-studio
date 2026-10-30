@@ -1,0 +1,35 @@
+guiTypes = {
+	@BaseX = 12
+	containerWindowType = {
+		name = countrytechtreeview
+		position = { x = @BaseX y = 4 }
+		size = { width = 1000 height = 800 }
+		background = { spriteType = GFX_panel_100x50 }
+		containerWindowType = {
+			name = infantry_folder
+			position = { x = 100 y = 200 }
+			gridBoxType = {
+				name = infantry_grid
+				position = { x = 5 y = 6 }
+				slotSize = { width = 80 height = 90 }
+				format = LEFT
+			}
+			instantTextBoxType = {
+				name = infantry_year1936
+				position = { x = 20 y = 30 }
+				text = TECH_YEAR
+				font = aldrich_24_outline
+			}
+		}
+		containerWindowType = {
+			name = first_tab
+			position = { x = 0 y = 0 }
+			size = { width = 900 height = 700 }
+		}
+		containerWindowType = {
+			name = second_tab
+			position = { x = 0 y = 0 }
+			size = { width = 900 height = 700 }
+		}
+	}
+}

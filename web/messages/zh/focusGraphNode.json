@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "条件分支：隐藏路线，仅在 allow_branch 条件满足时出现。",
+  "allowBranchBadge": "路线",
+  "loadTreeTitle": "完成此国策后跳转到另一棵 focus tree。",
+  "loadTreeBadge": "跳转",
+  "relativePositionTitle": "相对位置",
+  "addChildTitle": "添加相连的子国策",
+  "addMutexChildTitle": "添加互斥国策"
+}

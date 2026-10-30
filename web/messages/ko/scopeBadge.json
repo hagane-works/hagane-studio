@@ -1,0 +1,16 @@
+{
+  "ownLabel": "자국",
+  "ownTitle": "이 국가의 자체 항목(country_tag = {tag}). 현재 국가에만 영향을 주므로 안전하게 편집할 수 있습니다.",
+  "explicitLabel": "국가 간 공유",
+  "explicitTitle": "국가 간 공유(shared_country_tags = {tags}). 편집하면 이 모든 국가에 동시에 영향을 줍니다.",
+  "globalLabel": "전역",
+  "globalTitle": "전역 공유. 모드의 모든 국가에 영향을 주므로 주의하여 편집하세요.",
+  "globalExceptLabel": "전역(제외)",
+  "globalExceptTitle": "전역 공유, 단 ({tags}) 제외. 편집하면 나머지 모든 국가에 영향을 줍니다.",
+  "sectionOwnLabel": "이 국가 자체",
+  "sectionOwnHint": "현재 국가에만 영향을 줍니다",
+  "sectionSharedLabel": "공유 / 전역 / 국가 간",
+  "sectionSharedHint": "편집하면 다른 국가에 영향을 줄 수 있습니다",
+  "sectionAllLabel": "모든 국가",
+  "sectionAllHint": "모든 국가의 항목을 표시합니다. 각 행의 배지에서 소속 국가를 확인할 수 있습니다."
+}

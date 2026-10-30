@@ -1,0 +1,436 @@
+{
+ "cases": [
+  {
+   "name": "empty-gets-success",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [],
+    "states": [],
+    "history_files": [],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "warning-suppresses-success",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [],
+    "states": [
+     {
+      "state_id": 16,
+      "owner": "FRA",
+      "name": "S",
+      "provinces": []
+     },
+     {
+      "state_id": 20,
+      "owner": "GER",
+      "name": "S",
+      "provinces": []
+     }
+    ],
+    "history_files": [
+     {
+      "country_tag": "GER",
+      "capital": 16,
+      "set_politics_ruling_party": ""
+     }
+    ],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns."
+    }
+   ]
+  },
+  {
+   "name": "stage-covers-capital",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [
+     16
+    ],
+    "states": [
+     {
+      "state_id": 16,
+      "owner": "FRA",
+      "name": "S",
+      "provinces": []
+     },
+     {
+      "state_id": 20,
+      "owner": "GER",
+      "name": "S",
+      "provinces": []
+     }
+    ],
+    "history_files": [
+     {
+      "country_tag": "GER",
+      "capital": 16,
+      "set_politics_ruling_party": ""
+     }
+    ],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns."
+    }
+   ]
+  },
+  {
+   "name": "stage-excludes-capital",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [
+     99
+    ],
+    "states": [
+     {
+      "state_id": 16,
+      "owner": "FRA",
+      "name": "S",
+      "provinces": []
+     },
+     {
+      "state_id": 20,
+      "owner": "GER",
+      "name": "S",
+      "provinces": []
+     }
+    ],
+    "history_files": [
+     {
+      "country_tag": "GER",
+      "capital": 16,
+      "set_politics_ruling_party": ""
+     }
+    ],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns.",
+     "out_of_stage": true
+    }
+   ]
+  },
+  {
+   "name": "no-stage-no-tag",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [],
+    "states": [
+     {
+      "state_id": 16,
+      "owner": "FRA",
+      "name": "S",
+      "provinces": []
+     },
+     {
+      "state_id": 20,
+      "owner": "GER",
+      "name": "S",
+      "provinces": []
+     }
+    ],
+    "history_files": [
+     {
+      "country_tag": "GER",
+      "capital": 16,
+      "set_politics_ruling_party": ""
+     }
+    ],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns."
+    }
+   ]
+  },
+  {
+   "name": "blocker-never-tagged",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [
+     999
+    ],
+    "states": [
+     {
+      "state_id": 16,
+      "owner": "GER",
+      "name": "S",
+      "provinces": [
+       1,
+       2
+      ]
+     },
+     {
+      "state_id": 17,
+      "owner": "GER",
+      "name": "S",
+      "provinces": [
+       2,
+       3
+      ]
+     }
+    ],
+    "history_files": [],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 16,
+      "province_id": 2,
+      "state_ids": [
+       16,
+       17
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 2 from every state except one (it currently appears in 2 states).",
+     "message": "Province 2 is assigned to multiple states: 16 (S), 17 (S) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    }
+   ]
+  },
+  {
+   "name": "order-is-contract",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [
+     99
+    ],
+    "states": [
+     {
+      "state_id": 16,
+      "owner": "FRA",
+      "name": "S",
+      "provinces": [
+       1
+      ]
+     },
+     {
+      "state_id": 17,
+      "owner": "GER",
+      "name": "S",
+      "provinces": [
+       1
+      ]
+     }
+    ],
+    "history_files": [
+     {
+      "country_tag": "GER",
+      "capital": 16,
+      "set_politics_ruling_party": "weird_ideology"
+     }
+    ],
+    "techs": [
+     {
+      "id": 1,
+      "tech_id": "a",
+      "prerequisites": [
+       "b"
+      ]
+     },
+     {
+      "id": 2,
+      "tech_id": "b",
+      "prerequisites": [
+       "a"
+      ]
+     }
+    ]
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns.",
+     "out_of_stage": true
+    },
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 16,
+      "province_id": 1,
+      "state_ids": [
+       16,
+       17
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 1 from every state except one (it currently appears in 2 states).",
+     "message": "Province 1 is assigned to multiple states: 16 (S), 17 (S) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    },
+    {
+     "level": "warning",
+     "code": "ideology_undefined_standalone",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER"
+     },
+     "severity": "warning",
+     "fix_hint": "Define 'weird_ideology' in the project's ideology registry, or point GER ruling_party at a vanilla ideology.",
+     "message": "Custom ideology 'weird_ideology' is referenced by GER ruling_party but not defined in the project's ideology registry; a standalone mod must define it (export emits common/ideologies only for registry entries)."
+    },
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "tech-cycle-single",
+   "input": {
+    "project_name": "Mod",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [],
+    "states": [],
+    "history_files": [],
+    "techs": [
+     {
+      "id": 3,
+      "tech_id": "a",
+      "prerequisites": [
+       "b"
+      ]
+     },
+     {
+      "id": 4,
+      "tech_id": "b",
+      "prerequisites": [
+       "c"
+      ]
+     },
+     {
+      "id": 5,
+      "tech_id": "c",
+      "prerequisites": [
+       "a"
+      ]
+     }
+    ]
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 3
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "non-ascii-name",
+   "input": {
+    "project_name": "德意志",
+    "country_tag": "GER",
+    "dependencies": [],
+    "stage_state_ids": [],
+    "states": [],
+    "history_files": [],
+    "techs": []
+   },
+   "issues": [
+    {
+     "level": "warning",
+     "code": "mod_folder_name",
+     "entity_ref": null,
+     "detail": {
+      "name": "德意志",
+      "folder": "mod_GER"
+     },
+     "message": "Mod folder name: project name '德意志' is not ASCII — HOI4 needs an ASCII mod path, so the exported folder / .mod will be 'mod_GER' (the launcher display name stays '德意志'). Set an ASCII project name to control the folder name."
+    }
+   ]
+  }
+ ]
+}

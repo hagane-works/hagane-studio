@@ -1,0 +1,18 @@
+{
+  "expandPreview": "プレビューを展開",
+  "collapsePreview": "プレビューを折りたたむ",
+  "tabLivePreview": "ライブプレビュー",
+  "tabScript": "スクリプト",
+  "tabReferencesHint": "このエンティティを参照するものと、このエンティティが参照するものを確認します。",
+  "tabScriptHint": "このエンティティ用にエクスポートされる Mod スクリプトファイル（上級者向け）。",
+  "livePreviewSelectHint": "一覧から項目を選択するとゲーム内プレビューを表示できます。",
+  "livePreviewCreateFirstHint": "プレビューするものはまだありません。左側の一覧から最初の項目を作成してください。",
+  "liveDraftBadge": "ライブ下書き",
+  "previewLabel": "プレビュー",
+  "openInGame": "ゲームで見る",
+  "previewUnavailableGeneric": "このワークベンチにはまだゲーム内プレビューがありません。すべてのフィールドはエディターで確認できます。",
+  "noSelectionGeneric": "何も選択されていません",
+  "backFromNew": "戻る",
+  "searchPlaceholderGeneric": "名前で検索…",
+  "noMatchesGeneric": "一致する項目がありません"
+}

@@ -1,0 +1,18 @@
+{
+  "cwtoolError": "Cwtool-Fehler · blockierende Probleme: {count}",
+  "parsing": "Wird analysiert…",
+  "parsedWithWarnings": "Analyse erfolgreich · Cwtool-Warnungen: {count} · kann angewendet werden",
+  "parsedReady": "Analyse erfolgreich · kann angewendet werden",
+  "parseErrorLine": "Analysefehler · Zeile {line} ({count})",
+  "parseError": "Analysefehler ({count})",
+  "diagnosticLine": "Diagnose · Zeile {line} ({count})",
+  "diagnostics": "Diagnosen: {count}",
+  "editedWarnings": "Bearbeitet · Cwtool-Warnungen: {count} (Analyse ausstehend)",
+  "editedPending": "Bearbeitet (Analyse ausstehend)",
+  "stalePrompt": "Dieses Element wurde an anderer Stelle aktualisiert, nachdem du mit der Bearbeitung seines Skripts begonnen hast.\n\nMöchtest du die ungespeicherten Änderungen im Editor behalten?\n\nOK = Editor-Entwurf behalten (das Formular wird beim Anwenden überschrieben)\nAbbrechen = Entwurf verwerfen und das aktuelle Formular laden",
+  "networkHint": "Die Anfrage hat das Programm nicht erreicht. Es wurde möglicherweise gerade neu gestartet — versuche erneut, die Änderungen anzuwenden.",
+  "applyFailed": "Anwenden fehlgeschlagen: {message}{hint}",
+  "applyReseedTitle": "Skript angewendet",
+  "applyReseedSynced": "Das Formular links wurde entsprechend aktualisiert.",
+  "applyReseedClobbered": "Das Formular wurde aus dem Skript neu geladen. Deine ungespeicherten Änderungen im Formular wurden überschrieben."
+}

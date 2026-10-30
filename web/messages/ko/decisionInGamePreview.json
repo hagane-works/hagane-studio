@@ -1,0 +1,7 @@
+{
+  "costTextTooltip": "custom_cost_text · PP 표시를 대체합니다",
+  "selectableMissionTooltip": "selectable_mission · 사용자가 직접 활성화하는 임무",
+  "ppCost": "{amount} PP",
+  "ppRefund": "PP +{amount} 환급",
+  "approximateLabel": "게임 내 미리보기 · 근사치"
+}

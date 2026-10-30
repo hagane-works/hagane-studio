@@ -1,0 +1,9 @@
+{
+  "message": "「{id}」在 {dependency} 里已经存在。沿用这个 ID 会让你新建的这个{entityLabel}在游戏里失效。",
+  "fixHint": "换一个没被占用的 ID，或者直接引用 {dependency} 里已有的那个。",
+  "unknownDependency": "这个基础 Mod",
+  "entityCharacter": "人物",
+  "entityFocus": "国策",
+  "entityIdea": "理念",
+  "entityDecision": "决议"
+}

@@ -1,0 +1,696 @@
+{
+  "focus_display_name_missing_created": {
+    "what": "国家方針 {id} に名前がありません",
+    "impact": "ゲーム内では ID がそのまま表示され、ホバーしても説明が出ません。",
+    "action": "名前を設定する",
+    "jump": "国家方針作業台 › 該当の方針 › 名前"
+  },
+  "focus_display_name_missing_enabled_locale": {
+    "what": "国家方針 {id} に {locale} の名前がありません",
+    "impact": "その言語のプレイヤーには ID が表示されます。",
+    "action": "その言語を補完する",
+    "jump": "国家方針 › 名前 › 言語タブ"
+  },
+  "focus_initial_position_unknown_kind": {
+    "what": "{tree} の開始位置の種類を認識できません",
+    "impact": "国家方針ツリー全体がずれたり、互いに重なったりする恐れがあります。",
+    "action": "開始位置を設定し直す",
+    "jump": "国家方針ツリー › レイアウト"
+  },
+  "focus_reward_modifier_in_effect_position": {
+    "what": "国家方針 {id} の完了報酬で、{token} は補正なのに効果の位置に書かれています",
+    "impact": "ゲームは読み込み時にこの行を無視し、<b>この行は機能しません</b>。",
+    "action": "補正の入れ物へ移す",
+    "jump": "国家方針 › 完了報酬"
+  },
+  "focus_reward_scalar_effect_block_value": {
+    "what": "国家方針 {id} の {token} は数値が必要ですが、実際はコードブロックです(またはその逆)",
+    "impact": "この行は機能しません。",
+    "action": "書き方を修正する",
+    "jump": "国家方針 › 完了報酬"
+  },
+  "focus_reward_trigger_in_effect_position": {
+    "what": "国家方針 {id} の完了報酬に条件判定 {token} が含まれていますが、この位置は効果のみ受け付けます",
+    "impact": "<b>この行は機能せず</b>、条件も判定されません。",
+    "action": "条件欄へ移す",
+    "jump": "国家方針 › 完了報酬"
+  },
+  "focus_reward_unsupported_scope": {
+    "what": "国家方針 {id} の {effect} は現在のスコープ({scope})では使えません",
+    "impact": "効果は発動しません。対応スコープ：{supported}。",
+    "action": "対応スコープで包む",
+    "jump": "国家方針 › 完了報酬"
+  },
+  "focus_base_default_provider_unresolved": {
+    "what": "ベース MOD が提供する既定の国家方針ツリーが見つかりません",
+    "impact": "ツリーが正しい国に紐付かず、ゲーム内で表示されない恐れがあります。",
+    "action": "ベース MOD の索引を更新する",
+    "jump": "プロジェクト設定 › 依存関係"
+  },
+  "focus_effective_default_missing": {
+    "what": "{country} に既定の国家方針ツリーが設定されていません",
+    "impact": "その国は汎用ツリーに回帰し、<b>作ったツリーがプレイヤーに表示されません</b>。",
+    "action": "既定に設定する",
+    "jump": "国家方針ツリー一覧"
+  },
+  "focus_file_policy_applied": {
+    "what": "国家方針ツリーの出力ファイルは記録どおり書き出されました",
+    "impact": "合格項目です。✅ に集計されます。"
+  },
+  "focus_file_policy_cohort_incomplete": {
+    "what": "{tree} が同じファイルの他のツリーと一緒にエクスポートされていません",
+    "impact": "ファイルは一部しか書き出されず、<b>欠けたツリーはゲーム内に表示されません</b>。",
+    "action": "まとめて選択してエクスポートする",
+    "jump": "エクスポートページ › コンテンツ選択"
+  },
+  "focus_file_policy_drift": {
+    "what": "{tree_ids} のファイル設定がバージョン記録と一致しません",
+    "impact": "成果物に影響はなく、現在の設定どおりエクスポート済みです。この項目はシステムが管理するため変更不要です。"
+  },
+  "focus_file_policy_duplicate_membership": {
+    "what": "内部記録の競合：同じツリーに書き出しポリシーが 2 つ存在します",
+    "impact": "画面には「チェック未完了」と表示されます。自動で報告済みです。"
+  },
+  "focus_file_policy_missing": {
+    "what": "{id} に出力ファイルが指定されていないため、自動で割り当てました",
+    "impact": "ゲームに影響はなく、内容も完全です。"
+  },
+  "focus_initial_position_target_missing": {
+    "what": "{tree} の開始位置が国家方針 {id} を指していますが、このツリーに存在しません",
+    "impact": "ツリーの初期表示がずれ、開くと空白の領域が表示されます。",
+    "action": "開始方針を選び直す",
+    "jump": "国家方針ツリー › レイアウト"
+  },
+  "focus_raw_file_parse_failed": {
+    "what": "国家方針ファイル {path} に構文エラーがあり読み込めません",
+    "impact": "<b>このファイル内の国家方針はすべて欠落します。</b>",
+    "action": "構文を修正する(エラー行へ移動)",
+    "jump": "raw ファイルエディタ"
+  },
+  "focus_registry_unavailable": {
+    "what": "バニラ国家方針レジストリの読み込みに失敗し、書き出しチェックが未完了です",
+    "impact": "画面には「チェック未完了」と表示され、今回は安全側の方式でエクスポートしました。自動で報告済みです。"
+  },
+  "timeline_bookmark_path_shadow_date_mismatch": {
+    "what": "2 つのブックマークファイルが異なる日付で同じパスに書き込み、片方しか有効になりません",
+    "impact": "<b>開始日が設定と異なる恐れがあります。</b>",
+    "action": "両方のブックマークを確認する",
+    "jump": "ブックマーク作業台"
+  },
+  "timeline_custom_start_without_bookmark": {
+    "what": "カスタム開始日が設定されていますが、対応するブックマークがありません",
+    "impact": "<b>キャンペーン選択画面にこの開始日が表示されません。</b>",
+    "action": "ブックマークを作成する",
+    "jump": "ブックマーク作業台 › 新規"
+  },
+  "timeline_project_earliest_bookmark_mismatch": {
+    "what": "プロジェクトの開始日({a})と最古のブックマーク日付({b})が一致しません",
+    "impact": "ゲームはブックマークの日付から始まります。",
+    "action": "日付を揃える",
+    "jump": "プロジェクト設定 › 開始日"
+  },
+  "timeline_project_start_date_unknown": {
+    "what": "プロジェクトに開始日が設定されていません",
+    "impact": "エクスポートには既定の日付が使われます。",
+    "action": "開始日を設定する",
+    "jump": "プロジェクト設定"
+  },
+  "timeline_raw_bookmark_date_unknown": {
+    "what": "ブックマークファイルから日付を読み取れませんでした",
+    "impact": "このブックマークはそのままエクスポートされ、日付整合チェックの対象外になります。"
+  },
+  "timeline_raw_bookmark_hash_mismatch": {
+    "what": "ブックマークファイルが本プログラムの外で変更され、記録と一致しません",
+    "impact": "チェック結果がファイルの実際の内容を反映していない恐れがあります。",
+    "action": "記録を更新する",
+    "jump": "raw ファイル › 再読み込み"
+  },
+  "timeline_raw_defines_start_date_conflict": {
+    "what": "defines ファイルの開始日({a})がプロジェクト設定({b})と食い違っています",
+    "impact": "ゲームはブックマークの日付で始まりますが、期間や世界緊張度などの仕組みは defines の日付を基準に動くため、<b>不一致だと全体がずれます</b>。",
+    "action": "日付を揃える",
+    "jump": "プロジェクト設定 › 開始日"
+  },
+  "timeline_start_date_ok": {
+    "what": "開始日チェックに合格しました",
+    "impact": "ゲームはこのプロジェクトの開始日から始まります。"
+  },
+  "timeline_structured_bookmark_date_unknown": {
+    "what": "ブックマークから日付を読み取れませんでした",
+    "impact": "このブックマークは日付整合チェックの対象外になります。"
+  },
+  "clausewitz_parse_error": {
+    "what": "{file} に構文エラーがあり読み込めません",
+    "impact": "<b>このファイル全体が MOD に含まれません。</b>",
+    "action": "エラー箇所へ移動する",
+    "jump": "raw ファイルエディタ"
+  },
+  "clausewitz_unclosed_block": {
+    "what": "{file} の {line} 行目：閉じられていない {",
+    "impact": "<b>この行より後の内容はすべて失われます。</b>",
+    "action": "該当行へ移動する",
+    "jump": "raw ファイルエディタ"
+  },
+  "clausewitz_stray_closing_brace": {
+    "what": "{file} の {line} 行目：余分な } があり、対応する { がありません",
+    "impact": "後続の内容が誤ったブロックに取り込まれる恐れがあります。",
+    "action": "該当行へ移動する",
+    "jump": "raw ファイルエディタ"
+  },
+  "clausewitz_unterminated_quote": {
+    "what": "{file} の {line} 行目：引用符が閉じていません",
+    "impact": "この行以降がひとつの文字列として読まれます。",
+    "action": "該当行へ移動する",
+    "jump": "raw ファイルエディタ"
+  },
+  "raw_content_literal_escape_newline": {
+    "what": "{file} line {line}: literal \\n (backslash + n) in script text",
+    "impact": "HOI4 script does not interpret escapes — players will see the two characters \\n verbatim.",
+    "action": "Use a real line break, or move the text into a localisation yml value where \\n is a newline",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_missing_assignment_value": {
+    "what": "{file} の {line} 行目:{key} = に値がありません",
+    "impact": "この設定は機能しません。",
+    "action": "該当行へ移動する",
+    "jump": "raw ファイルエディタ"
+  },
+  "clausewitz_analysis_ast_mismatch": {
+    "what": "パーサーの自己検証が一致せず、このファイルのチェック結果は不完全な恐れがあります",
+    "impact": "画面には「チェック未完了」と表示されます。自動で報告済みです。"
+  },
+  "clausewitz_analysis_token_alignment": {
+    "what": "パーサーのトークン整列に失敗し、このファイルのチェック結果は不完全な恐れがあります",
+    "impact": "画面には「チェック未完了」と表示されます。自動で報告済みです。"
+  },
+  "country_capital_missing": {
+    "what": "{country} に首都が設定されていません",
+    "impact": "<b>降伏判定・補給網・政治力はいずれも首都を基準にする</b>ため、未設定だとこれらの仕組みがすべて異常になります。",
+    "action": "首都を設定する",
+    "jump": "履歴ファイル › 首都"
+  },
+  "country_capital_invalid_state": {
+    "what": "{country} の首都の値 {value} は有効な州 ID ではありません",
+    "impact": "この国には使える首都がなく、結果は上記と同じです。",
+    "action": "州を選び直す",
+    "jump": "履歴ファイル › 首都"
+  },
+  "country_capital_not_owned": {
+    "what": "{country} の首都 {state} は {owner} の領有です",
+    "impact": "ゲームはこの首都設定を拒否してエラーを記録し、<b>実際の首都はエンジンが代わりに決めます</b>。",
+    "action": "首都か領有を変更する",
+    "jump": "履歴ファイル / 州"
+  },
+  "map_state_no_land": {
+    "what": "州 {name}（#{state_id}）は湖だけで陸地がありません",
+    "impact": "この州の航空基地・ロケット発射場・要塞を置ける場所がなく、<b>ゲーム開始時にクラッシュします</b>。通常起動では error.log は空のままです。",
+    "action": "地図スタジオで「修復」を押すか、アシスタントに修復を頼んでから、もう一度エクスポートしてください",
+    "jump": "地図スタジオ"
+  },
+  "country_history_final_winner_ambiguous": {
+    "what": "{country} の履歴ファイルが複数の出典にあり、有効な版を特定できません",
+    "impact": "<b>有効になる初期設定が最新の編集とは限りません。</b>",
+    "action": "有効な出典を選ぶ",
+    "jump": "履歴ファイル › 出典"
+  },
+  "country_history_final_winner_inferred": {
+    "what": "{country} の履歴ファイルが複数の出典にあり、読み込み順で {path} を選択しました",
+    "impact": "通常は正しい版です。"
+  },
+  "country_research_slots_missing": {
+    "what": "{id} に研究スロット数が設定されていません",
+    "impact": "ゲームは既定値を使います。",
+    "action": "研究スロットを設定する",
+    "jump": "履歴ファイル"
+  },
+  "country_research_slots_invalid": {
+    "what": "{country} の研究スロット数 {value} は無効です",
+    "impact": "この行は機能せず、スロット数は既定値に戻ります。",
+    "action": "有効な数値に直す",
+    "jump": "履歴ファイル"
+  },
+  "playtest_crash": {
+    "what": "プレイテスト中にゲームがクラッシュしました(種類：{exception})",
+    "impact": "レポートにはクラッシュの種類とゲームバージョンが含まれ、通常は原因のコンテンツまで特定できます。",
+    "action": "クラッシュ分析を見る",
+    "jump": "MOD 診断 › プレイテストレポート"
+  },
+  "playtest_start_date_mismatch": {
+    "what": "ゲームが実際に読み込んだ開始日({a})が設計({b})と一致しません",
+    "impact": "<b>プレイヤーは誤った時代で開始します</b>。{b} 向けに設計した歴史コンテンツが完全に順序を失う恐れがあります。よくある根本原因:外側の .mod ファイルに replace_path=\"common/bookmarks\" がないことです。",
+    "action": "修正案を見る",
+    "jump": "MOD 診断 › プレイテストレポート"
+  },
+  "playtest_runtime_diagnostics_input_invalid": {
+    "what": "プレイテストのログを読み取れません",
+    "impact": "今回のプレイテスト診断は結果なしです。",
+    "action": "ログを再アップロードする",
+    "jump": "MOD 診断 › プレイテストレポート"
+  },
+  "playtest_loaded_start_date": {
+    "what": "ゲームが読み込んだ開始日を確認しました：{date}",
+    "impact": "確認情報です。設計と一致していれば ✅ に集計されます。"
+  },
+  "playtest_enabled_mods": {
+    "what": "プレイテスト時に有効だった MOD 一覧を確認しました",
+    "impact": "確認情報です。MOD 競合の切り分けに使います。"
+  },
+  "playtest_start_date_ok": {
+    "what": "開始日は設計と一致しています",
+    "impact": "合格項目です。"
+  },
+  "oob_air_location_missing": {
+    "what": "航空隊 {name} に配置先の州が設定されていません",
+    "impact": "<b>この航空隊は開始時に出現しません。</b>",
+    "action": "州を設定する(空軍基地が必要)",
+    "jump": "初期部隊 › 空軍"
+  },
+  "oob_air_location_invalid": {
+    "what": "航空隊 {name} の配置先の州 {id} が無効です",
+    "impact": "この航空隊は開始時に出現しません。航空隊は空軍基地のある州にしか配備できません。",
+    "action": "州を選び直す",
+    "jump": "初期部隊 › 空軍"
+  },
+  "oob_air_equipment_type_missing": {
+    "what": "航空隊 {name} に装備タイプが設定されていません",
+    "impact": "<b>この航空隊は開始時に出現しません。</b>",
+    "action": "装備タイプを選ぶ",
+    "jump": "初期部隊 › 空軍"
+  },
+  "oob_air_equipment_type_invalid": {
+    "what": "航空隊 {name} の装備タイプ {value} は存在しません",
+    "impact": "この航空隊は開始時に出現しません。",
+    "action": "装備を選び直す",
+    "jump": "初期部隊 › 空軍"
+  },
+  "building_state_coordinate_mismatch": {
+    "what": "建物 {id} は州 {a} で宣言されていますが、座標は州 {b} にあります",
+    "impact": "<b>ゲームはこの建物を無視し、出現しません</b>。エラーがログに記録されます。",
+    "action": "座標か州を修正する",
+    "jump": "州 › 建物"
+  },
+  "building_coordinate_membership_missing": {
+    "what": "建物 {id} の座標はプロヴィンス {province} にありますが、どの州にも属していません",
+    "impact": "マップエラーが発生し、<b>この建物は無視されます</b>。",
+    "action": "プロヴィンスに州を割り当てる",
+    "jump": "州 › 州の帰属"
+  },
+  "building_reference_province_invalid": {
+    "what": "建物 {id} には有効な {kind} 参照プロヴィンスが必要ですが、現在の値は {value} です",
+    "impact": "海軍基地は隣接する海洋プロヴィンスを指す必要があり、<b>無効な場合その港は使用できません</b>。",
+    "action": "参照プロヴィンスを選び直す",
+    "jump": "州 › 建物"
+  },
+  "duplicate_expected_province": {
+    "what": "プログラムの参照データの自己検証で異常が見つかりました(プロヴィンス一覧の重複)",
+    "impact": "画面には「チェック未完了」と表示されます。自動で報告済みです。"
+  },
+  "duplicate_province_within_state": {
+    "what": "州 {id} がプロヴィンス {province} を重複して記載しています({count} 回)",
+    "impact": "重複分は無視されるため通常は無害ですが、データ出典に問題がある兆候です。",
+    "action": "重複を取り除く",
+    "jump": "州 › 対象の州"
+  },
+  "duplicate_state_input": {
+    "what": "州 {id} が {count} 件の入力に出現しています",
+    "impact": "<b>有効になるのは 1 件だけで、編集がもう一方に上書きされる恐れがあります。</b>",
+    "action": "競合する出典を確認する",
+    "jump": "州 › 対象の州 › 出典"
+  },
+  "province_in_multiple_states": {
+    "what": "プロヴィンス {province} が州 {a} と州 {b} の両方に属しています",
+    "impact": "<b>ゲームがクラッシュします。</b>",
+    "action": "どちらかの州から取り除く",
+    "jump": "州 › 対象の州"
+  },
+  "province_without_state": {
+    "what": "プロヴィンス {province} がどの州にも属していません",
+    "impact": "ゲームは動きますが、<b>ゲーム内に MAP_ERROR 警告が表示されます</b>。",
+    "action": "所属する州を割り当てる",
+    "jump": "州 › 対象の州"
+  },
+  "unknown_province": {
+    "what": "州 {state} が存在しないプロヴィンス {province} を参照しています",
+    "impact": "この参照は無効トークンとして破棄されエラーが記録されますが、州の残りは正常に読み込まれます。",
+    "action": "削除するか修正する",
+    "jump": "州 › 対象の州"
+  },
+  "bookmark_raw_no_bookmark": {
+    "what": "ブックマークファイル {path} からブックマークを 1 件も読み取れませんでした",
+    "impact": "<b>キャンペーン選択画面にこの開始日が表示されません。</b>",
+    "action": "ファイル構造を確認する",
+    "jump": "raw ファイルエディタ"
+  },
+  "bookmark_raw_path_case_collision": {
+    "what": "2 つのブックマークファイルが大文字小文字の違いしかありません({a} / {b})",
+    "impact": "Windows では片方だけ、Linux では両方が有効になり、<b>プラットフォーム間で挙動が食い違います</b>。",
+    "action": "どちらかの名前を変える",
+    "jump": "raw ファイル一覧"
+  },
+  "descriptor_imported_replace_paths_require_full_export": {
+    "what": "この MOD にはディレクトリ単位の replace_path ルールがありますが、「自作コンテンツのみエクスポート」が選ばれています",
+    "impact": "<b>ゲームはバニラのディレクトリを丸ごと外すのに置き換えファイルがなく、広範囲のコンテンツが欠落します。</b>",
+    "action": "完全エクスポートに切り替える",
+    "jump": "エクスポートページ › エクスポート方法"
+  },
+  "descriptor_replace_path_empty": {
+    "what": "replace_path「{path}」はバニラのディレクトリを外しますが、エクスポート内にそのディレクトリのファイルが 1 つもありません",
+    "impact": "<b>ゲーム内でそのディレクトリの内容がすべて欠落します。</b>",
+    "action": "ファイルを追加するかルールを外す",
+    "jump": "エクスポートページ › replace_path"
+  },
+  "ideology_root_invalid": {
+    "what": "カスタム ROOT イデオロギー「{id}」が不正です：{reason}",
+    "impact": "壊れた common/ideologies が書き出され、<b>それを参照するすべての国の与党設定が機能しなくなります</b>。",
+    "action": "イデオロギー登録を修復する",
+    "jump": "イデオロギー作業台"
+  },
+  "ideology_root_submod_blocked": {
+    "what": "サブ MOD 内で ROOT イデオロギーを置き換えようとしています",
+    "impact": "<b>ベース MOD のイデオロギー定義を消してしまいます。</b>",
+    "action": "ベース MOD の ROOT を使うか、独立 MOD に切り替える",
+    "jump": "プロジェクト設定 › 依存関係"
+  },
+  "raid_path_unsafe": {
+    "what": "襲撃ファイル {path} は安全でないパスのためスキップされました",
+    "impact": "<b>このファイルの内容はプロジェクトに取り込まれていません。</b>",
+    "action": "スキップされたファイルを確認する",
+    "jump": "インポートレポート"
+  },
+  "raid_deps_not_carried": {
+    "what": "襲撃が依存するファイルが一緒に取り込まれていません",
+    "impact": "ゲーム内で襲撃が使えない恐れがあります。",
+    "action": "依存ファイルを追加する",
+    "jump": "インポート › 依存関係"
+  },
+  "unit_path_unsafe": {
+    "what": "サブユニットファイル {path} は安全でないパスのためスキップされました",
+    "impact": "<b>このファイルの内容はプロジェクトに取り込まれていません。</b>",
+    "action": "スキップされたファイルを確認する",
+    "jump": "インポートレポート"
+  },
+  "factions_path_unsafe": {
+    "what": "陣営ファイル {path} は安全でないパスのためスキップされました",
+    "impact": "<b>このファイルの内容はプロジェクトに取り込まれていません。</b>",
+    "action": "スキップされたファイルを確認する",
+    "jump": "インポートレポート"
+  },
+  "loc_entry_unpreserved": {
+    "what": "インポート時にローカライズ {count} 件が保持されませんでした",
+    "impact": "これらのテキストはエクスポートに含まれません。",
+    "action": "未保持の一覧を確認する",
+    "jump": "インポートレポート"
+  },
+  "state_raw_parse_failed": {
+    "what": "州ファイル {path} に構文エラーがあります",
+    "impact": "<b>このファイル内の州はすべて欠落します。</b>",
+    "action": "エラー箇所へ移動する",
+    "jump": "raw ファイルエディタ"
+  },
+  "sub_unit_classification_invalid": {
+    "what": "サブユニット「{id}」の分類が不正です：{reason}",
+    "impact": "<b>ゲームがサブユニットの読み込み時にエラーを出します。</b>",
+    "action": "対応している種類を使う",
+    "jump": "サブユニット作業台"
+  },
+  "sub_unit_source_file_collision": {
+    "what": "サブユニット「{id}」は「{path}」に書き込まれ、既存のサブユニット定義ファイルを上書きします",
+    "impact": "<b>元ファイルにある他のサブユニットが欠落します。</b>",
+    "action": "ファイル名はプログラムに任せる",
+    "jump": "サブユニット作業台"
+  },
+  "base_id_collision_rerouted": {
+    "what": "新規 ID がベース MOD と衝突したため自動で改名しました：{oldId} → {newId}",
+    "impact": "ゲームに影響はなく、ベース MOD の内容も変わりません。<b>以後の参照には新しい ID を使ってください。</b>"
+  },
+  "non_additive_base_history_override": {
+    "what": "ベース MOD の国家 {tag} の履歴ファイルを直接書き換える操作をブロックしました",
+    "impact": "<b>直接書き換えると元 MOD の設定を上書きし、競合や CTD の恐れがあります</b>。追記型の代替案を提示済みです。",
+    "action": "代替案を見る",
+    "jump": "AI チャット"
+  },
+  "gateway_tool_passthrough_failed_sdk_emit": {
+    "what": "AI ゲートウェイのルーティングエラーで、今回のツール呼び出しは実行されませんでした",
+    "impact": "この AI 操作は反映されていません。",
+    "action": "再試行するかモデルを切り替える",
+    "jump": "AI チャット"
+  },
+  "content_language_export_languages_missing": {
+    "what": "{language} のコンテンツがありますが、その言語のエクスポートが有効になっていません",
+    "impact": "<b>該当コンテンツはパッケージに含まれず、ゲーム内ではローカライズキーが表示されます。</b>",
+    "action": "その言語を有効にする",
+    "jump": "プロジェクト設定 › MOD コンテンツ言語"
+  },
+  "display_name_placeholder": {
+    "what": "{kind} {count} 件に名前がありません({samples})",
+    "impact": "ゲーム内では ID が表示されます。",
+    "action": "名前をまとめて補完する",
+    "jump": "対応する作業台"
+  },
+  "effect_typo": {
+    "what": "「{token}」は誤記の可能性があります。修正候補：「{suggestion}」",
+    "impact": "<b>この行は機能せず</b>、ゲーム内に手掛かりも出ません。調査には error.log の確認が必要です。",
+    "action": "修正する",
+    "jump": "スクリプト編集箇所"
+  },
+  "preserved_raw": {
+    "what": "raw ファイルはそのまま保持されました",
+    "impact": "合格項目です。✅ に集計されます。"
+  },
+  "research_bonus_as_effect": {
+    "what": "research_bonus が効果の位置に書かれています",
+    "impact": "<b>機能しません</b>。補正の位置に書く必要があります。",
+    "action": "書き方を修正する",
+    "jump": "スクリプト編集箇所"
+  },
+  "script_position_swap_ideas_child_outside_parent": {
+    "what": "swap_ideas の子要素が親ブロックの外にあります",
+    "impact": "<b>置き換えは機能しません。</b>",
+    "action": "親ブロック内へ移す",
+    "jump": "スクリプト編集箇所"
+  },
+  "unknown_tech_category": {
+    "what": "技術カテゴリ「{name}」は存在しません",
+    "impact": "<b>この技術はどの技術ツリータブにも表示されず</b>、研究できません。",
+    "action": "既存のカテゴリを選ぶ",
+    "jump": "技術作業台"
+  },
+  "vanilla_seed_dlc_effects_absent": {
+    "what": "vanilla から開始したプロジェクトには、バニラのスクリプトが保持している追加の内容が含まれません(対象は {count} 州)",
+    "impact": "そのスクリプトに保存された属州レベルの建物 —— 海軍基地、トーチカ、ダム、ランドマーク —— に加えて、日付付きの履歴ブロック、DLC 条件付きの所有権移転、レジスタンスと従順度の設定、および名前として読み取っていない一部の項目も失われます。これらのステートをエクスポートすると、ゲーム本体の該当ファイルを上書きします。ステートのページからバニラの内容を補完できます。"
+  },
+  "ideology_undefined_standalone": {
+    "what": "キャラクター {id} はこのプロジェクトで定義されていないイデオロギーを使用しています",
+    "impact": "<b>このイデオロギーの定義はエクスポートされる MOD に書き出されません。</b>これを使うキャラクターは、ゲーム内で政党のない指導者になります。",
+    "action": "そのイデオロギーを定義する",
+    "jump": "イデオロギー作業台 › 新規"
+  },
+  "ideology_registry_parent_missing": {
+    "what": "イデオロギー {id} に親イデオロギーが設定されていません",
+    "impact": "<b>このイデオロギーの定義はエクスポートされる MOD に書き出されません。</b>これを使うキャラクターは、ゲーム内で政党のない指導者になります。",
+    "action": "親イデオロギーを選択する",
+    "jump": "イデオロギー作業台 › 該当のイデオロギー › 親イデオロギー"
+  },
+  "focus_layout_same_cell": {
+    "what": "国家方針 {focus_ids} が同じマス（{position}）にあります",
+    "impact": "<b>2 つの国家方針が重なっており、ゲームには片方しか表示されません。</b>",
+    "action": "どちらかを移動する",
+    "jump": "国家方針ツリー › レイアウト"
+  },
+  "focus_layout_adjacent_same_row": {
+    "what": "同じ行の国家方針が隣り合っており、横方向の間隔が 1 しかありません",
+    "impact": "国家方針のアイコンが重なり、読みづらくクリックしづらくなります。内容は失われません。",
+    "action": "横方向の間隔を広げる",
+    "jump": "国家方針ツリー › レイアウト"
+  },
+  "focus_display_name_unproven_fallback": {
+    "what": "国家方針 {focus_id} の {locale} の名前がこのプロジェクトに入力されていません",
+    "impact": "<b>ゲーム内でこの国家方針の名前がローカライズされない恐れがあります。</b>",
+    "action": "名前を入力する",
+    "jump": "国家方針作業台 › 該当の方針 › 名前"
+  },
+  "idea_no_modifier": {
+    "what": "国民精神 {idea_id} に補正が 1 つも設定されていません",
+    "impact": "国家には表示されますが、ボーナスもペナルティも発生しません。",
+    "action": "補正を追加する",
+    "jump": "国民精神作業台 › 該当の国民精神 › 補正"
+  },
+  "character_no_military_traits": {
+    "what": "指揮官 {tag} に軍事特性が設定されていません",
+    "impact": "任命はできますが、ボーナスは何も得られません。",
+    "action": "軍事特性を追加する",
+    "jump": "キャラクター作業台 › 該当のキャラクター › 特性"
+  },
+  "bookmark_selectable_ideology_missing": {
+    "what": "ブックマークの選択可能国 {country_tag} にイデオロギーが設定されていません",
+    "impact": "国家選択画面で、この国の指導者・政党アイコン・国名が正しく表示されない恐れがあります。",
+    "action": "イデオロギーを設定する",
+    "jump": "ブックマーク作業台 › 該当の国家 › イデオロギー"
+  },
+  "focus_tree_no_nodes": {
+    "what": "国家方針ツリー {tree_id} に国家方針が 1 つもありません",
+    "impact": "このツリーは空で、国家方針画面に何も表示されません。",
+    "action": "国家方針を追加する",
+    "jump": "国家方針ツリー作業台 › 該当のツリー"
+  },
+  "localisation_reference_not_in_project": {
+    "what": "{id} が参照するローカライズキー {loc_key} がこのプロジェクトにありません",
+    "impact": "このテキストはキー名がそのまま表示されます。",
+    "action": "そのテキストを補完する",
+    "jump": "ローカライズ作業台 › 新規エントリ"
+  },
+  "mod_folder_name": {
+    "what": "MOD フォルダー名 {folder} に HOI4 が受け付けない文字が含まれています",
+    "impact": "エクスポートされるフォルダー名は変更されます。ランチャーに表示される名前は変わりません。",
+    "action": "英字・数字・アンダースコアを使う",
+    "jump": "エクスポート設定 › フォルダー名"
+  },
+  "province_double_mapping": {
+    "what": "プロヴィンス {province_id} が州 {state_ids} に同時に属しています",
+    "impact": "<b>ゲームが読み込み時にクラッシュします。</b>",
+    "action": "どちらかの州から取り除く",
+    "jump": "州 › 対象の州 › プロヴィンス"
+  },
+  "doctrine_track_unresolved": {
+    "what": "ドクトリン {id} が指すトラックが、このプロジェクトにもベース MOD にもありません",
+    "impact": "ベース MOD がそのトラックを削除している場合、ドクトリンツリーの表示が崩れる恐れがあります。",
+    "action": "既存のトラックに向け直す",
+    "jump": "ドクトリン作業台 › 該当のドクトリン › トラック"
+  },
+  "event_namespace_mismatch": {
+    "what": "イベント ID の接頭辞が、所属する名前空間と一致していません",
+    "impact": "呼び出し側がイベントを見つけられず、イベントが発火しない恐れがあります。",
+    "action": "接頭辞と名前空間を揃える",
+    "jump": "イベント作業台 › 該当のイベント › ID"
+  },
+  "event_no_options": {
+    "what": "イベント {event_id} に選択肢が 1 つもありません",
+    "impact": "イベントが表示されても、プレイヤーが押せるボタンがありません。",
+    "action": "選択肢を追加する",
+    "jump": "イベント作業台 › 該当のイベント › 選択肢"
+  },
+  "tech_circular_prereq": {
+    "what": "技術 {tech_id} と別の技術が互いを前提にしています",
+    "impact": "未検証のため、ゲーム内での影響は不明です。",
+    "action": "どちらかの前提を外す",
+    "jump": "技術作業台 › 該当の技術 › 前提技術"
+  },
+  "tech_folder_unknown": {
+    "what": "技術 {id} の研究フォルダーはゲームに存在しません",
+    "impact": "未検証のため、ゲーム内での影響は不明です。",
+    "action": "既存の研究フォルダーを選ぶ",
+    "jump": "技術作業台 › 該当の技術 › 研究フォルダー"
+  },
+  "focus_effective_default_multiple": {
+    "what": "複数の国家方針ツリーが同時に既定になっています（{default_tree_ids}）",
+    "impact": "未検証のため、ゲーム内での影響は不明です。",
+    "action": "既定を 1 つだけ残す",
+    "jump": "国家方針ツリー一覧 › 既定マーク"
+  },
+  "focus_created_primary_id_collision": {
+    "what": "国家方針ツリー {tree_id} の書き込み先 {canonical_path} には、すでに別の内容があります",
+    "impact": "未検証のため、ゲーム内での影響は不明です。",
+    "action": "衝突しない ID に変更する",
+    "jump": "国家方針作業台 › 該当の方針 › ID"
+  },
+  "focus_shared_pool_scope_ignored": {
+    "what": "国家方針ツリー {tree_id} に設定した共有範囲は、エクスポート時に反映されません",
+    "impact": "未検証のため、ゲーム内での影響は不明です。",
+    "action": "",
+    "jump": "国家方針ツリー作業台 › 該当のツリー › 共有範囲"
+  },
+  "impassable_category_mismatch": {
+    "what": "{count} 個の通行不可ステートが、バニラでは通行不可と組み合わせないカテゴリを使っています",
+    "impact": "通行不可にすると部隊が進入できず属州レベルの建物も建てられなくなり、ゲーム内では通行不可地形として表示されます。バニラでは wasteland か enclave にのみ組み合わせるため、別のカテゴリは誤ってチェックした可能性が高いです。エクスポートは止めず、データも変更していません —— 公開前に一度ご確認ください。"
+  },
+  "impassable_without_force_link": {
+    "what": "{count} 件の通行不可ステートに、どの隣接ステートが所有するかの指定がありません",
+    "impact": "通行不可な土地はそれ自体の所有者を持たないため、所有権を引き継ぐ隣接ステートが必要です。バニラは 21 件すべての通行不可ステートに force_link_ownership_to を設定しています（1.19.2 で実測。このフィールドは wiki に記載がありません）。何もブロックされず、データも変更されません—— 新しく保存するステートだけが入力を求められます。",
+    "action": "各ステートを開いて、所有すべき隣接ステートを選んでください",
+    "jump": "ステート › このステート › 帰属の追従先"
+  },
+  "bookmark_filter_registry_missing": {
+    "what": "シナリオのフィルターを確認できませんでした",
+    "impact": "対応するゲームバージョンがプロジェクトに設定されていないため、フィルターの互換性を確認できていません。",
+    "action": "シナリオ設定を確認",
+    "jump": "シナリオ › キャンペーン設定"
+  },
+  "bookmark_default_multiple": {
+    "what": "{default_count} 個のシナリオが初期選択に設定されています",
+    "impact": "開始時にどのシナリオを選ぶかが明確ではありません。",
+    "action": "初期選択のシナリオを選ぶ",
+    "jump": "シナリオ › 初期選択"
+  },
+  "bookmark_default_country_not_interesting": {
+    "what": "初期選択国 {default_country} がこのシナリオの選択可能な国に含まれていません",
+    "impact": "ゲームで意図した国が初期選択されない可能性があります。",
+    "action": "選択可能な国を確認",
+    "jump": "シナリオ › 選択可能な国"
+  },
+  "bookmark_country_label_invalid": {
+    "what": "シナリオの国に未対応のフィルターラベルがあります",
+    "impact": "意図したフィルターでその国が表示されない可能性があります。",
+    "action": "国のラベルを確認",
+    "jump": "シナリオ › 選択可能な国 › ラベル"
+  },
+  "bookmark_country_labels_filter_missing": {
+    "what": "国にラベルがありますが、ラベルフィルターが有効になっていません",
+    "impact": "プレイヤーはそのラベルで国の一覧を絞り込めません。",
+    "action": "シナリオのフィルターを確認",
+    "jump": "シナリオ › フィルター"
+  },
+  "bookmark_filter_invalid_for_target": {
+    "what": "対象のゲームバージョンが対応していないシナリオフィルターがあります",
+    "impact": "ゲーム内でフィルターが意図どおりに動作しない可能性があります。",
+    "action": "シナリオのフィルターを確認",
+    "jump": "シナリオ › フィルター"
+  },
+  "bookmark_filter_country_label_semantics": {
+    "what": "国のラベルがシナリオフィルターとして使われています",
+    "impact": "フィルターボタンで意図した国が表示されない可能性があります。",
+    "action": "フィルターとラベルを確認",
+    "jump": "シナリオ › フィルターと国のラベル"
+  },
+  "focus_layout_missing_focus_id": {
+    "what": "スクリプト ID がない国家方針があります",
+    "impact": "ゲームがこの国家方針を正しく識別、参照できません。",
+    "action": "国家方針 ID を確認",
+    "jump": "国家方針ツリー › 国家方針の詳細"
+  },
+  "focus_layout_duplicate_focus_id": {
+    "what": "複数の国家方針が同じ ID {focus_id} を使っています",
+    "impact": "この ID への参照が別の国家方針を指す可能性があります。",
+    "action": "重複する ID を確認",
+    "jump": "国家方針ツリー › 国家方針の詳細"
+  },
+  "focus_layout_relative_cycle": {
+    "what": "国家方針の位置参照が循環しています：{cycle}",
+    "impact": "ゲームはこの循環内の相対位置をすべて解決できません。",
+    "action": "位置参照を確認",
+    "jump": "国家方針ツリー › 位置"
+  },
+  "focus_layout_missing_anchor": {
+    "what": "国家方針 {focus_id} が存在しない位置基準 {relative_position_id} を参照しています",
+    "impact": "今回の出力では、その相対位置を解決できません。",
+    "action": "位置の基準を確認",
+    "jump": "国家方針ツリー › 位置"
+  },
+  "focus_layout_replacement_global_shift": {
+    "what": "置き換え用の国家方針ツリー全体が移動しています",
+    "impact": "他の分岐との位置関係が変わっている可能性があります。",
+    "action": "ツリーの配置を確認",
+    "jump": "国家方針ツリー › 配置"
+  },
+  "focus_layout_unknown_mode": {
+    "what": "国家方針の配置チェックを完了できませんでした",
+    "impact": "このツリーの配置モードを解釈できないため、配置は未確認です。",
+    "action": "国家方針ツリーを確認",
+    "jump": "国家方針ツリー › 配置"
+  },
+  "timeline_base_timeline_source_unregistered": {
+    "what": "ベース Mod のキャンペーン日付は未確認です",
+    "impact": "選択した日付がベース Mod の時間軸と異なる可能性があります。",
+    "action": "キャンペーン日付を確認",
+    "jump": "シナリオ › キャンペーン設定"
+  }
+}

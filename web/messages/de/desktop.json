@@ -1,0 +1,97 @@
+{
+  "setup": {
+    "title": "Willkommen bei Hagane Works",
+    "intro": "Wähle, wo deine Projekte liegen. Jedes Projekt ist ein normaler Ordner darin, den du kopieren, sichern oder versionieren kannst.",
+    "projectsDirTitle": "Projektordner",
+    "projectsDirHelp": "Jedes Projekt wird hier als Ordner gespeichert. Wähle einen leeren Ordner oder einen, den du schon für Hagane Works nutzt.",
+    "gameDirTitle": "Hearts-of-Iron-IV-Installation",
+    "gameDirHelp": "Die Spielvorschau und die Daten des Grundspiels werden aus deiner eigenen Spielinstallation gelesen. Dieses Programm enthält keine Spieldateien.",
+    "gameFound": "{dir} (Version {version})",
+    "gameMissing": "Nicht automatisch gefunden. Wähle den Ordner, der hoi4.exe enthält.",
+    "notChosen": "Noch nicht gewählt",
+    "choose": "Wählen…",
+    "start": "Los geht's"
+  },
+  "folderPicker": {
+    "up": "Eine Ebene höher",
+    "pathPlaceholder": "Ordnerpfad eingeben",
+    "go": "Öffnen",
+    "empty": "Hier gibt es keine Ordner.",
+    "cancel": "Abbrechen",
+    "choose": "Diesen Ordner verwenden"
+  },
+  "settings": {
+    "open": "Einstellungen",
+    "title": "Einstellungen von Hagane Works",
+    "legalTitle": "Unabhängiges Fanprojekt",
+    "legalNotice": "Hagane Works ist weder mit Paradox Interactive verbunden noch von Paradox Interactive unterstützt oder gesponsert. Hearts of Iron IV und zugehörige Marken gehören ihren jeweiligen Rechteinhabern.",
+    "version": "Version {version}",
+    "projectsDir": "Projektordner",
+    "gameDir": "Hearts-of-Iron-IV-Installation",
+    "modDir": "Mod-Ordner für „Installieren“",
+    "change": "Ändern…",
+    "cwtools": "CWTools-Regeln (optional)",
+    "cwtoolsMissing": "Nicht gefunden",
+    "cwtoolsModifiers": "{count, plural, one {# Modifikatorname gelesen} other {# Modifikatornamen gelesen}}",
+    "cwtoolsAutomatic": "Automatisch suchen",
+    "cwtoolsAbout": "Optional und nur dazu da, beim Exportieren Modifikatornamen zu prüfen: Die Regeln stammen aus dem Drittanbieterprojekt CWTools (MIT-Lizenz) und können unter <link>github.com/cwtools/cwtools-hoi4-config</link> heruntergeladen werden.",
+    "port": "Port",
+    "portSave": "Speichern",
+    "portInUse": "Derzeit verwendet: {port}",
+    "portAbout": "Der lokale Port, auf dem Hagane Works lauscht; leer lassen für den Standardport. Eine Änderung gilt ab dem nächsten Start des Programms. Was sich das Fenster merkt (Design, Sprache, Favoriten), gehört zu seiner Adresse – auf einem neuen Port fängt es also von vorn an.",
+    "cpu": "CPU-Nutzung",
+    "cpuOne": "1 Kern",
+    "cpuHalf": "50 % ({cores, plural, one {# Kern} other {# Kerne}})",
+    "cpuAll": "100 % ({cores, plural, one {# Kern} other {# Kerne}})",
+    "cpuAbout": "Wie viele Prozessorkerne Hagane Works beim Importieren einer Mod oder beim Lesen deines Spiels auslasten darf. Weniger lässt anderen Programmen mehr übrig; alle sind am schnellsten.",
+    "avatar": {
+      "title": "Dein lokaler Avatar",
+      "about": "Wähle einen Begleiter oder ein eigenes Bild. Es bleibt auf diesem Computer und wird nie in eine Mod exportiert.",
+      "currentAlt": "Aktueller Avatar",
+      "upload": "Eigenes Bild verwenden",
+      "processing": "Wird verarbeitet…",
+      "uploadHelp": "PNG, JPEG oder WebP, bis 10 MB. Das Bild wird quadratisch zugeschnitten.",
+      "invalidType": "Wähle ein PNG-, JPEG- oder WebP-Bild.",
+      "tooLarge": "Das Bild darf höchstens 10 MB groß sein.",
+      "failed": "Dieses Bild konnte nicht verwendet oder gespeichert werden.",
+      "pets": {
+        "field_engineer_dog": "Pionierhund",
+        "infantry_rabbit": "Infanteriehase",
+        "logistics_panda": "Logistikpanda",
+        "air_ace_fox": "Fliegerass-Fuchs",
+        "tank_commander_bear": "Panzerkommandant-Bär",
+        "codebreaker_owl": "Codeknacker-Eule",
+        "admiral_penguin": "Admiralspinguin",
+        "medic_deer": "Sanitätshirsch"
+      }
+    },
+    "quit": "Hagane Works beenden"
+  },
+  "gameIndex": {
+    "title": "Referenzlisten aus deinem Spiel",
+    "about": "Hagane Works liest deine eigene Spielinstallation und erstellt daraus seine Referenzlisten: Länder, Nationalgeister, Ausrüstung und mehr. Mit dem Programm wird nichts aus dem Spiel ausgeliefert.",
+    "missing": "Wähle zuerst den Spielordner.",
+    "building": "Spiel wird gelesen … {done} von {total}",
+    "step": "Gerade: {step}",
+    "buildingHint": "Du kannst weiterarbeiten. Seiten, die diese Listen brauchen, warten, bis sie fertig sind.",
+    "importWaiting": "Warte auf die Referenzlisten aus deinem Spiel …",
+    "ready": "Bereit · Spielversion {version} · erstellt am {time}",
+    "failed": "Die Listen konnten nicht erstellt werden.",
+    "rebuild": "Neu erstellen"
+  },
+  "install": {
+    "title": "Ins Spiel installieren",
+    "hint": "Baut die Mod und legt sie in {folder}, damit der Launcher sie anzeigt.",
+    "installedTo": "Installiert in {folder}",
+    "install": "Installieren",
+    "reinstall": "Erneut installieren",
+    "installing": "Wird installiert…",
+    "done": "Installiert. Aktiviere sie im Playset des Launchers.",
+    "failed": "Die Mod konnte nicht installiert werden"
+  },
+  "unsaved": {
+    "title": "Ungespeicherte Änderungen",
+    "body": "Einige Änderungen sind noch nicht gespeichert. Hagane Works trotzdem schließen? Sie gehen dann verloren.",
+    "close": "Ohne Speichern schließen"
+  }
+}

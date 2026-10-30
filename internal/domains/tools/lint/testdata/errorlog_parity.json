@@ -1,0 +1,3508 @@
+{
+ "patterns": [
+  {
+   "index": 0,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_non_assign_trigger",
+   "label": "raw_extras cancel block cascade (Bug 5)"
+  },
+  {
+   "index": 1,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_non_assign_effect",
+   "label": "raw_extras effect block cascade (Bug 5)"
+  },
+  {
+   "index": 2,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_equal",
+   "label": "raw_extras = cascade (Bug 5)"
+  },
+  {
+   "index": 3,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_number",
+   "label": "raw_extras numeric cascade (Bug 5)"
+  },
+  {
+   "index": 4,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_eq",
+   "label": "raw_extras stray = in modifier block (Bug 5 variant)"
+  },
+  {
+   "index": 5,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_comma",
+   "label": "raw_extras stray , in modifier block (Bug 5 variant)"
+  },
+  {
+   "index": 6,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_invalid_compare_token",
+   "label": "event trigger block malformed `=` (Bug 5 variant on events)"
+  },
+  {
+   "index": 7,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_hidden_modifier_no_block",
+   "label": "hidden_modifier emitted as scalar, not block (Bug 5 variant)"
+  },
+  {
+   "index": 8,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_malformed_at_var",
+   "label": "@var reference not resolved in export (raw_extras / resolver gap)"
+  },
+  {
+   "index": 9,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_malformed_event_ns_token",
+   "label": "event namespace id split by round-trip (Bug 5 variant)"
+  },
+  {
+   "index": 10,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_malformed_generic_token",
+   "label": "identifier emitted as stray token (round-trip / raw_extras)"
+  },
+  {
+   "index": 11,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_country_event",
+   "label": "country_event shorthand broken in events (Bug 5 variant)"
+  },
+  {
+   "index": 12,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_news_event",
+   "label": "news_event shorthand broken in events (Bug 5 variant)"
+  },
+  {
+   "index": 13,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_state_event",
+   "label": "state_event shorthand broken in events (Bug 5 variant)"
+  },
+  {
+   "index": 14,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_decision_id",
+   "label": "decision id as stray token (decision shorthand round-trip, Bug 5 variant)"
+  },
+  {
+   "index": 15,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_event_id",
+   "label": "event id as stray token (event shorthand round-trip, Bug 5 variant)"
+  },
+  {
+   "index": 16,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_idea_id",
+   "label": "idea id as stray token (Bug 5 variant)"
+  },
+  {
+   "index": 17,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_quoted",
+   "label": "modifier name quoted/malformed (raw_extras roundtrip)"
+  },
+  {
+   "index": 18,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_paren",
+   "label": "stray `(` or `)` in modifier block (Bug 5 variant)"
+  },
+  {
+   "index": 19,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_gt",
+   "label": "stray `>` from compare-op emitted wrong (Bug 5 variant)"
+  },
+  {
+   "index": 20,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_focus_trigger",
+   "label": "focus trigger token malformed (Bug 5 variant)"
+  },
+  {
+   "index": 21,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_invalid_group_slots",
+   "label": "idea slots field malformed (Bug 5 variant on ideas)"
+  },
+  {
+   "index": 22,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_idea_unknown_category",
+   "label": "idea category field malformed in export (Bug 5 variant)"
+  },
+  {
+   "index": 23,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_squote",
+   "label": "stray single-quote ' in modifier block (Bug 5 variant)"
+  },
+  {
+   "index": 24,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_event_unquoted_string",
+   "label": "event title/desc unquoted string with space ( the ) leaked (Bug 1 family — DLC-name-like unquoted)"
+  },
+  {
+   "index": 25,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_division_template_error",
+   "label": "division_template malformed in history file (Bug 5 variant)"
+  },
+  {
+   "index": 26,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_name",
+   "label": "unknown modifier name (tech/idea raw_extras roundtrip)"
+  },
+  {
+   "index": 27,
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_building_keyword",
+   "label": "tech modifier block emitted `building = building` (Bug 5 variant)"
+  },
+  {
+   "index": 28,
+   "bucket": "C_gap",
+   "sub": "technology_tags_folder",
+   "label": "tech folder undefined (common/technology_tags/ workbench missing)"
+  },
+  {
+   "index": 29,
+   "bucket": "C_gap",
+   "sub": "technology_tags_category",
+   "label": "tech category undefined (common/technology_tags/ workbench missing)"
+  },
+  {
+   "index": 30,
+   "bucket": "C_gap",
+   "sub": "replace_path_event_id",
+   "label": "event id collision w/ vanilla (replace_path strategy missing)"
+  },
+  {
+   "index": 31,
+   "bucket": "C_gap",
+   "sub": "replace_path_event_id_reverse",
+   "label": "event id reverse-lookup (replace_path strategy missing)"
+  },
+  {
+   "index": 32,
+   "bucket": "C_gap",
+   "sub": "replace_path_character",
+   "label": "character dup w/ vanilla (replace_path for common/characters/ missing)"
+  },
+  {
+   "index": 33,
+   "bucket": "C_gap",
+   "sub": "replace_path_idea",
+   "label": "idea dup w/ vanilla (replace_path for common/ideas/ missing)"
+  },
+  {
+   "index": 34,
+   "bucket": "C_gap",
+   "sub": "replace_path_entity",
+   "label": "entity dup (replace_path for common/units/equipment/ missing)"
+  },
+  {
+   "index": 35,
+   "bucket": "C_gap",
+   "sub": "entity_attachment_mod_inherent",
+   "label": "mod unit-pack entity attachment missing (mod-inherent)"
+  },
+  {
+   "index": 36,
+   "bucket": "C_gap",
+   "sub": "asset_texture_missing",
+   "label": "texture PNG missing (asset fallback architecture gap)"
+  },
+  {
+   "index": 37,
+   "bucket": "C_gap",
+   "sub": "asset_texture_handler",
+   "label": "texture handler missing file (asset fallback architecture gap)"
+  },
+  {
+   "index": 38,
+   "bucket": "C_gap",
+   "sub": "scientist_specialization",
+   "label": "scientist trait to specialization mapping"
+  },
+  {
+   "index": 39,
+   "bucket": "C_gap",
+   "sub": "character_instance_token",
+   "label": "conditional character instance token"
+  },
+  {
+   "index": 40,
+   "bucket": "C_gap",
+   "sub": "equipmentdesigner_graphic_db",
+   "label": "equipmentdesigner graphic_db custom-tag scope (mod-inherent)"
+  },
+  {
+   "index": 41,
+   "bucket": "C_gap",
+   "sub": "mio_missing",
+   "label": "Military Industrial Organisation is missing"
+  },
+  {
+   "index": 42,
+   "bucket": "C_gap",
+   "sub": "unknown_equipment_type",
+   "label": "custom equipment type is missing"
+  },
+  {
+   "index": 43,
+   "bucket": "C_gap",
+   "sub": "loc_key_collision",
+   "label": "localisation key collision with vanilla"
+  },
+  {
+   "index": 44,
+   "bucket": "C_gap",
+   "sub": "scripted_trigger_missing",
+   "label": "custom scripted trigger ref (common/scripted_triggers/ workbench missing)"
+  },
+  {
+   "index": 45,
+   "bucket": "C_gap",
+   "sub": "scripted_trigger_validation",
+   "label": "scripted trigger/localisation failed validate (scripted_* workbench gap)"
+  },
+  {
+   "index": 46,
+   "bucket": "C_gap",
+   "sub": "unknown_trigger_type",
+   "label": "unknown trigger-type (scripted_triggers workbench missing)"
+  },
+  {
+   "index": 47,
+   "bucket": "C_gap",
+   "sub": "scripted_effect_missing",
+   "label": "custom scripted effect ref (common/scripted_effects/ workbench missing)"
+  },
+  {
+   "index": 48,
+   "bucket": "C_gap",
+   "sub": "unknown_effect_type",
+   "label": "unknown effect-type (scripted_effects workbench missing)"
+  },
+  {
+   "index": 49,
+   "bucket": "C_gap",
+   "sub": "cross_ref_focus_in_trigger",
+   "label": "has_completed_focus references a missing focus"
+  },
+  {
+   "index": 50,
+   "bucket": "C_gap",
+   "sub": "cross_ref_ai_strategy_focus",
+   "label": "ai_strategy focus ref broken (cross_ref focus gate)"
+  },
+  {
+   "index": 51,
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_tooltip",
+   "label": "unlock_decision_tooltip references a missing decision"
+  },
+  {
+   "index": 52,
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_generic",
+   "label": "decision reference is missing"
+  },
+  {
+   "index": 53,
+   "bucket": "C_gap",
+   "sub": "database_scoped_var",
+   "label": "database_scoped_variables — Paradox feature not modeled"
+  },
+  {
+   "index": 54,
+   "bucket": "C_gap",
+   "sub": "tech_doctrine_ref",
+   "label": "has_doctrine trigger refs unknown doctrine (tech_tags gap)"
+  },
+  {
+   "index": 55,
+   "bucket": "C_gap",
+   "sub": "tech_bonus_category",
+   "label": "add_tech_bonus category unknown (tech_tags category gap)"
+  },
+  {
+   "index": 56,
+   "bucket": "C_gap",
+   "sub": "tech_bonus_trigger_category",
+   "label": "has_tech_bonus category unknown (tech_tags category gap)"
+  },
+  {
+   "index": 57,
+   "bucket": "C_gap",
+   "sub": "replace_path_decision_dup",
+   "label": "decision id duplicate w/ vanilla (replace_path strategy missing)"
+  },
+  {
+   "index": 58,
+   "bucket": "C_gap",
+   "sub": "replace_path_character_several",
+   "label": "character token dup w/ vanilla (replace_path for common/characters/)"
+  },
+  {
+   "index": 59,
+   "bucket": "C_gap",
+   "sub": "equipment_entity_missing",
+   "label": "equipment_graphic_database entity ref missing (equipment workbench gap)"
+  },
+  {
+   "index": 60,
+   "bucket": "C_gap",
+   "sub": "equipment_gfx_missing",
+   "label": "equipment_graphic_database GFX ref missing (equipment workbench gap)"
+  },
+  {
+   "index": 61,
+   "bucket": "C_gap",
+   "sub": "equipment_module_missing",
+   "label": "equipment module ref missing (equipment workbench gap)"
+  },
+  {
+   "index": 62,
+   "bucket": "C_gap",
+   "sub": "dynamic_token_missing",
+   "label": "custom dynamic token missing (localisation/tech gap)"
+  },
+  {
+   "index": 63,
+   "bucket": "C_gap",
+   "sub": "ai_strategy_ref_misc",
+   "label": "AI strategy misc ref (AI strategy workbench + cross_ref gap)"
+  },
+  {
+   "index": 64,
+   "bucket": "C_gap",
+   "sub": "decision_modifier_no_days_remove",
+   "label": "decision has modifier but no days_remove (mod-inherent in most mods)"
+  },
+  {
+   "index": 65,
+   "bucket": "C_gap",
+   "sub": "dynamic_modifier_ref",
+   "label": "dynamic_modifier ref (common/dynamic_modifiers/ workbench missing)"
+  },
+  {
+   "index": 66,
+   "bucket": "C_gap",
+   "sub": "static_modifier_missing",
+   "label": "static_modifier def missing (common/static_modifiers/ workbench missing)"
+  },
+  {
+   "index": 67,
+   "bucket": "C_gap",
+   "sub": "power_balance_missing",
+   "label": "power_balance ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 68,
+   "bucket": "C_gap",
+   "sub": "game_rule_missing",
+   "label": "game_rule ref (common/game_rules/ workbench missing)"
+  },
+  {
+   "index": 69,
+   "bucket": "C_gap",
+   "sub": "cross_ref_leader_trait",
+   "label": "country leader role references a missing trait"
+  },
+  {
+   "index": 70,
+   "bucket": "C_gap",
+   "sub": "ideology_ref_missing",
+   "label": "ideology ref (common/ideologies/ workbench missing)"
+  },
+  {
+   "index": 71,
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_category",
+   "label": "decision category ref broken (cross_ref)"
+  },
+  {
+   "index": 72,
+   "bucket": "C_gap",
+   "sub": "bookmark_focus_ref",
+   "label": "bookmark→focus ref (cross_ref / bookmark workbench)"
+  },
+  {
+   "index": 73,
+   "bucket": "C_gap",
+   "sub": "not_a_valid_value",
+   "label": "ideology/doctrine/category value not recognized (ideology/tech_tags workbenches)"
+  },
+  {
+   "index": 74,
+   "bucket": "C_gap",
+   "sub": "ideology_not_valid",
+   "label": "character/leader ideology not in common/ideologies/ (ideology workbench gap)"
+  },
+  {
+   "index": 75,
+   "bucket": "C_gap",
+   "sub": "create_country_leader_ideology",
+   "label": "create_country_leader ideology invalid (ideology workbench gap)"
+  },
+  {
+   "index": 76,
+   "bucket": "C_gap",
+   "sub": "replace_path_category_dup",
+   "label": "decision/idea category dup w/ vanilla (replace_path strategy missing)"
+  },
+  {
+   "index": 77,
+   "bucket": "C_gap",
+   "sub": "subunit_category_missing",
+   "label": "subunit_category undefined (common/unit_tags/ workbench missing)"
+  },
+  {
+   "index": 78,
+   "bucket": "C_gap",
+   "sub": "power_balance_value_missing",
+   "label": "add_power_balance_value ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 79,
+   "bucket": "C_gap",
+   "sub": "power_balance_modifier_missing",
+   "label": "add_power_balance_modifier ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 80,
+   "bucket": "C_gap",
+   "sub": "power_balance_remove_missing",
+   "label": "remove_power_balance ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 81,
+   "bucket": "C_gap",
+   "sub": "idea_trait_ref",
+   "label": "idea references a missing trait"
+  },
+  {
+   "index": 82,
+   "bucket": "C_gap",
+   "sub": "idea_category_missing",
+   "label": "idea category undefined (common/idea_categories/ gap)"
+  },
+  {
+   "index": 83,
+   "bucket": "C_gap",
+   "sub": "cross_ref_has_decision",
+   "label": "has_decision references a missing decision"
+  },
+  {
+   "index": 84,
+   "bucket": "C_gap",
+   "sub": "on_action_event_ref",
+   "label": "on_actions event ref broken (cross_ref event gap on history/on_actions)"
+  },
+  {
+   "index": 85,
+   "bucket": "C_gap",
+   "sub": "focus_tree_id_missing",
+   "label": "load_focus_tree ref to focus tree not in project (cross_ref / multi-country gap)"
+  },
+  {
+   "index": 86,
+   "bucket": "C_gap",
+   "sub": "corps_commander_trait_ref",
+   "label": "create_corps_commander references a missing trait"
+  },
+  {
+   "index": 87,
+   "bucket": "C_gap",
+   "sub": "scientist_trait_db_missing",
+   "label": "scientist trait definition is missing"
+  },
+  {
+   "index": 88,
+   "bucket": "C_gap",
+   "sub": "scientist_trait_role_missing",
+   "label": "scientist role trait definition is missing"
+  },
+  {
+   "index": 89,
+   "bucket": "C_gap",
+   "sub": "idea_trait_has_allowed",
+   "label": "has_allowed_idea_with_trait references a missing trait"
+  },
+  {
+   "index": 90,
+   "bucket": "C_gap",
+   "sub": "power_balance_set_missing",
+   "label": "set_power_balance ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 91,
+   "bucket": "C_gap",
+   "sub": "power_balance_side_missing",
+   "label": "set_power_balance_gfx side ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 92,
+   "bucket": "C_gap",
+   "sub": "power_balance_remove_modifier",
+   "label": "remove_power_balance_modifier ref (common/bop/ workbench missing)"
+  },
+  {
+   "index": 93,
+   "bucket": "C_gap",
+   "sub": "focus_tree_initial_show_position",
+   "label": "focus_tree initial_show_position focus id invalid (cross_ref focus)"
+  },
+  {
+   "index": 94,
+   "bucket": "C_gap",
+   "sub": "focus_generic_error",
+   "label": "focus definition error (various — mod-inherent or cross_ref)"
+  },
+  {
+   "index": 95,
+   "bucket": "D_triage_tail",
+   "sub": "event_missing_title",
+   "label": "event missing title loc key (mod-inherent localisation gap in most mods)"
+  },
+  {
+   "index": 96,
+   "bucket": "D_triage_tail",
+   "sub": "event_missing_desc",
+   "label": "event missing desc loc key (mod-inherent localisation gap)"
+  },
+  {
+   "index": 97,
+   "bucket": "D_triage_tail",
+   "sub": "event_no_options",
+   "label": "event has no options / hidden event mis-flagged (mod-inherent or export gap)"
+  },
+  {
+   "index": 98,
+   "bucket": "D_triage_tail",
+   "sub": "event_non_hidden_no_options",
+   "label": "non-hidden event without options (mod-inherent RT56 WTT event)"
+  },
+  {
+   "index": 99,
+   "bucket": "C_gap",
+   "sub": "special_project_missing",
+   "label": "special_project (sp:X) ref (common/special_projects/ workbench missing)"
+  },
+  {
+   "index": 100,
+   "bucket": "C_gap",
+   "sub": "autonomy_state_missing",
+   "label": "autonomy_state ref (common/autonomous_states/ workbench missing)"
+  },
+  {
+   "index": 101,
+   "bucket": "C_gap",
+   "sub": "invalid_subunit",
+   "label": "invalid subunit (common/unit_tags/ workbench missing)"
+  },
+  {
+   "index": 102,
+   "bucket": "C_gap",
+   "sub": "province_building_missing",
+   "label": "province_building type invalid (buildings workbench missing)"
+  },
+  {
+   "index": 103,
+   "bucket": "C_gap",
+   "sub": "equipment_upgrade_missing",
+   "label": "equipment upgrade unknown (equipment workbench missing)"
+  },
+  {
+   "index": 104,
+   "bucket": "C_gap",
+   "sub": "tech_category_folder_in_effect",
+   "label": "tech category/folder in effect (tech_tags gap)"
+  },
+  {
+   "index": 105,
+   "bucket": "C_gap",
+   "sub": "border_war_on_cancel",
+   "label": "start_border_war event ref (cross_ref event)"
+  },
+  {
+   "index": 106,
+   "bucket": "C_gap",
+   "sub": "border_war_on_win",
+   "label": "start_border_war event ref (cross_ref event)"
+  },
+  {
+   "index": 107,
+   "bucket": "C_gap",
+   "sub": "border_war_on_lose",
+   "label": "start_border_war event ref (cross_ref event)"
+  },
+  {
+   "index": 108,
+   "bucket": "C_gap",
+   "sub": "history_recruit_unknown_character",
+   "label": "history file recruit_character references unknown char (γ2 character cross_ref)"
+  },
+  {
+   "index": 109,
+   "bucket": "C_gap",
+   "sub": "script_enum_type",
+   "label": "script_enum value unknown (custom enum coverage gap)"
+  },
+  {
+   "index": 110,
+   "bucket": "C_gap",
+   "sub": "building_type_not_found",
+   "label": "building type not found (buildings workbench missing)"
+  },
+  {
+   "index": 111,
+   "bucket": "C_gap",
+   "sub": "ideology_ref_remove_leader",
+   "label": "remove_country_leader_role ideology (ideology workbench gap)"
+  },
+  {
+   "index": 112,
+   "bucket": "C_gap",
+   "sub": "replace_path_character_name_dup",
+   "label": "character name dup w/ vanilla (replace_path for common/characters/)"
+  },
+  {
+   "index": 113,
+   "bucket": "C_gap",
+   "sub": "replace_path_focus_dup",
+   "label": "focus name dup w/ vanilla (replace_path for common/national_focus/)"
+  },
+  {
+   "index": 114,
+   "bucket": "C_gap",
+   "sub": "replace_path_decision_name_dup",
+   "label": "decision name dup w/ vanilla (replace_path for common/decisions/)"
+  },
+  {
+   "index": 115,
+   "bucket": "D_triage_tail",
+   "sub": "on_actions_recruit_position",
+   "label": "recruit_character is used outside a history file"
+  },
+  {
+   "index": 116,
+   "bucket": "C_gap",
+   "sub": "scripted_localisation_fail",
+   "label": "scripted_localisation failure (common/scripted_localisation/ gap)"
+  },
+  {
+   "index": 117,
+   "bucket": "C_gap",
+   "sub": "ai_strategy_misc_ref",
+   "label": "ai_strategy misc ref (AI strategy + cross_ref gap)"
+  },
+  {
+   "index": 118,
+   "bucket": "D_triage_tail",
+   "sub": "graphic_db_tag_invalid",
+   "label": "graphic_db unknown TAG (mod-inherent, equipmentdesigner tail)"
+  },
+  {
+   "index": 119,
+   "bucket": "D_triage_tail",
+   "sub": "unknown_trigger_type",
+   "label": "unknown trigger-type (could be mod custom or regression — inspect)"
+  },
+  {
+   "index": 120,
+   "bucket": "D_triage_tail",
+   "sub": "invalid_scope_trigger",
+   "label": "invalid scope on trigger (mostly equipmentdesigner mod-inherent)"
+  },
+  {
+   "index": 121,
+   "bucket": "D_triage_tail",
+   "sub": "entity_attachment_missing",
+   "label": "entity attachment missing (mod unit-pack inherent)"
+  },
+  {
+   "index": 122,
+   "bucket": "D_triage_tail",
+   "sub": "technology_not_found",
+   "label": "technology reference missing (may be coverage gap or cross_ref miss)"
+  },
+  {
+   "index": 123,
+   "bucket": "D_triage_tail",
+   "sub": "leader_no_party",
+   "label": "country leader is missing an ideology or party binding"
+  },
+  {
+   "index": 124,
+   "bucket": "D_triage_tail",
+   "sub": "faction_template_missing",
+   "label": "faction template empty/missing (export-side gap)"
+  },
+  {
+   "index": 125,
+   "bucket": "D_triage_tail",
+   "sub": "history_set_technology_invalid",
+   "label": "history file set_technology = unknown tech (cross_ref or coverage)"
+  },
+  {
+   "index": 126,
+   "bucket": "D_triage_tail",
+   "sub": "history_set_cosmetic_tag_invalid",
+   "label": "history file set_cosmetic_tag unknown (cross_ref gap)"
+  },
+  {
+   "index": 127,
+   "bucket": "D_triage_tail",
+   "sub": "triggered_missing_event",
+   "label": "event ref dangling (cross_ref gap)"
+  },
+  {
+   "index": 128,
+   "bucket": "mod_noise",
+   "sub": "font_mismatch",
+   "label": "font file line-height mismatch (cosmetic, mod-inherent)"
+  },
+  {
+   "index": 129,
+   "bucket": "mod_noise",
+   "sub": "dlc_checksum",
+   "label": "DLC checksum warning (achievement lock only, harmless)"
+  },
+  {
+   "index": 130,
+   "bucket": "mod_noise",
+   "sub": "gui_window_widget",
+   "label": "GUI window widget not found (mod-inherent UI override)"
+  }
+ ],
+ "matrix": [
+  {
+   "body": "Non assign trigger is not enclosed in a block near line: 12",
+   "hits": [
+    0
+   ]
+  },
+  {
+   "body": "Non assign effect is not enclosed near line: 3",
+   "hits": [
+    1
+   ]
+  },
+  {
+   "body": "Unexpected token: =, near line: 44\" in file: \"common/ideas/zz_mod.txt\"",
+   "hits": [
+    2
+   ]
+  },
+  {
+   "body": "Unexpected token: 1.5, near line: 9\" in file: \"events/zz.txt\"",
+   "hits": [
+    3
+   ]
+  },
+  {
+   "body": "Unknown modifier: =, in file common/ideas/x.txt",
+   "hits": [
+    4
+   ]
+  },
+  {
+   "body": "Unknown modifier: ,, in file common/ideas/x.txt",
+   "hits": [
+    5
+   ]
+  },
+  {
+   "body": "Not a valid compare token in trigger '=' near line: 8",
+   "hits": [
+    6
+   ]
+  },
+  {
+   "body": "Expected hidden_modifier to be followed by a block",
+   "hits": [
+    7
+   ]
+  },
+  {
+   "body": "Malformed token: @var_ref near line: 5",
+   "hits": [
+    8
+   ]
+  },
+  {
+   "body": "Malformed token: france.100 near line: 5",
+   "hits": [
+    9
+   ]
+  },
+  {
+   "body": "Malformed token: my_focus_id, near line: 7",
+   "hits": [
+    10
+   ]
+  },
+  {
+   "body": "Unexpected token: country_event, near line: 11",
+   "hits": [
+    11
+   ]
+  },
+  {
+   "body": "Unexpected token: news_event, near line: 11",
+   "hits": [
+    12
+   ]
+  },
+  {
+   "body": "Unexpected token: state_event, near line: 11",
+   "hits": [
+    13
+   ]
+  },
+  {
+   "body": "Unexpected token: GER_my_decision, near line: 21\" in file: \"common/decisions/zz_GER.txt\"",
+   "hits": [
+    14
+   ]
+  },
+  {
+   "body": "Unexpected token: ger_evt, near line: 4\" in file: \"events/zz_GER.txt\"",
+   "hits": [
+    15
+   ]
+  },
+  {
+   "body": "Unexpected token: GER_my_idea, near line: 6\" in file: \"common/ideas/zz_GER.txt\"",
+   "hits": [
+    16
+   ]
+  },
+  {
+   "body": "Unknown modifier: 'political_power_gain'",
+   "hits": [
+    17
+   ]
+  },
+  {
+   "body": "Unknown modifier: ( in file x",
+   "hits": [
+    18
+   ]
+  },
+  {
+   "body": "Unexpected token: >, near line: 2",
+   "hits": [
+    19
+   ]
+  },
+  {
+   "body": "Unexpected token: focus_tok, near line: 9\" in file: \"common/national_focus/zz_GER.txt\"",
+   "hits": [
+    20
+   ]
+  },
+  {
+   "body": "Invalid group: slots in idea GER_my_idea",
+   "hits": [
+    21
+   ]
+  },
+  {
+   "body": "Unknown category for : GER_my_idea",
+   "hits": [
+    22
+   ]
+  },
+  {
+   "body": "Unknown modifier: ', near line: 4",
+   "hits": [
+    23
+   ]
+  },
+  {
+   "body": "Error: unexpected token in file: \"events/zz_GER.txt\" line 3",
+   "hits": [
+    24
+   ]
+  },
+  {
+   "body": "Error reading division template in history file",
+   "hits": [
+    25
+   ]
+  },
+  {
+   "body": "Unknown modifier: research_speed_factor",
+   "hits": [
+    26
+   ]
+  },
+  {
+   "body": "Unknown building: building",
+   "hits": [
+    27
+   ]
+  },
+  {
+   "body": "Technology my_tech has invalid folder my_folder",
+   "hits": [
+    28
+   ]
+  },
+  {
+   "body": "Technology my_tech has invalid category my_cat",
+   "hits": [
+    29
+   ]
+  },
+  {
+   "body": "Failed to create id 5 for event",
+   "hits": [
+    30
+   ]
+  },
+  {
+   "body": "Reverse id lookup: france.1 failed",
+   "hits": [
+    31
+   ]
+  },
+  {
+   "body": "Multiple character have the tag GER_hitler",
+   "hits": [
+    32
+   ]
+  },
+  {
+   "body": "Duplicate idea. GER_my_idea",
+   "hits": [
+    33
+   ]
+  },
+  {
+   "body": "Duplicate of my_entity entity added to entity system",
+   "hits": [
+    34
+   ]
+  },
+  {
+   "body": "Failed to find entity \"my_unit_entity\" for attachment",
+   "hits": [
+    35,
+    121
+   ]
+  },
+  {
+   "body": "Couldn't find texture file gfx/x.dds",
+   "hits": [
+    36
+   ]
+  },
+  {
+   "body": "Texture Handler encountered missing texture file gfx/y.dds",
+   "hits": [
+    37
+   ]
+  },
+  {
+   "body": "Invalid scientist trait my_trait",
+   "hits": [
+    38
+   ]
+  },
+  {
+   "body": "Unexpected token: instance near line: 3",
+   "hits": [
+    39
+   ]
+  },
+  {
+   "body": "error in equipmentdesigner/graphic_db/00_graphic_db.txt",
+   "hits": [
+    40
+   ]
+  },
+  {
+   "body": "MIO my_mio does not match any MIO in database",
+   "hits": [
+    41
+   ]
+  },
+  {
+   "body": "Unknown equipment type: my_equip",
+   "hits": [
+    42
+   ]
+  },
+  {
+   "body": "Mod has loc key collisions with vanilla",
+   "hits": [
+    43
+   ]
+  },
+  {
+   "body": "Invalid trigger 'my_scripted_trigger' in file x",
+   "hits": [
+    44
+   ]
+  },
+  {
+   "body": "Trigger failed to validate: my_trigger",
+   "hits": [
+    45
+   ]
+  },
+  {
+   "body": "Unknown trigger-type: my_custom_trigger",
+   "hits": [
+    46,
+    119
+   ]
+  },
+  {
+   "body": "Invalid effect 'my_scripted_effect' in file x",
+   "hits": [
+    47
+   ]
+  },
+  {
+   "body": "Unknown effect-type: my_custom_effect",
+   "hits": [
+    48
+   ]
+  },
+  {
+   "body": "Invalid focus scripted in trigger has_completed_focus",
+   "hits": [
+    49
+   ]
+  },
+  {
+   "body": "invalid focus for ai strategy my_focus",
+   "hits": [
+    50
+   ]
+  },
+  {
+   "body": "Invalid Decision ID for unlock_decision_tooltip: my_decision",
+   "hits": [
+    51,
+    52
+   ]
+  },
+  {
+   "body": "Invalid Decision ID for something else",
+   "hits": [
+    52
+   ]
+  },
+  {
+   "body": "invalid database object for effect/trigger: my_var",
+   "hits": [
+    53
+   ]
+  },
+  {
+   "body": "Invalid doctrine my_doctrine",
+   "hits": [
+    54
+   ]
+  },
+  {
+   "body": "add_tech_bonus: Unknown technology category my_cat",
+   "hits": [
+    55
+   ]
+  },
+  {
+   "body": "Invalid category or tech in has_tech_bonus",
+   "hits": [
+    56
+   ]
+  },
+  {
+   "body": "Duplicate ID 1234 in decisions",
+   "hits": [
+    57
+   ]
+  },
+  {
+   "body": "Several character with the same token GER_x",
+   "hits": [
+    58
+   ]
+  },
+  {
+   "body": "Entity referenced in equipment graphic database does not exist",
+   "hits": [
+    59
+   ]
+  },
+  {
+   "body": "GFX referenced in equipment graphic database does not exist",
+   "hits": [
+    60
+   ]
+  },
+  {
+   "body": "Invalid Module \"my_module\" attached to slot",
+   "hits": [
+    61
+   ]
+  },
+  {
+   "body": "Tried to get dynamic token that does not exist",
+   "hits": [
+    62
+   ]
+  },
+  {
+   "body": "error in ai_strategy.cpp:220",
+   "hits": [
+    63,
+    117
+   ]
+  },
+  {
+   "body": "Decision scripted with modifier, but no days_remove",
+   "hits": [
+    64
+   ]
+  },
+  {
+   "body": "Invalid dynamic modifier my_dm",
+   "hits": [
+    65
+   ]
+  },
+  {
+   "body": "Effect has missing static modifier definition",
+   "hits": [
+    66
+   ]
+  },
+  {
+   "body": "set_power_balance_gfx: Unable to find power balance my_bop",
+   "hits": [
+    67
+   ]
+  },
+  {
+   "body": "has_game_rule: game rule my_rule not found",
+   "hits": [
+    68
+   ]
+  },
+  {
+   "body": "add_country_leader_role: Invalid country leader trait my_trait",
+   "hits": [
+    69
+   ]
+  },
+  {
+   "body": "add_country_leader_role: Invalid ideology fascism_x",
+   "hits": [
+    70
+   ]
+  },
+  {
+   "body": "Invalid Decision Category my_cat",
+   "hits": [
+    71
+   ]
+  },
+  {
+   "body": "Invalid focus: my_focus: focuses",
+   "hits": [
+    72
+   ]
+  },
+  {
+   "body": "Not a valid value: my_value",
+   "hits": [
+    73
+   ]
+  },
+  {
+   "body": "my_ideology is not a valid ideology",
+   "hits": [
+    74
+   ]
+  },
+  {
+   "body": "create_country_leader: Invalid ideology my_ideo",
+   "hits": [
+    75
+   ]
+  },
+  {
+   "body": "Duplicate category. my_cat is a duplicate.",
+   "hits": [
+    76
+   ]
+  },
+  {
+   "body": "Invalid subunit category: my_subcat",
+   "hits": [
+    77
+   ]
+  },
+  {
+   "body": "add_power_balance_value: Unable to find power balance my_bop",
+   "hits": [
+    78
+   ]
+  },
+  {
+   "body": "add_power_balance_modifier: Unable to find power balance my_bop",
+   "hits": [
+    79
+   ]
+  },
+  {
+   "body": "remove_power_balance: Unable to find power balance my_bop",
+   "hits": [
+    80
+   ]
+  },
+  {
+   "body": "Invalid trait for idea GER_my_idea",
+   "hits": [
+    81
+   ]
+  },
+  {
+   "body": "Idea: GER_my_idea unknown category: my_cat",
+   "hits": [
+    82
+   ]
+  },
+  {
+   "body": "Invalid decision in has_decision trigger",
+   "hits": [
+    83
+   ]
+  },
+  {
+   "body": "on_action on_startup is not a valid event",
+   "hits": [
+    84
+   ]
+  },
+  {
+   "body": "Unable to find focus tree with ID: my_tree",
+   "hits": [
+    85
+   ]
+  },
+  {
+   "body": "create_corps_commander: invalid trait my_trait",
+   "hits": [
+    86
+   ]
+  },
+  {
+   "body": "my_trait is not in trait DB in game/common/scientist_traits",
+   "hits": [
+    87
+   ]
+  },
+  {
+   "body": "GER_char in scientist role, trait my_trait missing",
+   "hits": [
+    88
+   ]
+  },
+  {
+   "body": "Invalid trait: my_trait has_allowed_idea_with_trait",
+   "hits": [
+    89
+   ]
+  },
+  {
+   "body": "set_power_balance: Unable to find power balance my_bop",
+   "hits": [
+    90
+   ]
+  },
+  {
+   "body": "set_power_balance_gfx: Unable to find side with ID my_side",
+   "hits": [
+    91
+   ]
+  },
+  {
+   "body": "remove_power_balance_modifier: Unable to find power balance my_bop",
+   "hits": [
+    92
+   ]
+  },
+  {
+   "body": "focus_tree initial_show_position references invalid focus my_focus",
+   "hits": [
+    93
+   ]
+  },
+  {
+   "body": "Error in focus: my_focus",
+   "hits": [
+    94
+   ]
+  },
+  {
+   "body": "Event is missing a title: france.100",
+   "hits": [
+    95
+   ]
+  },
+  {
+   "body": "Event is missing a desc: france.100",
+   "hits": [
+    96
+   ]
+  },
+  {
+   "body": "Event has no options: france.100",
+   "hits": [
+    97
+   ]
+  },
+  {
+   "body": "non-hidden event with no options defined",
+   "hits": [
+    98
+   ]
+  },
+  {
+   "body": "sp:my_project does not match any Special Project in database",
+   "hits": [
+    99
+   ]
+  },
+  {
+   "body": "Failed to find autonomy_state my_state",
+   "hits": [
+    100
+   ]
+  },
+  {
+   "body": "Invalid subunit. my_subunit",
+   "hits": [
+    101
+   ]
+  },
+  {
+   "body": "my_building is not a province building type",
+   "hits": [
+    102
+   ]
+  },
+  {
+   "body": "Unrecognized equipment upgrade my_upgrade",
+   "hits": [
+    103
+   ]
+  },
+  {
+   "body": "Unknown technology/doctrine category/folder my_cat",
+   "hits": [
+    104
+   ]
+  },
+  {
+   "body": "invalid on_cancel event for start border war",
+   "hits": [
+    105
+   ]
+  },
+  {
+   "body": "invalid on_win event for start border war",
+   "hits": [
+    106
+   ]
+  },
+  {
+   "body": "invalid on_lose event for start border war",
+   "hits": [
+    107
+   ]
+  },
+  {
+   "body": "recruit_character: Unknown character GER_someone",
+   "hits": [
+    108
+   ]
+  },
+  {
+   "body": "Value does not belong to designated Script EnumType",
+   "hits": [
+    109
+   ]
+  },
+  {
+   "body": "Building type not found my_building",
+   "hits": [
+    110
+   ]
+  },
+  {
+   "body": "remove_country_leader_role: Invalid ideology my_ideo",
+   "hits": [
+    111
+   ]
+  },
+  {
+   "body": "Several characters have the name My Guy",
+   "hits": [
+    112
+   ]
+  },
+  {
+   "body": "Duplicate focus name will cause database problems",
+   "hits": [
+    113
+   ]
+  },
+  {
+   "body": "Duplicate decision. my_decision is a duplicate.",
+   "hits": [
+    114
+   ]
+  },
+  {
+   "body": "recruit_character should only happen in game/history files",
+   "hits": [
+    115
+   ]
+  },
+  {
+   "body": "failure in common/scripted_localisation/my_loc.txt",
+   "hits": [
+    116
+   ]
+  },
+  {
+   "body": "generic ai_strategy reference problem",
+   "hits": [
+    117
+   ]
+  },
+  {
+   "body": "Expected 'default', a continent name or a country tag",
+   "hits": [
+    118
+   ]
+  },
+  {
+   "body": "Invalid Scope, supported: State|Country",
+   "hits": [
+    120
+   ]
+  },
+  {
+   "body": "Failed to find entity",
+   "hits": [
+    121
+   ]
+  },
+  {
+   "body": "Technology my_tech not found",
+   "hits": [
+    122
+   ]
+  },
+  {
+   "body": "No political party my_party for country leader",
+   "hits": [
+    123
+   ]
+  },
+  {
+   "body": "Failed to find faction template",
+   "hits": [
+    124
+   ]
+  },
+  {
+   "body": "set_technology: Invalid tech my_tech",
+   "hits": [
+    125
+   ]
+  },
+  {
+   "body": "set_cosmetic_tag: Invalid tag",
+   "hits": [
+    126
+   ]
+  },
+  {
+   "body": "Tried to trigger non-existant event france.999",
+   "hits": [
+    127
+   ]
+  },
+  {
+   "body": "font my_font does not match previous fontfiles",
+   "hits": [
+    128
+   ]
+  },
+  {
+   "body": "incorrect checksum for DLC",
+   "hits": [
+    129
+   ]
+  },
+  {
+   "body": "Could not find my_widget in window my_window",
+   "hits": [
+    130
+   ]
+  },
+  {
+   "body": "Some brand new engine complaint we have no pattern for",
+   "hits": []
+  },
+  {
+   "body": "Invalid focus scripted in trigger has_completed_focus = GER_awakening in file: \"common/national_focus/zz_GER.txt\"",
+   "hits": [
+    49
+   ]
+  },
+  {
+   "body": "recruit_character: Unknown character GER_leader_guy",
+   "hits": [
+    108
+   ]
+  },
+  {
+   "body": "State 42 has invalid category my_cat",
+   "hits": [
+    29
+   ]
+  },
+  {
+   "body": "Duplicate idea. GER_industrial_push in file: \"common/ideas/zz_GER.txt\"",
+   "hits": [
+    33
+   ]
+  },
+  {
+   "body": "Tried to trigger non-existant event ger.500",
+   "hits": [
+    127
+   ]
+  },
+  {
+   "body": "Invalid Decision ID for my_decision_x in file: \"common/decisions/zz_GER.txt\"",
+   "hits": [
+    52
+   ]
+  },
+  {
+   "body": "Technology my_secret_tech not found in file: \"common/technologies/zz.txt\"",
+   "hits": [
+    122
+   ]
+  },
+  {
+   "body": "Failed to find faction template in file: \"history/countries/zz_GER.txt\"",
+   "hits": [
+    124
+   ]
+  }
+ ],
+ "classify": [
+  {
+   "body": "Non assign trigger is not enclosed in a block near line: 12",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_non_assign_trigger",
+   "label": "raw_extras cancel block cascade (Bug 5)"
+  },
+  {
+   "body": "Non assign effect is not enclosed near line: 3",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_non_assign_effect",
+   "label": "raw_extras effect block cascade (Bug 5)"
+  },
+  {
+   "body": "Unexpected token: =, near line: 44\" in file: \"common/ideas/zz_mod.txt\"",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_equal",
+   "label": "raw_extras = cascade (Bug 5)"
+  },
+  {
+   "body": "Unexpected token: 1.5, near line: 9\" in file: \"events/zz.txt\"",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_number",
+   "label": "raw_extras numeric cascade (Bug 5)"
+  },
+  {
+   "body": "Unknown modifier: =, in file common/ideas/x.txt",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_eq",
+   "label": "raw_extras stray = in modifier block (Bug 5 variant)"
+  },
+  {
+   "body": "Unknown modifier: ,, in file common/ideas/x.txt",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_comma",
+   "label": "raw_extras stray , in modifier block (Bug 5 variant)"
+  },
+  {
+   "body": "Not a valid compare token in trigger '=' near line: 8",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_invalid_compare_token",
+   "label": "event trigger block malformed `=` (Bug 5 variant on events)"
+  },
+  {
+   "body": "Expected hidden_modifier to be followed by a block",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_hidden_modifier_no_block",
+   "label": "hidden_modifier emitted as scalar, not block (Bug 5 variant)"
+  },
+  {
+   "body": "Malformed token: @var_ref near line: 5",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_malformed_at_var",
+   "label": "@var reference not resolved in export (raw_extras / resolver gap)"
+  },
+  {
+   "body": "Malformed token: france.100 near line: 5",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_malformed_event_ns_token",
+   "label": "event namespace id split by round-trip (Bug 5 variant)"
+  },
+  {
+   "body": "Malformed token: my_focus_id, near line: 7",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_malformed_generic_token",
+   "label": "identifier emitted as stray token (round-trip / raw_extras)"
+  },
+  {
+   "body": "Unexpected token: country_event, near line: 11",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_country_event",
+   "label": "country_event shorthand broken in events (Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: news_event, near line: 11",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_news_event",
+   "label": "news_event shorthand broken in events (Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: state_event, near line: 11",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_state_event",
+   "label": "state_event shorthand broken in events (Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: GER_my_decision, near line: 21\" in file: \"common/decisions/zz_GER.txt\"",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_decision_id",
+   "label": "decision id as stray token (decision shorthand round-trip, Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: ger_evt, near line: 4\" in file: \"events/zz_GER.txt\"",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_event_id",
+   "label": "event id as stray token (event shorthand round-trip, Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: GER_my_idea, near line: 6\" in file: \"common/ideas/zz_GER.txt\"",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_idea_id",
+   "label": "idea id as stray token (Bug 5 variant)"
+  },
+  {
+   "body": "Unknown modifier: 'political_power_gain'",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_quoted",
+   "label": "modifier name quoted/malformed (raw_extras roundtrip)"
+  },
+  {
+   "body": "Unknown modifier: ( in file x",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_paren",
+   "label": "stray `(` or `)` in modifier block (Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: >, near line: 2",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_gt",
+   "label": "stray `>` from compare-op emitted wrong (Bug 5 variant)"
+  },
+  {
+   "body": "Unexpected token: focus_tok, near line: 9\" in file: \"common/national_focus/zz_GER.txt\"",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unexpected_focus_trigger",
+   "label": "focus trigger token malformed (Bug 5 variant)"
+  },
+  {
+   "body": "Invalid group: slots in idea GER_my_idea",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_invalid_group_slots",
+   "label": "idea slots field malformed (Bug 5 variant on ideas)"
+  },
+  {
+   "body": "Unknown category for : GER_my_idea",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_idea_unknown_category",
+   "label": "idea category field malformed in export (Bug 5 variant)"
+  },
+  {
+   "body": "Unknown modifier: ', near line: 4",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_squote",
+   "label": "stray single-quote ' in modifier block (Bug 5 variant)"
+  },
+  {
+   "body": "Error: unexpected token in file: \"events/zz_GER.txt\" line 3",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_event_unquoted_string",
+   "label": "event title/desc unquoted string with space ( the ) leaked (Bug 1 family — DLC-name-like unquoted)"
+  },
+  {
+   "body": "Error reading division template in history file",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_division_template_error",
+   "label": "division_template malformed in history file (Bug 5 variant)"
+  },
+  {
+   "body": "Unknown modifier: research_speed_factor",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_modifier_name",
+   "label": "unknown modifier name (tech/idea raw_extras roundtrip)"
+  },
+  {
+   "body": "Unknown building: building",
+   "bucket": "D_bug5_fixed",
+   "sub": "bug5_unknown_building_keyword",
+   "label": "tech modifier block emitted `building = building` (Bug 5 variant)"
+  },
+  {
+   "body": "Technology my_tech has invalid folder my_folder",
+   "bucket": "C_gap",
+   "sub": "technology_tags_folder",
+   "label": "tech folder undefined (common/technology_tags/ workbench missing)"
+  },
+  {
+   "body": "Technology my_tech has invalid category my_cat",
+   "bucket": "C_gap",
+   "sub": "technology_tags_category",
+   "label": "tech category undefined (common/technology_tags/ workbench missing)"
+  },
+  {
+   "body": "Failed to create id 5 for event",
+   "bucket": "C_gap",
+   "sub": "replace_path_event_id",
+   "label": "event id collision w/ vanilla (replace_path strategy missing)"
+  },
+  {
+   "body": "Reverse id lookup: france.1 failed",
+   "bucket": "C_gap",
+   "sub": "replace_path_event_id_reverse",
+   "label": "event id reverse-lookup (replace_path strategy missing)"
+  },
+  {
+   "body": "Multiple character have the tag GER_hitler",
+   "bucket": "C_gap",
+   "sub": "replace_path_character",
+   "label": "character dup w/ vanilla (replace_path for common/characters/ missing)"
+  },
+  {
+   "body": "Duplicate idea. GER_my_idea",
+   "bucket": "C_gap",
+   "sub": "replace_path_idea",
+   "label": "idea dup w/ vanilla (replace_path for common/ideas/ missing)"
+  },
+  {
+   "body": "Duplicate of my_entity entity added to entity system",
+   "bucket": "C_gap",
+   "sub": "replace_path_entity",
+   "label": "entity dup (replace_path for common/units/equipment/ missing)"
+  },
+  {
+   "body": "Failed to find entity \"my_unit_entity\" for attachment",
+   "bucket": "C_gap",
+   "sub": "entity_attachment_mod_inherent",
+   "label": "mod unit-pack entity attachment missing (mod-inherent)"
+  },
+  {
+   "body": "Couldn't find texture file gfx/x.dds",
+   "bucket": "C_gap",
+   "sub": "asset_texture_missing",
+   "label": "texture PNG missing (asset fallback architecture gap)"
+  },
+  {
+   "body": "Texture Handler encountered missing texture file gfx/y.dds",
+   "bucket": "C_gap",
+   "sub": "asset_texture_handler",
+   "label": "texture handler missing file (asset fallback architecture gap)"
+  },
+  {
+   "body": "Invalid scientist trait my_trait",
+   "bucket": "C_gap",
+   "sub": "scientist_specialization",
+   "label": "scientist trait to specialization mapping"
+  },
+  {
+   "body": "Unexpected token: instance near line: 3",
+   "bucket": "C_gap",
+   "sub": "character_instance_token",
+   "label": "conditional character instance token"
+  },
+  {
+   "body": "error in equipmentdesigner/graphic_db/00_graphic_db.txt",
+   "bucket": "C_gap",
+   "sub": "equipmentdesigner_graphic_db",
+   "label": "equipmentdesigner graphic_db custom-tag scope (mod-inherent)"
+  },
+  {
+   "body": "MIO my_mio does not match any MIO in database",
+   "bucket": "C_gap",
+   "sub": "mio_missing",
+   "label": "Military Industrial Organisation is missing"
+  },
+  {
+   "body": "Unknown equipment type: my_equip",
+   "bucket": "C_gap",
+   "sub": "unknown_equipment_type",
+   "label": "custom equipment type is missing"
+  },
+  {
+   "body": "Mod has loc key collisions with vanilla",
+   "bucket": "C_gap",
+   "sub": "loc_key_collision",
+   "label": "localisation key collision with vanilla"
+  },
+  {
+   "body": "Invalid trigger 'my_scripted_trigger' in file x",
+   "bucket": "C_gap",
+   "sub": "scripted_trigger_missing",
+   "label": "custom scripted trigger ref (common/scripted_triggers/ workbench missing)"
+  },
+  {
+   "body": "Trigger failed to validate: my_trigger",
+   "bucket": "C_gap",
+   "sub": "scripted_trigger_validation",
+   "label": "scripted trigger/localisation failed validate (scripted_* workbench gap)"
+  },
+  {
+   "body": "Unknown trigger-type: my_custom_trigger",
+   "bucket": "C_gap",
+   "sub": "unknown_trigger_type",
+   "label": "unknown trigger-type (scripted_triggers workbench missing)"
+  },
+  {
+   "body": "Invalid effect 'my_scripted_effect' in file x",
+   "bucket": "C_gap",
+   "sub": "scripted_effect_missing",
+   "label": "custom scripted effect ref (common/scripted_effects/ workbench missing)"
+  },
+  {
+   "body": "Unknown effect-type: my_custom_effect",
+   "bucket": "C_gap",
+   "sub": "unknown_effect_type",
+   "label": "unknown effect-type (scripted_effects workbench missing)"
+  },
+  {
+   "body": "Invalid focus scripted in trigger has_completed_focus",
+   "bucket": "C_gap",
+   "sub": "cross_ref_focus_in_trigger",
+   "label": "has_completed_focus references a missing focus"
+  },
+  {
+   "body": "invalid focus for ai strategy my_focus",
+   "bucket": "C_gap",
+   "sub": "cross_ref_ai_strategy_focus",
+   "label": "ai_strategy focus ref broken (cross_ref focus gate)"
+  },
+  {
+   "body": "Invalid Decision ID for unlock_decision_tooltip: my_decision",
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_tooltip",
+   "label": "unlock_decision_tooltip references a missing decision"
+  },
+  {
+   "body": "Invalid Decision ID for something else",
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_generic",
+   "label": "decision reference is missing"
+  },
+  {
+   "body": "invalid database object for effect/trigger: my_var",
+   "bucket": "C_gap",
+   "sub": "database_scoped_var",
+   "label": "database_scoped_variables — Paradox feature not modeled"
+  },
+  {
+   "body": "Invalid doctrine my_doctrine",
+   "bucket": "C_gap",
+   "sub": "tech_doctrine_ref",
+   "label": "has_doctrine trigger refs unknown doctrine (tech_tags gap)"
+  },
+  {
+   "body": "add_tech_bonus: Unknown technology category my_cat",
+   "bucket": "C_gap",
+   "sub": "tech_bonus_category",
+   "label": "add_tech_bonus category unknown (tech_tags category gap)"
+  },
+  {
+   "body": "Invalid category or tech in has_tech_bonus",
+   "bucket": "C_gap",
+   "sub": "tech_bonus_trigger_category",
+   "label": "has_tech_bonus category unknown (tech_tags category gap)"
+  },
+  {
+   "body": "Duplicate ID 1234 in decisions",
+   "bucket": "C_gap",
+   "sub": "replace_path_decision_dup",
+   "label": "decision id duplicate w/ vanilla (replace_path strategy missing)"
+  },
+  {
+   "body": "Several character with the same token GER_x",
+   "bucket": "C_gap",
+   "sub": "replace_path_character_several",
+   "label": "character token dup w/ vanilla (replace_path for common/characters/)"
+  },
+  {
+   "body": "Entity referenced in equipment graphic database does not exist",
+   "bucket": "C_gap",
+   "sub": "equipment_entity_missing",
+   "label": "equipment_graphic_database entity ref missing (equipment workbench gap)"
+  },
+  {
+   "body": "GFX referenced in equipment graphic database does not exist",
+   "bucket": "C_gap",
+   "sub": "equipment_gfx_missing",
+   "label": "equipment_graphic_database GFX ref missing (equipment workbench gap)"
+  },
+  {
+   "body": "Invalid Module \"my_module\" attached to slot",
+   "bucket": "C_gap",
+   "sub": "equipment_module_missing",
+   "label": "equipment module ref missing (equipment workbench gap)"
+  },
+  {
+   "body": "Tried to get dynamic token that does not exist",
+   "bucket": "C_gap",
+   "sub": "dynamic_token_missing",
+   "label": "custom dynamic token missing (localisation/tech gap)"
+  },
+  {
+   "body": "error in ai_strategy.cpp:220",
+   "bucket": "C_gap",
+   "sub": "ai_strategy_ref_misc",
+   "label": "AI strategy misc ref (AI strategy workbench + cross_ref gap)"
+  },
+  {
+   "body": "Decision scripted with modifier, but no days_remove",
+   "bucket": "C_gap",
+   "sub": "decision_modifier_no_days_remove",
+   "label": "decision has modifier but no days_remove (mod-inherent in most mods)"
+  },
+  {
+   "body": "Invalid dynamic modifier my_dm",
+   "bucket": "C_gap",
+   "sub": "dynamic_modifier_ref",
+   "label": "dynamic_modifier ref (common/dynamic_modifiers/ workbench missing)"
+  },
+  {
+   "body": "Effect has missing static modifier definition",
+   "bucket": "C_gap",
+   "sub": "static_modifier_missing",
+   "label": "static_modifier def missing (common/static_modifiers/ workbench missing)"
+  },
+  {
+   "body": "set_power_balance_gfx: Unable to find power balance my_bop",
+   "bucket": "C_gap",
+   "sub": "power_balance_missing",
+   "label": "power_balance ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "has_game_rule: game rule my_rule not found",
+   "bucket": "C_gap",
+   "sub": "game_rule_missing",
+   "label": "game_rule ref (common/game_rules/ workbench missing)"
+  },
+  {
+   "body": "add_country_leader_role: Invalid country leader trait my_trait",
+   "bucket": "C_gap",
+   "sub": "cross_ref_leader_trait",
+   "label": "country leader role references a missing trait"
+  },
+  {
+   "body": "add_country_leader_role: Invalid ideology fascism_x",
+   "bucket": "C_gap",
+   "sub": "ideology_ref_missing",
+   "label": "ideology ref (common/ideologies/ workbench missing)"
+  },
+  {
+   "body": "Invalid Decision Category my_cat",
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_category",
+   "label": "decision category ref broken (cross_ref)"
+  },
+  {
+   "body": "Invalid focus: my_focus: focuses",
+   "bucket": "C_gap",
+   "sub": "bookmark_focus_ref",
+   "label": "bookmark→focus ref (cross_ref / bookmark workbench)"
+  },
+  {
+   "body": "Not a valid value: my_value",
+   "bucket": "C_gap",
+   "sub": "not_a_valid_value",
+   "label": "ideology/doctrine/category value not recognized (ideology/tech_tags workbenches)"
+  },
+  {
+   "body": "my_ideology is not a valid ideology",
+   "bucket": "C_gap",
+   "sub": "ideology_not_valid",
+   "label": "character/leader ideology not in common/ideologies/ (ideology workbench gap)"
+  },
+  {
+   "body": "create_country_leader: Invalid ideology my_ideo",
+   "bucket": "C_gap",
+   "sub": "create_country_leader_ideology",
+   "label": "create_country_leader ideology invalid (ideology workbench gap)"
+  },
+  {
+   "body": "Duplicate category. my_cat is a duplicate.",
+   "bucket": "C_gap",
+   "sub": "replace_path_category_dup",
+   "label": "decision/idea category dup w/ vanilla (replace_path strategy missing)"
+  },
+  {
+   "body": "Invalid subunit category: my_subcat",
+   "bucket": "C_gap",
+   "sub": "subunit_category_missing",
+   "label": "subunit_category undefined (common/unit_tags/ workbench missing)"
+  },
+  {
+   "body": "add_power_balance_value: Unable to find power balance my_bop",
+   "bucket": "C_gap",
+   "sub": "power_balance_value_missing",
+   "label": "add_power_balance_value ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "add_power_balance_modifier: Unable to find power balance my_bop",
+   "bucket": "C_gap",
+   "sub": "power_balance_modifier_missing",
+   "label": "add_power_balance_modifier ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "remove_power_balance: Unable to find power balance my_bop",
+   "bucket": "C_gap",
+   "sub": "power_balance_remove_missing",
+   "label": "remove_power_balance ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "Invalid trait for idea GER_my_idea",
+   "bucket": "C_gap",
+   "sub": "idea_trait_ref",
+   "label": "idea references a missing trait"
+  },
+  {
+   "body": "Idea: GER_my_idea unknown category: my_cat",
+   "bucket": "C_gap",
+   "sub": "idea_category_missing",
+   "label": "idea category undefined (common/idea_categories/ gap)"
+  },
+  {
+   "body": "Invalid decision in has_decision trigger",
+   "bucket": "C_gap",
+   "sub": "cross_ref_has_decision",
+   "label": "has_decision references a missing decision"
+  },
+  {
+   "body": "on_action on_startup is not a valid event",
+   "bucket": "C_gap",
+   "sub": "on_action_event_ref",
+   "label": "on_actions event ref broken (cross_ref event gap on history/on_actions)"
+  },
+  {
+   "body": "Unable to find focus tree with ID: my_tree",
+   "bucket": "C_gap",
+   "sub": "focus_tree_id_missing",
+   "label": "load_focus_tree ref to focus tree not in project (cross_ref / multi-country gap)"
+  },
+  {
+   "body": "create_corps_commander: invalid trait my_trait",
+   "bucket": "C_gap",
+   "sub": "corps_commander_trait_ref",
+   "label": "create_corps_commander references a missing trait"
+  },
+  {
+   "body": "my_trait is not in trait DB in game/common/scientist_traits",
+   "bucket": "C_gap",
+   "sub": "scientist_trait_db_missing",
+   "label": "scientist trait definition is missing"
+  },
+  {
+   "body": "GER_char in scientist role, trait my_trait missing",
+   "bucket": "C_gap",
+   "sub": "scientist_trait_role_missing",
+   "label": "scientist role trait definition is missing"
+  },
+  {
+   "body": "Invalid trait: my_trait has_allowed_idea_with_trait",
+   "bucket": "C_gap",
+   "sub": "idea_trait_has_allowed",
+   "label": "has_allowed_idea_with_trait references a missing trait"
+  },
+  {
+   "body": "set_power_balance: Unable to find power balance my_bop",
+   "bucket": "C_gap",
+   "sub": "power_balance_set_missing",
+   "label": "set_power_balance ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "set_power_balance_gfx: Unable to find side with ID my_side",
+   "bucket": "C_gap",
+   "sub": "power_balance_side_missing",
+   "label": "set_power_balance_gfx side ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "remove_power_balance_modifier: Unable to find power balance my_bop",
+   "bucket": "C_gap",
+   "sub": "power_balance_remove_modifier",
+   "label": "remove_power_balance_modifier ref (common/bop/ workbench missing)"
+  },
+  {
+   "body": "focus_tree initial_show_position references invalid focus my_focus",
+   "bucket": "C_gap",
+   "sub": "focus_tree_initial_show_position",
+   "label": "focus_tree initial_show_position focus id invalid (cross_ref focus)"
+  },
+  {
+   "body": "Error in focus: my_focus",
+   "bucket": "C_gap",
+   "sub": "focus_generic_error",
+   "label": "focus definition error (various — mod-inherent or cross_ref)"
+  },
+  {
+   "body": "Event is missing a title: france.100",
+   "bucket": "D_triage_tail",
+   "sub": "event_missing_title",
+   "label": "event missing title loc key (mod-inherent localisation gap in most mods)"
+  },
+  {
+   "body": "Event is missing a desc: france.100",
+   "bucket": "D_triage_tail",
+   "sub": "event_missing_desc",
+   "label": "event missing desc loc key (mod-inherent localisation gap)"
+  },
+  {
+   "body": "Event has no options: france.100",
+   "bucket": "D_triage_tail",
+   "sub": "event_no_options",
+   "label": "event has no options / hidden event mis-flagged (mod-inherent or export gap)"
+  },
+  {
+   "body": "non-hidden event with no options defined",
+   "bucket": "D_triage_tail",
+   "sub": "event_non_hidden_no_options",
+   "label": "non-hidden event without options (mod-inherent RT56 WTT event)"
+  },
+  {
+   "body": "sp:my_project does not match any Special Project in database",
+   "bucket": "C_gap",
+   "sub": "special_project_missing",
+   "label": "special_project (sp:X) ref (common/special_projects/ workbench missing)"
+  },
+  {
+   "body": "Failed to find autonomy_state my_state",
+   "bucket": "C_gap",
+   "sub": "autonomy_state_missing",
+   "label": "autonomy_state ref (common/autonomous_states/ workbench missing)"
+  },
+  {
+   "body": "Invalid subunit. my_subunit",
+   "bucket": "C_gap",
+   "sub": "invalid_subunit",
+   "label": "invalid subunit (common/unit_tags/ workbench missing)"
+  },
+  {
+   "body": "my_building is not a province building type",
+   "bucket": "C_gap",
+   "sub": "province_building_missing",
+   "label": "province_building type invalid (buildings workbench missing)"
+  },
+  {
+   "body": "Unrecognized equipment upgrade my_upgrade",
+   "bucket": "C_gap",
+   "sub": "equipment_upgrade_missing",
+   "label": "equipment upgrade unknown (equipment workbench missing)"
+  },
+  {
+   "body": "Unknown technology/doctrine category/folder my_cat",
+   "bucket": "C_gap",
+   "sub": "tech_category_folder_in_effect",
+   "label": "tech category/folder in effect (tech_tags gap)"
+  },
+  {
+   "body": "invalid on_cancel event for start border war",
+   "bucket": "C_gap",
+   "sub": "border_war_on_cancel",
+   "label": "start_border_war event ref (cross_ref event)"
+  },
+  {
+   "body": "invalid on_win event for start border war",
+   "bucket": "C_gap",
+   "sub": "border_war_on_win",
+   "label": "start_border_war event ref (cross_ref event)"
+  },
+  {
+   "body": "invalid on_lose event for start border war",
+   "bucket": "C_gap",
+   "sub": "border_war_on_lose",
+   "label": "start_border_war event ref (cross_ref event)"
+  },
+  {
+   "body": "recruit_character: Unknown character GER_someone",
+   "bucket": "C_gap",
+   "sub": "history_recruit_unknown_character",
+   "label": "history file recruit_character references unknown char (γ2 character cross_ref)"
+  },
+  {
+   "body": "Value does not belong to designated Script EnumType",
+   "bucket": "C_gap",
+   "sub": "script_enum_type",
+   "label": "script_enum value unknown (custom enum coverage gap)"
+  },
+  {
+   "body": "Building type not found my_building",
+   "bucket": "C_gap",
+   "sub": "building_type_not_found",
+   "label": "building type not found (buildings workbench missing)"
+  },
+  {
+   "body": "remove_country_leader_role: Invalid ideology my_ideo",
+   "bucket": "C_gap",
+   "sub": "ideology_ref_remove_leader",
+   "label": "remove_country_leader_role ideology (ideology workbench gap)"
+  },
+  {
+   "body": "Several characters have the name My Guy",
+   "bucket": "C_gap",
+   "sub": "replace_path_character_name_dup",
+   "label": "character name dup w/ vanilla (replace_path for common/characters/)"
+  },
+  {
+   "body": "Duplicate focus name will cause database problems",
+   "bucket": "C_gap",
+   "sub": "replace_path_focus_dup",
+   "label": "focus name dup w/ vanilla (replace_path for common/national_focus/)"
+  },
+  {
+   "body": "Duplicate decision. my_decision is a duplicate.",
+   "bucket": "C_gap",
+   "sub": "replace_path_decision_name_dup",
+   "label": "decision name dup w/ vanilla (replace_path for common/decisions/)"
+  },
+  {
+   "body": "recruit_character should only happen in game/history files",
+   "bucket": "D_triage_tail",
+   "sub": "on_actions_recruit_position",
+   "label": "recruit_character is used outside a history file"
+  },
+  {
+   "body": "failure in common/scripted_localisation/my_loc.txt",
+   "bucket": "C_gap",
+   "sub": "scripted_localisation_fail",
+   "label": "scripted_localisation failure (common/scripted_localisation/ gap)"
+  },
+  {
+   "body": "generic ai_strategy reference problem",
+   "bucket": "C_gap",
+   "sub": "ai_strategy_misc_ref",
+   "label": "ai_strategy misc ref (AI strategy + cross_ref gap)"
+  },
+  {
+   "body": "Expected 'default', a continent name or a country tag",
+   "bucket": "D_triage_tail",
+   "sub": "graphic_db_tag_invalid",
+   "label": "graphic_db unknown TAG (mod-inherent, equipmentdesigner tail)"
+  },
+  {
+   "body": "Invalid Scope, supported: State|Country",
+   "bucket": "D_triage_tail",
+   "sub": "invalid_scope_trigger",
+   "label": "invalid scope on trigger (mostly equipmentdesigner mod-inherent)"
+  },
+  {
+   "body": "Failed to find entity",
+   "bucket": "D_triage_tail",
+   "sub": "entity_attachment_missing",
+   "label": "entity attachment missing (mod unit-pack inherent)"
+  },
+  {
+   "body": "Technology my_tech not found",
+   "bucket": "D_triage_tail",
+   "sub": "technology_not_found",
+   "label": "technology reference missing (may be coverage gap or cross_ref miss)"
+  },
+  {
+   "body": "No political party my_party for country leader",
+   "bucket": "D_triage_tail",
+   "sub": "leader_no_party",
+   "label": "country leader is missing an ideology or party binding"
+  },
+  {
+   "body": "Failed to find faction template",
+   "bucket": "D_triage_tail",
+   "sub": "faction_template_missing",
+   "label": "faction template empty/missing (export-side gap)"
+  },
+  {
+   "body": "set_technology: Invalid tech my_tech",
+   "bucket": "D_triage_tail",
+   "sub": "history_set_technology_invalid",
+   "label": "history file set_technology = unknown tech (cross_ref or coverage)"
+  },
+  {
+   "body": "set_cosmetic_tag: Invalid tag",
+   "bucket": "D_triage_tail",
+   "sub": "history_set_cosmetic_tag_invalid",
+   "label": "history file set_cosmetic_tag unknown (cross_ref gap)"
+  },
+  {
+   "body": "Tried to trigger non-existant event france.999",
+   "bucket": "D_triage_tail",
+   "sub": "triggered_missing_event",
+   "label": "event ref dangling (cross_ref gap)"
+  },
+  {
+   "body": "font my_font does not match previous fontfiles",
+   "bucket": "mod_noise",
+   "sub": "font_mismatch",
+   "label": "font file line-height mismatch (cosmetic, mod-inherent)"
+  },
+  {
+   "body": "incorrect checksum for DLC",
+   "bucket": "mod_noise",
+   "sub": "dlc_checksum",
+   "label": "DLC checksum warning (achievement lock only, harmless)"
+  },
+  {
+   "body": "Could not find my_widget in window my_window",
+   "bucket": "mod_noise",
+   "sub": "gui_window_widget",
+   "label": "GUI window widget not found (mod-inherent UI override)"
+  },
+  {
+   "body": "Some brand new engine complaint we have no pattern for",
+   "bucket": "D_unknown",
+   "sub": "unknown",
+   "label": "Couldn't categorize this line"
+  },
+  {
+   "body": "Invalid focus scripted in trigger has_completed_focus = GER_awakening in file: \"common/national_focus/zz_GER.txt\"",
+   "bucket": "C_gap",
+   "sub": "cross_ref_focus_in_trigger",
+   "label": "has_completed_focus references a missing focus"
+  },
+  {
+   "body": "recruit_character: Unknown character GER_leader_guy",
+   "bucket": "C_gap",
+   "sub": "history_recruit_unknown_character",
+   "label": "history file recruit_character references unknown char (γ2 character cross_ref)"
+  },
+  {
+   "body": "State 42 has invalid category my_cat",
+   "bucket": "C_gap",
+   "sub": "technology_tags_category",
+   "label": "tech category undefined (common/technology_tags/ workbench missing)"
+  },
+  {
+   "body": "Duplicate idea. GER_industrial_push in file: \"common/ideas/zz_GER.txt\"",
+   "bucket": "C_gap",
+   "sub": "replace_path_idea",
+   "label": "idea dup w/ vanilla (replace_path for common/ideas/ missing)"
+  },
+  {
+   "body": "Tried to trigger non-existant event ger.500",
+   "bucket": "D_triage_tail",
+   "sub": "triggered_missing_event",
+   "label": "event ref dangling (cross_ref gap)"
+  },
+  {
+   "body": "Invalid Decision ID for my_decision_x in file: \"common/decisions/zz_GER.txt\"",
+   "bucket": "C_gap",
+   "sub": "cross_ref_decision_generic",
+   "label": "decision reference is missing"
+  },
+  {
+   "body": "Technology my_secret_tech not found in file: \"common/technologies/zz.txt\"",
+   "bucket": "D_triage_tail",
+   "sub": "technology_not_found",
+   "label": "technology reference missing (may be coverage gap or cross_ref miss)"
+  },
+  {
+   "body": "Failed to find faction template in file: \"history/countries/zz_GER.txt\"",
+   "bucket": "D_triage_tail",
+   "sub": "faction_template_missing",
+   "label": "faction template empty/missing (export-side gap)"
+  }
+ ],
+ "entries": [
+  {
+   "text": "[16:22:33][12345][game.cpp:120]: Duplicate idea. GER_industrial_push\n[16:22:33][12345][game.cpp:120]: Duplicate idea. GER_industrial_push\n[16:22:34][12346][effect.cpp:88]: recruit_character: Unknown character GER_leader_guy\n  continuation line without bracket header\n  another continuation\n\n[16:22:35][12347][trigger.cpp:12]: Tried to trigger non-existant event ger.500\n",
+   "entries": [
+    {
+     "module": "game.cpp:120",
+     "body": "Duplicate idea. GER_industrial_push",
+     "bucket": "C_gap",
+     "sub_bucket": "replace_path_idea",
+     "label": "idea dup w/ vanilla (replace_path for common/ideas/ missing)",
+     "raw_sample": "[16:22:33][12345][game.cpp:120]: Duplicate idea. GER_industrial_push",
+     "raw_count": 2
+    },
+    {
+     "module": "effect.cpp:88",
+     "body": "recruit_character: Unknown character GER_leader_guy",
+     "bucket": "C_gap",
+     "sub_bucket": "history_recruit_unknown_character",
+     "label": "history file recruit_character references unknown char (γ2 character cross_ref)",
+     "raw_sample": "[16:22:34][12346][effect.cpp:88]: recruit_character: Unknown character GER_leader_guy\n  continuation line without bracket header\n  another continuation",
+     "raw_count": 1
+    },
+    {
+     "module": "trigger.cpp:12",
+     "body": "Tried to trigger non-existant event ger.500",
+     "bucket": "D_triage_tail",
+     "sub_bucket": "triggered_missing_event",
+     "label": "event ref dangling (cross_ref gap)",
+     "raw_sample": "[16:22:35][12347][trigger.cpp:12]: Tried to trigger non-existant event ger.500",
+     "raw_count": 1
+    }
+   ]
+  },
+  {
+   "text": "no header at the very start — must be skipped\n[10:00:00][1][pdx.cpp:1]: Some brand new engine complaint we have no pattern for\n[10:00:01][2][pdx.cpp:2]: incorrect checksum for DLC\n[10:00:02][3][pdx.cpp:2]: incorrect checksum for DLC\n[10:00:03][4][pdx.cpp:2]: incorrect checksum for DLC\n",
+   "entries": [
+    {
+     "module": "pdx.cpp:1",
+     "body": "Some brand new engine complaint we have no pattern for",
+     "bucket": "D_unknown",
+     "sub_bucket": "unknown",
+     "label": "Couldn't categorize this line",
+     "raw_sample": "[10:00:00][1][pdx.cpp:1]: Some brand new engine complaint we have no pattern for",
+     "raw_count": 1
+    },
+    {
+     "module": "pdx.cpp:2",
+     "body": "incorrect checksum for DLC",
+     "bucket": "mod_noise",
+     "sub_bucket": "dlc_checksum",
+     "label": "DLC checksum warning (achievement lock only, harmless)",
+     "raw_sample": "[10:00:01][2][pdx.cpp:2]: incorrect checksum for DLC",
+     "raw_count": 3
+    }
+   ]
+  },
+  {
+   "text": "",
+   "entries": []
+  }
+ ],
+ "map": [
+  {
+   "body": "Non assign trigger is not enclosed in a block near line: 12",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Non assign effect is not enclosed near line: 3",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: =, near line: 44\" in file: \"common/ideas/zz_mod.txt\"",
+   "ref": null,
+   "file": "common/ideas/zz_mod.txt"
+  },
+  {
+   "body": "Unexpected token: 1.5, near line: 9\" in file: \"events/zz.txt\"",
+   "ref": null,
+   "file": "events/zz.txt"
+  },
+  {
+   "body": "Unknown modifier: =, in file common/ideas/x.txt",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown modifier: ,, in file common/ideas/x.txt",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Not a valid compare token in trigger '=' near line: 8",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Expected hidden_modifier to be followed by a block",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Malformed token: @var_ref near line: 5",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Malformed token: france.100 near line: 5",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Malformed token: my_focus_id, near line: 7",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: country_event, near line: 11",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: news_event, near line: 11",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: state_event, near line: 11",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: GER_my_decision, near line: 21\" in file: \"common/decisions/zz_GER.txt\"",
+   "ref": null,
+   "file": "common/decisions/zz_GER.txt"
+  },
+  {
+   "body": "Unexpected token: ger_evt, near line: 4\" in file: \"events/zz_GER.txt\"",
+   "ref": null,
+   "file": "events/zz_GER.txt"
+  },
+  {
+   "body": "Unexpected token: GER_my_idea, near line: 6\" in file: \"common/ideas/zz_GER.txt\"",
+   "ref": null,
+   "file": "common/ideas/zz_GER.txt"
+  },
+  {
+   "body": "Unknown modifier: 'political_power_gain'",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown modifier: ( in file x",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: >, near line: 2",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: focus_tok, near line: 9\" in file: \"common/national_focus/zz_GER.txt\"",
+   "ref": null,
+   "file": "common/national_focus/zz_GER.txt"
+  },
+  {
+   "body": "Invalid group: slots in idea GER_my_idea",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown category for : GER_my_idea",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown modifier: ', near line: 4",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Error: unexpected token in file: \"events/zz_GER.txt\" line 3",
+   "ref": null,
+   "file": "events/zz_GER.txt"
+  },
+  {
+   "body": "Error reading division template in history file",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown modifier: research_speed_factor",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown building: building",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Technology my_tech has invalid folder my_folder",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Technology my_tech has invalid category my_cat",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_cat",
+    "name": "Category",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Failed to create id 5 for event",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Reverse id lookup: france.1 failed",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Multiple character have the tag GER_hitler",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Duplicate idea. GER_my_idea",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Duplicate of my_entity entity added to entity system",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Failed to find entity \"my_unit_entity\" for attachment",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Couldn't find texture file gfx/x.dds",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Texture Handler encountered missing texture file gfx/y.dds",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid scientist trait my_trait",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unexpected token: instance near line: 3",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "error in equipmentdesigner/graphic_db/00_graphic_db.txt",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "MIO my_mio does not match any MIO in database",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown equipment type: my_equip",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Mod has loc key collisions with vanilla",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid trigger 'my_scripted_trigger' in file x",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Trigger failed to validate: my_trigger",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown trigger-type: my_custom_trigger",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid effect 'my_scripted_effect' in file x",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown effect-type: my_custom_effect",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid focus scripted in trigger has_completed_focus",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "invalid focus for ai strategy my_focus",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid Decision ID for unlock_decision_tooltip: my_decision",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid Decision ID for something else",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "invalid database object for effect/trigger: my_var",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid doctrine my_doctrine",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "add_tech_bonus: Unknown technology category my_cat",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_cat",
+    "name": "Category",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Invalid category or tech in has_tech_bonus",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Duplicate ID 1234 in decisions",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Several character with the same token GER_x",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Entity referenced in equipment graphic database does not exist",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "GFX referenced in equipment graphic database does not exist",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid Module \"my_module\" attached to slot",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Tried to get dynamic token that does not exist",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "error in ai_strategy.cpp:220",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Decision scripted with modifier, but no days_remove",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid dynamic modifier my_dm",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Effect has missing static modifier definition",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "set_power_balance_gfx: Unable to find power balance my_bop",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "has_game_rule: game rule my_rule not found",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "add_country_leader_role: Invalid country leader trait my_trait",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "add_country_leader_role: Invalid ideology fascism_x",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid Decision Category my_cat",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_cat",
+    "name": "Category",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Invalid focus: my_focus: focuses",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Not a valid value: my_value",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "my_ideology is not a valid ideology",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "create_country_leader: Invalid ideology my_ideo",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Duplicate category. my_cat is a duplicate.",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_cat",
+    "name": "Category",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Invalid subunit category: my_subcat",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "add_power_balance_value: Unable to find power balance my_bop",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "add_power_balance_modifier: Unable to find power balance my_bop",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "remove_power_balance: Unable to find power balance my_bop",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid trait for idea GER_my_idea",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Idea: GER_my_idea unknown category: my_cat",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_cat",
+    "name": "Category",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Invalid decision in has_decision trigger",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "on_action on_startup is not a valid event",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unable to find focus tree with ID: my_tree",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "create_corps_commander: invalid trait my_trait",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "my_trait is not in trait DB in game/common/scientist_traits",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "GER_char in scientist role, trait my_trait missing",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid trait: my_trait has_allowed_idea_with_trait",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "set_power_balance: Unable to find power balance my_bop",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "set_power_balance_gfx: Unable to find side with ID my_side",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "remove_power_balance_modifier: Unable to find power balance my_bop",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "focus_tree initial_show_position references invalid focus my_focus",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Error in focus: my_focus",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Event is missing a title: france.100",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Event is missing a desc: france.100",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Event has no options: france.100",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "non-hidden event with no options defined",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "sp:my_project does not match any Special Project in database",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Failed to find autonomy_state my_state",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid subunit. my_subunit",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "my_building is not a province building type",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unrecognized equipment upgrade my_upgrade",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Unknown technology/doctrine category/folder my_cat",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_cat",
+    "name": "Category",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "invalid on_cancel event for start border war",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "invalid on_win event for start border war",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "invalid on_lose event for start border war",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "recruit_character: Unknown character GER_someone",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Value does not belong to designated Script EnumType",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Building type not found my_building",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "remove_country_leader_role: Invalid ideology my_ideo",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Several characters have the name My Guy",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Duplicate focus name will cause database problems",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Duplicate decision. my_decision is a duplicate.",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "recruit_character should only happen in game/history files",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "failure in common/scripted_localisation/my_loc.txt",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "generic ai_strategy reference problem",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Expected 'default', a continent name or a country tag",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid Scope, supported: State|Country",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Failed to find entity",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Technology my_tech not found",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "No political party my_party for country leader",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Failed to find faction template",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "set_technology: Invalid tech my_tech",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "set_cosmetic_tag: Invalid tag",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Tried to trigger non-existant event france.999",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "font my_font does not match previous fontfiles",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "incorrect checksum for DLC",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Could not find my_widget in window my_window",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Some brand new engine complaint we have no pattern for",
+   "ref": null,
+   "file": null
+  },
+  {
+   "body": "Invalid focus scripted in trigger has_completed_focus = GER_awakening in file: \"common/national_focus/zz_GER.txt\"",
+   "ref": {
+    "kind": "focus",
+    "entity_id": "GER_awakening",
+    "name": "Awakening",
+    "country_tag": "GER"
+   },
+   "file": "common/national_focus/zz_GER.txt"
+  },
+  {
+   "body": "recruit_character: Unknown character GER_leader_guy",
+   "ref": {
+    "kind": "character",
+    "entity_id": "GER_leader_guy",
+    "name": "Leader Guy",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "State 42 has invalid category my_cat",
+   "ref": {
+    "kind": "state",
+    "entity_id": "42",
+    "name": "Berlin",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Duplicate idea. GER_industrial_push in file: \"common/ideas/zz_GER.txt\"",
+   "ref": {
+    "kind": "idea",
+    "entity_id": "GER_industrial_push",
+    "name": "Industrial Push",
+    "country_tag": "GER"
+   },
+   "file": "common/ideas/zz_GER.txt"
+  },
+  {
+   "body": "Tried to trigger non-existant event ger.500",
+   "ref": {
+    "kind": "event",
+    "entity_id": "ger.500",
+    "name": "Der Aufstieg",
+    "country_tag": "GER"
+   },
+   "file": null
+  },
+  {
+   "body": "Invalid Decision ID for my_decision_x in file: \"common/decisions/zz_GER.txt\"",
+   "ref": {
+    "kind": "decision",
+    "entity_id": "my_decision_x",
+    "name": "Decision X",
+    "country_tag": "GER"
+   },
+   "file": "common/decisions/zz_GER.txt"
+  },
+  {
+   "body": "Technology my_secret_tech not found in file: \"common/technologies/zz.txt\"",
+   "ref": {
+    "kind": "technology",
+    "entity_id": "my_secret_tech",
+    "name": "Secret Tech",
+    "country_tag": null
+   },
+   "file": "common/technologies/zz.txt"
+  },
+  {
+   "body": "Failed to find faction template in file: \"history/countries/zz_GER.txt\"",
+   "ref": null,
+   "file": "history/countries/zz_GER.txt"
+  }
+ ],
+ "reports": [
+  {
+   "text": "[16:22:33][12345][game.cpp:120]: Duplicate idea. GER_industrial_push\n[16:22:33][12345][game.cpp:120]: Duplicate idea. GER_industrial_push\n[16:22:34][12346][effect.cpp:88]: recruit_character: Unknown character GER_leader_guy\n  continuation line without bracket header\n  another continuation\n\n[16:22:35][12347][trigger.cpp:12]: Tried to trigger non-existant event ger.500\n",
+   "report": {
+    "findings": [
+     {
+      "severity": "warning",
+      "code": "log.C_gap.history_recruit_unknown_character",
+      "title": "Tool coverage gap: history file recruit_character references unknown char (γ2 character cross_ref)",
+      "reason": "history file recruit_character references unknown char (γ2 character cross_ref)",
+      "suggestion": "Open the character 'Leader Guy' and check the field the engine complained about.",
+      "entity_ref": {
+       "kind": "character",
+       "entity_id": "GER_leader_guy",
+       "name": "Leader Guy",
+       "country_tag": "GER"
+      },
+      "file": null,
+      "detail": {
+       "module": "effect.cpp:88",
+       "bucket": "C_gap",
+       "sub_bucket": "history_recruit_unknown_character",
+       "raw_line": "[16:22:34][12346][effect.cpp:88]: recruit_character: Unknown character GER_leader_guy\n  continuation line without bracket header\n  another continuation",
+       "raw_count": 1
+      }
+     },
+     {
+      "severity": "warning",
+      "code": "log.C_gap.replace_path_idea",
+      "title": "Tool coverage gap: idea dup w/ vanilla (replace_path for common/ideas/ missing)",
+      "reason": "idea dup w/ vanilla (replace_path for common/ideas/ missing) (logged 2× this run)",
+      "suggestion": "Open the idea 'Industrial Push' and check the field the engine complained about.",
+      "entity_ref": {
+       "kind": "idea",
+       "entity_id": "GER_industrial_push",
+       "name": "Industrial Push",
+       "country_tag": "GER"
+      },
+      "file": null,
+      "detail": {
+       "module": "game.cpp:120",
+       "bucket": "C_gap",
+       "sub_bucket": "replace_path_idea",
+       "raw_line": "[16:22:33][12345][game.cpp:120]: Duplicate idea. GER_industrial_push",
+       "raw_count": 2
+      }
+     },
+     {
+      "severity": "warning",
+      "code": "log.D_triage_tail.triggered_missing_event",
+      "title": "Known long-tail issue: event ref dangling (cross_ref gap)",
+      "reason": "event ref dangling (cross_ref gap)",
+      "suggestion": "Open the event 'Der Aufstieg' and check the field the engine complained about.",
+      "entity_ref": {
+       "kind": "event",
+       "entity_id": "ger.500",
+       "name": "Der Aufstieg",
+       "country_tag": "GER"
+      },
+      "file": null,
+      "detail": {
+       "module": "trigger.cpp:12",
+       "bucket": "D_triage_tail",
+       "sub_bucket": "triggered_missing_event",
+       "raw_line": "[16:22:35][12347][trigger.cpp:12]: Tried to trigger non-existant event ger.500",
+       "raw_count": 1
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 3,
+     "info": 0
+    },
+    "count": 3,
+    "lines_parsed": 4,
+    "unique_signatures": 3,
+    "mapped": 3,
+    "unmapped": 0,
+    "by_bucket": {
+     "C_gap": 2,
+     "D_triage_tail": 1
+    }
+   }
+  },
+  {
+   "text": "no header at the very start — must be skipped\n[10:00:00][1][pdx.cpp:1]: Some brand new engine complaint we have no pattern for\n[10:00:01][2][pdx.cpp:2]: incorrect checksum for DLC\n[10:00:02][3][pdx.cpp:2]: incorrect checksum for DLC\n[10:00:03][4][pdx.cpp:2]: incorrect checksum for DLC\n",
+   "report": {
+    "findings": [
+     {
+      "severity": "warning",
+      "code": "log.D_unknown.unknown",
+      "title": "Couldn't categorize this line: Couldn't categorize this line",
+      "reason": "Couldn't categorize this line",
+      "suggestion": "We couldn't categorize this line — it may be harmless or come from another mod. Skim the raw log line below; act on it only if it names one of your entities.",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "module": "pdx.cpp:1",
+       "bucket": "D_unknown",
+       "sub_bucket": "unknown",
+       "raw_line": "[10:00:00][1][pdx.cpp:1]: Some brand new engine complaint we have no pattern for",
+       "raw_count": 1
+      }
+     },
+     {
+      "severity": "info",
+      "code": "log.mod_noise.dlc_checksum",
+      "title": "Harmless noise: DLC checksum warning (achievement lock only, harmless)",
+      "reason": "DLC checksum warning (achievement lock only, harmless) (logged 3× this run)",
+      "suggestion": "No action needed — harmless engine noise.",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "module": "pdx.cpp:2",
+       "bucket": "mod_noise",
+       "sub_bucket": "dlc_checksum",
+       "raw_line": "[10:00:01][2][pdx.cpp:2]: incorrect checksum for DLC",
+       "raw_count": 3
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 1,
+     "info": 1
+    },
+    "count": 2,
+    "lines_parsed": 4,
+    "unique_signatures": 2,
+    "mapped": 0,
+    "unmapped": 2,
+    "by_bucket": {
+     "D_unknown": 1,
+     "mod_noise": 1
+    }
+   }
+  },
+  {
+   "text": "",
+   "report": {
+    "findings": [],
+    "totals": {
+     "error": 0,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 0,
+    "lines_parsed": 0,
+    "unique_signatures": 0,
+    "mapped": 0,
+    "unmapped": 0,
+    "by_bucket": {}
+   }
+  }
+ ],
+ "index_spec": {
+  "focus": [
+   [
+    "GER_awakening",
+    "Awakening",
+    "GER"
+   ]
+  ],
+  "event": [
+   [
+    "ger.500",
+    "Der Aufstieg",
+    "GER"
+   ]
+  ],
+  "decision": [
+   [
+    "my_decision_x",
+    "Decision X",
+    "GER"
+   ]
+  ],
+  "decision_category": [
+   [
+    "my_cat",
+    "Category",
+    "GER"
+   ]
+  ],
+  "character": [
+   [
+    "GER_leader_guy",
+    "Leader Guy",
+    "GER"
+   ]
+  ],
+  "idea": [
+   [
+    "GER_industrial_push",
+    "Industrial Push",
+    "GER"
+   ]
+  ],
+  "technology": [
+   [
+    "my_secret_tech",
+    "Secret Tech",
+    null
+   ]
+  ],
+  "state": [
+   [
+    "42",
+    "Berlin",
+    "GER"
+   ]
+  ],
+  "history_file": [
+   [
+    "ger",
+    "GER",
+    "GER"
+   ]
+  ]
+ }
+}

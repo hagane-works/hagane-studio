@@ -1,0 +1,20 @@
+{
+  "heading": "Portrait et ressources",
+  "uploading": "Téléversement…",
+  "uploadButton": "Téléverser une image de portrait",
+  "ratioHint": "PNG / JPG, proportions recommandées 3:4",
+  "resetConfirm": "Rétablir le portrait de {tag} du jeu de base ? Votre portrait téléversé sera supprimé.",
+  "resetFailed": "Échec de la réinitialisation",
+  "resetting": "Réinitialisation…",
+  "resetButton": "↺ Rétablir le portrait du jeu de base",
+  "generatedPreview": "Aperçu généré",
+  "leaderPortraitAlt": "Portrait du dirigeant",
+  "leaderPortrait": "Portrait du dirigeant",
+  "advisorIconAlt": "Icône du conseiller",
+  "advisorIcon": "Icône du conseiller",
+  "notImported": "⚠ Portrait non importé",
+  "referencesSprite": "Ce personnage référence le sprite de portrait",
+  "notImportedDetail": "mais l'importation ne l'a pas résolu en image ; les fichiers .gfx/.dds du mod ne sont probablement pas arrivés, ce qui est courant avec l'importation des seuls .txt. Téléversez un portrait personnalisé ci-dessus ou réimportez le dossier complet.",
+  "noPortrait": "Aucun portrait téléversé",
+  "noPortraitHint": "Téléversez-en un pour générer automatiquement le portrait et les icônes de conseiller et de trait"
+}

@@ -1,0 +1,4 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+graphical_culture = eastern_european_gfx
+graphical_culture_2d = eastern_european_2d
+color = { 200 50 80 }

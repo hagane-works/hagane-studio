@@ -1,0 +1,125 @@
+{
+ "deserialize": [
+  {
+   "input": "",
+   "output": {}
+  },
+  {
+   "input": "6321 = {\n\tnaval_base = 3\n}",
+   "output": {
+    "6321": {
+     "naval_base": 3
+    }
+   }
+  },
+  {
+   "input": "6321 = { naval_base = 3 }\n9553 = { bunker = 2 coastal_bunker = 1 }",
+   "output": {
+    "6321": {
+     "naval_base": 3
+    },
+    "9553": {
+     "bunker": 2,
+     "coastal_bunker": 1
+    }
+   }
+  },
+  {
+   "input": "1024 = {\n\tnaval_base = {\n\t\tlevel = 2\n\t}\n}",
+   "output": {}
+  },
+  {
+   "input": "6321 = { naval_base = 3 }\n1024 = { has_dlc_block = { x = 1 } }",
+   "output": {
+    "6321": {
+     "naval_base": 3
+    }
+   }
+  },
+  {
+   "input": "not_a_pid = { foo = 1 }\n500 = { bunker = 1 }",
+   "output": {
+    "500": {
+     "bunker": 1
+    }
+   }
+  },
+  {
+   "input": "6321 = { unclosed",
+   "output": {}
+  },
+  {
+   "input": "500 = { supply_node = 1 }\n# comment line\n501 = { rail_way = 2 }",
+   "output": {
+    "500": {
+     "supply_node": 1
+    },
+    "501": {
+     "rail_way": 2
+    }
+   }
+  }
+ ],
+ "serialize": [
+  {
+   "existing": "",
+   "output": "",
+   "pb": {}
+  },
+  {
+   "existing": "6321 = { naval_base = 3 }",
+   "output": "6321 = {\n\tnaval_base = 5\n}",
+   "pb": {
+    "6321": {
+     "naval_base": 5
+    }
+   }
+  },
+  {
+   "existing": "",
+   "output": "777 = {\n\tbunker = 2\n}",
+   "pb": {
+    "777": {
+     "bunker": 2
+    }
+   }
+  },
+  {
+   "existing": "6321 = { naval_base = 3 }\n1024 = { naval_base = { level = 2 } }",
+   "output": "6321 = {\n\tnaval_base = 5\n}\n1024 = {\n\tnaval_base = {\n\t\tlevel = 2\n\t}\n}",
+   "pb": {
+    "6321": {
+     "naval_base": 5
+    }
+   }
+  },
+  {
+   "existing": "6321 = { naval_base = 3 }",
+   "output": "",
+   "pb": {
+    "6321": {}
+   }
+  },
+  {
+   "existing": "not_a_pid = { foo = 1 }",
+   "output": "500 = {\n\tbunker = 1\n}\n501 = {\n\trail_way = 2\n}\nnot_a_pid = {\n\tfoo = 1\n}",
+   "pb": {
+    "500": {
+     "bunker": 1
+    },
+    "501": {
+     "rail_way": 2
+    }
+   }
+  },
+  {
+   "existing": "6321 = { unclosed",
+   "output": "9 = {\n\tx = 1\n}\n6321 = { unclosed",
+   "pb": {
+    "9": {
+     "x": 1
+    }
+   }
+  }
+ ]
+}

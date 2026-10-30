@@ -1,0 +1,2105 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [],
+    "countries": [],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": []
+  },
+  {
+   "name": "created-tree-no-policy",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": true,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "First",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_effective_default_multiple",
+     "severity": "blocker",
+     "source": "focus_defaults:effective_artifact",
+     "evidence": {
+      "effective_tree_ids": [
+       "ger_focus",
+       "vanilla:generic_focus"
+      ],
+      "default_tree_ids": [
+       "ger_focus",
+       "vanilla:generic_focus"
+      ],
+      "default_paths": [
+       "common/national_focus/ger_focus.txt",
+       "common/national_focus/generic.txt"
+      ],
+      "default_providers": [
+       "created_tree",
+       "vanilla"
+      ],
+      "replace_paths": [],
+      "vanilla_generic_injected": true
+     },
+     "repair_route": "focus_default_selection"
+    }
+   ]
+  },
+  {
+   "name": "created-node-missing-name",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": [
+      "en",
+      "zh"
+     ],
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus.display_name.missing_created",
+     "severity": "blocker",
+     "source": {
+      "file": null,
+      "entity": {
+       "type": "focus",
+       "id": "f1"
+      },
+      "field_path": [
+       "focus",
+       "f1",
+       "display_name_locs"
+      ],
+      "span": null
+     },
+     "evidence": {
+      "source": "created",
+      "focus_id": "f1",
+      "enabled_content_locales": [
+       "en",
+       "zh"
+      ],
+      "missing_locales": [
+       "en",
+       "zh"
+      ],
+      "is_new_id": true,
+      "reuses_base_id": false,
+      "material_name_changed": false
+     },
+     "repair_route": "focus.display_name.author_enabled_locale"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "imported-node-missing-name",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": [
+      "en",
+      "zh"
+     ],
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "common/national_focus/finland.txt",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "imported",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "imported",
+        "completion_reward": "",
+        "name_en": "",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus.display_name.unproven_fallback",
+     "severity": "warning",
+     "source": {
+      "file": "common/national_focus/finland.txt",
+      "entity": {
+       "type": "focus",
+       "id": "f1"
+      },
+      "field_path": [
+       "focus",
+       "f1",
+       "display_name_locs",
+       "en"
+      ],
+      "span": null
+     },
+     "evidence": {
+      "source": "imported",
+      "focus_id": "f1",
+      "locale": "en",
+      "fallback_allowed": true,
+      "fallback_candidates": [],
+      "material_name_changed": false
+     },
+     "repair_route": "focus.display_name.register_or_author_fallback"
+    },
+    {
+     "code": "focus.display_name.unproven_fallback",
+     "severity": "warning",
+     "source": {
+      "file": "common/national_focus/finland.txt",
+      "entity": {
+       "type": "focus",
+       "id": "f1"
+      },
+      "field_path": [
+       "focus",
+       "f1",
+       "display_name_locs",
+       "zh"
+      ],
+      "span": null
+     },
+     "evidence": {
+      "source": "imported",
+      "focus_id": "f1",
+      "locale": "zh",
+      "fallback_allowed": true,
+      "fallback_candidates": [],
+      "material_name_changed": false
+     },
+     "repair_route": "focus.display_name.register_or_author_fallback"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": "common/national_focus/finland.txt"
+     },
+     "evidence": {
+      "origin": "imported",
+      "target_path": "common/national_focus/finland.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "layout-same-cell",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       },
+       {
+        "focus_id": "f2",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "B",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_layout_same_cell",
+     "severity": "blocker",
+     "source": "focus_layout:ger_focus",
+     "evidence": {
+      "position": [
+       0,
+       0
+      ],
+      "focus_ids": [
+       "f1",
+       "f2"
+      ]
+     },
+     "repair_route": "focus_layout_repair"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "layout-missing-anchor",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "ghost",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_layout_missing_anchor",
+     "severity": "blocker",
+     "source": "focus_layout:ger_focus",
+     "evidence": {
+      "focus_id": "f1",
+      "relative_position_id": "ghost"
+     },
+     "repair_route": "focus_layout_repair"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "reward-scalar-as-block",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "add_political_power = { value = 1 }",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus.reward.scalar_effect_block_value",
+     "severity": "blocker",
+     "source": {
+      "file": null,
+      "entity": {
+       "type": "focus",
+       "id": "f1"
+      },
+      "field_path": [
+       "completion_reward",
+       "add_political_power"
+      ],
+      "span": {
+       "start_offset": 0,
+       "end_offset": 35,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 36
+      }
+     },
+     "evidence": {
+      "effect": "add_political_power",
+      "actual_value_kind": "block",
+      "expected_value_kinds": [
+       "scalar"
+      ],
+      "assignment": "add_political_power = { value = 1 }"
+     },
+     "repair_route": "focus.reward.edit_value_shape"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "initial-position-target-missing",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": {
+       "kind": "focus",
+       "focus_id": "ghost"
+      },
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_initial_position_target_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "focus_id": "ghost",
+      "available_focus_ids": [
+       "f1"
+      ]
+     },
+     "repair_route": "focus.initial_position.choose_target"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "shared-pool-transitive",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "pool",
+      "tree_kind": "shared_pool",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "s1",
+        "x": 10,
+        "y": 10,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "S1",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       },
+       {
+        "focus_id": "s2",
+        "x": 1,
+        "y": 1,
+        "relative_position_id": "s1",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "S2",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     },
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": [
+       {
+        "focus_id": "s2"
+       }
+      ],
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 99,
+        "y": 99,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_shared_pool_scope_ignored",
+     "severity": "warning",
+     "source": "focus_tree:pool",
+     "evidence": {
+      "tree_id": "pool",
+      "scope_kind": "own",
+      "country_tag": null,
+      "shared_country_tags": []
+     },
+     "repair_route": "focus_shared_pool_review"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "pool",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/GER_pool.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "policy-cohort-incomplete",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "t1",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [
+     {
+      "id": 1,
+      "source_file": "common/national_focus/x.txt",
+      "origin_kind": "",
+      "tree_ids": [
+       "t1",
+       "t2"
+      ],
+      "matched_tree_ids": null,
+      "registry_version": "",
+      "registry_sha256": "",
+      "emit_mode": "",
+      "target_path": "",
+      "target_layer": "",
+      "decision_source": ""
+     }
+    ],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_file_policy_cohort_incomplete",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_file_policy",
+      "identifier": "common/national_focus/x.txt"
+     },
+     "evidence": {
+      "selected_tree_ids": [
+       "t1"
+      ],
+      "missing_tree_ids": [
+       "t2"
+      ]
+     },
+     "repair_route": "focus.file_policy.expand_cohort"
+    },
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:t1",
+     "evidence": {
+      "tree_id": "t1",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_drift",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_file_policy",
+      "identifier": "common/national_focus/x.txt",
+      "path": null
+     },
+     "evidence": {
+      "tree_ids": [
+       "t1",
+       "t2"
+      ],
+      "target_path": "",
+      "target_layer": "",
+      "emit_mode": "",
+      "decision_source": "",
+      "expected_contract": {
+       "source_file": "common/national_focus/GER_t1.txt",
+       "origin_kind": "created",
+       "tree_ids": [
+        "t1"
+       ],
+       "matched_tree_ids": [],
+       "emit_mode": "namespaced_addition",
+       "target_path": "common/national_focus/GER_t1.txt",
+       "target_layer": "project",
+       "decision_source": "author_created_unique"
+      },
+      "mandatory": false
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "policy-duplicate-membership",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "t1",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [
+     {
+      "id": 1,
+      "source_file": "a.txt",
+      "origin_kind": "",
+      "tree_ids": [
+       "t1"
+      ],
+      "matched_tree_ids": null,
+      "registry_version": "",
+      "registry_sha256": "",
+      "emit_mode": "",
+      "target_path": "",
+      "target_layer": "",
+      "decision_source": ""
+     },
+     {
+      "id": 2,
+      "source_file": "b.txt",
+      "origin_kind": "",
+      "tree_ids": [
+       "t1"
+      ],
+      "matched_tree_ids": null,
+      "registry_version": "",
+      "registry_sha256": "",
+      "emit_mode": "",
+      "target_path": "",
+      "target_layer": "",
+      "decision_source": ""
+     }
+    ],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_file_policy_duplicate_membership",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_file_policy",
+      "identifier": "t1"
+     },
+     "evidence": {
+      "tree_id": "t1",
+      "policy_ids": [
+       1,
+       2
+      ]
+     },
+     "repair_route": "focus.file_policy.repair_membership"
+    },
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:t1",
+     "evidence": {
+      "tree_id": "t1",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_drift",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_file_policy",
+      "identifier": "a.txt",
+      "path": null
+     },
+     "evidence": {
+      "tree_ids": [
+       "t1"
+      ],
+      "target_path": "",
+      "target_layer": "",
+      "emit_mode": "",
+      "decision_source": "",
+      "expected_contract": {
+       "source_file": "common/national_focus/GER_t1.txt",
+       "origin_kind": "created",
+       "tree_ids": [
+        "t1"
+       ],
+       "matched_tree_ids": [],
+       "emit_mode": "namespaced_addition",
+       "target_path": "common/national_focus/GER_t1.txt",
+       "target_layer": "project",
+       "decision_source": "author_created_unique"
+      },
+      "mandatory": false
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "policy-drift",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "t1",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [
+     {
+      "id": 1,
+      "source_file": "common/national_focus/t1.txt",
+      "origin_kind": "",
+      "tree_ids": [
+       "t1"
+      ],
+      "matched_tree_ids": null,
+      "registry_version": "0.0.0",
+      "registry_sha256": "deadbeef",
+      "emit_mode": "",
+      "target_path": "common/national_focus/t1.txt",
+      "target_layer": "",
+      "decision_source": ""
+     }
+    ],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:t1",
+     "evidence": {
+      "tree_id": "t1",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_drift",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_file_policy",
+      "identifier": "common/national_focus/t1.txt",
+      "path": "common/national_focus/t1.txt"
+     },
+     "evidence": {
+      "tree_ids": [
+       "t1"
+      ],
+      "target_path": "common/national_focus/t1.txt",
+      "target_layer": "",
+      "emit_mode": "",
+      "decision_source": "",
+      "expected_contract": {
+       "source_file": "common/national_focus/GER_t1.txt",
+       "origin_kind": "created",
+       "tree_ids": [
+        "t1"
+       ],
+       "matched_tree_ids": [],
+       "emit_mode": "namespaced_addition",
+       "target_path": "common/national_focus/GER_t1.txt",
+       "target_layer": "project",
+       "decision_source": "author_created_unique"
+      },
+      "mandatory": false
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "raw-parse-failed",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [
+     {
+      "id": 7,
+      "dest_path": "common/national_focus/broken.txt",
+      "content": "focus_tree = {\n  id = x\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false
+     }
+    ],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_raw_file_parse_failed",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_raw_file",
+      "identifier": "common/national_focus/broken.txt",
+      "path": "common/national_focus/broken.txt"
+     },
+     "evidence": {
+      "error_type": "ParseError",
+      "error": "Expected RBRACE, got EOF '' at line 3"
+     },
+     "repair_route": "focus_raw_file_repair"
+    }
+   ]
+  },
+  {
+   "name": "raw-focus-file",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [
+     {
+      "id": 7,
+      "dest_path": "common/national_focus/mine.txt",
+      "content": "focus_tree = {\n id = raw_tree\n country = { factor = 1 }\n focus = {\n  id = rf1\n  x = 0\n  y = 0\n  cost = 10\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "h1",
+      "generate_replace_path": false
+     }
+    ],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": []
+  },
+  {
+   "name": "raw-skipped",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/national_focus/a.txt",
+      "content": "x",
+      "is_binary": true,
+      "content_sha256": "",
+      "generate_replace_path": false
+     },
+     {
+      "id": 2,
+      "dest_path": "common/ideas/a.txt",
+      "content": "x",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false
+     }
+    ],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": []
+  },
+  {
+   "name": "generate-replace-path",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/national_focus/a.txt",
+      "content": "",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": true
+     }
+    ],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_effective_default_missing",
+     "severity": "blocker",
+     "source": "focus_defaults:effective_artifact",
+     "evidence": {
+      "effective_tree_ids": [],
+      "default_tree_ids": [],
+      "default_paths": [],
+      "default_providers": [],
+      "replace_paths": [
+       "common/national_focus"
+      ],
+      "vanilla_generic_injected": false
+     },
+     "repair_route": "focus_default_selection"
+    }
+   ]
+  },
+  {
+   "name": "explicit-replace-path",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": [
+     "common/national_focus"
+    ]
+   },
+   "findings": [
+    {
+     "code": "focus_effective_default_missing",
+     "severity": "blocker",
+     "source": "focus_defaults:effective_artifact",
+     "evidence": {
+      "effective_tree_ids": [],
+      "default_tree_ids": [],
+      "default_paths": [],
+      "default_providers": [],
+      "replace_paths": [
+       "common/national_focus"
+      ],
+      "vanilla_generic_injected": false
+     },
+     "repair_route": "focus_default_selection"
+    }
+   ]
+  },
+  {
+   "name": "base-mod-linked",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": [
+      "Some Base Mod"
+     ],
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": true,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_base_default_provider_unresolved",
+     "severity": "blocker",
+     "source": {
+      "kind": "base_mod_focus_registry",
+      "identifier": "Some Base Mod"
+     },
+     "evidence": {
+      "dependencies": [
+       "Some Base Mod"
+      ],
+      "basemod_template_id": null,
+      "reason": "the registered base-mod index does not yet contain tree-level default/path/hash evidence"
+     },
+     "repair_route": "focus.base_mod_registry.refresh"
+    },
+    {
+     "code": "focus_effective_default_multiple",
+     "severity": "blocker",
+     "source": "focus_defaults:effective_artifact",
+     "evidence": {
+      "effective_tree_ids": [
+       "ger_focus",
+       "vanilla:generic_focus"
+      ],
+      "default_tree_ids": [
+       "ger_focus",
+       "vanilla:generic_focus"
+      ],
+      "default_paths": [
+       "common/national_focus/ger_focus.txt",
+       "common/national_focus/generic.txt"
+      ],
+      "default_providers": [
+       "created_tree",
+       "vanilla"
+      ],
+      "replace_paths": [],
+      "vanilla_generic_injected": true
+     },
+     "repair_route": "focus_default_selection"
+    }
+   ]
+  },
+  {
+   "name": "base-mod-template-id",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": 42
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": true,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_base_default_provider_unresolved",
+     "severity": "blocker",
+     "source": {
+      "kind": "base_mod_focus_registry",
+      "identifier": "42"
+     },
+     "evidence": {
+      "dependencies": [],
+      "basemod_template_id": 42,
+      "reason": "the registered base-mod index does not yet contain tree-level default/path/hash evidence"
+     },
+     "repair_route": "focus.base_mod_registry.refresh"
+    },
+    {
+     "code": "focus_effective_default_multiple",
+     "severity": "blocker",
+     "source": "focus_defaults:effective_artifact",
+     "evidence": {
+      "effective_tree_ids": [
+       "ger_focus",
+       "vanilla:generic_focus"
+      ],
+      "default_tree_ids": [
+       "ger_focus",
+       "vanilla:generic_focus"
+      ],
+      "default_paths": [
+       "common/national_focus/ger_focus.txt",
+       "common/national_focus/generic.txt"
+      ],
+      "default_providers": [
+       "created_tree",
+       "vanilla"
+      ],
+      "replace_paths": [],
+      "vanilla_generic_injected": true
+     },
+     "repair_route": "focus_default_selection"
+    }
+   ]
+  },
+  {
+   "name": "base-mod-linked-but-replaced",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": [
+      "Some Base Mod"
+     ],
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "ger_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": true,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": [
+     "common/national_focus"
+    ]
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:ger_focus",
+     "evidence": {
+      "tree_id": "ger_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "ger_focus",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/ger_focus.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "structured-vs-raw-path-clash",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "finnish_focus",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "common/national_focus/finland.txt",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "imported",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "imported",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [
+     {
+      "id": 9,
+      "dest_path": "common/national_focus/finland.txt",
+      "content": "focus_tree = {\n id = other\n country = { factor = 1 }\n}\n",
+      "is_binary": false,
+      "content_sha256": "h2",
+      "generate_replace_path": false
+     }
+    ],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:finnish_focus",
+     "evidence": {
+      "tree_id": "finnish_focus",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "finnish_focus",
+      "path": "common/national_focus/finland.txt"
+     },
+     "evidence": {
+      "origin": "imported",
+      "target_path": "common/national_focus/finland.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_output_path_duplicate",
+     "severity": "blocker",
+     "source": "focus_emissions",
+     "evidence": {
+      "path": "common/national_focus/finland.txt",
+      "tree_ids": [
+       "",
+       "finnish_focus",
+       "other"
+      ],
+      "providers": [
+       "primary_registry",
+       "project_raw"
+      ],
+      "artifact_ids": [
+       "raw:9:common/national_focus/finland.txt",
+       "structured:common/national_focus/finland.txt"
+      ]
+     },
+     "repair_route": "focus_duplicate_definition_repair"
+    }
+   ]
+  },
+  {
+   "name": "scope-unknown-tag",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "t1",
+      "tree_kind": "primary",
+      "country_tag": "ZZZ",
+      "is_default": false,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "explicit",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": []
+   },
+   "findings": [
+    {
+     "code": "focus_scope_explicit_missing_countries",
+     "severity": "blocker",
+     "source": "focus_tree:t1",
+     "evidence": {
+      "tree_id": "t1"
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "t1",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/GER_t1.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    }
+   ]
+  },
+  {
+   "name": "two-defaults",
+   "input": {
+    "project": {
+     "country_tag": "GER",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "trees": [
+     {
+      "tree_id": "a",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": true,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f1",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "A",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     },
+     {
+      "tree_id": "b",
+      "tree_kind": "primary",
+      "country_tag": null,
+      "is_default": true,
+      "shared_focus_refs": null,
+      "source_file": "",
+      "initial_show_position": null,
+      "initial_show_focus": null,
+      "scope_kind": "own",
+      "shared_country_tags": null,
+      "source": "created",
+      "nodes": [
+       {
+        "focus_id": "f2",
+        "x": 0,
+        "y": 0,
+        "relative_position_id": "",
+        "source": "created",
+        "completion_reward": "",
+        "name_en": "B",
+        "name_zh": "",
+        "display_name_locs": null,
+        "prerequisites": null,
+        "offset": null,
+        "source_snapshot": null
+       }
+      ]
+     }
+    ],
+    "countries": [
+     "GER"
+    ],
+    "raw_files": [],
+    "file_policies": [],
+    "replace_paths": [
+     "common/national_focus"
+    ]
+   },
+   "findings": [
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:a",
+     "evidence": {
+      "tree_id": "a",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "a",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/GER_a.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_scope_own_missing_country",
+     "severity": "blocker",
+     "source": "focus_tree:b",
+     "evidence": {
+      "tree_id": "b",
+      "country_tags": []
+     },
+     "repair_route": "focus_scope_choose_country"
+    },
+    {
+     "code": "focus_file_policy_missing",
+     "severity": "blocker",
+     "source": {
+      "kind": "focus_tree",
+      "identifier": "b",
+      "path": null
+     },
+     "evidence": {
+      "origin": "created",
+      "target_path": "common/national_focus/GER_b.txt"
+     },
+     "repair_route": "focus.file_policy.reimport_or_repair"
+    },
+    {
+     "code": "focus_effective_default_multiple",
+     "severity": "blocker",
+     "source": "focus_defaults:effective_artifact",
+     "evidence": {
+      "effective_tree_ids": [
+       "a",
+       "b"
+      ],
+      "default_tree_ids": [
+       "a",
+       "b"
+      ],
+      "default_paths": [
+       "common/national_focus/GER_a.txt",
+       "common/national_focus/GER_b.txt"
+      ],
+      "default_providers": [
+       "created_tree",
+       "created_tree"
+      ],
+      "replace_paths": [
+       "common/national_focus"
+      ],
+      "vanilla_generic_injected": false
+     },
+     "repair_route": "focus_default_selection"
+    }
+   ]
+  }
+ ]
+}

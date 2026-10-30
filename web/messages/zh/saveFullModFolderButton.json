@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "浏览器不支持 File System Access API，请改用 Chrome 或 Edge。",
+  "syncing": "同步中...",
+  "syncToNamed": "同步到 {dir}",
+  "syncToFolder": "写入游戏文件夹",
+  "titleWithFolder": "同步整个 mod 到 {dir}/(HOI4 重启 mod 即生效)",
+  "titleNoFolder": "首次使用会让你选一个 mod 文件夹，之后本次会话都复用它。",
+  "tooltipTitle": "导出后：完整测试工作流",
+  "tooltipContent": "HOI4 Mod 测试工作流(创建 + Debug + 日志):\n1. 选 mod 文件夹放在 %userprofile%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\\n2. 启动器 → Mod 库 → 勾选本 mod\n3. Debug 模式启用方法二选一：\n   • Steam 端 · 右键 HOI4 → 属性 → 通用 → 高级启动选项输入 -debug\n   • 本地端 · 创建 dowser.exe 快捷方式 → 属性 → 目标后加 \" -debug\"(注意短横前空格)\n4. 启动游戏 · 主界面加载完后 error.log 自动弹出(记事本)\n5. 错误诊断 · error.log 三类排查：\n   • Family · 跨 mod / 跨 entity 命名 idiom drift\n   • Vanilla compatible · 跟 vanilla 兼容性 (DLC 字段 / 版本)\n   • Mod-internal · 本 mod 内部 (broken ID / circular ref)\n6. 日志位置 · %userprofile%\\Documents\\...\\logs\\(error.log + game.log)\n> 注意：某些严重错误崩溃前可能不被记录，以游戏内现象 + game.log 互补诊断。",
+  "includeImportedTitleOn": "包含从原 mod 导入的内容(vanilla / 老 mod 来源)，写出完整的 mod 文件夹。",
+  "includeImportedTitleOff": "只同步你新建或修改过的实体，不覆盖已导入的旧内容。",
+  "includeImportedLabel": "包含 imported",
+  "changeFolderTitle": "换 mod 文件夹",
+  "changeFolder": "换文件夹",
+  "wroteFiles": "✓ 写入 {count} 文件",
+  "wrotePartial": "⚠ 写入 {ok}/{total} 个文件，{failed} 个失败(如 {firstError})。mod 文件夹处于部分更新状态。",
+  "illegalPathSegment": "非法路径段 \"{segment}\":{path}",
+  "additiveCaption": "同步只写入或覆盖，从不删除。",
+  "additiveTitle": "同步是增量的",
+  "additiveWarning": "同步只会写入或覆盖文件，从不删除。如果你重命名、删除或改了实体的 TAG,旧的 .txt/.yml/.dds 会留在文件夹里，游戏会同时加载新旧两份。做过这类改动后，先手动清空 mod 已生成的目录(common/、events/、history/、localisation/、gfx/)再同步，或同步到一个全新的文件夹。"
+}

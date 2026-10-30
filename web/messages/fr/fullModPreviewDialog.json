@@ -1,0 +1,11 @@
+{
+  "description": "Parcourez l'arborescence et le contenu réels exportés par le mod complet, identiques à ceux du ZIP téléchargé.",
+  "includeImportedTitleOn": "Inclure le contenu importé du mod d'origine (jeu de base ou ancien mod) · prévisualiser le mod complet",
+  "includeImportedTitleOff": "Prévisualiser uniquement les entités créées ou modifiées par l'utilisateur",
+  "includeImportedLabel": "Inclure le contenu importé (du mod d'origine)",
+  "binaryNote": "Fichier binaire ({size}) ; aperçu impossible. Enregistrer dans le dossier du mod l'écrit octet par octet.",
+  "selectFileHint": "Choisissez un fichier à gauche pour prévisualiser son contenu",
+  "buttonTitle": "Parcourir l'arborescence exportée et l'aperçu du contenu du mod complet",
+  "buttonLabel": "Prévisualiser les fichiers",
+  "loading": "Chargement…"
+}

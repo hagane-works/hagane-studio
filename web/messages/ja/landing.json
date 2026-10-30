@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "既存の Mod を読み込む",
+  "newProject": "+ 新規プロジェクト",
+  "newProjectFromScratch": "新規プロジェクト（一から作成）",
+  "dashboardTitle": "マイプロジェクト",
+  "ctaLoadExisting": "既存の Mod をインポート",
+  "ctaNewProject": "空のプロジェクトを作成",
+  "statProjects": "プロジェクト",
+  "statCountries": "国家",
+  "statEntities": "エンティティ",
+  "statRecentEdit": "最近の編集",
+  "statRecentNone": "なし",
+  "timeJustNow": "たった今",
+  "timeMinutesAgo": "{n}分前",
+  "timeHoursAgo": "{n}時間前",
+  "timeToday": "今日",
+  "timeYesterday": "昨日",
+  "timeDaysAgo": "{n}日前",
+  "modNamingTitle": "自動処理されること",
+  "modNamingContent": "ID にはプロジェクトタグが自動的に付くため、バニラ版と衝突しません。命名競合は自動的に解決されます。エクスポート時には descriptor.mod と標準フォルダー構成を生成します。制作に集中できます。",
+  "emptyState": "プロジェクトはまだありません。一から始めるか、既存の Mod をインポートして作り直しましょう。",
+  "loadedBadge": "読み込み済みモード",
+  "docsNavLink": "使い方ガイド",
+  "dashboardNavigationLabel": "ワークベンチのナビゲーション",
+  "languageLabel": "言語",
+  "confirmDeleteProject": "このプロジェクトを削除してもよろしいですか？",
+  "deleteFailed": "削除に失敗しました：{msg}",
+  "modNameLabel": "Mod 名",
+  "modNamePlaceholder": "例：三国志 Mod",
+  "modNameHint": "まずは名前だけ入力してください。プロジェクトを開いた後に国家を追加できます。",
+  "supportedVersionLabel": "対応する HOI4 バージョン",
+  "supportedVersionHint": "Mod が対象とする HOI4 エンジンのバージョンです。descriptor.mod に supported_version として書き込まれます。1.19.* はすべての 1.19.x パッチを対象にします。既定値は最新版で、後から Mod ディスクリプタ設定で変更できます。",
+  "supportedVersionDefault": "最新版",
+  "creating": "作成中...",
+  "createProject": "プロジェクトを作成",
+  "baseModShelf": {
+    "dialogTitle": "新規プロジェクト",
+    "sectionTitle": "ベース Mod",
+    "sectionHint": "ベース Mod のキャラクター、国家方針、アートを参照しながら制作するか、一から始めます。",
+    "fromScratch": {
+      "title": "一から作成",
+      "subtitle": "ベースを使用しない独立 Mod"
+    },
+    "buildOnThis": "これをベースに制作",
+    "workshopLink": "ワークショップ",
+    "otherMod": {
+      "title": "ほかの Mod をベースにしますか？",
+      "subtitle": "自分のベース Mod を非公開サンドボックスに持ち込む"
+    },
+    "createFailed": "プロジェクトを作成できませんでした：{msg}"
+  },
+  "gridLoading": "読み込み中...",
+  "cardNoCountries": "国家はまだありません",
+  "cardMore": "ほか{n}件",
+  "cardDelete": "削除",
+  "cardCharacters": "キャラクター {n}人",
+  "cardFocusNodes": "国家方針ノード {n}件",
+  "cardTechnologies": "技術 {n}件",
+  "cardUpdated": "更新：{date}",
+  "statEntitiesTooltipTitle": "エンティティ内訳",
+  "entityType": {
+    "country": "国家",
+    "character": "キャラクター",
+    "custom_trait": "カスタム特性",
+    "opinion_modifier": "評価補正",
+    "dynamic_modifier": "動的補正",
+    "modifier_definition": "補正定義",
+    "ai_strategy_plan": "AI 戦略計画",
+    "ai_template": "AI 師団編制",
+    "wargoal": "戦争目標",
+    "idea": "国民精神",
+    "focus_tree": "国家方針ツリー",
+    "focus_node": "国家方針ノード",
+    "technology": "技術",
+    "event_namespace": "イベント名前空間",
+    "event": "イベント",
+    "super_event": "スーパーイベント",
+    "decision_category": "ディシジョンカテゴリ",
+    "decision": "ディシジョン",
+    "bookmark": "ブックマーク",
+    "mio": "軍需産業組織",
+    "history_file": "履歴ファイル"
+  },
+  "recentOpened": "最近開いたプロジェクト",
+  "continueEditing": "編集を続ける",
+  "recentlyEdited": "最近編集",
+  "editingNow": "編集中",
+  "justNow": "たった今",
+  "minAgo": "{n}分前",
+  "hourAgo": "{n}時間前",
+  "dayAgo": "{n}日前",
+  "noCountries": "国家はまだありません",
+  "moreCountries": "ほか{n}か国",
+  "entityCharacters": "キャラクター {n}人",
+  "entityFocusNodes": "国家方針ノード {n}件",
+  "entityTechnologies": "技術 {n}件",
+  "toolbar": {
+    "searchPlaceholder": "プロジェクト名 / 国家 TAG / ベース Mod を検索...",
+    "sortLabel": "並び替え：",
+    "sortOption": {
+      "recent": "最近編集した順",
+      "name": "名前 A-Z",
+      "countries": "国家数",
+      "created": "最近作成した順"
+    },
+    "filterGroupLabel": "プロジェクトを絞り込む",
+    "filterOption": {
+      "all": "すべて",
+      "in_progress": "制作中",
+      "by_mod_base": "ベース Mod 別"
+    },
+    "noMatch": "現在の絞り込み条件に一致するプロジェクトはありません。",
+    "clearFilters": "絞り込みを解除"
+  },
+  "modBase": {
+    "kaiserreich": "Kaiserreich",
+    "tno": "The New Order",
+    "tfr": "The Fire Rises",
+    "other": "オリジナル"
+  },
+  "emptyHero": {
+    "title": "最初の HOI4 Mod を作りましょう",
+    "subtitle": "既存の Mod をインポートするか、空のプロジェクトから始めましょう。",
+    "load": {
+      "title": "既存の HOI4 Mod フォルダーがありますか？",
+      "blurb": "Mod フォルダーを選ぶと自動的に解析され、ビジュアルなワークベンチで編集を続けられます。",
+      "cta": "既存の Mod をインポート"
+    },
+    "scratch": {
+      "title": "空のプロジェクトから始めますか？",
+      "blurb": "Mod に名前を付け、ベース国家を選び、白紙の状態から自由に制作できます。",
+      "cta": "空のプロジェクトを作成"
+    }
+  },
+  "settings": "設定",
+  "public": {
+    "brandHome": "Hagane Works ホーム"
+  }
+}

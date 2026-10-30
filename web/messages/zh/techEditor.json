@@ -1,0 +1,207 @@
+{
+  "basicInfo": "基础信息",
+  "displayName": "显示名称",
+  "techIdLabel": "Tech ID (HOI4 内部)",
+  "statusSaving": "保存中...",
+  "statusSaved": "已保存",
+  "statusError": "保存失败",
+  "statusUnsaved": "未保存的更改",
+  "addPrerequisitePlaceholder": "添加前置科技...",
+  "advancedFieldsLabel": "高级字段",
+  "saveTechButton": "保存科技",
+  "deleteTechButton": "删除科技",
+  "section": {
+    "categories": "类别",
+    "aiWillDo": "AI 行为",
+    "description": "描述"
+  },
+  "statDesc": {
+    "soft_attack": "对无装甲目标（步兵、炮兵、未装甲火力点）的伤害输出。几乎所有陆军最常吃的 stat，步兵师核心输出。+10%~+30% 是中段科技典型档位；+50%+ 来自精英学说 + 顶级装备组合。打装甲目标要靠 hard_attack，两者分工明确。",
+    "hard_attack": "对有装甲目标（坦克、装甲车、半履带）的伤害输出。步兵师需装备反坦克炮/反装甲武器才有 hard_attack，坦克师天然高。+15%~+40% 中晚期档位。缺 hard_attack 的纯步兵打装甲师会被快速碾压——装甲战必须有专用武器或空军 CAS 支援。",
+    "defense": "未移动时受到攻击的闪避率。静态防御核心 stat——阵地战守方依靠这个。+10%~+30% 中段档位；+100%+ 是顶级学说+地形+工事三倍叠加。和 breakthrough 互斥：站定不动用 defense、进攻推进用 breakthrough，一个师通常只吃其中一个。",
+    "breakthrough": "进攻移动中吸收伤害的 stat。进攻方推进时依赖——高 breakthrough 师能顶着反击前进。坦克/机械化师天然高；步兵靠工兵+组织度支撑。+20%~+50% 坦克科技中晚期档位。和 defense 互斥：站定 defense、推进 breakthrough。",
+    "armor_value": "装甲单位的物理装甲厚度，和敌方 ap_attack（穿甲）对比决定能否被击穿。armor > 敌方 piercing 时**完全免疫**该攻击；反之 100% 击穿。中坦克装甲值对步兵反坦克枪可能完全免疫、大口径反坦克炮对轻坦克碾压。数值规模 10~100+。",
+    "ap_attack": "攻击方穿甲能力，和敌方 armor_value 对比决定能否击穿。piercing ≥ armor 正常伤害；piercing < armor 伤害大幅降低（约 50% 或更低）。反坦克炮、坦克炮核心 stat。步兵师需装备反坦克武器才有 ap_attack；纯步兵对装甲师基本无效。",
+    "max_organisation": "单位抵抗溃败的'士气池'。每次战斗扣 org，归零被强制脱离战斗；战后快速恢复。典型值：步兵师 60~80、机械化 40~60、坦克师 30~45。+5~+15 常见科技/学说加成。低 org 靠伤害爆发快胜、高 org 靠韧性缠斗——是师设计核心权衡。",
+    "max_strength": "单位实际'兵力'数值，代表未减员状态。战斗受伤扣 strength，归零师被歼灭；后方长期补员恢复。典型值：步兵营 25、坦克营 40、炮兵营 35；满编师 200~400+。+5~+20% 常见科技档位。strength 归零但 org 未归零的师会脱离，基本已失去战斗力。",
+    "reliability": "装备的故障率反指标（0.0~1.0 小数）。战斗/行军中损坏概率的倒数——低 reliability = 高装备损耗。典型值：步兵武器 0.7~0.9、坦克 0.5~0.8、飞机 0.6~0.85。+5%~+15% 常见科技加成。可靠性低的装甲/飞机部队需要大量备件补给，后勤压力巨大。",
+    "maximum_speed": "单位在战略地图上的移动速度（km/h）。决定调度响应、包围、撤退效率。典型值：步兵 4、摩托化 8、机械化 10、坦克 6~10。+10%~+25% 常见学说/科技档位。高速师做 spearhead 快速突破包围；低速师需交通枢纽支撑。天气/地形/补给都会大幅减速。",
+    "build_cost_ic": "单位/装备的工业产能（IC）成本。**减号受欢迎**——`build_cost_ic = -0.1` 是 -10% 成本 = 好加成。科技/学说常见 -5%~-15% 档位。注意符号与意图匹配：+build_cost_ic 会让单位更贵。大 mod 常用这个刻画'精简生产线'或'军工效率提升'的国策路线。",
+    "suppression": "平定占领区反抗活动（Resistance）的能力。高 suppression 师部署在占领州能降 compliance 增长 + 压制反抗输出。骑兵/宪兵/机械化师天然高。典型值：步兵 2、骑兵/宪兵 4~6。占领复杂地区（殖民地/敌核心州）镇压需求大，不够会掉工厂产出 + 资源。和 garrison 政策配合使用。",
+    "air_attack": "陆军单位对敌机的防空能力（和专用 AA 装备绑定）。步兵师装备 AA gun 才有意义否则为 0。无己方制空权的战场，高 air_attack 师能显著减少被空袭减员。典型数值：步兵 +2~5、专用防空营 +15~30。+20%~+50% AA 科技档位。本质还是战斗机压制敌方 CAS 最有效。",
+    "naval_speed": "海军单位战略移动速度（节）。影响舰队调度、拦截、撤退、护航效率。典型值：战列舰 25~30、巡洋舰 28~34、驱逐舰 35~40。+5%~+15% 船只引擎科技档位。航速高的轻型舰做护航/侦察，航速低的主力舰需护航。巡航半径 + 航速共同决定战略覆盖。",
+    "surface_detection": "舰船探测水面目标（敌方水面舰）的能力。影响遭遇战先手命中、舰队发现敌距。典型值：驱逐舰 20~30、巡洋舰 25~40、战列舰 15~25。+10%~+30% 雷达科技档位。侦测高的驱逐舰做侦察幕，战列舰主力靠侦察舰喂目标。和 sub_detection 不同——后者专门查潜艇。",
+    "sub_detection": "舰船探测潜艇的能力，核心反潜 stat。驱逐舰/护卫舰/反潜机是主要提供者。典型值：普通驱逐舰 10~20、专用反潜驱逐舰 30~50。+20%~+50% 声呐科技档位。不足的护航舰队会被狼群潜艇大量击沉货运船队，直接影响战略资源进口。"
+  },
+  "techId": {
+    "placeholder": "e.g. 改进型步兵装备",
+    "tooltipTitle": "Tech ID · HOI4 内部唯一标识",
+    "tooltipContent": "科技全 mod 唯一的内部标识。命名：小写 + 下划线，不含空格/中文。建议前缀标记所属线（infantry_weapons_1 / armor_medium_1 / ca_early_fighter）。脚本 has_tech = X、add_tech_bonus technology = X、set_technology = { X = 1 } 全都引用此 ID。改名会破坏所有引用 + 老存档不兼容，要谨慎。"
+  },
+  "collision": {
+    "sameName": "和原版科技同名，加载后会悄悄覆盖原版，容易看混。建议改个名。",
+    "renameTo": "改名为",
+    "recommended": "(推荐)"
+  },
+  "banner": {
+    "showAs": "显示为 Banner 节点(200×60 · 显文字 + icon)",
+    "tooltipTitle": "Banner vs Icon 节点 sizing",
+    "tooltipContent": "Banner(200×60 横向)：显文字名 + icon · 适合**主代具象装备**(如 M1 加兰德 / 早期驱逐舰 / 战间期型坦克开发)。Icon(64×64 紧凑)：仅 icon + 等级 badge · 适合**sub-tech / 抽象升级**(如 cat_radar III / 工业生产 II)。vanilla 实机比例：支援装备/工业 几乎全 icon · 海军/空军 主代 banner · 装甲 banner+icon 混合。"
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout(游戏内紧凑节点)",
+    "tooltipTitle": "force_use_small_tech_layout · 游戏内紧凑布局",
+    "tooltipContent": "导出 `force_use_small_tech_layout = yes`,强制该 tech 在**真实游戏研究界面里**使用紧凑节点布局。它与上面的「显示为 Banner 节点」完全不同：那个开关只控制节点在**本程序画布上**的显示(纯 UI · 不导出任何内容)，而这个是游戏真正读取的导出 override。vanilla 仅在约 50 个 tech 上用它(显式 override)，所以除非你特意想让一个本会渲染成大节点的 tech 在游戏里用小节点，否则保持关闭。"
+  },
+  "researchCost": {
+    "label": "研究成本",
+    "tooltipTitle": "Research Cost · 研究成本倍率",
+    "tooltipContent": "研究时间的**相对倍率**（非绝对天数——实际天数由 cost × 科技员 × speed_factor × 超时代惩罚 共同决定）。**原版典型值集中在 1.5~2.5**：infantry 主线常 1.5、主干科技 2、学说 2.5。边界：学说特殊节点 4+、特殊项目可到 0.5 但极罕见。过高 AI 永远研究不出；过低玩家一天点完。配合 start_year 控制超时代惩罚。"
+  },
+  "startYear": {
+    "label": "起始年份",
+    "tooltipTitle": "Start Year · 科技历史年份",
+    "tooltipContent": "科技的历史可用年份。玩家在此年份前研究会触发**超时代惩罚**（ahead_of_time_research_factor 大幅拖慢，通常 -50%~-70%）。1936 基准原版分布：**主峰 1936（106 项）**，1939~1945 密集，早期 1918/1922 少量支援科技，最早 1910（个位数）、最晚 1950（6 项）。架空/现代 mod（Fire Rise 等）可用 1960+ 表示'当代/未来'科技。",
+    "balanceWarn": "⚠ vanilla 平衡：每超前 1 年研发约 +200% cost(玩家研发慢 2 倍)"
+  },
+  "xPosition": {
+    "label": "X 位置",
+    "tooltipTitle": "X Position · 研究界面的纵向行偏移",
+    "tooltipContent": "和直觉相反，已在游戏里核实：HOI4 研究界面里 **x 是纵轴、y 是横轴**。x 是相对父科技的**行偏移**：+1 = 往下一行，并列的几条支线靠它岔开。横向位置由 y 决定（原版习惯把年份档写进 y，比如 @1936，这只是惯例，与 start_year 无关）。原版 infantry_weapons1 → 2 → improved 同一条链 x 恒为 0、只有 y 递增，armored_car1 则是 x = 4 在下面一行。同位置会重叠。无前置时相对于 folder 起点。"
+  },
+  "folder": {
+    "label": "研究分类 (Folder)",
+    "tooltipTitle": "Folder · 研究界面分页归属",
+    "tooltipContent": "`common/technology_tags/00_technology.txt` 里的 `technology_folders` 块决定本科技显示在研究界面的哪个分页（陆军 / 空军 / 海军 / 工业 / 电子 / 特种部队）。每个 token（如 infantry_folder、mtgnavalfolder）对应一个游戏内子分页——选错了科技仍然可用，但会显示在错误的分页下。创建科技时按当前子分页自动设置；想把科技移到别的分页就在这里改。你自己 mod 的 technology_tags 文件里定义的自定义 folder 会原样保留。",
+    "customCurrent": "当前（自定义）：{folder}",
+    "none": "不在研究树上（子科技）"
+  },
+  "prerequisites": {
+    "heading": "前置科技",
+    "tooltipContent": "本科技的前置科技列表。必须**全部研究完成**才能开始研究本科技（AND 逻辑）。OR 前置不在这里配——需要把同一位置填多条路径（同 folder 同位置的两个 prerequisites 集自动 OR）。一般线性科技 1~2 个前置；主干分叉合流点可能 3+。不能互为前置成环（HOI4 会死锁）。"
+  },
+  "effects": {
+    "title": "Tech Effects (解锁效果)",
+    "tooltipContent": "科技完成后永久解锁的游戏内容——装备（enable_equipments）、兵种类型（enable_subunits）、装备模块（enable_equipment_modules）。这是科技的'长期收益'——即使没有全局修正，解锁内容本身就推动新装备进入生产线 + 新兵种类型可编入师模板。步兵/装甲/海军/空军线核心字段。",
+    "hint": "科技解锁的装备、兵种、模块。每行一个 ID，直接写 HOI4 内部名称。"
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments (解锁装备)",
+    "tooltipTitle": "enable_equipments · 解锁装备",
+    "tooltipContent": "研究完成后解锁的装备 ID 列表（一行一个）。直接写 HOI4 内部装备名称，对应 common/units/equipment/ 下定义。解锁后装备才能在生产线选择。常见：infantry_equipment_1、medium_tank_chassis_1、fighter_equipment_1。改名不报错但生产线找不到。装备版本号递进一般用 _1 _2 _3 后缀。",
+    "field": "enable_equipments · 解锁装备 ID(每行/空格分隔)"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits (解锁兵种)",
+    "tooltipTitle": "enable_subunits · 解锁兵种",
+    "tooltipContent": "研究完成后解锁的 subunit（师内营级单位类型）列表。对应 common/units/ 下 subunit 定义。解锁后师模板编辑器才能添加此兵种。常见 ID：infantry、motorized、mechanized、artillery、anti_tank、anti_air、engineer、recon、signal_company、maintenance_company、field_hospital、military_police。与 enable_equipments 区别：subunit 是'能编入师的营/连级类型'、equipment 是'该兵种装备的武器'。",
+    "field": "enable_subunits · 解锁子单位(motorized / marines / paratrooper …)"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules (解锁模块)",
+    "tooltipTitle": "enable_equipment_modules · 解锁模块",
+    "tooltipContent": "研究完成后解锁的装备模块列表。模块是装备设计器（坦克 / 飞机 / 舰船）里可选的子部件。对应 common/units/equipment_modules/ 下定义。一行一个模块 ID。常见：tank_heavy_machine_gun、additional_machine_guns、large_plane_airframe、ship_torpedo_medium_1。需配合 MIO（军工设计组织）和装备版本系统使用——无装备设计器 mod（纯 vanilla 以前）不需要填。",
+    "field": "enable_equipment_modules · NSB 设计师 module"
+  },
+  "globalModifier": {
+    "title": "Global Modifier (全局修正)",
+    "tooltipContent": "科技完成后给本国**持续生效**的 modifier 块（与国家精神 idea 的 modifier 结构相同，但来源不同）。典型 stat：工业线 research_speed_factor / production_factory_max_efficiency_factor；电子线 encryption / decryption；陆海空军学说 军种效能加成。数值写小数（0.03 = +3%）。可叠加多个。",
+    "hint": "科技研究完成后对国家生效的全局修正，如 research_speed_factor、production_factory_efficiency_gain_factor 等。工业线和电子线科技的核心效果。"
+  },
+  "researchScripts": {
+    "title": "Research Scripts (研究脚本)",
+    "tooltipContent": "科技完成瞬间执行的脚本逻辑（与 Global Modifier 持续生效不同，这里是一次性触发）。三个子块：\n• on_research_complete：执行的 effect（自动解锁师模板、触发事件）\n• on_research_complete_limit：触发条件（防重入）\n• allow：研究许可条件（限制能否研究）\nDLC 独占科技、国策解锁科技、自动解锁师模板的核心入口。"
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete (研究完成时执行)",
+    "tooltipTitle": "on_research_complete · 研究完成时执行",
+    "tooltipContent": "科技完成瞬间执行的 effect 块（一次性，非持续）。典型用途：\n• load_oob = OOB_FILE（自动加载师模板/装备）\n• custom_effect_tooltip = LOC_KEY（显示解锁提示）\n• country_event = { id = X days = 7 }（触发后续剧情事件）\nhidden_effect = { ... } 包裹表示不显示效果文字给玩家（常用于内部 flag 管理）。与 on_research_complete_limit 搭配防重入。",
+    "hint": "研究完成后触发的效果，如自动创建兵种模板、显示提示等",
+    "field": "on_research_complete · 研究完成时一次性 effect 块"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit (触发条件)",
+    "tooltipTitle": "on_research_complete_limit · 触发条件",
+    "tooltipContent": "on_research_complete 的触发门槛。trigger 块——条件满足才执行 on_research_complete 里的 effect。核心用途：**防重入**。典型：NOT = { has_template_containing_unit = paratrooper }（避免研究完又研究时重复解锁同一师模板）。留空 = 总是触发（包括每次加载存档时可能被回放触发）。",
+    "hint": "控制 on_research_complete 何时触发，防止重复执行",
+    "field": "on_research_complete_limit · 限定 effect 触发条件"
+  },
+  "allow": {
+    "heading": "allow (研究许可条件)",
+    "tooltipTitle": "allow · 研究许可条件",
+    "tooltipContent": "控制此科技能否被研究的 trigger 块。不满足时科技在研究界面灰掉不可点。**always = no** 表示**只能通过脚本解锁**——配合国策 effect 里 set_technology = { X = 1 } 或 add_tech_bonus 自动解锁。常用于 DLC 独占科技、剧情解锁型科技、隐藏科技（特殊专项研究项目）。留空 = 所有国家均可研究。",
+    "hint": "控制能否研究此科技。留空=所有人可研究，写 always = no 表示只能通过国策解锁",
+    "field": "allow · 研究可用条件 trigger 块"
+  },
+  "enableBuilding": {
+    "tooltipContent": "研究完成后解锁的建筑 ID（单值 · 对应 common/buildings/）。常见 vanilla：synthetic_refinery / radar_station / rocket_site / nuclear_reactor / mega_gun_emplacement。一次只能解一个建筑——多个建筑请用多个 tech 节点串联。"
+  },
+  "enableTactic": {
+    "tooltipContent": "解锁陆战战术 ID（common/combat_tactics.txt）。常见：encirclement / breakthrough / tactical_withdrawal。战术由 AI 在战斗中按地形+学说自动选择。"
+  },
+  "xor": {
+    "heading": "xor (互斥科技列表)",
+    "tooltipTitle": "xor · 互斥科技",
+    "tooltipContent": "研究本 tech 后无法再研究列表里的 tech（反之亦然 · 单向写法但语义双向）。vanilla 典型：steel_chassis vs aluminium_chassis（钢制 vs 铝制机身 · 二选一路线分叉）。一行一个 tech_id。",
+    "field": "xor · 互斥科技 ID(选 A 排 B 的兄弟节点)"
+  },
+  "subTechnologies": {
+    "heading": "sub_technologies (子科技)",
+    "tooltipTitle": "sub_technologies · 子科技",
+    "tooltipContent": "嵌套在父 tech 卡内的小幅升级 tech（一行一个 tech_id · 必须在同 mod 内另定义）。vanilla 例：infantry_at（步兵反坦克 · 嵌在 infantry_weapons 卡里 · UI 双圈节点）。研究父 tech 后子科技 UI 才显。"
+  },
+  "allowBranch": {
+    "heading": "allow_branch (分支显示条件)",
+    "tooltipTitle": "allow_branch · 分支显示条件",
+    "tooltipContent": "trigger 块——决定整个 tech 分支是否对玩家可见（不满足则 UI 完全隐藏该分支）。vanilla 例：has_dlc = \"Man the Guns\" 隐藏 MTG 海军线给非 DLC 玩家。和 allow 区别：allow 控研究许可、allow_branch 控 UI 可见。",
+    "field": "allow_branch · 整支线显隐 trigger"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type (NSB 设计组 XP)",
+    "tooltipTitle": "xp_research_type · 设计组 XP 消耗",
+    "tooltipContent": "NSB DLC 装备设计器机制——此 tech 可被陆军/海军/空军 XP 加速研究。空 = 不用 XP。配合 xp_boost_cost 设定每次加速消耗的 XP 数量。",
+    "optNone": "无 (留空)",
+    "optLand": "land · 陆军 XP",
+    "optNaval": "naval · 海军 XP",
+    "optAir": "air · 空军 XP"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · XP 加速代价",
+    "tooltipContent": "每次用军种 XP 加速本 tech 研究所需的 XP 数量。vanilla 典型 25~50。0 = 不可加速。需配合 xp_research_type 设定 XP 类型。"
+  },
+  "dependencies": {
+    "heading": "dependencies(并行研究依赖)",
+    "tooltipTitle": "dependencies · 并行研究依赖",
+    "tooltipContent": "较少用。并行研究时能加速本 tech 的其它 tech。一行一条 `tech_id = factor`(factor 缺省为 1)。被引用的 tech 必须在同一 mod 内定义。区别于 prerequisites(硬性前置)。"
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus(XP 代价倍率)",
+    "tooltipTitle": "xp_research_bonus · XP 代价倍率",
+    "tooltipContent": "研究本 tech 所耗陆/海/空军种 XP 的倍率(vanilla 裸标量写法，如 1.50)。留空则不导出。仅对消耗学说 XP 的 tech 有意义。",
+    "blockFormNote": "本 tech 带有导入的按军种细分 xp_research_bonus —— 已保留并原样导出。此处只读，以免覆盖该细分。"
+  },
+  "doctrine": {
+    "heading": "doctrine (legacy · pre-NCNS 学说标记)",
+    "tooltipContent": "NCNS DLC 前的学说 flag · 现 vanilla 学说已迁到 common/doctrines/ 独立 XP+mastery 系统。新 mod 不建议用——保留兼容已有 mod。"
+  },
+  "statBonuses": {
+    "title": "Stat Bonuses (兵种属性加成)",
+    "tooltipContent": "给特定兵种类别的战斗属性加成。结构：兵种分类（infantry / armor / cat_cas / ...）→ 属性（soft_attack / defense / breakthrough / ...）→ 数值（0.05 = +5%）。每个兵种类别可加多个属性。中晚期科技的核心效果——与 enable_equipments 解锁新装备互补（一个提升既有兵种、一个开新兵种）。具体每个属性的含义见下方下拉 hover 提示。",
+    "hint": "选择受益兵种分类 → 选择属性 → 填数值（如 0.05 = +5%）→ 点 + 添加",
+    "category": "兵种分类",
+    "categoryPlaceholder": "选择兵种分类...",
+    "stat": "属性",
+    "statPlaceholder": "选择属性...",
+    "value": "数值"
+  },
+  "advanced": {
+    "pathField": "path · 出向边 + research_cost_coeff(AI 用 add_path 编辑)"
+  },
+  "rawExtras": {
+    "badge": "部分字段为高级脚本保留",
+    "count": "保留 {count} 项",
+    "hint": "这些导入字段暂无可视化编辑器，会按原文保留并在导出时原样写回。",
+    "keysLabel": "保留字段",
+    "jsonLabel": "原始 JSON"
+  }
+}

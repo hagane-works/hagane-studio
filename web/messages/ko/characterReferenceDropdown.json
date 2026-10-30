@@ -1,0 +1,13 @@
+{
+  "promote": "캐릭터 승격",
+  "recruit": "캐릭터 영입",
+  "retire": "캐릭터 은퇴",
+  "searchPlaceholder": "이름 또는 ID 검색…",
+  "searchingBase": "기본 모드 검색 중…",
+  "noResults": "검색 결과가 없습니다.",
+  "empty": "아직 캐릭터가 없습니다. 입력하여 기본 모드를 검색하세요.",
+  "projectBadge": "프로젝트",
+  "baseBadge": "기본 모드",
+  "promptManual": "캐릭터 ID 직접 입력:",
+  "enterManually": "+ 직접 입력…"
+}

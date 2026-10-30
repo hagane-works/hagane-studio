@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "Application en masse",
+  "undonePrefix": "Annulé ·",
+  "undoFailedPrefix": "Échec de l'annulation : ",
+  "justCreatedPrefix": "Tout juste créés",
+  "justCreatedSuffix": "éléments · annulez tout le lot s'il ne vous convient pas",
+  "justUpdatedPrefix": "Tout juste mises à jour",
+  "justUpdatedSuffix": "conditions de Priorités - nation · Annuler restaure les valeurs précédentes",
+  "undoBatchTitle": "Annuler ce lot · supprimer tout ce qu'il vient de créer",
+  "undoRestoreTitle": "Annuler cette mise à jour · restaurer les conditions précédentes",
+  "undoing": "Annulation…",
+  "undo": "Annuler",
+  "dismissTitle": "Masquer la bannière (sans annuler)",
+  "itemsFallback": "{count} éléments",
+  "cannotUndoTitle": "Modification en masse · annulation impossible",
+  "cannotUndoNote": "Aucune copie de l'état précédent n'a été enregistrée ; ce lot ne peut donc pas être rétabli. Ouvrez l'atelier correspondant et vérifiez les changements.",
+  "nothingUndoneNote": "Cette annulation n'a rien changé : les éléments ne sont plus dans le projet. Ouvrez l'atelier correspondant pour le confirmer.",
+  "undoUnavailableTitle": "Ce lot ne peut pas être annulé"
+}

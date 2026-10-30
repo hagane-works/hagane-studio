@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "Scripted GUI 变量面板",
+    "description": "变量总览面板起步文件：interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt。"
+  },
+  "on_actions": {
+    "label": "on_actions 钩子",
+    "description": "含 on_startup 与 on_monthly 效果骨架的钩子文件（叠加合并）。"
+  },
+  "game_rules": {
+    "label": "自定义游戏规则",
+    "description": "新开局“游戏规则”界面的双选项规则行（叠加合并）。"
+  },
+  "ai_strategy": {
+    "label": "AI 策略",
+    "description": "按国家 TAG 生效的 AI 策略块（叠加合并）。"
+  },
+  "gfx_sprite": {
+    "label": "GFX 贴图注册",
+    "description": "把 GFX_'<key>' 映射到贴图路径的 sprite 片段（图片需另行上传）。"
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "书签卡槽宽修复",
+    "description": "frontendgamesetupview.gui 覆盖脚手架：修复大型转换基础 Mod 中多个书签卡不可见的问题。"
+  },
+  "defines": {
+    "label": "Defines 常数微调（Lua）",
+    "description": "以 Lua 覆盖单个 NDefines 引擎常数（切勿整份复制 00_defines.lua）。"
+  },
+  "bop": {
+    "label": "权力平衡",
+    "description": "含区间和温和修正的双阵营权力平衡条；需用 set_power_balance 激活。"
+  },
+  "music": {
+    "label": "音乐电台曲目",
+    "description": "以配套的 .asset 与 .txt 文件把曲目加入 base_music 电台；.ogg 音频需另行上传。"
+  },
+  "peace_conference": {
+    "label": "和会成本修正",
+    "description": "和会行动成本修正行（默认 1.0、无副作用；叠加合并）。"
+  }
+}

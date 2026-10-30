@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "クリックして拡大",
+  "reviewTitle": "画像を確認",
+  "referencedSpriteNoPreview": "参照スプライト（ローカルプレビューなし）",
+  "unsupportedFormat": "未対応の形式です。PNG / JPG / DDS / TGA / WEBP をアップロードしてください。",
+  "uploadFailed": "アップロードに失敗しました",
+  "selectedFile": "選択中：{filename}",
+  "replaceImage": "画像を置き換える",
+  "uploadImage": "画像をアップロード",
+  "defaultHint": "PNG / JPG / DDS · 目標 {width} × {height}",
+  "advisoryHeading": "{count, plural, one {注意事項} other {注意事項（{count}件）}}",
+  "cropInstruction": "ドラッグして切り抜き · アスペクト比は {width}:{height} に固定",
+  "cropSourceAlt": "切り抜き元",
+  "uploading": "アップロード中...",
+  "uploadWithCrop": "切り抜いてアップロード",
+  "cancel": "キャンセル",
+  "currentUpload": "現在のアップロード",
+  "emptyTitle": "画像はまだアップロードされていません",
+  "emptyHelp": "「画像をアップロード」をクリックしてください。ファイル名を自動設定し、{width} × {height} にサイズ変更して、エクスポート時に DDS へ変換します。"
+}

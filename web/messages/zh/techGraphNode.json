@@ -1,0 +1,20 @@
+{
+  "startYear": "起始年",
+  "cost": "研究花费",
+  "costValue": "{cost} ({days} 天)",
+  "source": "来源",
+  "level": "等级",
+  "unlockPath": "解锁路径",
+  "loading": "加载中…",
+  "noPath": "暂无解锁路径。添加一个 focus / event / decision 来解锁此 tech。",
+  "moreCount": "+{n} 处",
+  "unlockPathTitle": "解锁路径 · 鼠标悬停查看完整路径",
+  "deleteTitle": "删除此科技",
+  "noIconTitle": "该科技没有可用图标",
+  "iconLoadFailedTitle": "该科技已有上传的图标，但加载失败",
+  "unlockKind": {
+    "focus": "国策",
+    "event": "事件",
+    "decision": "决议"
+  }
+}

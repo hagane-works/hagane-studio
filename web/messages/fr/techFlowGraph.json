@@ -1,0 +1,9 @@
+{
+  "footerHint": "Double-cliquez dans le vide → créer · faites glisser un nœud → changer start_year / colonne · sélectionnez puis appuyez sur <kbd>Suppr</kbd>, ou survolez le × en haut à droite pour supprimer",
+  "footerHintAria": "Aide des commandes du canevas",
+  "footerHintRowAxis": "Double-cliquez dans le vide → créer · faites glisser un nœud → changer ligne / colonne · sélectionnez puis appuyez sur <kbd>Suppr</kbd>, ou survolez le × en haut à droite pour supprimer",
+  "orphanNoFolder": "Hors de tout arbre technologique · {count} technologies sans bloc folder (accordées par Priorité - nation/événement)",
+  "orphanUnmatched": "Sans correspondance avec un gridbox du .gui · {count} technologies",
+  "footerHintBrowse": "Parcourez le tableau de recherche : sélectionnez une technologie, déplacez la vue ou zoomez. Utilisez le mode de mise en page pour modifier un emplacement.",
+  "footerHintLayout": "Mode de mise en page : placez uniquement dans les emplacements valides du dossier de recherche sélectionné. Le glisser-déposer ne change jamais l’année de recherche."
+}

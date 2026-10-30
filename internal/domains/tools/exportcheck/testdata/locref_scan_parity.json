@@ -1,0 +1,126 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "sources": [],
+   "defined": [],
+   "issues": []
+  },
+  {
+   "name": "defined-key-ok",
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "f1",
+     "field": "available",
+     "value": "has_country_flag = FOO"
+    }
+   ],
+   "defined": [
+    "FOO"
+   ],
+   "issues": []
+  },
+  {
+   "name": "missing-key",
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "f1",
+     "field": "available",
+     "value": "custom_effect_tooltip = MY_TT"
+    }
+   ],
+   "defined": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "f1",
+      "loc_key": "MY_TT",
+      "field": "available"
+     },
+     "detail": {
+      "id": "f1",
+      "key": "MY_TT",
+      "field": "available"
+     },
+     "severity": "warning",
+     "message": "focus 'f1' references localisation key 'MY_TT' in available, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'MY_TT' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    }
+   ]
+  },
+  {
+   "name": "multiple-sources-same-key",
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "f1",
+     "field": "available",
+     "value": "custom_effect_tooltip = SHARED_TT"
+    },
+    {
+     "entity_type": "idea",
+     "entity_id": "i1",
+     "field": "allowed",
+     "value": "custom_effect_tooltip = SHARED_TT"
+    }
+   ],
+   "defined": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "focus",
+      "id": "f1",
+      "loc_key": "SHARED_TT",
+      "field": "available"
+     },
+     "detail": {
+      "id": "f1",
+      "key": "SHARED_TT",
+      "field": "available"
+     },
+     "severity": "warning",
+     "message": "focus 'f1' references localisation key 'SHARED_TT' in available, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'SHARED_TT' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    },
+    {
+     "level": "warning",
+     "code": "localisation_reference_not_in_project",
+     "entity_ref": {
+      "type": "idea",
+      "id": "i1",
+      "loc_key": "SHARED_TT",
+      "field": "allowed"
+     },
+     "detail": {
+      "id": "i1",
+      "key": "SHARED_TT",
+      "field": "allowed"
+     },
+     "severity": "warning",
+     "message": "idea 'i1' references localisation key 'SHARED_TT' in allowed, but this project has no definition for it. It may still come from vanilla or the selected base mod.",
+     "fix_hint": "Add 'SHARED_TT' to the project's localisation, or confirm that the key is supplied by vanilla/the base mod before ignoring this warning."
+    }
+   ]
+  },
+  {
+   "name": "comment-stripped",
+   "sources": [
+    {
+     "entity_type": "focus",
+     "entity_id": "f1",
+     "field": "available",
+     "value": "# custom_effect_tooltip = COMMENTED"
+    }
+   ],
+   "defined": [],
+   "issues": []
+  }
+ ]
+}

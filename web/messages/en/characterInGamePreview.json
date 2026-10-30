@@ -1,0 +1,14 @@
+{
+  "roleCountryLeader": "Country Leader",
+  "roleFieldMarshal": "Field Marshal",
+  "roleCorpsCommander": "Corps Commander",
+  "roleAdmiral": "Admiral",
+  "roleScientist": "Scientist",
+  "roleOperative": "Operative",
+  "roleAdvisor": "Advisor",
+  "draft": "Draft",
+  "noPortrait": "No portrait",
+  "traits": "Traits",
+  "advisorSlot": "Advisor Slot",
+  "cost": "Cost {amount}"
+}

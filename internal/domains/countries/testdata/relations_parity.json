@@ -1,0 +1,418 @@
+[
+ {
+  "text": "add_ideas = war_economy",
+  "refs": [
+   [
+    "add_ideas",
+    "idea",
+    "war_economy"
+   ]
+  ]
+ },
+ {
+  "text": "add_ideas = { idea_a idea_b GER_idea_c }",
+  "refs": [
+   [
+    "add_ideas",
+    "idea",
+    "idea_a"
+   ],
+   [
+    "add_ideas",
+    "idea",
+    "idea_b"
+   ],
+   [
+    "add_ideas",
+    "idea",
+    "GER_idea_c"
+   ]
+  ]
+ },
+ {
+  "text": "swap_ideas = { remove_idea = old_idea add_idea = new_idea }",
+  "refs": [
+   [
+    "swap_ideas",
+    "idea",
+    "old_idea"
+   ],
+   [
+    "swap_ideas",
+    "idea",
+    "new_idea"
+   ]
+  ]
+ },
+ {
+  "text": "add_timed_idea = { idea = timed_x days = 30 }",
+  "refs": [
+   [
+    "add_timed_idea",
+    "idea",
+    "timed_x"
+   ]
+  ]
+ },
+ {
+  "text": "if = { limit = { has_idea = nested_idea } remove_ideas = dropped }",
+  "refs": [
+   [
+    "has_idea",
+    "idea",
+    "nested_idea"
+   ],
+   [
+    "remove_ideas",
+    "idea",
+    "dropped"
+   ]
+  ]
+ },
+ {
+  "text": "country_event = usa.1",
+  "refs": [
+   [
+    "country_event",
+    "event",
+    "usa.1"
+   ]
+  ]
+ },
+ {
+  "text": "country_event = { id = ger.2 hours = 6 }",
+  "refs": [
+   [
+    "country_event",
+    "event",
+    "ger.2"
+   ]
+  ]
+ },
+ {
+  "text": "news_event = { id = world_news.3 days = 1 random = 4 }",
+  "refs": [
+   [
+    "news_event",
+    "event",
+    "world_news.3"
+   ]
+  ]
+ },
+ {
+  "text": "random_list = { 50 = { country_event = branch.1 } 50 = { state_event = branch.2 } }",
+  "refs": [
+   [
+    "country_event",
+    "event",
+    "branch.1"
+   ],
+   [
+    "state_event",
+    "event",
+    "branch.2"
+   ]
+  ]
+ },
+ {
+  "text": "complete_national_focus = GER_focus_x",
+  "refs": [
+   [
+    "complete_national_focus",
+    "focus",
+    "GER_focus_x"
+   ]
+  ]
+ },
+ {
+  "text": "complete_national_focus = { focus = WUW_focus use_side_message = yes }",
+  "refs": [
+   [
+    "complete_national_focus",
+    "focus",
+    "WUW_focus"
+   ]
+  ]
+ },
+ {
+  "text": "focus_progress = { focus = USA_prog > 0.5 }",
+  "refs": [
+   [
+    "focus_progress",
+    "focus",
+    "USA_prog"
+   ]
+  ]
+ },
+ {
+  "text": "has_completed_focus = generic_focus",
+  "refs": [
+   [
+    "has_completed_focus",
+    "focus",
+    "generic_focus"
+   ]
+  ]
+ },
+ {
+  "text": "activate_decision = my_decision",
+  "refs": [
+   [
+    "activate_decision",
+    "decision",
+    "my_decision"
+   ]
+  ]
+ },
+ {
+  "text": "unlock_decision_tooltip = { decision = tooltip_dec }",
+  "refs": [
+   [
+    "unlock_decision_tooltip",
+    "decision",
+    "tooltip_dec"
+   ]
+  ]
+ },
+ {
+  "text": "swap_ruler_traits = { add = new_trait remove = old_trait }",
+  "refs": [
+   [
+    "swap_ruler_traits",
+    "trait",
+    "new_trait"
+   ],
+   [
+    "swap_ruler_traits",
+    "trait",
+    "old_trait"
+   ]
+  ]
+ },
+ {
+  "text": "create_country_leader = { name = X ideology = despotism traits = { t1 t2 } }",
+  "refs": [
+   [
+    "create_country_leader",
+    "trait",
+    "t1"
+   ],
+   [
+    "create_country_leader",
+    "trait",
+    "t2"
+   ]
+  ]
+ },
+ {
+  "text": "add_trait = { character = GER_char trait = brave slot = advisor }",
+  "refs": [
+   [
+    "add_trait",
+    "character",
+    "GER_char"
+   ],
+   [
+    "add_trait",
+    "trait",
+    "brave"
+   ]
+  ]
+ },
+ {
+  "text": "promote_character = { character = ROM_king }",
+  "refs": [
+   [
+    "promote_character",
+    "character",
+    "ROM_king"
+   ]
+  ]
+ },
+ {
+  "text": "retire_character = GER_old_guy",
+  "refs": [
+   [
+    "retire_character",
+    "character",
+    "GER_old_guy"
+   ]
+  ]
+ },
+ {
+  "text": "set_technology = { tech_infantry = 1 popup = no tech_support = 1 }",
+  "refs": [
+   [
+    "set_technology",
+    "technology",
+    "tech_infantry"
+   ],
+   [
+    "set_technology",
+    "technology",
+    "tech_support"
+   ]
+  ]
+ },
+ {
+  "text": "has_tech = basic_train",
+  "refs": [
+   [
+    "has_tech",
+    "technology",
+    "basic_train"
+   ]
+  ]
+ },
+ {
+  "text": "add_opinion_modifier = { target = USA modifier = friendly_pact }",
+  "refs": [
+   [
+    "add_opinion_modifier",
+    "opinion_modifier",
+    "friendly_pact"
+   ]
+  ]
+ },
+ {
+  "text": "has_opinion_modifier = protest_note",
+  "refs": [
+   [
+    "has_opinion_modifier",
+    "opinion_modifier",
+    "protest_note"
+   ]
+  ]
+ },
+ {
+  "text": "add_dynamic_modifier = { modifier = dm_x scope = GER }",
+  "refs": [
+   [
+    "add_dynamic_modifier",
+    "dynamic_modifier",
+    "dm_x"
+   ]
+  ]
+ },
+ {
+  "text": "set_autonomy = { target = GER autonomy_state = autonomy_puppet }",
+  "refs": [
+   [
+    "set_autonomy",
+    "autonomy_state",
+    "autonomy_puppet"
+   ]
+  ]
+ },
+ {
+  "text": "set_autonomy = { target = GER autonomous_state = autonomy_dominion }",
+  "refs": [
+   [
+    "set_autonomy",
+    "autonomy_state",
+    "autonomy_dominion"
+   ]
+  ]
+ },
+ {
+  "text": "add_mio_funds = { mio = ger_tank_mio amount = 100 }",
+  "refs": [
+   [
+    "add_mio_funds",
+    "mio",
+    "ger_tank_mio"
+   ]
+  ]
+ },
+ {
+  "text": "",
+  "refs": []
+ },
+ {
+  "text": "   ",
+  "refs": []
+ },
+ {
+  "text": "add_ideas = { unclosed",
+  "refs": []
+ },
+ {
+  "text": "some_random_effect = yes",
+  "refs": []
+ },
+ {
+  "text": "} add_ideas = stray_rbrace_before",
+  "refs": [
+   [
+    "add_ideas",
+    "idea",
+    "stray_rbrace_before"
+   ]
+  ]
+ },
+ {
+  "text": "add_ideas = { x } }",
+  "refs": [
+   [
+    "add_ideas",
+    "idea",
+    "x"
+   ]
+  ]
+ },
+ {
+  "text": "add_ideas =",
+  "refs": [
+   [
+    "add_ideas",
+    "idea",
+    ""
+   ]
+  ]
+ },
+ {
+  "text": "foo = { } add_ideas = after_empty_block",
+  "refs": [
+   [
+    "add_ideas",
+    "idea",
+    "after_empty_block"
+   ]
+  ]
+ },
+ {
+  "text": "if = {\n        limit = { has_completed_focus = f1 has_tech = t1 }\n        country_event = { id = deep.1 }\n        hidden_effect = { add_ideas = { i1 i2 } swap_ruler_traits = { add = t_add } }\n    }",
+  "refs": [
+   [
+    "has_completed_focus",
+    "focus",
+    "f1"
+   ],
+   [
+    "has_tech",
+    "technology",
+    "t1"
+   ],
+   [
+    "country_event",
+    "event",
+    "deep.1"
+   ],
+   [
+    "add_ideas",
+    "idea",
+    "i1"
+   ],
+   [
+    "add_ideas",
+    "idea",
+    "i2"
+   ],
+   [
+    "swap_ruler_traits",
+    "trait",
+    "t_add"
+   ]
+  ]
+ }
+]

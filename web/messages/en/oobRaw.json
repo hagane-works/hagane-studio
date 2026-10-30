@@ -1,0 +1,21 @@
+{
+  "title": "Order of Battle & Units (preserved)",
+  "subtitle": "Your handwritten OOB, units, division templates and equipment are kept verbatim and re-exported byte-for-byte.",
+  "preservedBadge": "Preserved on round-trip",
+  "detectedHeading": "Detected in this file",
+  "stat": {
+    "set_oob": "Land OOB ref",
+    "set_air_oob": "Air OOB ref",
+    "set_naval_oob": "Naval OOB ref",
+    "units": "units block",
+    "division_template": "division_template",
+    "equipment": "equipment / production"
+  },
+  "editLabel": "OOB / units raw script",
+  "editHelp": "Edit freely — this exact text is written into history/countries/[TAG].txt on export. Comments and inline blocks are kept as-is.",
+  "emptyTitle": "No OOB or units yet",
+  "emptyBody": "Paste a set_oob reference or a units block here and it survives export unchanged. set_oob names a file under history/units/: the program generates that file from your Division Templates and Starting Army workbenches, and a file of the same name that came in with an imported mod is carried over untouched. Name it country tag + start year (e.g. ROM_1936) — everything downstream reads the country from that prefix.",
+  "emptyInsert": "Insert OOB starter",
+  "starterComment": "# Order of Battle — written verbatim into this country's history file",
+  "starterNeedsTag": "Set this history file's country tag first — the OOB file name must start with it (e.g. ROM_1936), otherwise nothing can tell which country these units belong to."
+}

@@ -1,0 +1,13 @@
+{
+  "promote": "Promouvoir le personnage",
+  "recruit": "Recruter le personnage",
+  "retire": "Mettre le personnage à la retraite",
+  "searchPlaceholder": "Rechercher par nom ou ID…",
+  "searchingBase": "Recherche dans le mod de base…",
+  "noResults": "Aucun résultat.",
+  "empty": "Aucun personnage pour le moment ; saisissez du texte pour rechercher dans le mod de base.",
+  "projectBadge": "projet",
+  "baseBadge": "mod de base",
+  "promptManual": "Saisissez manuellement l'ID du personnage :",
+  "enterManually": "+ Saisir manuellement…"
+}

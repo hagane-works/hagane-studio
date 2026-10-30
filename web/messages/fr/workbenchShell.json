@@ -1,0 +1,18 @@
+{
+  "expandPreview": "Développer l'aperçu",
+  "collapsePreview": "Réduire l'aperçu",
+  "tabLivePreview": "Aperçu en direct",
+  "tabScript": "Script",
+  "tabReferencesHint": "Voyez quelles entités référencent celle-ci et lesquelles elle référence.",
+  "tabScriptHint": "Fichiers de script exportés pour cette entité (avancé).",
+  "livePreviewSelectHint": "Sélectionnez un élément dans la liste pour voir son aperçu dans le jeu.",
+  "livePreviewCreateFirstHint": "Rien à prévisualiser pour le moment ; créez le premier élément dans la liste de gauche.",
+  "liveDraftBadge": "Brouillon en direct",
+  "previewLabel": "Aperçu",
+  "openInGame": "Voir dans le jeu",
+  "previewUnavailableGeneric": "Cet atelier n'a pas encore d'aperçu dans le jeu ; tous les champs restent visibles dans l'éditeur.",
+  "noSelectionGeneric": "Aucune sélection",
+  "backFromNew": "Retour",
+  "searchPlaceholderGeneric": "Rechercher par nom…",
+  "noMatchesGeneric": "Aucune entrée correspondante"
+}

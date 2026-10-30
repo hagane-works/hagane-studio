@@ -1,0 +1,11 @@
+{
+  "description": "Durchsuchen Sie den echten Dateibaum und Dateiinhalt, in den Ihre gesamten Mod-Exporte exportiert werden — identisch mit dem, was in dem Zip landet, in dem Sie herunterladen.",
+  "includeImportedTitleOn": "Inhalte aus dem Original-Mod (Vanilla oder Old-mod-Quellen) einbinden — vollständige Mod-Vorschau anzeigen",
+  "includeImportedTitleOff": "Vorschau nur Entities der Benutzer erstellt / geändert",
+  "includeImportedLabel": "Importiert einschließen (aus dem Original-Mod)",
+  "binaryNote": "Binäre Datei ({size}) — kann nicht Vorschau. Speichern in Mod Folder schreibt es Byte-für-Byte.",
+  "selectFileHint": "Wählen Sie eine Datei auf der linken Seite, um den Inhalt der Vorschau",
+  "buttonTitle": "Durchsuchen Sie den exportierten Dateibaum und die Inhaltsvorschau für die gesamte Mod",
+  "buttonLabel": "Vorschaudateien",
+  "loading": "Laden..."
+}

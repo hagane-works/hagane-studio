@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "스크립트 GUI 패널",
+    "description": "시작용 변수 개요 패널: interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt."
+  },
+  "on_actions": {
+    "label": "on_actions 후크",
+    "description": "on_startup + on_monthly 효과 뼈대가 포함된 후크 파일(추가 병합)."
+  },
+  "game_rules": {
+    "label": "게임 규칙",
+    "description": "새 게임 화면용 선택지 두 개의 게임 규칙 행(추가 병합)."
+  },
+  "ai_strategy": {
+    "label": "AI 전략",
+    "description": "국가 태그로 제한되는 AI 전략 블록(추가 병합)."
+  },
+  "gfx_sprite": {
+    "label": "GFX 스프라이트",
+    "description": "GFX_'<key>'를 텍스처 파일에 매핑하는 스프라이트 조각(이미지는 별도로 포함하세요)."
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "북마크 슬롯 크기 수정",
+    "description": "대규모 전면 개편 기본 모드에서 여러 북마크가 보이도록 수정하는 frontendgamesetupview.gui 덮어쓰기 뼈대입니다."
+  },
+  "defines": {
+    "label": "Defines 조정(Lua)",
+    "description": "Lua에서 개별 NDefines 엔진 상수를 재정의합니다(00_defines.lua 전체를 복사하지 마세요)."
+  },
+  "bop": {
+    "label": "세력 균형",
+    "description": "양측, 범위, 약한 보정치가 있는 세력 균형 막대입니다. set_power_balance로 활성화하세요."
+  },
+  "music": {
+    "label": "음악 방송국 노래",
+    "description": "쌍을 이루는 .asset + .txt 파일이 base_music 방송국에 노래를 추가합니다. .ogg는 별도로 업로드하세요."
+  },
+  "peace_conference": {
+    "label": "평화 회담 비용 보정치",
+    "description": "평화 조치 비용 보정치 행입니다(1.0의 무효 효과로 제공, 추가 병합)."
+  }
+}

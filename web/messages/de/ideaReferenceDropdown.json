@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "Suche nach Ideen-ID...",
+  "tabProject": "Vorhaben",
+  "tabCountry": "Empfänger",
+  "tabShared": "Gemeinsam",
+  "tabLaws": "Rechtsvorschriften",
+  "tabDesign": "Designer",
+  "tabOldAdvisors": "Alte Berater",
+  "tabOther": "Sonstige",
+  "otherHint": "Verwenden Sie das Suchfeld, um Ideen aus anderen Ländern zu finden.",
+  "loadingVanilla": "Vanille-Ideen laden...",
+  "noResults": "Keine Ergebnisse gefunden.",
+  "emptyCategory": "Keine Ideen in dieser Kategorie.",
+  "projectBadge": "Projekt",
+  "promptManual": "Ideen-ID manuell eingeben:",
+  "enterManually": "+ manuell eingeben..."
+}

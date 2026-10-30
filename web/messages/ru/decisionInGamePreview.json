@@ -1,0 +1,7 @@
+{
+  "costTextTooltip": "practic_cost_text · заменяет дисплей PP",
+  "selectableMissionTooltip": "выделимый_задача · миссия, которую пользователь активирует вручную",
+  "ppCost": "{amount}РР",
+  "ppRefund": "+{amount}Возмещение по ПП",
+  "approximateLabel": "Предварительный просмотр игры · приблизительный"
+}

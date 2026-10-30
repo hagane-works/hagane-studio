@@ -1,0 +1,8 @@
+{
+ "source": "common/decisions/categories/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 1,
+ "ids": [
+  "test_decision_category"
+ ]
+}

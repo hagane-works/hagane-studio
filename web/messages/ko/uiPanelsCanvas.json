@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "컨트롤",
+  "paletteContainer": "컨테이너",
+  "paletteIcon": "아이콘",
+  "paletteText": "텍스트",
+  "paletteProgressbar": "진행률 표시줄",
+  "paletteButton": "버튼",
+  "stageLoading": "1:1 미리보기 렌더링 중...",
+  "stageNotSavedTitle": "아직 컴파일하지 않음",
+  "stageNotSavedBody": "패널을 저장하면 1:1 게임 내 미리보기를 볼 수 있습니다. 초안 컨트롤은 아래에 호박색 자리표시자로 나타납니다.",
+  "stageEmpty": "위 팔레트에서 컨트롤을 추가하세요.",
+  "stageError": "미리보기를 불러오지 못했습니다",
+  "ghostBadge": "초안",
+  "ghostHint": "아직 컴파일된 미리보기에 없습니다. 저장하면 1:1로 렌더링됩니다.",
+  "ribbonEmpty": "캔버스에서 컨트롤을 선택하세요. 바인딩이 여기에 표시됩니다.",
+  "ribbonGhost": "저장하지 않은 초안",
+  "mockPreviewOn": "예시 변수 값을 사용한 실시간 미리보기",
+  "addIntoPanel": "패널에 추가",
+  "addIntoContainer": "「{name}」 안에 추가"
+}

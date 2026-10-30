@@ -1,0 +1,12 @@
+{
+  "title": "Owned DLCs",
+  "summaryAll": "Every DLC",
+  "summaryNone": "No DLC",
+  "summarySome": "{count} of {total}",
+  "selectAll": "Select all",
+  "selectNone": "Clear",
+  "integrated": "Part of the base game, owned by everyone: {names}",
+  "hint": "The game preview shows the start these DLCs give (has_dlc in the scripts). The exported mod still runs on whatever DLCs a player actually has. You can change this in project settings later.",
+  "badge": "DLC: {summary}",
+  "badgeTip": "The preview shows the start these DLCs give: {names}. Change it in project settings."
+}

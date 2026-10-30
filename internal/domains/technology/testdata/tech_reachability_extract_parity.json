@@ -1,0 +1,17 @@
+[
+  {
+    "name": "top_level_flags_are_not_technologies",
+    "effect": "set_technology = { infantry_weapons = 1 popup = yes limit_to_owner = yes support_weapons = 1 }",
+    "expected": ["infantry_weapons", "support_weapons"]
+  },
+  {
+    "name": "nested_blocks_preserve_source_order_and_duplicates",
+    "effect": "if = { limit = { has_war = yes } set_technology = { radar = 1 } } random_list = { 50 = { set_technology = { radio = 1 radar = 1 } } }",
+    "expected": ["radar", "radio", "radar"]
+  },
+  {
+    "name": "empty_effect",
+    "effect": "   ",
+    "expected": []
+  }
+]

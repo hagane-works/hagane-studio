@@ -1,0 +1,10 @@
+{
+ "source": "common/autonomous_states/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 3,
+ "ids": [
+  "autonomy_dominion",
+  "autonomy_free",
+  "autonomy_puppet"
+ ]
+}

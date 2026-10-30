@@ -1,0 +1,6 @@
+{
+  "save_conflict": "Dieser Inhalt wurde seit dem Öffnen geändert. Dein Entwurf bleibt erhalten. Kopiere deine Änderungen, lade den Inhalt neu und prüfe die aktuelle Version vor dem Speichern.",
+  "save_precondition_required": "Für diesen Entwurf fehlt die gespeicherte Vergleichsversion. Kopiere deine Änderungen und öffne den Eintrag vor dem Speichern erneut.",
+  "save_committed_host_publish_deferred": "Deine Inhalte wurden gespeichert, aber die Bildvorschau ist noch nicht aktualisiert. Lade die Seite neu, um sie anzusehen.",
+  "save_committed_host_publish_failed": "Deine Inhalte wurden gespeichert, aber die Bildvorschau ist noch nicht aktualisiert. Lade die Seite neu, um sie anzusehen."
+}

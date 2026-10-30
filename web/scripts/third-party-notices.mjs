@@ -13,7 +13,7 @@ const START = "<!-- npm packages: written by web/scripts/third-party-notices.mjs
 const END = "<!-- end of npm packages -->";
 
 
-const UNSEEN = ["tailwindcss", "tw-animate-css", "shadcn", "monaco-editor"];
+const UNSEEN = ["tailwindcss", "tw-animate-css", "monaco-editor"];
 
 const dirs = new Set(UNSEEN.map((name) => join("node_modules", name)));
 await build({

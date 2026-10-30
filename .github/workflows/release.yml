@@ -5,12 +5,13 @@ on:
     tags:
       - "v*"
 
-permissions:
-  contents: write
+permissions: {}
 
 jobs:
   windows:
     runs-on: windows-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,23 +31,39 @@ jobs:
       - name: Check frontend
         working-directory: web
         run: |
+          npm audit --audit-level=low
           npm run typecheck
           npm run lint
+          npm run lint:tokens
+          npm run lint:state-effect
           npm test -- --run
           npm run build
       - name: Test Go
-        run: go test -vet=off ./...
+        run: go test ./...
       - name: Package Windows releases
         shell: pwsh
         run: ./tools/release-windows.ps1 -Version "${{ github.ref_name }}" -SkipFrontend -SkipChecks
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-files
+          path: dist/release/${{ github.ref_name }}/*
+          if-no-files-found: error
+
+  publish:
+    needs: windows
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-files
+          path: dist/release/${{ github.ref_name }}
       - name: Publish GitHub release
-        shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $release = "dist/release/${{ github.ref_name }}"
-          gh release view "${{ github.ref_name }}" 2>$null
-          if ($LASTEXITCODE -ne 0) {
-            gh release create "${{ github.ref_name }}" --title "Hagane Works ${{ github.ref_name }}" --generate-notes
-          }
-          gh release upload "${{ github.ref_name }}" "$release/*.zip" "$release/SHA256SUMS.txt" --clobber
+          if ! gh release view "${{ github.ref_name }}" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+            gh release create "${{ github.ref_name }}" --repo "${{ github.repository }}" --title "Hagane Works ${{ github.ref_name }}" --generate-notes
+          fi
+          gh release upload "${{ github.ref_name }}" dist/release/${{ github.ref_name }}/*.zip dist/release/${{ github.ref_name }}/SHA256SUMS.txt --repo "${{ github.repository }}" --clobber

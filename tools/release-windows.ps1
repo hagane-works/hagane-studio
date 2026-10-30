@@ -125,6 +125,57 @@ if (-not $SkipSourceArchive) {
     }
     $sourceZip = Join-Path $versionRoot "HaganeWorks-$Version-source.zip"
     Invoke-Checked 'git' @('archive', '--format=zip', "--prefix=HaganeWorks-$Version-source/", "--output=$sourceZip", 'HEAD')
+
+    $submodulePath = 'third_party/cwtools-hoi4-config'
+    $submoduleTree = & git -C $repoRoot ls-tree HEAD -- $submodulePath
+    if ($LASTEXITCODE -ne 0 -or -not $submoduleTree) {
+        throw "The source archive cannot resolve submodule $submodulePath."
+    }
+    $submoduleTreeParts = @($submoduleTree -split '\s+')
+    if ($submoduleTreeParts.Count -lt 3 -or $submoduleTreeParts[0] -ne '160000') {
+        throw "$submodulePath is not a committed git submodule."
+    }
+    $submoduleCommit = $submoduleTreeParts[2]
+    $submoduleZip = Join-Path $versionRoot '.cwtools-source.zip'
+    $submodulePrefix = "HaganeWorks-$Version-source/$submodulePath/"
+    Invoke-Checked 'git' @('-C', $cwtoolsRoot, 'archive', '--format=zip', "--prefix=$submodulePrefix", "--output=$submoduleZip", $submoduleCommit)
+
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $sourceArchive = $null
+    $submoduleArchive = $null
+    try {
+        $sourceArchive = [IO.Compression.ZipFile]::Open($sourceZip, [IO.Compression.ZipArchiveMode]::Update)
+        $submoduleArchive = [IO.Compression.ZipFile]::OpenRead($submoduleZip)
+        foreach ($entry in $submoduleArchive.Entries) {
+            if (-not $entry.Name) {
+                continue
+            }
+            if ($sourceArchive.GetEntry($entry.FullName)) {
+                throw "Duplicate source archive entry: $($entry.FullName)"
+            }
+            $destinationEntry = $sourceArchive.CreateEntry($entry.FullName, [IO.Compression.CompressionLevel]::Optimal)
+            $sourceStream = $entry.Open()
+            $destinationStream = $destinationEntry.Open()
+            try {
+                $sourceStream.CopyTo($destinationStream)
+            }
+            finally {
+                $destinationStream.Dispose()
+                $sourceStream.Dispose()
+            }
+        }
+    }
+    finally {
+        if ($submoduleArchive) {
+            $submoduleArchive.Dispose()
+        }
+        if ($sourceArchive) {
+            $sourceArchive.Dispose()
+        }
+        if (Test-Path -LiteralPath $submoduleZip) {
+            Remove-Item -LiteralPath $submoduleZip -Force
+        }
+    }
 }
 
 $checksumLines = Get-ChildItem $versionRoot -File -Filter '*.zip' | Sort-Object Name | ForEach-Object {

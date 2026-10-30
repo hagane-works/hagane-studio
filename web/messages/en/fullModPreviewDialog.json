@@ -1,0 +1,11 @@
+{
+  "description": "Browse the real file tree and file contents your whole mod exports to — identical to what lands in the zip you download.",
+  "includeImportedTitleOn": "Include content imported from the original mod (vanilla or old-mod sources) — preview the full mod",
+  "includeImportedTitleOff": "Preview only entities the user created / modified",
+  "includeImportedLabel": "Include imported (from the original mod)",
+  "binaryNote": "Binary file ({size}) — can't preview. Save to Mod Folder writes it byte-for-byte.",
+  "selectFileHint": "Pick a file on the left to preview its content",
+  "buttonTitle": "Browse the exported file tree and content preview for the whole mod",
+  "buttonLabel": "Preview files",
+  "loading": "Loading…"
+}

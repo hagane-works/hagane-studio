@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "Ihr Browser unterstützt nicht die Dateisystem-Zugriffs-API. Verwenden Sie Chrome oder Edge.",
+  "syncing": "Synchronisieren...",
+  "syncToNamed": "Synchronisieren mit {dir}",
+  "syncToFolder": "In Spielordner schreiben",
+  "titleWithFolder": "Synchronisieren Sie den gesamten Mod mit {dir}/ (Wirkung nach Neustart des Mods in HAI4)",
+  "titleNoFolder": "Beim ersten Mal wählen Sie einen Mod-Ordner aus. Er wird für den Rest dieser Sitzung wiederverwendet.",
+  "tooltipTitle": "Nach dem Export: Vollständiger Testworkflow",
+  "tooltipContent": "Hoi4 Mod Testing Workflow (create + Debug + logs): 1. Legen Sie den gewählten Mod Ordner in %userprofile%\\Dokumente\\Paradox Interactive\\Hearts of Iron IV\\mod\\ 2. Launcher → Mod Library → tick this mod 3. Debug-Modus aktivieren, auf jede Weise: • Steam · Rechtsklick Hoi4 → Eigenschaften → Allgemein → Geben Sie -debug in Startoptionen ein • Lokale · Erstellen Sie eine Dowser.exe Verknüpfung → Eigenschaften → Anhängen Sie \" -debug\" an Target (Beachten Sie den Platz vor dem Dash) 4. Starten Sie das Spiel · error.log erscheint automatisch (Notepad) nach dem Hauptmenü beendet Laden 5. Fehlertriage · drei Kategorien in error.log: • Familie · cross-mod / cross-entity Namensgebung idiom drift • Vanillekompatibel · Kompatibilität mit Vanille (DLC Felder / Version) • Modintern · innerhalb dieses Mod-ID / kreisförmige Ref. 6. Log-Standort · %userprofile%\\Dokumente\\\\\\ (error.log.log + game.log.log.log. > > Hinweis: einige schwere Absturzfehler können in Spiele-Diagnos zusammen sein.",
+  "includeImportedTitleOn": "Einschließlich Inhalte, die aus dem Original-Mod importiert werden (Vanilla- oder Old-mod-Quellen). Schreibt den vollständigen Mod-Ordner.",
+  "includeImportedTitleOff": "Synchronisieren Sie nur die von Ihnen erstellten oder modifizierten Entities. Überschreiben Sie nicht alte importierte Inhalte.",
+  "includeImportedLabel": "Importiert einschließen",
+  "changeFolderTitle": "Mod-Ordner ändern",
+  "changeFolder": "Ordner ändern",
+  "wroteFiles": "✓ geschrieben{count}Dateien",
+  "wrotePartial": ", geschrieben{ok}/{total}Dateien,{failed}Die Veröffentlichungen sind in der Regel in der Regel in der Regel in der Regel in der Regel in der Regel in der Regel in der Regel in der Regel in der Regel in{firstError}). Der Mod-Ordner wird teilweise aktualisiert.",
+  "illegalPathSegment": "Illegales Pfadsegment \"{segment}\" in {path}",
+  "additiveCaption": "Synchronisieren schreibt oder überschreibt nur; es löscht nie.",
+  "additiveTitle": "Sync ist additiv",
+  "additiveWarning": "Sync schreibt oder überschreibt nur Dateien; es löscht nie. Wenn Sie eine Entity umbenannt, gelöscht oder neu markiert haben, bleibt die alte.txt/.yml/.dds im Ordner und das Spiel lädt sowohl die alte als auch die neue Version. Nach solchen Änderungen löschen Sie die generierten Ordner der Mod (common/, events/, history/, localisation/, gfx/) manuell, bevor Sie synchronisieren oder in einen neuen Ordner synchronisieren."
+}

@@ -1,0 +1,207 @@
+{
+  "basicInfo": "Basic Info",
+  "displayName": "Display Name",
+  "techIdLabel": "Tech ID (HOI4 internal)",
+  "statusSaving": "Saving...",
+  "statusSaved": "Saved",
+  "statusError": "Save failed",
+  "statusUnsaved": "Unsaved changes",
+  "addPrerequisitePlaceholder": "Add prerequisite tech...",
+  "advancedFieldsLabel": "Advanced Fields",
+  "saveTechButton": "Save Technology",
+  "deleteTechButton": "Delete Technology",
+  "section": {
+    "categories": "Categories",
+    "aiWillDo": "AI Will Do",
+    "description": "Description"
+  },
+  "statDesc": {
+    "soft_attack": "Damage output against unarmored targets (infantry, artillery, unarmored emplacements). The stat almost every land unit relies on most — the core output of an infantry division. +10%~+30% is the typical mid-tier tech band; +50%+ comes from elite doctrines + top-tier equipment combos. Hitting armored targets needs hard_attack instead — the two have clearly divided roles.",
+    "hard_attack": "Damage output against armored targets (tanks, armored cars, half-tracks). Infantry divisions only get hard_attack once equipped with anti-tank guns / anti-armor weapons; tank divisions have it natively. +15%~+40% mid-to-late band. Pure infantry lacking hard_attack gets quickly ground down by armored divisions — armored warfare demands dedicated weapons or CAS air support.",
+    "defense": "Evasion of incoming attacks while not moving. The core stat for static defense — the defender in positional warfare relies on it. +10%~+30% mid band; +100%+ from stacking top doctrine + terrain + fortifications. Mutually exclusive with breakthrough: hold ground with defense, push with breakthrough — a division usually only uses one.",
+    "breakthrough": "The stat that absorbs damage while attacking on the move. Relied on by the attacker when pushing — a high-breakthrough division can advance into counterattacks. Tanks/mechanized are naturally high; infantry leans on engineers + organization. +20%~+50% in the mid-to-late tank tech band. Mutually exclusive with defense: defense when stationary, breakthrough when advancing.",
+    "armor_value": "An armored unit's physical armor thickness, compared against the enemy's ap_attack (piercing) to decide whether it can be penetrated. When armor > enemy piercing the attack is **fully blocked**; otherwise 100% penetration. A medium tank's armor may be fully immune to infantry anti-tank rifles, while large-caliber AT guns crush light tanks. Scale 10~100+.",
+    "ap_attack": "The attacker's piercing capability, compared against enemy armor_value to decide penetration. piercing ≥ armor: normal damage; piercing < armor: heavily reduced damage (roughly 50% or less). The core stat of AT guns and tank guns. Infantry divisions only get ap_attack with AT weapons equipped; pure infantry is largely ineffective against armored divisions.",
+    "max_organisation": "A unit's 'morale pool' for resisting rout. Each round of combat drains org; at zero the unit is forced to disengage, then recovers quickly afterwards. Typical values: infantry 60~80, mechanized 40~60, tank divisions 30~45. +5~+15 common from tech/doctrine bonuses. Low org wins fast through burst damage; high org grinds on through resilience — a core trade-off in division design.",
+    "max_strength": "A unit's actual 'manpower' value, representing full strength. Combat injuries drain strength; at zero the division is destroyed; rear-area reinforcement restores it over time. Typical values: infantry battalion 25, tank battalion 40, artillery battalion 35; a full division 200~400+. +5~+20% common tech band. A division at zero strength but non-zero org disengages and has essentially lost combat power.",
+    "reliability": "The inverse indicator of equipment failure rate (0.0~1.0 decimal). The reciprocal of breakdown probability in combat/marching — low reliability = high equipment attrition. Typical values: infantry weapons 0.7~0.9, tanks 0.5~0.8, aircraft 0.6~0.85. +5%~+15% common tech bonus. Low-reliability armor/air units need heavy spare-parts supply, a huge logistics burden.",
+    "maximum_speed": "A unit's movement speed on the strategic map (km/h). Determines redeployment responsiveness, encirclement, and retreat efficiency. Typical values: infantry 4, motorized 8, mechanized 10, tanks 6~10. +10%~+25% common doctrine/tech band. High-speed divisions make spearheads for fast breakthrough encirclements; low-speed divisions need transport hubs. Weather/terrain/supply all slow movement substantially.",
+    "build_cost_ic": "A unit/equipment's industrial-capacity (IC) cost. **A minus is welcome** — `build_cost_ic = -0.1` means -10% cost = a good bonus. Tech/doctrine commonly grant -5%~-15%. Mind that the sign matches intent: +build_cost_ic makes units more expensive. Large mods often use this to model 'streamlined production lines' or 'improved military-industrial efficiency' focus paths.",
+    "suppression": "The ability to pacify resistance activity (Resistance) in occupied territory. High-suppression divisions deployed in occupied states lower compliance growth + suppress resistance output. Cavalry/military police/mechanized are naturally high. Typical values: infantry 2, cavalry/MP 4~6. Occupying complex regions (colonies/enemy cores) demands heavy suppression; falling short cuts factory output + resources. Used together with garrison policy.",
+    "air_attack": "A land unit's anti-air capability against enemy aircraft (tied to dedicated AA equipment). Only meaningful once an infantry division is equipped with an AA gun, otherwise 0. On battlefields without your own air superiority, a high-air_attack division noticeably reduces losses from air strikes. Typical values: infantry +2~5, dedicated AA battalion +15~30. +20%~+50% AA tech band. Ultimately, fighters suppressing enemy CAS is most effective.",
+    "naval_speed": "A naval unit's strategic movement speed (knots). Affects fleet redeployment, interception, retreat, and convoy-escort efficiency. Typical values: battleship 25~30, cruiser 28~34, destroyer 35~40. +5%~+15% ship-engine tech band. Fast light ships do escort/scouting; slow capital ships need escorts. Cruising range + speed together determine strategic coverage.",
+    "surface_detection": "A ship's ability to detect surface targets (enemy surface ships). Affects first-strike hit chance in engagements and the range at which a fleet spots the enemy. Typical values: destroyer 20~30, cruiser 25~40, battleship 15~25. +10%~+30% radar tech band. High-detection destroyers form a scouting screen; capital ships rely on scouts to feed targets. Different from sub_detection — that one specifically hunts submarines.",
+    "sub_detection": "A ship's ability to detect submarines, the core anti-submarine stat. Destroyers/escorts/ASW aircraft are the main providers. Typical values: ordinary destroyer 10~20, dedicated ASW destroyer 30~50. +20%~+50% sonar tech band. An escort fleet with insufficient sub_detection has its convoys sunk en masse by wolfpack submarines, directly hitting strategic resource imports."
+  },
+  "techId": {
+    "placeholder": "e.g. Improved Infantry Equipment",
+    "tooltipTitle": "Tech ID · HOI4 internal unique identifier",
+    "tooltipContent": "The mod-wide unique internal identifier for a tech. Naming: lowercase + underscores, no spaces/Chinese. Prefix it to mark its line (infantry_weapons_1 / armor_medium_1 / ca_early_fighter). Scripts has_tech = X, add_tech_bonus technology = X, set_technology = { X = 1 } all reference this ID. Renaming breaks every reference + old saves become incompatible — be careful."
+  },
+  "collision": {
+    "sameName": "Same name as a vanilla tech — loading the mod silently overrides vanilla and gets confusing. Rename it.",
+    "renameTo": "rename to",
+    "recommended": "(recommended)"
+  },
+  "banner": {
+    "showAs": "Shown as a Banner node (200×60 · text + icon)",
+    "tooltipTitle": "Banner vs Icon node sizing",
+    "tooltipContent": "Banner (200×60 horizontal): shows the text name + icon · suits **flagship concrete equipment** (e.g. M1 Garand / early destroyers / interwar tank development). Icon (64×64 compact): icon + level badge only · suits **sub-tech / abstract upgrades** (e.g. cat_radar III / industrial production II). Vanilla in practice: support equipment/industry almost all icon · naval/air flagships banner · armor mixes banner+icon."
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout (compact node IN-GAME)",
+    "tooltipTitle": "force_use_small_tech_layout · in-game compact layout",
+    "tooltipContent": "Emits `force_use_small_tech_layout = yes` to force the **compact node layout in the actual HOI4 research screen**. This is DISTINCT from \"Shown as a Banner node\" above: that flag only controls how the node looks **on this program's canvas** (UI-only · exports nothing), while this one is a real exported override the game reads. Vanilla uses it on only ~50 techs (an explicit override), so leave it OFF unless you specifically want a tech that would normally render large to use the small in-game node."
+  },
+  "researchCost": {
+    "label": "Research Cost",
+    "tooltipTitle": "Research Cost · research-cost multiplier",
+    "tooltipContent": "The **relative multiplier** of research time (not absolute days — actual days come from cost × research staff × speed_factor × ahead-of-time penalty combined). **Vanilla typical values cluster at 1.5~2.5**: infantry main line often 1.5, trunk techs 2, doctrines 2.5. Edges: special doctrine nodes 4+, special projects down to 0.5 but very rare. Too high and the AI never researches it; too low and the player finishes it in a day. Pair with start_year to control the ahead-of-time penalty."
+  },
+  "startYear": {
+    "label": "Start Year",
+    "tooltipTitle": "Start Year · tech historical year",
+    "tooltipContent": "The tech's historical availability year. Researching before this year triggers an **ahead-of-time penalty** (ahead_of_time_research_factor slows it heavily, typically -50%~-70%). 1936-baseline vanilla distribution: **main peak 1936 (106 techs)**, dense 1939~1945, a few early 1918/1922 support techs, earliest 1910 (single digits), latest 1950 (6 techs). Alt-history/modern mods (Fire Rise etc.) can use 1960+ to mark 'contemporary/future' techs.",
+    "balanceWarn": "⚠ vanilla balance: each year ahead ≈ +200% cost (player researches ~2× slower)"
+  },
+  "xPosition": {
+    "label": "X Position",
+    "tooltipTitle": "X Position · row offset (vertical) in the research screen",
+    "tooltipContent": "Counter-intuitive but confirmed in game: in the HOI4 research screen **x is the vertical axis, y the horizontal one**. x is the **row offset** relative to the parent tech: +1 = one row lower, and parallel branches are spread apart with it. Horizontal placement is decided by y (the base game writes the year tier into y, e.g. @1936, out of habit; it is not tied to start_year). In the base game infantry_weapons1 → 2 → improved all sit on x = 0 with y increasing, while armored_car1 is on x = 4, a row below. Same position overlaps. With no prerequisite, it's relative to the folder origin."
+  },
+  "folder": {
+    "label": "Research Folder",
+    "tooltipTitle": "Folder · research-screen tab placement",
+    "tooltipContent": "The `technology_folders` block in `common/technology_tags/00_technology.txt` decides which research-screen tab (army / air / navy / industry / electronics / special_forces) this tech appears under. Each token (e.g. infantry_folder, mtgnavalfolder) maps to one in-game sub-tab — pick the wrong one and the tech still works but shows on the wrong tab. Set automatically from the active sub-tab when the tech is created; change it here to move the tech to a different tab. Custom folders defined in your mod's own technology_tags file are kept as-is.",
+    "customCurrent": "Current (custom): {folder}",
+    "none": "Not on the research tree (sub-technology)"
+  },
+  "prerequisites": {
+    "heading": "Prerequisites",
+    "tooltipContent": "This tech's prerequisite list. **All must be researched** before this tech can be researched (AND logic). OR-prerequisites aren't configured here — fill multiple paths at the same position (two prerequisite sets at the same folder+position auto-OR). Linear techs usually have 1~2 prerequisites; trunk fork/merge points may have 3+. They can't form a prerequisite cycle (HOI4 deadlocks)."
+  },
+  "effects": {
+    "title": "Tech Effects (unlock effects)",
+    "tooltipContent": "Game content permanently unlocked when the tech completes — equipment (enable_equipments), unit types (enable_subunits), equipment modules (enable_equipment_modules). This is the tech's 'long-term payoff' — even without a global modifier, the unlocked content itself pushes new equipment into the production line + new unit types into division templates. Core field for infantry/armor/naval/air lines.",
+    "hint": "Equipment, units, and modules the tech unlocks. One ID per line, written directly as HOI4 internal names."
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments (unlock equipment)",
+    "tooltipTitle": "enable_equipments · unlock equipment",
+    "tooltipContent": "List of equipment IDs unlocked on completion (one per line). Write HOI4 internal equipment names directly, matching definitions under common/units/equipment/. Only after unlocking can equipment be selected in the production line. Common: infantry_equipment_1, medium_tank_chassis_1, fighter_equipment_1. A wrong name won't error but the production line won't find it. Equipment version progression usually uses _1 _2 _3 suffixes.",
+    "field": "enable_equipments · unlock equipment IDs (per line / space-separated)"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits (unlock units)",
+    "tooltipTitle": "enable_subunits · unlock units",
+    "tooltipContent": "List of subunits (battalion-level unit types within a division) unlocked on completion. Matches subunit definitions under common/units/. Only after unlocking can the division-template editor add this unit. Common IDs: infantry, motorized, mechanized, artillery, anti_tank, anti_air, engineer, recon, signal_company, maintenance_company, field_hospital, military_police. Difference from enable_equipments: a subunit is 'the battalion/company-level type you can put in a division', equipment is 'the weapons that unit carries'.",
+    "field": "enable_subunits · unlock subunits (motorized / marines / paratrooper …)"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules (unlock modules)",
+    "tooltipTitle": "enable_equipment_modules · unlock modules",
+    "tooltipContent": "List of equipment modules unlocked on completion. A module is a selectable sub-component in the equipment designer (tank / plane / ship). Matches definitions under common/units/equipment_modules/. One module ID per line. Common: tank_heavy_machine_gun, additional_machine_guns, large_plane_airframe, ship_torpedo_medium_1. Use together with the MIO (military-industrial organization) and equipment version system — mods with no equipment designer (pre-vanilla days) don't need to fill it.",
+    "field": "enable_equipment_modules · NSB designer module"
+  },
+  "globalModifier": {
+    "title": "Global Modifier",
+    "tooltipContent": "A modifier block that applies **continuously** to your country after the tech completes (same modifier structure as a national-spirit idea, but a different source). Typical stats: industry line research_speed_factor / production_factory_max_efficiency_factor; electronics line encryption / decryption; army/navy/air doctrines branch-efficiency bonuses. Write decimals (0.03 = +3%). Multiple can stack.",
+    "hint": "Global modifiers applied to the country after the tech completes, e.g. research_speed_factor, production_factory_efficiency_gain_factor. The core effect of industry- and electronics-line techs."
+  },
+  "researchScripts": {
+    "title": "Research Scripts",
+    "tooltipContent": "Script logic run at the instant the tech completes (unlike Global Modifier's continuous effect, this fires once). Three sub-blocks:\n• on_research_complete: the effect to run (auto-unlock division templates, fire events)\n• on_research_complete_limit: the trigger condition (re-entry guard)\n• allow: research permission condition (gate whether it can be researched)\nThe core entry point for DLC-exclusive techs, focus-unlocked techs, and auto-unlocked division templates."
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete (run on completion)",
+    "tooltipTitle": "on_research_complete · run on completion",
+    "tooltipContent": "The effect block run at the instant the tech completes (once, not continuous). Typical uses:\n• load_oob = OOB_FILE (auto-load division templates/equipment)\n• custom_effect_tooltip = LOC_KEY (show an unlock hint)\n• country_event = { id = X days = 7 } (fire a follow-up story event)\nWrapping in hidden_effect = { ... } hides the effect text from the player (often for internal flag management). Pair with on_research_complete_limit as a re-entry guard.",
+    "hint": "Effects fired after research completes, e.g. auto-create unit templates, show hints.",
+    "field": "on_research_complete · one-shot effect block on completion"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit (trigger condition)",
+    "tooltipTitle": "on_research_complete_limit · trigger condition",
+    "tooltipContent": "The trigger threshold for on_research_complete. A trigger block — the effect in on_research_complete runs only when the condition is met. Core use: **re-entry guard**. Typical: NOT = { has_template_containing_unit = paratrooper } (avoid re-unlocking the same division template after re-researching). Empty = always triggers (including possible replay on every save load).",
+    "hint": "Controls when on_research_complete fires, preventing repeated execution.",
+    "field": "on_research_complete_limit · limit effect trigger condition"
+  },
+  "allow": {
+    "heading": "allow (research permission)",
+    "tooltipTitle": "allow · research permission",
+    "tooltipContent": "The trigger block controlling whether this tech can be researched. When unmet, the tech is greyed out and unclickable in the research screen. **always = no** means it can **only be unlocked by script** — paired with set_technology = { X = 1 } or add_tech_bonus in a focus effect. Common for DLC-exclusive techs, story-unlocked techs, and hidden techs (special research projects). Empty = every country can research it.",
+    "hint": "Controls whether this tech can be researched. Empty = anyone can; always = no means it can only be unlocked via a focus.",
+    "field": "allow · research-availability trigger block"
+  },
+  "enableBuilding": {
+    "tooltipContent": "The building ID unlocked on completion (single value · matches common/buildings/). Common vanilla: synthetic_refinery / radar_station / rocket_site / nuclear_reactor / mega_gun_emplacement. Only one building per tech — chain multiple tech nodes for multiple buildings."
+  },
+  "enableTactic": {
+    "tooltipContent": "Unlocked land-combat tactic ID (common/combat_tactics.txt). Common: encirclement / breakthrough / tactical_withdrawal. Tactics are auto-selected by the AI in combat based on terrain + doctrine."
+  },
+  "xor": {
+    "heading": "xor (mutually-exclusive tech list)",
+    "tooltipTitle": "xor · mutually-exclusive techs",
+    "tooltipContent": "After researching this tech you can't research the techs in the list (and vice versa · written one-way but semantically two-way). Vanilla typical: steel_chassis vs aluminium_chassis (steel vs aluminium airframe · either/or route fork). One tech_id per line.",
+    "field": "xor · mutually-exclusive tech IDs (pick A, exclude sibling B)"
+  },
+  "subTechnologies": {
+    "heading": "sub_technologies (sub-techs)",
+    "tooltipTitle": "sub_technologies · sub-techs",
+    "tooltipContent": "Small upgrade techs nested inside a parent tech card (one tech_id per line · must be defined separately in the same mod). Vanilla example: infantry_at (infantry anti-tank · nested in the infantry_weapons card · double-ring UI node). Sub-techs only show in the UI after the parent tech is researched."
+  },
+  "allowBranch": {
+    "heading": "allow_branch (branch visibility condition)",
+    "tooltipTitle": "allow_branch · branch visibility condition",
+    "tooltipContent": "A trigger block — decides whether the whole tech branch is visible to the player (if unmet the UI hides the branch entirely). Vanilla example: has_dlc = \"Man the Guns\" hides the MTG naval line from non-DLC players. Difference from allow: allow controls research permission, allow_branch controls UI visibility.",
+    "field": "allow_branch · whole-branch show/hide trigger"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type (NSB design-team XP)",
+    "tooltipTitle": "xp_research_type · design-team XP cost",
+    "tooltipContent": "An NSB DLC equipment-designer mechanic — this tech can be sped up with army/navy/air XP. Empty = no XP used. Pair with xp_boost_cost to set how much XP each speed-up consumes.",
+    "optNone": "none (empty)",
+    "optLand": "land · army XP",
+    "optNaval": "naval · navy XP",
+    "optAir": "air · air XP"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · XP speed-up cost",
+    "tooltipContent": "The amount of branch XP needed to speed up this tech's research each time. Vanilla typical 25~50. 0 = can't be sped up. Requires xp_research_type to set the XP type."
+  },
+  "dependencies": {
+    "heading": "dependencies (parallel-research deps)",
+    "tooltipTitle": "dependencies · parallel-research dependencies",
+    "tooltipContent": "Rare. Other techs whose progress speeds up this one when researched in parallel. One `tech_id = factor` per line (factor defaults to 1). The referenced techs must be defined in the same mod. Different from prerequisites, which are hard gates."
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus (XP cost multiplier)",
+    "tooltipTitle": "xp_research_bonus · XP cost multiplier",
+    "tooltipContent": "A flat multiplier on the army/navy/air XP this tech costs to research (vanilla bare-scalar idiom, e.g. 1.50). Leave blank to omit. Only relevant for techs that consume doctrine XP.",
+    "blockFormNote": "This tech carries an imported per-category xp_research_bonus breakdown — it's preserved and exported as-is. Shown read-only here so the breakdown isn't overwritten."
+  },
+  "doctrine": {
+    "heading": "doctrine (legacy · pre-NCNS doctrine flag)",
+    "tooltipContent": "A pre-NCNS-DLC doctrine flag · vanilla doctrines have now moved to common/doctrines/ with an independent XP+mastery system. Not recommended for new mods — kept for compatibility with existing mods."
+  },
+  "statBonuses": {
+    "title": "Stat Bonuses",
+    "tooltipContent": "Combat-stat bonuses for specific unit categories. Structure: unit category (infantry / armor / cat_cas / ...) → stat (soft_attack / defense / breakthrough / ...) → value (0.05 = +5%). Each unit category can take multiple stats. The core effect of mid-to-late techs — complementary to enable_equipments unlocking new equipment (one boosts existing units, the other opens new ones). See each stat's meaning in the dropdown hover hints below.",
+    "hint": "Pick a benefiting unit category → pick a stat → enter a value (e.g. 0.05 = +5%) → click + to add",
+    "category": "Unit category",
+    "categoryPlaceholder": "Select a unit category...",
+    "stat": "Stat",
+    "statPlaceholder": "Select a stat...",
+    "value": "Value"
+  },
+  "advanced": {
+    "pathField": "path · outgoing edge + research_cost_coeff (AI edits via add_path)"
+  },
+  "rawExtras": {
+    "badge": "Some fields are preserved as advanced script",
+    "count": "{count} reserved",
+    "hint": "These imported fields have no visual editor yet. They are kept verbatim and written back unchanged on export.",
+    "keysLabel": "Reserved keys",
+    "jsonLabel": "Raw JSON"
+  }
+}

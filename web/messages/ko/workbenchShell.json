@@ -1,0 +1,18 @@
+{
+  "expandPreview": "미리보기 펼치기",
+  "collapsePreview": "미리보기 접기",
+  "tabLivePreview": "실시간 미리보기",
+  "tabScript": "스크립트",
+  "tabReferencesHint": "이 엔티티를 참조하는 항목과 이 엔티티가 참조하는 항목을 확인합니다.",
+  "tabScriptHint": "이 엔티티용으로 내보내는 모드 스크립트 파일(고급).",
+  "livePreviewSelectHint": "목록에서 항목을 선택하면 게임 내 미리보기를 볼 수 있습니다.",
+  "livePreviewCreateFirstHint": "아직 미리 볼 내용이 없습니다. 왼쪽 목록에서 첫 항목을 만드세요.",
+  "liveDraftBadge": "실시간 초안",
+  "previewLabel": "미리보기",
+  "openInGame": "게임에서 보기",
+  "previewUnavailableGeneric": "이 작업대에는 아직 게임 내 미리보기가 없습니다. 모든 필드는 편집기에서 볼 수 있습니다.",
+  "noSelectionGeneric": "선택한 항목 없음",
+  "backFromNew": "뒤로",
+  "searchPlaceholderGeneric": "이름으로 검색…",
+  "noMatchesGeneric": "일치하는 항목 없음"
+}

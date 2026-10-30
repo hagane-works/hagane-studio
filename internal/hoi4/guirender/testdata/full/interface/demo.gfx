@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_panel_100x50
+		texturefile = "gfx/interface/missing_panel_100x50.dds"
+		noOfFrames = 2
+		effectFile = "buttonstate.lua"
+	}
+}

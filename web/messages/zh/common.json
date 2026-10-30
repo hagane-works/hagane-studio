@@ -1,0 +1,39 @@
+{
+  "save": "保存",
+  "cancel": "取消",
+  "delete": "删除",
+  "create": "新建",
+  "loading": "加载中…",
+  "unnamed": "未命名",
+  "all": "全部",
+  "clear": "清除",
+  "saving": "保存中…",
+  "revert": "还原",
+  "search": "搜索",
+  "discardUnsavedConfirm": "放弃未保存的更改？",
+  "countBadgeTooltip": "显示 {count} / 共 {total}",
+  "copiedToClipboard": "已复制到剪贴板",
+  "theme": {
+    "switchToDark": "切换到深色主题",
+    "switchToLight": "切换到浅色主题"
+  },
+  "language": {
+    "label": "语言",
+    "heading": "LANGUAGE / 语言",
+    "publicHeading": "界面语言",
+    "current": "当前语言：{language}",
+    "description": "选择语言会把界面切换为该语言。Mod 内容语言需在编辑器中单独选择。"
+  },
+  "emptyCtaCreate": "+ 新建",
+  "emptyCtaAi": "让 AI 帮我做",
+  "emptyCtaAddCountry": "+ 先添加一个国家",
+  "vocabulary": {
+    "customOption": "自定义…(自己填一个)",
+    "customChip": "自定义",
+    "vanillaGroup": "原版",
+    "baseModGroup": "来自基础 mod"
+  },
+  "chooseFile": "选择文件",
+  "noFileChosen": "未选择文件",
+  "gameFolderMissing": "这一步要用到原版游戏：请在 设置 → 钢铁雄心 4 安装目录 中选择钢铁雄心 4 的文件夹。"
+}

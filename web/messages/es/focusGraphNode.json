@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "Rama condicional · una ruta oculta que solo aparece cuando se cumplen sus condiciones allow_branch.",
+  "allowBranchBadge": "Rama",
+  "loadTreeTitle": "Salta a otro árbol de Enfoques Nacionales cuando se completa este enfoque.",
+  "loadTreeBadge": "Salto",
+  "relativePositionTitle": "Posición relativa",
+  "addChildTitle": "Añadir Enfoque Nacional hijo conectado",
+  "addMutexChildTitle": "Añadir Enfoque Nacional mutuamente excluyente"
+}

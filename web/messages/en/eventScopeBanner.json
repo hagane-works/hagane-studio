@@ -1,0 +1,9 @@
+{
+  "ownCount": "{ownCount} {tag} {ownCount, plural, one {event} other {events}}",
+  "sharedSuffix": " · +{sharedCount} shared / global broadcast",
+  "filteredNote": "Vanilla DLC and per-country files are filtered out at import — only {tag}'s own events are kept.",
+  "vanillaCta": "Open VANILLA EVENTS for reference",
+  "hiddenHint": "Hidden {hiddenCount} shared/global {hiddenCount, plural, one {event} other {events}} · click <emph>All</emph> on the right to show them.",
+  "dismiss": "Dismiss",
+  "dontShowAgain": "Don't show again"
+}

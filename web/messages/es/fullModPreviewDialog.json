@@ -1,0 +1,11 @@
+{
+  "description": "Explora la estructura y el contenido reales que exportará el mod completo; son idénticos a los del ZIP descargado.",
+  "includeImportedTitleOn": "Incluir contenido importado del mod original (juego base o mod antiguo) · previsualizar el mod completo",
+  "includeImportedTitleOff": "Previsualizar solo las entidades creadas o modificadas por el usuario",
+  "includeImportedLabel": "Incluir contenido importado (del mod original)",
+  "binaryNote": "Archivo binario ({size}); no se puede previsualizar. Guardar en carpeta del mod lo escribe byte a byte.",
+  "selectFileHint": "Elige un archivo de la izquierda para previsualizar su contenido",
+  "buttonTitle": "Explorar la estructura exportada y la vista previa del contenido del mod completo",
+  "buttonLabel": "Previsualizar archivos",
+  "loading": "Cargando…"
+}

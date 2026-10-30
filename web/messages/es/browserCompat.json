@@ -1,0 +1,6 @@
+{
+  "uploadHint": "La carga de carpetas funciona en tu navegador. Para guardar cambios directamente en una carpeta necesitas Chrome, Edge u Opera; en otros navegadores, exporta un ZIP.",
+  "writeHint": "Tu navegador no puede escribir archivos directamente en una carpeta. Exporta el mod como ZIP y descomprímelo en la carpeta de mods de HOI4. El guardado directo requiere Chrome, Edge u Opera.",
+  "largeFolderConfirm": "Esta carpeta contiene {count} archivos de mod. Leer una carpeta muy grande puede tardar. ¿Quieres continuar?",
+  "noRelevantFiles": "No se encontraron archivos de mod (.txt, .gfx, .yml o imágenes) en la carpeta seleccionada. Elige la raíz del mod, que contiene descriptor.mod, common y events."
+}

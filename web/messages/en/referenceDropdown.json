@@ -1,0 +1,16 @@
+{
+  "entityDecision": "decision",
+  "entityEvent": "event",
+  "entityFocus": "focus",
+  "entityIdea": "idea",
+  "searchPlaceholder": "Search {entity} ID or name…",
+  "all": "All",
+  "searchingBase": "Searching base mod…",
+  "projectBadge": "project",
+  "baseBadge": "base mod",
+  "noResults": "No results found.",
+  "emptyProject": "No {entity} entries in this project.",
+  "emptyCategory": "No {entity} entries in this category.",
+  "promptManual": "Enter {entity} ID manually:",
+  "enterManually": "+ Enter manually…"
+}

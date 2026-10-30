@@ -1,0 +1,9 @@
+{
+  "message": "「{id}」は {dependency} にすでに存在します。このIDをそのまま使うと、ここで作成する{entityLabel}はゲーム内で機能しません。",
+  "fixHint": "使われていないIDに変えるか、{dependency} にある既存のものを参照してください。",
+  "unknownDependency": "ベースMod",
+  "entityCharacter": "キャラクター",
+  "entityFocus": "国家方針",
+  "entityIdea": "理念",
+  "entityDecision": "決断"
+}

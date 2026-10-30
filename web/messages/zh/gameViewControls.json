@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "地图创作 · 左键画,右键拖动地图,滚轮缩放"
+  },
+  "refresh": "刷新",
+  "refreshing": "正在刷新游戏预览…",
+  "refreshed": "已刷新",
+  "startScreens": "剧本 (F2)",
+  "startScreensBack": "回到游戏 (F2)",
+  "startScreensHint": "打开剧本和国家选择，换剧本或换国家；快捷键 F2",
+  "unsupportedControl": "「{control}」在 Game View 里还没有对应的功能",
+  "uiEdit": "UI 编辑",
+  "exitUIEdit": "退出 UI 编辑",
+  "textEdit": "文本编辑",
+  "exitTextEdit": "退出文本编辑",
+  "mapStudio": "地图创作",
+  "exitMapStudio": "退出地图创作",
+  "mapStudioHint": "直接在世界地图上画你自己的世界:地形和国家,然后生成并保存成新世界。",
+  "mapStudioSaved": "新世界已保存",
+  "mapStudioSavedBody": "{states} 个州,地图已经换成你画的世界。",
+  "uiEditHint": "修改界面本身的图片和文字；点击任何元素只会选中它，不会触发按钮。",
+  "textEditHint": "修改决议、人物、国策等内容；按钮照常能点，点击地图地块可修改地形、所属州和名字。",
+  "inspect": {
+    "viewHint": "查看模式：点击科技可以查看详情；进入文本编辑后才能修改或保存。",
+    "startYear": "起始年份",
+    "status": "状态",
+    "researchCost": "研究花费",
+    "approxDays": "预计时间",
+    "days": "{days} 天",
+    "position": "树上位置",
+    "icon": "图标",
+    "leadsTo": "后续科技",
+    "mutuallyExclusive": "互斥科技",
+    "subTechnologies": "子科技",
+    "none": "无",
+    "enterEdit": "进入文本编辑",
+    "states": {
+      "researched": "已研究",
+      "available": "可研究",
+      "unavailable": "未解锁"
+    }
+  },
+  "backToWorkbench": "回工作台",
+  "loadingTitle": "正在加载游戏界面",
+  "loadingProgress": "已就绪 {done}/{total}",
+  "loadingStarting": "正在连接…",
+  "loadingBusy": "加载中…",
+  "continuousPanelMove": "拖动可把持续性国策面板挪开(只在本窗口里,不改 mod);双击放回原处",
+  "continuousPanelPlace": "拖动设定持续性国策面板在 mod 里的位置",
+  "alertsMore": "展开全部告警(还有 {count} 个)",
+  "alertsLess": "收起告警"
+}

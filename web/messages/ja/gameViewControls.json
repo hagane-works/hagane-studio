@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "マップ作成 · 左クリックで描く、右ドラッグで地図を移動、ホイールで拡大縮小"
+  },
+  "refresh": "更新",
+  "refreshing": "ゲームプレビューを更新しています…",
+  "refreshed": "更新しました",
+  "startScreens": "シナリオ (F2)",
+  "startScreensBack": "ゲームに戻る (F2)",
+  "startScreensHint": "シナリオと国の選択を開き、シナリオや国を切り替えます。ショートカット F2",
+  "unsupportedControl": "「{control}」はまだ Game View では利用できません。",
+  "uiEdit": "UI編集",
+  "exitUIEdit": "UI編集を終了",
+  "textEdit": "コンテンツ編集",
+  "exitTextEdit": "コンテンツ編集を終了",
+  "mapStudio": "マップ作成",
+  "exitMapStudio": "マップ作成を終了",
+  "mapStudioHint": "世界地図の上に直接、自分だけの世界を描きます。地形と国を描いたら、生成して新しい世界として保存します。",
+  "mapStudioSaved": "新しい世界を保存しました",
+  "mapStudioSavedBody": "州 {states} 個。地図はあなたが描いた世界になりました。",
+  "uiEditHint": "インターフェースの画像や文字を編集します。クリックするとボタンは動作せず、その要素を選択します。",
+  "textEditHint": "ディシジョン、人物、国家方針などを編集します。ボタンは通常どおり動作し、マップのプロヴィンスをクリックすると地形・州・名称を編集できます。",
+  "inspect": {
+    "viewHint": "閲覧モード：技術をクリックすると詳細を確認できます。変更や保存にはコンテンツ編集を開いてください。",
+    "startYear": "開始年",
+    "status": "状態",
+    "researchCost": "研究コスト",
+    "approxDays": "推定日数",
+    "days": "{days} 日",
+    "position": "ツリー位置",
+    "icon": "アイコン",
+    "leadsTo": "後続技術",
+    "mutuallyExclusive": "排他技術",
+    "subTechnologies": "サブ技術",
+    "none": "なし",
+    "enterEdit": "コンテンツ編集を開く",
+    "states": {
+      "researched": "研究済み",
+      "available": "研究可能",
+      "unavailable": "未解除"
+    }
+  },
+  "backToWorkbench": "作業台に戻る",
+  "loadingTitle": "ゲーム画面を読み込み中",
+  "loadingProgress": "{done}/{total} 完了",
+  "loadingStarting": "接続中…",
+  "loadingBusy": "読み込み中…",
+  "continuousPanelMove": "ドラッグで継続国家方針パネルをどかせます(このウィンドウ内のみ、MOD は変わりません)。ダブルクリックで元に戻します",
+  "continuousPanelPlace": "ドラッグで MOD 内の継続国家方針パネルの位置を設定します",
+  "alertsMore": "すべての警告を表示(あと {count} 件)",
+  "alertsLess": "警告をたたむ"
+}

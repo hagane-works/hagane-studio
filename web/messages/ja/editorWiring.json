@@ -1,0 +1,18 @@
+{
+  "cwtoolError": "Cwtool エラー · ブロック中の問題： {count}",
+  "parsing": "解析中…",
+  "parsedWithWarnings": "解析成功 · Cwtool の警告： {count} · 適用できます",
+  "parsedReady": "解析成功 · 適用できます",
+  "parseErrorLine": "解析エラー · {line} 行目（{count}）",
+  "parseError": "解析エラー（{count}）",
+  "diagnosticLine": "診断 · {line} 行目（{count}）",
+  "diagnostics": "診断： {count}",
+  "editedWarnings": "編集済み · Cwtool の警告： {count}（解析待ち）",
+  "editedPending": "編集済み（解析待ち）",
+  "stalePrompt": "スクリプトの編集を開始した後、この項目は別の場所で更新されました。\n\n未保存のエディターの変更を保持しますか？\n\nOK = エディターの下書きを保持（適用時にフォームが上書きされます）\nキャンセル = 下書きを破棄して最新のフォームを読み込む",
+  "networkHint": "リクエストがプログラムに届きませんでした。プログラムが再起動した直後の可能性があります。もう一度［適用］を試してください。",
+  "applyFailed": "適用できませんでした： {message}{hint}",
+  "applyReseedTitle": "スクリプトを適用しました",
+  "applyReseedSynced": "左側のフォームも合わせて更新しました。",
+  "applyReseedClobbered": "フォームをスクリプトの内容で読み直しました。フォーム側の未保存の変更は上書きされました。"
+}

@@ -1,0 +1,5 @@
+{
+  "label": "Añadir un ID de compilación visible",
+  "badge": "Trazabilidad de exportación",
+  "hint": "Escribe un ID único en el manifiesto, un archivo de evidencia y las descripciones de escenarios para vincular capturas y registros con el ZIP exacto. Desactivado de forma predeterminada."
+}

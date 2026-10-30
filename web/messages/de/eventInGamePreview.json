@@ -1,0 +1,17 @@
+{
+  "noPicture": "kein Bild",
+  "empty": "(leer)",
+  "noOptions": "Keine Optionen — das Ereignis bleibt auf dem Bildschirm, bis es manuell abgestellt wird",
+  "conditionalOption": "Bedingte Option (Auslösung der Sicht der Schutzeinrichtungen)",
+  "alwaysVisibleOption": "Immer sichtbare Option",
+  "timeout": "Zeitlimit ·{days}Tage",
+  "immediateEffects": "unmittelbare Auswirkungen · ja",
+  "afterEffects": "Nach Wirkungen · ja",
+  "editPicture": "Ereignisbild bearbeiten",
+  "editTitle": "Ereignistitel bearbeiten",
+  "editDescription": "Ereignisbeschreibung bearbeiten",
+  "editOption": "Bearbeiten der Option {n}",
+  "previewUnavailableTitle": "Die Ereignisvorschau konnte nicht angezeigt werden",
+  "previewUnavailableBody": "Dein Ereignis und nicht gespeicherte Änderungen sind weiterhin sicher. Du kannst weiterarbeiten oder die Vorschau erneut versuchen.",
+  "previewUnavailableRetry": "Vorschau erneut versuchen"
+}

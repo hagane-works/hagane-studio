@@ -1,0 +1,12 @@
+{
+  "loadingEditor": "Editor wird geladen...",
+  "copyTooltip": "Skript in die Zwischenablage kopieren",
+  "copiedLabel": "Abgeschrieben",
+  "copyLabel": "Kopieren",
+  "resetTooltip": "Editor wird aus dem Formular entfernt und neu geladen",
+  "resetLabel": "Zurücksetzen",
+  "applyTooltip": "Editor-Edits auf der Entity speichern (überschreibt Formularfelder)",
+  "applyErrorTooltip": "Fehler zuerst auflösen, um Anwenden zu aktivieren",
+  "unknownTokenWithSuggestion": "⚠ \"{token}\" ist kein Vanille-Trigger/effect.Mögliche Tippfehler — meinst du{suggestion}?",
+  "unknownToken": ". \" {token}\" ist kein Vanilleauslöser/-effekt. Wenn es sich um ein Mod-custom Token handelt, können Sie das sicher ignorieren."
+}

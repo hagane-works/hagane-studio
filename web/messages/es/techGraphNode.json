@@ -1,0 +1,20 @@
+{
+  "startYear": "Año inicial",
+  "cost": "Coste de investigación",
+  "costValue": "{cost} ({days} días)",
+  "source": "Origen",
+  "level": "Nivel",
+  "unlockPath": "Ruta de desbloqueo",
+  "loading": "Cargando…",
+  "noPath": "Aún no hay una ruta de desbloqueo. Añade un Enfoque Nacional, evento o decisión que desbloquee esta tecnología.",
+  "moreCount": "+{n} más",
+  "unlockPathTitle": "Ruta de desbloqueo · pasa el cursor para verla completa",
+  "deleteTitle": "Eliminar esta tecnología",
+  "noIconTitle": "No hay icono disponible para esta tecnología",
+  "iconLoadFailedTitle": "Esta tecnología tiene un icono subido, pero no se pudo cargar",
+  "unlockKind": {
+    "focus": "Enfoque Nacional",
+    "event": "Evento",
+    "decision": "Decisión"
+  }
+}

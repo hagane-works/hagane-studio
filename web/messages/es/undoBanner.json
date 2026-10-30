@@ -1,0 +1,19 @@
+{
+  "sourceApplyAll": "Aplicación en lote",
+  "undonePrefix": "Revertido ·",
+  "undoFailedPrefix": "Falló la reversión: ",
+  "justCreatedPrefix": "Recién creados",
+  "justCreatedSuffix": "elementos · revierte el lote completo si no te convence",
+  "justUpdatedPrefix": "Recién actualizadas",
+  "justUpdatedSuffix": "condiciones de Enfoques Nacionales · Revertir recupera los valores anteriores",
+  "undoBatchTitle": "Revertir este lote · eliminar todo lo recién creado",
+  "undoRestoreTitle": "Revertir esta actualización · recuperar las condiciones anteriores",
+  "undoing": "Revirtiendo…",
+  "undo": "Revertir",
+  "dismissTitle": "Ocultar aviso (sin revertir)",
+  "itemsFallback": "{count} elementos",
+  "cannotUndoTitle": "Cambio masivo · no se puede revertir",
+  "cannotUndoNote": "No hay una copia del estado anterior, por lo que este lote no puede revertirse. Abre el área de trabajo correspondiente y revisa los cambios.",
+  "nothingUndoneNote": "La reversión no cambió nada: los elementos ya no están en el proyecto. Abre el área correspondiente para confirmarlo.",
+  "undoUnavailableTitle": "Este lote no se puede revertir"
+}

@@ -1,0 +1,96 @@
+{
+  "equipment": {
+    "input": "\n@cost = 2.5\nequipments = {\n    demo_tank = {\n        type = armor\n        year = 1936\n        picture = \"gfx/interface/demo.dds\"\n        is_archetype = no\n        is_buildable = maybe\n        manpower = 100.5\n        soft_attack = @cost\n        resources = { steel = 3 rubber = @cost }\n        active = yes\n        active = no\n        custom = { x = 1 }\n    }\n    demo_variant = {\n        parent = demo_tank\n        year = 1940\n        carrier_capable = yes\n        resources = broken\n    }\n}\n",
+    "source_file": "common\\units\\equipment\\demo.txt",
+    "rows": [
+      {
+        "equipment_id": "demo_tank",
+        "equipment_type": "armor",
+        "picture": "gfx/interface/demo.dds",
+        "year": 1936,
+        "is_archetype": false,
+        "soft_attack": 2.5,
+        "resources": {"steel": 3, "rubber": 2.5},
+        "raw_extras": {
+          "manpower": 100.5,
+          "is_archetype": "no",
+          "is_buildable": "maybe",
+          "active": ["yes", "no"],
+          "custom": "x = 1\n"
+        },
+        "source_file": "common/units/equipment/demo.txt"
+      },
+      {
+        "equipment_id": "demo_variant",
+        "parent": "demo_tank",
+        "year": 1940,
+        "carrier_capable": true,
+        "raw_extras": {"resources": "broken"},
+        "source_file": "common/units/equipment/demo.txt"
+      }
+    ],
+    "warnings": [
+      "demo_tank.manpower: preserved unparseable scalar 100.5 in raw_extras",
+      "demo_tank.is_buildable: preserved unparseable scalar 'maybe' in raw_extras",
+      "demo_variant.resources: preserved unparseable scalar 'broken' in raw_extras"
+    ]
+  },
+  "sub_units": {
+    "input": "\n@prio = 4\nsub_units = ignored\nsub_units = {\n    demo_infantry = {\n        abbreviation = \"Demo Inf\"\n        priority = @prio\n        active = yes\n        type = { infantry }\n        categories = category_frontline\n        essential = { manpower }\n        need = { infantry_equipment = 100 support_equipment = 5 }\n        combat_width = 2\n        mountain = { attack = 0.1 defence = -0.2 }\n        duplicate_raw = first\n        duplicate_raw = { nested = yes }\n    }\n    demo_support = {\n        type = support\n        categories = { category_support }\n        ai_priority = 3\n        affects_speed = no\n        need = { support_equipment = 10 }\n    }\n}\n",
+    "source_file": "common\\units\\demo.txt",
+    "rows": [
+      {
+        "sub_unit_id": "demo_infantry",
+        "ordering": 0,
+        "source_file": "common/units/demo.txt",
+        "abbreviation": "Demo Inf",
+        "priority": 4,
+        "active": true,
+        "unit_types": ["infantry"],
+        "categories": ["category_frontline"],
+        "essential": ["manpower"],
+        "need": {"infantry_equipment": 100, "support_equipment": 5},
+        "stats": {"combat_width": 2},
+        "terrain_modifiers": {"mountain": {"attack": 0.1, "defence": -0.2}},
+        "raw_extras": {"duplicate_raw": ["first", "nested = yes\n"]}
+      },
+      {
+        "sub_unit_id": "demo_support",
+        "ordering": 1,
+        "source_file": "common/units/demo.txt",
+        "ai_priority": 3,
+        "affects_speed": false,
+        "unit_types": ["support"],
+        "categories": ["category_support"],
+        "need": {"support_equipment": 10}
+      }
+    ],
+    "warnings": ["ignored scalar `sub_units` wrapper"]
+  },
+  "divisions": {
+    "input": "\n# division_template = { name = \"ignored comment\" }\ndivision_template = {\n    name = \"Demo Division\"\n    division_names_group = DEMO_NAMES\n    regiments = {\n        infantry = { x = 0 y = 0 }\n        artillery_brigade = { x = 1.9 y = 0 }\n    }\n    support = { engineer = { x = 0 y = 0 } }\n    is_locked = yes\n    priority = 3.9\n    template_counter = 7\n    override_model = { state = 1 }\n}\n\n\n\ndivision_template = {\n    name = \"Second { Division }\"\n    regiments = { infantry = { x = -1 y = 2 } }\n}\n\nunits = {\n    division = { name = \"Tail # { intact }\" location = 1 }\n}\n",
+    "rows": [
+      {
+        "template_name": "Demo Division",
+        "ordering": 0,
+        "regiments": [
+          {"token": "infantry", "x": 0, "y": 0},
+          {"token": "artillery_brigade", "x": 1, "y": 0}
+        ],
+        "support": [{"token": "engineer", "x": 0, "y": 0}],
+        "division_names_group": "DEMO_NAMES",
+        "is_locked": true,
+        "priority": 3,
+        "raw_extras": {"template_counter": 7, "override_model": "state = 1"}
+      },
+      {
+        "template_name": "Second { Division }",
+        "ordering": 1,
+        "regiments": [{"token": "infantry", "x": -1, "y": 2}],
+        "support": []
+      }
+    ],
+    "tail": "# division_template = { name = \"ignored comment\" }\n\nunits = {\n    division = { name = \"Tail # { intact }\" location = 1 }\n}",
+    "warnings": []
+  }
+}

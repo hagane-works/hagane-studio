@@ -1,0 +1,5 @@
+{
+  "trigger": "Search country TAG...",
+  "searchPlaceholder": "Search TAG or country name...",
+  "empty": "No countries found."
+}

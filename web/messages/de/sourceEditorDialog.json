@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "Idee (nationaler Fokus / nationaler Geist)",
+    "character": "Zeichen",
+    "event": "Veranstaltung",
+    "decision": "Entscheidung",
+    "focus_node": "Fokus (Fokusbaumknoten)",
+    "tech": "Technologie"
+  },
+  "title": "Importiert bearbeiten {noun}",
+  "desc": "<mono>{label}</mono> kommt aus Vanille oder einem geladenen Mod — was passiert, wenn man es bearbeitet?",
+  "keepImportedTitle": "Original importieren lassen",
+  "keepImportedDesc": "Export hält die Vanille oder Mod Original.",
+  "overrideTitle": "Als Ersteller bearbeiten",
+  "overrideDesc": "Nachdem Sie gespeichert haben, wird dies zu Ihrem eigenen Edit und Export überschreibt die Vanille oder Mod Original. Die ID bleibt die gleiche.",
+  "createCopyTitle": "Neue Kopie erstellen (Änderungs-ID)",
+  "createCopyDesc": "Nachdem Sie gespeichert haben, bleibt das importierte Original und Sie erhalten einen eigenständigen {entityType}. Beides existiert im Build."
+}

@@ -1,0 +1,9 @@
+{
+  "allowBranchTitle": "Branche conditionnelle · chemin caché qui n'apparaît que lorsque ses conditions allow_branch sont remplies.",
+  "allowBranchBadge": "Branche",
+  "loadTreeTitle": "Passe à un autre arbre de Priorités - nation lorsque cette priorité est terminée.",
+  "loadTreeBadge": "Saut",
+  "relativePositionTitle": "Position relative",
+  "addChildTitle": "Ajouter une Priorité - nation enfant reliée",
+  "addMutexChildTitle": "Ajouter une Priorité - nation mutuellement exclusive"
+}

@@ -1,0 +1,5 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+leader_traits = {
+	test_leader_trait = { random = no }
+	test_second_leader_trait = { random = no }
+}

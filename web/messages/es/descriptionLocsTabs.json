@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Pestañas de idioma de la descripción",
+  "addLanguage": "Añadir idioma",
+  "addingLanguage": "Se está añadiendo {language}…",
+  "addLanguageError": "No se ha podido añadir {language} al proyecto. Inténtalo de nuevo.",
+  "legacyFallbackHint": "Se muestra el antiguo campo de descripción; escribe para sustituirlo. Tu texto se guarda por idioma.",
+  "fullName": {
+    "en": "Inglés",
+    "zh": "Chino (simplificado)",
+    "ru": "Ruso",
+    "fr": "Francés",
+    "de": "Alemán",
+    "es": "Español",
+    "ja": "Japonés",
+    "ko": "Coreano",
+    "pl": "Polaco",
+    "pt": "Portugués (Brasil)"
+  }
+}

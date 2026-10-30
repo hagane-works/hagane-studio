@@ -1,0 +1,10 @@
+{
+  "titleSuffix": "ist eine Vanille HOI4 TAG",
+  "description": "Weiterführen wird Vanille {tag} ({vanillaName}) Inhalt durch Ihre Mods ersetzen.Dies ist genau, was alt-history mods (KR / TNO / TFR) tun — Ihre Idee/Fokus/Event-Einträge überschreiben die Vanille, wenn die Mod geladen wird.",
+  "ifGoalLabel": "Wenn das dein Ziel ist",
+  "ifGoalText": "(Vanille umschreiben {tag}): Schlag weiter.",
+  "ifCustomLabel": "Wenn Sie eine benutzerdefinierte TAG",
+  "ifCustomText": "(etwas Vanille nicht verwendet): Abbrechen und wählen Sie einen anderen 2–5 Buchstabencode.",
+  "cancel": "Abbrechen",
+  "confirm": "Weiter · Vanille ersetzen"
+}

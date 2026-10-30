@@ -1,0 +1,9 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+capital = 2
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = { democratic = 25 fascism = 25 communism = 25 neutrality = 25 }

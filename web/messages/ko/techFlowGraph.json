@@ -1,0 +1,9 @@
+{
+  "footerHint": "빈 공간 두 번 클릭 → 생성 · 노드 끌기 → start_year / 열 변경 · 선택 후 <kbd>Delete</kbd> 또는 노드 오른쪽 위 ×에 마우스를 올려 삭제",
+  "footerHintAria": "캔버스 조작 도움말",
+  "footerHintRowAxis": "빈 공간 두 번 클릭 → 생성 · 노드 끌기 → 행 / 열 변경 · 선택 후 <kbd>Delete</kbd> 또는 노드 오른쪽 위 ×에 마우스를 올려 삭제",
+  "orphanNoFolder": "어떤 기술 트리에도 속하지 않음 · folder 블록이 없는 기술 {count}개(국가중점/이벤트로 부여)",
+  "orphanUnmatched": ".gui의 어떤 gridbox에도 일치하지 않음 · 기술 {count}개",
+  "footerHintBrowse": "연구 보드를 탐색하세요. 기술을 선택하고 화면을 이동하거나 확대합니다. 위치를 바꾸려면 배치 모드를 사용하세요.",
+  "footerHintLayout": "배치 모드에서는 선택한 연구 폴더의 유효한 슬롯에만 배치합니다. 드래그해도 연구 연도는 바뀌지 않습니다."
+}

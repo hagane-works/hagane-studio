@@ -1,0 +1,39 @@
+{
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "delete": "Supprimer",
+  "create": "Créer",
+  "loading": "Chargement…",
+  "unnamed": "Sans nom",
+  "all": "Tout",
+  "clear": "Effacer",
+  "saving": "Enregistrement…",
+  "revert": "Rétablir",
+  "search": "Rechercher",
+  "discardUnsavedConfirm": "Abandonner les modifications non enregistrées ?",
+  "countBadgeTooltip": "Affichage de {count} sur {total}",
+  "copiedToClipboard": "Copié dans le presse-papiers",
+  "theme": {
+    "switchToDark": "Passer au thème sombre",
+    "switchToLight": "Passer au thème clair"
+  },
+  "language": {
+    "label": "Langue",
+    "heading": "LANGUE / LANGUAGE",
+    "publicHeading": "Langue de l’interface",
+    "current": "Langue actuelle : {language}",
+    "description": "La sélection d’une langue fait passer l’interface dans cette langue. Les langues du contenu du mod sont sélectionnées séparément."
+  },
+  "emptyCtaCreate": "+ Nouveau",
+  "emptyCtaAi": "Laisser l’IA s’en charger",
+  "emptyCtaAddCountry": "+ Ajoutez d’abord un pays",
+  "vocabulary": {
+    "customOption": "Personnalisé… (saisissez le vôtre)",
+    "customChip": "Personnalisé",
+    "vanillaGroup": "Vanilla",
+    "baseModGroup": "Du mod de base"
+  },
+  "chooseFile": "Choisir un fichier",
+  "noFileChosen": "Aucun fichier choisi",
+  "gameFolderMissing": "Cette action a besoin du jeu de base : choisissez votre dossier Hearts of Iron IV dans Paramètres → Installation de Hearts of Iron IV."
+}

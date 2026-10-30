@@ -1,0 +1,15 @@
+{
+  "workbenchTitle": "Une erreur s’est produite dans cet atelier",
+  "workbenchBody": "Un problème est survenu pendant l’affichage de cet éditeur. Vos autres travaux et le reste de l’application ne sont pas affectés.",
+  "rootTitle": "Un problème est survenu",
+  "rootBody": "Une erreur inattendue a empêché l’affichage de cette page. Le reste de l’application demeure accessible.",
+  "chunkTitle": "La page n’a pas fini de se charger",
+  "chunkBody": "Une partie de la page n’a pas pu être chargée depuis le programme, généralement parce qu’il a été redémarré ou mis à jour pendant que cette fenêtre était ouverte. Rechargez la page pour réessayer.",
+  "globalTitle": "Le chargement de l’application a échoué",
+  "globalBody": "Une erreur critique a empêché l’affichage de l’application. Un rechargement résout généralement le problème.",
+  "draftHint": "Commencez par réessayer : les modifications non enregistrées de cette session seront conservées. Recharger la page abandonnera les brouillons non enregistrés.",
+  "retry": "Réessayer",
+  "reload": "Recharger la page",
+  "details": "Détails de l’erreur",
+  "unknownError": "Erreur inconnue"
+}

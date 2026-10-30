@@ -1,0 +1,17 @@
+{
+  "schema": "hoi4.export-snapshot.v1",
+  "project_id": 46,
+  "project": {"id": 46, "name": "Demo", "country_tag": "GER", "export_languages": ["en"]},
+  "tables": {
+    "countries": [
+      {"id": 1, "tag": "ZZ1", "name_en": "Test Country", "name_zh": "", "color": [12, 34, 56], "graphical_culture": "western_european_gfx", "graphical_culture_2d": "western_european_2d", "ideology": "democratic", "source": "created"}
+    ],
+    "history_files": [
+      {"id": 2, "country_tag": "ZZ1", "capital": 5, "source": "created", "set_politics_ruling_party": "monarchism_custom", "startup_flags": ["demo_started"]}
+    ],
+    "states": [
+      {"id": 3, "state_id": 5, "name": "Testland", "owner": "XQZ", "controller": "ZZ1", "add_core_of": ["XQZ", "GER"], "manpower": 1000, "state_category": "rural", "provinces": [1, 2], "source": "created"},
+      {"id": 4, "state_id": 6, "name": "Homeland", "owner": "ZZ1", "controller": "ZZ1", "add_core_of": ["ZZ1"], "manpower": 500, "state_category": "town", "provinces": [3], "source": "created"}
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+ "source": "common/dynamic_modifiers/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 2,
+ "ids": [
+  "fallout_atomic",
+  "test_dynamic_modifier"
+ ]
+}

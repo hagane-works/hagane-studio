@@ -1,0 +1,178 @@
+{
+ "specs": [
+  {
+   "model": "CharacterModel",
+   "kind": "character",
+   "id_expr": "str(row.tag or row.id)",
+   "fields": [
+    "military_visible",
+    "advisor_available",
+    "advisor_visible",
+    "advisor_on_add",
+    "advisor_on_remove",
+    "scientist_visible",
+    "operative_available",
+    "raw_extras"
+   ],
+   "table": "characters",
+   "has_source": true
+  },
+  {
+   "model": "CustomTraitModel",
+   "kind": "custom_trait",
+   "id_expr": "str(row.trait_id or row.id)",
+   "fields": [
+    "ai_will_do",
+    "extra_fields",
+    "raw_extras"
+   ],
+   "table": "custom_traits",
+   "has_source": false
+  },
+  {
+   "model": "DynamicModifierModel",
+   "kind": "dynamic_modifier",
+   "id_expr": "str(row.dm_id or row.id)",
+   "fields": [
+    "remove_trigger",
+    "enable",
+    "raw_extras"
+   ],
+   "table": "dynamic_modifiers",
+   "has_source": true
+  },
+  {
+   "model": "IdeaModel",
+   "kind": "idea",
+   "id_expr": "str(row.idea_id or row.id)",
+   "fields": [
+    "ai_will_do",
+    "allowed",
+    "allowed_civil_war",
+    "available",
+    "visible",
+    "allowed_to_remove",
+    "cancel",
+    "do_effect",
+    "on_add",
+    "on_remove",
+    "raw_extras"
+   ],
+   "table": "ideas",
+   "has_source": true
+  },
+  {
+   "model": "EventModel",
+   "kind": "event",
+   "id_expr": "str(row.event_id or row.id)",
+   "fields": [
+    "trigger",
+    "mean_time_to_happen",
+    "immediate",
+    "after",
+    "options",
+    "raw_extras"
+   ],
+   "table": "events",
+   "has_source": true
+  },
+  {
+   "model": "SuperEventModel",
+   "kind": "super_event",
+   "id_expr": "f\"{row.country_tag or 'SE'}_se.{row.number}\"",
+   "fields": [
+    "options"
+   ],
+   "table": "super_events",
+   "has_source": true
+  },
+  {
+   "model": "DecisionCategoryModel",
+   "kind": "decision_category",
+   "id_expr": "str(row.category_id or row.id)",
+   "fields": [
+    "allowed",
+    "visible",
+    "raw_extras"
+   ],
+   "table": "decision_categories",
+   "has_source": false
+  },
+  {
+   "model": "DecisionModel",
+   "kind": "decision",
+   "id_expr": "str(row.decision_id or row.id)",
+   "fields": [
+    "allowed",
+    "available",
+    "visible",
+    "complete_effect",
+    "remove_effect",
+    "cancel_trigger",
+    "cancel_effect",
+    "modifier",
+    "activation",
+    "timeout_effect",
+    "target_root_trigger",
+    "target_trigger",
+    "custom_cost_trigger",
+    "ai_will_do",
+    "raw_extras"
+   ],
+   "table": "decisions",
+   "has_source": true
+  },
+  {
+   "model": "HistoryFileModel",
+   "kind": "history_file",
+   "id_expr": "str(row.country_tag or row.id)",
+   "fields": [
+    "raw_script",
+    "date_blocks"
+   ],
+   "table": "history_files",
+   "has_source": true
+  },
+  {
+   "model": "ScriptedSnippetModel",
+   "kind": "scripted_snippet",
+   "id_expr": "str(row.name or row.id)",
+   "fields": [
+    "body",
+    "raw_extras"
+   ],
+   "table": "scripted_snippets",
+   "has_source": true
+  },
+  {
+   "model": "ScriptedLocalisationModel",
+   "kind": "scripted_localisation",
+   "id_expr": "str(row.name or row.id)",
+   "fields": [
+    "body",
+    "raw_extras"
+   ],
+   "table": "scripted_localisations",
+   "has_source": true
+  },
+  {
+   "model": "PanelModel",
+   "kind": "ui_panel",
+   "id_expr": "str(row.token or row.id)",
+   "fields": [
+    "visible_trigger",
+    "controls",
+    "raw_extras"
+   ],
+   "table": "ui_panels",
+   "has_source": true
+  }
+ ],
+ "self_defining_kinds": [
+  "character",
+  "custom_trait",
+  "dynamic_modifier",
+  "idea",
+  "decision"
+ ]
+}

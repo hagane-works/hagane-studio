@@ -1,0 +1,125 @@
+{
+  "decision": {
+    "kind": "Décision · {id}",
+    "categoryKind": "Catégorie de décisions · {id}",
+    "loading": "Chargement de la décision du projet…",
+    "confirmDelete": "Supprimer cette décision ?",
+    "delete": "Supprimer la décision",
+    "notDeletable": "Cette décision vient du jeu ou d’un fichier d’origine du mod : le jeu l’afficherait toujours depuis ce fichier si la ligne du projet était supprimée, elle ne peut donc pas être supprimée ici.",
+    "loadingCategory": "Chargement de la catégorie de décisions du projet…",
+    "newLog": "Création · {name}",
+    "add": "+ Nouvelle décision dans cette catégorie",
+    "addNote": "La nouvelle décision est réservée à {tag}, coûte 0 et n’a ni conditions ni effets ; une fois créée, elle s’ouvre ici pour que vous continuiez à la modifier.",
+    "hitCategory": "Catégorie de décisions {name}",
+    "hitDecision": "Décision {name}",
+    "hitCost": "Coût de la décision {name}"
+  },
+  "override": {
+    "heading": "Copier dans mon mod pour modifier",
+    "vanillaNote": "L’enregistrement copie l’intégralité de {file} dans votre mod (on vous le demande la première fois) ; le reste du fichier est conservé tel quel. La modification s’applique à tous les pays qui utilisent cette décision.",
+    "modNote": "Cela modifie {file} dans votre mod, et seulement cette décision.",
+    "cost": "Coût",
+    "icon": "Icône",
+    "daysRemove": "Durée (jours)",
+    "daysReEnable": "Temps de recharge (jours)",
+    "fireOnce": "Ne peut être prise qu’une fois",
+    "placeholder": "Non défini",
+    "note": "Les scripts comme les conditions et les effets ne se modifient pas encore ici ; une erreur peut être annulée dans le « Journal des modifications ».",
+    "confirmTitle": "Copier le fichier du jeu de base dans votre mod",
+    "confirmLabel": "Copier et enregistrer",
+    "confirmBody": "Le fichier du jeu de base {file} sera copié en entier dans votre mod et remplacera le fichier du même nom ; les autres décisions et le contenu des autres pays qu’il contient restent inchangés.\nCette modification s’applique à tous les pays qui utilisent cette décision ; si une mise à jour du jeu modifie ce fichier, votre copie ne suivra pas automatiquement.",
+    "fileFallback": "le fichier qui déclare cette décision",
+    "importedDone": "{file} a été copié dans votre mod et modifié.",
+    "done": "{file} a été modifié.",
+    "problem": {
+      "cost": "Le coût doit être un nombre supérieur ou égal à 0",
+      "icon": "Indiquez l’icône par son nom dans les fichiers (lettres, chiffres, tirets bas)",
+      "days": "Les jours doivent être un nombre entier supérieur ou égal à 0"
+    }
+  },
+  "focus": {
+    "kind": "Priorité nationale · {tree} · {id}",
+    "newChildLog": "Nouvelle priorité enfant · {name}",
+    "loading": "Chargement de la priorité nationale du projet…",
+    "notInTree": "La version de cet arbre dans le projet n’a pas cette priorité.",
+    "prereqs": "Prérequis",
+    "prereqHint": "Un groupe par ligne : une seule priorité du groupe suffit ; chaque groupe doit être rempli.",
+    "or": "ou",
+    "addOr": "+ ou",
+    "addPrereq": "+ Prérequis",
+    "mutex": "Mutuellement exclusives",
+    "addMutex": "+ Exclusion mutuelle",
+    "newChild": "Nouvelle priorité enfant",
+    "confirmDelete": "Confirmer la suppression",
+    "delete": "Supprimer la priorité",
+    "remove": "Retirer {id}",
+    "picking": "Cliquez-en une dans l’arbre…",
+    "createHere": "Nouvelle priorité ici",
+    "link": {
+      "self": "Une priorité ne peut pas être liée à elle-même.",
+      "alreadyMutex": "Elles sont déjà mutuellement exclusives.",
+      "alreadyPrereq": "C’est déjà un prérequis.",
+      "loop": "Cela créerait une boucle : cette priorité exige déjà que celle-ci soit terminée d’abord."
+    }
+  },
+  "focusTree": {
+    "created": "Arbre de priorités {id} créé ; faites un clic droit sur un espace vide pour placer la première priorité",
+    "label": "Arbre de priorités de {tag}",
+    "none": "Aucun arbre n’est déclaré pour {tag}.",
+    "count": "{count, plural, one {# priorité} other {# priorités}}",
+    "gameDefault": "par défaut dans le jeu",
+    "newIdPlaceholder": "Id du nouvel arbre (laisser vide pour un nom automatique)",
+    "create": "Nouvel arbre de priorités",
+    "createNote": "Le nouvel arbre est ajouté au projet pour {tag} ; le jeu choisit un arbre selon son poids, un arbre vide ne remplacera donc pas l’arbre existant."
+  },
+  "event": {
+    "kind": "Événement · {id}",
+    "loading": "Chargement de l’événement du projet…",
+    "unreadable": "Cet événement n’est pas dans les données du projet, et son apparence dans le jeu n’a pas pu être lue.",
+    "hitOption": "Option {name}",
+    "hitTitle": "Titre de l’événement",
+    "hitDesc": "Description de l’événement",
+    "problem": {
+      "timeoutDays": "Le délai en jours doit être un nombre entier supérieur ou égal à 0",
+      "mtth": "Un événement qui n’est pas déclenché uniquement par script doit avoir un délai moyen de déclenchement (par ex. days = 30)"
+    }
+  },
+  "eventSwitcher": {
+    "superCreated": "Super-événement #{number} créé",
+    "notInProject": "L’événement affiché n’est pas dans les données du projet : il n’y a donc pas d’espace de noms où placer un nouvel événement.",
+    "created": "Événement {id} créé",
+    "superEvent": "Super-événement",
+    "event": "Événement",
+    "search": "Rechercher par id ou titre",
+    "scopeLabel": "Événements à afficher",
+    "countryEvents": "Événements de {tag}",
+    "allEvents": "Tous les événements",
+    "totalPartial": "Événements : {total} · les {shown} premiers sont listés, recherchez les autres",
+    "totalAll": "Événements : {total} · faites glisser la barre de défilement à droite pour parcourir",
+    "genericEvents": "Événements génériques (tout pays peut les recevoir)",
+    "noCountryEvents": "Ce pays n’a aucun événement ; passez à « Tous les événements » pour voir.",
+    "noMatch": "Aucun événement correspondant.",
+    "newEvent": "Nouvel événement",
+    "newEventNote": "Il est placé dans l’espace de noms de l’événement affiché, numéroté après le dernier ; déclenché uniquement par script, il n’apparaît jamais tout seul.",
+    "superAria": "Super-événement {label}",
+    "noSuperEvents": "Le projet n’a encore aucun super-événement.",
+    "newSuperEvent": "Nouveau super-événement"
+  },
+  "superEvent": {
+    "kind": "Super-événement · #{number} · {tag}",
+    "projectCountry": "pays du projet",
+    "saved": "Super-événement « {title} » enregistré",
+    "pictureSaved": "Image du super-événement remplacée",
+    "deleted": "Super-événement « {title} » supprimé"
+  },
+  "bookmark": {
+    "fallbackName": "Signet",
+    "kind": "Signet · {id}",
+    "loading": "Chargement du signet du projet…",
+    "notInProject": "Ce signet n’est pas dans les données du projet (il vient du jeu de base ou d’un fichier du mod) ; importez-le dans le projet pour le modifier ici.",
+    "pictureLog": "Nouvel arrière-plan · {name}",
+    "problem": {
+      "date": "Écrivez la date sous la forme 1936.1.1 ou 1936.1.1.12"
+    }
+  }
+}

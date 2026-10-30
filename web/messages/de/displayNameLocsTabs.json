@@ -1,0 +1,19 @@
+{
+  "tablistAriaLabel": "Registerkarten für die Namenssprache anzeigen",
+  "addLanguage": "Sprache hinzufügen",
+  "addingLanguage": "{language} wird hinzugefügt…",
+  "addLanguageError": "{language} konnte dem Projekt nicht hinzugefügt werden. Versuchen Sie es erneut.",
+  "legacyFallbackHint": "Zeigt das Feld \"Legacy\" an — Typ, der überschreibt; der neue Wert wird in display_name_locs gespeichert.",
+  "fullName": {
+    "en": "Englisch",
+    "zh": "Chinesisch (vereinfacht)",
+    "ru": "Russisch",
+    "fr": "Französisch",
+    "de": "Deutsch",
+    "es": "Spanisch",
+    "ja": "Japanisch",
+    "ko": "Koreanisch",
+    "pl": "Polnisch",
+    "pt": "Portugiesisch (Brasilien)"
+  }
+}

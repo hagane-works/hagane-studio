@@ -1,0 +1,26 @@
+{
+  "title": "Resumen previo",
+  "subtitle": "Revisa lo analizado antes de importar. Los mods grandes pueden tardar; activa la ejecución en segundo plano para seguir trabajando.",
+  "stat": {
+    "countries": "Países (TAG)",
+    "characters": "Personajes",
+    "ideas": "Espíritus nacionales",
+    "focus_trees": "Árboles de Enfoques Nacionales",
+    "events": "Eventos",
+    "decisions": "Decisiones",
+    "dynamic_modifiers": "Modificadores dinámicos",
+    "superevents": "Super-eventos"
+  },
+  "etaLabel": "Tiempo estimado",
+  "etaUnitMinutes": "{minutes} min",
+  "etaUnitSeconds": "~{seconds}s",
+  "etaUnit": "({mb} MB en {files} archivos)",
+  "etaFallback": "— (sin datos)",
+  "etaHint": "Estimación aproximada según el tamaño total. El tiempo real depende del disco y del equipo.",
+  "backgroundToggleLabel": "Ejecutar importación en segundo plano",
+  "backgroundToggleHint": "Cierra este cuadro y sigue trabajando. Un widget inferior derecho mostrará el progreso.",
+  "ctaContinue": "Iniciar importación",
+  "ctaCancel": "Cancelar",
+  "statFallback": "—",
+  "notAvailableHint": "Los recuentos «—» no están disponibles durante el análisis; aparecerán en el resumen posterior."
+}

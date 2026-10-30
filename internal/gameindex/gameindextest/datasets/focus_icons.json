@@ -1,0 +1,61 @@
+{
+ "source": "interface/goals.gfx + integrated_dlc/*/interface/*goals*.gfx + dlc/*/interface/*goals*.gfx",
+ "game_version": "1.19.3",
+ "total": 7,
+ "by_file": {
+  "interface/goals.gfx": 7
+ },
+ "names": [
+  "GFX_focus_TST_special",
+  "GFX_focus_generic_diplomatic_treaty",
+  "GFX_focus_usa_guarantee_the_american_dream",
+  "GFX_goal_generic_allies_build_infantry",
+  "GFX_goal_generic_construct_civ_factory",
+  "GFX_goal_generic_national_unity",
+  "GFX_goal_generic_test"
+ ],
+ "icons": [
+  {
+   "name": "GFX_focus_TST_special",
+   "texturefile": "gfx/interface/goals/focus_TST_special.dds",
+   "dlc": null,
+   "category": "focus"
+  },
+  {
+   "name": "GFX_focus_generic_diplomatic_treaty",
+   "texturefile": "gfx/interface/goals/focus_test_treaty.dds",
+   "dlc": null,
+   "category": "focus"
+  },
+  {
+   "name": "GFX_focus_usa_guarantee_the_american_dream",
+   "texturefile": "gfx/interface/goals/focus_test_usa_dream.dds",
+   "dlc": null,
+   "category": "focus"
+  },
+  {
+   "name": "GFX_goal_generic_allies_build_infantry",
+   "texturefile": "gfx/interface/goals/goal_generic_allies_build_infantry.dds",
+   "dlc": null,
+   "category": "goal"
+  },
+  {
+   "name": "GFX_goal_generic_construct_civ_factory",
+   "texturefile": "gfx/interface/goals/goal_generic_construct_civ_factory.dds",
+   "dlc": null,
+   "category": "goal"
+  },
+  {
+   "name": "GFX_goal_generic_national_unity",
+   "texturefile": "gfx/interface/goals/goal_test_unity.dds",
+   "dlc": null,
+   "category": "goal"
+  },
+  {
+   "name": "GFX_goal_generic_test",
+   "texturefile": "gfx/interface/goals/goal_generic_test.dds",
+   "dlc": null,
+   "category": "goal"
+  }
+ ]
+}

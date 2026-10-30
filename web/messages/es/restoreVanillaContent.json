@@ -1,0 +1,21 @@
+{
+  "button": "Restaurar contenido del juego base ({count} estados)",
+  "buttonBusy": "Comprobando…",
+  "dialogTitle": "Restaurar contenido del juego base",
+  "dialogIntro": "El juego base incluye para estos estados un script adicional que este proyecto nunca recibió. Se va a devolver a {count} estados que ahora mismo están vacíos. Todavía no se ha cambiado nada.",
+  "willRestoreHeading": "Se devolverá",
+  "willRestoreLine": "{navalBases} bases navales · {bunkers} búnkeres · {dams} presas · {landmarks} monumentos · {datedBlocks} bloques de historia con fecha · {hasDlc} bloques condicionados por DLC",
+  "willNotTouchHeading": "No se tocará",
+  "willNotTouchLine": "La propiedad, los territorios nacionales, las reclamaciones, los edificios, la mano de obra y las provincias se quedan exactamente como están.",
+  "skippedNote": "Otros {count} estados ya tienen script propio y no se tocarán.",
+  "missingNote": "Para otros {count} estados el juego base no tiene nada que devolver.",
+  "confirm": "Restaurar {count} estados",
+  "cancel": "Cancelar",
+  "successTitle": "Contenido del juego base restaurado",
+  "successBody": "{count} estados vuelven a estar completos: han regresado {navalBases} bases navales y {landmarks} monumentos.",
+  "nothingToRestore": "No hay nada que devolver: estos estados ya tienen todo lo que incluye el juego base.",
+  "errorVanillaRootUnconfigured": "La carpeta de Hearts of Iron IV no está configurada, así que no se pudieron leer los archivos de estados del juego base ni restaurar nada. No se cambió ni una línea. Elige la carpeta del juego en Ajustes → Instalación de Hearts of Iron IV.",
+  "errorVanillaStatesDirMissing": "La carpeta de Hearts of Iron IV de los ajustes no es la carpeta de instalación del juego: no se pudo leer history/states. No se cambió ni una línea. Elige la carpeta que contiene hoi4.exe en Ajustes → Instalación de Hearts of Iron IV.",
+  "errorVanillaStatesEmpty": "Se encontró la carpeta history/states del juego, pero no se pudo leer ni un solo estado. No se cambió ni una línea. Verifica los archivos del juego en Steam o elige otra instalación en Ajustes → Instalación de Hearts of Iron IV.",
+  "errorGeneric": "No se pudo restaurar el contenido del juego base, así que no se cambió ni una línea. Puedes intentarlo de nuevo."
+}

@@ -1,0 +1,819 @@
+{
+ "guardrails": [
+  {
+   "name": "collision-no-deps",
+   "base": "all",
+   "issues": []
+  },
+  {
+   "name": "collision-character",
+   "base": "all",
+   "issues": [
+    {
+     "level": "error",
+     "code": "base_mod_id_collision",
+     "entity_ref": {
+      "type": "character",
+      "id": "BASE_CHR"
+     },
+     "severity": "blocker",
+     "fix_hint": "Rename your character to a new, unique id, or reference the base mod's existing 'BASE_CHR' instead of re-creating it.",
+     "message": "The character id 'BASE_CHR' already exists in the base mod you depend on — exporting it re-defines the base entity and HOI4 crashes on load (duplicate id / 'multiple ... have the tag'). Rename it, or reference the base one instead."
+    }
+   ]
+  },
+  {
+   "name": "collision-imported-skipped",
+   "base": "all",
+   "issues": []
+  },
+  {
+   "name": "collision-focus",
+   "base": "all",
+   "issues": [
+    {
+     "level": "error",
+     "code": "base_mod_id_collision",
+     "entity_ref": {
+      "type": "focus",
+      "id": "base_focus"
+     },
+     "severity": "blocker",
+     "fix_hint": "Rename your focus to a new, unique id, or reference the base mod's existing 'base_focus' instead of re-creating it.",
+     "message": "The focus id 'base_focus' already exists in the base mod you depend on — exporting it re-defines the base entity and HOI4 crashes on load (duplicate id / 'multiple ... have the tag'). Rename it, or reference the base one instead."
+    }
+   ]
+  },
+  {
+   "name": "collision-idea-decision",
+   "base": "all",
+   "issues": [
+    {
+     "level": "error",
+     "code": "base_mod_id_collision",
+     "entity_ref": {
+      "type": "idea",
+      "id": "base_idea"
+     },
+     "severity": "blocker",
+     "fix_hint": "Rename your idea to a new, unique id, or reference the base mod's existing 'base_idea' instead of re-creating it.",
+     "message": "The idea id 'base_idea' already exists in the base mod you depend on — exporting it re-defines the base entity and HOI4 crashes on load (duplicate id / 'multiple ... have the tag'). Rename it, or reference the base one instead."
+    },
+    {
+     "level": "error",
+     "code": "base_mod_id_collision",
+     "entity_ref": {
+      "type": "decision",
+      "id": "base_dec"
+     },
+     "severity": "blocker",
+     "fix_hint": "Rename your decision to a new, unique id, or reference the base mod's existing 'base_dec' instead of re-creating it.",
+     "message": "The decision id 'base_dec' already exists in the base mod you depend on — exporting it re-defines the base entity and HOI4 crashes on load (duplicate id / 'multiple ... have the tag'). Rename it, or reference the base one instead."
+    }
+   ]
+  },
+  {
+   "name": "collision-no-index-trusts",
+   "base": "none",
+   "issues": []
+  },
+  {
+   "name": "collision-partial-index",
+   "base": "chars",
+   "issues": [
+    {
+     "level": "error",
+     "code": "base_mod_id_collision",
+     "entity_ref": {
+      "type": "character",
+      "id": "BASE_CHR"
+     },
+     "severity": "blocker",
+     "fix_hint": "Rename your character to a new, unique id, or reference the base mod's existing 'BASE_CHR' instead of re-creating it.",
+     "message": "The character id 'BASE_CHR' already exists in the base mod you depend on — exporting it re-defines the base entity and HOI4 crashes on load (duplicate id / 'multiple ... have the tag'). Rename it, or reference the base one instead."
+    }
+   ]
+  },
+  {
+   "name": "ideology-not-submod",
+   "base": "ideo",
+   "issues": []
+  },
+  {
+   "name": "ideology-no-index-trusts",
+   "base": "none",
+   "issues": []
+  },
+  {
+   "name": "ideology-undefined",
+   "base": "ideo",
+   "issues": [
+    {
+     "level": "error",
+     "code": "submod_ideology_undefined",
+     "entity_ref": {
+      "type": "character",
+      "id": "c1"
+     },
+     "severity": "blocker",
+     "fix_hint": "Reference a base-mod or vanilla ideology, or promote your submod to a standalone mod that defines 'weird' in common/ideologies.",
+     "message": "Custom ideology 'weird' is referenced by character c1, but a submod does not emit common/ideologies (it inherits the base mod's) and neither the base mod nor vanilla defines 'weird' — HOI4 crashes on load with an undefined ideology. Use a base-mod ideology or make a standalone mod."
+    }
+   ]
+  },
+  {
+   "name": "ideology-base-known",
+   "base": "ideo",
+   "issues": []
+  },
+  {
+   "name": "ideology-vanilla-known",
+   "base": "ideo",
+   "issues": []
+  },
+  {
+   "name": "ideology-dedup",
+   "base": "ideo",
+   "issues": [
+    {
+     "level": "error",
+     "code": "submod_ideology_undefined",
+     "entity_ref": {
+      "type": "character",
+      "id": "a"
+     },
+     "severity": "blocker",
+     "fix_hint": "Reference a base-mod or vanilla ideology, or promote your submod to a standalone mod that defines 'weird' in common/ideologies.",
+     "message": "Custom ideology 'weird' is referenced by character a, but a submod does not emit common/ideologies (it inherits the base mod's) and neither the base mod nor vanilla defines 'weird' — HOI4 crashes on load with an undefined ideology. Use a base-mod ideology or make a standalone mod."
+    }
+   ]
+  },
+  {
+   "name": "ideology-history-ruling-party",
+   "base": "ideo",
+   "issues": [
+    {
+     "level": "error",
+     "code": "submod_ideology_undefined",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER"
+     },
+     "severity": "blocker",
+     "fix_hint": "Reference a base-mod or vanilla ideology, or promote your submod to a standalone mod that defines 'strange' in common/ideologies.",
+     "message": "Custom ideology 'strange' is referenced by GER ruling_party, but a submod does not emit common/ideologies (it inherits the base mod's) and neither the base mod nor vanilla defines 'strange' — HOI4 crashes on load with an undefined ideology. Use a base-mod ideology or make a standalone mod."
+    }
+   ]
+  },
+  {
+   "name": "ideology-blank-skipped",
+   "base": "ideo",
+   "issues": []
+  },
+  {
+   "name": "tagwrites-not-submod",
+   "base": "tags",
+   "issues": []
+  },
+  {
+   "name": "tagwrites-no-index",
+   "base": "none",
+   "issues": []
+  },
+  {
+   "name": "tagwrites-history",
+   "base": "tags",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "history_writes_base_tag",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "FRA"
+     },
+     "severity": "warning",
+     "fix_hint": "Keep it to additive lines (e.g. recruit_character) — those stack. A full history rewrite can shadow the base country's own setup.",
+     "message": "You're writing history for base-mod country FRA. Additive lines (like recruiting a character) stack safely on top of the base, but a full rewrite of FRA's history can shadow the base mod's own setup for that country. Prefer additive changes."
+    }
+   ]
+  },
+  {
+   "name": "tagwrites-imported-skipped",
+   "base": "tags",
+   "issues": []
+  },
+  {
+   "name": "tagwrites-division",
+   "base": "tags",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "division_stem_base_collision",
+     "entity_ref": {
+      "type": "division_template",
+      "id": "Elite",
+      "oob_file": "ita.txt",
+      "country_tag": "ITA"
+     },
+     "severity": "warning",
+     "fix_hint": "Use a NEW OOB file name (stem) for your divisions so you don't replace the base country's whole order of battle.",
+     "message": "Division template 'Elite' targets base-mod country ITA via OOB file 'ita.txt'. HOI4 loads an OOB file whole — if this stem matches the base's, the base army is replaced. Use a distinct OOB file name to be safe."
+    }
+   ]
+  },
+  {
+   "name": "recruit-no-deps",
+   "base": "tags",
+   "issues": []
+  },
+  {
+   "name": "recruit-pure-advisor-base",
+   "base": "tags",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "recruit_pure_advisor_base",
+     "entity_ref": {
+      "type": "character",
+      "id": "adv"
+     },
+     "severity": "warning",
+     "fix_hint": "Advisors become available automatically — no recruit needed. Give the character a leader/general role if you meant it to be recruited.",
+     "message": "Character adv is a pure advisor for base-mod country FRA. Advisors self-enable via their slot, so a recruit into the base country's history is a no-op ('already assigned' in-game)."
+    }
+   ]
+  },
+  {
+   "name": "recruit-slotless-skipped",
+   "base": "tags",
+   "issues": []
+  },
+  {
+   "name": "recruit-non-advisor",
+   "base": "tags",
+   "issues": []
+  },
+  {
+   "name": "recruit-non-base-tag",
+   "base": "tags",
+   "issues": []
+  },
+  {
+   "name": "recruit-falls-back-to-project-tag",
+   "base": "tags",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "recruit_pure_advisor_base",
+     "entity_ref": {
+      "type": "character",
+      "id": "c1"
+     },
+     "severity": "warning",
+     "fix_hint": "Advisors become available automatically — no recruit needed. Give the character a leader/general role if you meant it to be recruited.",
+     "message": "Character c1 is a pure advisor for base-mod country FRA. Advisors self-enable via their slot, so a recruit into the base country's history is a no-op ('already assigned' in-game)."
+    }
+   ]
+  },
+  {
+   "name": "techdoc-submod-silent",
+   "base": "none",
+   "issues": []
+  },
+  {
+   "name": "techdoc-unknown-folder",
+   "base": "none",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_folder_unknown",
+     "entity_ref": {
+      "type": "technology",
+      "id": "t1"
+     },
+     "severity": "warning",
+     "fix_hint": "Pick one of HOI4's tech folders, or double-check the spelling.",
+     "message": "Technology 't1' uses folder 'weird_folder', which isn't a vanilla tech folder. If that's a typo the tech won't appear in any research tree window."
+    }
+   ]
+  },
+  {
+   "name": "techdoc-folder-warned-once",
+   "base": "none",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_folder_unknown",
+     "entity_ref": {
+      "type": "technology",
+      "id": "t1"
+     },
+     "severity": "warning",
+     "fix_hint": "Pick one of HOI4's tech folders, or double-check the spelling.",
+     "message": "Technology 't1' uses folder 'weird', which isn't a vanilla tech folder. If that's a typo the tech won't appear in any research tree window."
+    }
+   ]
+  },
+  {
+   "name": "techdoc-track-unresolved",
+   "base": "none",
+   "issues": [
+    {
+     "level": "warning",
+     "code": "doctrine_track_unresolved",
+     "entity_ref": {
+      "type": "doctrine",
+      "id": "sd1"
+     },
+     "severity": "warning",
+     "fix_hint": "Define the track in this project, or use a known base/vanilla track.",
+     "message": "Subdoctrine 'sd1' sits on track 'ghost_track', which this project doesn't define. If the base mod removed that track, the doctrine tree can misbehave."
+    }
+   ]
+  },
+  {
+   "name": "techdoc-track-defined",
+   "base": "none",
+   "issues": []
+  },
+  {
+   "name": "techdoc-track-vanilla",
+   "base": "none",
+   "issues": []
+  }
+ ],
+ "normalize": [
+  {
+   "name": "success-dropped",
+   "input": {
+    "level": "success",
+    "message": "ok"
+   },
+   "output": null
+  },
+  {
+   "name": "info-dropped",
+   "input": {
+    "level": "info",
+    "code": "x",
+    "severity": "warning"
+   },
+   "output": null
+  },
+  {
+   "name": "legacy-no-severity",
+   "input": {
+    "level": "error",
+    "message": "boom"
+   },
+   "output": {
+    "code": "content_check",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "boom",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "blocker",
+   "input": {
+    "level": "error",
+    "code": "c",
+    "severity": "blocker",
+    "message": "m",
+    "fix_hint": "f",
+    "entity_ref": {
+     "type": "t",
+     "id": "i"
+    }
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": {
+     "type": "t",
+     "id": "i"
+    },
+    "detail": {},
+    "severity": "blocker",
+    "message": "m",
+    "fix_hint": "f"
+   }
+  },
+  {
+   "name": "bad-severity-falls-back",
+   "input": {
+    "code": "c",
+    "severity": "fatal"
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "detail-default",
+   "input": {
+    "code": "c",
+    "severity": "warning"
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "detail-present",
+   "input": {
+    "code": "c",
+    "severity": "warning",
+    "detail": {
+     "n": 3
+    }
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {
+     "n": 3
+    },
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "detail-empty-dict",
+   "input": {
+    "code": "c",
+    "severity": "warning",
+    "detail": {}
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "p0-evidence-keys",
+   "input": {
+    "code": "c",
+    "severity": "blocker",
+    "source": {
+     "kind": "k"
+    },
+    "evidence": {
+     "e": 1
+    },
+    "repair_route": "r"
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "blocker",
+    "message": "",
+    "fix_hint": "",
+    "source": {
+     "kind": "k"
+    },
+    "evidence": {
+     "e": 1
+    },
+    "repair_route": "r"
+   }
+  },
+  {
+   "name": "p0-empty-values-omitted",
+   "input": {
+    "code": "c",
+    "severity": "blocker",
+    "source": {},
+    "evidence": {},
+    "repair_route": ""
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "blocker",
+    "message": "",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "out-of-stage",
+   "input": {
+    "code": "c",
+    "severity": "warning",
+    "out_of_stage": true
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": "",
+    "out_of_stage": true
+   }
+  },
+  {
+   "name": "out-of-stage-false-omitted",
+   "input": {
+    "code": "c",
+    "severity": "warning",
+    "out_of_stage": false
+   },
+   "output": {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  },
+  {
+   "name": "no-code-defaults",
+   "input": {
+    "severity": "warning"
+   },
+   "output": {
+    "code": "content_check",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  }
+ ],
+ "summary": {
+  "ok": false,
+  "blocker_count": 3,
+  "warning_count": 8,
+  "blockers": [
+   {
+    "code": "c",
+    "entity_ref": {
+     "type": "t",
+     "id": "i"
+    },
+    "detail": {},
+    "severity": "blocker",
+    "message": "m",
+    "fix_hint": "f"
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "blocker",
+    "message": "",
+    "fix_hint": "",
+    "source": {
+     "kind": "k"
+    },
+    "evidence": {
+     "e": 1
+    },
+    "repair_route": "r"
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "blocker",
+    "message": "",
+    "fix_hint": ""
+   }
+  ],
+  "warnings": [
+   {
+    "code": "content_check",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "boom",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {
+     "n": 3
+    },
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": "",
+    "out_of_stage": true
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "content_check",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  ],
+  "issues": [
+   {
+    "code": "content_check",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "boom",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": {
+     "type": "t",
+     "id": "i"
+    },
+    "detail": {},
+    "severity": "blocker",
+    "message": "m",
+    "fix_hint": "f"
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {
+     "n": 3
+    },
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "blocker",
+    "message": "",
+    "fix_hint": "",
+    "source": {
+     "kind": "k"
+    },
+    "evidence": {
+     "e": 1
+    },
+    "repair_route": "r"
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "blocker",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": "",
+    "out_of_stage": true
+   },
+   {
+    "code": "c",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   },
+   {
+    "code": "content_check",
+    "entity_ref": null,
+    "detail": {},
+    "severity": "warning",
+    "message": "",
+    "fix_hint": ""
+   }
+  ]
+ },
+ "include_imported": [
+  {
+   "name": "not-requested",
+   "requested": false,
+   "has_dependencies": false,
+   "is_loaded_existing_mod": false,
+   "has_imported_rows": false,
+   "result": false
+  },
+  {
+   "name": "no-deps",
+   "requested": true,
+   "has_dependencies": false,
+   "is_loaded_existing_mod": false,
+   "has_imported_rows": false,
+   "result": true
+  },
+  {
+   "name": "deps-loaded-existing",
+   "requested": true,
+   "has_dependencies": true,
+   "is_loaded_existing_mod": true,
+   "has_imported_rows": false,
+   "result": true
+  },
+  {
+   "name": "deps-has-imported-rows",
+   "requested": true,
+   "has_dependencies": true,
+   "is_loaded_existing_mod": false,
+   "has_imported_rows": true,
+   "result": true
+  },
+  {
+   "name": "deps-neither",
+   "requested": true,
+   "has_dependencies": true,
+   "is_loaded_existing_mod": false,
+   "has_imported_rows": false,
+   "result": false
+  }
+ ]
+}

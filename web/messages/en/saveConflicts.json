@@ -1,0 +1,6 @@
+{
+  "save_conflict": "This content changed after you opened it. Your draft is kept. Copy your changes, then reload and review the latest version before saving.",
+  "save_precondition_required": "This draft has no saved version to compare. Copy your changes, then reopen the item before saving.",
+  "save_committed_host_publish_deferred": "Your content was saved, but the image preview has not updated yet. Refresh to view it.",
+  "save_committed_host_publish_failed": "Your content was saved, but the image preview has not updated yet. Refresh to view it."
+}

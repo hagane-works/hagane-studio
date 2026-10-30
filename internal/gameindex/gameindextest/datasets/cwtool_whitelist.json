@@ -1,0 +1,588 @@
+{
+ "version": 4,
+ "anti_patterns": [
+  {
+   "id": "internal_repr_leak",
+   "regex": "Entry\\(key='[^']+'",
+   "severity": "error",
+   "message": "导入残留的内部对象文本 (Entry(key=…)) · 不是合法的 HOI4 脚本 · 删除或改写这一行"
+  },
+  {
+   "id": "empty_assignment",
+   "regex": "^\\s*[A-Za-z_]\\w*\\s*=\\s*$",
+   "severity": "error",
+   "message": "字段值缺失 · `key = ` 后无值 · HOI4 加载会报 `Unexpected token: =`"
+  },
+  {
+   "id": "bare_at_var",
+   "regex": "^\\s*@[a-zA-Z_]\\w*\\s*$",
+   "severity": "error",
+   "message": "@variable 单独成行不能作为 entry · 必须以 `key = @var` 形式出现在 entry 右侧"
+  }
+ ],
+ "trigger_enums": {
+  "has_war": [
+   "yes",
+   "no"
+  ],
+  "is_independent": [
+   "yes",
+   "no"
+  ],
+  "is_subject": [
+   "yes",
+   "no"
+  ],
+  "is_major": [
+   "yes",
+   "no"
+  ],
+  "is_in_faction": [
+   "yes",
+   "no"
+  ],
+  "has_civil_war": [
+   "yes",
+   "no"
+  ],
+  "has_capitulated": [
+   "yes",
+   "no"
+  ],
+  "is_puppet": [
+   "yes",
+   "no"
+  ],
+  "is_ai": [
+   "yes",
+   "no"
+  ],
+  "exists": [
+   "yes",
+   "no"
+  ],
+  "always": [
+   "yes",
+   "no"
+  ],
+  "fire_only_once": [
+   "yes",
+   "no"
+  ],
+  "hidden": [
+   "yes",
+   "no"
+  ],
+  "major": [
+   "yes",
+   "no"
+  ],
+  "is_triggered_only": [
+   "yes",
+   "no"
+  ],
+  "is_designer": [
+   "yes",
+   "no"
+  ],
+  "random": [
+   "yes",
+   "no"
+  ]
+ },
+ "field_enums": {
+  "ideology": {
+   "blacklist": [
+    "communism",
+    "democratic",
+    "fascism",
+    "neutrality"
+   ],
+   "blacklist_message": "`{value}` 是 ideology GROUP 名 不是 sub-ideology · HOI4 启动报 `{value} is not a valid ideology` + `No political party for country leader` · 用 sub-ideology(conservatism / liberalism / nazism / marxism / despotism 等)",
+   "skip_ancestors": [
+    "bookmark",
+    "bookmarks"
+   ]
+  },
+  "role_type": {
+   "whitelist": [
+    "country_leader",
+    "general",
+    "field_marshal",
+    "admiral",
+    "scientist",
+    "advisor",
+    "operative"
+   ]
+  },
+  "slot": {
+   "whitelist": [
+    "political_advisor",
+    "army_chief",
+    "navy_chief",
+    "air_chief",
+    "high_command",
+    "theorist"
+   ]
+  },
+  "gender": {
+   "whitelist": [
+    "",
+    "female",
+    "male"
+   ]
+  },
+  "idea_type": {
+   "whitelist": [
+    "army_spirit",
+    "country",
+    "economy",
+    "government",
+    "hidden_ideas",
+    "military_staff",
+    "mobilization_laws",
+    "political_advisor",
+    "research_production",
+    "tank_manufacturer",
+    "trade_laws"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla idea_category 28 项内 · 可能是 typo 或 mod 自定义 category(KR/TNO 常见 · 自定义 free-text 通过)· vanilla:government / research_production / military_staff / country / hidden_ideas / political_advisor / theorist / academy_spirit / army_spirit / division_command_spirit 等"
+  },
+  "idea_category": {
+   "whitelist": [
+    "army_spirit",
+    "country",
+    "economy",
+    "government",
+    "hidden_ideas",
+    "military_staff",
+    "mobilization_laws",
+    "political_advisor",
+    "research_production",
+    "tank_manufacturer",
+    "trade_laws"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla idea_category 28 项内 · 可能是 typo 或 mod 自定义 · vanilla idea_categories block 14 + runtime slot/character_slot 24 项 union"
+  },
+  "decision_category": {
+   "whitelist": [
+    "test_decision_category"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla decision_category 542 项内 · 可能是 typo 或 mod 自定义 category(自定义 free-text 通过 · 但请确认 category_id 已在 common/decisions/categories/ 创建)"
+  },
+  "tech_category": {
+   "whitelist": [
+    "armor",
+    "industry",
+    "infantry_weapons",
+    "land_doctrine",
+    "support_tech"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla technology_categories 133 项内 · include land/naval/air doctrine + mio_cat_* + cat_* 全集 · mod 自定义 free-text 通过但建议在 common/technology_tags/ 注册",
+   "multi_value": true
+  },
+  "tech_folder": {
+   "whitelist": [
+    "electronics_folder",
+    "infantry_folder",
+    "land_doctrine_folder",
+    "naval_folder",
+    "support_folder"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla technology_folders 16 项内 · vanilla infantry_folder / armour_folder / nsb_armour_folder / land_doctrine_folder / naval_doctrine_folder / air_doctrine_folder / special_forces_doctrine_folder 等"
+  },
+  "archetype": {
+   "whitelist": [
+    "artillery_equipment",
+    "infantry_equipment"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla equipment archetype 83 项内 · F-EQUIPMENT-LAYER family · `equipment_bonus = { ... }` 必填 ARCHETYPE(infantry_equipment / heavy_tank_chassis / fighter_equipment 等)· INSTANCE(infantry_equipment_1)只能进 `add_equipment_production` / `set_technology`"
+  },
+  "picture": {
+   "whitelist": [
+    "GFX_news_event_generic_parade",
+    "GFX_report_event_generic_rally"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla 854 event picture GFX 内 · 可能是 typo 或 mod 自制图 · vanilla:news_event → GFX_news_event_* (279 项) · country/state/unit_leader_event → GFX_report_event_* (575 项)"
+  },
+  "trait_type": {
+   "whitelist": [
+    "basic_terrain_trait",
+    "personality_trait"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla unit_leader trait_type 7 项内 · vanilla:basic_trait / personality_trait / status_trait / assignable_trait / basic_terrain_trait / assignable_terrain_trait / exile"
+  },
+  "tree_kind": {
+   "whitelist": [
+    "primary",
+    "shared_pool"
+   ],
+   "whitelist_message": "`{value}` 不是有效的 focus_tree kind · only:primary(国策树主体) / shared_pool(共享 focus 池 · 多树共用)"
+  },
+  "country_leader_trait": {
+   "whitelist": [
+    "test_leader_trait",
+    "test_second_leader_trait"
+   ],
+   "whitelist_message": "`{value}` 不在 vanilla country_leader trait 1846 项内 · 可能是 typo · 或 mod 自定义 trait(在 common/country_leader/*.txt 创建 后可自由使用)"
+  }
+ },
+ "scope_keys_must_be_block": [
+  "if",
+  "else",
+  "else_if",
+  "AND",
+  "OR",
+  "NOT",
+  "NOR",
+  "NAND",
+  "hidden_trigger",
+  "custom_trigger_tooltip",
+  "any_country",
+  "every_country",
+  "all_country",
+  "any_state",
+  "every_state",
+  "all_state",
+  "modifier",
+  "ai_will_do",
+  "complete_effect",
+  "remove_effect",
+  "cancel_effect",
+  "available",
+  "visible",
+  "allowed",
+  "allowed_civil_war",
+  "on_add",
+  "on_remove",
+  "do_effect",
+  "completion_reward",
+  "select_effect",
+  "trigger",
+  "effect",
+  "option",
+  "portraits",
+  "civilian",
+  "army",
+  "navy",
+  "skills",
+  "advisor",
+  "country_leader",
+  "corps_commander",
+  "field_marshal",
+  "navy_leader",
+  "scientist"
+ ],
+ "modifier_framework_keys": [
+  "factor",
+  "base",
+  "add"
+ ],
+ "known_effects": [
+  "add",
+  "add_building_construction",
+  "add_core_of",
+  "add_dynamic_modifier",
+  "add_equipment_to_stockpile",
+  "add_ideas",
+  "add_manpower",
+  "add_named_threat",
+  "add_opinion_modifier",
+  "add_political_power",
+  "add_stability",
+  "add_war_support",
+  "and",
+  "atan",
+  "atan2",
+  "clamp",
+  "cos",
+  "country_event",
+  "create_country_leader",
+  "divide",
+  "else",
+  "else_if",
+  "equals",
+  "every_collection",
+  "greater_than",
+  "greater_than_or_equals",
+  "hidden_effect",
+  "if",
+  "lerp",
+  "less_than",
+  "less_than_or_equals",
+  "log",
+  "max",
+  "min",
+  "mod",
+  "multiply",
+  "news_event",
+  "not",
+  "not_equals",
+  "or",
+  "pow",
+  "promote_character",
+  "recruit_character",
+  "remove_ideas",
+  "root",
+  "round",
+  "set_cosmetic_tag",
+  "set_country_flag",
+  "set_politics",
+  "set_technology",
+  "set_variable",
+  "sin",
+  "subtract",
+  "tan",
+  "transfer_state",
+  "xor"
+ ],
+ "known_triggers": [
+  "AND",
+  "NOT",
+  "OR",
+  "always",
+  "and",
+  "atan",
+  "atan2",
+  "clamp",
+  "cos",
+  "date",
+  "divide",
+  "equals",
+  "every_collection",
+  "exists",
+  "fire_only_once",
+  "greater_than",
+  "greater_than_or_equals",
+  "has_capitulated",
+  "has_civil_war",
+  "has_completed_focus",
+  "has_country_flag",
+  "has_dlc",
+  "has_global_flag",
+  "has_government",
+  "has_idea",
+  "has_war",
+  "hidden",
+  "is_ai",
+  "is_designer",
+  "is_in_faction",
+  "is_independent",
+  "is_major",
+  "is_puppet",
+  "is_subject",
+  "is_triggered_only",
+  "lerp",
+  "less_than",
+  "less_than_or_equals",
+  "log",
+  "major",
+  "max",
+  "min",
+  "mod",
+  "multiply",
+  "not",
+  "not_equals",
+  "or",
+  "original_tag",
+  "pow",
+  "random",
+  "root",
+  "round",
+  "sin",
+  "subtract",
+  "tag",
+  "tan",
+  "xor"
+ ],
+ "known_modifiers": [
+  "army_attack_factor",
+  "political_power_gain",
+  "research_speed_factor",
+  "stability_factor"
+ ],
+ "allowed_effects_in_modifier_block": [
+  "custom_modifier_tooltip"
+ ],
+ "modifier_scalar_parent_effects": [
+  "add_opinion_modifier",
+  "remove_opinion_modifier",
+  "reverse_add_opinion_modifier",
+  "add_relation_modifier",
+  "remove_relation_modifier",
+  "add_dynamic_modifier",
+  "remove_dynamic_modifier"
+ ],
+ "option_scalar_parent_triggers": [
+  "has_game_rule"
+ ],
+ "cross_validators": [
+  {
+   "name": "idea_slot_category_match",
+   "kind": "parent_block_lookup",
+   "severity": "warning",
+   "field": "slot",
+   "lookup": {
+    "mobilization_laws": [
+     "government",
+     "mobilization_laws"
+    ],
+    "trade_laws": [
+     "government",
+     "trade_laws"
+    ],
+    "economy": [
+     "economy",
+     "government"
+    ],
+    "political_advisor": [
+     "government",
+     "political_advisor"
+    ],
+    "tank_manufacturer": [
+     "research_production",
+     "tank_manufacturer"
+    ],
+    "naval_manufacturer": [
+     "naval_manufacturer",
+     "research_production"
+    ],
+    "aircraft_manufacturer": [
+     "aircraft_manufacturer",
+     "research_production"
+    ],
+    "materiel_manufacturer": [
+     "materiel_manufacturer",
+     "research_production"
+    ],
+    "industrial_concern": [
+     "industrial_concern",
+     "research_production"
+    ],
+    "theorist": [
+     "research_production",
+     "theorist"
+    ],
+    "army_chief": [
+     "army_chief",
+     "military_staff"
+    ],
+    "navy_chief": [
+     "military_staff",
+     "navy_chief"
+    ],
+    "air_chief": [
+     "air_chief",
+     "military_staff"
+    ],
+    "high_command": [
+     "high_command",
+     "military_staff"
+    ],
+    "academy_spirit": [
+     "academy_spirit"
+    ],
+    "army_spirit": [
+     "army_spirit"
+    ],
+    "division_command_spirit": [
+     "division_command_spirit"
+    ],
+    "naval_academy_spirit": [
+     "naval_academy_spirit"
+    ],
+    "navy_spirit": [
+     "navy_spirit"
+    ],
+    "naval_command_spirit": [
+     "naval_command_spirit"
+    ],
+    "air_force_academy_spirit": [
+     "air_force_academy_spirit"
+    ],
+    "air_force_spirit": [
+     "air_force_spirit"
+    ],
+    "air_force_command_spirit": [
+     "air_force_command_spirit"
+    ]
+   },
+   "ancestor_field": "idea_type",
+   "message": "slot `{slot}` 跟 idea_category `{category}` 不匹配 · vanilla 规则:slot 只能挂在白名单 category 下 · 合法:{legal_categories}"
+  },
+  {
+   "name": "event_picture_prefix_match",
+   "kind": "sibling_field_match",
+   "severity": "warning",
+   "field": "picture",
+   "sibling_field": "event_type",
+   "rules": [
+    {
+     "event_type_values": [
+      "news_event"
+     ],
+     "expected_picture_prefix": "GFX_news_event_",
+     "warn_on_prefix": "GFX_report_event_",
+     "message": "news_event 应使用 `GFX_news_event_*` 系列图片 · `{value}` 是 report_event 前缀(country/state/unit_leader_event 用)"
+    },
+    {
+     "event_type_values": [
+      "country_event",
+      "state_event",
+      "unit_leader_event",
+      "operative_leader_event"
+     ],
+     "expected_picture_prefix": "GFX_report_event_",
+     "warn_on_prefix": "GFX_news_event_",
+     "message": "`{event_type}` 应使用 `GFX_report_event_*` 系列图片 · `{value}` 是 news_event 前缀(仅 news_event 用)"
+    }
+   ]
+  },
+  {
+   "name": "unit_leader_trait_type_role_match",
+   "kind": "sibling_field_match",
+   "severity": "warning",
+   "field": "trait_type",
+   "sibling_field": "type",
+   "rules": [
+    {
+     "sibling_values": [
+      "navy",
+      "operative"
+     ],
+     "warn_on_value": "exile",
+     "message": "`trait_type = exile` 在 vanilla 仅与 `type = land` 配对 (streamer/老兵 trait)· 当前 `type = {sibling_value}` 不适用 · 检查是否打错或改为 `type = land`"
+    },
+    {
+     "sibling_values": [
+      "operative"
+     ],
+     "warn_on_values": [
+      "assignable_terrain_trait",
+      "basic_terrain_trait"
+     ],
+     "message": "`trait_type = {value}` 是地形 trait · 在 vanilla 仅与陆/海/将领 scope 配对 · `type = operative` 间谍/特工无地形战斗语义 · 检查是否应改 `type = land/navy`"
+    }
+   ]
+  },
+  {
+   "name": "unit_leader_operative_trait_type_scope",
+   "kind": "sibling_field_match",
+   "severity": "warning",
+   "field": "trait_type",
+   "sibling_field": "type",
+   "rules": [
+    {
+     "sibling_values": [
+      "operative"
+     ],
+     "allowed_values": [
+      "basic_trait",
+      "personality_trait"
+     ],
+     "message": "`type = operative` 在 vanilla 仅与 `trait_type = basic_trait` 或 `personality_trait` 配对 · `{value}` 不属于 operative 的合法子类 · 间谍特工 trait 无 assignable/status/terrain/exile 语义"
+    }
+   ]
+  }
+ ]
+}

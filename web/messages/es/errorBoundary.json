@@ -1,0 +1,15 @@
+{
+  "workbenchTitle": "Se ha producido un error en este banco de trabajo",
+  "workbenchBody": "Algo ha fallado al mostrar este editor. El resto de tu trabajo y de la aplicación no se ha visto afectado.",
+  "rootTitle": "Algo ha salido mal",
+  "rootBody": "Un error inesperado ha impedido mostrar esta página. El resto de la aplicación sigue disponible.",
+  "chunkTitle": "La página no terminó de cargarse",
+  "chunkBody": "No se pudo cargar una parte de la página desde el programa, normalmente porque se reinició o actualizó con esta ventana abierta. Recarga la página para intentarlo de nuevo.",
+  "globalTitle": "La aplicación no ha podido cargarse",
+  "globalBody": "Un error crítico ha impedido mostrar la aplicación. Por lo general, volver a cargarla soluciona el problema.",
+  "draftHint": "Prueba primero a reintentarlo: conservarás las ediciones sin guardar de esta sesión. Si vuelves a cargar la página, se descartarán los borradores sin guardar.",
+  "retry": "Reintentar",
+  "reload": "Volver a cargar la página",
+  "details": "Detalles del error",
+  "unknownError": "Error desconocido"
+}

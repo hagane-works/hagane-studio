@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "Zum Vergrößern anklicken",
+  "reviewTitle": "Bildbewertung",
+  "referencedSpriteNoPreview": "Referenziertes Sprite (keine lokale Vorschau)",
+  "unsupportedFormat": "Nicht unterstütztes Format. Laden Sie PNG / JPG / DDS / TGA / WEBP hoch.",
+  "uploadFailed": "Hochladen fehlgeschlagen",
+  "selectedFile": "Ausgewählte:{filename}",
+  "replaceImage": "Bild ersetzen",
+  "uploadImage": "Bild hochladen",
+  "defaultHint": "PNG / JPG / DDS · Ziel{width} × {height}",
+  "advisoryHeading": "{count, plural, one {Beratung} other {Hinweise ({count})}}",
+  "cropInstruction": "Ziehen Sie nach Ernte · Aspekt gesperrt{width}:{height}",
+  "cropSourceAlt": "Pflanzliche Quelle",
+  "uploading": "Hochladen...",
+  "uploadWithCrop": "Hochladen mit Ernte",
+  "cancel": "Abbrechen",
+  "currentUpload": "Aktueller Upload",
+  "emptyTitle": "Noch kein Bild hochgeladen",
+  "emptyHelp": "Klicken Sie auf.Upload Image. Die Datei wird automatisch benannt, auf Größe geändert{width} × {height}, und konvertierte in DDS bei Export."
+}

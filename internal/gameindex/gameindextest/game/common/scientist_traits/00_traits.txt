@@ -1,0 +1,4 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+scientist_traits = {
+	test_scientist_trait = { }
+}

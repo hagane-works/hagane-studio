@@ -1,0 +1,7 @@
+{
+  "hintEmpty": "2～5文字。先頭は英字、以降は A～Z または 0～9。例：GER / FL2 / USSR2",
+  "hintShort": "短すぎます。2～5文字必要です。",
+  "hintValid": "{tag} — OK",
+  "hintInvalid": "先頭は A～Z、以降は A～Z または 0～9 のみ使用できます（空白やアンダースコアは不可）。",
+  "placeholder": "例：BAV"
+}

@@ -1,0 +1,50 @@
+{
+  "project_id": 182,
+  "existing_tags": ["FRA"],
+  "files": [
+    {
+      "path": "Demo/common/country_tags/zz_dynamic.txt",
+      "text": "dynamic_tags = yes\nD01 = \"countries/D01.txt\"\n"
+    },
+    {
+      "path": "Demo/common/country_tags/00_countries.txt",
+      "text": "GER = \"countries/Germany.txt\"\nFRA = \"countries/France.txt\"\n"
+    },
+    {
+      "path": "Demo/common/countries/Germany.txt",
+      "text": "color = { 138 155 116 }\n"
+    },
+    {
+      "path": "Demo/common/countries/colors.txt",
+      "text": "FRA = { color = rgb { 57 113 228 } }\n"
+    },
+    {
+      "path": "Demo/localisation/english/countries_l_english.yml",
+      "text": "l_english:\n GER:0 \"Germany\"\n FRA:0 \"France\"\n"
+    },
+    {
+      "path": "Demo/localisation/simp_chinese/countries_l_simp_chinese.yml",
+      "text": "l_simp_chinese:\n GER:0 \"德国\"\n"
+    },
+    {
+      "path": "Demo/common/characters/GER_leaders.txt",
+      "text": "characters = { }\n"
+    },
+    {
+      "path": "Demo/common/national_focus/GER_focus.txt",
+      "text": "focus_tree = { id = GER_main }\n"
+    },
+    {
+      "path": "Demo/events/GER_news.txt",
+      "text": "add_namespace = GER_news\n"
+    },
+    {
+      "path": "Demo/common/ideas/FRA_ideas.txt",
+      "text": "ideas = { key =\n}\n}\n"
+    },
+    {
+      "path": "Demo/notes.md",
+      "text": "fixture note\n"
+    }
+  ]
+}

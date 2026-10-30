@@ -1,0 +1,207 @@
+{
+  "basicInfo": "Información básica",
+  "displayName": "Nombre visible",
+  "techIdLabel": "ID de Tecnología (interno de HOI4)",
+  "statusSaving": "Guardando...",
+  "statusSaved": "Guardado",
+  "statusError": "Error al guardar",
+  "statusUnsaved": "Cambios sin guardar",
+  "addPrerequisitePlaceholder": "Añadir Tecnología previa...",
+  "advancedFieldsLabel": "Campos avanzados",
+  "saveTechButton": "Guardar Tecnología",
+  "deleteTechButton": "Eliminar Tecnología",
+  "section": {
+    "categories": "Categorías",
+    "aiWillDo": "Preferencia de la IA",
+    "description": "Descripción"
+  },
+  "statDesc": {
+    "soft_attack": "Daño infligido a objetivos sin blindaje (infantería, artillería y emplazamientos no blindados). Es la estadística de la que más depende casi toda unidad terrestre y la principal fuente de daño de una división de infantería. +10%~+30% es el intervalo tecnológico medio habitual; +50% o más procede de combinaciones de Doctrina terrestre de élite y Equipo de máximo nivel. Contra objetivos blindados se necesita hard_attack: ambas estadísticas tienen funciones bien diferenciadas.",
+    "hard_attack": "Daño infligido a objetivos blindados (tanques, vehículos blindados y semiorugas). Las divisiones de infantería solo obtienen hard_attack al equiparse con cañones antitanque o armas antiblindaje; las divisiones acorazadas lo tienen de forma nativa. +15%~+40% es el intervalo medio y tardío. La infantería sin hard_attack es rápidamente arrollada por divisiones acorazadas: la guerra blindada exige armas especializadas o apoyo aéreo CAS.",
+    "defense": "Capacidad de eludir ataques recibidos sin moverse. Es la estadística fundamental de la defensa estática, usada por el defensor en la guerra de posiciones. +10%~+30% es el intervalo medio; al acumular Doctrina terrestre avanzada, terreno y fortificaciones puede superar +100%. Es excluyente en su uso con breakthrough: defense sirve para mantener el terreno y breakthrough para avanzar; una división normalmente solo usa una de las dos.",
+    "breakthrough": "Estadística que absorbe daño al atacar en movimiento. La usa el atacante durante un avance: una división con mucho breakthrough puede progresar bajo contraataques. Tanques y fuerzas mecanizadas la tienen alta de forma natural; la infantería depende de ingenieros y organización. +20%~+50% es el intervalo medio y tardío de tecnologías de tanques. Es excluyente en su uso con defense: defense al quedarse quieto, breakthrough al avanzar.",
+    "armor_value": "Grosor físico del blindaje de una unidad acorazada. Se compara con el ap_attack (perforación) enemigo para determinar si puede penetrarlo. Si armor > perforación enemiga, el ataque queda **totalmente bloqueado**; en caso contrario, hay penetración completa. El blindaje de un tanque medio puede ser inmune a los fusiles antitanque de infantería, mientras que los cañones AT de gran calibre destrozan tanques ligeros. Escala habitual: 10~100+.",
+    "ap_attack": "Capacidad de perforación del atacante. Se compara con el armor_value enemigo: perforación ≥ armor implica daño normal; perforación < armor reduce mucho el daño (aproximadamente al 50% o menos). Es la estadística principal de los cañones AT y de tanque. Las divisiones de infantería solo obtienen ap_attack con armamento AT; la infantería pura resulta en gran medida ineficaz contra divisiones acorazadas.",
+    "max_organisation": "La «reserva de moral» de una unidad para resistir la retirada. Cada ronda de combate consume organización; al llegar a cero, la unidad se ve obligada a retirarse y después la recupera con rapidez. Valores habituales: infantería 60~80, mecanizada 40~60, divisiones acorazadas 30~45. Las bonificaciones de Tecnología o Doctrina terrestre suelen aportar +5~+15. Una organización baja busca vencer rápido con daño explosivo; una alta prolonga el combate gracias a la resistencia: es una decisión clave al diseñar divisiones.",
+    "max_strength": "La «cantidad de efectivos» real de una unidad a plena capacidad. Las bajas de combate reducen la fuerza; a cero, la división queda destruida; los reemplazos de retaguardia la restauran con el tiempo. Valores habituales: batallón de infantería 25, de tanques 40, de artillería 35; división completa 200~400+. El intervalo tecnológico común es +5~+20%. Una división con fuerza cero pero organización restante se retira y prácticamente ha perdido toda capacidad de combate.",
+    "reliability": "Indicador inverso de la tasa de averías del Equipo (decimal 0.0~1.0). Es el inverso de la probabilidad de fallo durante combate y marchas: fiabilidad baja = mucha pérdida de Equipo. Valores habituales: armas de infantería 0.7~0.9, tanques 0.5~0.8, aviones 0.6~0.85. Una Tecnología suele aportar +5%~+15%. Las unidades blindadas y aéreas poco fiables necesitan muchos repuestos, una carga logística enorme.",
+    "maximum_speed": "Velocidad de movimiento de una unidad en el mapa estratégico (km/h). Determina la capacidad de redespliegue, cerco y retirada. Valores habituales: infantería 4, motorizada 8, mecanizada 10, tanques 6~10. Las bonificaciones de Doctrina terrestre o Tecnología suelen ser +10%~+25%. Las divisiones rápidas encabezan rupturas y cercos; las lentas dependen de centros logísticos. El clima, el terreno y el suministro reducen mucho el movimiento.",
+    "build_cost_ic": "Coste de capacidad industrial (IC) de una unidad o Equipo. **Un valor negativo es beneficioso**: `build_cost_ic = -0.1` significa -10% de coste. Las Tecnologías y Doctrinas suelen conceder -5%~-15%. Comprueba que el signo coincida con la intención: +build_cost_ic encarece la unidad. Los mods grandes lo usan a menudo para representar «líneas de Producción racionalizadas» o ramas de Enfoques Nacionales sobre «eficiencia militar-industrial mejorada».",
+    "suppression": "Capacidad de contener la actividad de la Resistencia en territorio ocupado. Las divisiones con mucha supresión desplegadas en Estados ocupados reducen la actividad de la Resistencia y afectan al crecimiento del acatamiento. Caballería, policía militar y mecanizadas tienen valores altos de forma natural. Valores habituales: infantería 2, caballería/MP 4~6. Ocupar regiones complejas, como colonias o núcleos enemigos, exige mucha supresión; no cubrirla reduce fábricas y recursos. Se usa junto con la política de guarnición.",
+    "air_attack": "Capacidad antiaérea de una unidad terrestre frente a aviones enemigos, ligada a Equipo AA específico. Solo importa cuando una división de infantería lleva un cañón AA; de lo contrario vale 0. Sin superioridad aérea propia, un air_attack alto reduce notablemente las pérdidas por ataques aéreos. Valores habituales: infantería +2~5, batallón AA específico +15~30. Intervalo de Tecnología AA: +20%~+50%. Aun así, lo más eficaz es que los cazas contengan el CAS enemigo.",
+    "naval_speed": "Velocidad estratégica de una unidad naval (nudos). Afecta al redespliegue de flotas, la interceptación, la retirada y la eficacia de escolta de convoyes. Valores habituales: acorazado 25~30, crucero 28~34, destructor 35~40. Intervalo de Tecnología de motores navales: +5%~+15%. Los buques ligeros rápidos escoltan y exploran; los buques capitales lentos necesitan escolta. Alcance y velocidad determinan juntos la cobertura estratégica.",
+    "surface_detection": "Capacidad de un buque para detectar objetivos de superficie. Afecta a la probabilidad de atacar primero y a la distancia de avistamiento de la flota. Valores habituales: destructor 20~30, crucero 25~40, acorazado 15~25. Intervalo de Tecnología de radar: +10%~+30%. Los destructores con mucha detección forman una pantalla de exploración; los buques capitales dependen de ellos para recibir blancos. No es lo mismo que sub_detection, que busca específicamente submarinos.",
+    "sub_detection": "Capacidad de un buque para detectar submarinos, la estadística antisubmarina fundamental. Sus fuentes principales son destructores, escoltas y aviones ASW. Valores habituales: destructor corriente 10~20, destructor ASW especializado 30~50. Intervalo de Tecnología de sonar: +20%~+50%. Una flota de escolta con sub_detection insuficiente permite que las manadas de submarinos hundan convoyes en masa, lo que perjudica directamente las importaciones de recursos estratégicos."
+  },
+  "techId": {
+    "placeholder": "p. ej., improved_infantry_equipment",
+    "tooltipTitle": "ID de Tecnología · identificador interno único de HOI4",
+    "tooltipContent": "Identificador interno único de la Tecnología en todo el mod. Convención: minúsculas y guiones bajos, sin espacios ni caracteres chinos. Añade un prefijo para identificar su línea (infantry_weapons_1 / armor_medium_1 / ca_early_fighter). Scripts como has_tech = X, add_tech_bonus technology = X y set_technology = { X = 1 } hacen referencia a este ID. Cambiarlo rompe todas las referencias e impide usar partidas guardadas antiguas: hazlo con cuidado."
+  },
+  "collision": {
+    "sameName": "Tiene el mismo nombre que una Tecnología original: al cargar el mod, la sustituirá sin avisar y generará confusión. Cámbiale el nombre.",
+    "renameTo": "cambiar a",
+    "recommended": "(recomendado)"
+  },
+  "banner": {
+    "showAs": "Mostrar como nodo de banda (200×60 · texto + icono)",
+    "tooltipTitle": "Tamaño de nodo de banda frente a icono",
+    "tooltipContent": "Banda (horizontal, 200×60): muestra nombre de texto + icono; indicada para **Equipo concreto emblemático** (p. ej., M1 Garand / destructores tempranos / desarrollo de tanques de entreguerras). Icono (compacto, 64×64): solo icono + insignia de nivel; indicado para **Tecnologías secundarias o mejoras abstractas** (p. ej., cat_radar III / Producción industrial II). En el contenido original, casi todo el Equipo de apoyo y la industria usan iconos; los elementos navales y aéreos emblemáticos, bandas; los blindados combinan ambos."
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout (nodo compacto EN EL JUEGO)",
+    "tooltipTitle": "force_use_small_tech_layout · disposición compacta en el juego",
+    "tooltipContent": "Emite `force_use_small_tech_layout = yes` para imponer la **disposición compacta del nodo en la pantalla real de investigación de HOI4**. Es DISTINTO de \"Mostrar como nodo de banda\": esa opción solo controla el aspecto del nodo **en el lienzo de este programa** (solo interfaz, no exporta nada); esta es una anulación real que se exporta y que el juego lee. El contenido original solo la usa en unas 50 Tecnologías, así que déjala DESACTIVADA salvo que quieras que una Tecnología normalmente grande use un nodo pequeño en el juego."
+  },
+  "researchCost": {
+    "label": "Coste de investigación",
+    "tooltipTitle": "Coste de investigación · multiplicador de coste",
+    "tooltipContent": "**Multiplicador relativo** del tiempo de investigación, no días absolutos: los días reales resultan de combinar coste × personal investigador × speed_factor × penalización por adelanto. **Los valores originales habituales se concentran entre 1.5 y 2.5**: la línea principal de infantería suele usar 1.5, Tecnologías troncales 2 y Doctrinas 2.5. Extremos: nodos especiales de Doctrina 4+, Proyectos Especiales hasta 0.5, aunque es muy raro. Si es demasiado alto, la IA nunca la investiga; si es demasiado bajo, el jugador la termina en un día. Combínalo con start_year para controlar la penalización por adelanto."
+  },
+  "startYear": {
+    "label": "Año de inicio",
+    "tooltipTitle": "Año de inicio · año histórico de la Tecnología",
+    "tooltipContent": "Año histórico de disponibilidad de la Tecnología. Investigarla antes activa una **penalización por adelanto**: ahead_of_time_research_factor la ralentiza mucho, normalmente -50%~-70%. Distribución original con referencia en 1936: **pico principal en 1936 (106 Tecnologías)**, alta densidad entre 1939 y 1945, algunas Tecnologías de apoyo tempranas en 1918/1922, las primeras en 1910 (menos de diez) y las últimas en 1950 (6). Los mods de historia alternativa o modernos, como Fire Rise, pueden usar 1960+ para señalar Tecnologías «contemporáneas o futuras».",
+    "balanceWarn": "⚠ equilibrio original: cada año de adelanto ≈ +200% de coste (el jugador investiga unas 2 veces más lento)"
+  },
+  "xPosition": {
+    "label": "Posición X",
+    "tooltipTitle": "Posición X · desplazamiento de fila (vertical) en la pantalla de investigación",
+    "tooltipContent": "Contraintuitivo pero comprobado en el juego: en la pantalla de investigación de HOI4 **x es el eje vertical e y el horizontal**. x es el **desplazamiento de fila** respecto a la tecnología padre: +1 = una fila más abajo, y con él se separan las ramas paralelas. La posición horizontal la decide y (el juego base escribe por costumbre el escalón de año en y, p. ej. @1936; no está ligado a start_year). En el juego base infantry_weapons1 → 2 → improved están todos en x = 0 con y creciente, mientras que armored_car1 está en x = 4, una fila más abajo. La misma posición se solapa. Sin prerrequisito, es relativo al origen de la carpeta."
+  },
+  "folder": {
+    "label": "Carpeta de investigación",
+    "tooltipTitle": "Carpeta · pestaña de la pantalla de investigación",
+    "tooltipContent": "El bloque `technology_folders` de `common/technology_tags/00_technology.txt` decide en qué pestaña de investigación (army / air / navy / industry / electronics / special_forces) aparece la Tecnología. Cada token, como infantry_folder o mtgnavalfolder, corresponde a una subpestaña del juego. Si eliges mal, la Tecnología funciona pero aparece donde no debe. Se establece automáticamente según la subpestaña activa al crearla; cámbialo aquí para moverla. Las carpetas personalizadas definidas en el archivo technology_tags del mod se conservan tal cual.",
+    "customCurrent": "Actual (personalizada): {folder}",
+    "none": "Fuera del árbol de investigación (Tecnología secundaria)"
+  },
+  "prerequisites": {
+    "heading": "Requisitos previos",
+    "tooltipContent": "Lista de Tecnologías requeridas. **Deben investigarse todas** antes de poder investigar esta (lógica AND). Los requisitos OR no se configuran aquí: coloca varias rutas en la misma posición; dos conjuntos de requisitos con igual carpeta+posición se convierten automáticamente en OR. Las Tecnologías lineales suelen tener 1~2 requisitos; las bifurcaciones o uniones troncales pueden tener 3 o más. No pueden formar ciclos, pues HOI4 quedaría bloqueado."
+  },
+  "effects": {
+    "title": "Efectos de Tecnología (desbloqueos)",
+    "tooltipContent": "Contenido del juego que se desbloquea permanentemente al completar la Tecnología: Equipo (enable_equipments), tipos de unidad (enable_subunits) y módulos de Equipo (enable_equipment_modules). Es su «recompensa a largo plazo»: incluso sin modificador global, el contenido desbloqueado añade Equipo a la línea de Producción y nuevos tipos de unidad a las Plantillas de divisiones. Campo esencial de las líneas de infantería, blindados, marina y aviación.",
+    "hint": "Equipo, unidades y módulos que desbloquea la Tecnología. Un ID por línea, escrito directamente como nombre interno de HOI4."
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments (desbloquear Equipo)",
+    "tooltipTitle": "enable_equipments · desbloquear Equipo",
+    "tooltipContent": "Lista de ID de Equipo desbloqueados al completarla, uno por línea. Escribe directamente los nombres internos de HOI4, que deben coincidir con las definiciones de common/units/equipment/. Solo entonces se puede elegir el Equipo en la línea de Producción. Habituales: infantry_equipment_1, medium_tank_chassis_1, fighter_equipment_1. Un nombre incorrecto no provoca un error, pero la línea de Producción no lo encontrará. La progresión de versiones de Equipo suele usar sufijos _1 _2 _3.",
+    "field": "enable_equipments · ID de Equipo que se desbloquean (por línea / separados por espacios)"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits (desbloquear unidades)",
+    "tooltipTitle": "enable_subunits · desbloquear unidades",
+    "tooltipContent": "Lista de subunidades —tipos de unidad de nivel batallón dentro de una división— que se desbloquean al completarla. Coincide con las definiciones de common/units/. Solo tras desbloquearlas puede el editor de Plantillas de divisiones añadirlas. ID habituales: infantry, motorized, mechanized, artillery, anti_tank, anti_air, engineer, recon, signal_company, maintenance_company, field_hospital, military_police. Diferencia respecto a enable_equipments: una subunidad es «el tipo de batallón o compañía que puedes poner en una división»; el Equipo son «las armas que lleva».",
+    "field": "enable_subunits · desbloquear subunidades (motorized / marines / paratrooper …)"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules (desbloquear módulos)",
+    "tooltipTitle": "enable_equipment_modules · desbloquear módulos",
+    "tooltipContent": "Lista de módulos de Equipo desbloqueados al completarla. Un módulo es un subcomponente seleccionable en el diseñador de Equipo (tanque / avión / barco). Coincide con las definiciones de common/units/equipment_modules/. Escribe un ID de módulo por línea. Habituales: tank_heavy_machine_gun, additional_machine_guns, large_plane_airframe, ship_torpedo_medium_1. Se usa junto con las MIO (organizaciones militar-industriales) y el sistema de versiones de Equipo; los mods sin diseñador de Equipo no necesitan rellenarlo.",
+    "field": "enable_equipment_modules · módulo del diseñador NSB"
+  },
+  "globalModifier": {
+    "title": "Modificador global",
+    "tooltipContent": "Bloque de modificador aplicado **continuamente** al país tras completar la Tecnología. Tiene la misma estructura que el modificador de un Espíritu nacional, pero otra fuente. Estadísticas habituales: research_speed_factor / production_factory_max_efficiency_factor en industria; encryption / decryption en electrónica; bonificaciones de eficacia de rama en Doctrinas terrestres, navales y aéreas. Escribe decimales (0.03 = +3%). Se pueden acumular varios.",
+    "hint": "Modificadores globales aplicados al país al completar la Tecnología, como research_speed_factor o production_factory_efficiency_gain_factor. Es el efecto principal de las líneas tecnológica industrial y electrónica."
+  },
+  "researchScripts": {
+    "title": "Scripts de investigación",
+    "tooltipContent": "Lógica de script que se ejecuta al instante de completar la Tecnología. A diferencia del efecto continuo del Modificador global, solo se activa una vez. Tres subbloques:\n• on_research_complete: efecto que se ejecuta (desbloquear automáticamente Plantillas de divisiones, lanzar eventos)\n• on_research_complete_limit: condición activadora (protección contra reejecución)\n• allow: condición de permiso de investigación (controla si se puede investigar)\nEs el punto de entrada principal para Tecnologías exclusivas de DLC, desbloqueadas por Enfoques Nacionales y Plantillas de divisiones desbloqueadas automáticamente."
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete (ejecutar al completar)",
+    "tooltipTitle": "on_research_complete · ejecutar al completar",
+    "tooltipContent": "Bloque de efecto que se ejecuta una vez al completar la Tecnología, no de forma continua. Usos habituales:\n• load_oob = OOB_FILE (cargar automáticamente Plantillas de divisiones y Equipo)\n• custom_effect_tooltip = LOC_KEY (mostrar un aviso de desbloqueo)\n• country_event = { id = X days = 7 } (lanzar un evento posterior)\nEnvolverlo en hidden_effect = { ... } oculta el texto del efecto al jugador, algo común para gestionar marcas internas. Combínalo con on_research_complete_limit para evitar que se repita.",
+    "hint": "Efectos que se activan al completar la investigación, como crear automáticamente Plantillas de divisiones o mostrar avisos.",
+    "field": "on_research_complete · bloque de efecto único al completar"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit (condición activadora)",
+    "tooltipTitle": "on_research_complete_limit · condición activadora",
+    "tooltipContent": "Condición activadora de on_research_complete. El efecto de on_research_complete solo se ejecuta si se cumple este bloque de activadores. Uso principal: **protección contra reejecución**. Ejemplo habitual: NOT = { has_template_containing_unit = paratrooper } para no volver a desbloquear la misma Plantilla de división al investigar otra vez. Vacío = siempre se activa, incluso con posibles repeticiones al cargar partidas.",
+    "hint": "Controla cuándo se activa on_research_complete y evita ejecuciones repetidas.",
+    "field": "on_research_complete_limit · condición que limita el activador del efecto"
+  },
+  "allow": {
+    "heading": "allow (permiso de investigación)",
+    "tooltipTitle": "allow · permiso de investigación",
+    "tooltipContent": "Bloque de activadores que controla si la Tecnología se puede investigar. Si no se cumple, aparece atenuada y no se puede pulsar en la pantalla de investigación. **always = no** significa que **solo se puede desbloquear mediante script**, junto con set_technology = { X = 1 } o add_tech_bonus en el efecto de un Enfoque Nacional. Es habitual en Tecnologías exclusivas de DLC, desbloqueadas por la historia y ocultas (Proyectos Especiales). Vacío = cualquier país puede investigarla.",
+    "hint": "Controla si se puede investigar esta Tecnología. Vacío = cualquiera puede; always = no significa que solo un Enfoque Nacional puede desbloquearla.",
+    "field": "allow · bloque activador de disponibilidad de investigación"
+  },
+  "enableBuilding": {
+    "tooltipContent": "ID del edificio que se desbloquea al completarla (un único valor, coincide con common/buildings/). Originales habituales: synthetic_refinery / radar_station / rocket_site / nuclear_reactor / mega_gun_emplacement. Solo se admite un edificio por Tecnología; encadena varios nodos para desbloquear varios."
+  },
+  "enableTactic": {
+    "tooltipContent": "ID de táctica de combate terrestre desbloqueada (common/combat_tactics.txt). Habituales: encirclement / breakthrough / tactical_withdrawal. La IA selecciona automáticamente las tácticas en combate según el terreno y la Doctrina terrestre."
+  },
+  "xor": {
+    "heading": "xor (lista de Tecnologías excluyentes)",
+    "tooltipTitle": "xor · Tecnologías mutuamente excluyentes",
+    "tooltipContent": "Tras investigar esta Tecnología no puedes investigar las de la lista, y viceversa; se escribe en un solo sentido pero su significado es bidireccional. Ejemplo original: steel_chassis frente a aluminium_chassis, dos ramas alternativas de fuselajes de acero o aluminio. Un tech_id por línea.",
+    "field": "xor · ID de Tecnologías mutuamente excluyentes (elige A, excluye la hermana B)"
+  },
+  "subTechnologies": {
+    "heading": "sub_technologies (Tecnologías secundarias)",
+    "tooltipTitle": "sub_technologies · Tecnologías secundarias",
+    "tooltipContent": "Pequeñas Tecnologías de mejora anidadas en la tarjeta de una Tecnología madre, un tech_id por línea; deben definirse por separado en el mismo mod. Ejemplo original: infantry_at, una mejora antitanque de infantería anidada en la tarjeta infantry_weapons con nodo de doble anillo. Solo aparecen en la interfaz después de investigar la Tecnología madre."
+  },
+  "allowBranch": {
+    "heading": "allow_branch (condición de visibilidad de rama)",
+    "tooltipTitle": "allow_branch · condición de visibilidad de rama",
+    "tooltipContent": "Bloque de activadores que decide si toda la rama tecnológica es visible para el jugador; si no se cumple, la interfaz la oculta por completo. Ejemplo original: has_dlc = \"Man the Guns\" oculta la línea naval MTG a quienes no tienen el DLC. Diferencia respecto a allow: allow controla el permiso de investigación; allow_branch, la visibilidad en la interfaz.",
+    "field": "allow_branch · activador para mostrar u ocultar toda la rama"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type (XP del equipo de diseño de NSB)",
+    "tooltipTitle": "xp_research_type · coste en XP del equipo de diseño",
+    "tooltipContent": "Mecánica del diseñador de Equipo del DLC NSB: esta Tecnología se puede acelerar con XP del ejército, la armada o el aire. Vacío = no usa XP. Combínalo con xp_boost_cost para fijar cuánta XP consume cada aceleración.",
+    "optNone": "ninguno (vacío)",
+    "optLand": "land · XP del ejército",
+    "optNaval": "naval · XP de la armada",
+    "optAir": "air · XP del aire"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · coste en XP de la aceleración",
+    "tooltipContent": "Cantidad de XP de rama necesaria para acelerar cada vez la investigación de esta Tecnología. Valor original habitual: 25~50. 0 = no se puede acelerar. Requiere xp_research_type para definir el tipo de XP."
+  },
+  "dependencies": {
+    "heading": "dependencies (dependencias de investigación paralela)",
+    "tooltipTitle": "dependencies · dependencias de investigación paralela",
+    "tooltipContent": "Uso poco frecuente. Otras Tecnologías cuyo progreso acelera esta cuando se investigan en paralelo. Un `tech_id = factor` por línea; factor vale 1 de forma predeterminada. Las Tecnologías referenciadas deben definirse en el mismo mod. No equivale a prerequisites, que son bloqueos obligatorios."
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus (multiplicador de coste de XP)",
+    "tooltipTitle": "xp_research_bonus · multiplicador de coste de XP",
+    "tooltipContent": "Multiplicador plano de la XP terrestre, naval o aérea que cuesta investigar esta Tecnología, con la sintaxis escalar original, p. ej. 1.50. Déjalo vacío para omitirlo. Solo importa en Tecnologías que consumen XP de Doctrina.",
+    "blockFormNote": "Esta Tecnología contiene un desglose importado de xp_research_bonus por categoría. Se conserva y exporta tal cual. Aquí se muestra como solo lectura para evitar sobrescribirlo."
+  },
+  "doctrine": {
+    "heading": "doctrine (legado · marca de Doctrina anterior a NCNS)",
+    "tooltipContent": "Marca de Doctrina anterior al DLC NCNS. Las Doctrinas originales ahora están en common/doctrines/ con un sistema independiente de XP y maestría. No se recomienda para mods nuevos, pero se conserva por compatibilidad con mods existentes."
+  },
+  "statBonuses": {
+    "title": "Bonificaciones de estadísticas",
+    "tooltipContent": "Bonificaciones de combate para categorías de unidad concretas. Estructura: categoría (infantry / armor / cat_cas / ...) → estadística (soft_attack / defense / breakthrough / ...) → valor (0.05 = +5%). Cada categoría admite varias estadísticas. Es el efecto principal de las Tecnologías medias y tardías, complementario a enable_equipments: una potencia unidades existentes y el otro abre Equipo nuevo. Consulta el significado de cada estadística en las ayudas del desplegable.",
+    "hint": "Elige una categoría beneficiaria → una estadística → introduce un valor (p. ej., 0.05 = +5%) → pulsa + para añadir",
+    "category": "Categoría de unidad",
+    "categoryPlaceholder": "Selecciona una categoría de unidad...",
+    "stat": "Estadística",
+    "statPlaceholder": "Selecciona una estadística...",
+    "value": "Valor"
+  },
+  "advanced": {
+    "pathField": "path · enlace saliente + research_cost_coeff (la IA edita mediante add_path)"
+  },
+  "rawExtras": {
+    "badge": "Algunos campos se conservan como script avanzado",
+    "count": "{count} conservados",
+    "hint": "Estos campos importados aún no tienen editor visual. Se conservan tal cual y se escriben sin cambios al exportar.",
+    "keysLabel": "Campos conservados",
+    "jsonLabel": "JSON sin procesar"
+  }
+}

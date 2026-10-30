@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "Rechercher un ID d'esprit national…",
+  "tabProject": "Projet",
+  "tabCountry": "Pays",
+  "tabShared": "Partagés",
+  "tabLaws": "Lois",
+  "tabDesign": "Concepteurs",
+  "tabOldAdvisors": "Anciens conseillers",
+  "tabOther": "Autres",
+  "otherHint": "Utilisez la recherche pour trouver les esprits nationaux d'autres pays.",
+  "loadingVanilla": "Chargement des esprits nationaux du jeu de base…",
+  "noResults": "Aucun résultat.",
+  "emptyCategory": "Aucun esprit national dans cette catégorie.",
+  "projectBadge": "projet",
+  "promptManual": "Saisissez manuellement l'ID de l'esprit national :",
+  "enterManually": "+ Saisir manuellement…"
+}

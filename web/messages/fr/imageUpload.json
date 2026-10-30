@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "Cliquez pour agrandir",
+  "reviewTitle": "Révision de l'image",
+  "referencedSpriteNoPreview": "Sprite référencé (aucun aperçu local)",
+  "unsupportedFormat": "Format non pris en charge. Téléversez un fichier PNG, JPG, DDS, TGA ou WEBP.",
+  "uploadFailed": "Échec du téléversement",
+  "selectedFile": "Sélectionné : {filename}",
+  "replaceImage": "Remplacer l'image",
+  "uploadImage": "Téléverser une image",
+  "defaultHint": "PNG / JPG / DDS · cible {width} × {height}",
+  "advisoryHeading": "{count, plural, one {Conseil} other {Conseils ({count})}}",
+  "cropInstruction": "Faites glisser pour recadrer · proportions verrouillées à {width}:{height}",
+  "cropSourceAlt": "Source du recadrage",
+  "uploading": "Téléversement...",
+  "uploadWithCrop": "Téléverser avec recadrage",
+  "cancel": "Annuler",
+  "currentUpload": "Téléversement actuel",
+  "emptyTitle": "Aucune image téléversée pour le moment",
+  "emptyHelp": "Cliquez sur « Téléverser une image » ; le fichier est nommé automatiquement, redimensionné à {width} × {height} et converti en DDS à l'exportation."
+}

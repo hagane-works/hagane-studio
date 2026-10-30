@@ -1,0 +1,6 @@
+{
+  "loading": "불러오는 중…",
+  "previewFailed": "미리보기에 실패했습니다: {error}",
+  "noContentYet": "아직 내용이 없습니다.",
+  "selectCharacterHint": "인물을 선택하면 현지화 / GFX를 미리 볼 수 있습니다."
+}

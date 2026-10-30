@@ -1,0 +1,37 @@
+{
+  "headline": "<mono>{count}</mono> referencias apuntan a contenido de países que no has importado. Es normal.",
+  "tooltipTitle": "Semántica de referencias entre países",
+  "tooltipContent": "Una referencia entre países significa que el archivo de mod de un país referencia una entidad de otro país (personaje/Espíritu nacional/Enfoque Nacional, etc.).\n\nRegla de carga de mods del motor de HOI4: el motor carga juntos todos los archivos del mod y el evento de cualquier país puede activarse para cualquier otro si se cumple su desencadenante.\n\nEn el editor: las referencias se filtran por el país activo y consultarlas no cambia tu país principal. Al añadir un país secundario, se importan las entidades relacionadas sin afectar a la vista principal.\n\nEjemplo: britain.1 (la misión Tizard) en Britain.txt tiene el desencadenante tag = USA. El \"propietario\" del evento es USA, pero el archivo está en Britain.txt y su espacio de nombres es britain, por lo que el aviso de referencias cruzadas sugiere añadir USA o ENG como país secundario para importar la entidad.",
+  "reason": "Estas referencias casi siempre apuntan a contenido de otros países y son inocuas. Una exportación de <b>\"volver a combinar con el mod original\" (ruta B) las conserva intactas</b>, por lo que no se pierde nada. ¿También quieres ese contenido en el editor? Añade un país abajo. <b>Tu país principal no cambiará.</b>",
+  "suggestLabel": "Países que se recomienda añadir (por número de referencias):",
+  "alreadyInProject": "{tag} ya está en el proyecto",
+  "expandTitle": "Añadir {tag} como país secundario amplía la lista de países del proyecto. No cambia tu país principal; la vista principal permanece igual.",
+  "added": "(añadido)",
+  "expandAddCountry": "Añadir país",
+  "addingCountry": "Añadiendo {tag}…",
+  "collapseDetails": "Contraer detalles",
+  "viewDetails": "Ver detalles ({count} tipos)",
+  "hideScope": "Ocultar ámbito de comprobación",
+  "showScope": "Ámbito de comprobación",
+  "currentScope": "Ámbito actual de comprobación:",
+  "none": "(ninguno)",
+  "scopeNote": "Los tipos de referencia que aún no se cubren (Enfoque Nacional/Decisión/rasgo/Tecnología, etc.) se añadirán en lotes posteriores. \"No indicado\" no significa \"sin problemas\".",
+  "moreHidden": "…y {hidden} tipos más sin mostrar (de {total} en total)",
+  "egPrefix": "p. ej., ",
+  "unmodeled": {
+    "headline": "Se han encontrado <mono>{count}</mono> referencias a contenido no modelado por el programa",
+    "tooltipTitle": "¿Qué es el \"contenido no modelado\"?",
+    "tooltipContent": "El programa modela 9 tipos de entidad (Espíritu nacional/evento/Enfoque Nacional/Decisión/personaje/rasgo/Tecnología/modificador de opinión/OIM). Otras categorías de HOI4 —efectos y desencadenantes de script, ideologías, etiquetas cosméticas, reglas del juego, Equipo y proyectos especiales— no están modeladas, por lo que el programa no puede volver a emitir sus archivos de definición.\n\nSus referencias son scripts HOI4 válidos. Una exportación de \"volver a combinar con el mod original\" (ruta B) conserva los archivos de definición originales, por lo que las referencias se resuelven. Una exportación desde cero (ruta A) no puede reproducirlas y las dejaría colgando.\n\nEs información, no un error: el programa solo quiere que sepas qué ruta de exportación las mantiene intactas.",
+    "note": "Estas referencias apuntan a contenido que el programa aún no modela (p. ej., scripted_effect/scripted_trigger personalizados, ideologías personalizadas o etiquetas cosméticas). <b>Solo la exportación \"volver a combinar con el mod original\" (ruta B) las conserva</b>; una exportación desde cero (ruta A) las deja colgando. Si exportas mediante la ruta B, no tienes que hacer nada.",
+    "viewDetails": "Ver detalles ({count} tipos)",
+    "collapseDetails": "Contraer detalles",
+    "cat": {
+      "scripted_effect_trigger": "scripted_effect/desencadenante personalizado",
+      "ideology": "Ideología personalizada (subideología)",
+      "cosmetic_tag": "Etiqueta cosmética (cambio de nombre de país)",
+      "game_rule": "Regla del juego",
+      "equipment": "Equipo personalizado",
+      "special_project": "Proyecto especial"
+    }
+  }
+}

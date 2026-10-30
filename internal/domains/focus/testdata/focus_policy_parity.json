@@ -1,0 +1,1116 @@
+{
+ "build_primary_registry": {
+  "by_path": {
+   "common/national_focus/basename.txt": "basename_only",
+   "common/national_focus/finland.txt": "finnish_focus",
+   "common/national_focus/other.txt": "finnish_focus"
+  },
+  "by_tree_id": {
+   "basename_only": "common/national_focus/basename.txt",
+   "dup_path": "common/national_focus/finland.txt",
+   "finnish_focus": "common/national_focus/finland.txt"
+  },
+  "findings": [
+   {
+    "code": "focus_registry_duplicate_tree_id",
+    "evidence": {
+     "paths": [
+      "common/national_focus/finland.txt",
+      "common/national_focus/other.txt"
+     ],
+     "tree_id": "finnish_focus"
+    },
+    "repair_route": "focus_registry_refresh",
+    "severity": "blocker",
+    "source": "focus_registry"
+   },
+   {
+    "code": "focus_registry_duplicate_path",
+    "evidence": {
+     "path": "common/national_focus/finland.txt",
+     "tree_ids": [
+      "dup_path",
+      "finnish_focus"
+     ]
+    },
+    "repair_route": "focus_registry_refresh",
+    "severity": "blocker",
+    "source": "focus_registry"
+   },
+   {
+    "code": "focus_registry_invalid_record",
+    "evidence": {
+     "canonical_path": "common/national_focus/empty.txt",
+     "tree_id": null
+    },
+    "repair_route": "focus_registry_refresh",
+    "severity": "blocker",
+    "source": "focus_registry"
+   },
+   {
+    "code": "focus_registry_invalid_record",
+    "evidence": {
+     "canonical_path": "not/a/focus/path.txt",
+     "tree_id": "bad_path"
+    },
+    "repair_route": "focus_registry_refresh",
+    "severity": "blocker",
+    "source": "focus_registry"
+   },
+   {
+    "code": "focus_registry_shared_pool_excluded",
+    "evidence": {
+     "path": "common/national_focus/pool.txt",
+     "tree_id": "pool_tree"
+    },
+    "repair_route": "focus_shared_pool_registry",
+    "severity": "info",
+    "source": "focus_registry"
+   }
+  ],
+  "records": [
+   {
+    "canonical_path": "common/national_focus/finland.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "finnish_focus",
+    "tree_kind": "primary"
+   },
+   {
+    "canonical_path": "common/national_focus/other.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "finnish_focus",
+    "tree_kind": "primary"
+   },
+   {
+    "canonical_path": "common/national_focus/finland.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "dup_path",
+    "tree_kind": "primary"
+   },
+   {
+    "canonical_path": "common/national_focus/empty.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "",
+    "tree_kind": "primary"
+   },
+   {
+    "canonical_path": "not/a/focus/path.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "bad_path",
+    "tree_kind": "primary"
+   },
+   {
+    "canonical_path": "common/national_focus/pool.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "pool_tree",
+    "tree_kind": "shared_pool"
+   },
+   {
+    "canonical_path": "basename.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "basename_only",
+    "tree_kind": "primary"
+   }
+  ]
+ },
+ "conditional_offset": {
+  "cases": [
+   {
+    "result": [
+     14,
+     9
+    ],
+    "tree_id": "my_tree"
+   },
+   {
+    "result": [
+     100,
+     100
+    ],
+    "tree_id": "other_tree"
+   },
+   {
+    "result": [
+     0,
+     0
+    ],
+    "tree_id": "missing"
+   },
+   {
+    "result": [
+     0,
+     0
+    ],
+    "tree_id": ""
+   }
+  ],
+  "node": {
+   "offset": [
+    {
+     "trigger": "has_focus_tree = \"my_tree\"",
+     "x": 3,
+     "y": -2
+    },
+    {
+     "trigger": "HAS_FOCUS_TREE = my_tree",
+     "x": 10,
+     "y": 10
+    },
+    {
+     "trigger": "has_focus_tree = other_tree",
+     "x": 100,
+     "y": 100
+    },
+    {
+     "trigger": "NOT = { has_focus_tree = my_tree }",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "trigger": "",
+     "x": 5,
+     "y": 5
+    },
+    {
+     "x": 7,
+     "y": 7
+    }
+   ]
+  }
+ },
+ "decide": {
+  "cases": [
+   {
+    "decision": {
+     "decision_source": "created_tree",
+     "emit_mode": "namespaced_addition",
+     "findings": [],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": "common/national_focus/ger_custom.txt",
+     "tree_id": "ger_custom"
+    },
+    "namespace": "GER",
+    "tree": {
+     "source_file": null,
+     "tree_id": "ger_custom",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "created_tree",
+     "emit_mode": "namespaced_addition",
+     "findings": [],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": "common/national_focus/GER_already.txt",
+     "tree_id": "GER_already"
+    },
+    "namespace": "ger",
+    "tree": {
+     "source_file": null,
+     "tree_id": "GER_already",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "primary_registry",
+     "emit_mode": "canonical_same_path",
+     "findings": [],
+     "origin_kind": "imported",
+     "source_file": "common/national_focus/finland.txt",
+     "target_layer": "vanilla",
+     "target_path": "common/national_focus/finland.txt",
+     "tree_id": "finnish_focus"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": "finland.txt",
+     "tree_id": "finnish_focus",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "primary_registry",
+     "emit_mode": "canonical_same_path",
+     "findings": [
+      {
+       "code": "focus_imported_source_registry_mismatch",
+       "evidence": {
+        "canonical_path": "common/national_focus/finland.txt",
+        "source_file": "common/national_focus/renamed.txt",
+        "tree_id": "finnish_focus"
+       },
+       "repair_route": "focus_registry_review",
+       "severity": "warning",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "imported",
+     "source_file": "common/national_focus/renamed.txt",
+     "target_layer": "vanilla",
+     "target_path": "common/national_focus/finland.txt",
+     "tree_id": "finnish_focus"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": "common/national_focus/renamed.txt",
+     "tree_id": "finnish_focus",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "created_tree",
+     "emit_mode": "blocked",
+     "findings": [
+      {
+       "code": "focus_created_primary_id_collision",
+       "evidence": {
+        "canonical_path": "common/national_focus/finland.txt",
+        "tree_id": "finnish_focus"
+       },
+       "repair_route": "focus_choose_unique_tree_id",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": null,
+     "tree_id": "finnish_focus"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": null,
+     "tree_id": "finnish_focus",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "import_metadata",
+     "emit_mode": "canonical_same_path",
+     "findings": [],
+     "origin_kind": "imported",
+     "source_file": "common/national_focus/modded.txt",
+     "target_layer": "project",
+     "target_path": "common/national_focus/modded.txt",
+     "tree_id": "modded_import"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": "common/national_focus/modded.txt",
+     "tree_id": "modded_import",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "",
+     "emit_mode": "blocked",
+     "findings": [
+      {
+       "code": "focus_imported_source_file_missing",
+       "evidence": {
+        "tree_id": "imp_no_file",
+        "tree_kind": "primary"
+       },
+       "repair_route": "focus_path_repair",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "imported",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": null,
+     "tree_id": "imp_no_file"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "origin_kind": "imported",
+     "source_file": null,
+     "tree_id": "imp_no_file",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "",
+     "emit_mode": "blocked",
+     "findings": [
+      {
+       "code": "focus_source_file_invalid",
+       "evidence": {
+        "source_file": "../escape.txt",
+        "tree_id": "bad_src"
+       },
+       "repair_route": "focus_path_repair",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      },
+      {
+       "code": "focus_imported_source_file_missing",
+       "evidence": {
+        "tree_id": "bad_src",
+        "tree_kind": "primary"
+       },
+       "repair_route": "focus_path_repair",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "imported",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": null,
+     "tree_id": "bad_src"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": "../escape.txt",
+     "tree_id": "bad_src",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "shared_pool",
+     "emit_mode": "shared_pool_namespaced_addition",
+     "findings": [],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": "common/national_focus/FIN_pool_new.txt",
+     "tree_id": "pool_new"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": null,
+     "tree_id": "pool_new",
+     "tree_kind": "shared_pool"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "shared_pool",
+     "emit_mode": "shared_pool_same_path",
+     "findings": [],
+     "origin_kind": "imported",
+     "source_file": "common/national_focus/pool.txt",
+     "target_layer": "project",
+     "target_path": "common/national_focus/pool.txt",
+     "tree_id": "pool_imp"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": "common/national_focus/pool.txt",
+     "tree_id": "pool_imp",
+     "tree_kind": "shared_pool"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "shared_pool",
+     "emit_mode": "blocked",
+     "findings": [
+      {
+       "code": "focus_imported_source_file_missing",
+       "evidence": {
+        "tree_id": "pool_imp_bad",
+        "tree_kind": "shared_pool"
+       },
+       "repair_route": "focus_path_repair",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "imported",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": null,
+     "tree_id": "pool_imp_bad"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "origin_kind": "imported",
+     "source_file": null,
+     "tree_id": "pool_imp_bad",
+     "tree_kind": "shared_pool"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "",
+     "emit_mode": "blocked",
+     "findings": [
+      {
+       "code": "focus_tree_kind_unknown",
+       "evidence": {
+        "tree_id": "kind_bad",
+        "tree_kind": "mystery"
+       },
+       "repair_route": "focus_path_repair",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": null,
+     "tree_id": "kind_bad"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "source_file": null,
+     "tree_id": "kind_bad",
+     "tree_kind": "mystery"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "",
+     "emit_mode": "blocked",
+     "findings": [
+      {
+       "code": "focus_origin_unknown",
+       "evidence": {
+        "origin_kind": "cloned",
+        "tree_id": "origin_bad"
+       },
+       "repair_route": "focus_path_repair",
+       "severity": "blocker",
+       "source": "focus_file_policy:persist"
+      }
+     ],
+     "origin_kind": "cloned",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": null,
+     "tree_id": "origin_bad"
+    },
+    "namespace": "FIN",
+    "tree": {
+     "origin_kind": "cloned",
+     "source_file": null,
+     "tree_id": "origin_bad",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "created_tree",
+     "emit_mode": "namespaced_addition",
+     "findings": [],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": "common/national_focus/mod_focus_tree.txt",
+     "tree_id": ""
+    },
+    "namespace": "",
+    "tree": {
+     "source_file": null,
+     "tree_id": "",
+     "tree_kind": "primary"
+    }
+   },
+   {
+    "decision": {
+     "decision_source": "created_tree",
+     "emit_mode": "namespaced_addition",
+     "findings": [],
+     "origin_kind": "created",
+     "source_file": null,
+     "target_layer": "project",
+     "target_path": "common/national_focus/GER_id.txt",
+     "tree_id": "中文id"
+    },
+    "namespace": "GER",
+    "tree": {
+     "source_file": null,
+     "tree_id": "中文id",
+     "tree_kind": "primary"
+    }
+   }
+  ],
+  "registry_records": [
+   {
+    "canonical_path": "common/national_focus/finland.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "finnish_focus",
+    "tree_kind": "primary"
+   },
+   {
+    "canonical_path": "common/national_focus/generic.txt",
+    "content_hash": "",
+    "target_layer": "vanilla",
+    "tree_id": "generic_focus",
+    "tree_kind": "primary"
+   }
+  ]
+ },
+ "layout": [
+  {
+   "before": null,
+   "mode": "created_independent",
+   "name": "clean_relative_chain",
+   "nodes": [
+    {
+     "focus_id": "root",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 5,
+     "y": 0
+    },
+    {
+     "focus_id": "child",
+     "relative_position_id": "root",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "focus_id": "grand",
+     "relative_position_id": "child",
+     "source": "project",
+     "x": -1,
+     "y": 1
+    }
+   ],
+   "projections": [],
+   "result": {
+    "blocked": false,
+    "findings": [],
+    "positions": {
+     "child": [
+      6,
+      1
+     ],
+     "grand": [
+      5,
+      2
+     ],
+     "root": [
+      5,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "before": null,
+   "mode": "created_independent",
+   "name": "cycle_and_missing_anchor",
+   "nodes": [
+    {
+     "focus_id": "a",
+     "relative_position_id": "b",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "focus_id": "b",
+     "relative_position_id": "a",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "focus_id": "orphan",
+     "relative_position_id": "ghost",
+     "source": "project",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "projections": [],
+   "result": {
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_layout_relative_cycle",
+      "evidence": {
+       "cycle": [
+        "a",
+        "b",
+        "a"
+       ]
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     },
+     {
+      "code": "focus_layout_relative_cycle",
+      "evidence": {
+       "cycle": [
+        "b",
+        "a",
+        "b"
+       ]
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     },
+     {
+      "code": "focus_layout_missing_anchor",
+      "evidence": {
+       "focus_id": "orphan",
+       "relative_position_id": "ghost"
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     }
+    ],
+    "positions": {}
+   }
+  },
+  {
+   "before": null,
+   "mode": "created_independent",
+   "name": "duplicates_same_cell_adjacent",
+   "nodes": [
+    {
+     "focus_id": "dup",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "focus_id": "dup",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 9,
+     "y": 9
+    },
+    {
+     "focus_id": "x1",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 2,
+     "y": 3
+    },
+    {
+     "focus_id": "x2",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 2,
+     "y": 3
+    },
+    {
+     "focus_id": "n1",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 5,
+     "y": 4
+    },
+    {
+     "focus_id": "n2",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 6,
+     "y": 4
+    },
+    {
+     "focus_id": "",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    }
+   ],
+   "projections": [],
+   "result": {
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_layout_missing_focus_id",
+      "evidence": {
+       "node_source": "project"
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     },
+     {
+      "code": "focus_layout_duplicate_focus_id",
+      "evidence": {
+       "focus_id": "dup"
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     },
+     {
+      "code": "focus_layout_same_cell",
+      "evidence": {
+       "focus_ids": [
+        "x1",
+        "x2"
+       ],
+       "position": [
+        2,
+        3
+       ]
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     },
+     {
+      "code": "focus_layout_adjacent_same_row",
+      "evidence": {
+       "pairs": [
+        [
+         "n1",
+         "n2",
+         1
+        ]
+       ]
+      },
+      "repair_route": "focus_layout_review",
+      "severity": "warning",
+      "source": "focus_layout:parity"
+     }
+    ],
+    "positions": {
+     "dup": [
+      0,
+      0
+     ],
+     "n1": [
+      5,
+      4
+     ],
+     "n2": [
+      6,
+      4
+     ],
+     "x1": [
+      2,
+      3
+     ],
+     "x2": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "before": [
+    {
+     "focus_id": "a",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "focus_id": "b",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 2,
+     "y": 2
+    }
+   ],
+   "mode": "replacement",
+   "name": "replacement_global_shift",
+   "nodes": [
+    {
+     "focus_id": "a",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 3,
+     "y": 1
+    },
+    {
+     "focus_id": "b",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 4,
+     "y": 2
+    }
+   ],
+   "projections": [],
+   "result": {
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_layout_replacement_global_shift",
+      "evidence": {
+       "focus_ids": [
+        "a",
+        "b"
+       ],
+       "translation": [
+        2,
+        0
+       ]
+      },
+      "repair_route": "focus_layout_restore_reference_frame",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     }
+    ],
+    "positions": {
+     "a": [
+      3,
+      1
+     ],
+     "b": [
+      4,
+      2
+     ]
+    }
+   }
+  },
+  {
+   "before": [
+    {
+     "focus_id": "a",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "focus_id": "b",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 2,
+     "y": 2
+    }
+   ],
+   "mode": "replacement",
+   "name": "replacement_partial_move_ok",
+   "nodes": [
+    {
+     "focus_id": "a",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "focus_id": "b",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 5,
+     "y": 2
+    }
+   ],
+   "projections": [],
+   "result": {
+    "blocked": false,
+    "findings": [],
+    "positions": {
+     "a": [
+      1,
+      1
+     ],
+     "b": [
+      5,
+      2
+     ]
+    }
+   }
+  },
+  {
+   "before": null,
+   "mode": "mystery",
+   "name": "unknown_mode",
+   "nodes": [
+    {
+     "focus_id": "a",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 1,
+     "y": 1
+    }
+   ],
+   "projections": [],
+   "result": {
+    "blocked": true,
+    "findings": [
+     {
+      "code": "focus_layout_unknown_mode",
+      "evidence": {
+       "mode": "mystery"
+      },
+      "repair_route": "focus_layout_repair",
+      "severity": "blocker",
+      "source": "focus_layout:parity"
+     }
+    ],
+    "positions": {
+     "a": [
+      1,
+      1
+     ]
+    }
+   }
+  },
+  {
+   "before": null,
+   "mode": "created_independent",
+   "name": "shared_projection_offsets",
+   "nodes": [
+    {
+     "focus_id": "own",
+     "relative_position_id": "",
+     "source": "project",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "projections": [
+    {
+     "base_x": 4,
+     "base_y": 0,
+     "condition": "",
+     "focus_id": "shared_a",
+     "offset_x": 2,
+     "offset_y": 1,
+     "relative_position_id": "",
+     "source": "shared_pool"
+    },
+    {
+     "base_x": 1,
+     "base_y": 1,
+     "condition": "",
+     "focus_id": "shared_child",
+     "offset_x": 0,
+     "offset_y": 0,
+     "relative_position_id": "shared_a",
+     "source": "shared_pool"
+    }
+   ],
+   "result": {
+    "blocked": false,
+    "findings": [],
+    "positions": {
+     "own": [
+      0,
+      0
+     ],
+     "shared_a": [
+      6,
+      1
+     ],
+     "shared_child": [
+      7,
+      2
+     ]
+    }
+   }
+  }
+ ],
+ "normalise_path": [
+  {
+   "input": "finland.txt",
+   "output": "common/national_focus/finland.txt"
+  },
+  {
+   "input": " finland.txt ",
+   "output": "common/national_focus/finland.txt"
+  },
+  {
+   "input": "common/national_focus/finland.txt",
+   "output": "common/national_focus/finland.txt"
+  },
+  {
+   "input": "common\\national_focus\\finland.txt",
+   "output": "common/national_focus/finland.txt"
+  },
+  {
+   "input": "common//national_focus/./x.txt",
+   "output": "common/national_focus/x.txt"
+  },
+  {
+   "input": "common/national_focus/x.txt/",
+   "output": "common/national_focus/x.txt"
+  },
+  {
+   "input": "common/national_focus/x.TXT",
+   "output": "common/national_focus/x.TXT"
+  },
+  {
+   "input": "common/national_focus/.txt",
+   "output": null
+  },
+  {
+   "input": "common/national_focus/x.",
+   "output": null
+  },
+  {
+   "input": "x.tar.txt",
+   "output": "common/national_focus/x.tar.txt"
+  },
+  {
+   "input": "/etc/passwd.txt",
+   "output": null
+  },
+  {
+   "input": "//srv/share/x.txt",
+   "output": null
+  },
+  {
+   "input": "C:/mods/x.txt",
+   "output": null
+  },
+  {
+   "input": "../x.txt",
+   "output": null
+  },
+  {
+   "input": "common/national_focus/../x.txt",
+   "output": null
+  },
+  {
+   "input": "a/b/x.txt",
+   "output": null
+  },
+  {
+   "input": "common/national_focus/deep/x.txt",
+   "output": null
+  },
+  {
+   "input": "",
+   "output": null
+  },
+  {
+   "input": "  ",
+   "output": null
+  },
+  {
+   "input": "x.dds",
+   "output": null
+  },
+  {
+   "input": "common/national_focus/焦点树.txt",
+   "output": "common/national_focus/焦点树.txt"
+  }
+ ]
+}

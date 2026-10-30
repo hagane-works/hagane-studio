@@ -1,0 +1,139 @@
+{
+  "loadExistingMod": "Загрузка существующего мода",
+  "newProject": "+ Новый проект",
+  "newProjectFromScratch": "Новый проект (с нуля)",
+  "dashboardTitle": "Мои проекты",
+  "ctaLoadExisting": "Импортировать мод",
+  "ctaNewProject": "Создать пустой проект",
+  "statProjects": "Проекты",
+  "statCountries": "Страны",
+  "statEntities": "Объекты",
+  "statRecentEdit": "Последнее изменение",
+  "statRecentNone": "Нет",
+  "timeJustNow": "только что",
+  "timeMinutesAgo": "{n} мин. назад",
+  "timeHoursAgo": "{n} ч назад",
+  "timeToday": "сегодня",
+  "timeYesterday": "вчера",
+  "timeDaysAgo": "{n} дн. назад",
+  "modNamingTitle": "Что с тобой случилось?",
+  "modNamingContent": "Идентификаторы автоматически префиксируются с метками проекта, поэтому они никогда не вступают в противоречие с ванилью. Назвать конфликты сами себя решат. При экспорте дескриптор.mod и стандартная схема папок генерируются для вас. Вы просто создаёте.",
+  "emptyState": "Начинайте с нуля или импортите существующий мод для ремонта.",
+  "loadedBadge": "Загруженный режим",
+  "docsNavLink": "Руководство",
+  "dashboardNavigationLabel": "Навигация по мастерской",
+  "languageLabel": "Язык",
+  "confirmDeleteProject": "Вы уверены, что хотите удалить этот проект?",
+  "deleteFailed": "Не удалось исключить: {msg}",
+  "modNameLabel": "Название моды",
+  "modNamePlaceholder": "Например, три варианта &quot; Королевства &quot;",
+  "modNameHint": "Начни с названия, и после открытия проекта добавишь страны.",
+  "supportedVersionLabel": "Совместимость версии HOI4",
+  "supportedVersionHint": "Версия двигателя HOI4 — написана для дескриптора.mod как поддержка_version. 1.19.* охватывает каждый 1.19.x патч. По умолчанию на последний; вы можете изменить его позже в настройках Mod Desplicor.",
+  "supportedVersionDefault": "последний",
+  "creating": "Создаёт...",
+  "createProject": "Создать проект",
+  "baseModShelf": {
+    "dialogTitle": "Новый проект",
+    "sectionTitle": "Базовый мод",
+    "sectionHint": "Постройтесь на основе моды, чтобы указать на его персонажи, фокусы и искусство — или начать с нуля.",
+    "fromScratch": {
+      "title": "С нуля",
+      "subtitle": "Автономный мод без базы"
+    },
+    "buildOnThis": "Подумай об этом.",
+    "workshopLink": "Практикум",
+    "otherMod": {
+      "title": "На основе другого мода?",
+      "subtitle": "Принеси свой собственный базовый мод в частный песчаный ящик"
+    },
+    "createFailed": "Не удалось создать проект: {msg}"
+  },
+  "gridLoading": "Загрузка...",
+  "cardNoCountries": "Страны пока не добавлены",
+  "cardMore": "Ещё {n}",
+  "cardDelete": "Удалить",
+  "cardCharacters": "Персонажи: {n}",
+  "cardFocusNodes": "Узлы фокусов: {n}",
+  "cardTechnologies": "Технологии: {n}",
+  "cardUpdated": "Обновлено: {date}",
+  "statEntitiesTooltipTitle": "Объекты по типу",
+  "entityType": {
+    "country": "Страны",
+    "character": "Символы",
+    "custom_trait": "Характерные особенности",
+    "opinion_modifier": "Изменяющие мнения",
+    "dynamic_modifier": "Динамические модификаторы",
+    "modifier_definition": "Определения модификатора",
+    "ai_strategy_plan": "Стратегические планы МА",
+    "ai_template": "Форматы подклассов АИ",
+    "wargoal": "Военные цели",
+    "idea": "Национальные духи",
+    "focus_tree": "Фокусные деревья",
+    "focus_node": "Центральные узлы",
+    "technology": "Технологии",
+    "event_namespace": "Пространства для названий событий",
+    "event": "Мероприятия",
+    "super_event": "Супер-события",
+    "decision_category": "Категории решений",
+    "decision": "Решения",
+    "bookmark": "Закладки",
+    "mio": "ММО",
+    "history_file": "Файлы истории"
+  },
+  "recentOpened": "Недавно открыт",
+  "continueEditing": "Продолжение редактирования",
+  "recentlyEdited": "Недавно отредактировано",
+  "editingNow": "Редактирование сейчас",
+  "justNow": "только что",
+  "minAgo": "{n} мин. назад",
+  "hourAgo": "{n} ч назад",
+  "dayAgo": "{n} дн. назад",
+  "noCountries": "Страны пока не добавлены",
+  "moreCountries": "Ещё {n}",
+  "entityCharacters": "Персонажи: {n}",
+  "entityFocusNodes": "Узлы фокусов: {n}",
+  "entityTechnologies": "Технологии: {n}",
+  "toolbar": {
+    "searchPlaceholder": "Название проекта / TAG страны / базовый мод...",
+    "sortLabel": "Сортировка:",
+    "sortOption": {
+      "recent": "Недавно изменённые",
+      "name": "Имя A-Z",
+      "countries": "Количество стран",
+      "created": "Недавно создан"
+    },
+    "filterGroupLabel": "Фильтр проектов",
+    "filterOption": {
+      "all": "Все",
+      "in_progress": "В работе",
+      "by_mod_base": "По базовому моду"
+    },
+    "noMatch": "Нет проектов, соответствующих выбранным фильтрам.",
+    "clearFilters": "Очистить фильтры"
+  },
+  "modBase": {
+    "kaiserreich": "Кайзеррейх",
+    "tno": "Новый порядок",
+    "tfr": "Огонь разрушается",
+    "other": "Оригинал"
+  },
+  "emptyHero": {
+    "title": "Создайте свой первый мод для HOI4",
+    "subtitle": "Импортируйте свой мод или начните с пустого проекта.",
+    "load": {
+      "title": "Уже есть папка мода HOI4?",
+      "blurb": "Выберите папку мода. Он будет разобран автоматически, и вы продолжите редактирование в визуальных редакторах.",
+      "cta": "Импортировать мод"
+    },
+    "scratch": {
+      "title": "Начать с пустого проекта?",
+      "blurb": "Задайте название мода, выберите стартовую страну и начните с чистого листа.",
+      "cta": "Создать пустой проект"
+    }
+  },
+  "settings": "Настройки",
+  "public": {
+    "brandHome": "Главная Hagane Works"
+  }
+}

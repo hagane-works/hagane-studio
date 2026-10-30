@@ -1,0 +1,39 @@
+{
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "delete": "Eliminar",
+  "create": "Crear",
+  "loading": "Cargando…",
+  "unnamed": "Sin nombre",
+  "all": "Todo",
+  "clear": "Limpiar",
+  "saving": "Guardando…",
+  "revert": "Revertir",
+  "search": "Buscar",
+  "discardUnsavedConfirm": "¿Descartar los cambios sin guardar?",
+  "countBadgeTooltip": "Mostrando {count} de {total}",
+  "copiedToClipboard": "Copiado al portapapeles",
+  "theme": {
+    "switchToDark": "Cambiar al tema oscuro",
+    "switchToLight": "Cambiar al tema claro"
+  },
+  "language": {
+    "label": "Idioma",
+    "heading": "IDIOMA / LANGUAGE",
+    "publicHeading": "Idioma de la interfaz",
+    "current": "Idioma actual: {language}",
+    "description": "Al seleccionar un idioma, la interfaz cambia a ese idioma. Los idiomas del contenido del mod se eligen por separado."
+  },
+  "emptyCtaCreate": "+ Nuevo",
+  "emptyCtaAi": "Dejar que la IA lo haga",
+  "emptyCtaAddCountry": "+ Añade primero un país",
+  "vocabulary": {
+    "customOption": "Personalizado… (escribe el tuyo)",
+    "customChip": "Personalizado",
+    "vanillaGroup": "Vanilla",
+    "baseModGroup": "Del mod base"
+  },
+  "chooseFile": "Elegir archivo",
+  "noFileChosen": "Ningún archivo elegido",
+  "gameFolderMissing": "Esto necesita el juego base: elige tu carpeta de Hearts of Iron IV en Ajustes → Instalación de Hearts of Iron IV."
+}

@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "点击放大",
+  "reviewTitle": "图片预览",
+  "referencedSpriteNoPreview": "引用的精灵图（无本地预览）",
+  "unsupportedFormat": "不支持此格式。请上传 PNG / JPG / DDS / TGA / WEBP。",
+  "uploadFailed": "上传失败",
+  "selectedFile": "已选择：{filename}",
+  "replaceImage": "替换图片",
+  "uploadImage": "上传图片",
+  "defaultHint": "PNG / JPG / DDS · 目标尺寸 {width} × {height}",
+  "advisoryHeading": "{count, plural, other {提示（{count} 条）}}",
+  "cropInstruction": "拖动以裁剪 · 宽高比锁定为 {width}:{height}",
+  "cropSourceAlt": "裁剪源图",
+  "uploading": "正在上传...",
+  "uploadWithCrop": "按裁剪范围上传",
+  "cancel": "取消",
+  "currentUpload": "当前上传",
+  "emptyTitle": "尚未上传图片",
+  "emptyHelp": "点击“上传图片”；系统会自动命名文件、将尺寸调整为 {width} × {height}，并在导出时转换为 DDS。"
+}

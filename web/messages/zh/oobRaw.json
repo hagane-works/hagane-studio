@@ -1,0 +1,21 @@
+{
+  "title": "作战序列与单位（已保留）",
+  "subtitle": "你手写的 OOB、units、师模板与装备会被逐字保留，导出时按字节原样写回。",
+  "preservedBadge": "往返保留",
+  "detectedHeading": "本文件中检测到",
+  "stat": {
+    "set_oob": "陆军 OOB 引用 (set_oob)",
+    "set_air_oob": "空军 OOB 引用 (set_air_oob)",
+    "set_naval_oob": "海军 OOB 引用 (set_naval_oob)",
+    "units": "units 块",
+    "division_template": "师模板 (division_template)",
+    "equipment": "装备 / 生产 (equipment)"
+  },
+  "editLabel": "OOB / units 原始脚本",
+  "editHelp": "可自由编辑 — 这段文本会原样写入 history/countries/[TAG].txt。注释和内联块都按原样保留。",
+  "emptyTitle": "尚无 OOB 或单位",
+  "emptyBody": "在此粘贴 set_oob 引用或 units 块，导出时会原样保留。set_oob 指向 history/units/ 下的一个文件：本程序会根据「师模板」和「初始部队」工作台生成该文件；如果你导入的 mod 里带着同名文件，也会原样带过来。文件名请用 国家 tag + 开局年份（例如 ROM_1936）—— 下游全靠这个前缀识别国家。",
+  "emptyInsert": "插入 OOB 起始模板",
+  "starterComment": "# 作战序列 — 原样写入本国 history 文件",
+  "starterNeedsTag": "请先填写本 history 文件的国家 tag —— OOB 文件名必须以它开头（例如 ROM_1936），否则没人知道这些部队属于哪个国家。"
+}

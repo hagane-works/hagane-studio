@@ -1,0 +1,16 @@
+{
+  "title": "Délimitez votre scène",
+  "subtitle": "Entourez la partie du monde où se déroule votre histoire. Le reste du monde existe toujours ; l'IA et les vérifications se concentreront simplement ici.",
+  "selectedCount": "{count, plural, =0 {Rien n'est encore entouré : le monde entier est votre scène} one {# État entouré} other {# États entourés}}",
+  "clear": "Effacer",
+  "toolPan": "Faites glisser pour déplacer la carte",
+  "toolBox": "Faites glisser un cadre pour sélectionner des États",
+  "loading": "Chargement de la carte…",
+  "unavailable": "Ce projet n'a pas encore de géométrie de carte ; rien ne peut être entouré ici pour le moment. Continuez à créer : votre scène reste simplement le monde entier.",
+  "close": "Fermer",
+  "cancel": "Annuler",
+  "save": "Enregistrer la scène",
+  "saving": "Enregistrement…",
+  "saved": "Scène enregistrée",
+  "saveFailed": "Impossible d'enregistrer votre scène : {msg}"
+}

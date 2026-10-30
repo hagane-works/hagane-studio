@@ -1,0 +1,10 @@
+{
+  "toolbarZoomOut": "缩小",
+  "toolbarZoomIn": "放大",
+  "toolbarZoomReset": "缩放重置为 100%",
+  "toolbarFitView": "适配视图",
+  "toolbarUndo": "撤销 (Ctrl+Z)",
+  "toolbarRedo": "重做 (Ctrl+Y)",
+  "toolbarAutoLayout": "自动布局 —— 重排所有科技",
+  "toolbarCreateTech": "新建科技"
+}

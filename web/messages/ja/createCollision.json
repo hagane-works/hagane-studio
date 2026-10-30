@@ -1,0 +1,6 @@
+{
+  "autoSuffixedTitle": "ID に接尾辞を自動追加しました",
+  "autoSuffixedFallback": "その ID は既存のエンティティと重複したため、一意になるよう接尾辞を追加しました。",
+  "alreadyExistsTitle": "ID はすでに存在します",
+  "alreadyExistsFallback": "その ID はこのプロジェクトですでに使用されています。別の ID を選択してください。"
+}

@@ -1,0 +1,15 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+technology_categories = {
+	industry
+	infantry_weapons
+	support_tech
+	armor
+	land_doctrine
+}
+technology_folders = {
+	infantry_folder = { ledger = army }
+	electronics_folder = { ledger = civilian }
+	support_folder = { ledger = army }
+	land_doctrine_folder = { ledger = army doctrine = yes }
+	naval_folder = { ledger = navy available = { has_dlc = "Man the Guns" } }
+}

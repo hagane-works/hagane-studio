@@ -1,0 +1,126 @@
+[
+  {
+    "name": "documented_dynamic_list_and_explicit_array",
+    "result": [
+      {
+        "array_name": "members",
+        "dynamic_lists": [
+          {
+            "array_name": "members",
+            "entry_container": "member_entry"
+          }
+        ],
+        "entry_container": "member_entry",
+        "extensible": true,
+        "gate": [
+          "has_country_flag",
+          "has_idea"
+        ],
+        "member_add_effects": [
+          "SOV_join_brics"
+        ],
+        "member_add_ideas": [],
+        "member_recipe": "run effect SOV_join_brics",
+        "window_name": "brics_list_window"
+      }
+    ]
+  },
+  {
+    "name": "hardcoded_panel_and_gate_order",
+    "result": [
+      {
+        "array_name": null,
+        "dynamic_lists": [],
+        "entry_container": null,
+        "extensible": false,
+        "gate": [
+          "has_country_flag",
+          "tag"
+        ],
+        "member_add_effects": [],
+        "member_add_ideas": [],
+        "member_recipe": null,
+        "window_name": "road56_parliament"
+      }
+    ]
+  },
+  {
+    "name": "plural_lists_scope_shorthand_and_idea_recipe",
+    "result": [
+      {
+        "array_name": "COMECON_MEMBERS",
+        "dynamic_lists": [
+          {
+            "array_name": "COMECON_MEMBERS",
+            "entry_container": "Member_Entry"
+          },
+          {
+            "array_name": "COMECON_ELIGIBLE",
+            "entry_container": "Eligible_Entry"
+          }
+        ],
+        "entry_container": "Member_Entry",
+        "extensible": true,
+        "gate": [],
+        "member_add_effects": [
+          "refresh",
+          "KOM_join_bloc"
+        ],
+        "member_add_ideas": [
+          "KOM_socintern_member"
+        ],
+        "member_recipe": "add idea KOM_socintern_member",
+        "window_name": "COMECON_GUI"
+      }
+    ]
+  },
+  {
+    "name": "bare_blocks_name_heuristic_and_case_insensitive_fields",
+    "result": [
+      {
+        "array_name": "members",
+        "dynamic_lists": [
+          {
+            "array_name": "members",
+            "entry_container": "row"
+          }
+        ],
+        "entry_container": "row",
+        "extensible": true,
+        "gate": [
+          "has_dlc",
+          "original_tag"
+        ],
+        "member_add_effects": [
+          "GER_add_member"
+        ],
+        "member_add_ideas": [],
+        "member_recipe": "run effect GER_add_member",
+        "window_name": "bare_window"
+      }
+    ]
+  },
+  {
+    "name": "non_window_wrapper_noise_is_ignored",
+    "result": [
+      {
+        "array_name": "ok",
+        "dynamic_lists": [
+          {
+            "array_name": "ok",
+            "entry_container": "row"
+          }
+        ],
+        "entry_container": "row",
+        "extensible": true,
+        "gate": [],
+        "member_add_effects": [
+          "exact"
+        ],
+        "member_add_ideas": [],
+        "member_recipe": "run effect exact",
+        "window_name": "good"
+      }
+    ]
+  }
+]

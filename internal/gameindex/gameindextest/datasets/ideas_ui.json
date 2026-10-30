@@ -1,0 +1,154 @@
+{
+ "meta": {
+  "groups": {
+   "design_companies": 1,
+   "country_spirits": 4,
+   "hidden_spirits": 1,
+   "old_advisors": 1,
+   "laws": 4
+  },
+  "source": "HOI4 1.19.3 common/ideas/",
+  "total": 11
+ },
+ "by_group": {
+  "design_companies": [
+   [
+    "GER_test_tank_company",
+    "tank_manufacturer",
+    "GER"
+   ]
+  ],
+  "country_spirits": [
+   [
+    "GER_test_spirit",
+    "country",
+    "shared"
+   ],
+   [
+    "GER_plain_spirit",
+    "country",
+    "shared"
+   ],
+   [
+    "GER_reused_picture",
+    "country",
+    "shared"
+   ],
+   [
+    "sour_loser",
+    "country",
+    "shared"
+   ]
+  ],
+  "hidden_spirits": [
+   [
+    "GER_hidden_test",
+    "hidden_ideas",
+    "shared"
+   ]
+  ],
+  "old_advisors": [
+   [
+    "GER_test_advisor",
+    "political_advisor",
+    "shared"
+   ]
+  ],
+  "laws": [
+   [
+    "civilian_economy",
+    "economy",
+    "shared"
+   ],
+   [
+    "war_economy",
+    "economy",
+    "shared"
+   ],
+   [
+    "limited_exports",
+    "trade_laws",
+    "shared"
+   ],
+   [
+    "limited_conscription",
+    "mobilization_laws",
+    "shared"
+   ]
+  ]
+ },
+ "by_country": {
+  "GER": [
+   [
+    "GER_test_tank_company",
+    "tank_manufacturer",
+    "design_companies"
+   ]
+  ],
+  "shared": [
+   [
+    "GER_test_spirit",
+    "country",
+    "country_spirits"
+   ],
+   [
+    "GER_plain_spirit",
+    "country",
+    "country_spirits"
+   ],
+   [
+    "GER_reused_picture",
+    "country",
+    "country_spirits"
+   ],
+   [
+    "sour_loser",
+    "country",
+    "country_spirits"
+   ],
+   [
+    "GER_hidden_test",
+    "hidden_ideas",
+    "hidden_spirits"
+   ],
+   [
+    "GER_test_advisor",
+    "political_advisor",
+    "old_advisors"
+   ],
+   [
+    "civilian_economy",
+    "economy",
+    "laws"
+   ],
+   [
+    "war_economy",
+    "economy",
+    "laws"
+   ],
+   [
+    "limited_exports",
+    "trade_laws",
+    "laws"
+   ],
+   [
+    "limited_conscription",
+    "mobilization_laws",
+    "laws"
+   ]
+  ]
+ },
+ "all_ids": [
+  "GER_hidden_test",
+  "GER_plain_spirit",
+  "GER_reused_picture",
+  "GER_test_advisor",
+  "GER_test_spirit",
+  "GER_test_tank_company",
+  "civilian_economy",
+  "limited_conscription",
+  "limited_exports",
+  "sour_loser",
+  "war_economy"
+ ]
+}

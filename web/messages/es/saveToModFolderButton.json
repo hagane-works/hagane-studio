@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "Tu navegador no admite la API de acceso al sistema de archivos. Usa Chrome o Edge, o sigue el flujo completo Exportar mod.",
+  "savedToFolder": "Escrito en la carpeta del mod",
+  "saveFailed": "No se pudo guardar en la carpeta del mod. {msg}",
+  "titleWithFolder": "Guardar los tres archivos de {tag} en {dir}/ (se escriben directamente y se aplican al reiniciar el mod en HOI4)",
+  "titleNoFolder": "La primera vez se te pedirá que elijas una carpeta de mod",
+  "saving": "Guardando...",
+  "saveToFolderNamed": "Guardar en {dir}",
+  "saveToModFolder": "Guardar en carpeta del mod",
+  "changeFolderTitle": "Cambiar carpeta del mod",
+  "changeFolder": "Cambiar carpeta",
+  "saved": "Guardado ✓"
+}

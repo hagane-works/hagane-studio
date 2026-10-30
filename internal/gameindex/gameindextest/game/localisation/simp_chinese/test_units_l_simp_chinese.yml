@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ infantry:0 "步兵"
+ infantry_equipment:0 "步兵装备"
+ infantry_equipment_1:0 "$infantry_equipment$ I"
+ artillery_equipment:0 "$missing_key$"
+ INFANTRY_TITLE_WEAPONS:0 "武器和装备"

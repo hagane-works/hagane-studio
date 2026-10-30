@@ -1,0 +1,17 @@
+{
+  "noPicture": "sin imagen",
+  "empty": "(vacío)",
+  "noOptions": "Sin opciones: el evento permanece en pantalla hasta que se cierre manualmente",
+  "conditionalOption": "Opción condicional (el activador controla su visibilidad)",
+  "alwaysVisibleOption": "Opción siempre visible",
+  "timeout": "tiempo límite · {days} días",
+  "immediateEffects": "efectos inmediatos · sí",
+  "afterEffects": "efectos posteriores · sí",
+  "editPicture": "Editar imagen del evento",
+  "editTitle": "Editar título del evento",
+  "editDescription": "Editar descripción del evento",
+  "editOption": "Editar opción {n}",
+  "previewUnavailableTitle": "No se pudo mostrar la vista previa del evento",
+  "previewUnavailableBody": "Tu evento y los cambios sin guardar siguen a salvo. Puedes continuar editando o volver a intentar la vista previa.",
+  "previewUnavailableRetry": "Reintentar vista previa"
+}

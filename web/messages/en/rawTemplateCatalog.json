@@ -1,0 +1,42 @@
+{
+  "scripted_gui": {
+    "label": "Scripted GUI panel",
+    "description": "Starting-point variable-overview panel: interface/'<key>'_hagane.gui + common/scripted_guis/'<key>'_hagane.txt."
+  },
+  "on_actions": {
+    "label": "on_actions hooks",
+    "description": "Hook file with on_startup + on_monthly effect skeletons (additive merge)."
+  },
+  "game_rules": {
+    "label": "Game rule",
+    "description": "A two-option Game Rules row for the New Game screen (additive merge)."
+  },
+  "ai_strategy": {
+    "label": "AI strategy",
+    "description": "AI strategy block gated on a country tag (additive merge)."
+  },
+  "gfx_sprite": {
+    "label": "GFX sprite",
+    "description": "Sprite fragment mapping GFX_'<key>' to a texture file (ship the image separately)."
+  },
+  "frontendgamesetup_slotsize": {
+    "label": "Bookmark slot-size fix",
+    "description": "Scaffold override of frontendgamesetupview.gui that fixes multi-bookmark visibility in total-conversion base mods."
+  },
+  "defines": {
+    "label": "Defines tweaks (Lua)",
+    "description": "Override individual NDefines engine constants in Lua (never copy 00_defines.lua)."
+  },
+  "bop": {
+    "label": "Balance of power",
+    "description": "A two-side balance-of-power bar with ranges and mild modifiers; activate it with set_power_balance."
+  },
+  "music": {
+    "label": "Music station songs",
+    "description": "Paired .asset + .txt files add songs to the base_music station; upload the .ogg separately."
+  },
+  "peace_conference": {
+    "label": "Peace conference cost modifier",
+    "description": "A peace-action cost modifier row (ships as a 1.0 no-op; additive merge)."
+  }
+}

@@ -1,0 +1,588 @@
+{
+ "cases": [
+  {
+   "name": "vanilla_ok",
+   "start_date": null,
+   "bookmarks": [
+    {
+     "id": "b36",
+     "date": "1936.1.1.12"
+    }
+   ],
+   "raw_files": [],
+   "report": {
+    "findings": [],
+    "totals": {
+     "error": 0,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 0,
+    "start_date": null,
+    "custom_start": false
+   }
+  },
+  {
+   "name": "custom_ok",
+   "start_date": "1962.1.1",
+   "bookmarks": [
+    {
+     "id": "b62",
+     "date": "1962.1.1.12"
+    }
+   ],
+   "raw_files": [],
+   "report": {
+    "findings": [
+     {
+      "severity": "info",
+      "code": "timeline.start_date_ok",
+      "title": "Timeline is consistent",
+      "reason": "Effective bookmark start 1962.1.1.12 drives both defines and descriptor replacement.",
+      "suggestion": "",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "earliest_emitted_date": "1962.1.1.12",
+       "source_paths": [
+        "common/bookmarks/b62.txt"
+       ]
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 0,
+     "info": 1
+    },
+    "count": 1,
+    "start_date": "1962.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "mismatch",
+   "start_date": "1955.1.1",
+   "bookmarks": [
+    {
+     "id": "b62",
+     "date": "1962.1.1.12"
+    }
+   ],
+   "raw_files": [],
+   "report": {
+    "findings": [
+     {
+      "severity": "warning",
+      "code": "timeline.project_earliest_bookmark_mismatch",
+      "title": "timeline.project_earliest_bookmark_mismatch",
+      "reason": "timeline.project_earliest_bookmark_mismatch",
+      "suggestion": "timeline.align_project_to_earliest_bookmark",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "earliest_emitted_date": "1962.1.1.12",
+       "project_start_date": "1955.1.1.12",
+       "source_paths": [
+        "common/bookmarks/b62.txt"
+       ],
+       "source": {
+        "kind": "timeline_plan",
+        "identifier": "effective"
+       },
+       "repair_route": "timeline.align_project_to_earliest_bookmark"
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 1,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": "1955.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "bad_structured_date",
+   "start_date": "1962.1.1",
+   "bookmarks": [
+    {
+     "id": "bx",
+     "date": "junk"
+    }
+   ],
+   "raw_files": [],
+   "report": {
+    "findings": [
+     {
+      "severity": "error",
+      "code": "timeline.structured_bookmark_date_unknown",
+      "title": "timeline.structured_bookmark_date_unknown",
+      "reason": "timeline.structured_bookmark_date_unknown",
+      "suggestion": "bookmark.date.repair",
+      "entity_ref": null,
+      "file": "common/bookmarks/bx.txt",
+      "detail": {
+       "date_tokens": [
+        "junk"
+       ],
+       "parse_error": "bookmark_date_invalid",
+       "source_hash": "1d34d563acd8fbb6b039d58da43e07d81236bad597c0e095cf494c695711d4ab",
+       "source": {
+        "kind": "bookmark",
+        "identifier": "bx",
+        "path": "common/bookmarks/bx.txt",
+        "provider": "created"
+       },
+       "repair_route": "bookmark.date.repair"
+      }
+     }
+    ],
+    "totals": {
+     "error": 1,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": "1962.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "custom_no_bookmark",
+   "start_date": "1962.1.1",
+   "bookmarks": [],
+   "raw_files": [],
+   "report": {
+    "findings": [
+     {
+      "severity": "warning",
+      "code": "timeline.custom_start_without_bookmark",
+      "title": "timeline.custom_start_without_bookmark",
+      "reason": "timeline.custom_start_without_bookmark",
+      "suggestion": "bookmarks.create_for_project_start",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "project_start_date": "1962.1.1.12",
+       "source": {
+        "kind": "project",
+        "identifier": "start_date"
+       },
+       "repair_route": "bookmarks.create_for_project_start"
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 1,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": "1962.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "raw_wins_same_path",
+   "start_date": "1962.1.1",
+   "bookmarks": [
+    {
+     "id": "kr",
+     "date": "1936.1.1.12"
+    }
+   ],
+   "raw_files": [
+    {
+     "path": "common/bookmarks/kr.txt",
+     "content": "bookmarks = {\n\tbookmark = {\n\t\tname = \"X\"\n\t\tdate = 1962.1.1.12\n\t}\n}\n"
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "severity": "warning",
+      "code": "timeline.bookmark_path_shadow_date_mismatch",
+      "title": "timeline.bookmark_path_shadow_date_mismatch",
+      "reason": "timeline.bookmark_path_shadow_date_mismatch",
+      "suggestion": "bookmark.path_collision.review_winner",
+      "entity_ref": null,
+      "file": "common/bookmarks/kr.txt",
+      "detail": {
+       "shadowed_dates": [
+        "1936.1.1.12"
+       ],
+       "shadowed_source": "kr",
+       "winning_dates": [
+        "1962.1.1.12"
+       ],
+       "winning_source": "common/bookmarks/kr.txt",
+       "source": {
+        "kind": "bookmark_path",
+        "identifier": "common/bookmarks/kr.txt",
+        "path": "common/bookmarks/kr.txt",
+        "provider": "created"
+       },
+       "repair_route": "bookmark.path_collision.review_winner"
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 1,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": "1962.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "raw_two_dates",
+   "start_date": null,
+   "bookmarks": [],
+   "raw_files": [
+    {
+     "path": "common/bookmarks/two.txt",
+     "content": "bookmarks = {\n\tbookmark = { date = 1939.8.14.12 }\n\tbookmark = { date = 1936.1.1.12 }\n}\n"
+    }
+   ],
+   "report": {
+    "findings": [],
+    "totals": {
+     "error": 0,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 0,
+    "start_date": null,
+    "custom_start": false
+   }
+  },
+  {
+   "name": "raw_bad_date",
+   "start_date": null,
+   "bookmarks": [],
+   "raw_files": [
+    {
+     "path": "common/bookmarks/bad.txt",
+     "content": "bookmarks = { bookmark = { date = notadate } }\n"
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "severity": "error",
+      "code": "timeline.raw_bookmark_date_unknown",
+      "title": "timeline.raw_bookmark_date_unknown",
+      "reason": "timeline.raw_bookmark_date_unknown",
+      "suggestion": "bookmark.raw_file.repair_date",
+      "entity_ref": null,
+      "file": "common/bookmarks/bad.txt",
+      "detail": {
+       "date_tokens": [
+        "notadate"
+       ],
+       "parse_error": "bookmark_date_invalid",
+       "source_hash": "7576e900e3f3c125ca1b1c1d0f529bb4ae0ae0f45074adb3f24167bea5c67c2e",
+       "source": {
+        "kind": "bookmark_raw_file",
+        "identifier": "common/bookmarks/bad.txt",
+        "path": "common/bookmarks/bad.txt",
+        "provider": "created"
+       },
+       "repair_route": "bookmark.raw_file.repair_date"
+      }
+     }
+    ],
+    "totals": {
+     "error": 1,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": null,
+    "custom_start": false
+   }
+  },
+  {
+   "name": "raw_no_bookmark_block",
+   "start_date": null,
+   "bookmarks": [],
+   "raw_files": [
+    {
+     "path": "common/bookmarks/nb.txt",
+     "content": "foo = { bar = 1 }\n"
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "severity": "error",
+      "code": "timeline.raw_bookmark_date_unknown",
+      "title": "timeline.raw_bookmark_date_unknown",
+      "reason": "timeline.raw_bookmark_date_unknown",
+      "suggestion": "bookmark.raw_file.repair_date",
+      "entity_ref": null,
+      "file": "common/bookmarks/nb.txt",
+      "detail": {
+       "date_tokens": [],
+       "parse_error": "bookmark_block_missing",
+       "source_hash": "85075774c7cac4bd9476e7218bdb18ea6ba94b73bee1ed66777969a18e1857f4",
+       "source": {
+        "kind": "bookmark_raw_file",
+        "identifier": "common/bookmarks/nb.txt",
+        "path": "common/bookmarks/nb.txt",
+        "provider": "created"
+       },
+       "repair_route": "bookmark.raw_file.repair_date"
+      }
+     }
+    ],
+    "totals": {
+     "error": 1,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": null,
+    "custom_start": false
+   }
+  },
+  {
+   "name": "raw_deliberate_shadow",
+   "start_date": "1962.1.1",
+   "bookmarks": [
+    {
+     "id": "b62",
+     "date": "1962.1.1.12"
+    }
+   ],
+   "raw_files": [
+    {
+     "path": "common/bookmarks/the_gathering_storm.txt",
+     "content": "# nothing here\n\n"
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "severity": "info",
+      "code": "timeline.start_date_ok",
+      "title": "Timeline is consistent",
+      "reason": "Effective bookmark start 1962.1.1.12 drives both defines and descriptor replacement.",
+      "suggestion": "",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "earliest_emitted_date": "1962.1.1.12",
+       "source_paths": [
+        "common/bookmarks/b62.txt",
+        "common/bookmarks/the_gathering_storm.txt"
+       ]
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 0,
+     "info": 1
+    },
+    "count": 1,
+    "start_date": "1962.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "raw_unparseable",
+   "start_date": null,
+   "bookmarks": [],
+   "raw_files": [
+    {
+     "path": "common/bookmarks/broken.txt",
+     "content": "bookmarks = { bookmark = {"
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "severity": "error",
+      "code": "timeline.raw_bookmark_date_unknown",
+      "title": "timeline.raw_bookmark_date_unknown",
+      "reason": "timeline.raw_bookmark_date_unknown",
+      "suggestion": "bookmark.raw_file.repair_date",
+      "entity_ref": null,
+      "file": "common/bookmarks/broken.txt",
+      "detail": {
+       "date_tokens": [],
+       "parse_error": "bookmark_parse_error:ParseError",
+       "source_hash": "d928a7662fe1187ad90cbc51df0ebf533b68c58d61abe15c4fe726936ce86707",
+       "source": {
+        "kind": "bookmark_raw_file",
+        "identifier": "common/bookmarks/broken.txt",
+        "path": "common/bookmarks/broken.txt",
+        "provider": "created"
+       },
+       "repair_route": "bookmark.raw_file.repair_date"
+      }
+     }
+    ],
+    "totals": {
+     "error": 1,
+     "warning": 0,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": null,
+    "custom_start": false
+   }
+  },
+  {
+   "name": "raw_non_bookmark_path",
+   "start_date": "1962.1.1",
+   "bookmarks": [
+    {
+     "id": "b62",
+     "date": "1962.1.1.12"
+    }
+   ],
+   "raw_files": [
+    {
+     "path": "common/on_actions/x.txt",
+     "content": "on_actions = {}"
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "severity": "info",
+      "code": "timeline.start_date_ok",
+      "title": "Timeline is consistent",
+      "reason": "Effective bookmark start 1962.1.1.12 drives both defines and descriptor replacement.",
+      "suggestion": "",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "earliest_emitted_date": "1962.1.1.12",
+       "source_paths": [
+        "common/bookmarks/b62.txt"
+       ]
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 0,
+     "info": 1
+    },
+    "count": 1,
+    "start_date": "1962.1.1",
+    "custom_start": true
+   }
+  },
+  {
+   "name": "project_bad_date",
+   "start_date": "13-01-1936",
+   "bookmarks": [
+    {
+     "id": "b36",
+     "date": "1936.1.1.12"
+    }
+   ],
+   "raw_files": [],
+   "report": {
+    "findings": [
+     {
+      "severity": "warning",
+      "code": "timeline.project_start_date_unknown",
+      "title": "timeline.project_start_date_unknown",
+      "reason": "timeline.project_start_date_unknown",
+      "suggestion": "project.start_date.repair",
+      "entity_ref": null,
+      "file": null,
+      "detail": {
+       "project_start_date": "13-01-1936",
+       "source": {
+        "kind": "project",
+        "identifier": "start_date"
+       },
+       "repair_route": "project.start_date.repair"
+      }
+     }
+    ],
+    "totals": {
+     "error": 0,
+     "warning": 1,
+     "info": 0
+    },
+    "count": 1,
+    "start_date": "13-01-1936",
+    "custom_start": false
+   }
+  }
+ ],
+ "math": [
+  {
+   "value": "1936.1.1.12",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "1936.1.1",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "1962.5.9",
+   "custom": true,
+   "bump": true
+  },
+  {
+   "value": "183.1.1.12",
+   "custom": true,
+   "bump": false
+  },
+  {
+   "value": "1949.1.1",
+   "custom": true,
+   "bump": true
+  },
+  {
+   "value": "1948.12.31",
+   "custom": true,
+   "bump": false
+  },
+  {
+   "value": "bad",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "1936.13.1",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "1936.1.32",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "0.1.1",
+   "custom": false,
+   "bump": false
+  },
+  {
+   "value": "1936.1.1.25",
+   "custom": false,
+   "bump": false
+  }
+ ]
+}

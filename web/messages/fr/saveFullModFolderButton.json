@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "Votre navigateur ne prend pas en charge l’API File System Access. Utilisez Chrome ou Edge.",
+  "syncing": "Synchronisation...",
+  "syncToNamed": "Synchroniser avec {dir}",
+  "syncToFolder": "Écrire dans le dossier du jeu",
+  "titleWithFolder": "Synchroniser le mod entier avec {dir}/ (prend effet après le redémarrage du mod dans HOI4)",
+  "titleNoFolder": "La première fois, vous choisirez un dossier de mod. Il sera réutilisé pendant toute cette session.",
+  "tooltipTitle": "Après l’export : procédure de test complète",
+  "tooltipContent": "Procédure de test d’un mod HOI4 (création + débogage + journaux) :\n1. Placez le dossier de mod choisi dans %userprofile%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\\n2. Lanceur → Bibliothèque de mods → cochez ce mod\n3. Activez le mode Débogage d’une des façons suivantes :\n   • Steam · clic droit sur HOI4 → Propriétés → Général → saisissez -debug dans les options de lancement\n   • Local · créez un raccourci vers dowser.exe → Propriétés → ajoutez \" -debug\" à la Cible (notez l’espace avant le tiret)\n4. Lancez le jeu · error.log s’ouvre automatiquement (Bloc-notes) une fois le menu principal chargé\n5. Triage des erreurs · trois catégories dans error.log :\n   • Famille · dérive des conventions de nommage entre mods/entités\n   • Compatible vanilla · compatibilité avec vanilla (champs de DLC / version)\n   • Interne au mod · dans ce mod (ID cassé / référence circulaire)\n6. Emplacement des journaux · %userprofile%\\Documents\\...\\logs\\ (error.log + game.log)\n> Remarque : certaines erreurs graves peuvent ne pas être journalisées avant un plantage ; établissez le diagnostic à partir des symptômes en jeu et de game.log.",
+  "includeImportedTitleOn": "Inclure le contenu importé du mod d’origine (sources vanilla ou d’un ancien mod). Écrit le dossier complet du mod.",
+  "includeImportedTitleOff": "Synchroniser uniquement les entités que vous avez créées ou modifiées. Ne pas remplacer l’ancien contenu importé.",
+  "includeImportedLabel": "Inclure le contenu importé",
+  "changeFolderTitle": "Changer le dossier du mod",
+  "changeFolder": "Changer de dossier",
+  "wroteFiles": "✓ {count} fichiers écrits",
+  "wrotePartial": "⚠ {ok}/{total} fichiers écrits, {failed} échecs (p. ex. {firstError}). Le dossier du mod est partiellement mis à jour.",
+  "illegalPathSegment": "Segment de chemin non valide \"{segment}\" dans {path}",
+  "additiveCaption": "La synchronisation écrit ou remplace uniquement ; elle ne supprime jamais.",
+  "additiveTitle": "La synchronisation est additive",
+  "additiveWarning": "La synchronisation écrit ou remplace uniquement les fichiers ; elle ne les supprime jamais. Si vous avez renommé, supprimé ou réétiqueté une entité, l’ancien fichier .txt/.yml/.dds reste dans le dossier et le jeu charge à la fois l’ancienne et la nouvelle version. Après un tel changement, videz manuellement les dossiers générés du mod (common/, events/, history/, localisation/, gfx/) avant la synchronisation, ou synchronisez vers un dossier neuf."
+}

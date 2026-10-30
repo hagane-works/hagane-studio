@@ -1,0 +1,5 @@
+{
+  "label": "Ajouter un ID de build visible",
+  "badge": "Traçabilité de l’export",
+  "hint": "Écrit un identifiant unique dans le manifeste, un fichier de preuve et les descriptions de scénarios afin de relier captures et journaux au ZIP exact. Désactivé par défaut."
+}

@@ -1,0 +1,5 @@
+{
+  "summary": "⚠ {count} flags are set but never read",
+  "summaryNote": "(early hints that a focus, event or decision chain may be broken)",
+  "fix": "Fix: read the flag with <code>has_country_flag = {flag}</code> in the trigger / available / visible of a focus, decision or event; or delete the <code>set_country_flag</code> if nothing needs it. This check doesn't yet track flags changed through <code>modify_country_flag</code> or <code>clr_country_flag</code>."
+}

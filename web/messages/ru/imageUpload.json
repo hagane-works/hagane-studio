@@ -1,0 +1,20 @@
+{
+  "clickToEnlarge": "Нажмите на расширение",
+  "reviewTitle": "Обзор изображений",
+  "referencedSpriteNoPreview": "Ссылка на сприт (местный предварительный просмотр отсутствует)",
+  "unsupportedFormat": "Неподдерживаемый формат. Загрузить PNG/JPG/DDS/TGA/WEBP.",
+  "uploadFailed": "Ошибка загрузки",
+  "selectedFile": "Selected: {filename}",
+  "replaceImage": "Заменить изображение",
+  "uploadImage": "Загрузить изображение",
+  "defaultHint": "PNG / JPG / DDS · target {width} × {height}",
+  "advisoryHeading": "{count, plural, one {Advisory} other {Advisories ({count})}}",
+  "cropInstruction": "Drag to crop · aspect locked to {width}:{height}",
+  "cropSourceAlt": "Источник урожая",
+  "uploading": "Загрузка...",
+  "uploadWithCrop": "Загрузка с помощью урожая",
+  "cancel": "Отмена",
+  "currentUpload": "Текущая загрузка",
+  "emptyTitle": "Пока нет загруженного изображения",
+  "emptyHelp": "Click “Upload Image”; the file is auto-named, resized to {width} × {height}, and converted to DDS at export."
+}

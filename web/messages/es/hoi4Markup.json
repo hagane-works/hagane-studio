@@ -1,0 +1,4 @@
+{
+  "title": "Marcado de texto de HOI4",
+  "legend": "§Y…§!  —  código de color (§ + una letra inicia un color, §! lo restablece)\n$VAR$  —  variable o sustitución de localización anidada\n[ROOT.GetName]  —  función de ámbito dinámica\n\\n  —  salto de línea\n\nEstos elementos son marcado de texto de HOI4: se muestran en el juego y NO son errores. Déjalos intactos."
+}

@@ -1,0 +1,696 @@
+{
+  "focus_display_name_missing_created": {
+    "what": "국가중점 {id}에 이름이 없습니다",
+    "impact": "게임에서 해당 중점이 ID로 표시되고 마우스를 올려도 설명이 없습니다.",
+    "action": "이름 설정",
+    "jump": "국가중점 작업대 › 해당 중점 › 이름"
+  },
+  "focus_display_name_missing_enabled_locale": {
+    "what": "국가중점 {id}에 {locale} 이름이 없습니다",
+    "impact": "해당 언어를 쓰는 플레이어에게는 ID가 표시됩니다.",
+    "action": "해당 언어 보완",
+    "jump": "국가중점 › 이름 › 언어 탭"
+  },
+  "focus_initial_position_unknown_kind": {
+    "what": "{tree}의 시작 위치 유형을 인식할 수 없습니다",
+    "impact": "국가중점 트리 전체가 밀리거나 서로 겹칠 수 있습니다.",
+    "action": "시작 위치 다시 설정",
+    "jump": "국가중점 트리 › 레이아웃"
+  },
+  "focus_reward_modifier_in_effect_position": {
+    "what": "국가중점 {id}의 완료 보상에서 {token}은 보정인데 효과 위치에 쓰여 있습니다",
+    "impact": "게임이 로딩 시 이 줄을 무시하여 <b>이 줄은 적용되지 않습니다</b>.",
+    "action": "보정 캐리어로 이동",
+    "jump": "국가중점 › 완료 보상"
+  },
+  "focus_reward_scalar_effect_block_value": {
+    "what": "국가중점 {id}의 {token}은 숫자가 필요하지만 실제로는 코드 블록입니다(또는 그 반대)",
+    "impact": "이 줄은 적용되지 않습니다.",
+    "action": "작성 방식 수정",
+    "jump": "국가중점 › 완료 보상"
+  },
+  "focus_reward_trigger_in_effect_position": {
+    "what": "국가중점 {id}의 완료 보상에 조건 판정 {token}이 있으나 이 위치는 효과만 허용합니다",
+    "impact": "<b>이 줄은 적용되지 않고</b> 조건도 판정되지 않습니다.",
+    "action": "조건 구역으로 이동",
+    "jump": "국가중점 › 완료 보상"
+  },
+  "focus_reward_unsupported_scope": {
+    "what": "국가중점 {id}의 {effect}는 현재 스코프({scope})에서 지원되지 않습니다",
+    "impact": "효과가 발동하지 않습니다. 지원 스코프: {supported}.",
+    "action": "지원되는 스코프로 감싸기",
+    "jump": "국가중점 › 완료 보상"
+  },
+  "focus_base_default_provider_unresolved": {
+    "what": "베이스 모드가 제공하는 기본 국가중점 트리를 찾지 못했습니다",
+    "impact": "트리가 올바른 국가에 연결되지 않아 게임에서 보이지 않을 수 있습니다.",
+    "action": "베이스 모드 색인 새로 고침",
+    "jump": "프로젝트 설정 › 종속성"
+  },
+  "focus_effective_default_missing": {
+    "what": "{country}에 기본 국가중점 트리가 설정되지 않았습니다",
+    "impact": "해당 국가는 범용 트리로 되돌아가 <b>플레이어가 제작한 트리를 보지 못합니다</b>.",
+    "action": "기본으로 설정",
+    "jump": "국가중점 트리 목록"
+  },
+  "focus_file_policy_applied": {
+    "what": "국가중점 트리 출력 파일이 기록대로 작성되었습니다",
+    "impact": "통과 항목으로 ✅ 개수에 집계됩니다."
+  },
+  "focus_file_policy_cohort_incomplete": {
+    "what": "{tree}가 같은 파일의 다른 트리들과 함께 내보내지지 않았습니다",
+    "impact": "파일이 일부만 작성되어 <b>빠진 트리는 게임에 표시되지 않습니다</b>.",
+    "action": "함께 선택하여 내보내기",
+    "jump": "내보내기 페이지 › 콘텐츠 선택"
+  },
+  "focus_file_policy_drift": {
+    "what": "{tree_ids}의 파일 설정이 버전 기록과 일치하지 않습니다",
+    "impact": "결과물에는 영향이 없으며 현재 설정대로 내보냈습니다. 이 필드는 시스템이 관리하므로 수정할 필요가 없습니다."
+  },
+  "focus_file_policy_duplicate_membership": {
+    "what": "내부 기록 충돌: 같은 트리에 저장 정책이 두 개 있습니다",
+    "impact": "화면에 \"검사 미완료\"가 표시됩니다. 자동으로 보고되었습니다."
+  },
+  "focus_file_policy_missing": {
+    "what": "{id}에 출력 파일이 지정되지 않아 자동으로 할당했습니다",
+    "impact": "게임에는 영향이 없으며 내용도 완전합니다."
+  },
+  "focus_initial_position_target_missing": {
+    "what": "{tree}의 시작 위치가 국가중점 {id}를 가리키지만 이 트리에 해당 중점이 없습니다",
+    "impact": "트리의 초기 화면이 어긋나 열었을 때 빈 영역이 보입니다.",
+    "action": "시작 중점 다시 선택",
+    "jump": "국가중점 트리 › 레이아웃"
+  },
+  "focus_raw_file_parse_failed": {
+    "what": "국가중점 파일 {path}에 문법 오류가 있어 읽을 수 없습니다",
+    "impact": "<b>이 파일의 국가중점이 전부 누락됩니다.</b>",
+    "action": "문법 수정(오류 위치로 이동)",
+    "jump": "raw 파일 편집기"
+  },
+  "focus_registry_unavailable": {
+    "what": "바닐라 국가중점 레지스트리 로딩에 실패하여 저장 검사가 완료되지 않았습니다",
+    "impact": "화면에 \"검사 미완료\"가 표시되며 이번에는 보수적인 방식으로 내보냈습니다. 자동으로 보고되었습니다."
+  },
+  "timeline_bookmark_path_shadow_date_mismatch": {
+    "what": "두 북마크 파일이 서로 다른 날짜로 같은 경로에 기록되어 하나만 적용됩니다",
+    "impact": "<b>시작 날짜가 설정과 다를 수 있습니다.</b>",
+    "action": "두 북마크 확인",
+    "jump": "북마크 작업대"
+  },
+  "timeline_custom_start_without_bookmark": {
+    "what": "사용자 지정 시작 날짜가 설정되었지만 대응하는 북마크가 없습니다",
+    "impact": "<b>캠페인 선택 화면에서 이 시작 날짜가 보이지 않습니다.</b>",
+    "action": "북마크 만들기",
+    "jump": "북마크 작업대 › 새로 만들기"
+  },
+  "timeline_project_earliest_bookmark_mismatch": {
+    "what": "프로젝트 시작 날짜({a})와 가장 이른 북마크 날짜({b})가 일치하지 않습니다",
+    "impact": "게임은 북마크 날짜부터 시작됩니다.",
+    "action": "날짜 맞추기",
+    "jump": "프로젝트 설정 › 시작 날짜"
+  },
+  "timeline_project_start_date_unknown": {
+    "what": "프로젝트에 시작 날짜가 설정되지 않았습니다",
+    "impact": "내보내기에 기본 날짜가 사용됩니다.",
+    "action": "시작 날짜 설정",
+    "jump": "프로젝트 설정"
+  },
+  "timeline_raw_bookmark_date_unknown": {
+    "what": "북마크 파일에서 날짜를 읽어내지 못했습니다",
+    "impact": "이 북마크는 그대로 내보내지며 날짜 일치 검사에서 제외됩니다."
+  },
+  "timeline_raw_bookmark_hash_mismatch": {
+    "what": "북마크 파일이 프로그램 밖에서 수정되어 기록과 일치하지 않습니다",
+    "impact": "검사 결과가 파일의 실제 내용을 반영하지 못할 수 있습니다.",
+    "action": "기록 새로 고침",
+    "jump": "raw 파일 › 다시 읽기"
+  },
+  "timeline_raw_defines_start_date_conflict": {
+    "what": "defines 파일의 시작 날짜({a})가 프로젝트 설정({b})과 충돌합니다",
+    "impact": "게임은 북마크 날짜로 시작하지만 기간과 세계 긴장도 같은 시스템은 defines 날짜를 기준으로 돌아가므로 <b>불일치 시 전체가 어긋납니다</b>.",
+    "action": "날짜 맞추기",
+    "jump": "프로젝트 설정 › 시작 날짜"
+  },
+  "timeline_start_date_ok": {
+    "what": "시작 날짜 검사를 통과했습니다",
+    "impact": "게임은 이 프로젝트의 시작 날짜부터 시작됩니다."
+  },
+  "timeline_structured_bookmark_date_unknown": {
+    "what": "북마크에서 날짜를 읽어내지 못했습니다",
+    "impact": "이 북마크는 날짜 일치 검사에서 제외됩니다."
+  },
+  "clausewitz_parse_error": {
+    "what": "{file}에 문법 오류가 있어 읽을 수 없습니다",
+    "impact": "<b>파일 전체가 모드에 포함되지 않습니다.</b>",
+    "action": "오류 위치로 이동",
+    "jump": "raw 파일 편집기"
+  },
+  "clausewitz_unclosed_block": {
+    "what": "{file} {line}행: 닫히지 않은 {",
+    "impact": "<b>이 줄 이후의 내용이 전부 사라집니다.</b>",
+    "action": "해당 줄로 이동",
+    "jump": "raw 파일 편집기"
+  },
+  "clausewitz_stray_closing_brace": {
+    "what": "{file} {line}행: 불필요한 } 가 있으며, 짝이 되는 { 가 없습니다",
+    "impact": "이후 내용이 잘못된 블록에 들어갈 수 있습니다.",
+    "action": "해당 줄로 이동",
+    "jump": "raw 파일 편집기"
+  },
+  "clausewitz_unterminated_quote": {
+    "what": "{file} {line}행: 따옴표가 닫히지 않았습니다",
+    "impact": "이 줄과 이후 내용이 하나의 문자열로 읽힙니다.",
+    "action": "해당 줄로 이동",
+    "jump": "raw 파일 편집기"
+  },
+  "raw_content_literal_escape_newline": {
+    "what": "{file} line {line}: literal \\n (backslash + n) in script text",
+    "impact": "HOI4 script does not interpret escapes — players will see the two characters \\n verbatim.",
+    "action": "Use a real line break, or move the text into a localisation yml value where \\n is a newline",
+    "jump": "Raw file editor"
+  },
+  "clausewitz_missing_assignment_value": {
+    "what": "{file} {line}행: {key} = 에 값이 없습니다",
+    "impact": "이 설정은 적용되지 않습니다.",
+    "action": "해당 줄로 이동",
+    "jump": "raw 파일 편집기"
+  },
+  "clausewitz_analysis_ast_mismatch": {
+    "what": "파서 자체 검증이 일치하지 않아 이 파일의 검사 결과가 불완전할 수 있습니다",
+    "impact": "화면에 \"검사 미완료\"가 표시됩니다. 자동으로 보고되었습니다."
+  },
+  "clausewitz_analysis_token_alignment": {
+    "what": "파서 토큰 정렬에 실패하여 이 파일의 검사 결과가 불완전할 수 있습니다",
+    "impact": "화면에 \"검사 미완료\"가 표시됩니다. 자동으로 보고되었습니다."
+  },
+  "country_capital_missing": {
+    "what": "{country}에 수도가 설정되지 않았습니다",
+    "impact": "<b>항복 판정, 보급망, 정치력이 모두 수도를 기준으로 동작</b>하므로 수도가 없으면 이 시스템들이 전부 비정상이 됩니다.",
+    "action": "수도 설정",
+    "jump": "이력 파일 › 수도"
+  },
+  "country_capital_invalid_state": {
+    "what": "{country}의 수도 값 {value}는 유효한 주 ID가 아닙니다",
+    "impact": "해당 국가에 쓸 수 있는 수도가 없으며 결과는 위와 같습니다.",
+    "action": "주 다시 선택",
+    "jump": "이력 파일 › 수도"
+  },
+  "country_capital_not_owned": {
+    "what": "{country}의 수도 {state}는 {owner} 소유입니다",
+    "impact": "게임이 이 수도 설정을 거부하고 오류를 기록하며 <b>실제 수도는 엔진이 임의로 지정합니다</b>.",
+    "action": "수도 또는 소유권 변경",
+    "jump": "이력 파일 / 주"
+  },
+  "map_state_no_land": {
+    "what": "주 {name}(#{state_id})에 호수만 있고 육지가 없습니다",
+    "impact": "이 주의 공군 기지, 로켓 발사장, 요새를 둘 곳이 없어 <b>게임 시작 시 튕깁니다</b>. 일반 실행에서는 error.log가 비어 있습니다.",
+    "action": "지도 스튜디오에서 '복구'를 누르거나 어시스턴트에게 복구를 요청한 뒤 다시 내보내세요",
+    "jump": "지도 스튜디오"
+  },
+  "country_history_final_winner_ambiguous": {
+    "what": "{country}의 역사 파일이 여러 출처에 있어 적용 버전을 확정할 수 없습니다",
+    "impact": "<b>적용되는 시작 설정이 가장 최근 편집본이 아닐 수 있습니다.</b>",
+    "action": "적용 출처 선택",
+    "jump": "이력 파일 › 출처"
+  },
+  "country_history_final_winner_inferred": {
+    "what": "{country}의 역사 파일이 여러 출처에 있어 로드 순서에 따라 {path}를 선택했습니다",
+    "impact": "대개 올바른 버전입니다."
+  },
+  "country_research_slots_missing": {
+    "what": "{id}에 연구 슬롯 수가 설정되지 않았습니다",
+    "impact": "게임은 기본값을 사용합니다.",
+    "action": "연구 슬롯 설정",
+    "jump": "이력 파일"
+  },
+  "country_research_slots_invalid": {
+    "what": "{country}의 연구 슬롯 수 {value}가 유효하지 않습니다",
+    "impact": "이 줄은 적용되지 않고 연구 슬롯은 기본값으로 되돌아갑니다.",
+    "action": "유효한 숫자로 수정",
+    "jump": "이력 파일"
+  },
+  "playtest_crash": {
+    "what": "플레이테스트 중 게임이 강제 종료되었습니다(유형: {exception})",
+    "impact": "보고서에 충돌 유형과 게임 버전이 포함되어 있어 대개 원인 콘텐츠까지 짚어낼 수 있습니다.",
+    "action": "충돌 분석 보기",
+    "jump": "모드 진단 › 플레이테스트 보고서"
+  },
+  "playtest_start_date_mismatch": {
+    "what": "게임이 실제로 로드한 시작 날짜({a})가 설계({b})와 다릅니다",
+    "impact": "<b>플레이어가 잘못된 시대로 들어갑니다</b>. {b} 기준으로 설계한 역사 콘텐츠가 전부 뒤엉킬 수 있습니다. 흔한 근본 원인: 바깥쪽 .mod 파일에 replace_path=\"common/bookmarks\"가 없는 경우입니다.",
+    "action": "수정 제안 보기",
+    "jump": "모드 진단 › 플레이테스트 보고서"
+  },
+  "playtest_runtime_diagnostics_input_invalid": {
+    "what": "플레이테스트 로그를 읽을 수 없습니다",
+    "impact": "이번 플레이테스트 진단은 결과가 없습니다.",
+    "action": "로그 다시 업로드",
+    "jump": "모드 진단 › 플레이테스트 보고서"
+  },
+  "playtest_loaded_start_date": {
+    "what": "게임이 로드한 시작 날짜를 확인했습니다: {date}",
+    "impact": "확인 정보이며 설계와 일치하면 ✅에 집계됩니다."
+  },
+  "playtest_enabled_mods": {
+    "what": "플레이테스트 시 활성화된 모드 목록을 확인했습니다",
+    "impact": "확인 정보이며 모드 충돌을 배제하는 데 사용됩니다."
+  },
+  "playtest_start_date_ok": {
+    "what": "시작 날짜가 설계와 일치합니다",
+    "impact": "통과 항목입니다."
+  },
+  "oob_air_location_missing": {
+    "what": "항공대 {name}에 배치할 주가 설정되지 않았습니다",
+    "impact": "<b>이 항공대는 게임 시작 시 등장하지 않습니다.</b>",
+    "action": "주 설정(공군 기지 필요)",
+    "jump": "시작 부대 › 공군"
+  },
+  "oob_air_location_invalid": {
+    "what": "항공대 {name}의 배치 주 {id}가 유효하지 않습니다",
+    "impact": "이 항공대는 시작 시 등장하지 않습니다. 항공대는 공군 기지가 있는 주에만 배치할 수 있습니다.",
+    "action": "주 다시 선택",
+    "jump": "시작 부대 › 공군"
+  },
+  "oob_air_equipment_type_missing": {
+    "what": "항공대 {name}에 장비 유형이 설정되지 않았습니다",
+    "impact": "<b>이 항공대는 게임 시작 시 등장하지 않습니다.</b>",
+    "action": "장비 유형 선택",
+    "jump": "시작 부대 › 공군"
+  },
+  "oob_air_equipment_type_invalid": {
+    "what": "항공대 {name}의 장비 유형 {value}가 존재하지 않습니다",
+    "impact": "이 항공대는 게임 시작 시 등장하지 않습니다.",
+    "action": "장비 다시 선택",
+    "jump": "시작 부대 › 공군"
+  },
+  "building_state_coordinate_mismatch": {
+    "what": "건물 {id}는 주 {a}에 선언되었지만 좌표는 주 {b}에 있습니다",
+    "impact": "<b>게임이 이 건물을 무시하여 등장하지 않으며</b> 오류가 로그에 기록됩니다.",
+    "action": "좌표 또는 주 수정",
+    "jump": "주 › 건물"
+  },
+  "building_coordinate_membership_missing": {
+    "what": "건물 {id}의 좌표가 프로빈스 {province}에 있는데 이 프로빈스는 어느 주에도 속하지 않습니다",
+    "impact": "맵 오류가 발생하고 <b>이 건물은 무시됩니다</b>.",
+    "action": "프로빈스에 주 지정",
+    "jump": "주 › 주 소속"
+  },
+  "building_reference_province_invalid": {
+    "what": "건물 {id}에는 유효한 {kind} 참조 프로빈스가 필요한데 현재 값은 {value}입니다",
+    "impact": "해군 기지는 인접한 바다 프로빈스를 가리켜야 하며 <b>값이 유효하지 않으면 그 항구는 사용할 수 없습니다</b>.",
+    "action": "참조 프로빈스 다시 선택",
+    "jump": "주 › 건물"
+  },
+  "duplicate_expected_province": {
+    "what": "프로그램 참조 데이터 자체 검증에 이상이 있습니다(프로빈스 목록 중복)",
+    "impact": "화면에 \"검사 미완료\"가 표시됩니다. 자동으로 보고되었습니다."
+  },
+  "duplicate_province_within_state": {
+    "what": "주 {id}가 프로빈스 {province}를 중복 기재했습니다({count}회)",
+    "impact": "중복 항목은 무시되어 대개 무해하지만 데이터 출처에 문제가 있다는 신호입니다.",
+    "action": "중복 제거",
+    "jump": "주 › 해당 주"
+  },
+  "duplicate_state_input": {
+    "what": "주 {id}가 {count}개의 입력에 나타납니다",
+    "impact": "<b>하나만 적용되며 편집 내용이 다른 쪽에 덮일 수 있습니다.</b>",
+    "action": "충돌 출처 확인",
+    "jump": "주 › 해당 주 › 출처"
+  },
+  "province_in_multiple_states": {
+    "what": "프로빈스 {province}가 주 {a}와 주 {b}에 동시에 속해 있습니다",
+    "impact": "<b>게임이 강제 종료됩니다.</b>",
+    "action": "둘 중 한 주에서 제거",
+    "jump": "주 › 해당 주"
+  },
+  "province_without_state": {
+    "what": "프로빈스 {province}가 어느 주에도 속하지 않습니다",
+    "impact": "게임은 실행되지만 <b>게임 내에 MAP_ERROR 경고가 표시됩니다</b>.",
+    "action": "소속 주 지정",
+    "jump": "주 › 해당 주"
+  },
+  "unknown_province": {
+    "what": "주 {state}가 존재하지 않는 프로빈스 {province}를 참조합니다",
+    "impact": "이 참조는 무효 토큰으로 버려지고 오류가 기록되지만 주의 나머지 부분은 정상적으로 로드됩니다.",
+    "action": "제거 또는 수정",
+    "jump": "주 › 해당 주"
+  },
+  "bookmark_raw_no_bookmark": {
+    "what": "북마크 파일 {path}에서 북마크를 하나도 읽어내지 못했습니다",
+    "impact": "<b>캠페인 선택 화면에서 이 시작 날짜가 보이지 않습니다.</b>",
+    "action": "파일 구조 확인",
+    "jump": "raw 파일 편집기"
+  },
+  "bookmark_raw_path_case_collision": {
+    "what": "두 북마크 파일이 대소문자만 다릅니다({a} / {b})",
+    "impact": "Windows에서는 하나만, Linux에서는 둘 다 적용되어 <b>플랫폼 간 동작이 달라집니다</b>.",
+    "action": "하나의 이름 변경",
+    "jump": "raw 파일 목록"
+  },
+  "descriptor_imported_replace_paths_require_full_export": {
+    "what": "이 모드에는 디렉터리 단위 replace_path 규칙이 있는데 \"자체 제작 콘텐츠만 내보내기\"가 선택되어 있습니다",
+    "impact": "<b>게임이 바닐라 디렉터리를 통째로 내리는데 대체 파일이 없어 광범위한 콘텐츠가 사라집니다.</b>",
+    "action": "전체 내보내기로 전환",
+    "jump": "내보내기 페이지 › 내보내기 방식"
+  },
+  "descriptor_replace_path_empty": {
+    "what": "replace_path \"{path}\"는 바닐라 디렉터리를 내리지만 내보내기 패키지에 이 디렉터리의 파일이 하나도 없습니다",
+    "impact": "<b>게임에서 해당 디렉터리의 내용이 전부 사라집니다.</b>",
+    "action": "파일 보충 또는 규칙 제거",
+    "jump": "내보내기 페이지 › replace_path"
+  },
+  "ideology_root_invalid": {
+    "what": "사용자 정의 ROOT 이념 \"{id}\"가 유효하지 않습니다: {reason}",
+    "impact": "손상된 common/ideologies가 작성되어 <b>이를 참조하는 모든 국가의 집권당 설정이 무효가 됩니다</b>.",
+    "action": "이념 레지스트리 수정",
+    "jump": "이념 작업대"
+  },
+  "ideology_root_submod_blocked": {
+    "what": "하위 모드에서 ROOT 이념을 교체하려고 합니다",
+    "impact": "<b>베이스 모드의 이념 정의를 지워 버립니다.</b>",
+    "action": "베이스 모드의 ROOT를 사용하거나 독립 모드로 전환",
+    "jump": "프로젝트 설정 › 종속성"
+  },
+  "raid_path_unsafe": {
+    "what": "습격 파일 {path}가 안전하지 않은 경로 때문에 건너뛰어졌습니다",
+    "impact": "<b>이 파일의 내용은 프로젝트로 가져오지 않았습니다.</b>",
+    "action": "건너뛴 파일 확인",
+    "jump": "가져오기 보고서"
+  },
+  "raid_deps_not_carried": {
+    "what": "습격이 의존하는 파일이 함께 가져와지지 않았습니다",
+    "impact": "게임에서 습격을 사용하지 못할 수 있습니다.",
+    "action": "의존 파일 보충",
+    "jump": "가져오기 › 종속성"
+  },
+  "unit_path_unsafe": {
+    "what": "하위 부대 파일 {path}가 안전하지 않은 경로 때문에 건너뛰어졌습니다",
+    "impact": "<b>이 파일의 내용은 프로젝트로 가져오지 않았습니다.</b>",
+    "action": "건너뛴 파일 확인",
+    "jump": "가져오기 보고서"
+  },
+  "factions_path_unsafe": {
+    "what": "진영 파일 {path}가 안전하지 않은 경로 때문에 건너뛰어졌습니다",
+    "impact": "<b>이 파일의 내용은 프로젝트로 가져오지 않았습니다.</b>",
+    "action": "건너뛴 파일 확인",
+    "jump": "가져오기 보고서"
+  },
+  "loc_entry_unpreserved": {
+    "what": "가져오기 중 현지화 항목 {count}개가 보존되지 않았습니다",
+    "impact": "이 텍스트들은 내보내기에 포함되지 않습니다.",
+    "action": "미보존 목록 확인",
+    "jump": "가져오기 보고서"
+  },
+  "state_raw_parse_failed": {
+    "what": "주 파일 {path}에 문법 오류가 있습니다",
+    "impact": "<b>이 파일의 주가 전부 누락됩니다.</b>",
+    "action": "오류 위치로 이동",
+    "jump": "raw 파일 편집기"
+  },
+  "sub_unit_classification_invalid": {
+    "what": "하위 부대 \"{id}\"의 분류가 유효하지 않습니다: {reason}",
+    "impact": "<b>게임이 이 하위 부대를 로드할 때 오류를 냅니다.</b>",
+    "action": "지원되는 유형 사용",
+    "jump": "하위 부대 작업대"
+  },
+  "sub_unit_source_file_collision": {
+    "what": "하위 부대 \"{id}\"가 \"{path}\"에 기록되어 기존 하위 부대 정의 파일을 덮어씁니다",
+    "impact": "<b>원본 파일의 다른 하위 부대들이 누락됩니다.</b>",
+    "action": "파일명은 프로그램에 맡기기",
+    "jump": "하위 부대 작업대"
+  },
+  "base_id_collision_rerouted": {
+    "what": "새 ID가 베이스 모드와 충돌하여 자동으로 이름을 바꿨습니다: {oldId} → {newId}",
+    "impact": "게임에는 영향이 없고 베이스 모드 내용도 그대로입니다. <b>이후 참조에는 새 ID를 사용하세요.</b>"
+  },
+  "non_additive_base_history_override": {
+    "what": "베이스 모드 국가 {tag}의 역사 파일을 직접 고쳐 쓰는 작업을 차단했습니다",
+    "impact": "<b>직접 고쳐 쓰면 원본 모드 설정을 덮어써 충돌이나 CTD까지 생길 수 있습니다</b>. 추가 방식의 대안을 제시했습니다.",
+    "action": "대안 보기",
+    "jump": "AI 대화"
+  },
+  "gateway_tool_passthrough_failed_sdk_emit": {
+    "what": "AI 게이트웨이 라우팅 오류로 이번 도구 호출이 실행되지 않았습니다",
+    "impact": "해당 AI 작업 단계는 적용되지 않았습니다.",
+    "action": "재시도 또는 모델 변경",
+    "jump": "AI 대화"
+  },
+  "content_language_export_languages_missing": {
+    "what": "{language} 콘텐츠가 있지만 해당 언어의 내보내기가 켜져 있지 않습니다",
+    "impact": "<b>관련 콘텐츠가 패키지에 포함되지 않아 게임에 현지화 키가 표시됩니다.</b>",
+    "action": "해당 언어 켜기",
+    "jump": "프로젝트 설정 › 모드 콘텐츠 언어"
+  },
+  "display_name_placeholder": {
+    "what": "{kind} {count}개에 이름이 없습니다({samples})",
+    "impact": "게임에서 ID로 표시됩니다.",
+    "action": "이름 일괄 보완",
+    "jump": "해당 작업대"
+  },
+  "effect_typo": {
+    "what": "\"{token}\"은 오타로 보입니다. 제안 교체어: \"{suggestion}\"",
+    "impact": "<b>이 줄은 적용되지 않고</b> 게임 내 안내도 없습니다. 원인 조사는 error.log 확인이 필요합니다.",
+    "action": "수정",
+    "jump": "스크립트 편집 위치"
+  },
+  "preserved_raw": {
+    "what": "raw 파일이 원본 그대로 보존되었습니다",
+    "impact": "통과 항목으로 ✅ 개수에 집계됩니다."
+  },
+  "research_bonus_as_effect": {
+    "what": "research_bonus가 효과 위치에 쓰여 있습니다",
+    "impact": "<b>적용되지 않으며</b> 보정 위치에 써야 합니다.",
+    "action": "작성 방식 수정",
+    "jump": "스크립트 편집 위치"
+  },
+  "script_position_swap_ideas_child_outside_parent": {
+    "what": "swap_ideas의 하위 항목이 상위 블록 밖에 있습니다",
+    "impact": "<b>교체가 적용되지 않습니다.</b>",
+    "action": "상위 블록 안으로 이동",
+    "jump": "스크립트 편집 위치"
+  },
+  "unknown_tech_category": {
+    "what": "기술 분류 \"{name}\"이 존재하지 않습니다",
+    "impact": "<b>이 기술은 어느 기술 트리 탭에도 나타나지 않으며</b> 연구할 수 없습니다.",
+    "action": "기존 분류 선택",
+    "jump": "기술 작업대"
+  },
+  "vanilla_seed_dlc_effects_absent": {
+    "what": "vanilla에서 시작한 프로젝트에는 바닐라 스크립트가 보관하는 추가 내용이 포함되지 않습니다(영향받는 주 {count}개)",
+    "impact": "그 스크립트에 저장된 프로빈스 단위 건물 —— 해군 기지, 벙커, 댐, 랜드마크 —— 과 함께 날짜가 붙은 역사 블록, DLC 조건부 소유권 이전, 저항도와 순응도 설정, 그리고 이름으로 읽어 들이지 않는 일부 항목도 사라집니다. 이 스테이트들을 내보내면 게임 자체 파일을 덮어씁니다. 스테이트 페이지에서 바닐라 내용을 채워 넣을 수 있습니다."
+  },
+  "ideology_undefined_standalone": {
+    "what": "캐릭터 {id}가 이 프로젝트에 정의되지 않은 이념을 사용합니다",
+    "impact": "<b>이 이념의 정의는 내보낸 모드에 기록되지 않습니다.</b> 이 이념을 쓰는 캐릭터는 게임에서 정당이 없는 지도자가 됩니다.",
+    "action": "해당 이념 정의",
+    "jump": "이념 작업대 › 새로 만들기"
+  },
+  "ideology_registry_parent_missing": {
+    "what": "이념 {id}에 상위 이념이 지정되지 않았습니다",
+    "impact": "<b>이 이념의 정의는 내보낸 모드에 기록되지 않습니다.</b> 이 이념을 쓰는 캐릭터는 게임에서 정당이 없는 지도자가 됩니다.",
+    "action": "상위 이념 선택",
+    "jump": "이념 작업대 › 해당 이념 › 상위 이념"
+  },
+  "focus_layout_same_cell": {
+    "what": "국가중점 {focus_ids}가 같은 칸({position})에 있습니다",
+    "impact": "<b>두 중점이 겹쳐 게임에는 하나만 표시됩니다.</b>",
+    "action": "하나를 다른 칸으로 이동",
+    "jump": "국가중점 트리 › 레이아웃"
+  },
+  "focus_layout_adjacent_same_row": {
+    "what": "같은 줄의 국가중점 두 개가 한 칸 간격으로 붙어 있습니다",
+    "impact": "중점 아이콘이 겹쳐 알아보기 어렵고 누르기도 불편합니다. 내용은 사라지지 않습니다.",
+    "action": "가로 간격 넓히기",
+    "jump": "국가중점 트리 › 레이아웃"
+  },
+  "focus_display_name_unproven_fallback": {
+    "what": "국가중점 {focus_id}의 {locale} 이름이 이 프로젝트에 없습니다",
+    "impact": "<b>게임에서 이 중점 이름이 현지화되지 않을 수 있습니다.</b>",
+    "action": "이름 입력",
+    "jump": "국가중점 작업대 › 해당 중점 › 이름"
+  },
+  "idea_no_modifier": {
+    "what": "국민정신 {idea_id}에 보정이 하나도 없습니다",
+    "impact": "국가에 붙어 있는 것은 보이지만 어떤 보너스나 페널티도 주지 않습니다.",
+    "action": "보정 추가",
+    "jump": "국민정신 작업대 › 해당 국민정신 › 보정"
+  },
+  "character_no_military_traits": {
+    "what": "지휘관 {tag}에게 군사 특성이 없습니다",
+    "impact": "임명할 수는 있지만 아무 보너스도 주지 않습니다.",
+    "action": "군사 특성 추가",
+    "jump": "캐릭터 작업대 › 해당 캐릭터 › 특성"
+  },
+  "bookmark_selectable_ideology_missing": {
+    "what": "북마크의 선택 가능 국가 {country_tag}에 이념이 지정되지 않았습니다",
+    "impact": "국가 선택 화면에서 이 국가의 지도자, 정당 아이콘, 국가 이름이 잘못 표시될 수 있습니다.",
+    "action": "이념 지정",
+    "jump": "북마크 작업대 › 해당 국가 › 이념"
+  },
+  "focus_tree_no_nodes": {
+    "what": "국가중점 트리 {tree_id}에 국가중점이 하나도 없습니다",
+    "impact": "트리가 비어 있어 국가중점 화면에 아무것도 표시되지 않습니다.",
+    "action": "국가중점 추가",
+    "jump": "국가중점 트리 › 해당 트리"
+  },
+  "localisation_reference_not_in_project": {
+    "what": "{id}가 참조하는 현지화 키 {loc_key}가 이 프로젝트에 없습니다",
+    "impact": "이 문구가 키 이름 그대로 표시됩니다.",
+    "action": "해당 텍스트 보완",
+    "jump": "현지화 작업대 › 새 항목"
+  },
+  "mod_folder_name": {
+    "what": "모드 폴더 이름 {folder}에 HOI4가 허용하지 않는 문자가 있습니다",
+    "impact": "내보낸 폴더 이름은 바뀌지만 런처에 표시되는 이름은 그대로입니다.",
+    "action": "영문자, 숫자, 밑줄 사용",
+    "jump": "내보내기 설정 › 폴더 이름"
+  },
+  "province_double_mapping": {
+    "what": "프로빈스 {province_id}가 주 {state_ids}에 동시에 속해 있습니다",
+    "impact": "<b>게임이 로딩 중 강제 종료됩니다.</b>",
+    "action": "한쪽 주에서 해당 프로빈스 제거",
+    "jump": "주 › 해당 주 › 프로빈스"
+  },
+  "doctrine_track_unresolved": {
+    "what": "교리 {id}가 가리키는 계통이 이 프로젝트에도 베이스 모드에도 없습니다",
+    "impact": "베이스 모드가 그 계통을 제거했다면 교리 트리가 잘못 표시될 수 있습니다.",
+    "action": "기존 계통으로 다시 지정",
+    "jump": "교리 › 해당 교리 › 계통"
+  },
+  "event_namespace_mismatch": {
+    "what": "이벤트 ID 접두사가 네임스페이스와 일치하지 않습니다",
+    "impact": "호출하는 쪽이 이벤트를 찾지 못해 이벤트가 발동하지 않을 수 있습니다.",
+    "action": "접두사를 네임스페이스에 맞추기",
+    "jump": "이벤트 › 해당 이벤트 › ID"
+  },
+  "event_no_options": {
+    "what": "이벤트 {event_id}에 선택지가 하나도 없습니다",
+    "impact": "이벤트가 떠도 누를 수 있는 버튼이 없습니다.",
+    "action": "선택지 추가",
+    "jump": "이벤트 › 해당 이벤트 › 선택지"
+  },
+  "tech_circular_prereq": {
+    "what": "기술 {tech_id}와 다른 기술이 서로를 선행 조건으로 요구합니다",
+    "impact": "실측하지 않아 게임 내 영향은 알 수 없습니다.",
+    "action": "선행 조건 중 하나 해제",
+    "jump": "기술 › 해당 기술 › 선행 조건"
+  },
+  "tech_folder_unknown": {
+    "what": "기술 {id}의 폴더를 게임이 알지 못합니다",
+    "impact": "실측하지 않아 게임 내 영향은 알 수 없습니다.",
+    "action": "알려진 폴더 사용",
+    "jump": "기술 › 해당 기술 › 폴더"
+  },
+  "focus_effective_default_multiple": {
+    "what": "여러 국가중점 트리가 동시에 기본값으로 표시되어 있습니다({default_tree_ids})",
+    "impact": "실측하지 않아 게임 내 영향은 알 수 없습니다.",
+    "action": "기본값을 하나만 남기기",
+    "jump": "국가중점 트리 목록 › 기본값 표시"
+  },
+  "focus_created_primary_id_collision": {
+    "what": "국가중점 트리 {tree_id}가 기록할 {canonical_path}에 이미 다른 내용이 있습니다",
+    "impact": "실측하지 않아 게임 내 영향은 알 수 없습니다.",
+    "action": "충돌하지 않는 ID로 변경",
+    "jump": "국가중점 작업대 › 해당 중점 › ID"
+  },
+  "focus_shared_pool_scope_ignored": {
+    "what": "국가중점 트리 {tree_id}에 설정한 공유 범위가 내보내기에 반영되지 않습니다",
+    "impact": "실측하지 않아 게임 내 영향은 알 수 없습니다.",
+    "action": "",
+    "jump": "국가중점 트리 › 해당 트리 › 공유 범위"
+  },
+  "impassable_category_mismatch": {
+    "what": "{count}개의 통행 불가 스테이트가 바닐라에서는 통행 불가와 함께 쓰지 않는 분류를 사용합니다",
+    "impact": "통행 불가는 부대 진입과 프로빈스 단위 건설을 막고, 게임에서는 통행 불가 지형으로 표시됩니다. 바닐라는 wasteland 또는 enclave에만 함께 쓰므로 다른 분류라면 실수로 체크했을 가능성이 큽니다. 내보내기를 막지 않으며 데이터도 바꾸지 않았습니다 —— 배포 전에 한 번 확인해 보세요."
+  },
+  "impassable_without_force_link": {
+    "what": "통행 불가 주 {count}개가 어느 이웃 주의 소유인지 밝히지 않았습니다",
+    "impact": "통행 불가 지역은 자체 소유자가 없어서 소유권을 물려받을 이웃 주가 필요합니다. 바닐라는 통행 불가 주 21개 모두에 force_link_ownership_to 를 설정합니다(1.19.2에서 실측 — 이 필드는 위키에 없습니다). 내보내기를 막지 않고 데이터도 바꾸지 않습니다 — 새로 저장하는 주만 입력이 필요합니다.",
+    "action": "각 주를 열어 소유해야 할 이웃 주를 고르세요",
+    "jump": "주 › 이 주 › 소유권 추종 대상"
+  },
+  "bookmark_filter_registry_missing": {
+    "what": "시나리오 필터를 확인하지 못했습니다",
+    "impact": "프로젝트에 지원되는 게임 버전이 설정되지 않아 필터 호환성을 확인할 수 없습니다.",
+    "action": "시나리오 설정 확인",
+    "jump": "시나리오 › 캠페인 설정"
+  },
+  "bookmark_default_multiple": {
+    "what": "시나리오 {default_count}개가 기본값으로 지정되어 있습니다",
+    "impact": "시작할 때 어느 시나리오를 선택해야 할지 명확하지 않습니다.",
+    "action": "기본 시나리오 선택",
+    "jump": "시나리오 › 기본 시나리오"
+  },
+  "bookmark_default_country_not_interesting": {
+    "what": "기본 국가 {default_country}가 이 시나리오의 선택 가능한 국가에 없습니다",
+    "impact": "게임에서 의도한 국가가 미리 선택되지 않을 수 있습니다.",
+    "action": "선택 가능한 국가 확인",
+    "jump": "시나리오 › 선택 가능한 국가"
+  },
+  "bookmark_country_label_invalid": {
+    "what": "시나리오의 국가에 지원되지 않는 필터 라벨이 있습니다",
+    "impact": "해당 국가가 의도한 필터에 표시되지 않을 수 있습니다.",
+    "action": "국가 라벨 확인",
+    "jump": "시나리오 › 선택 가능한 국가 › 라벨"
+  },
+  "bookmark_country_labels_filter_missing": {
+    "what": "국가에 라벨이 있지만 라벨 필터가 활성화되지 않았습니다",
+    "impact": "플레이어가 이 라벨로 국가 목록을 필터링할 수 없습니다.",
+    "action": "시나리오 필터 확인",
+    "jump": "시나리오 › 필터"
+  },
+  "bookmark_filter_invalid_for_target": {
+    "what": "대상 게임 버전에서 지원하지 않는 시나리오 필터가 있습니다",
+    "impact": "게임에서 필터가 의도대로 작동하지 않을 수 있습니다.",
+    "action": "시나리오 필터 확인",
+    "jump": "시나리오 › 필터"
+  },
+  "bookmark_filter_country_label_semantics": {
+    "what": "국가 라벨을 시나리오 필터로 사용하고 있습니다",
+    "impact": "필터 버튼에 의도한 국가가 표시되지 않을 수 있습니다.",
+    "action": "필터와 라벨 확인",
+    "jump": "시나리오 › 필터 및 국가 라벨"
+  },
+  "focus_layout_missing_focus_id": {
+    "what": "스크립트 ID가 없는 중점이 있습니다",
+    "impact": "게임에서 이 중점을 정확히 식별하거나 참조할 수 없습니다.",
+    "action": "중점 ID 확인",
+    "jump": "중점 트리 › 중점 상세"
+  },
+  "focus_layout_duplicate_focus_id": {
+    "what": "여러 중점이 ID {focus_id}를 사용하고 있습니다",
+    "impact": "이 ID에 대한 참조가 다른 중점을 가리킬 수 있습니다.",
+    "action": "중복 ID 확인",
+    "jump": "중점 트리 › 중점 상세"
+  },
+  "focus_layout_relative_cycle": {
+    "what": "중점의 위치 참조가 순환합니다: {cycle}",
+    "impact": "게임에서 이 순환에 포함된 모든 상대 위치를 계산할 수 없습니다.",
+    "action": "위치 참조 확인",
+    "jump": "중점 트리 › 위치"
+  },
+  "focus_layout_missing_anchor": {
+    "what": "중점 {focus_id}가 존재하지 않는 위치 기준 {relative_position_id}를 참조합니다",
+    "impact": "이번 출력에서 해당 중점의 상대 위치를 계산할 수 없습니다.",
+    "action": "위치 기준 확인",
+    "jump": "중점 트리 › 위치"
+  },
+  "focus_layout_replacement_global_shift": {
+    "what": "대체 중점 트리 전체가 이동되었습니다",
+    "impact": "다른 분기와의 정렬이 달라졌을 수 있습니다.",
+    "action": "트리 배치 확인",
+    "jump": "중점 트리 › 배치"
+  },
+  "focus_layout_unknown_mode": {
+    "what": "중점 배치 확인을 완료하지 못했습니다",
+    "impact": "프로그램에서 이 트리의 배치 모드를 해석하지 못해 배치가 확인되지 않았습니다.",
+    "action": "중점 트리 확인",
+    "jump": "중점 트리 › 배치"
+  },
+  "timeline_base_timeline_source_unregistered": {
+    "what": "기반 Mod의 캠페인 날짜가 확인되지 않았습니다",
+    "impact": "선택한 날짜가 기반 Mod의 시간대와 다를 수 있습니다.",
+    "action": "캠페인 날짜 확인",
+    "jump": "시나리오 › 캠페인 설정"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "headline": "<mono>{count}</mono> Referenzen verweisen auf Inhalte aus Ländern, die Sie nicht importiert haben. Das ist normal.",
+  "tooltipTitle": "Länderübergreifende Referenzsemantik",
+  "tooltipContent": "Eine länderübergreifende Referenz bedeutet, dass die Mod-Datei eines Landes die Entität eines anderen Landes (Charakter / Idee / Fokus, etc.) verweist. HOI4-Motoren-Mod-loading-Regel: Der Motor lädt alle Mod-Dateien zusammen, und jedes Land Ereignis kann für jedes Land Feuer, solange sein Auslöser erfüllt ist. Im Editor: Referenzen werden durch das aktive Land gefiltert, und die Betrachtung sie nicht Ihr Primärland wechseln. Hinzufügen eines sekundären Landes zieht die verwandten Entitäten in, ohne Ihre primäre Ansicht zu beeinflussen. Beispiel: britain.1 (die Tizard-Mission) in Britannien.txt hat trigger tag = USA. Der \"Besitzer\" des Ereignisses ist USA, aber die Datei lebt in Britain.txt und sein Namespace ist britain, so dass das Cross-ref-Banner vorschlägt, USA oder ENG als sekundäres Land hinzuzufügen, um die Entität in sich zu ziehen.",
+  "reason": "Diese verweisen fast immer auf den Inhalt anderer Länder und sind harmlos.<b>.... zurück in den ursprünglichen mod. ( Path B) Export hält sie intakt</b>, also ist nichts verloren. Wollen Sie den Inhalt auch im Editor? Fügen Sie ein Land unten.<b>Ihr Hauptland wird sich nicht ändern.</b>",
+  "suggestLabel": "Vorschläge für Länder, die dies hinzufügen (nach Referenzzahl):",
+  "alreadyInProject": "{tag} ist bereits im Projekt",
+  "expandTitle": "Das Hinzufügen von {tag} als Sekundärland erweitert die Länderliste des Projekts. Es wechselt nicht Ihr Primärland; die Primäransicht bleibt unverändert.",
+  "added": "(zusätzlich)",
+  "expandAddCountry": "Land hinzufügen",
+  "addingCountry": "Hinzufügen von {tag}...",
+  "collapseDetails": "Details zum Zusammenbruch",
+  "viewDetails": "Details anzeigen ({count} Arten)",
+  "hideScope": "Überprüfungsbereich ausblenden",
+  "showScope": "Überprüfungsumfang",
+  "currentScope": "Derzeitiger Kontrollumfang:",
+  "none": "(keine)",
+  "scopeNote": "Referenztypen, die noch nicht erfasst sind (Fokus / Entscheidung / Eigenschaft / Technik, etc.) werden in späteren Chargen hinzugefügt. \"Nicht gemeldet\" bedeutet nicht \"kein Problem\".",
+  "moreHidden": "...und{hidden}mehr Arten nicht gezeigt (von{total}Insgesamt)",
+  "egPrefix": "e.g. ",
+  "unmodeled": {
+    "headline": "<mono>{count}</mono> Verweise auf Inhalte gefunden, die das Programm nicht modelliert",
+    "tooltipTitle": "Was ist \"unmodellierter Inhalt\"?",
+    "tooltipContent": "Das Programm modelliert 9 Entitätstypen (Idee / Ereignis / Fokus / Entscheidung / Charakter / Eigenschaft / Technologie / Meinungsmodifikator / MIO). Andere HOI4-Kategorien — Scripted Effects/Trigger, Ideologien, kosmetische Tags, Spielregeln, Ausrüstung, Spezialprojekte — werden nicht modelliert, daher kann das Programm ihre Definitionsdateien nicht neu erzeugen.\n\nVerweise darauf sind gültiges HOI4-Skript. Ein Export „in die ursprüngliche Mod zurückführen“ (Pfad B) behält die ursprünglichen Definitionsdateien, sodass die Verweise aufgelöst werden. Ein Export von Grund auf (Pfad A) kann sie nicht nachbilden; die Verweise liefen ins Leere.\n\nDas ist ein Hinweis, kein Fehler — das Programm zeigt nur, welcher Exportpfad sie erhält.",
+    "note": "Diese Verweise zeigen auf Inhalte, die das Programm noch nicht modelliert (z. B. eigene scripted_effect / scripted_trigger, eigene Ideologien, kosmetische Tags). Sie bleiben <b>nur beim Export „in die ursprüngliche Mod zurückführen“ (Pfad B)</b> erhalten; ein Export von Grund auf (Pfad A) lässt sie ins Leere laufen. Wenn du über Pfad B exportierst, ist nichts zu tun.",
+    "viewDetails": "Details anzeigen ({count} Arten)",
+    "collapseDetails": "Details zum Zusammenbruch",
+    "cat": {
+      "scripted_effect_trigger": "Benutzerdefinierte scripted_effect / trigger",
+      "ideology": "Benutzerdefinierte Ideologie (Subideologie)",
+      "cosmetic_tag": "Kosmetische Markierung (Landesumbenennung)",
+      "game_rule": "Spielregel",
+      "equipment": "Benutzerdefinierte Ausrüstung",
+      "special_project": "Sonderprojekt"
+    }
+  }
+}

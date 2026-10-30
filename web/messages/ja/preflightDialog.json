@@ -1,0 +1,26 @@
+{
+  "title": "インポート前の概要",
+  "subtitle": "インポートを開始する前に、スキャン結果を確認してください。大規模な Mod には時間がかかる場合があります。バックグラウンド実行を有効にすると、インポート中も作業を続けられます。",
+  "stat": {
+    "countries": "国家（TAG）",
+    "characters": "キャラクター",
+    "ideas": "国民精神",
+    "focus_trees": "国家方針ツリー",
+    "events": "イベント",
+    "decisions": "ディシジョン",
+    "dynamic_modifiers": "動的補正",
+    "superevents": "スーパーイベント"
+  },
+  "etaLabel": "推定時間",
+  "etaUnitMinutes": "{minutes}分",
+  "etaUnitSeconds": "約{seconds}秒",
+  "etaUnit": "（{files}ファイル、{mb} MB）",
+  "etaFallback": "—（データなし）",
+  "etaHint": "合計ファイルサイズに基づく概算です。実際の時間はディスクとパソコンの性能によって異なります。",
+  "backgroundToggleLabel": "バックグラウンドでインポートを実行",
+  "backgroundToggleHint": "このダイアログを閉じて作業を続けられます。右下のウィジェットに進行状況が表示されます。",
+  "ctaContinue": "インポートを開始",
+  "ctaCancel": "キャンセル",
+  "statFallback": "—",
+  "notAvailableHint": "「—」の件数はスキャン中には取得できません。インポート後の概要に表示されます。"
+}

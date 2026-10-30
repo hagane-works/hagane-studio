@@ -1,0 +1,2460 @@
+{
+ "reports": [
+  {
+   "name": "default|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "report_only",
+      "suggestion": "GER_war_economy",
+      "detail": "unresolved target is one edit away from known id GER_war_economy",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.unknown",
+      "status": "unknown",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "catalog coverage is incomplete, so absence cannot be established",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "default|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.missing",
+      "status": "missing",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the target is absent from every complete catalog for this type",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "fatal-decision|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": [
+     [
+      "add_ideas",
+      "idea"
+     ]
+    ]
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "blocker",
+      "suggestion": "GER_war_economy",
+      "detail": "unresolved target is one edit away from known id GER_war_economy",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.unknown",
+      "status": "unknown",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "catalog coverage is incomplete, so absence cannot be established",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 1
+   }
+  },
+  {
+   "name": "fatal-decision|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": [
+     [
+      "add_ideas",
+      "idea"
+     ]
+    ]
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.missing",
+      "status": "missing",
+      "impact": "blocker",
+      "suggestion": null,
+      "detail": "the target is absent from every complete catalog for this type",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 1
+   }
+  },
+  {
+   "name": "expects-base-no-index|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": true,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "report_only",
+      "suggestion": "GER_war_economy",
+      "detail": "unresolved target is one edit away from known id GER_war_economy",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.base_mod_not_indexed",
+      "status": "base_mod_not_indexed",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the project declares a base mod, but this target type has no base index",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "expects-base-no-index|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": true,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.base_mod_not_indexed",
+      "status": "base_mod_not_indexed",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the project declares a base mod, but this target type has no base index",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "expects-base-indexed|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": true,
+    "base_indexed_types": [
+     "decision",
+     "focus",
+     "idea"
+    ],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "report_only",
+      "suggestion": "GER_war_economy",
+      "detail": "unresolved target is one edit away from known id GER_war_economy",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.unknown",
+      "status": "unknown",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "catalog coverage is incomplete, so absence cannot be established",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "expects-base-indexed|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": true,
+    "base_indexed_types": [
+     "decision",
+     "focus",
+     "idea"
+    ],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.missing",
+      "status": "missing",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the target is absent from every complete catalog for this type",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "explicit-typo|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [
+     [
+      [
+       "focus",
+       "GER_ghost_focus"
+      ],
+      "GER_other_focus"
+     ]
+    ],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "report_only",
+      "suggestion": "GER_war_economy",
+      "detail": "unresolved target is one edit away from known id GER_war_economy",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "report_only",
+      "suggestion": "GER_other_focus",
+      "detail": "unresolved target is one edit away from known id GER_other_focus",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "explicit-typo|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [
+     [
+      [
+       "focus",
+       "GER_ghost_focus"
+      ],
+      "GER_other_focus"
+     ]
+    ],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.missing",
+      "status": "missing",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the target is absent from every complete catalog for this type",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "incomplete-types|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.typo",
+      "status": "typo",
+      "impact": "report_only",
+      "suggestion": "GER_war_economy",
+      "detail": "unresolved target is one edit away from known id GER_war_economy",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.unknown",
+      "status": "unknown",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "catalog coverage is incomplete, so absence cannot be established",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "incomplete-types|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.unknown",
+      "status": "unknown",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "catalog coverage is incomplete, so absence cannot be established",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "ambiguous-typo|main",
+   "text": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economi\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economv",
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "unlock_decision_tooltip",
+     "target_type": "decision",
+     "target_id": "GER_mobilize",
+     "source_span": {
+      "start_offset": 82,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 29,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 56,
+      "end_offset": 94,
+      "start_line": 4,
+      "start_column": 3,
+      "end_line": 4,
+      "end_column": 41
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_war_economi",
+     "source_span": {
+      "start_offset": 109,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 15,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "parent_path": [
+      "focus",
+      "completion_reward"
+     ],
+     "assignment_span": {
+      "start_offset": 97,
+      "end_offset": 124,
+      "start_line": 5,
+      "start_column": 3,
+      "end_line": 5,
+      "end_column": 30
+     },
+     "boolean_ancestry": []
+    },
+    {
+     "effect_name": "has_completed_focus",
+     "target_type": "focus",
+     "target_id": "GER_ghost_focus",
+     "source_span": {
+      "start_offset": 178,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 26,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "parent_path": [
+      "focus",
+      "available",
+      "AND"
+     ],
+     "assignment_span": {
+      "start_offset": 156,
+      "end_offset": 193,
+      "start_line": 9,
+      "start_column": 4,
+      "end_line": 9,
+      "end_column": 41
+     },
+     "boolean_ancestry": [
+      "available",
+      "AND"
+     ]
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.resolved",
+      "status": "resolved",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "target exists in a project, vanilla, or indexed base-mod catalog",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "unlock_decision_tooltip",
+       "target_type": "decision",
+       "target_id": "GER_mobilize",
+       "source_span": {
+        "start_offset": 82,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 29,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 56,
+        "end_offset": 94,
+        "start_line": 4,
+        "start_column": 3,
+        "end_line": 4,
+        "end_column": 41
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.missing",
+      "status": "missing",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the target is absent from every complete catalog for this type",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_war_economi",
+       "source_span": {
+        "start_offset": 109,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 15,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "parent_path": [
+        "focus",
+        "completion_reward"
+       ],
+       "assignment_span": {
+        "start_offset": 97,
+        "end_offset": 124,
+        "start_line": 5,
+        "start_column": 3,
+        "end_line": 5,
+        "end_column": 30
+       },
+       "boolean_ancestry": []
+      }
+     },
+     {
+      "code": "cross_ref.unknown",
+      "status": "unknown",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "catalog coverage is incomplete, so absence cannot be established",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "has_completed_focus",
+       "target_type": "focus",
+       "target_id": "GER_ghost_focus",
+       "source_span": {
+        "start_offset": 178,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 26,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "parent_path": [
+        "focus",
+        "available",
+        "AND"
+       ],
+       "assignment_span": {
+        "start_offset": 156,
+        "end_offset": 193,
+        "start_line": 9,
+        "start_column": 4,
+        "end_line": 9,
+        "end_column": 41
+       },
+       "boolean_ancestry": [
+        "available",
+        "AND"
+       ]
+      }
+     }
+    ],
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "output_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  },
+  {
+   "name": "ambiguous-typo|cjk",
+   "text": "name = \"德意志国\"\nadd_ideas = GER_missing_idea\n",
+   "catalog": {
+    "project_ids": {
+     "decision": [
+      "GER_mobilize"
+     ],
+     "idea": [
+      "GER_war_economv",
+      "GER_war_economy"
+     ]
+    },
+    "vanilla_ids": {
+     "focus": [
+      "GER_other_focus"
+     ]
+    },
+    "base_mod_ids": {},
+    "complete_types": [
+     "decision",
+     "idea"
+    ],
+    "expects_base_mod": false,
+    "base_indexed_types": [],
+    "typo_suggestions": [],
+    "fatal_reference_kinds": []
+   },
+   "candidates": [
+    {
+     "effect_name": "add_ideas",
+     "target_type": "idea",
+     "target_id": "GER_missing_idea",
+     "source_span": {
+      "start_offset": 26,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 13,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "parent_path": [],
+     "assignment_span": {
+      "start_offset": 14,
+      "end_offset": 42,
+      "start_line": 2,
+      "start_column": 1,
+      "end_line": 2,
+      "end_column": 29
+     },
+     "boolean_ancestry": []
+    }
+   ],
+   "report": {
+    "findings": [
+     {
+      "code": "cross_ref.missing",
+      "status": "missing",
+      "impact": "report_only",
+      "suggestion": null,
+      "detail": "the target is absent from every complete catalog for this type",
+      "repair_route": "cross_ref.explicit_repair",
+      "candidate": {
+       "effect_name": "add_ideas",
+       "target_type": "idea",
+       "target_id": "GER_missing_idea",
+       "source_span": {
+        "start_offset": 26,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 13,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "parent_path": [],
+       "assignment_span": {
+        "start_offset": 14,
+        "end_offset": 42,
+        "start_line": 2,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 29
+       },
+       "boolean_ancestry": []
+      }
+     }
+    ],
+    "source_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "output_sha256": "a8441bed74654091c31cb6ae1a30d11a825251f238709637614b70d471265734",
+    "text_unchanged": true,
+    "blocker_count": 0
+   }
+  }
+ ],
+ "plans": [
+  {
+   "label": "replace",
+   "finding_index": null,
+   "plan": {
+    "action": "replace_target",
+    "applicable": true,
+    "source_span": {
+     "start_offset": 109,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 15,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "before": "GER_war_economi",
+    "after": "GER_war_economy",
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "reason": "explicit target replacement requested",
+    "target_id": "GER_war_economi",
+    "replacement_id": "GER_war_economy"
+   },
+   "candidate": {
+    "effect_name": "add_ideas",
+    "target_type": "idea",
+    "target_id": "GER_war_economi",
+    "source_span": {
+     "start_offset": 109,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 15,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "parent_path": [
+     "focus",
+     "completion_reward"
+    ],
+    "assignment_span": {
+     "start_offset": 97,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 3,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "boolean_ancestry": []
+   },
+   "replacement_id": "GER_war_economy",
+   "delete_assignment": false,
+   "applied": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\tadd_ideas = GER_war_economy\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n"
+  },
+  {
+   "label": "delete-ok",
+   "finding_index": null,
+   "plan": {
+    "action": "delete_assignment",
+    "applicable": true,
+    "source_span": {
+     "start_offset": 97,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 3,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "before": "add_ideas = GER_war_economi",
+    "after": "",
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "reason": "explicit assignment deletion requested",
+    "target_id": "GER_war_economi",
+    "replacement_id": null
+   },
+   "candidate": {
+    "effect_name": "add_ideas",
+    "target_type": "idea",
+    "target_id": "GER_war_economi",
+    "source_span": {
+     "start_offset": 109,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 15,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "parent_path": [
+     "focus",
+     "completion_reward"
+    ],
+    "assignment_span": {
+     "start_offset": 97,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 3,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "boolean_ancestry": []
+   },
+   "replacement_id": null,
+   "delete_assignment": true,
+   "applied": "focus = {\n\tid = GER_rearmament\n\tcompletion_reward = {\n\t\tunlock_decision_tooltip = GER_mobilize\n\t\t\n\t}\n\tavailable = {\n\t\tAND = {\n\t\t\thas_completed_focus = GER_ghost_focus\n\t\t}\n\t}\n}\n"
+  },
+  {
+   "label": "delete-refused-boolean",
+   "finding_index": null,
+   "plan": {
+    "action": "delete_assignment",
+    "applicable": false,
+    "source_span": {
+     "start_offset": 156,
+     "end_offset": 193,
+     "start_line": 9,
+     "start_column": 4,
+     "end_line": 9,
+     "end_column": 41
+    },
+    "before": "has_completed_focus = GER_ghost_focus",
+    "after": "has_completed_focus = GER_ghost_focus",
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "reason": "automatic deletion refused because boolean ancestry may change semantics: available > AND",
+    "target_id": "GER_ghost_focus",
+    "replacement_id": null
+   },
+   "candidate": {
+    "effect_name": "has_completed_focus",
+    "target_type": "focus",
+    "target_id": "GER_ghost_focus",
+    "source_span": {
+     "start_offset": 178,
+     "end_offset": 193,
+     "start_line": 9,
+     "start_column": 26,
+     "end_line": 9,
+     "end_column": 41
+    },
+    "parent_path": [
+     "focus",
+     "available",
+     "AND"
+    ],
+    "assignment_span": {
+     "start_offset": 156,
+     "end_offset": 193,
+     "start_line": 9,
+     "start_column": 4,
+     "end_line": 9,
+     "end_column": 41
+    },
+    "boolean_ancestry": [
+     "available",
+     "AND"
+    ]
+   },
+   "replacement_id": null,
+   "delete_assignment": true,
+   "applied": null
+  },
+  {
+   "label": "delete-no-assignment-span",
+   "finding_index": null,
+   "plan": {
+    "action": "delete_assignment",
+    "applicable": false,
+    "source_span": {
+     "start_offset": 109,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 15,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "before": "GER_war_economi",
+    "after": "GER_war_economi",
+    "source_sha256": "a3b132cb567ce7cdf0ba51c112ecd3600b5fd0a379c194a01c09bd82386740c4",
+    "reason": "assignment span is required for deletion",
+    "target_id": "GER_war_economi",
+    "replacement_id": null
+   },
+   "candidate": {
+    "effect_name": "add_ideas",
+    "target_type": "idea",
+    "target_id": "GER_war_economi",
+    "source_span": {
+     "start_offset": 109,
+     "end_offset": 124,
+     "start_line": 5,
+     "start_column": 15,
+     "end_line": 5,
+     "end_column": 30
+    },
+    "parent_path": [],
+    "assignment_span": null,
+    "boolean_ancestry": []
+   },
+   "replacement_id": null,
+   "delete_assignment": true,
+   "applied": null
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{
+  "summary": "⚠ 설정한 뒤 읽지 않은 플래그가 {count}개 있습니다",
+  "summaryNote": "(국가중점, 이벤트, 결정 연쇄가 깨졌을 수 있다는 초기 경고)",
+  "fix": "수정: 국가중점, 결정, 이벤트의 trigger / available / visible에서 <code>has_country_flag = {flag}</code>로 플래그를 읽거나, 필요 없다면 <code>set_country_flag</code>를 삭제하세요. 이 검사는 아직 <code>modify_country_flag</code> 또는 <code>clr_country_flag</code>로 바뀐 플래그를 추적하지 않습니다."
+}

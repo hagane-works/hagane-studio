@@ -1,0 +1,18 @@
+{
+  "noun": {
+    "idea": "idea (national focus / national spirit)",
+    "character": "character",
+    "event": "event",
+    "decision": "decision",
+    "focus_node": "focus (focus-tree node)",
+    "tech": "technology"
+  },
+  "title": "Edit imported {noun}",
+  "desc": "<mono>{label}</mono> comes from vanilla or a loaded mod — what happens if you edit it?",
+  "keepImportedTitle": "Keep the original imported",
+  "keepImportedDesc": "Discard this change. Export keeps the vanilla or mod original.",
+  "overrideTitle": "Override as creator edit",
+  "overrideDesc": "After you save, this becomes your own edit and export overwrites the vanilla or mod original. The id stays the same.",
+  "createCopyTitle": "Create a new copy (change id)",
+  "createCopyDesc": "After you save, the imported original stays and you get a standalone {entityType}. Both exist in the build."
+}

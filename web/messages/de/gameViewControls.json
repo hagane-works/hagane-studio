@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "Kartenstudio · Linksklick malt, Rechtsziehen verschiebt die Karte, Mausrad zoomt"
+  },
+  "refresh": "Aktualisieren",
+  "refreshing": "Spielvorschau wird aktualisiert…",
+  "refreshed": "Aktualisiert",
+  "startScreens": "Szenario (F2)",
+  "startScreensBack": "Zurück zum Spiel (F2)",
+  "startScreensHint": "Szenario- und Länderauswahl öffnen, um Szenario oder Land zu wechseln; Tastenkürzel F2",
+  "unsupportedControl": "„{control}“ ist in Game View noch nicht verfügbar.",
+  "uiEdit": "UI bearbeiten",
+  "exitUIEdit": "UI-Bearbeitung verlassen",
+  "textEdit": "Inhalte bearbeiten",
+  "exitTextEdit": "Inhaltsbearbeitung verlassen",
+  "mapStudio": "Kartenstudio",
+  "exitMapStudio": "Kartenstudio beenden",
+  "mapStudioHint": "Male deine eigene Welt direkt auf die Weltkarte: Gelände und Länder, dann erzeuge sie und speichere sie als neue Welt.",
+  "mapStudioSaved": "Neue Welt gespeichert",
+  "mapStudioSavedBody": "{states} Staaten. Die Karte ist jetzt die Welt, die du gemalt hast.",
+  "uiEditHint": "Bilder und Texte der Oberfläche bearbeiten. Ein Klick wählt ein Element aus, statt seine Schaltfläche auszulösen.",
+  "textEditHint": "Entscheidungen, Charaktere, Schwerpunkte und andere Inhalte bearbeiten. Schaltflächen bleiben aktiv; ein Klick auf eine Provinz bearbeitet Gelände, Staat und Namen.",
+  "inspect": {
+    "viewHint": "Ansichtsmodus: Klicke auf eine Technologie, um Details zu sehen. Änderungen sind im Inhaltseditor möglich.",
+    "startYear": "Startjahr",
+    "status": "Status",
+    "researchCost": "Forschungskosten",
+    "approxDays": "Geschätzte Dauer",
+    "days": "{days} Tage",
+    "position": "Position im Baum",
+    "icon": "Symbol",
+    "leadsTo": "Führt zu",
+    "mutuallyExclusive": "Gegenseitig ausgeschlossen",
+    "subTechnologies": "Untertechnologien",
+    "none": "Keine",
+    "enterEdit": "Inhaltseditor öffnen",
+    "states": {
+      "researched": "Erforscht",
+      "available": "Verfügbar",
+      "unavailable": "Gesperrt"
+    }
+  },
+  "backToWorkbench": "Zurück zur Werkbank",
+  "loadingTitle": "Spielbildschirm wird geladen",
+  "loadingProgress": "{done} von {total} bereit",
+  "loadingStarting": "Verbinde…",
+  "loadingBusy": "Wird geladen…",
+  "continuousPanelMove": "Ziehen, um das Feld der fortlaufenden Schwerpunkte beiseitezuschieben (nur in diesem Fenster, nicht in der Mod); Doppelklick setzt es zurück",
+  "continuousPanelPlace": "Ziehen, um festzulegen, wo die Mod das Feld der fortlaufenden Schwerpunkte platziert",
+  "alertsMore": "Alle Warnungen anzeigen ({count} weitere)",
+  "alertsLess": "Warnungen einklappen"
+}

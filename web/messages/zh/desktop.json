@@ -1,0 +1,95 @@
+{
+  "setup": {
+    "title": "欢迎使用 Hagane Works",
+    "intro": "选一个存放项目的创作目录。每个项目都是里面的一个普通文件夹，可以直接复制、备份或用版本管理。",
+    "projectsDirTitle": "创作目录",
+    "projectsDirHelp": "每个项目都会存成这里的一个文件夹。选一个空文件夹，或者你之前给 Hagane Works 用过的文件夹。",
+    "gameDirTitle": "钢铁雄心 4 安装目录",
+    "gameDirHelp": "游戏预览和原版数据都从你自己安装的游戏里读取，本程序不附带任何游戏文件。",
+    "gameFound": "{dir}（版本 {version}）",
+    "gameMissing": "没有自动找到。请选择包含 hoi4.exe 的文件夹。",
+    "notChosen": "尚未选择",
+    "choose": "选择…",
+    "start": "开始"
+  },
+  "folderPicker": {
+    "up": "上一级",
+    "pathPlaceholder": "输入文件夹路径",
+    "go": "前往",
+    "empty": "这里没有文件夹。",
+    "cancel": "取消",
+    "choose": "使用此文件夹"
+  },
+  "settings": {
+    "open": "设置",
+    "title": "Hagane Works 设置",
+    "version": "版本 {version}",
+    "projectsDir": "创作目录",
+    "gameDir": "钢铁雄心 4 安装目录",
+    "modDir": "“安装 Mod”使用的 mod 目录",
+    "change": "更改…",
+    "cwtools": "CWTools 规则（可选）",
+    "cwtoolsMissing": "未找到",
+    "cwtoolsModifiers": "已读取 {count} 个修正名称",
+    "cwtoolsAutomatic": "自动查找",
+    "cwtoolsAbout": "可选，仅用于导出时检查修正名称；这些规则来自第三方项目 CWTools（MIT 许可），可从 <link>github.com/cwtools/cwtools-hoi4-config</link> 下载。",
+    "port": "端口",
+    "portSave": "保存",
+    "portInUse": "当前使用：{port}",
+    "portAbout": "Hagane Works 在本机监听的端口，留空即用默认端口。修改后在下次启动程序时生效。窗口记住的偏好（主题、语言、收藏）跟着地址走，换了端口就会从头开始。",
+    "cpu": "CPU 占用",
+    "cpuOne": "1 个核心",
+    "cpuHalf": "50%（{cores} 个核心）",
+    "cpuAll": "100%（{cores} 个核心）",
+    "cpuAbout": "导入 Mod 或读取游戏时，Hagane Works 最多可以占用多少个处理器核心。占得少，其他程序更流畅；全部使用最快。",
+    "avatar": {
+      "title": "本机头像",
+      "about": "可选择内置桌宠或自己的图片。头像只保存在这台电脑上，不会加入模组导出。",
+      "currentAlt": "当前头像",
+      "upload": "使用自己的图片",
+      "processing": "正在处理…",
+      "uploadHelp": "支持 PNG、JPEG 或 WebP，最大 10 MB；图片会居中裁成正方形。",
+      "invalidType": "请选择 PNG、JPEG 或 WebP 图片。",
+      "tooLarge": "图片不能超过 10 MB。",
+      "failed": "无法使用该图片，或无法将其保存在这台电脑上。",
+      "pets": {
+        "field_engineer_dog": "工兵狗",
+        "infantry_rabbit": "步兵兔",
+        "logistics_panda": "后勤熊猫",
+        "air_ace_fox": "空军王牌狐",
+        "tank_commander_bear": "坦克指挥熊",
+        "codebreaker_owl": "密码破译猫头鹰",
+        "admiral_penguin": "海军提督企鹅",
+        "medic_deer": "军医鹿"
+      }
+    },
+    "quit": "退出 Hagane Works"
+  },
+  "gameIndex": {
+    "title": "来自你游戏的参考列表",
+    "about": "Hagane Works 会读取你自己安装的游戏，生成国家、国策修正、装备等参考列表。本程序不附带任何游戏内容。",
+    "missing": "请先选择游戏文件夹。",
+    "building": "正在读取游戏…（{done}/{total}）",
+    "step": "当前读取：{step}",
+    "buildingHint": "可以照常使用。需要这些列表的页面会等它们准备好。",
+    "importWaiting": "正在等待来自你游戏的参考列表…",
+    "ready": "已就绪 · 游戏版本 {version} · 生成于 {time}",
+    "failed": "无法生成参考列表。",
+    "rebuild": "重新生成"
+  },
+  "install": {
+    "title": "安装到游戏",
+    "hint": "生成 mod 并放进 {folder}，游戏启动器里就能看到。",
+    "installedTo": "已安装到 {folder}",
+    "install": "安装",
+    "reinstall": "重新安装",
+    "installing": "安装中…",
+    "done": "已安装。在游戏启动器的播放集里启用它。",
+    "failed": "安装 mod 失败"
+  },
+  "unsaved": {
+    "title": "有未保存的更改",
+    "body": "还有更改没有保存。仍要关闭 Hagane Works 吗？这些更改会丢失。",
+    "close": "不保存，直接关闭"
+  }
+}

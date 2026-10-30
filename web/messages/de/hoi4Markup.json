@@ -1,0 +1,4 @@
+{
+  "title": "Textmarkierung für HOI4",
+  "legend": "§Y...§! — Farbcode (§ + ein Buchstabe startet eine Farbe, §! setzt zurück) $VAR$ — Variable / verschachtelte Lok-Substitution [ROOT.GetName] — dynamische Scope-Funktion \\n — Zeilenbruch Dies sind HOI4-Textmarkup — sie rendern im Spiel und sind NICHT Tippfehler. Lassen Sie sie intakt."
+}

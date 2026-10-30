@@ -1,0 +1,547 @@
+{
+ "content_locales": [
+  "en",
+  "zh",
+  "ru",
+  "de",
+  "es",
+  "fr",
+  "ja",
+  "ko",
+  "pl",
+  "pt"
+ ],
+ "all_locale_map_fields": [
+  "display_name_locs",
+  "description_locs",
+  "effect_tooltip_locs",
+  "adjective_locs",
+  "quote_locs",
+  "button_locs",
+  "history_locs",
+  "text_locs",
+  "tooltip_locs"
+ ],
+ "entity_specs": {
+  "generic": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs",
+    "effect_tooltip_locs",
+    "adjective_locs",
+    "quote_locs",
+    "button_locs",
+    "history_locs",
+    "text_locs",
+    "tooltip_locs"
+   ],
+   "nested_locale_fields": [
+    "ideology_name_locs"
+   ],
+   "children": [
+    [
+     "nodes",
+     "focus_node"
+    ],
+    [
+     "options",
+     "event_option"
+    ],
+    [
+     "selectable_countries",
+     "bookmark_country"
+    ],
+    [
+     "controls",
+     "panel_control"
+    ],
+    [
+     "children",
+     "panel_control"
+    ]
+   ],
+   "display_id_fields": [
+    "focus_id",
+    "tech_id",
+    "idea_id",
+    "event_id",
+    "decision_id",
+    "category_id",
+    "trait_id",
+    "equipment_id",
+    "sub_unit_id",
+    "tag",
+    "token",
+    "state_id",
+    "id"
+   ]
+  },
+  "name": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "id"
+   ]
+  },
+  "name_desc": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "id"
+   ]
+  },
+  "name_desc_effect": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs",
+    "effect_tooltip_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "decision_id"
+   ]
+  },
+  "focus_tree": {
+   "locale_fields": [],
+   "nested_locale_fields": [],
+   "children": [
+    [
+     "nodes",
+     "focus_node"
+    ]
+   ],
+   "display_id_fields": []
+  },
+  "focus_node": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs",
+    "effect_tooltip_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "focus_id"
+   ]
+  },
+  "event": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [
+    [
+     "options",
+     "event_option"
+    ]
+   ],
+   "display_id_fields": [
+    "event_id"
+   ]
+  },
+  "event_option": {
+   "locale_fields": [
+    "display_name_locs",
+    "effect_tooltip_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "name"
+   ]
+  },
+  "super_event": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs",
+    "quote_locs",
+    "button_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [
+    [
+     "options",
+     "super_event_option"
+    ]
+   ],
+   "display_id_fields": [
+    "event_id",
+    "id"
+   ]
+  },
+  "super_event_option": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "name",
+    "id"
+   ]
+  },
+  "bookmark": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [
+    [
+     "selectable_countries",
+     "bookmark_country"
+    ]
+   ],
+   "display_id_fields": [
+    "bookmark_id"
+   ]
+  },
+  "bookmark_country": {
+   "locale_fields": [
+    "history_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": []
+  },
+  "panel": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [
+    [
+     "controls",
+     "panel_control"
+    ]
+   ],
+   "display_id_fields": [
+    "token"
+   ]
+  },
+  "panel_control": {
+   "locale_fields": [
+    "text_locs",
+    "tooltip_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [
+    [
+     "children",
+     "panel_control"
+    ]
+   ],
+   "display_id_fields": []
+  },
+  "country": {
+   "locale_fields": [
+    "display_name_locs",
+    "adjective_locs"
+   ],
+   "nested_locale_fields": [
+    "ideology_name_locs"
+   ],
+   "children": [],
+   "display_id_fields": [
+    "tag"
+   ]
+  },
+  "specialization": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "specialization_id"
+   ]
+  },
+  "special_project": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "project_token"
+   ]
+  },
+  "dynamic_modifier": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "dm_id"
+   ]
+  },
+  "autonomy_state": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "autonomy_id"
+   ]
+  },
+  "mio": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "mio_id"
+   ]
+  },
+  "intel_agency": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "agency_id"
+   ]
+  },
+  "replacement_character": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "tag"
+   ]
+  },
+  "state": {
+   "locale_fields": [
+    "display_name_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "state_id"
+   ]
+  },
+  "doctrine": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "name",
+    "entity_key"
+   ]
+  },
+  "character": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "tag"
+   ]
+  },
+  "technology": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "tech_id"
+   ]
+  },
+  "idea": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "idea_id"
+   ]
+  },
+  "decision_category": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "category_id"
+   ]
+  },
+  "custom_trait": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "trait_id"
+   ]
+  },
+  "equipment": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "equipment_id"
+   ]
+  },
+  "sub_unit": {
+   "locale_fields": [
+    "display_name_locs",
+    "description_locs"
+   ],
+   "nested_locale_fields": [],
+   "children": [],
+   "display_id_fields": [
+    "sub_unit_id"
+   ]
+  }
+ },
+ "group_entity_specs": {
+  "entities": "generic",
+  "characters": "character",
+  "trees": "focus_tree",
+  "techs": "technology",
+  "ideas": "idea",
+  "events": "event",
+  "decision_categories": "decision_category",
+  "decisions": "name_desc_effect",
+  "custom_traits": "custom_trait",
+  "special_project_specializations": "specialization",
+  "special_projects": "special_project",
+  "dynamic_modifiers": "dynamic_modifier",
+  "autonomy_states": "autonomy_state",
+  "mios": "mio",
+  "doctrines": "doctrine",
+  "intel_agencies": "intel_agency",
+  "replacement_country_leaders": "replacement_character",
+  "replacement_unit_leaders": "replacement_character",
+  "replacement_scientists": "replacement_character",
+  "super_events": "super_event",
+  "bookmarks": "bookmark",
+  "states": "state",
+  "equipment": "equipment",
+  "sub_units": "sub_unit",
+  "ui_panels": "panel",
+  "countries_for_export": "country"
+ },
+ "group_tables": {
+  "characters": [
+   "characters",
+   true
+  ],
+  "trees": [
+   "focus_trees",
+   true
+  ],
+  "techs": [
+   "technologies",
+   true
+  ],
+  "ideas": [
+   "ideas",
+   true
+  ],
+  "events": [
+   "events",
+   true
+  ],
+  "decision_categories": [
+   "decision_categories",
+   false
+  ],
+  "decisions": [
+   "decisions",
+   true
+  ],
+  "custom_traits": [
+   "custom_traits",
+   false
+  ],
+  "special_project_specializations": [
+   "special_project_specializations",
+   true
+  ],
+  "special_projects": [
+   "special_projects",
+   true
+  ],
+  "dynamic_modifiers": [
+   "dynamic_modifiers",
+   true
+  ],
+  "autonomy_states": [
+   "autonomy_states",
+   true
+  ],
+  "mios": [
+   "military_industrial_organizations",
+   true
+  ],
+  "doctrines": [
+   "doctrines",
+   true
+  ],
+  "intel_agencies": [
+   "intelligence_agencies",
+   true
+  ],
+  "super_events": [
+   "super_events",
+   true
+  ],
+  "bookmarks": [
+   "bookmarks",
+   true
+  ],
+  "states": [
+   "states",
+   true
+  ],
+  "equipment": [
+   "equipments",
+   true
+  ],
+  "sub_units": [
+   "sub_units",
+   true
+  ],
+  "ui_panels": [
+   "ui_panels",
+   true
+  ],
+  "countries_for_export": [
+   "countries",
+   true
+  ]
+ }
+}

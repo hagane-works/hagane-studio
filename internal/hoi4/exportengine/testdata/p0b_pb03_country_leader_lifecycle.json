@@ -1,0 +1,55 @@
+{
+  "create": {
+    "name": "PB-03 Incumbent Leader Fixture",
+    "country_tag": "PBT",
+    "country_name": "PB-03 Test Country",
+    "country_tags": ["PBT"],
+    "dependencies": [],
+    "supported_version": "1.19.*",
+    "export_languages": ["en", "zh"],
+    "ideology_registry": {
+      "groups": ["pb03_civic_coalition"],
+      "root_definitions": [
+        {
+          "id": "pb03_civic_coalition",
+          "body": "types = {\n}\ncolor = { 45 95 135 }",
+          "name": {"en": "Civic Coalition", "zh": "公民联合阵营"},
+          "desc": {"en": "PB-03 project-managed political group.", "zh": "PB-03 项目管理政治阵营。"}
+        }
+      ],
+      "sub_ideologies": [
+        {
+          "id": "pb03_civic_reformism",
+          "group": "pb03_civic_coalition",
+          "name": {"en": "Civic Reformism", "zh": "公民改革主义"},
+          "desc": {"en": "PB-03 leader political subtype.", "zh": "PB-03 领袖政治子类型。"},
+          "random_disabled": false
+        }
+      ]
+    }
+  },
+  "character_create": {
+    "name": "PB-03 Civic Leader",
+    "tag": "PBT_pb03_civic_leader",
+    "country_tag": "PBT",
+    "description": "PB-03 incumbent country leader.",
+    "role_type": "country_leader",
+    "ideology": "pb03_civic_reformism",
+    "name_en": "PB-03 Civic Leader",
+    "name_zh": "PB-03 公民领袖",
+    "desc_en": "PB-03 incumbent country leader.",
+    "desc_zh": "PB-03 现任国家领导人。",
+    "traits": [],
+    "replaces_vanilla_id": false
+  },
+  "unrelated_patch": {
+    "description": "PB-03 incumbent country leader after unrelated edit."
+  },
+  "expect": {
+    "country_tag": "PBT",
+    "root_id": "pb03_civic_coalition",
+    "subtype_id": "pb03_civic_reformism",
+    "character_tag": "PBT_pb03_civic_leader",
+    "role_type": "country_leader"
+  }
+}

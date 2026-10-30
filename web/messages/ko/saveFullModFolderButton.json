@@ -1,0 +1,21 @@
+{
+  "fsUnsupported": "이 브라우저는 File System Access API를 지원하지 않습니다. Chrome이나 Edge를 사용하세요.",
+  "syncing": "동기화 중...",
+  "syncToNamed": "{dir}에 동기화",
+  "syncToFolder": "게임 폴더에 기록",
+  "titleWithFolder": "전체 모드를 {dir}/에 동기화(HOI4에서 모드를 다시 시작하면 적용됩니다)",
+  "titleNoFolder": "처음에는 모드 폴더를 선택합니다. 이 세션 동안 같은 폴더를 계속 사용합니다.",
+  "tooltipTitle": "내보낸 뒤: 전체 테스트 절차",
+  "tooltipContent": "HOI4 모드 테스트 절차(생성 + Debug + 로그):\n1. 선택한 모드 폴더를 %userprofile%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\ 에 배치\n2. 런처 → 모드 라이브러리 → 이 모드 선택\n3. 다음 중 한 방법으로 Debug 모드 활성화:\n   • Steam · HOI4 우클릭 → 속성 → 일반 → 시작 옵션에 -debug 입력\n   • 로컬 · dowser.exe 바로 가기 생성 → 속성 → 대상 끝에 \" -debug\" 추가(하이픈 앞 공백 주의)\n4. 게임 실행 · 주 메뉴 로딩이 끝나면 error.log가 메모장으로 자동 표시됨\n5. 오류 분류 · error.log의 세 가지 범주:\n   • Family · 모드 간 / 엔티티 간 명명 관용구 차이\n   • Vanilla compatible · 바닐라 호환성(DLC 필드 / 버전)\n   • Mod-internal · 모드 내부 문제(깨진 ID / 순환 참조)\n6. 로그 위치 · %userprofile%\\Documents\\...\\logs\\ (error.log + game.log)\n> 참고: 일부 심각한 오류는 충돌 전에 기록되지 않을 수 있습니다. 게임 내 증상과 game.log를 함께 확인하세요.",
+  "includeImportedTitleOn": "원본 모드에서 가져온 콘텐츠(바닐라 또는 이전 모드 출처)를 포함합니다. 전체 모드 폴더를 기록합니다.",
+  "includeImportedTitleOff": "직접 만들거나 수정한 엔티티만 동기화합니다. 가져온 이전 콘텐츠는 덮어쓰지 않습니다.",
+  "includeImportedLabel": "가져온 항목 포함",
+  "changeFolderTitle": "모드 폴더 변경",
+  "changeFolder": "폴더 변경",
+  "wroteFiles": "✓ 파일 {count}개 기록",
+  "wrotePartial": "⚠ 파일 {ok}/{total}개를 기록했고 {failed}개가 실패했습니다(예: {firstError}). 모드 폴더가 일부만 업데이트되었습니다.",
+  "illegalPathSegment": "{path}에 잘못된 경로 요소 \"{segment}\"이(가) 있습니다",
+  "additiveCaption": "동기화는 기록하거나 덮어쓸 뿐 삭제하지 않습니다.",
+  "additiveTitle": "동기화는 추가 방식입니다",
+  "additiveWarning": "동기화는 파일을 기록하거나 덮어쓸 뿐 삭제하지 않습니다. 엔티티의 이름, TAG를 바꾸거나 삭제하면 이전 .txt/.yml/.dds 파일이 폴더에 남아 게임이 이전 버전과 새 버전을 모두 불러옵니다. 이런 변경 후에는 동기화하기 전에 모드의 생성 폴더(common/, events/, history/, localisation/, gfx/)를 직접 비우거나 새 폴더에 동기화하세요."
+}

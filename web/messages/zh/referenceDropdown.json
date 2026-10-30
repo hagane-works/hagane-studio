@@ -1,0 +1,16 @@
+{
+  "entityDecision": "决议",
+  "entityEvent": "事件",
+  "entityFocus": "国家焦点",
+  "entityIdea": "国策修正",
+  "searchPlaceholder": "搜{entity} ID 或名字…",
+  "all": "全部",
+  "searchingBase": "正在搜索基础 mod…",
+  "projectBadge": "项目",
+  "baseBadge": "基础 mod",
+  "noResults": "没有匹配结果。",
+  "emptyProject": "本项目暂无{entity}。",
+  "emptyCategory": "该分类下暂无{entity}。",
+  "promptManual": "手动输入{entity} ID:",
+  "enterManually": "+ 手动输入…"
+}

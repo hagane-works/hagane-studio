@@ -1,0 +1,20 @@
+{
+  "startYear": "Année de départ",
+  "cost": "Coût de recherche",
+  "costValue": "{cost} ({days} jours)",
+  "source": "Source",
+  "level": "Niveau",
+  "unlockPath": "Chemin de déverrouillage",
+  "loading": "Chargement…",
+  "noPath": "Aucun chemin de déverrouillage pour le moment. Ajoutez une Priorité - nation, un événement ou une décision qui déverrouille cette technologie.",
+  "moreCount": "+{n} autres",
+  "unlockPathTitle": "Chemin de déverrouillage · survolez pour afficher le chemin complet",
+  "deleteTitle": "Supprimer cette technologie",
+  "noIconTitle": "Aucune icône disponible pour cette technologie",
+  "iconLoadFailedTitle": "Cette technologie possède une icône téléversée, mais son chargement a échoué",
+  "unlockKind": {
+    "focus": "Priorité - nation",
+    "event": "Événement",
+    "decision": "Décision"
+  }
+}

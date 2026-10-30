@@ -1,0 +1,14 @@
+{
+  "roleCountryLeader": "领袖",
+  "roleFieldMarshal": "元帅",
+  "roleCorpsCommander": "军长",
+  "roleAdmiral": "海军元帅",
+  "roleScientist": "科学家",
+  "roleOperative": "特工",
+  "roleAdvisor": "顾问",
+  "draft": "草稿",
+  "noPortrait": "无头像",
+  "traits": "特质",
+  "advisorSlot": "顾问槽位",
+  "cost": "花费 {amount}"
+}

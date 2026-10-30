@@ -1,0 +1,18 @@
+{
+  "expandPreview": "Expandir vista previa",
+  "collapsePreview": "Contraer vista previa",
+  "tabLivePreview": "Vista previa en directo",
+  "tabScript": "Script",
+  "tabReferencesHint": "Consulta qué entidades hacen referencia a esta y a cuáles hace referencia.",
+  "tabScriptHint": "Archivos de script exportados para esta entidad (avanzado).",
+  "livePreviewSelectHint": "Selecciona un elemento de la lista para ver su vista previa en el juego.",
+  "livePreviewCreateFirstHint": "Aún no hay nada que previsualizar; crea el primer elemento en la lista de la izquierda.",
+  "liveDraftBadge": "Borrador en directo",
+  "previewLabel": "Vista previa",
+  "openInGame": "Ver en el juego",
+  "previewUnavailableGeneric": "Esta área de trabajo aún no tiene vista previa del juego; todos los campos están visibles en el editor.",
+  "noSelectionGeneric": "Nada seleccionado",
+  "backFromNew": "Atrás",
+  "searchPlaceholderGeneric": "Buscar por nombre…",
+  "noMatchesGeneric": "No hay entradas coincidentes"
+}

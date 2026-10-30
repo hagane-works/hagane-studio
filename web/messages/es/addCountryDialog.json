@@ -1,0 +1,20 @@
+{
+  "title": "Añadir país",
+  "sourceAriaLabel": "Origen del país",
+  "tabVanilla": "Juego base",
+  "tabCustom": "Personalizado",
+  "countryTagLabel": "TAG del país",
+  "displayNameLabel": "Nombre visible (opcional)",
+  "vanillaNamePlaceholder": "De forma predeterminada usa el nombre del juego base",
+  "vanillaNameHint": "Déjalo vacío para usar el nombre de HOI4. Puedes editarlo después.",
+  "adding": "Añadiendo...",
+  "addButton": "Añadir país",
+  "customHint": "Úsalo para países de historia alternativa que no existen en el juego base, como Baviera, Gales o Texas. Escribe un código de 2 a 5 letras mayúsculas; si coincide con un TAG del juego base, recibirás un aviso antes de sobrescribirlo.",
+  "customNamePlaceholder": "p. ej., Reino de Baviera",
+  "mapColorLabel": "Color del mapa (opcional)",
+  "mapColorAriaLabel": "Color del mapa",
+  "mapColorAuto": "automático",
+  "graphicalCultureLabel": "Cultura gráfica (opcional)",
+  "graphicalCultureAriaLabel": "Cultura gráfica",
+  "graphicalCultureAuto": "Automática (western_european_gfx)"
+}

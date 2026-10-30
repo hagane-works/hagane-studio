@@ -1,0 +1,17 @@
+{
+  "searchPlaceholder": "搜国策修正 ID…",
+  "tabProject": "本项目",
+  "tabCountry": "国家",
+  "tabShared": "通用",
+  "tabLaws": "法律",
+  "tabDesign": "设计公司",
+  "tabOldAdvisors": "旧顾问",
+  "tabOther": "其他",
+  "otherHint": "用上方搜索框查找其他国家的国策修正。",
+  "loadingVanilla": "正在加载原版国策修正…",
+  "noResults": "没有匹配结果。",
+  "emptyCategory": "该分类下暂无国策修正。",
+  "projectBadge": "本项目",
+  "promptManual": "手动输入国策修正 ID:",
+  "enterManually": "+ 手动输入…"
+}

@@ -1,0 +1,13 @@
+{
+  "fsUnsupported": "Ihr Browser unterstützt nicht die Dateisystem-Zugriffs-API. Verwenden Sie Chrome oder Edge, oder gehen Sie durch den vollständigen Export Mod Fluss.",
+  "savedToFolder": "In Mod-Ordner geschrieben",
+  "saveFailed": "Speichern in Mod-Ordner fehlgeschlagen. {msg}",
+  "titleWithFolder": "Speichern Sie das Dateitrio von {tag} in {dir}/ (Schreibt die Dateien direkt; tritt nach dem Neustart der Mod in HOO4)",
+  "titleNoFolder": "Erste Verwendung wird Sie auffordern, einen Mod-Ordner auswählen",
+  "saving": "Speichern...",
+  "saveToFolderNamed": "In {dir} speichern",
+  "saveToModFolder": "In Mod-Ordner speichern",
+  "changeFolderTitle": "Mod-Ordner ändern",
+  "changeFolder": "Ordner ändern",
+  "saved": "Gespeichert ✓"
+}

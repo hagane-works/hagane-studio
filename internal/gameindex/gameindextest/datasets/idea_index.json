@@ -1,0 +1,112 @@
+{
+ "total": 11,
+ "game_version": "1.19.3",
+ "generated_at": "2026-10-30T03:26:19Z",
+ "note": "picture_sprites = every `name = \"GFX_idea_XYZ\"` spriteType in interface/*.gfx + dlc/*/**/*.gfx + integrated_dlc/*/**/*.gfx, prefix stripped: the legal `picture = X` values. ideas[].picture is only the referenced subset; consumers use the union picture_sprites ∪ {ideas[].picture} (picture_sprites_orphans lists referenced names with no spriteType).",
+ "picture_sprites_total": 7,
+ "picture_sprites": [
+  "civilian_economy",
+  "generic_agrarian_society",
+  "generic_fascism_drift_2",
+  "generic_political_advisor_europe_1",
+  "new_economic_policy",
+  "tot_economic_mobilisation",
+  "war_economy"
+ ],
+ "picture_sprites_orphans": [
+  "idea_GER_orphan_picture"
+ ],
+ "picture_sprites_scanned_files": 4,
+ "by_category": {
+  "country": 4,
+  "economy": 2,
+  "tank_manufacturer": 1,
+  "hidden_ideas": 1,
+  "political_advisor": 1,
+  "trade_laws": 1,
+  "mobilization_laws": 1
+ },
+ "by_file": {
+  "common/ideas/test_country.txt": 10,
+  "common/ideas/GER.txt": 1
+ },
+ "ideas": [
+  {
+   "category": "tank_manufacturer",
+   "idea_id": "GER_test_tank_company",
+   "picture": "idea_GER_orphan_picture",
+   "file": "common/ideas/GER.txt",
+   "line": 3
+  },
+  {
+   "category": "country",
+   "idea_id": "GER_test_spirit",
+   "picture": "generic_fascism_drift_2",
+   "file": "common/ideas/test_country.txt",
+   "line": 2
+  },
+  {
+   "category": "country",
+   "idea_id": "GER_plain_spirit",
+   "picture": null,
+   "file": "common/ideas/test_country.txt",
+   "line": 6
+  },
+  {
+   "category": "country",
+   "idea_id": "GER_reused_picture",
+   "picture": "GFX_idea_war_economy",
+   "file": "common/ideas/test_country.txt",
+   "line": 9
+  },
+  {
+   "category": "country",
+   "idea_id": "sour_loser",
+   "picture": "new_economic_policy",
+   "file": "common/ideas/test_country.txt",
+   "line": 12
+  },
+  {
+   "category": "hidden_ideas",
+   "idea_id": "GER_hidden_test",
+   "picture": null,
+   "file": "common/ideas/test_country.txt",
+   "line": 2
+  },
+  {
+   "category": "political_advisor",
+   "idea_id": "GER_test_advisor",
+   "picture": "generic_political_advisor_europe_1",
+   "file": "common/ideas/test_country.txt",
+   "line": 2
+  },
+  {
+   "category": "economy",
+   "idea_id": "civilian_economy",
+   "picture": "civilian_economy",
+   "file": "common/ideas/test_country.txt",
+   "line": 3
+  },
+  {
+   "category": "economy",
+   "idea_id": "war_economy",
+   "picture": "war_economy",
+   "file": "common/ideas/test_country.txt",
+   "line": 4
+  },
+  {
+   "category": "trade_laws",
+   "idea_id": "limited_exports",
+   "picture": null,
+   "file": "common/ideas/test_country.txt",
+   "line": 3
+  },
+  {
+   "category": "mobilization_laws",
+   "idea_id": "limited_conscription",
+   "picture": null,
+   "file": "common/ideas/test_country.txt",
+   "line": 3
+  }
+ ]
+}

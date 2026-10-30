@@ -1,0 +1,6 @@
+{
+  "uploadHint": "현재 브라우저에서 폴더 업로드를 사용할 수 있습니다. 변경 사항을 폴더에 직접 저장하려면 Chrome, Edge 또는 Opera가 필요합니다. 다른 브라우저에서는 ZIP 내보내기를 사용하세요.",
+  "writeHint": "현재 브라우저는 폴더에 파일을 직접 쓸 수 없습니다. ZIP 내보내기로 모드를 다운로드한 뒤 HOI4 모드 폴더에 압축을 푸세요(폴더 직접 저장에는 Chrome, Edge 또는 Opera 필요).",
+  "largeFolderConfirm": "이 폴더에는 모드 파일이 {count}개 있습니다. 매우 큰 폴더를 읽는 데 시간이 걸릴 수 있습니다. 계속할까요?",
+  "noRelevantFiles": "선택한 폴더에서 모드 파일(.txt / .gfx / .yml / 이미지)을 찾지 못했습니다. descriptor.mod, common, events가 있는 모드 루트 폴더를 선택했는지 확인하세요."
+}

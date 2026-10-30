@@ -1,0 +1,14 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+state = {
+	id = 2
+	name = "STATE_2"
+	manpower = 100000
+	state_category = town
+	history = {
+		owner = GER
+		add_core_of = GER
+		victory_points = { 20 1 }
+		buildings = { infrastructure = 2 20 = { landmark_test_tower = { level = 1 allowed = { has_dlc = "La Resistance" } } bunker = 2 } }
+	}
+	provinces = { 20 21 }
+}

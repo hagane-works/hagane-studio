@@ -1,0 +1,5 @@
+{
+  "label": "Add a visible build ID",
+  "badge": "Export traceability",
+  "hint": "Writes one unique ID into the manifest, an evidence file, and bookmark descriptions so screenshots and logs can be matched to the exact ZIP. Off by default."
+}

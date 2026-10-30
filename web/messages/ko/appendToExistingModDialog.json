@@ -1,0 +1,20 @@
+{
+  "technologyMergeTitle": "기술 파일은 경로가 완전히 같을 때만 병합",
+  "technologyMergeBody": "Append는 경로가 완전히 같은 파일만 덮어씁니다. 프로젝트 기술 파일의 technology block을 vanilla 원본 파일에 의미적으로 병합하지 않습니다.",
+  "toastWarning": "추가를 마쳤습니다. 충돌한 기본 모드 파일 {conflictCount}개를 덮어썼습니다. 파일별로 선택하려면 차등 병합을 사용하세요.",
+  "toastSuccess": "추가를 마쳤습니다. 경로 충돌 없이 모든 콘텐츠가 새 파일로 기본 모드에 추가되었습니다.",
+  "description": "이 프로젝트를 기존 모드 zip 위에 덮어씁니다. 경로가 충돌하면 이 프로젝트의 편집 내용이 우선합니다. '모드를 불러와 여기서 편집하고 병합된 zip을 다운로드하는' 흐름에 적합합니다.",
+  "naiveMergeTitle": "덮어쓰기 병합 — 충돌 시 편집 내용 우선",
+  "naiveMergeBody": "경로가 충돌하면 편집 내용이 기본 모드의 같은 이름 파일을 덮어씁니다. 기본 모드에만 있는 파일은 그대로 유지하고, 새로 추가한 파일은 이 프로젝트 버전으로 기록합니다. 충돌을 파일별로 검토하려면 차등 병합을 사용하세요.",
+  "pickBaseZip": "기본 모드 zip 선택...",
+  "pickBaseFolder": "모드 폴더 선택...",
+  "folderPickerTitle": "기본 모드 폴더 선택",
+  "folderPickerHint": "모드의 descriptor.mod가 있는 폴더를 여세요. 예를 들어 steamapps\\workshop\\content\\394360 아래의 Steam 창작마당 항목이나 모드 폴더에 있는 모드입니다. 프로그램은 읽기만 하며 변경하지 않습니다.",
+  "folderNotAMod": "이 폴더는 Hearts of Iron IV 모드가 아닙니다. 모드 이름이 적힌 descriptor.mod가 없습니다. descriptor.mod가 있는 폴더를 선택하세요.",
+  "supportNote": "모든 HOI4 모드 zip 또는 모드 폴더를 사용할 수 있습니다. 프로그램은 기본 모드를 읽기만 하고 수정하지 않으며, 병합된 zip은 다운로드 폴더에 저장됩니다.",
+  "title": "기존 모드에 추가",
+  "baseZipLabel": "기본 모드",
+  "cancel": "취소",
+  "merging": "병합 중...",
+  "confirmAppend": "추가 확정 및 다운로드"
+}

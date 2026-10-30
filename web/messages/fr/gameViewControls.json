@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "Création de cartes · Clic gauche pour peindre, glisser clic droit pour déplacer la carte, molette pour zoomer"
+  },
+  "refresh": "Actualiser",
+  "refreshing": "Actualisation de l’aperçu du jeu…",
+  "refreshed": "Actualisé",
+  "startScreens": "Scénario (F2)",
+  "startScreensBack": "Retour au jeu (F2)",
+  "startScreensHint": "Ouvre le choix du scénario et du pays pour en changer ; raccourci F2",
+  "unsupportedControl": "« {control} » n’est pas encore disponible dans Game View.",
+  "uiEdit": "Modifier l’interface",
+  "exitUIEdit": "Quitter l’édition d’interface",
+  "textEdit": "Modifier le contenu",
+  "exitTextEdit": "Quitter l’édition du contenu",
+  "mapStudio": "Création de cartes",
+  "exitMapStudio": "Quitter la création de cartes",
+  "mapStudioHint": "Peignez votre propre monde directement sur la carte du monde : relief et pays, puis générez-le et enregistrez-le comme nouveau monde.",
+  "mapStudioSaved": "Nouveau monde enregistré",
+  "mapStudioSavedBody": "{states} États. La carte est maintenant le monde que vous avez peint.",
+  "uiEditHint": "Modifiez les images et textes de l’interface. Un clic sélectionne un élément au lieu d’activer son bouton.",
+  "textEditHint": "Modifiez les décisions, personnages, axes et autres contenus. Les boutons restent actifs ; cliquez sur une province pour modifier son terrain, son État et son nom.",
+  "inspect": {
+    "viewHint": "Mode consultation : cliquez sur une technologie pour voir ses détails. Passez en édition du contenu pour la modifier.",
+    "startYear": "Année de départ",
+    "status": "État",
+    "researchCost": "Coût de recherche",
+    "approxDays": "Durée estimée",
+    "days": "{days} jours",
+    "position": "Position dans l’arbre",
+    "icon": "Icône",
+    "leadsTo": "Mène à",
+    "mutuallyExclusive": "Mutuellement exclusif",
+    "subTechnologies": "Sous-technologies",
+    "none": "Aucun",
+    "enterEdit": "Ouvrir l’édition du contenu",
+    "states": {
+      "researched": "Recherchée",
+      "available": "Disponible",
+      "unavailable": "Verrouillée"
+    }
+  },
+  "backToWorkbench": "Retour à l'atelier",
+  "loadingTitle": "Chargement de l'écran de jeu",
+  "loadingProgress": "{done} sur {total} prêts",
+  "loadingStarting": "Connexion…",
+  "loadingBusy": "Chargement…",
+  "continuousPanelMove": "Faites glisser pour écarter le panneau des priorités continues (dans cette fenêtre seulement, pas dans le mod) ; double-cliquez pour le remettre",
+  "continuousPanelPlace": "Faites glisser pour fixer l'emplacement du panneau des priorités continues dans le mod",
+  "alertsMore": "Afficher toutes les alertes ({count} de plus)",
+  "alertsLess": "Réduire les alertes"
+}

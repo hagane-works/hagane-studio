@@ -1,0 +1,20 @@
+{
+  "startYear": "開始年",
+  "cost": "研究コスト",
+  "costValue": "{cost}（{days}日）",
+  "source": "ソース",
+  "level": "レベル",
+  "unlockPath": "解除経路",
+  "loading": "読み込み中…",
+  "noPath": "解除経路はまだありません。この技術を解除する国家方針、イベント、ディシジョンを追加してください。",
+  "moreCount": "ほか{n}件",
+  "unlockPathTitle": "解除経路 · カーソルを合わせると経路全体を表示",
+  "deleteTitle": "この技術を削除",
+  "noIconTitle": "この技術に利用できるアイコンはありません",
+  "iconLoadFailedTitle": "この技術にはアップロード済みのアイコンがありますが、読み込みに失敗しました",
+  "unlockKind": {
+    "focus": "国家方針",
+    "event": "イベント",
+    "decision": "ディシジョン"
+  }
+}

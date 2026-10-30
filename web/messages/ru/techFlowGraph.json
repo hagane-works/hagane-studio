@@ -1,0 +1,9 @@
+{
+  "footerHint": "Double-click empty space → create · drag a node → change start_year / column · select then press <kbd>Delete</kbd>, or hover a node's top-right × to delete",
+  "footerHintAria": "Помощь в контроле за канавами",
+  "footerHintRowAxis": "Double-click empty space → create · drag a node → change row / column · select then press <kbd>Delete</kbd>, or hover a node's top-right × to delete",
+  "orphanNoFolder": "Not in any tech tree · {count} techs have no folder block (granted by focus/event)",
+  "orphanUnmatched": "Not matched to any gridbox in the .gui · {count} techs",
+  "footerHintBrowse": "Просматривайте исследовательскую панель: выбирайте технологию, перемещайте вид и масштабируйте. Для изменения размещения включите режим раскладки.",
+  "footerHintLayout": "Режим раскладки: размещайте только в допустимых ячейках выбранной папки исследований. Перетаскивание не меняет год исследования."
+}

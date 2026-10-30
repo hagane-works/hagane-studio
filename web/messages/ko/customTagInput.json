@@ -1,0 +1,7 @@
+{
+  "hintEmpty": "2~5자. 첫 글자는 영문자, 이후에는 A~Z 또는 0~9. 예: GER / FL2 / USSR2",
+  "hintShort": "너무 짧습니다. 2~5자가 필요합니다.",
+  "hintValid": "{tag} — 정상",
+  "hintInvalid": "첫 글자는 A~Z, 이후에는 A~Z 또는 0~9만 사용할 수 있습니다(공백과 밑줄은 불가).",
+  "placeholder": "예: BAV"
+}

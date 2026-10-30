@@ -1,0 +1,9 @@
+{
+ "source": "common/technologies/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 2,
+ "ids": [
+  "infantry_weapons",
+  "support_weapons"
+ ]
+}

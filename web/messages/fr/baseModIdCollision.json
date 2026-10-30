@@ -1,0 +1,9 @@
+{
+  "message": "« {id} » existe déjà dans {dependency}. Réutiliser cet ID empêchera le nouvel élément créé ici ({entityLabel}) de fonctionner en jeu.",
+  "fixHint": "Choisissez un ID libre, ou référencez celui qui existe déjà dans {dependency}.",
+  "unknownDependency": "le mod de base",
+  "entityCharacter": "personnage",
+  "entityFocus": "focus national",
+  "entityIdea": "idée",
+  "entityDecision": "décision"
+}

@@ -1,0 +1,5 @@
+{
+  "summary": ". {count} Flags sind gesetzt, aber nie gelesen",
+  "summaryNote": "(frühe Hinweise, dass ein Fokus, Ereignis oder Entscheidungskette gebrochen werden kann)",
+  "fix": "Fix: Lesen Sie die Flagge mit <code>has_country_flag = {flag} </code> im Trigger / verfügbar / sichtbar für einen Fokus, eine Entscheidung oder ein Ereignis oder löschen Sie die <code>set_country_flag </code> falls nichts nötig ist. Diese Überprüfung verfolgt noch keine durch <code>modify_country_flag </code> oder <code>clr_country_flag </code> geänderten Flags."
+}

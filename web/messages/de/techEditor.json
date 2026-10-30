@@ -1,0 +1,207 @@
+{
+  "basicInfo": "Grundlegende Informationen",
+  "displayName": "Name der Anzeige anzeigen",
+  "techIdLabel": "Technische ID (HOI4 intern)",
+  "statusSaving": "Speichern...",
+  "statusSaved": "Gespeichert",
+  "statusError": "Speichern fehlgeschlagen",
+  "statusUnsaved": "Unersparte Änderungen",
+  "addPrerequisitePlaceholder": "Voraussetzung Tech hinzufügen...",
+  "advancedFieldsLabel": "Fortgeschrittene Felder",
+  "saveTechButton": "Technologie speichern",
+  "deleteTechButton": "Technologie löschen",
+  "section": {
+    "categories": "Kategorien",
+    "aiWillDo": "KI wird es tun",
+    "description": "Warenbezeichnung"
+  },
+  "statDesc": {
+    "soft_attack": "Die Stat fast jede Landeinheit stützt sich auf die meisten — die Kernleistung einer Infanteriedivision. +10%~+30% ist das typische Mittelklasse-Techband; +50%+ kommt aus Elite-Doktrinen + Top-Tier-Equipment-Combos. Das Schlagen gepanzerter Ziele braucht stattdessen Hard_attack – die beiden haben klar geteilte Rollen.",
+    "hard_attack": "Schäden an Panzerzielen (Tanks, Panzerwagen, Halbspuren). Infanteriedivisionen erhalten nur hard_attack einmal mit Panzerabwehrwaffen / Panzerabwehrwaffen ausgestattet; Panzerdivisionen haben es nativ. +15%~+40% Mittel-zu-Late-Band. Reine Infanterie fehlt hard_attack wird schnell von gepanzerten Divisionen geschliffen – gepanzerte Kriegsführung erfordert dedizierte Waffen oder CAS-Luftunterstützung.",
+    "defense": "Die Evasion der ankommenden Angriffe während nicht bewegt. Der Kern Statistik für statische Verteidigung — der Verteidiger in Positionskriegs beruht auf ihm. +10%~+30% Mittelband; +100%+ aus Stapeln Top-Doktrin + Gelände + Befestigungen. Gegenseitig exklusiv mit Durchbruch: Boden mit Verteidigung halten, mit Durchbruch drücken — eine Division verwendet in der Regel nur eine.",
+    "breakthrough": "Die Statistik, die Schäden absorbiert, während sie unterwegs angreift. Verfolgt vom Angreifer beim Schieben – eine hochdurchbrochene Division kann in Gegenangriffe vorrücken. Panzer/mechanisiert sind natürlich hoch; Infanterie stützt sich auf Ingenieure + Organisation. +20%~+50% im mittleren bis späten Tank-Tech-Band. Gegenseitig exklusiv mit Verteidigung: Verteidigung, wenn stationär, Durchbruch beim Vorrücken.",
+    "armor_value": "Die physische Panzerstärke einer gepanzerten Einheit, verglichen mit dem ap_attack (Piercing) des Gegners, um zu entscheiden, ob sie durchdringt werden kann. Wenn Rüstung > Feind durchbohrt wird der Angriff ** vollständig blockiert**; sonst 100% Penetration. Eine mittlere Panzerpanzerung kann völlig immun gegen Infanterie Panzerabwehrgewehre sein, während großkalibrige AT-Geschütze leichte Panzer zerquetschen. Maßstab 10~100+.",
+    "ap_attack": "Die Piercingfähigkeit des Angreifers, verglichen mit dem feindlichen Panzerungswert, um die Penetration zu entscheiden. Piercing ≥ Rüstung: normale Beschädigung; Piercing < Rüstung: stark reduzierte Beschädigung (ca. 50% oder weniger). Kernstatus von AT-Geschützen und Panzerwaffen. Infanteriedivisionen erhalten nur ap_attack mit AT-Gewehren, reine Infanterie ist weitgehend unwirksam gegen Panzerung.",
+    "max_organisation": "Eine Einheit 'morale Pool' für Widerstand gegen Rout. Jede Runde Kampf Drains org; bei Null ist die Einheit gezwungen, sich zu lösen, dann erholt sich schnell danach. Typische Werte: Infanterie 60 ~ 80, mechanisiert 40 ~ 60, Tank Divisionen 30 ~ 45. +5 ~ + 15 üblich von Tech / Doktor Boni. Low Org gewinnt schnell durch Burst-Schäden; hohe Org schleift durch Widerstandsfähigkeit — ein Kern-Austausch in Division Design.",
+    "max_strength": "Der tatsächliche \"Mannkraft\"-Wert einer Einheit, der die volle Stärke darstellt. Kampfverletzungen entwässern die Stärke; bei Null wird die Division zerstört; die Verstärkung des hinteren Bereichs stellt sie im Laufe der Zeit wieder her. Typische Werte: Infanteriebataillon 25, Panzerbataillon 40, Artilleriebataillon 35; eine volle Division 200~400+. +5~+20% Common Tech Band. Eine Division bei Nullstärke, aber nicht Nullorg löst sich und hat im Wesentlichen Kampfkraft verloren.",
+    "reliability": "Der umgekehrte Indikator der Ausfallrate der Ausrüstung (0,0 ~ 1,0 Dezimalstelle). Die gegenseitige Ausfallwahrscheinlichkeit im Kampf/Marching — geringe Zuverlässigkeit = hohe Ausrüstungsaufnahme. Typische Werte: Infanteriewaffen 0,7 ~ 0,9, Panzer 0,5 ~ 0,8, Flugzeug 0,6 ~ 0,85. +5% ~ +15% gemeinsamer Tech-Bonus. Low-reliability Rüstung / Lufteinheiten benötigen schwere Ersatzteilversorgung, eine riesige Logistikbelastung.",
+    "maximum_speed": "Die Bewegungsgeschwindigkeit einer Einheit auf der strategischen Karte (km/h). Bestimmen Reloyment Responsiveness, Einkreisung und Retreat Effizienz. Typische Werte: Infanterie 4, motorisiert 8, mechanisiert 10, Panzer 6~10. +10%~+25% gemeinsame Lehre / Technologie-Band. High-Speed-Divisionen machen Speerspitzen für schnelle Durchbruch-Umkreisungen; Low-Speed-Divisionen benötigen Transport-Naben. Wetter / Gelände / liefern alle langsamen Bewegung im Wesentlichen.",
+    "build_cost_ic": "Die Kosten für die industrielle Leistungsfähigkeit (IC) einer Einheit/eine Ausrüstung. **Ein Minus ist willkommen** — `build_cost_ic = -0.1` bedeutet -10% cost = a good bonus. Tech/doctrine gewähren üblicherweise -5%~-15%. Beachten Sie, dass das Zeichen mit der Absicht übereinstimmt: +build_cost_ic macht Einheiten teurer. Große Mods verwenden dies oft, um 'stromlinienförmige Produktionslinien' oder 'verbesserte militärisch-industrielle Effizienz' zu modellieren.",
+    "suppression": "Die Fähigkeit, die Widerstandsaktivität (Widerstand) in besetztem Gebiet zu beruhigen. Hochsuppressionsabteilungen in besetzten Staaten eingesetzt niedrigerer Compliance Wachstum + Unterdrückung der Widerstandsleistung. Kavallerie/Militärpolizei/Mechanisierung sind natürlich hoch. Typische Werte: Infanterie 2, Kavallerie/MP 4~6. Besetzen komplexer Regionen (Kolonien/Feindekerne) erfordert schwere Unterdrückung; fallende kurze Schnitte Produktion + Ressourcen der Fabrik. Zusammen mit Garnisonspolitik.",
+    "air_attack": "Eine Landeinheit hat die Fähigkeit, feindliche Flugzeuge zu bekämpfen (gebunden an die spezielle Ausrüstung der AA). Nur wenn eine Infanteriedivision mit einer AA-Geschütze ausgestattet ist, sonst 0. Auf Schlachtfeldern ohne eigene Luftüberlegenheit reduziert eine High-Air_Angriffsdivision spürbar Verluste durch Luftangriffe. Typische Werte: Infanterie +2~5, weihendes AA-Bataillon +15~30. +20%~+50% AA-Techband. Letztlich sind Kämpfer, die feindliche CAS unterdrücken, am effektivsten.",
+    "naval_speed": "Die strategische Geschwindigkeit einer Marineeinheit (Knoten) beeinflusst Flottenumsetzung, Abfangen, Rückzug und Konvoi-Escort-Effizienz. Typische Werte: Schlachtschiff 25~30, Kreuzer 28~34, Zerstörer 35~40. +5%~+15% Schiffsmotor-Techband. Schnelle leichte Schiffe eskortieren/schrumpfen; langsame Kapitalschiffe brauchen Eskorte. Kreuzfahrtreichweite + Geschwindigkeit zusammen bestimmen strategische Abdeckung.",
+    "surface_detection": "Die Fähigkeit eines Schiffes, Oberflächenziele zu erkennen (Feindoberflächenschiffe). Beeinträchtigt die erste Trefferchance bei Einsätzen und die Reichweite, in der eine Flotte den Feind erkennt. Typische Werte: Zerstörer 20 ~ 30, Kreuzer 25 ~ 40, Schlachtschiff 15 ~ 25. +10%~ +30% Radar-Tech-Band. High-Detektion Zerstörer bilden einen Scouting-Bildschirm; Kapitalschiffe verlassen sich auf Pfadfinder, um Ziele zu füttern.",
+    "sub_detection": "Die Fähigkeit eines Schiffes, U-Boote zu erkennen, ist der Kern Anti-Submarine-Stat. Zerstörer/Escorts/ASW-Flugzeuge sind die wichtigsten Anbieter. Typische Werte: gewöhnlicher Zerstörer 10 ~ 20, gewidmet ASW Zerstörer 30 ~ 50. +20% ~ +50% Sonar-Tech-Band. Eine Escort-Flotte mit unzureichender Sub_Detektion hat seine Konvois versenkt en Masse von Wolfpack-U-Boote, direkt auf strategische Ressourcenimporte treffen."
+  },
+  "techId": {
+    "placeholder": "z.B. verbesserte Infanterieausrüstung",
+    "tooltipTitle": "Tech ID · HOO4 interne eindeutige Kennung",
+    "tooltipContent": "Die mod-weite eindeutige interne Kennung für eine Tech. Bezeichnung: Kleinbuchstaben + Unterstriche, keine Leerzeichen/Chinesen. Präfixieren Sie es, um seine Linie zu markieren (infantry_weapons_1 / armor_medium_1 / ca_early_fighter). Skripte has_tech = X, add_tech_bonus technology = X, set_technology = { X = 1 } alle verweisen auf diese ID. Renamen bricht jede Referenz + alte spart werden inkompatibel — Vorsicht."
+  },
+  "collision": {
+    "sameName": "Der gleiche Name wie eine Vanille-Tech - Laden der Mod leise überschreibt Vanille und wird verwirrend. Umbenennen Sie es.",
+    "renameTo": "Umbenennen in",
+    "recommended": "(empfohlen)"
+  },
+  "banner": {
+    "showAs": "Als Banner-Node dargestellt (200×60 · Text + Symbol)",
+    "tooltipTitle": "Banner vs Icon-Knotengrößenmessung",
+    "tooltipContent": "Banner (200×60 horizontal): zeigt den Textnamen + Symbol · Anzüge **Flaggschiff Betonausrüstung** (z.B. M1 Garand / frühe Zerstörer / Zwischenkrieg Panzerentwicklung). Icon (64×64 kompakt): Symbol + Level-Badge nur · Anzüge **Sub-Tech / abstrakte Upgrades** (z.B. cat_radar III / industrielle Produktion II). Vanilla in der Praxis: Unterstützung Ausrüstung/Industrie fast alle Ikone · Marine / Luft Flaggschiff Banner · Rüstung mischt Banner + Ikone."
+  },
+  "forceSmallLayout": {
+    "showAs": "force_use_small_tech_layout (kompakter Knoten IN-GAME)",
+    "tooltipTitle": "force_use_small_tech_layout · kompaktes Layout im Spiel",
+    "tooltipContent": "Ergibt `force_use_small_tech_layout = yes`, um das **compact Node Layout im aktuellen HOI4-Forschungsbildschirm** zu erzwingen. Dies ist DISTINCT von \"Gezeigt als Bannerknoten\" oben: Dieses Flag steuert nur, wie der Knoten aussieht **auf der Leinwand dieses Programms** (UI-only · exportiert nichts), während dieses eine echte exportierte Überschreibung des Spiels liest. Vanilla verwendet es nur auf ~50 Techs (ein explizites Überschreiben), so lassen Sie es aus, es sei denn, Sie speziell eine Technologie, die normalerweise groß machen würde, um den kleinen In-Game-Node zu verwenden."
+  },
+  "researchCost": {
+    "label": "Forschungskosten",
+    "tooltipTitle": "Forschungskosten · Multiplikator für Forschungskosten",
+    "tooltipContent": "Der **relative Multiplikator** der Forschungszeit (nicht absolute Tage — tatsächliche Tage kommen von Kosten × Forschungspersonal × speed_factor × vorauszeitige Strafe kombiniert). **Vanilla typische Werte Cluster bei 1,5 ~ 2,5**: Infanterie Hauptlinie oft 1.5, Stammtechnik 2, Lehren 2.5. Kanten: spezielle Lehre Knoten 4+, spezielle Projekte bis zu 0,5 aber sehr selten. Zu hoch und die KI erforscht es nie; zu niedrig und der Spieler endet es in einem Tag. Paar mit start_year, um die vorzeitige Strafe zu kontrollieren."
+  },
+  "startYear": {
+    "label": "Beginn Jahr",
+    "tooltipTitle": "Start Jahr · Tech historisches Jahr",
+    "tooltipContent": "Das historische Verfügbarkeitsjahr der Technik. Die Forschungen vor diesem Jahr lösen eine **Ahead-of-time Strafe** aus (Ahead_of_time_research_factor verlangsamt sie stark, typischerweise -50%~-70%). 1936-Basis Vanilleverteilung: **Hauptgipfel 1936 (106 Techs)**, dichte 1939~1945, ein paar frühe 1918/1922 Support-Techs, frühe 1910 (einstellige), neueste 1950 (6 Techs). Alt-History/moderne Mods (Fire Rise etc.) können 1960+ verwenden, um \"zeitgenössische/zukünftige\" Techs zu markieren.",
+    "balanceWarn": "......................................."
+  },
+  "xPosition": {
+    "label": "X Position",
+    "tooltipTitle": "X Position · Zeilenversatz (vertikal) im Forschungsbildschirm",
+    "tooltipContent": "Gegen die Intuition, aber im Spiel bestätigt: im HOI4-Forschungsbildschirm ist **x die vertikale Achse, y die horizontale**. x ist der **Zeilenversatz** relativ zur Elterntechnologie: +1 = eine Zeile tiefer, parallele Zweige werden damit auseinandergezogen. Die horizontale Position bestimmt y (das Grundspiel schreibt aus Gewohnheit die Jahresstufe in y, z. B. @1936; mit start_year hat das nichts zu tun). Im Grundspiel liegen infantry_weapons1 → 2 → improved alle auf x = 0 mit wachsendem y, armored_car1 dagegen auf x = 4, eine Zeile tiefer. Gleiche Position überlappt. Ohne Voraussetzung gilt der Ordnerursprung als Bezug."
+  },
+  "folder": {
+    "label": "Forschungsordner",
+    "tooltipTitle": "Ordner · Registerkartenplatzierung auf dem Bildschirm",
+    "tooltipContent": "Der `technology_folders`-Block in `common/technology_tags/00_technology.txt` entscheidet, welche Registerkarte für den Forschungsbildschirm (Army / Air / Navy / Industry / Electronics / special_forces) diese Tech unter erscheint. Jedes Token (z.B. Infanterie_folder, mtgnavalfolder) zeigt auf ein Unterfenster im Spiel an – wählt das falsche aus und die Technik funktioniert noch, zeigt aber auf dem falschen Tab. Setzt automatisch aus dem aktiven Unterfenster, wenn die Tech erstellt wird; ändert es hier, um die Tech auf eine andere Registerkarte zu verschieben. Benutzerdefinierte Ordner, die in der mod eigenen technology_tags-Datei definiert sind, werden als-is gehalten.",
+    "customCurrent": "Strom (Zoll):{folder}",
+    "none": "Nicht auf dem Forschungsbaum (Untertechnologie)"
+  },
+  "prerequisites": {
+    "heading": "Voraussetzungen",
+    "tooltipContent": "Die Voraussetzungsliste dieser Technologie. **Alles muss recherchiert werden** bevor diese Technik erforscht werden kann (AND-Logik). OR-Voraussetzungen sind hier nicht konfiguriert — mehrere Pfade an derselben Position füllen (zwei Voraussetzungssätze an derselben Ordner+Position auto-OR). Lineartechniken haben in der Regel 1~2 Voraussetzungen; Stammgabel/Zusammenführungspunkte können 3+ haben. Sie können keinen Vorbedingungszyklus bilden (HOI4 Deadlocks)."
+  },
+  "effects": {
+    "title": "Technologische Effekte (Unlock-Effekte)",
+    "tooltipContent": "Spielinhalte werden dauerhaft entsperrt, wenn die Technologie komplett ist – Geräte (enable_equipments), Gerätetypen (enable_subunits), Gerätemodule (enable_equipment_modules). Dies ist das \"langfristige Gewinnspiel\" der Tech – auch ohne einen globalen Modifikator, der entsperrte Inhalt selbst schiebt neue Geräte in die Produktionslinie + neue Gerätetypen in Divisionsvorlagen. Kernfeld für Infanterie/Armor/Naval/Luftlinien.",
+    "hint": "Geräte, Geräte und Module, die die Technologie entriegelt. Eine ID pro Zeile, direkt geschrieben als HOI4 interne Namen."
+  },
+  "enableEquipments": {
+    "heading": "enable_equipments (Entriegelung)",
+    "tooltipTitle": "enable_equipments · Entriegelung",
+    "tooltipContent": "Liste der Geräte-IDs, die nach der Fertigstellung (eine pro Zeile) freigeschaltet wurden. Schreiben Sie die Namen der internen Geräte von HOI4 direkt, passend zu den Definitionen unter Common/Units/Equipment/. Erst nach dem Entsperren kann die Ausrüstung in der Produktionslinie ausgewählt werden. Häufig: infantry_equipment_1, medium_tank_chassis_1, fighter_equipment_1. Ein falscher Name wird nicht falsch sein, aber die Produktionslinie wird sie nicht finden.",
+    "field": "enable_equipments · Geräte-IDs freischalten (pro Zeile / platztrennbar)"
+  },
+  "enableSubunits": {
+    "heading": "enable_subunits (Einheiten entsperren)",
+    "tooltipTitle": "enable_subunits · Entsperren von Einheiten",
+    "tooltipContent": "Liste der Untereinheiten (Bataillon-Ebenen-Einheitstypen innerhalb einer Abteilung) nach Abschluss freigeschaltet. Entspricht Untereinheiten-Definitionen unter Common/Units/. Erst nach dem Entsperren kann der Division-Template-Editor diese Einheit hinzufügen. Gemeinsame IDs: Infanterie, motorisiert, mechanisiert, Artillerie, Anti_tank, Anti_Luft, Ingenieur, recon, signal_company, maintenance_company, field_hospital, military_police. Unterschied von enable_equipments: eine Untereinheit ist 'das Bataillon/Firmen-Ebenen-Typ, den Sie in einer Abteilung setzen können', Ausrüstung ist 'die Waffen, die Einheit trägt'.",
+    "field": "enable_subunits · Untereinheiten freischalten (motorisiert / Marines / Fallschirmjäger...)"
+  },
+  "enableModules": {
+    "heading": "enable_equipment_modules (Module entsperren)",
+    "tooltipTitle": "enable_equipment_modules · Module freischalten",
+    "tooltipContent": "Liste der nach Fertigstellung entsperrten Gerätemodule. Ein Modul ist eine wählbare Teilkomponente im Gerätedesigner (Tank / Flugzeug / Schiff). Passt Definitionen unter Common/units/equipment_modules/. Eine Modul-ID pro Zeile. Gewöhnlich: tank_heavy_machine_gun, zusätzliche_machine_guns, large_plane_airframe, ship_torpedo_medium_1. Verwenden Sie zusammen mit dem MIO (militär-industrielle Organisation) und Geräteversionssystem – Mods ohne Gerätedesigner (vorvanilla Tage) brauchen sie nicht zu füllen.",
+    "field": "enable_equipment_modules · NSB-Designermodul"
+  },
+  "globalModifier": {
+    "title": "Globaler Modifikator",
+    "tooltipContent": "Ein Modifierblock, der **kontinuierlich** auf Ihr Land anwendet, nachdem die Technologie abgeschlossen ist (gleiche Modifierstruktur wie eine nationale Spirit-Idee, aber eine andere Quelle). Typische Statistiken: Industrielinie research_speed_factor / production_factory_max_efficiency_factor; Elektroniklinie Verschlüsselung / Entschlüsselung; Armee/Navy/Luft-Doktrinen Zweigeffizienz-Boni. Schreib Dezimalzahlen (0,03 = +3%). Mehrere können stapeln.",
+    "hint": "Globale Modifikatoren, die nach Abschluss der Technologie auf das Land angewendet werden, z.B. research_speed_factor, production_factory_efficiency_gain_factor."
+  },
+  "researchScripts": {
+    "title": "Forschungsskripte",
+    "tooltipContent": "Die Skriptlogik läuft im Moment, in dem die Technologie abgeschlossen ist (im Gegensatz zu Global Modifier's kontinuierlicher Effekt, feuert diese einmal). Drei Unterblöcke: • on_research_complete: der zu ausführende Effekt (Auto-Entlock Division Templates, Brandereignisse) • on_research_complete_limit: die Triggerbedingung (Re-Entry Guard) • erlauben: die Bedingung der Forschungsberechtigung (Gate, ob sie recherchiert werden kann) Der Kerneintrag für DLC-exklusive Techs, fokussierte und automatisch-entlockte Divisionsvorlagen."
+  },
+  "onResearchComplete": {
+    "heading": "on_research_complete (Nach Fertigstellung laufen)",
+    "tooltipTitle": "on_research_complete · nach Abschluss laufen",
+    "tooltipContent": "Der Effektblock läuft im Moment, in dem die Tech-Version abgeschlossen wird (einmal, nicht kontinuierlich). Typische Verwendungen: • load_oob = OOB_FILE (Auto-Lade-Division-Vorlagen/Geräte) • custom_effect_tooltip = LOC_KEY (einen Entsperrhinweis anzeigen) • country_event = { id = X days = 7 } (ein Folgeereignis auslösen) Wrapping in hidden_effect = {... } versteckt den Effekttext vor dem Player (oft für internes Flag-Management).",
+    "hint": "Effekte nach der Forschung abgeschlossen, z.B. Auto-Erstellung Unit Templates, zeigen Hinweise.",
+    "field": "on_research_complete · one-shot effect block on complete"
+  },
+  "onResearchCompleteLimit": {
+    "heading": "on_research_complete_limit (Auslösungsbedingung)",
+    "tooltipTitle": "on_research_complete_limit · Trigger-Bedingung",
+    "tooltipContent": "Der Trigger-Schwellenwert für on_research_complete. Ein Trigger-Block — der Effekt in on_research_complete läuft nur, wenn die Bedingung erfüllt ist. Kernverwendung: **re-entry guard**. Typisch: NOT = { has_template_completing_unit = paratrooper } (vermeiden Sie, nach der Re-researching die gleiche Divisionsvorlage wieder zu öffnen). Leer = Trigger immer (einschließlich möglicher Wiederholung bei jeder Speichernlast).",
+    "hint": "Kontrolliert, wenn on_research_complete Brände, die wiederholte Ausführung verhindern.",
+    "field": "on_research_complete_limit · limit effect trigger condition"
+  },
+  "allow": {
+    "heading": "erlauben (Forschungsgenehmigung)",
+    "tooltipTitle": "erlauben · Forschungsgenehmigung",
+    "tooltipContent": "Der Triggerblock, der kontrolliert, ob diese Technologie erforscht werden kann. Wenn die Technologie nicht ausgelesen wird, wird sie ausgegraut und im Forschungsbildschirm nicht anklickbar. **immer = no** bedeutet, dass sie nur durch Skript** entsperrt werden kann — gepaart mit set_technology = { X = 1 } oder add_tech_bonus in einem Fokuseffekt. Allgemein für DLC-exklusive Technologien, story-unlocked Techs und versteckte Techs (spezielle Forschungsprojekte). Leer = jedes Land kann sie erforschen.",
+    "hint": "Kontrolliert, ob diese Technik erforscht werden kann. Leer = jedermann kann; immer = keine Mittel kann sie nur über einen Fokus entsperrt werden.",
+    "field": "erlauben · Forschungs-Verfügbarkeit Auslöser-Block"
+  },
+  "enableBuilding": {
+    "tooltipContent": "Die Gebäude-ID wurde nach Fertigstellung freigeschaltet (Einzelwert · entspricht Common/Gebäude/). Gemeinsame Vanille: synthetic_refinery / radar_station / Rakete_site / nuclear_reactor / mega_gun_emplacement. Nur ein Gebäude pro Technik – Kette mehrere Tech-Knoten für mehrere Gebäude."
+  },
+  "enableTactic": {
+    "tooltipContent": "Unlocked Land-Combat Taktik ID (common/combat_tactics.txt). Häufig: encirclement / breakby / taktic_withdrawal. Taktiken werden von der KI im Kampf auf der Grundlage von Terrain + Lehre automatisch ausgewählt."
+  },
+  "xor": {
+    "heading": "xor (gegenseitig exklusive Tech-Liste)",
+    "tooltipTitle": "xor · gegenseitig ausschließende Technologien",
+    "tooltipContent": "Nach der Recherche dieser Technologie können Sie die Technik nicht in der Liste erforschen (und umgekehrt · geschrieben ein-Wege, sondern semantisch zwei-Wege). Vanille typisch: steel_chassis vs aluminium_chassis (Stahl vs aluminium airframe · entweder / oder route fork).",
+    "field": "xor · gegenseitig ausschließende Tech-IDs (Pick A, ohne Geschwister B)"
+  },
+  "subTechnologies": {
+    "heading": "Subtechnologie (Subtechnik)",
+    "tooltipTitle": "Sub-Technologien · Sub-Techs",
+    "tooltipContent": "Kleine Upgrade-Techniken, die in einer übergeordneten Techkarte verschachtelt sind (eine Tech_id pro Zeile · muss separat in der gleichen Mod definiert werden). Vanilla-Beispiel: infanterie_at (infanterie abwehrank · in der Infanterie_Waffenkarte verschachtelt · Doppelring-UI-Knoten). Sub-Techs zeigen sich erst in der Benutzeroberfläche, nachdem die Elterntechnik erforscht wurde."
+  },
+  "allowBranch": {
+    "heading": "allow_channe (Zustand der Branchensicht)",
+    "tooltipTitle": "award_channe · Zustand der Sichtbarkeit des Zweigs",
+    "tooltipContent": "Ein Triggerblock — entscheidet, ob der gesamte Tech-Zweig für den Spieler sichtbar ist (wenn die UI nicht die UI vollständig versteckt den Zweig). Vanilla Beispiel: has_dlc = \"Man the Guns\" versteckt die MTG-Marinelinie vor Nicht-DLC-Spielern. Unterschied von allow: erlaubt die Kontrolle der Forschungsberechtigung, erlaubt_branchen steuert die Sichtbarkeit der UI.",
+    "field": "allow_channe · Ganzarm-Auslöser anzeigen/verbergen"
+  },
+  "xpResearchType": {
+    "heading": "xp_research_type (NSB-Designteam XP)",
+    "tooltipTitle": "xp_research_type · design-team XP Kosten",
+    "tooltipContent": "Ein NSB DLC Geräte-Designer Mechaniker — diese Technologie kann mit Armee/Navy/Luft XP beschleunigt werden. Leer = keine XP verwendet. Paar mit xp_boost_cost, um festzulegen, wie viel XP jedes Speed-up verbraucht.",
+    "optNone": "keine (leere)",
+    "optLand": "Land · Armee XP",
+    "optNaval": "Marine · Marine XP",
+    "optAir": "Luft · Luft XP"
+  },
+  "xpBoostCost": {
+    "tooltipTitle": "xp_boost_cost · XP-Beschleunigungskosten",
+    "tooltipContent": "Die Menge an Zweig XP musste jedes Mal die Forschung dieser Technologie beschleunigen. Vanille typisch 25 ~ 50. 0 = kann nicht beschleunigt werden. Erfordert xp_research_type, um den XP-Typ zu setzen."
+  },
+  "dependencies": {
+    "heading": "Abhängigkeiten (parallele Forschungsdeps)",
+    "tooltipTitle": "Abhängigkeiten · Parallelforschungsabhängigkeiten",
+    "tooltipContent": "Selten. Andere Techs, deren Fortschritt diese parallel nachforscht. Ein `tech_id = Faktor` pro Zeile (Faktor ist voreingestellt auf 1). Die referenzierten Techs müssen in derselben Mod definiert werden. Anders als die Voraussetzungen, die harte Gates sind."
+  },
+  "xpResearchBonus": {
+    "heading": "xp_research_bonus (XP-Kosten-Multiplikator)",
+    "tooltipTitle": "xp_research_bonus · Kostenmultiplikator für XP",
+    "tooltipContent": "Ein flacher Multiplikator auf der Armee/Navy/Luft XP diese Tech kostet die Forschung (vanilla nackt-scalar Idiom, z.B. 1.50). Lassen Sie leer zu weglassen. Nur relevant für Techs, die Lehre XP verbrauchen.",
+    "blockFormNote": "Diese Technologie trägt eine importierte pro Kategorie xp_research_bonus-Aufschlüsselung — sie ist erhalten und exportiert als-ist. Gezeigt nur lesen hier, damit die Aufzählung nicht überschrieben wird."
+  },
+  "doctrine": {
+    "heading": "Doktrin (Legacy · Vor-NCNS-Doktrin Flagge)",
+    "tooltipContent": "Eine Vor-NCNS-DLC-Lehre Flagge · Vanille-Doktrinen sind nun auf Common/doctrines/ mit einem unabhängigen XP+Mastery-System umgezogen. Nicht für neue Mods empfohlen — für Kompatibilität mit bestehenden Mods gehalten."
+  },
+  "statBonuses": {
+    "title": "Stat Boni",
+    "tooltipContent": "Combat-stat Boni für bestimmte Einheitenkategorien. Struktur: Einheitskategorie (Infanterie / Rüstung / Cat_cas /...) → stat (soft_attack / defense / breakby /...) → Wert (0,05 = +5%). Jede Einheitskategorie kann mehrere Statistiken annehmen. Der Kerneffekt von Mitte-zu-Late-Techniken — Komplementär zum Enable_equipments Entsperren neuer Geräte (eines erhöht vorhandene Einheiten, die andere öffnet neue). Siehe die Bedeutung von jedem Statistik in den Dropdown-Hob-Anklängen unten.",
+    "hint": "Wählen Sie eine Vorteilseinheitskategorie → wählen Sie eine stat → geben Sie einen Wert ein (z.B. 0.05 = +5%) → klicken Sie auf +, um",
+    "category": "Einheitskategorie",
+    "categoryPlaceholder": "Wählen Sie eine Einheitskategorie...",
+    "stat": "Stat",
+    "statPlaceholder": "Wählen Sie eine stat...",
+    "value": "Wert"
+  },
+  "advanced": {
+    "pathField": "Pfad · Ausgangskante + research_cost_coeff (AI-Edits via add_path)"
+  },
+  "rawExtras": {
+    "badge": "Einige Felder werden als erweitertes Skript beibehalten",
+    "count": "{count} beibehalten",
+    "hint": "Für diese importierten Felder gibt es noch keinen visuellen Editor. Sie werden unverändert beibehalten und beim Export unverändert zurückgeschrieben.",
+    "keysLabel": "Beibehaltene Felder",
+    "jsonLabel": "Roh-JSON"
+  }
+}

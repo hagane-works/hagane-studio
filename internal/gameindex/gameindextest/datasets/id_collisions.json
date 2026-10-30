@@ -1,0 +1,19 @@
+{
+ "decision_category_ids": [
+  "test_decision_category"
+ ],
+ "dynamic_modifier_ids": [
+  "fallout_atomic",
+  "test_dynamic_modifier"
+ ],
+ "extracted_at": "2026-10-30",
+ "focus_tree_ids": [
+  "finnish_focus",
+  "generic_focus",
+  "german_focus"
+ ],
+ "tech_ids": [
+  "infantry_weapons",
+  "support_weapons"
+ ]
+}

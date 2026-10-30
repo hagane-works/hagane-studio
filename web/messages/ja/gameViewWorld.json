@@ -1,0 +1,144 @@
+{
+  "common": {
+    "notTags": "国家コードではありません：{tags}"
+  },
+  "ideology": {
+    "title": "政党とイデオロギー",
+    "kind": "政治 · {tag} · 国家履歴 · プロジェクトのイデオロギー",
+    "loadingPolitics": "プロジェクトの開始時の政治を読み込み中…",
+    "definitions": "イデオロギーの定義",
+    "definitionsHint": "ROOT またはサブイデオロギーを選んでください。下はイデオロギーのワークベンチと同じエディターです。",
+    "target": "編集対象",
+    "targetLabel": "イデオロギーを編集",
+    "loadingDefinitions": "プロジェクトのイデオロギーを読み込み中…",
+    "none": "編集できるイデオロギーはありません。",
+    "workbenchNote": "新規作成・削除・参照の影響確認はイデオロギーのワークベンチで行います。",
+    "politicsLog": "{tag} の開始時の政治",
+    "politicsSaved": "{tag} の開始時の政治を保存しました",
+    "leaderKind": "人物のイデオロギー · {token}",
+    "leaderSaved": "人物「{name}」のイデオロギーを保存しました",
+    "definitionLog": "政党とイデオロギー · {name}",
+    "definitionKind": "イデオロギー · {id}",
+    "definitionSaved": "イデオロギー「{name}」を保存しました",
+    "iconLog": "政党とイデオロギー · {name} · アイコン",
+    "iconSaved": "「{name}」のアイコンを差し替えました",
+    "saved": "イデオロギーを保存しました",
+    "problem": {
+      "supportTotal": "支持率の合計は 100 にしてください（現在 {total}）",
+      "lastElectionDate": "前回選挙の日付は 1933.3.5 のように書いてください",
+      "frequency": "選挙間隔は 0 以上の整数（月）にしてください",
+      "rulingZero": "与党の支持率を 0 にはできません",
+      "idRequired": "識別子を入力してください（例: technocracy）",
+      "idInvalid": "識別子に使えるのは小文字・数字・アンダースコアのみで、数字で始めることはできません",
+      "idTaken": "プロジェクトにはすでに「{id}」があります",
+      "rootTakeover": "このプロジェクトはベース Mod を元にしており、そのイデオロギーグループを使います。ここで新しいグループは作れません",
+      "sourceLock": "このイデオロギーはベース Mod 由来です。その下にサブイデオロギーを作るには、先にインポートして出典をロックしてください"
+    }
+  },
+  "warGoal": {
+    "field": {
+      "baseDays": "正当化の基本日数",
+      "perStateDays": "州が 1 つ増えるごとの追加日数",
+      "stateLimit": "選択できる州の上限",
+      "threat": "州ごとの世界緊張度"
+    },
+    "kind": "戦争目標 · {id}",
+    "loading": "プロジェクトの戦争目標を読み込み中…",
+    "saved": "戦争目標「{name}」を保存しました",
+    "deleted": "戦争目標「{name}」を削除しました",
+    "formula": "正当化日数 = 基本 + 州ごと × 選んだ州の数。1 日ごとに政治力を 0.2 消費します（NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP）。",
+    "problem": "0 以上の数値を入力してください",
+    "note": "保存すると、この戦争目標を含むファイル全体がプロジェクトに取り込まれます。",
+    "hit": "戦争目標 {name}"
+  },
+  "autonomy": {
+    "kind": "自治段階 · {id}",
+    "saved": "自治段階「{name}」を保存しました",
+    "loading": "プロジェクトの自治段階を読み込み中…",
+    "name": "名称（画面に表示される段階名）",
+    "minFreedom": "自由度の下限（0〜1。従属国の段階の上下はこの順になります）",
+    "manpower": "宗主国が得る従属国の人的資源の割合（0〜1）",
+    "unset": "未設定",
+    "rule": "ルール（rule：従属国ができること）",
+    "modifier": "補正（modifier）",
+    "scriptNote": "ルールと補正はゲームのスクリプトで書きます。空にすると削除されます。",
+    "problem": "名称は空にできません。数値は 0〜1 の範囲で、自由度の下限は空にできません",
+    "note": "保存すると、この段階を含むファイル全体をプロジェクトに取り込み、このブロックだけを変更します。自治段階のワークベンチで作った段階はその行を変更します。名称はこの段階 ID のローカライズ文字列として保存され、すべての画面に反映されます。",
+    "hit": "自治段階 {tag} {name}"
+  },
+  "newCountry": {
+    "heading": "国家",
+    "summary": "国家を新規作成して州を与える",
+    "create": "+ 国家を新規作成",
+    "giveTitle": "{tag} に州を与える（所有国にして中核州を追加）",
+    "searchPlaceholder": "州名、番号、または現在の所有国（例: GER）",
+    "searchLabel": "州を検索",
+    "noMatch": "一致する州はありません。",
+    "loading": "州を読み込み中…",
+    "chosen": "選択中：{list}",
+    "listSeparator": "、",
+    "giving": "付与中…",
+    "give": "{count} 州を {tag} に与える",
+    "gave": "{count} 州を {tag} に与えました",
+    "gaveHint": "国家選択画面の小国一覧から選べるようになりました。",
+    "giveFailed": "州を与えられませんでした：{error}",
+    "hint": "作成したら、ここで州を与えてください。ゲームは州を持つ国家しか一覧に出しません。「世界地図」で新しい土地を追加して与えることもできます。",
+    "gaveLog": "{tag} が {count} 州を獲得",
+    "statesKind": "州 · {ids}",
+    "createdLog": "新規国家 {tag}",
+    "countryKind": "国家 · {tag}"
+  },
+  "province": {
+    "stateSaved": "州 {id} を保存しました",
+    "editKind": "マップ · 属性",
+    "renameLog": "名前変更 · {key}",
+    "renameKind": "マップ · 名前",
+    "stateTitle": "州 {id} · {name}",
+    "noStateTitle": "ここはどの州にも属していません",
+    "stateKind": "STATE_{id} · 所有国 {owner} · プロヴィンス {count} 個",
+    "noOwner": "なし",
+    "provinceKind": "プロヴィンス {id} · {kind}",
+    "regionTitle": "戦略地域 {id} · {name}",
+    "noRegionTitle": "ここはどの戦略地域にも属していません",
+    "regionKind": "STRATEGICREGION_{id} · プロヴィンス {count} 個",
+    "provinceId": "プロヴィンス {id}",
+    "inState": "{kind} · 州 {id} {name} 内",
+    "scope": "マップのクリックで選ぶ",
+    "scopeState": "州",
+    "scopeProvince": "プロヴィンス",
+    "scopeRegion": "戦略地域",
+    "landNoState": "どの州にも属していません。「プロヴィンス」に切り替えると、このブロック自体を編集できます。",
+    "waterNoState": "海と湖はどの州にも属しません。「プロヴィンス」に切り替えると、このブロック自体を編集できます。",
+    "noRegion": "このブロックはどの戦略地域にも属していません。",
+    "openWorldMap": "世界地図のワークベンチで開く ↗"
+  },
+  "state": {
+    "fallbackTitle": "州",
+    "kind": "州 · {id}",
+    "countryStates": "この国家の州",
+    "pick": "州を選ぶ",
+    "logKind": "州 · {id}",
+    "loadFailed": "この州を読み込めませんでした：{error}",
+    "missing": "州 {id} はバニラにもプロジェクトにもないため、ここで編集できるデータはありません。",
+    "adopting": "この州をプロジェクトに取り込み中…（変更しなければエクスポートする MOD には書き込まれません）",
+    "loading": "プロジェクトの州を読み込み中…",
+    "problem": {
+      "ownerRequired": "所有国は空にできません"
+    }
+  },
+  "diplomacy": {
+    "title": "開始時の外交",
+    "problem": {
+      "self": "自国を対象にはできません",
+      "subjectAutonomy": "従属国には自治の種類を入力してください",
+      "relationType": "外交協定には協定の種類を入力してください"
+    }
+  },
+  "profile": {
+    "problem": {
+      "nameRequired": "国名は空にできません",
+      "adjectiveRequired": "形容詞は空にできません（例: German）",
+      "capitalRequired": "首都には州の番号を入力してください"
+    }
+  }
+}

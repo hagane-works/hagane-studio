@@ -1,0 +1,15 @@
+{
+  "workbenchTitle": "Diese Werkbank hat einen Fehler getroffen",
+  "workbenchBody": "Etwas ging schief, während die Wiedergabe dieses Editors. Ihre andere Arbeit und der Rest der App sind unberührt.",
+  "rootTitle": "Etwas ist schief gelaufen.",
+  "rootBody": "Ein unerwarteter Fehler hat diese Seite vom Rendering abgehalten. Der Rest der App ist noch verfügbar.",
+  "chunkTitle": "Die Seite wurde nicht vollständig geladen",
+  "chunkBody": "Ein Teil der Seite konnte nicht aus dem Programm geladen werden, meist weil es neu gestartet oder aktualisiert wurde, während dieses Fenster offen war. Lade die Seite neu, um es erneut zu versuchen.",
+  "globalTitle": "Die App konnte nicht geladen werden",
+  "globalBody": "Ein kritischer Fehler verhinderte die Wiedergabe der App. Das Reloaden behebt dies normalerweise.",
+  "draftHint": "Versuchen Sie es noch einmal – es hält alle nicht gespeicherten Edits in dieser Sitzung. Reloading der Seite wirft nicht gespeicherte Entwürfe.",
+  "retry": "Versuch es noch mal.",
+  "reload": "Seite neu laden",
+  "details": "Fehlerangaben",
+  "unknownError": "Unbekannter Fehler"
+}

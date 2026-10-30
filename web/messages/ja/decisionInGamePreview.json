@@ -1,0 +1,7 @@
+{
+  "costTextTooltip": "custom_cost_text · PP 表示を置き換えます",
+  "selectableMissionTooltip": "selectable_mission · プレイヤーが手動で開始する任務",
+  "ppCost": "{amount} PP",
+  "ppRefund": "PP +{amount} 払い戻し",
+  "approximateLabel": "ゲーム内プレビュー · 概算"
+}

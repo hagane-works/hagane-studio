@@ -1,0 +1,10 @@
+{
+ "source": "common/opinion_modifiers/*.txt",
+ "game_version": "1.19.3.0",
+ "total": 3,
+ "ids": [
+  "embargo",
+  "test_opinion_modifier",
+  "test_trade_modifier"
+ ]
+}

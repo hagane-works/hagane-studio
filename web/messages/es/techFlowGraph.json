@@ -1,0 +1,9 @@
+{
+  "footerHint": "Doble clic en un espacio vacío → crear · arrastra un nodo → cambiar start_year / columna · selecciónalo y pulsa <kbd>Supr</kbd>, o pasa por la × superior derecha para eliminarlo",
+  "footerHintAria": "Ayuda de controles del lienzo",
+  "footerHintRowAxis": "Doble clic en un espacio vacío → crear · arrastra un nodo → cambiar fila / columna · selecciónalo y pulsa <kbd>Supr</kbd>, o pasa por la × superior derecha para eliminarlo",
+  "orphanNoFolder": "Fuera de cualquier árbol tecnológico · {count} tecnologías no tienen bloque folder (se conceden mediante Enfoque Nacional/evento)",
+  "orphanUnmatched": "Sin correspondencia con ningún gridbox del .gui · {count} tecnologías",
+  "footerHintBrowse": "Explora el panel de investigación: selecciona una tecnología, desplázate o haz zoom. Usa el modo de diseño para cambiar una posición.",
+  "footerHintLayout": "Modo de diseño: coloca solo en las casillas válidas de la carpeta de investigación seleccionada. Arrastrar nunca cambia el año de investigación."
+}

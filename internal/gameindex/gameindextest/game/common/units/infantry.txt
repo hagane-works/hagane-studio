@@ -1,0 +1,9 @@
+# Synthetic test fixture written for Hagane Works' tests (not game data).
+sub_units = {
+	infantry = {
+		type = { infantry }
+		group = infantry
+		combat_width = 2
+		need = { infantry_equipment = 100 }
+	}
+}

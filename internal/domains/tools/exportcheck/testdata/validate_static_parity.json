@@ -1,0 +1,809 @@
+{
+ "cases": [
+  {
+   "name": "no-states",
+   "states": [],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "capital-ok",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "capital-not-owned",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "FRA",
+     "name": "",
+     "provinces": []
+    },
+    {
+     "state_id": 17,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns."
+    }
+   ]
+  },
+  {
+   "name": "capital-vanilla-untouched",
+   "states": [
+    {
+     "state_id": 17,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "capital-dormant-tag",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "FRA",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "ALG",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "capital-zero",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 0
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "capital-empty-owner",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "province-ok",
+   "states": [
+    {
+     "state_id": 1,
+     "owner": "GER",
+     "name": "A",
+     "provinces": [
+      10,
+      11
+     ]
+    },
+    {
+     "state_id": 2,
+     "owner": "GER",
+     "name": "B",
+     "provinces": [
+      12
+     ]
+    }
+   ],
+   "history_files": [],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "province-dup-same-state",
+   "states": [
+    {
+     "state_id": 1,
+     "owner": "GER",
+     "name": "A",
+     "provinces": [
+      10,
+      10
+     ]
+    }
+   ],
+   "history_files": [],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "province-cross-state",
+   "states": [
+    {
+     "state_id": 1,
+     "owner": "GER",
+     "name": "A",
+     "provinces": [
+      10
+     ]
+    },
+    {
+     "state_id": 2,
+     "owner": "GER",
+     "name": "B",
+     "provinces": [
+      10
+     ]
+    }
+   ],
+   "history_files": [],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 1,
+      "province_id": 10,
+      "state_ids": [
+       1,
+       2
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 10 from every state except one (it currently appears in 2 states).",
+     "message": "Province 10 is assigned to multiple states: 1 (A), 2 (B) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    }
+   ]
+  },
+  {
+   "name": "province-three-states",
+   "states": [
+    {
+     "state_id": 1,
+     "owner": "GER",
+     "name": "A",
+     "provinces": [
+      10
+     ]
+    },
+    {
+     "state_id": 2,
+     "owner": "GER",
+     "name": "",
+     "provinces": [
+      10
+     ]
+    },
+    {
+     "state_id": 3,
+     "owner": "GER",
+     "name": "C",
+     "provinces": [
+      10
+     ]
+    }
+   ],
+   "history_files": [],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 1,
+      "province_id": 10,
+      "state_ids": [
+       1,
+       2,
+       3
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 10 from every state except one (it currently appears in 3 states).",
+     "message": "Province 10 is assigned to multiple states: 1 (A), 2 (unnamed), 3 (C) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    }
+   ]
+  },
+  {
+   "name": "province-multi-collisions",
+   "states": [
+    {
+     "state_id": 1,
+     "owner": "GER",
+     "name": "A",
+     "provinces": [
+      10,
+      20
+     ]
+    },
+    {
+     "state_id": 2,
+     "owner": "GER",
+     "name": "B",
+     "provinces": [
+      10,
+      20
+     ]
+    }
+   ],
+   "history_files": [],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 1,
+      "province_id": 10,
+      "state_ids": [
+       1,
+       2
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 10 from every state except one (it currently appears in 2 states).",
+     "message": "Province 10 is assigned to multiple states: 1 (A), 2 (B) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    },
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 1,
+      "province_id": 20,
+      "state_ids": [
+       1,
+       2
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 20 from every state except one (it currently appears in 2 states).",
+     "message": "Province 20 is assigned to multiple states: 1 (A), 2 (B) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    }
+   ]
+  },
+  {
+   "name": "tech-no-cycle",
+   "states": [],
+   "history_files": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "a",
+     "prerequisites": [
+      "b"
+     ]
+    },
+    {
+     "id": 2,
+     "tech_id": "b",
+     "prerequisites": []
+    }
+   ],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  },
+  {
+   "name": "tech-self-cycle",
+   "states": [],
+   "history_files": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "a",
+     "prerequisites": [
+      "a"
+     ]
+    }
+   ],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "tech-two-cycle",
+   "states": [],
+   "history_files": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "a",
+     "prerequisites": [
+      "b"
+     ]
+    },
+    {
+     "id": 2,
+     "tech_id": "b",
+     "prerequisites": [
+      "a"
+     ]
+    }
+   ],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "tech-long-cycle",
+   "states": [],
+   "history_files": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "a",
+     "prerequisites": [
+      "b"
+     ]
+    },
+    {
+     "id": 2,
+     "tech_id": "b",
+     "prerequisites": [
+      "c"
+     ]
+    },
+    {
+     "id": 3,
+     "tech_id": "c",
+     "prerequisites": [
+      "a"
+     ]
+    }
+   ],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "tech-two-separate-cycles",
+   "states": [],
+   "history_files": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "a",
+     "prerequisites": [
+      "b"
+     ]
+    },
+    {
+     "id": 2,
+     "tech_id": "b",
+     "prerequisites": [
+      "a"
+     ]
+    },
+    {
+     "id": 3,
+     "tech_id": "c",
+     "prerequisites": [
+      "d"
+     ]
+    },
+    {
+     "id": 4,
+     "tech_id": "d",
+     "prerequisites": [
+      "c"
+     ]
+    }
+   ],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 1
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "tech-cycle-plus-clean",
+   "states": [],
+   "history_files": [],
+   "techs": [
+    {
+     "id": 1,
+     "tech_id": "z",
+     "prerequisites": []
+    },
+    {
+     "id": 2,
+     "tech_id": "a",
+     "prerequisites": [
+      "b"
+     ]
+    },
+    {
+     "id": 3,
+     "tech_id": "b",
+     "prerequisites": [
+      "a"
+     ]
+    }
+   ],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "warning",
+     "code": "tech_circular_prereq",
+     "entity_ref": {
+      "type": "technology",
+      "id": 2
+     },
+     "detail": {
+      "tech_id": "a"
+     },
+     "message": "Tech 'a': circular prerequisite dependency detected"
+    }
+   ]
+  },
+  {
+   "name": "stage-tags-out",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "FRA",
+     "name": "",
+     "provinces": []
+    },
+    {
+     "state_id": 17,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": [
+    99
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns.",
+     "out_of_stage": true
+    }
+   ]
+  },
+  {
+   "name": "stage-includes",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "FRA",
+     "name": "",
+     "provinces": []
+    },
+    {
+     "state_id": 17,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": [
+    16
+   ],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns."
+    }
+   ]
+  },
+  {
+   "name": "stage-never-tags-error",
+   "states": [
+    {
+     "state_id": 1,
+     "owner": "GER",
+     "name": "A",
+     "provinces": [
+      10
+     ]
+    },
+    {
+     "state_id": 2,
+     "owner": "GER",
+     "name": "B",
+     "provinces": [
+      10
+     ]
+    }
+   ],
+   "history_files": [],
+   "techs": [],
+   "stage_state_ids": [
+    99
+   ],
+   "issues": [
+    {
+     "level": "error",
+     "code": "province_double_mapping",
+     "entity_ref": {
+      "type": "state",
+      "id": 1,
+      "province_id": 10,
+      "state_ids": [
+       1,
+       2
+      ]
+     },
+     "severity": "blocker",
+     "fix_hint": "Remove province 10 from every state except one (it currently appears in 2 states).",
+     "message": "Province 10 is assigned to multiple states: 1 (A), 2 (B) — HOI4 will crash on load ('province in two states'). Remove it from all but one state."
+    }
+   ]
+  },
+  {
+   "name": "stage-empty",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "FRA",
+     "name": "",
+     "provinces": []
+    },
+    {
+     "state_id": 17,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": [],
+   "issues": [
+    {
+     "level": "warning",
+     "code": "capital_not_owned",
+     "entity_ref": {
+      "type": "history_file",
+      "id": "GER",
+      "state_id": 16
+     },
+     "severity": "warning",
+     "fix_hint": "Set state 16's owner to GER, or set GER's capital to a state it actually owns.",
+     "message": "Country GER: capital state 16 is owned by 'FRA', not GER — HOI4 will center the bookmark camera wrong / log 'capital not owned'. Set the capital state's owner to GER or pick a capital it owns."
+    }
+   ]
+  },
+  {
+   "name": "all-clean",
+   "states": [
+    {
+     "state_id": 16,
+     "owner": "GER",
+     "name": "",
+     "provinces": []
+    }
+   ],
+   "history_files": [
+    {
+     "country_tag": "GER",
+     "capital": 16
+    }
+   ],
+   "techs": [],
+   "stage_state_ids": null,
+   "issues": [
+    {
+     "level": "success",
+     "message": "All checks passed — ready to export"
+    }
+   ]
+  }
+ ]
+}

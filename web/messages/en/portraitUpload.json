@@ -1,0 +1,20 @@
+{
+  "heading": "Portrait & Assets",
+  "uploading": "Uploading…",
+  "uploadButton": "Upload Portrait Image",
+  "ratioHint": "PNG / JPG, recommended ratio 3:4",
+  "resetConfirm": "Reset {tag}'s portrait back to vanilla? Your uploaded portrait will be removed.",
+  "resetFailed": "Reset failed",
+  "resetting": "Resetting…",
+  "resetButton": "↺ Reset to Vanilla Portrait",
+  "generatedPreview": "Generated Preview",
+  "leaderPortraitAlt": "Leader portrait",
+  "leaderPortrait": "Leader Portrait",
+  "advisorIconAlt": "Advisor icon",
+  "advisorIcon": "Advisor Icon",
+  "notImported": "⚠ Portrait not imported",
+  "referencesSprite": "This character references the portrait sprite",
+  "notImportedDetail": "but import didn't resolve it to an image — the mod's own .gfx/.dds art for this sprite likely didn't come through (common when using \"Import .txt only\"). Click \"Upload Portrait Image\" above to add a custom portrait, or re-import the full mod folder to bring in its artwork.",
+  "noPortrait": "No portrait uploaded",
+  "noPortraitHint": "Upload to auto-generate portrait / advisor icon / trait icon"
+}

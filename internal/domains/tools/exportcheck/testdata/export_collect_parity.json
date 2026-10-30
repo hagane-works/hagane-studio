@@ -1,0 +1,1566 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": null,
+    "emits_bookmark": false,
+    "should_emit_defines": false,
+    "defines_start_date": null,
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [],
+   "collected_findings": []
+  },
+  {
+   "name": "structured-bookmark",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1936.1.1.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "GER",
+      "selectable_countries": [
+       {
+        "tag": "GER"
+       }
+      ],
+      "filters": null
+     }
+    ],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1936.1.1.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1936.1.1.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "custom-start-date",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1937.5.4.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "GER",
+      "selectable_countries": [
+       {
+        "tag": "GER"
+       }
+      ],
+      "filters": null
+     }
+    ],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": true,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "custom-start-no-bookmark",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": null,
+    "emits_bookmark": false,
+    "should_emit_defines": true,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": [
+     {
+      "code": "timeline.custom_start_without_bookmark",
+      "severity": "warning",
+      "source": {
+       "kind": "project",
+       "identifier": "start_date"
+      },
+      "evidence": {
+       "project_start_date": "1937.5.4.12"
+      },
+      "repair_route": "bookmarks.create_for_project_start"
+     }
+    ]
+   },
+   "quality_findings": [],
+   "collected_findings": [
+    {
+     "code": "timeline.custom_start_without_bookmark",
+     "severity": "warning",
+     "source": {
+      "kind": "project",
+      "identifier": "start_date"
+     },
+     "evidence": {
+      "project_start_date": "1937.5.4.12"
+     },
+     "repair_route": "bookmarks.create_for_project_start"
+    }
+   ]
+  },
+  {
+   "name": "raw-bookmark-overrides",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1936.1.1.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "",
+      "selectable_countries": null,
+      "filters": null
+     }
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/bm1.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1937.5.4.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "f2685f62c553b6c4cf094c36e689e9c41818be99760377c41fb40469f36ccef7",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": true,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": [
+     {
+      "code": "timeline.bookmark_path_shadow_date_mismatch",
+      "severity": "warning",
+      "source": {
+       "kind": "bookmark_path",
+       "identifier": "common/bookmarks/bm1.txt",
+       "path": "common/bookmarks/bm1.txt",
+       "provider": "project_preserved_raw"
+      },
+      "evidence": {
+       "shadowed_dates": [
+        "1936.1.1.12"
+       ],
+       "shadowed_source": "bm1",
+       "winning_dates": [
+        "1937.5.4.12"
+       ],
+       "winning_source": "common/bookmarks/bm1.txt"
+      },
+      "repair_route": "bookmark.path_collision.review_winner"
+     }
+    ]
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "timeline.bookmark_path_shadow_date_mismatch",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_path",
+      "identifier": "common/bookmarks/bm1.txt",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "project_preserved_raw"
+     },
+     "evidence": {
+      "shadowed_dates": [
+       "1936.1.1.12"
+      ],
+      "shadowed_source": "bm1",
+      "winning_dates": [
+       "1937.5.4.12"
+      ],
+      "winning_source": "common/bookmarks/bm1.txt"
+     },
+     "repair_route": "bookmark.path_collision.review_winner"
+    },
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "raw-hash-mismatch",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/a.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1936.1.1.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1936.1.1.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1936.1.1.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": [
+     {
+      "code": "timeline.raw_bookmark_hash_mismatch",
+      "severity": "blocker",
+      "source": {
+       "kind": "bookmark_raw_file",
+       "identifier": "common/bookmarks/a.txt",
+       "path": "common/bookmarks/a.txt",
+       "provider": "project_preserved_raw"
+      },
+      "evidence": {
+       "actual_hash": "e7ff484d85ef4dd6280c7ad76707c6f0bd0e4a57cc0f85351f9babcaecce2c76",
+       "declared_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "repair_route": "bookmark.raw_file.refresh_source_hash"
+     }
+    ]
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/a.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "timeline.raw_bookmark_hash_mismatch",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark_raw_file",
+      "identifier": "common/bookmarks/a.txt",
+      "path": "common/bookmarks/a.txt",
+      "provider": "project_preserved_raw"
+     },
+     "evidence": {
+      "actual_hash": "e7ff484d85ef4dd6280c7ad76707c6f0bd0e4a57cc0f85351f9babcaecce2c76",
+      "declared_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+     },
+     "repair_route": "bookmark.raw_file.refresh_source_hash"
+    },
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/a.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "raw-hash-ok",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/a.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1936.1.1.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "e7ff484d85ef4dd6280c7ad76707c6f0bd0e4a57cc0f85351f9babcaecce2c76",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1936.1.1.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1936.1.1.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/a.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/a.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "raw-no-bookmark",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/a.txt",
+      "content": "some_other_key = { x = 1 }\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": null,
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": null,
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": [
+     {
+      "code": "timeline.raw_bookmark_date_unknown",
+      "severity": "blocker",
+      "source": {
+       "kind": "bookmark_raw_file",
+       "identifier": "common/bookmarks/a.txt",
+       "path": "common/bookmarks/a.txt",
+       "provider": "project_preserved_raw"
+      },
+      "evidence": {
+       "date_tokens": [],
+       "parse_error": "bookmark_block_missing",
+       "source_hash": "ecddf7f2db57630f257c2626610a8e3928c43101e6be3a7a4c531aa8a1719afd"
+      },
+      "repair_route": "bookmark.raw_file.repair_date"
+     }
+    ]
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.raw_no_bookmark",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark_raw_file",
+      "identifier": "common/bookmarks/a.txt",
+      "path": "common/bookmarks/a.txt",
+      "provider": "project_preserved_raw"
+     },
+     "evidence": {
+      "warnings": []
+     },
+     "repair_route": "bookmark.raw_file.repair_structure"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "timeline.raw_bookmark_date_unknown",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark_raw_file",
+      "identifier": "common/bookmarks/a.txt",
+      "path": "common/bookmarks/a.txt",
+      "provider": "project_preserved_raw"
+     },
+     "evidence": {
+      "date_tokens": [],
+      "parse_error": "bookmark_block_missing",
+      "source_hash": "ecddf7f2db57630f257c2626610a8e3928c43101e6be3a7a4c531aa8a1719afd"
+     },
+     "repair_route": "bookmark.raw_file.repair_date"
+    },
+    {
+     "code": "bookmark.raw_no_bookmark",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark_raw_file",
+      "identifier": "common/bookmarks/a.txt",
+      "path": "common/bookmarks/a.txt",
+      "provider": "project_preserved_raw"
+     },
+     "evidence": {
+      "warnings": []
+     },
+     "repair_route": "bookmark.raw_file.repair_structure"
+    }
+   ]
+  },
+  {
+   "name": "raw-deliberate-empty",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/a.txt",
+      "content": "",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": null,
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": null,
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [],
+   "collected_findings": []
+  },
+  {
+   "name": "raw-path-case-collision",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/A.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1936.1.1.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     },
+     {
+      "id": 2,
+      "dest_path": "common/bookmarks/a.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1936.1.1.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1936.1.1.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1936.1.1.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/a.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    },
+    {
+     "code": "bookmark.raw_path_case_collision",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark_raw_file",
+      "identifier": "common/bookmarks/a.txt",
+      "path": "common/bookmarks/a.txt",
+      "provider": "project_raw"
+     },
+     "evidence": {
+      "artifact_ids": [
+       "1",
+       "2"
+      ],
+      "paths": [
+       "common/bookmarks/A.txt",
+       "common/bookmarks/a.txt"
+      ]
+     },
+     "repair_route": "bookmark.raw_file.rename_unique_path"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm:GER",
+      "path": "common/bookmarks/a.txt",
+      "provider": "preserved_raw"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    },
+    {
+     "code": "bookmark.raw_path_case_collision",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark_raw_file",
+      "identifier": "common/bookmarks/a.txt",
+      "path": "common/bookmarks/a.txt",
+      "provider": "project_raw"
+     },
+     "evidence": {
+      "artifact_ids": [
+       "1",
+       "2"
+      ],
+      "paths": [
+       "common/bookmarks/A.txt",
+       "common/bookmarks/a.txt"
+      ]
+     },
+     "repair_route": "bookmark.raw_file.rename_unique_path"
+    }
+   ]
+  },
+  {
+   "name": "raw-defines-aligned",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1937.5.4.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "",
+      "selectable_countries": null,
+      "filters": null
+     }
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/defines/Mod_defines.lua",
+      "content": "NDefines.NGame.START_DATE = \"1937.5.4.12\"\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [],
+   "collected_findings": []
+  },
+  {
+   "name": "raw-defines-conflict",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1937.5.4.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "",
+      "selectable_countries": null,
+      "filters": null
+     }
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/defines/Mod_defines.lua",
+      "content": "NDefines.NGame.START_DATE = \"1940.1.1.12\"\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": [
+     {
+      "code": "timeline.raw_defines_start_date_conflict",
+      "severity": "blocker",
+      "source": {
+       "kind": "defines_raw_file",
+       "identifier": "common/defines/Mod_defines.lua",
+       "path": "common/defines/Mod_defines.lua",
+       "provider": "project_raw"
+      },
+      "evidence": {
+       "expected_start_date": "1937.5.4.12",
+       "parsed_raw_start_date": "1940.1.1.12",
+       "raw_start_date": "1940.1.1.12"
+      },
+      "repair_route": "timeline.raw_defines.align_start_date"
+     }
+    ]
+   },
+   "quality_findings": [],
+   "collected_findings": [
+    {
+     "code": "timeline.raw_defines_start_date_conflict",
+     "severity": "blocker",
+     "source": {
+      "kind": "defines_raw_file",
+      "identifier": "common/defines/Mod_defines.lua",
+      "path": "common/defines/Mod_defines.lua",
+      "provider": "project_raw"
+     },
+     "evidence": {
+      "expected_start_date": "1937.5.4.12",
+      "parsed_raw_start_date": "1940.1.1.12",
+      "raw_start_date": "1940.1.1.12"
+     },
+     "repair_route": "timeline.raw_defines.align_start_date"
+    }
+   ]
+  },
+  {
+   "name": "raw-defines-missing-date",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1937.5.4.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "",
+      "selectable_countries": null,
+      "filters": null
+     }
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/defines/Mod_defines.lua",
+      "content": "-- nothing here\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": [
+     {
+      "code": "timeline.raw_defines_start_date_conflict",
+      "severity": "blocker",
+      "source": {
+       "kind": "defines_raw_file",
+       "identifier": "common/defines/Mod_defines.lua",
+       "path": "common/defines/Mod_defines.lua",
+       "provider": "project_raw"
+      },
+      "evidence": {
+       "expected_start_date": "1937.5.4.12",
+       "parsed_raw_start_date": null,
+       "raw_start_date": null
+      },
+      "repair_route": "timeline.raw_defines.align_start_date"
+     }
+    ]
+   },
+   "quality_findings": [],
+   "collected_findings": [
+    {
+     "code": "timeline.raw_defines_start_date_conflict",
+     "severity": "blocker",
+     "source": {
+      "kind": "defines_raw_file",
+      "identifier": "common/defines/Mod_defines.lua",
+      "path": "common/defines/Mod_defines.lua",
+      "provider": "project_raw"
+     },
+     "evidence": {
+      "expected_start_date": "1937.5.4.12",
+      "parsed_raw_start_date": null,
+      "raw_start_date": null
+     },
+     "repair_route": "timeline.raw_defines.align_start_date"
+    }
+   ]
+  },
+  {
+   "name": "raw-defines-last-wins",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1937.5.4.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "",
+      "selectable_countries": null,
+      "filters": null
+     }
+    ],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/defines/Mod_defines.lua",
+      "content": "NDefines.NGame.START_DATE = \"1940.1.1.12\"\nNDefines.NGame.START_DATE = \"1937.5.4.12\"\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [],
+   "collected_findings": []
+  },
+  {
+   "name": "quality-default-country-missing",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1936.1.1.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "FRA",
+      "selectable_countries": [
+       {
+        "tag": "GER"
+       }
+      ],
+      "filters": null
+     }
+    ],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1936.1.1.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1936.1.1.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.default_country_not_interesting",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark",
+      "identifier": "bm1",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "default_country": "FRA",
+      "interesting_countries": [
+       "GER"
+      ]
+     },
+     "repair_route": "bookmark.default_country.choose_interesting"
+    },
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "bookmark.default_country_not_interesting",
+     "severity": "blocker",
+     "source": {
+      "kind": "bookmark",
+      "identifier": "bm1",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "default_country": "FRA",
+      "interesting_countries": [
+       "GER"
+      ]
+     },
+     "repair_route": "bookmark.default_country.choose_interesting"
+    },
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "quality-label-string",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1936.1.1.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "GER",
+      "selectable_countries": [
+       {
+        "tag": "GER",
+        "label": "  Reich  "
+       }
+      ],
+      "filters": null
+     }
+    ],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": "1936.1.1.12",
+    "emits_bookmark": true,
+    "should_emit_defines": false,
+    "defines_start_date": "1936.1.1.12",
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [
+    {
+     "code": "bookmark.country_labels_filter_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark",
+      "identifier": "bm1",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_labels": [
+       "Reich"
+      ],
+      "filters": []
+     },
+     "repair_route": "bookmark.filters.enable_label"
+    },
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ],
+   "collected_findings": [
+    {
+     "code": "bookmark.country_labels_filter_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark",
+      "identifier": "bm1",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_labels": [
+       "Reich"
+      ],
+      "filters": []
+     },
+     "repair_route": "bookmark.filters.enable_label"
+    },
+    {
+     "code": "bookmark.selectable_ideology_missing",
+     "severity": "warning",
+     "source": {
+      "kind": "bookmark_country",
+      "identifier": "bm1:GER",
+      "path": "common/bookmarks/bm1.txt",
+      "provider": "created"
+     },
+     "evidence": {
+      "country_tag": "GER",
+      "ctd_claim": false,
+      "interesting": true,
+      "player_impact": [
+       "country_leader",
+       "ideology_icon",
+       "country_name",
+       "flag"
+      ]
+     },
+     "repair_route": "bookmark.country.ideology.set"
+    }
+   ]
+  },
+  {
+   "name": "non-ascii-project-name",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "德意志",
+     "country_tag": "GER",
+     "start_date": "1937.5.4",
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [
+     {
+      "bookmark_id": "bm1",
+      "date": "1937.5.4.12",
+      "source": "",
+      "default_flag": false,
+      "default_country": "",
+      "selectable_countries": null,
+      "filters": null
+     }
+    ],
+    "raw_files": []
+   },
+   "timeline_plan": {
+    "project_start_date": "1937.5.4",
+    "project_parsed_date": "1937.5.4.12",
+    "earliest_emitted_date": "1937.5.4.12",
+    "emits_bookmark": true,
+    "should_emit_defines": true,
+    "defines_start_date": "1937.5.4.12",
+    "needs_bookmark_replace_path": true,
+    "descriptor_replace_paths": [
+     "common/bookmarks"
+    ],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [],
+   "collected_findings": []
+  },
+  {
+   "name": "raw-skipped",
+   "input": {
+    "project": {
+     "id": 7,
+     "name": "Mod",
+     "country_tag": "GER",
+     "start_date": null,
+     "export_languages": null,
+     "dependencies": null,
+     "basemod_template_id": null
+    },
+    "bookmarks": [],
+    "raw_files": [
+     {
+      "id": 1,
+      "dest_path": "common/bookmarks/a.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1936.1.1.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": true,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     },
+     {
+      "id": 2,
+      "dest_path": "common/ideas/a.txt",
+      "content": "bookmarks = {\n bookmark = {\n  name = \"BM\"\n  date = 1936.1.1.12\n  default_country = \"GER\"\n  GER = {\n   history = \"x\"\n  }\n }\n}\n",
+      "is_binary": false,
+      "content_sha256": "",
+      "generate_replace_path": false,
+      "source": ""
+     }
+    ]
+   },
+   "timeline_plan": {
+    "project_start_date": null,
+    "project_parsed_date": null,
+    "earliest_emitted_date": null,
+    "emits_bookmark": false,
+    "should_emit_defines": false,
+    "defines_start_date": null,
+    "needs_bookmark_replace_path": false,
+    "descriptor_replace_paths": [],
+    "descriptor_replace_paths_with_existing": [
+     "common/ideas",
+     "common/bookmarks"
+    ],
+    "findings": []
+   },
+   "quality_findings": [],
+   "collected_findings": []
+  }
+ ]
+}

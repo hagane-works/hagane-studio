@@ -1,0 +1,95 @@
+{
+  "setup": {
+    "title": "Bienvenue dans Hagane Works",
+    "intro": "Choisissez où ranger vos projets. Chaque projet est un dossier ordinaire que vous pouvez copier, sauvegarder ou versionner.",
+    "projectsDirTitle": "Dossier de création",
+    "projectsDirHelp": "Chaque projet est enregistré ici sous forme de dossier. Choisissez un dossier vide ou celui que vous utilisez déjà pour Hagane Works.",
+    "gameDirTitle": "Installation de Hearts of Iron IV",
+    "gameDirHelp": "L'aperçu du jeu et les données du jeu de base sont lus depuis votre propre copie du jeu. Ce programme ne contient aucun fichier du jeu.",
+    "gameFound": "{dir} (version {version})",
+    "gameMissing": "Introuvable automatiquement. Choisissez le dossier qui contient hoi4.exe.",
+    "notChosen": "Pas encore choisi",
+    "choose": "Choisir…",
+    "start": "Commencer"
+  },
+  "folderPicker": {
+    "up": "Dossier parent",
+    "pathPlaceholder": "Saisissez un chemin de dossier",
+    "go": "Ouvrir",
+    "empty": "Aucun dossier ici.",
+    "cancel": "Annuler",
+    "choose": "Utiliser ce dossier"
+  },
+  "settings": {
+    "open": "Paramètres",
+    "title": "Paramètres de Hagane Works",
+    "version": "Version {version}",
+    "projectsDir": "Dossier de création",
+    "gameDir": "Installation de Hearts of Iron IV",
+    "modDir": "Dossier des mods pour « Installer »",
+    "change": "Modifier…",
+    "cwtools": "Règles CWTools (facultatif)",
+    "cwtoolsMissing": "Introuvables",
+    "cwtoolsModifiers": "{count, plural, one {# nom de modificateur lu} other {# noms de modificateurs lus}}",
+    "cwtoolsAutomatic": "Rechercher automatiquement",
+    "cwtoolsAbout": "Facultatives, elles servent uniquement à vérifier les noms de modificateurs lors de l’export : ces règles proviennent du projet tiers CWTools (licence MIT) et se téléchargent sur <link>github.com/cwtools/cwtools-hoi4-config</link>.",
+    "port": "Port",
+    "portSave": "Enregistrer",
+    "portInUse": "Utilisé actuellement : {port}",
+    "portAbout": "Le port local sur lequel Hagane Works écoute ; laissez vide pour utiliser le port par défaut. Le changement s’applique au prochain démarrage du programme. Ce que la fenêtre mémorise (thème, langue, favoris) est lié à son adresse : sur un nouveau port, tout repart de zéro.",
+    "cpu": "Utilisation du processeur",
+    "cpuOne": "1 cœur",
+    "cpuHalf": "50 % ({cores, plural, one {# cœur} other {# cœurs}})",
+    "cpuAll": "100 % ({cores, plural, one {# cœur} other {# cœurs}})",
+    "cpuAbout": "Le nombre de cœurs du processeur que Hagane Works peut occuper quand il importe un mod ou lit votre jeu. Moins en laisse davantage aux autres programmes ; tous, c’est le plus rapide.",
+    "avatar": {
+      "title": "Votre avatar local",
+      "about": "Choisissez un compagnon intégré ou votre image. Elle reste sur cet ordinateur et n’est jamais exportée avec un mod.",
+      "currentAlt": "Avatar actuel",
+      "upload": "Utiliser votre image",
+      "processing": "Traitement…",
+      "uploadHelp": "PNG, JPEG ou WebP, 10 Mo maximum. L’image est recadrée au format carré.",
+      "invalidType": "Choisissez une image PNG, JPEG ou WebP.",
+      "tooLarge": "L’image doit faire 10 Mo ou moins.",
+      "failed": "Cette image n’a pas pu être utilisée ou enregistrée sur cet ordinateur.",
+      "pets": {
+        "field_engineer_dog": "Chien du génie",
+        "infantry_rabbit": "Lapin fantassin",
+        "logistics_panda": "Panda logisticien",
+        "air_ace_fox": "Renard as de l’air",
+        "tank_commander_bear": "Ours commandant de char",
+        "codebreaker_owl": "Hibou cryptanalyste",
+        "admiral_penguin": "Pingouin amiral",
+        "medic_deer": "Cerf médecin"
+      }
+    },
+    "quit": "Quitter Hagane Works"
+  },
+  "gameIndex": {
+    "title": "Listes de référence tirées de votre jeu",
+    "about": "Hagane Works lit votre propre copie du jeu pour constituer ses listes de référence : pays, esprits nationaux, matériel et plus encore. Rien du jeu n'est fourni avec le programme.",
+    "missing": "Choisissez d'abord le dossier du jeu.",
+    "building": "Lecture du jeu… {done} sur {total}",
+    "step": "En cours : {step}",
+    "buildingHint": "Vous pouvez continuer à travailler. Les pages qui ont besoin de ces listes attendent qu'elles soient prêtes.",
+    "importWaiting": "En attente des listes de référence tirées de votre jeu…",
+    "ready": "Prêt · version du jeu {version} · constitué le {time}",
+    "failed": "Impossible de constituer les listes.",
+    "rebuild": "Reconstruire"
+  },
+  "install": {
+    "title": "Installer dans le jeu",
+    "hint": "Génère le mod et le place dans {folder} pour que le lanceur l'affiche.",
+    "installedTo": "Installé dans {folder}",
+    "install": "Installer",
+    "reinstall": "Réinstaller",
+    "installing": "Installation…",
+    "done": "Installé. Activez-le dans la liste de lecture du lanceur.",
+    "failed": "Impossible d'installer le mod"
+  },
+  "unsaved": {
+    "title": "Modifications non enregistrées",
+    "body": "Certaines modifications ne sont pas encore enregistrées. Fermer Hagane Works quand même ? Elles seront perdues.",
+    "close": "Fermer sans enregistrer"
+  }
+}

@@ -1,0 +1,13 @@
+﻿l_german:
+ demo_focus_a: "Rally the Army"
+ demo_focus_a_desc: "Die Armee muss gesammelt werden."
+ demo_focus_b: "Build Forts" # trailing comment
+ demo_num: "12"
+ demo_sym: "§Y-§!"
+ demo_var: "$WHO$"
+ demo_empty: ""
+ demo_quote: "He said \"go\""
+ demo_ver:0 "Versioned Text"
+ demo_shared: "Base English"
+ demo_extra: "Nur Deutsch"
+ demo_lenient: "say "hi" now"

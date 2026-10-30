@@ -1,0 +1,52 @@
+{
+  "mode": {
+    "mapStudio": "Map Studio · Left-click to paint, right-drag to move the map, scroll to zoom"
+  },
+  "refresh": "Refresh",
+  "refreshing": "Refreshing game preview…",
+  "refreshed": "Refreshed",
+  "startScreens": "Scenario (F2)",
+  "startScreensBack": "Back to game (F2)",
+  "startScreensHint": "Open the scenario and country selection to switch scenario or country; shortcut F2",
+  "unsupportedControl": "\"{control}\" is not available in Game View yet.",
+  "uiEdit": "UI Edit",
+  "exitUIEdit": "Exit UI Edit",
+  "textEdit": "Content Edit",
+  "exitTextEdit": "Exit Content Edit",
+  "mapStudio": "Map Studio",
+  "exitMapStudio": "Exit Map Studio",
+  "mapStudioHint": "Paint your own world right on the world map: terrain and countries, then build it and save it as a new world.",
+  "mapStudioSaved": "New world saved",
+  "mapStudioSavedBody": "{states} states. The map is now the world you painted.",
+  "uiEditHint": "Edit interface images and text. Clicking selects an element instead of activating its button.",
+  "textEditHint": "Edit decisions, characters, focuses, and other content. Buttons keep working; click a map province to edit its terrain, state, and name.",
+  "inspect": {
+    "viewHint": "View mode: click a technology to inspect it. Enter Content Edit to change or save it.",
+    "startYear": "Start year",
+    "status": "Status",
+    "researchCost": "Research cost",
+    "approxDays": "Estimated time",
+    "days": "{days} days",
+    "position": "Tree position",
+    "icon": "Icon",
+    "leadsTo": "Leads to",
+    "mutuallyExclusive": "Mutually exclusive",
+    "subTechnologies": "Sub-technologies",
+    "none": "None",
+    "enterEdit": "Enter Content Edit",
+    "states": {
+      "researched": "Researched",
+      "available": "Available",
+      "unavailable": "Locked"
+    }
+  },
+  "backToWorkbench": "Back to workbench",
+  "loadingTitle": "Loading the game screen",
+  "loadingProgress": "{done} of {total} ready",
+  "loadingStarting": "Connecting…",
+  "loadingBusy": "Loading…",
+  "continuousPanelMove": "Drag to move the continuous focus panel out of the way (only in this window, not the mod); double-click to put it back",
+  "continuousPanelPlace": "Drag to set where the mod places the continuous focus panel",
+  "alertsMore": "Show all alerts ({count} more)",
+  "alertsLess": "Collapse alerts"
+}

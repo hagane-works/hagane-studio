@@ -1,0 +1,20 @@
+{
+  "paletteLabel": "Контроль",
+  "paletteContainer": "Контейнер",
+  "paletteIcon": "Икон",
+  "paletteText": "Текст",
+  "paletteProgressbar": "Бар & ходу работы",
+  "paletteButton": "Кнопка",
+  "stageLoading": "Просмотр 1:1...",
+  "stageNotSavedTitle": "Еще не составлен",
+  "stageNotSavedBody": "Сохранить панель для просмотра просмотра 1:1.",
+  "stageEmpty": "Добавить управление из палитры выше.",
+  "stageError": "Просмотр не загрузился",
+  "ghostBadge": "проект",
+  "ghostHint": "Не в скомпилированном презентации. Сохранить для перевода 1:1.",
+  "ribbonEmpty": "Выберите контроль на холсте. Его связки показывают здесь.",
+  "ribbonGhost": "Неосохраненный проект",
+  "mockPreviewOn": "В прямом эфире с переменными значениями выборки",
+  "addIntoPanel": "Добавляется на панель",
+  "addIntoContainer": "Добавляется в «{name}»"
+}

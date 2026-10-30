@@ -1,0 +1,3435 @@
+{
+ "cases": [
+  {
+   "name": "empty",
+   "input": {
+    "text": "",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "blocking": false
+   }
+  },
+  {
+   "name": "whitespace-only",
+   "input": {
+    "text": "   \n\t\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "743b2cb5fa591d164c63c2343e70fde734982cc2314b93fb080ef15760c639b8",
+    "blocking": false
+   }
+  },
+  {
+   "name": "scalar-ok",
+   "input": {
+    "text": "add_political_power = 120\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 25,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 26
+      },
+      "operator": "=",
+      "value": 120,
+      "excerpt": "add_political_power = 120",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "78d9e9c1037b4c53ab2601f36522c1eaf0927623bced08df8204512660273d0a",
+    "blocking": false
+   }
+  },
+  {
+   "name": "scalar-quoted",
+   "input": {
+    "text": "set_cosmetic_tag = \"GER_reich\"\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "set_cosmetic_tag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 30,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 31
+      },
+      "operator": "=",
+      "value": "GER_reich",
+      "excerpt": "set_cosmetic_tag = \"GER_reich\"",
+      "key_quoted": false,
+      "value_quoted": true
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "c0bd2cf89ac4ce12a152f5c0a98d9a88cf2d83d5ef042036659b6f090d1be4e9",
+    "blocking": false
+   }
+  },
+  {
+   "name": "scalar-as-block-deterministic",
+   "input": {
+    "text": "add_political_power = {\n    value = 120\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 41,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_political_power = {\n    value = 120\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_political_power"
+      ],
+      "source_span": {
+       "start_offset": 28,
+       "end_offset": 39,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 16
+      },
+      "operator": "=",
+      "value": 120,
+      "excerpt": "value = 120",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 41,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_political_power = {\n    value = 120\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:41",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 41,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "replace_source_span",
+        "span": {
+         "start_offset": 0,
+         "end_offset": 41,
+         "start_line": 1,
+         "start_column": 1,
+         "end_line": 3,
+         "end_column": 2
+        },
+        "replacement": "add_political_power = 120"
+       }
+      ],
+      "preview_before": "add_political_power = {\n    value = 120\n}",
+      "preview_after": "add_political_power = 120",
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": true
+     }
+    ],
+    "source_sha256": "3afb3b54082e573118a529937d20025fbb7f7f813a9c2bb3c07312ce24143be7",
+    "blocking": true
+   }
+  },
+  {
+   "name": "scalar-as-block-quoted-child",
+   "input": {
+    "text": "set_cosmetic_tag = {\n    value = \"GER_reich\"\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "set_cosmetic_tag",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 46,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "set_cosmetic_tag = {\n    value = \"GER_reich\"\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "set_cosmetic_tag"
+      ],
+      "source_span": {
+       "start_offset": 25,
+       "end_offset": 44,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": "GER_reich",
+      "excerpt": "value = \"GER_reich\"",
+      "key_quoted": false,
+      "value_quoted": true
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "set_cosmetic_tag"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 46,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "set_cosmetic_tag",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "set_cosmetic_tag = {\n    value = \"GER_reich\"\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:46",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "set_cosmetic_tag"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 46,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "replace_source_span",
+        "span": {
+         "start_offset": 0,
+         "end_offset": 46,
+         "start_line": 1,
+         "start_column": 1,
+         "end_line": 3,
+         "end_column": 2
+        },
+        "replacement": "set_cosmetic_tag = \"GER_reich\""
+       }
+      ],
+      "preview_before": "set_cosmetic_tag = {\n    value = \"GER_reich\"\n}",
+      "preview_after": "set_cosmetic_tag = \"GER_reich\"",
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": true
+     }
+    ],
+    "source_sha256": "75e23e01d983bce553a9607be8a7884f94133d2c7a0bbd1a2b41be3441c9ade3",
+    "blocking": true
+   }
+  },
+  {
+   "name": "scalar-as-block-two-children",
+   "input": {
+    "text": "add_political_power = {\n    value = 120\n    extra = 3\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 55,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 4,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_political_power = {\n    value = 120\n    extra = 3\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_political_power"
+      ],
+      "source_span": {
+       "start_offset": 28,
+       "end_offset": 39,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 16
+      },
+      "operator": "=",
+      "value": 120,
+      "excerpt": "value = 120",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "extra",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_political_power"
+      ],
+      "source_span": {
+       "start_offset": 44,
+       "end_offset": 53,
+       "start_line": 3,
+       "start_column": 5,
+       "end_line": 3,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 3,
+      "excerpt": "extra = 3",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 55,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 4,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_political_power = {\n    value = 120\n    extra = 3\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:55",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 55,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 4,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "open_focus_reward_editor",
+        "focus_field": "completion_reward",
+        "required_value_kind": "scalar"
+       }
+      ],
+      "preview_before": "add_political_power = {\n    value = 120\n    extra = 3\n}",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "7e41aa04bb893e85b3d518a626f3109f1cf4e21977f9f3858b2bb041fe296660",
+    "blocking": true
+   }
+  },
+  {
+   "name": "scalar-as-block-nested-only",
+   "input": {
+    "text": "add_political_power = {\n    inner = { a = 1 }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 47,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_political_power = {\n    inner = { a = 1 }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "inner",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "add_political_power"
+      ],
+      "source_span": {
+       "start_offset": 28,
+       "end_offset": 45,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "inner = { a = 1 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "a",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_political_power",
+       "inner"
+      ],
+      "source_span": {
+       "start_offset": 38,
+       "end_offset": 43,
+       "start_line": 2,
+       "start_column": 15,
+       "end_line": 2,
+       "end_column": 20
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "a = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 47,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_political_power = {\n    inner = { a = 1 }\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:47",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 47,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "open_focus_reward_editor",
+        "focus_field": "completion_reward",
+        "required_value_kind": "scalar"
+       }
+      ],
+      "preview_before": "add_political_power = {\n    inner = { a = 1 }\n}",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "8cf2776ba6a6eb39708625246a137bce9b24b95ae012e7f330b7f88776a7aa7d",
+    "blocking": true
+   }
+  },
+  {
+   "name": "scalar-as-block-empty",
+   "input": {
+    "text": "add_political_power = {\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 25,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 2,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_political_power = {\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 25,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_political_power = {\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:25",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 25,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 2,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "open_focus_reward_editor",
+        "focus_field": "completion_reward",
+        "required_value_kind": "scalar"
+       }
+      ],
+      "preview_before": "add_political_power = {\n}",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "c2bdc39447ef4fcdbc68280c1ada9d2aa8c71cbbd5059c99ebf98d0a647f96e0",
+    "blocking": true
+   }
+  },
+  {
+   "name": "block-effect-as-scalar",
+   "input": {
+    "text": "every_owned_state = {\n    add_building_construction = 1\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "every_owned_state",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 57,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_owned_state = {\n    add_building_construction = 1\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_building_construction",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "every_owned_state"
+      ],
+      "source_span": {
+       "start_offset": 26,
+       "end_offset": 55,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 34
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "add_building_construction = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.invalid_value_shape",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "every_owned_state",
+        "add_building_construction"
+       ],
+       "span": {
+        "start_offset": 26,
+        "end_offset": 55,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 34
+       }
+      },
+      "evidence": {
+       "effect": "add_building_construction",
+       "actual_value_kind": "scalar",
+       "expected_value_kinds": [
+        "block"
+       ],
+       "assignment": "add_building_construction = 1"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "b9da671337d9ac9eef120eb30058fc22d55d5736b49f3f635b4afee515500562",
+    "blocking": true
+   }
+  },
+  {
+   "name": "block-effect-ok",
+   "input": {
+    "text": "every_owned_state = {\n    add_building_construction = {\n        type = arms_factory\n    }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "every_owned_state",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 91,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 5,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_owned_state = {\n    add_building_construction = {\n        type = arms_factory\n    }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_building_construction",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "every_owned_state"
+      ],
+      "source_span": {
+       "start_offset": 26,
+       "end_offset": 89,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 4,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_building_construction = {\n        type = arms_factory\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "type",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "every_owned_state",
+       "add_building_construction"
+      ],
+      "source_span": {
+       "start_offset": 64,
+       "end_offset": 83,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 3,
+       "end_column": 28
+      },
+      "operator": "=",
+      "value": "arms_factory",
+      "excerpt": "type = arms_factory",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "70be28e14ee0eb867026ab9d7ab31ed902f33f5037c1fa3d3c492354a62b9c2f",
+    "blocking": false
+   }
+  },
+  {
+   "name": "block-effect-wrong-scope",
+   "input": {
+    "text": "add_building_construction = {\n    type = arms_factory\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_building_construction",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 55,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_building_construction = {\n    type = arms_factory\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "type",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_building_construction"
+      ],
+      "source_span": {
+       "start_offset": 34,
+       "end_offset": 53,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": "arms_factory",
+      "excerpt": "type = arms_factory",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.unsupported_scope",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_building_construction"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 55,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_building_construction",
+       "current_scope": "country",
+       "supported_scopes": [
+        "state"
+       ],
+       "assignment": "add_building_construction = {\n    type = arms_factory\n}"
+      },
+      "repair_route": "focus.reward.wrap_supported_scope"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "5ef329de27f330f4d4b9b9c8c8fea0662d475dadf37d8436111adb0b846c4228",
+    "blocking": true
+   }
+  },
+  {
+   "name": "scope-and-shape-both",
+   "input": {
+    "text": "every_owned_state = {\n    add_political_power = { value = 1 }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "every_owned_state",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 63,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_owned_state = {\n    add_political_power = { value = 1 }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "every_owned_state"
+      ],
+      "source_span": {
+       "start_offset": 26,
+       "end_offset": 61,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 40
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_political_power = { value = 1 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "every_owned_state",
+       "add_political_power"
+      ],
+      "source_span": {
+       "start_offset": 50,
+       "end_offset": 59,
+       "start_line": 2,
+       "start_column": 29,
+       "end_line": 2,
+       "end_column": 38
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "value = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.unsupported_scope",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "every_owned_state",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 26,
+        "end_offset": 61,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 40
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "current_scope": "state",
+       "supported_scopes": [
+        "country"
+       ],
+       "assignment": "add_political_power = { value = 1 }"
+      },
+      "repair_route": "focus.reward.wrap_supported_scope"
+     },
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "every_owned_state",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 26,
+        "end_offset": 61,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 40
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_political_power = { value = 1 }"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:26:61",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "every_owned_state",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 26,
+        "end_offset": 61,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 40
+       }
+      },
+      "operations": [
+       {
+        "op": "replace_source_span",
+        "span": {
+         "start_offset": 26,
+         "end_offset": 61,
+         "start_line": 2,
+         "start_column": 5,
+         "end_line": 2,
+         "end_column": 40
+        },
+        "replacement": "add_political_power = 1"
+       }
+      ],
+      "preview_before": "add_political_power = { value = 1 }",
+      "preview_after": "add_political_power = 1",
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": true
+     }
+    ],
+    "source_sha256": "39e978b6d5c1bf759c6276d091cceb99f751c55e9c37c7a717dfa78f453f61b5",
+    "blocking": true
+   }
+  },
+  {
+   "name": "modifier-in-effect",
+   "input": {
+    "text": "army_attack = 0.1\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "army_attack",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 17,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 18
+      },
+      "operator": "=",
+      "value": 0.1,
+      "excerpt": "army_attack = 0.1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.modifier_in_effect_position",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 17,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 18
+       }
+      },
+      "evidence": {
+       "identifier": "army_attack",
+       "normalised_identifier": "army_attack",
+       "value_kind": "scalar",
+       "assignment": "army_attack = 0.1",
+       "current_scope": "country"
+      },
+      "repair_route": "focus.reward.create_modifier_carrier"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.modifier_in_effect_position:0:17",
+      "finding_code": "focus.reward.modifier_in_effect_position",
+      "repair_route": "focus.reward.create_modifier_carrier",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 17,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 18
+       }
+      },
+      "operations": [
+       {
+        "op": "choose_modifier_carrier",
+        "choices": [
+         "idea",
+         "dynamic_modifier"
+        ]
+       },
+       {
+        "op": "create_or_select_carrier",
+        "requires_author_id": true
+       },
+       {
+        "op": "author_carrier_localisation",
+        "requires_content_locales": true
+       },
+       {
+        "op": "grant_carrier_with_effect",
+        "effect": "add_ideas_or_add_dynamic_modifier"
+       }
+      ],
+      "preview_before": "army_attack = 0.1",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "64e1884a09b2b71d817a7f94c727465a057307a25b3168f525b6b6f0c342ec96",
+    "blocking": true
+   }
+  },
+  {
+   "name": "modifier-block-in-effect",
+   "input": {
+    "text": "army_attack = { x = 1 }\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "army_attack",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 23,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 24
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "army_attack = { x = 1 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "x",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "army_attack"
+      ],
+      "source_span": {
+       "start_offset": 16,
+       "end_offset": 21,
+       "start_line": 1,
+       "start_column": 17,
+       "end_line": 1,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "x = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.modifier_in_effect_position",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 23,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 24
+       }
+      },
+      "evidence": {
+       "identifier": "army_attack",
+       "normalised_identifier": "army_attack",
+       "value_kind": "block",
+       "assignment": "army_attack = { x = 1 }",
+       "current_scope": "country"
+      },
+      "repair_route": "focus.reward.create_modifier_carrier"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.modifier_in_effect_position:0:23",
+      "finding_code": "focus.reward.modifier_in_effect_position",
+      "repair_route": "focus.reward.create_modifier_carrier",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 23,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 24
+       }
+      },
+      "operations": [
+       {
+        "op": "choose_modifier_carrier",
+        "choices": [
+         "idea",
+         "dynamic_modifier"
+        ]
+       },
+       {
+        "op": "create_or_select_carrier",
+        "requires_author_id": true
+       },
+       {
+        "op": "author_carrier_localisation",
+        "requires_content_locales": true
+       },
+       {
+        "op": "grant_carrier_with_effect",
+        "effect": "add_ideas_or_add_dynamic_modifier"
+       }
+      ],
+      "preview_before": "army_attack = { x = 1 }",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "4bafd7a386039905e84012e8d3139383e80c98d1556bc99dd62cb20b704f1c95",
+    "blocking": true
+   }
+  },
+  {
+   "name": "trigger-in-effect",
+   "input": {
+    "text": "has_country_flag = my_flag\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "has_country_flag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 26,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 27
+      },
+      "operator": "=",
+      "value": "my_flag",
+      "excerpt": "has_country_flag = my_flag",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.trigger_in_effect_position",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "has_country_flag"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 26,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 27
+       }
+      },
+      "evidence": {
+       "identifier": "has_country_flag",
+       "normalised_identifier": "has_country_flag",
+       "assignment": "has_country_flag = my_flag"
+      },
+      "repair_route": "focus.reward.move_or_replace_trigger"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "7f76b5ff9b12d19b29a81f12b67dcd7785d6681d9382523dcaebf490884fa476",
+    "blocking": true
+   }
+  },
+  {
+   "name": "limit-guards-trigger",
+   "input": {
+    "text": "if = {\n    limit = {\n        has_country_flag = my_flag\n    }\n    add_political_power = 50\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "if",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 92,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 6,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "if = {\n    limit = {\n        has_country_flag = my_flag\n    }\n    add_political_power = 50\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "limit",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "if"
+      ],
+      "source_span": {
+       "start_offset": 11,
+       "end_offset": 61,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 4,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "limit = {\n        has_country_flag = my_flag\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "has_country_flag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "if",
+       "limit"
+      ],
+      "source_span": {
+       "start_offset": 29,
+       "end_offset": 55,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 3,
+       "end_column": 35
+      },
+      "operator": "=",
+      "value": "my_flag",
+      "excerpt": "has_country_flag = my_flag",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "if"
+      ],
+      "source_span": {
+       "start_offset": 66,
+       "end_offset": 90,
+       "start_line": 5,
+       "start_column": 5,
+       "end_line": 5,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": 50,
+      "excerpt": "add_political_power = 50",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "2a69fae67794f9086d1b10a2c9a95a7ba3126697981f3a0fab5f9114fcfb1bdb",
+    "blocking": false
+   }
+  },
+  {
+   "name": "limit-nested-state-wrapper",
+   "input": {
+    "text": "if = {\n    limit = {\n        278 = {\n            has_country_flag = f\n        }\n    }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "if",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 87,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 7,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "if = {\n    limit = {\n        278 = {\n            has_country_flag = f\n        }\n    }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "limit",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "if"
+      ],
+      "source_span": {
+       "start_offset": 11,
+       "end_offset": 85,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 6,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "limit = {\n        278 = {\n            has_country_flag = f\n        }\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "278",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "if",
+       "limit"
+      ],
+      "source_span": {
+       "start_offset": 29,
+       "end_offset": 79,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 5,
+       "end_column": 10
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "278 = {\n            has_country_flag = f\n        }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "has_country_flag",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "if",
+       "limit",
+       "278"
+      ],
+      "source_span": {
+       "start_offset": 49,
+       "end_offset": 69,
+       "start_line": 4,
+       "start_column": 13,
+       "end_line": 4,
+       "end_column": 33
+      },
+      "operator": "=",
+      "value": "f",
+      "excerpt": "has_country_flag = f",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "58cbe6ff148cf81ee55c1931d51a33dca76805fda0ebaa69c10745837ecfda94",
+    "blocking": false
+   }
+  },
+  {
+   "name": "numeric-wrapper-is-state",
+   "input": {
+    "text": "278 = {\n    add_building_construction = { type = arms_factory }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "278",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 65,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "278 = {\n    add_building_construction = { type = arms_factory }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_building_construction",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "278"
+      ],
+      "source_span": {
+       "start_offset": 12,
+       "end_offset": 63,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 56
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_building_construction = { type = arms_factory }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "type",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "278",
+       "add_building_construction"
+      ],
+      "source_span": {
+       "start_offset": 42,
+       "end_offset": 61,
+       "start_line": 2,
+       "start_column": 35,
+       "end_line": 2,
+       "end_column": 54
+      },
+      "operator": "=",
+      "value": "arms_factory",
+      "excerpt": "type = arms_factory",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "0e3c3942e15899b52c7c9f6424b64ff7b2d1ef4d2277f943da071399637e2a01",
+    "blocking": false
+   }
+  },
+  {
+   "name": "numeric-wrapper-scalar-wrong-scope",
+   "input": {
+    "text": "278 = {\n    add_political_power = 50\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "278",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 38,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "278 = {\n    add_political_power = 50\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "278"
+      ],
+      "source_span": {
+       "start_offset": 12,
+       "end_offset": 36,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": 50,
+      "excerpt": "add_political_power = 50",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.unsupported_scope",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "278",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 12,
+        "end_offset": 36,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 29
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "current_scope": "state",
+       "supported_scopes": [
+        "country"
+       ],
+       "assignment": "add_political_power = 50"
+      },
+      "repair_route": "focus.reward.wrap_supported_scope"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "27696d370c2cb3d13f4dfbd828e64a359f8428134815be3905ebb466d04f7b19",
+    "blocking": true
+   }
+  },
+  {
+   "name": "random-list-weight-keeps-scope",
+   "input": {
+    "text": "random_list = {\n    50 = {\n        add_political_power = 10\n    }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "random_list",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 67,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 5,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "random_list = {\n    50 = {\n        add_political_power = 10\n    }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "50",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "random_list"
+      ],
+      "source_span": {
+       "start_offset": 20,
+       "end_offset": 65,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 4,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "50 = {\n        add_political_power = 10\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "random_list",
+       "50"
+      ],
+      "source_span": {
+       "start_offset": 35,
+       "end_offset": 59,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 3,
+       "end_column": 33
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add_political_power = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "a659fd53f4ecac27979f80a08c88c28cb029911d1dd25b094b81ecc9774dc7c6",
+    "blocking": false
+   }
+  },
+  {
+   "name": "random-list-nested-numeric",
+   "input": {
+    "text": "random_list = {\n    50 = {\n        278 = {\n            add_political_power = 10\n        }\n    }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "random_list",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 97,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 7,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "random_list = {\n    50 = {\n        278 = {\n            add_political_power = 10\n        }\n    }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "50",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "random_list"
+      ],
+      "source_span": {
+       "start_offset": 20,
+       "end_offset": 95,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 6,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "50 = {\n        278 = {\n            add_political_power = 10\n        }\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "278",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "random_list",
+       "50"
+      ],
+      "source_span": {
+       "start_offset": 35,
+       "end_offset": 89,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 5,
+       "end_column": 10
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "278 = {\n            add_political_power = 10\n        }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "random_list",
+       "50",
+       "278"
+      ],
+      "source_span": {
+       "start_offset": 55,
+       "end_offset": 79,
+       "start_line": 4,
+       "start_column": 13,
+       "end_line": 4,
+       "end_column": 37
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add_political_power = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.unsupported_scope",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "random_list",
+        "50",
+        "278",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 55,
+        "end_offset": 79,
+        "start_line": 4,
+        "start_column": 13,
+        "end_line": 4,
+        "end_column": 37
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "current_scope": "state",
+       "supported_scopes": [
+        "country"
+       ],
+       "assignment": "add_political_power = 10"
+      },
+      "repair_route": "focus.reward.wrap_supported_scope"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "393e176def1408a2e39a492551609a3de346caaa6cc818d861de571b1a462309",
+    "blocking": true
+   }
+  },
+  {
+   "name": "country-tag-wrapper",
+   "input": {
+    "text": "every_state = {\n    GER = {\n        add_political_power = 10\n    }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "every_state",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 68,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 5,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_state = {\n    GER = {\n        add_political_power = 10\n    }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "GER",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "every_state"
+      ],
+      "source_span": {
+       "start_offset": 20,
+       "end_offset": 66,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 4,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "GER = {\n        add_political_power = 10\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "every_state",
+       "GER"
+      ],
+      "source_span": {
+       "start_offset": 36,
+       "end_offset": 60,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 3,
+       "end_column": 33
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add_political_power = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "430185ddc647f17cdc77c46c99f7b441071ef087c120a6f9a25e87dac714186a",
+    "blocking": false
+   }
+  },
+  {
+   "name": "every-state-scope",
+   "input": {
+    "text": "every_state = {\n    add_political_power = 10\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "every_state",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 46,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_state = {\n    add_political_power = 10\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "every_state"
+      ],
+      "source_span": {
+       "start_offset": 20,
+       "end_offset": 44,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 29
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add_political_power = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.unsupported_scope",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "every_state",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 20,
+        "end_offset": 44,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 29
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "current_scope": "state",
+       "supported_scopes": [
+        "country"
+       ],
+       "assignment": "add_political_power = 10"
+      },
+      "repair_route": "focus.reward.wrap_supported_scope"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "2ee05c3a06ddf4d2487bfa8d48feea6be4212cfd31ac4cb48b4d7fbde356b281",
+    "blocking": true
+   }
+  },
+  {
+   "name": "every-country-scope",
+   "input": {
+    "text": "every_state = {\n    every_country = {\n        add_political_power = 10\n    }\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "every_state",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 78,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 5,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_state = {\n    every_country = {\n        add_political_power = 10\n    }\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "every_country",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward",
+       "every_state"
+      ],
+      "source_span": {
+       "start_offset": 20,
+       "end_offset": 76,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 4,
+       "end_column": 6
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "every_country = {\n        add_political_power = 10\n    }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "every_state",
+       "every_country"
+      ],
+      "source_span": {
+       "start_offset": 46,
+       "end_offset": 70,
+       "start_line": 3,
+       "start_column": 9,
+       "end_line": 3,
+       "end_column": 33
+      },
+      "operator": "=",
+      "value": 10,
+      "excerpt": "add_political_power = 10",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "05ace8b905daf3667482e175acb5e26214843363fc3261397f01b0ab5ab85caf",
+    "blocking": false
+   }
+  },
+  {
+   "name": "hidden-effect-container",
+   "input": {
+    "text": "hidden_effect = {\n    army_attack = 0.1\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "hidden_effect",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 41,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "hidden_effect = {\n    army_attack = 0.1\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "army_attack",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "hidden_effect"
+      ],
+      "source_span": {
+       "start_offset": 22,
+       "end_offset": 39,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": 0.1,
+      "excerpt": "army_attack = 0.1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.modifier_in_effect_position",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "hidden_effect",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 22,
+        "end_offset": 39,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 22
+       }
+      },
+      "evidence": {
+       "identifier": "army_attack",
+       "normalised_identifier": "army_attack",
+       "value_kind": "scalar",
+       "assignment": "army_attack = 0.1",
+       "current_scope": "country"
+      },
+      "repair_route": "focus.reward.create_modifier_carrier"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.modifier_in_effect_position:22:39",
+      "finding_code": "focus.reward.modifier_in_effect_position",
+      "repair_route": "focus.reward.create_modifier_carrier",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "hidden_effect",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 22,
+        "end_offset": 39,
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 22
+       }
+      },
+      "operations": [
+       {
+        "op": "choose_modifier_carrier",
+        "choices": [
+         "idea",
+         "dynamic_modifier"
+        ]
+       },
+       {
+        "op": "create_or_select_carrier",
+        "requires_author_id": true
+       },
+       {
+        "op": "author_carrier_localisation",
+        "requires_content_locales": true
+       },
+       {
+        "op": "grant_carrier_with_effect",
+        "effect": "add_ideas_or_add_dynamic_modifier"
+       }
+      ],
+      "preview_before": "army_attack = 0.1",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "95609780313d946e623dae042f88b45410c668d3205edae9775c6581e21eaf73",
+    "blocking": true
+   }
+  },
+  {
+   "name": "non-container-parent",
+   "input": {
+    "text": "some_wrapper = {\n    army_attack = 0.1\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "some_wrapper",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 40,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "some_wrapper = {\n    army_attack = 0.1\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "army_attack",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "some_wrapper"
+      ],
+      "source_span": {
+       "start_offset": 21,
+       "end_offset": 38,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 22
+      },
+      "operator": "=",
+      "value": 0.1,
+      "excerpt": "army_attack = 0.1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "e5e19556778b60a7ce54c8c79eeeb7587eb74e40892986af51f0450582fce013",
+    "blocking": false
+   }
+  },
+  {
+   "name": "unknown-effect-ignored",
+   "input": {
+    "text": "totally_unknown_effect = { a = 1 }\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "totally_unknown_effect",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 34,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 35
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "totally_unknown_effect = { a = 1 }",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "a",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "totally_unknown_effect"
+      ],
+      "source_span": {
+       "start_offset": 27,
+       "end_offset": 32,
+       "start_line": 1,
+       "start_column": 28,
+       "end_line": 1,
+       "end_column": 33
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "a = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [],
+    "repair_plans": [],
+    "source_sha256": "226f4265a1d0f7c60e4385fd797d551efdf7ee4de41189893a3fd092c0898660",
+    "blocking": false
+   }
+  },
+  {
+   "name": "quoted-key-not-normalised",
+   "input": {
+    "text": "\"army_attack\" = 0.1\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "army_attack",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 19,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 20
+      },
+      "operator": "=",
+      "value": 0.1,
+      "excerpt": "\"army_attack\" = 0.1",
+      "key_quoted": true,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.modifier_in_effect_position",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 19,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 20
+       }
+      },
+      "evidence": {
+       "identifier": "army_attack",
+       "normalised_identifier": "army_attack",
+       "value_kind": "scalar",
+       "assignment": "\"army_attack\" = 0.1",
+       "current_scope": "country"
+      },
+      "repair_route": "focus.reward.create_modifier_carrier"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.modifier_in_effect_position:0:19",
+      "finding_code": "focus.reward.modifier_in_effect_position",
+      "repair_route": "focus.reward.create_modifier_carrier",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 19,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 20
+       }
+      },
+      "operations": [
+       {
+        "op": "choose_modifier_carrier",
+        "choices": [
+         "idea",
+         "dynamic_modifier"
+        ]
+       },
+       {
+        "op": "create_or_select_carrier",
+        "requires_author_id": true
+       },
+       {
+        "op": "author_carrier_localisation",
+        "requires_content_locales": true
+       },
+       {
+        "op": "grant_carrier_with_effect",
+        "effect": "add_ideas_or_add_dynamic_modifier"
+       }
+      ],
+      "preview_before": "\"army_attack\" = 0.1",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "332765d6df1f29ab46b0cb3cecabe6836f8811c99e004c5f4005d17c702e9dd3",
+    "blocking": true
+   }
+  },
+  {
+   "name": "initial-scope-state",
+   "input": {
+    "text": "add_political_power = 50\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": "state"
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 24,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 25
+      },
+      "operator": "=",
+      "value": 50,
+      "excerpt": "add_political_power = 50",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.unsupported_scope",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 24,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 25
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "current_scope": "state",
+       "supported_scopes": [
+        "country"
+       ],
+       "assignment": "add_political_power = 50"
+      },
+      "repair_route": "focus.reward.wrap_supported_scope"
+     }
+    ],
+    "repair_plans": [],
+    "source_sha256": "c829524ec7b2537618585d843863ff5cd7155ec30fb1a20626b1fc385933c447",
+    "blocking": true
+   }
+  },
+  {
+   "name": "with-focus-and-source",
+   "input": {
+    "text": "army_attack = 0.1\n",
+    "focus_id": "ger_focus",
+    "source_name": "common/national_focus/ger.txt",
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "army_attack",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 17,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 1,
+       "end_column": 18
+      },
+      "operator": "=",
+      "value": 0.1,
+      "excerpt": "army_attack = 0.1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.modifier_in_effect_position",
+      "severity": "blocker",
+      "source": {
+       "file": "common/national_focus/ger.txt",
+       "entity": {
+        "type": "focus",
+        "id": "ger_focus"
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 17,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 18
+       }
+      },
+      "evidence": {
+       "identifier": "army_attack",
+       "normalised_identifier": "army_attack",
+       "value_kind": "scalar",
+       "assignment": "army_attack = 0.1",
+       "current_scope": "country"
+      },
+      "repair_route": "focus.reward.create_modifier_carrier"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.modifier_in_effect_position:0:17",
+      "finding_code": "focus.reward.modifier_in_effect_position",
+      "repair_route": "focus.reward.create_modifier_carrier",
+      "source": {
+       "file": "common/national_focus/ger.txt",
+       "entity": {
+        "type": "focus",
+        "id": "ger_focus"
+       },
+       "field_path": [
+        "completion_reward",
+        "army_attack"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 17,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 1,
+        "end_column": 18
+       }
+      },
+      "operations": [
+       {
+        "op": "choose_modifier_carrier",
+        "choices": [
+         "idea",
+         "dynamic_modifier"
+        ]
+       },
+       {
+        "op": "create_or_select_carrier",
+        "requires_author_id": true
+       },
+       {
+        "op": "author_carrier_localisation",
+        "requires_content_locales": true
+       },
+       {
+        "op": "grant_carrier_with_effect",
+        "effect": "add_ideas_or_add_dynamic_modifier"
+       }
+      ],
+      "preview_before": "army_attack = 0.1",
+      "preview_after": null,
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": false
+     }
+    ],
+    "source_sha256": "64e1884a09b2b71d817a7f94c727465a057307a25b3168f525b6b6f0c342ec96",
+    "blocking": true
+   }
+  },
+  {
+   "name": "unclosed-block",
+   "input": {
+    "text": "add_political_power = {\n    value = 1\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_political_power",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 38,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 1
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_political_power = {\n    value = 1\n",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_political_power"
+      ],
+      "source_span": {
+       "start_offset": 28,
+       "end_offset": 37,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 14
+      },
+      "operator": "=",
+      "value": 1,
+      "excerpt": "value = 1",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "clausewitz.unclosed_block",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 22,
+        "end_offset": 38,
+        "start_line": 1,
+        "start_column": 23,
+        "end_line": 3,
+        "end_column": 1
+       }
+      },
+      "evidence": {
+       "source_excerpt": "{\n    value = 1\n"
+      },
+      "repair_route": "clausewitz.close_block"
+     },
+     {
+      "code": "clausewitz.parse_error",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "field_path": [
+        "completion_reward"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 38,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 1
+       }
+      },
+      "evidence": {
+       "error": "Expected RBRACE, got EOF '' at line 3"
+      },
+      "repair_route": "clausewitz.fix_syntax"
+     },
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 38,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 1
+       }
+      },
+      "evidence": {
+       "effect": "add_political_power",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_political_power = {\n    value = 1\n"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:38",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_political_power"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 38,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 1
+       }
+      },
+      "operations": [
+       {
+        "op": "replace_source_span",
+        "span": {
+         "start_offset": 0,
+         "end_offset": 38,
+         "start_line": 1,
+         "start_column": 1,
+         "end_line": 3,
+         "end_column": 1
+        },
+        "replacement": "add_political_power = 1"
+       }
+      ],
+      "preview_before": "add_political_power = {\n    value = 1\n",
+      "preview_after": "add_political_power = 1",
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": true
+     }
+    ],
+    "source_sha256": "ad8a8878432290ab4d888844e5732cec721778e2a8d4c3a128c53d72c1294982",
+    "blocking": true
+   }
+  },
+  {
+   "name": "float-scalar-repr",
+   "input": {
+    "text": "add_stability = {\n    value = 0.05\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_stability",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 36,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_stability = {\n    value = 0.05\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_stability"
+      ],
+      "source_span": {
+       "start_offset": 22,
+       "end_offset": 34,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": 0.05,
+      "excerpt": "value = 0.05",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_stability"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 36,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_stability",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_stability = {\n    value = 0.05\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:36",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_stability"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 36,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "replace_source_span",
+        "span": {
+         "start_offset": 0,
+         "end_offset": 36,
+         "start_line": 1,
+         "start_column": 1,
+         "end_line": 3,
+         "end_column": 2
+        },
+        "replacement": "add_stability = 0.05"
+       }
+      ],
+      "preview_before": "add_stability = {\n    value = 0.05\n}",
+      "preview_after": "add_stability = 0.05",
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": true
+     }
+    ],
+    "source_sha256": "aa635ee1a3351af94f8578dc0faec5b53862e11f85209bb7daabe8b19f0fc9f5",
+    "blocking": true
+   }
+  },
+  {
+   "name": "float-scalar-exponent",
+   "input": {
+    "text": "add_stability = {\n    value = 1e20\n}\n",
+    "focus_id": null,
+    "source_name": null,
+    "current_scope": ""
+   },
+   "expected": {
+    "assignments": [
+     {
+      "key": "add_stability",
+      "value_kind": "block",
+      "parent_path": [
+       "completion_reward"
+      ],
+      "source_span": {
+       "start_offset": 0,
+       "end_offset": 36,
+       "start_line": 1,
+       "start_column": 1,
+       "end_line": 3,
+       "end_column": 2
+      },
+      "operator": "=",
+      "value": null,
+      "excerpt": "add_stability = {\n    value = 1e20\n}",
+      "key_quoted": false,
+      "value_quoted": false
+     },
+     {
+      "key": "value",
+      "value_kind": "scalar",
+      "parent_path": [
+       "completion_reward",
+       "add_stability"
+      ],
+      "source_span": {
+       "start_offset": 22,
+       "end_offset": 34,
+       "start_line": 2,
+       "start_column": 5,
+       "end_line": 2,
+       "end_column": 17
+      },
+      "operator": "=",
+      "value": "1e20",
+      "excerpt": "value = 1e20",
+      "key_quoted": false,
+      "value_quoted": false
+     }
+    ],
+    "findings": [
+     {
+      "code": "focus.reward.scalar_effect_block_value",
+      "severity": "blocker",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_stability"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 36,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "evidence": {
+       "effect": "add_stability",
+       "actual_value_kind": "block",
+       "expected_value_kinds": [
+        "scalar"
+       ],
+       "assignment": "add_stability = {\n    value = 1e20\n}"
+      },
+      "repair_route": "focus.reward.edit_value_shape"
+     }
+    ],
+    "repair_plans": [
+     {
+      "repair_id": "focus.reward.scalar_effect_block_value:0:36",
+      "finding_code": "focus.reward.scalar_effect_block_value",
+      "repair_route": "focus.reward.edit_value_shape",
+      "source": {
+       "file": null,
+       "entity": {
+        "type": "focus",
+        "id": null
+       },
+       "field_path": [
+        "completion_reward",
+        "add_stability"
+       ],
+       "span": {
+        "start_offset": 0,
+        "end_offset": 36,
+        "start_line": 1,
+        "start_column": 1,
+        "end_line": 3,
+        "end_column": 2
+       }
+      },
+      "operations": [
+       {
+        "op": "replace_source_span",
+        "span": {
+         "start_offset": 0,
+         "end_offset": 36,
+         "start_line": 1,
+         "start_column": 1,
+         "end_line": 3,
+         "end_column": 2
+        },
+        "replacement": "add_stability = 1e20"
+       }
+      ],
+      "preview_before": "add_stability = {\n    value = 1e20\n}",
+      "preview_after": "add_stability = 1e20",
+      "transactional": true,
+      "requires_confirmation": true,
+      "applicable": true
+     }
+    ],
+    "source_sha256": "4f0efd807f57bcd1fb7051f04f9847c3e5e4efdab587440c247783ad8aad10b1",
+    "blocking": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+  "ownLabel": "Propio",
+  "ownTitle": "Propio de este país (country_tag = {tag}). Solo afecta al país actual; es seguro editarlo.",
+  "explicitLabel": "Compartido entre países",
+  "explicitTitle": "Compartido entre países (shared_country_tags = {tags}). Al editarlo se afectan todos a la vez.",
+  "globalLabel": "Global",
+  "globalTitle": "Compartido globalmente. Afecta a todos los países del mod; edítalo con cuidado.",
+  "globalExceptLabel": "Global excepto",
+  "globalExceptTitle": "Compartido globalmente excepto ({tags}). Al editarlo se afectan todos los demás países.",
+  "sectionOwnLabel": "Propios de este país",
+  "sectionOwnHint": "Solo afectan al país actual",
+  "sectionSharedLabel": "Compartidos / Globales / Entre países",
+  "sectionSharedHint": "La edición puede afectar a otros países",
+  "sectionAllLabel": "Todos los países",
+  "sectionAllHint": "Se muestran entradas de todos los países. La insignia de cada fila indica a cuál pertenece."
+}

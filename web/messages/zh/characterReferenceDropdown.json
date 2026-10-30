@@ -1,0 +1,13 @@
+{
+  "promote": "任命人物",
+  "recruit": "招募人物",
+  "retire": "卸任人物",
+  "searchPlaceholder": "按名称或 ID 搜索…",
+  "searchingBase": "正在搜索基础 mod…",
+  "noResults": "未找到结果。",
+  "empty": "暂无人物 — 输入以搜索基础 mod。",
+  "projectBadge": "项目",
+  "baseBadge": "基础 mod",
+  "promptManual": "手动输入人物 ID:",
+  "enterManually": "+ 手动输入…"
+}

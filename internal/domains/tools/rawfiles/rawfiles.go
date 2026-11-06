@@ -20,7 +20,9 @@ import (
 
 const table = "project_raw_files"
 
-const maxRawBinaryBytes = 25 * 1024 * 1024
+// maxRawBinaryBytes matches the export's per-entry budget: a vanilla-sized
+// map/provinces.bmp alone is about 35 MB.
+const maxRawBinaryBytes = 256 * 1024 * 1024
 
 func Register(mux *http.ServeMux, deps domains.Deps) {
 	h := func(fn func(*project.Project, http.ResponseWriter, *http.Request) error) http.HandlerFunc {

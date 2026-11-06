@@ -505,6 +505,9 @@ func (s *session) stageEventsWorld(options EventsWorldStageOptions, progress fun
 			}
 		}
 	}
+	if loaded, _ := s.record["is_loaded_existing_mod"].(bool); loaded {
+		allowed = map[string]bool{}
+	}
 	facts, err := s.gameFacts()
 	if err != nil {
 		return nil, err
@@ -705,9 +708,15 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 	}
 
 	wanted := map[string]bool{}
+	// A loaded existing mod keeps its categories even when no decision uses
+	// them yet; an empty category is still part of the mod being edited.
+	keepEmpty, _ := s.record["is_loaded_existing_mod"].(bool)
 	for _, r := range rows {
 		if r.kind == "decision" && r.parent != "" {
 			wanted[r.parent] = true
+		}
+		if keepEmpty && r.kind == "decision_category" {
+			wanted[r.key] = true
 		}
 	}
 	wantedIDs := make([]string, 0, len(wanted))

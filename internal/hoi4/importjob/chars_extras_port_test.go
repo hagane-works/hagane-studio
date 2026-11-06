@@ -579,6 +579,20 @@ func TestCharsExtrasPortScopeHelpers(t *testing.T) {
 	if (charsExtrasProject{}).inScope("TST_a", payload{}) {
 		t.Error("a NULL project tag matches nothing")
 	}
+	loaded := charsExtrasProject{countryTag: "TST", countryTags: []any{"ABC"}, loadedExisting: true}
+	for key, want := range map[string]bool{"FOO_a": true, "MOD_a": true, "ABC_a": true} {
+		if got := loaded.inScope(key, payload{}); got != want {
+			t.Errorf("loaded mod %s: in scope %v, want %v", key, got, want)
+		}
+	}
+	for key, want := range map[string]bool{"ABC_a": true, "MOD_a": false, "foo_a": false} {
+		if _, got := loaded.tagPrefix(key); got != want {
+			t.Errorf("loaded mod %s: country prefix %v, want %v", key, got, want)
+		}
+	}
+	if _, got := proj.tagPrefix("MOD_a"); !got {
+		t.Error("a country mod keeps treating tag-like prefixes as country tags")
+	}
 	if got := charsExtrasNullableBool(payload{"a": "", "b": true, "c": "no", "d": "maybe"}, "a"); got != nil {
 		t.Errorf("empty: %v", got)
 	}

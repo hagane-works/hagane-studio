@@ -352,7 +352,7 @@ func (s *session) charsExtrasMergeCharacters(rows []entityRow, table *keyedTable
 			continue
 		}
 		countryTag := proj.ownTag(p)
-		if prefix, isTag := charsExtrasTagPrefix(e.naturalKey); isTag {
+		if prefix, isTag := proj.tagPrefix(e.naturalKey); isTag {
 			countryTag = prefix
 		}
 		locKey := p.str("name")
@@ -591,7 +591,7 @@ func (s *session) charsExtrasMergeIdeas(rows []entityRow, table *keyedTable, pro
 			continue
 		}
 		countryTag, scopeKind := "", "global"
-		if prefix, isTag := charsExtrasTagPrefix(e.naturalKey); isTag {
+		if prefix, isTag := proj.tagPrefix(e.naturalKey); isTag {
 			countryTag, scopeKind = prefix, "own"
 		}
 		if tag, ok := charsExtrasPathText(p, "_scope_verdict", "country_tag"); ok {
@@ -652,8 +652,9 @@ func charsExtrasMergeDoctrines(rows []entityRow, table *keyedTable) {
 }
 
 type charsExtrasProject struct {
-	countryTag  any
-	countryTags any
+	countryTag     any
+	countryTags    any
+	loadedExisting bool
 }
 
 func charsExtrasProjectOf(tx *project.Tx) charsExtrasProject {
@@ -662,7 +663,16 @@ func charsExtrasProjectOf(tx *project.Tx) charsExtrasProject {
 	if text, ok := record["country_tag"].(string); ok {
 		tag = text
 	}
-	return charsExtrasProject{countryTag: tag, countryTags: record["country_tags"]}
+	loaded, _ := record["is_loaded_existing_mod"].(bool)
+	return charsExtrasProject{countryTag: tag, countryTags: record["country_tags"], loadedExisting: loaded}
+}
+
+func (proj charsExtrasProject) tagPrefix(naturalKey string) (string, bool) {
+	prefix, isTag := charsExtrasTagPrefix(naturalKey)
+	if isTag && proj.loadedExisting {
+		isTag = charsExtrasJSONHas(proj.countryTags, prefix)
+	}
+	return prefix, isTag
 }
 
 func (proj charsExtrasProject) ownTag(p payload) any {
@@ -673,6 +683,9 @@ func (proj charsExtrasProject) ownTag(p payload) any {
 }
 
 func (proj charsExtrasProject) inScope(naturalKey string, p payload) bool {
+	if proj.loadedExisting {
+		return true
+	}
 	prefix, isTag := charsExtrasTagPrefix(naturalKey)
 	if !isTag {
 		return true

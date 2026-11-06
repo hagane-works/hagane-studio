@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"reflect"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -165,14 +166,43 @@ type cosmeticStage struct {
 	colors    map[string]cosmeticStagedColor
 	rawPaths  []string
 	raw       map[string]string
+	rawNotes  map[string]string
 }
 
 type cosmeticStagedColor struct{ color, colorUI any }
 
 const cosmeticRawNote = "Cosmetic colors retained as raw: unresolved parsing or duplicate definitions; raw can override structured color edits"
 
+const countryColorsRawNote = "Country colors retained as raw: colors for countries the project does not define"
+
+var historyCountryFileRE = regexp.MustCompile(`^([A-Za-z0-9]{3})\s*-`)
+
+// cosmeticCountryTags lists the tags that name countries rather than cosmetic
+// tags: the mod's own country_tags, its history/countries files and the base
+// game's countries. A color block for one of them (the base game keeps these in
+// common/countries/colors.txt) is a country color.
+func (s *session) cosmeticCountryTags() (countries, own map[string]bool) {
+	countries, own = map[string]bool{}, map[string]bool{}
+	for _, row := range s.countries.rows {
+		countries[row.tag], own[row.tag] = true, true
+	}
+	if s.facts != nil {
+		for tag := range s.facts.aliases.tags {
+			countries[tag] = true
+		}
+	}
+	entries, _ := os.ReadDir(filepath.Join(s.root, "history", "countries"))
+	for _, entry := range entries {
+		if m := historyCountryFileRE.FindStringSubmatch(entry.Name()); m != nil && !entry.IsDir() {
+			countries[m[1]] = true
+		}
+	}
+	return countries, own
+}
+
 func (s *session) stageCosmeticTags() error {
-	s.cosmetic = cosmeticStage{colors: map[string]cosmeticStagedColor{}, raw: map[string]string{}}
+	s.cosmetic = cosmeticStage{colors: map[string]cosmeticStagedColor{}, raw: map[string]string{}, rawNotes: map[string]string{}}
+	countryTags, ownCountries := s.cosmeticCountryTags()
 	root := s.root
 	files := []string{}
 	err := filepath.WalkDir(filepath.Join(root, "common", "countries"), func(path string, d os.DirEntry, err error) error {
@@ -195,7 +225,7 @@ func (s *session) stageCosmeticTags() error {
 	sources := map[string]string{}
 	ambiguous := map[string]bool{}
 
-	preserve := func(file string) error {
+	preserveAs := func(file, note string) error {
 		body, err := os.ReadFile(file)
 		if err != nil {
 			return err
@@ -207,10 +237,12 @@ func (s *session) stageCosmeticTags() error {
 		dest := filepath.ToSlash(rel)
 		if _, ok := s.cosmetic.raw[dest]; !ok {
 			s.cosmetic.raw[dest] = decodeScriptBytes(body)
+			s.cosmetic.rawNotes[dest] = note
 			s.cosmetic.rawPaths = append(s.cosmetic.rawPaths, dest)
 		}
 		return nil
 	}
+	preserve := func(file string) error { return preserveAs(file, cosmeticRawNote) }
 	for _, file := range files {
 		body, err := os.ReadFile(file)
 		if err != nil {
@@ -225,7 +257,12 @@ func (s *session) stageCosmeticTags() error {
 			s.warn(fmt.Sprintf("Cosmetic colors preserved as raw in %s: %v; structured colors were not imported and raw overrides may take precedence", filepath.ToSlash(rel), err))
 			continue
 		}
+		foreignCountry := false
 		for _, row := range rows {
+			if countryTags[row.Tag] {
+				foreignCountry = foreignCountry || !ownCountries[row.Tag]
+				continue
+			}
 			if ambiguous[row.Tag] {
 				if err := preserve(file); err != nil {
 					return err
@@ -254,6 +291,11 @@ func (s *session) stageCosmeticTags() error {
 				color: cosmeticJSONValue(cosmeticColorJSON(row.Color)), colorUI: cosmeticJSONValue(cosmeticColorJSON(row.ColorUI)),
 			}
 			s.cosmetic.colorTags = append(s.cosmetic.colorTags, row.Tag)
+		}
+		if foreignCountry {
+			if err := preserveAs(file, countryColorsRawNote); err != nil {
+				return err
+			}
 		}
 	}
 	return nil
@@ -307,18 +349,19 @@ func (s *session) mergeCosmeticTags(tx *project.Tx) error {
 		note, _ := row["note"].(string)
 		dest, _ := row["dest_path"].(string)
 		_, staged := s.cosmetic.raw[dest]
-		return row["source"] == "imported" && strings.HasPrefix(note, "Cosmetic colors retained as raw:") && !staged
+		ours := strings.HasPrefix(note, "Cosmetic colors retained as raw:") || strings.HasPrefix(note, "Country colors retained as raw:")
+		return row["source"] == "imported" && ours && !staged
 	})
 
 	raw := newKeyedTable(tx, "project_raw_files", "dest_path")
 	for _, dest := range s.cosmetic.rawPaths {
-		content := s.cosmetic.raw[dest]
+		content, note := s.cosmetic.raw[dest], s.cosmetic.rawNotes[dest]
 		if id, ok := raw.find(dest); ok {
 			if tx.Find("project_raw_files", id)["source"] != "imported" {
 				continue
 			}
 			if _, err := tx.Update("project_raw_files", id, func(row project.Row) {
-				row["content"], row["note"] = content, cosmeticRawNote
+				row["content"], row["note"] = content, note
 			}); err != nil {
 				return err
 			}
@@ -326,7 +369,7 @@ func (s *session) mergeCosmeticTags(tx *project.Tx) error {
 		}
 		raw.insertNew(project.Row{
 			"dest_path": dest, "content": content, "generate_replace_path": false,
-			"note": cosmeticRawNote, "is_binary": false, "source": "imported",
+			"note": note, "is_binary": false, "source": "imported",
 		})
 	}
 

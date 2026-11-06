@@ -262,6 +262,17 @@ func TestRawFilesBinary(t *testing.T) {
 	expect(t, rec, 422)
 }
 
+func TestRawFilesBinaryTakesAMapSizedFile(t *testing.T) {
+	_, mux := newProject(t)
+	// A vanilla-sized map/provinces.bmp is 34,603,062 bytes.
+	rec := postMultipart(t, mux, base+"/binary", map[string]string{"dest_path": "map/provinces.bmp"}, make([]byte, 34_603_062))
+	expect(t, rec, 201)
+	rec = postMultipart(t, mux, base+"/binary", map[string]string{"dest_path": "gfx/too_big.dds"}, make([]byte, maxRawBinaryBytes+1))
+	if rec.Code != http.StatusRequestEntityTooLarge {
+		t.Fatalf("over the cap: status %d, want 413", rec.Code)
+	}
+}
+
 func TestRawFilesTemplates(t *testing.T) {
 	p, mux := newProject(t)
 	rec := do(t, mux, "GET", base+"/templates", nil, nil)

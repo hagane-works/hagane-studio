@@ -327,6 +327,10 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 				allCtags = append(allCtags, k)
 			}
 		}
+		decFiles := newDecisionFiles()
+		allDecIconGates := map[int64]bool{}
+		catFiles := newDecisionFiles()
+		allCatIconGates := map[int64]bool{}
 		for _, ctag := range allCtags {
 			catsInCountry := catBuckets.Get(ctag)
 			decsInCountry := decBuckets.Get(ctag)
@@ -370,19 +374,32 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 				decIconGates[d.Int("id", 0)] = d.Str("icon") != custom || shippedDecSprites[custom]
 			}
 
-			if len(visibleCats) > 0 {
-				catScript := env.Gate(GenerateDecisionCategoriesScript(visibleCats, catIconGates))
-				env.write(modDir+"common/decisions/categories/"+tag+"_"+ctag+"_categories.txt",
-					catScript)
+			var definedCats []*NS
+			for _, c := range visibleCats {
+				if !bareImportedCategory(c) {
+					definedCats = append(definedCats, c)
+				}
+			}
+			if len(definedCats) > 0 {
+				catGroups := GroupBySourceFile(definedCats, func(*NS) string {
+					return "common/decisions/categories/" + tag + "_" + ctag + "_categories.txt"
+				}, "common/decisions/categories")
+				for _, relPath := range catGroups.Keys {
+					catFiles.add(relPath, catGroups.Get(relPath), nil)
+				}
+				for id, gate := range catIconGates {
+					allCatIconGates[id] = gate
+				}
 			}
 			if len(visibleDecs) > 0 {
 				decGroups := GroupBySourceFile(visibleDecs, func(*NS) string {
 					return "common/decisions/" + tag + "_" + ctag + ".txt"
 				}, "common/decisions")
 				for _, relPath := range decGroups.Keys {
-					fileDecs := decGroups.Get(relPath)
-					decScript := env.Gate(GenerateDecisionsPreview(visibleCats, fileDecs, decIconGates))
-					env.write(modDir+relPath, decScript)
+					decFiles.add(relPath, visibleCats, decGroups.Get(relPath))
+				}
+				for id, gate := range decIconGates {
+					allDecIconGates[id] = gate
 				}
 			}
 
@@ -406,6 +423,18 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 					}
 				}
 			}
+		}
+		// One source file can hold decisions whose categories belong to
+		// different countries; write each file once with all of them, or the
+		// last country's write replaces the others.
+		for _, relPath := range catFiles.order {
+			file := catFiles.files[relPath]
+			env.write(modDir+relPath, env.Gate(GenerateDecisionCategoriesScript(file.cats, allCatIconGates)))
+		}
+		for _, relPath := range decFiles.order {
+			file := decFiles.files[relPath]
+			decScript := env.Gate(GenerateDecisionsPreview(file.cats, file.decs, allDecIconGates))
+			env.write(modDir+relPath, decScript)
 		}
 	}
 

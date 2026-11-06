@@ -2180,23 +2180,30 @@ func nativeIdeasEvents(snapshot Snapshot, modDir string, includeImported bool, r
 		}
 		ideaBuckets[ctag] = append(ideaBuckets[ctag], row)
 	}
+	// Group the script files across every country: one source file can hold
+	// ideas for several tags (shared laws next to one country's variants),
+	// and writing that file once per tag would keep only the last tag's ideas.
+	groups := groupNativeRows(ideas, func(row nativeRow) string {
+		ctag := strings.ToUpper(strings.TrimSpace(row.misc.Str("country_tag")))
+		if ctag == "" {
+			ctag = tag
+		}
+		return "common/ideas/" + strings.ToLower(tag) + "_" + strings.ToLower(ctag) + ".txt"
+	}, "common/ideas")
+	for _, group := range groups {
+		raw := make([]json.RawMessage, 0, len(group.rows))
+		for _, row := range group.rows {
+			raw = append(raw, row.raw)
+		}
+		body, _ := json.Marshal(map[string]any{"ideas": raw, "picture_refs": ideaRefs})
+		script, err := emitpreview.EmitIdeasJSON(body)
+		if err != nil {
+			return nil, err
+		}
+		entries = append(entries, Entry{Path: modDir + "/" + group.path, Bytes: []byte(script), Origin: "generated", SourceEntity: "ideas"})
+	}
 	for _, ctag := range ideaOrder {
 		rows := ideaBuckets[ctag]
-		groups := groupNativeRows(rows, func(row nativeRow) string {
-			return "common/ideas/" + strings.ToLower(tag) + "_" + strings.ToLower(ctag) + ".txt"
-		}, "common/ideas")
-		for _, group := range groups {
-			raw := make([]json.RawMessage, 0, len(group.rows))
-			for _, row := range group.rows {
-				raw = append(raw, row.raw)
-			}
-			body, _ := json.Marshal(map[string]any{"ideas": raw, "picture_refs": ideaRefs})
-			script, err := emitpreview.EmitIdeasJSON(body)
-			if err != nil {
-				return nil, err
-			}
-			entries = append(entries, Entry{Path: modDir + "/" + group.path, Bytes: []byte(script), Origin: "generated", SourceEntity: "ideas"})
-		}
 		locObjects := make([]*locout.Obj, 0, len(rows))
 		for _, row := range rows {
 			locObjects = append(locObjects, row.loc)

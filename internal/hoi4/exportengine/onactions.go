@@ -92,7 +92,7 @@ func NativeOnActionsWithTraitOverlays(snapshot Snapshot, modDir string, includeI
 			return nil
 		}
 		state := touch(countryOf(idea))
-		if !idea.Bool("auto_attach_on_start", true) {
+		if !idea.Bool("auto_attach_on_start", idea.Str("source") != "imported") {
 			return nil
 		}
 		if ideaID := strings.TrimSpace(idea.Str("idea_id")); ideaID != "" {

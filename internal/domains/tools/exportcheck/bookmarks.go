@@ -19,6 +19,7 @@ type Bookmark struct {
 	DisplayNameLocs     map[string]string `json:"display_name_locs"`
 	DescriptionLocs     map[string]string `json:"description_locs"`
 	Source              string            `json:"source"`
+	SourceFile          string            `json:"source_file"`
 	CreatedAt           string            `json:"created_at"`
 	UpdatedAt           string            `json:"updated_at"`
 }

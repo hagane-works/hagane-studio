@@ -259,6 +259,10 @@
       "not_null": true
     },
     {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
       "name": "created_at",
       "type": "timestamp without time zone"
     },
@@ -348,6 +352,10 @@
     {
       "name": "raw_extras",
       "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
     },
     {
       "name": "created_at",
@@ -1458,6 +1466,10 @@
       "name": "source",
       "type": "character varying",
       "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
     },
     {
       "name": "created_at",
@@ -2806,6 +2818,10 @@
       "not_null": true
     },
     {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
       "name": "created_at",
       "type": "timestamp without time zone"
     },
@@ -3391,6 +3407,10 @@
       "name": "source",
       "type": "character varying",
       "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
     },
     {
       "name": "created_at",
@@ -4279,6 +4299,10 @@
     {
       "name": "source_snapshot",
       "type": "json"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
     },
     {
       "name": "created_at",

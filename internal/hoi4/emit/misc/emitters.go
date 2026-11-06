@@ -327,6 +327,8 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 				allCtags = append(allCtags, k)
 			}
 		}
+		decFiles := newDecisionFiles()
+		allDecIconGates := map[int64]bool{}
 		for _, ctag := range allCtags {
 			catsInCountry := catBuckets.Get(ctag)
 			decsInCountry := decBuckets.Get(ctag)
@@ -380,9 +382,10 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 					return "common/decisions/" + tag + "_" + ctag + ".txt"
 				}, "common/decisions")
 				for _, relPath := range decGroups.Keys {
-					fileDecs := decGroups.Get(relPath)
-					decScript := env.Gate(GenerateDecisionsPreview(visibleCats, fileDecs, decIconGates))
-					env.write(modDir+relPath, decScript)
+					decFiles.add(relPath, visibleCats, decGroups.Get(relPath))
+				}
+				for id, gate := range decIconGates {
+					allDecIconGates[id] = gate
 				}
 			}
 
@@ -406,6 +409,14 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 					}
 				}
 			}
+		}
+		// One source file can hold decisions whose categories belong to
+		// different countries; write each file once with all of them, or the
+		// last country's write replaces the others.
+		for _, relPath := range decFiles.order {
+			file := decFiles.files[relPath]
+			decScript := env.Gate(GenerateDecisionsPreview(file.cats, file.decs, allDecIconGates))
+			env.write(modDir+relPath, decScript)
 		}
 	}
 

@@ -85,6 +85,40 @@ func (g *FileGroups) append(k string, v *NS) {
 
 func (g *FileGroups) Get(k string) []*NS { return g.m[k] }
 
+// decisionFiles collects the decisions bound for each output file across
+// countries, with the categories they may sit under, so a file shared by
+// several countries is written once.
+type decisionFiles struct {
+	order []string
+	files map[string]*decisionFile
+}
+
+type decisionFile struct {
+	cats    []*NS
+	catSeen map[int64]bool
+	decs    []*NS
+}
+
+func newDecisionFiles() *decisionFiles {
+	return &decisionFiles{files: map[string]*decisionFile{}}
+}
+
+func (f *decisionFiles) add(path string, cats, decs []*NS) {
+	file, ok := f.files[path]
+	if !ok {
+		file = &decisionFile{catSeen: map[int64]bool{}}
+		f.files[path] = file
+		f.order = append(f.order, path)
+	}
+	for _, cat := range cats {
+		if id := cat.Int("id", 0); !file.catSeen[id] {
+			file.catSeen[id] = true
+			file.cats = append(file.cats, cat)
+		}
+	}
+	file.decs = append(file.decs, decs...)
+}
+
 func FocusTreeFilenames(trees []*NS) *FileGroups {
 	out := newFileGroups()
 	for _, tree := range trees {

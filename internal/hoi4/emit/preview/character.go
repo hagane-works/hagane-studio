@@ -201,7 +201,17 @@ func GenerateCharacterScript(
 	// is also head of state) keeps its country_leader block: the import
 	// records its ideology and expiry from that block.
 	imported := pyStr(attr(char, "source")) == "imported"
-	shouldEmitLeader := ideology != "" && (roleType == "country_leader" || imported)
+	// The import keeps every country_leader block as written in
+	// raw_extras.country_leader; an imported character is written with
+	// those, since the model holds only one leader role and its traits
+	// follow the main role.
+	verbatimLeaders := false
+	if extras := getOD(char, "raw_extras"); extras != nil && imported {
+		if blocks, ok := extras.Get("country_leader"); ok && pyTruthy(blocks) {
+			verbatimLeaders = true
+		}
+	}
+	shouldEmitLeader := !verbatimLeaders && ideology != "" && (roleType == "country_leader" || imported)
 	if shouldEmitLeader {
 		expireVal := ""
 		if pyTruthy(attr(char, "expire")) {
@@ -321,6 +331,9 @@ func GenerateCharacterScript(
 			continue
 		}
 		if key == "can_be_captured" {
+			continue
+		}
+		if key == "country_leader" && !verbatimLeaders {
 			continue
 		}
 		value, _ := rawExtrasAll.Get(key)

@@ -20,6 +20,24 @@ func replacesIdeologies(paths []string) bool {
 	return false
 }
 
+// BaseGameIdeologyFile is the base game's only ideology file.
+const BaseGameIdeologyFile = "common/ideologies/00_ideologies.txt"
+
+// ReplacesBaseGameIdeologies reports whether a mod layer takes the base game's
+// ideology file out of the game: by replace_path, or by shipping a file of the
+// same name.
+func ReplacesBaseGameIdeologies(layer Layer) bool {
+	if replacesIdeologies(layer.ReplacePaths) {
+		return true
+	}
+	for _, file := range layer.Files {
+		if strings.EqualFold(strings.TrimPrefix(strings.ReplaceAll(file.Path, "\\", "/"), "./"), BaseGameIdeologyFile) {
+			return true
+		}
+	}
+	return false
+}
+
 func validateLayers(layers []Layer) (Layer, *Layer, error) {
 	var vanilla *Layer
 	dependencies := []Layer{}

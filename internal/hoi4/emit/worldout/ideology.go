@@ -379,6 +379,25 @@ func subToGroupMap(raw Value) map[string]string {
 	return m
 }
 
+// removedBaseGroups reads the registry's removed_base_groups: the base game's
+// groups an imported mod took out of the game, which the full ideology file
+// must not bring back.
+func removedBaseGroups(raw Value) map[string]bool {
+	out := map[string]bool{}
+	rawMap, ok := raw.(*OMap)
+	if !ok || rawMap == nil {
+		return out
+	}
+	list, _ := rawMap.Get("removed_base_groups")
+	items, _ := list.([]Value)
+	for _, item := range items {
+		if group, isStr := item.(string); isStr && reftables.Ideologies().IsGroup(group) {
+			out[group] = true
+		}
+	}
+	return out
+}
+
 func extractVanillaGroupBlock(baseText, group string) (string, bool) {
 	re := regexp.MustCompile(`(?m)^\t` + regexp.QuoteMeta(group) + `\s*=\s*\{`)
 	m := re.FindStringIndex(baseText)
@@ -582,9 +601,22 @@ func generateFullIdeologiesFile(raw Value, baseText string) string {
 
 	full := baseText
 	vanilla := reftables.Ideologies()
+	removed := removedBaseGroups(raw)
+	for group := range removed {
+		block, ok := extractVanillaGroupBlock(full, group)
+		if !ok {
+			return ""
+		}
+		at := strings.Index(full, block)
+		rest := strings.TrimPrefix(strings.TrimPrefix(full[at+len(block):], "\r"), "\n")
+		full = full[:at] + rest
+	}
 	for _, grp := range order {
 		if !vanilla.IsGroup(grp) {
 			continue
+		}
+		if removed[grp] {
+			return ""
 		}
 		groupBlock, ok := extractVanillaGroupBlock(full, grp)
 		if !ok {
@@ -603,8 +635,12 @@ func generateFullIdeologiesFile(raw Value, baseText string) string {
 	full = appendRootBlocks(full, rootBlocks)
 
 	for _, g := range vanilla.Groups {
+		want := 1
+		if removed[g] {
+			want = 0
+		}
 		re := regexp.MustCompile(`(?m)^\t` + regexp.QuoteMeta(g) + `\s*=\s*\{`)
-		if len(re.FindAllStringIndex(full, -1)) != 1 {
+		if len(re.FindAllStringIndex(full, -1)) != want {
 			return ""
 		}
 	}

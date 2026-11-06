@@ -11,13 +11,15 @@ import (
 
 type gameFacts struct {
 	aliases countryAliasData
+	// countryTags are the base game's declared tags, dynamic ones included.
+	countryTags map[string]bool
 
 	focus    *focusRegistry
 	focusErr error
 }
 
 func gameIndexBuilding() bool {
-	for _, name := range []string{gameindex.CountryAliases, gameindex.FocusTrees} {
+	for _, name := range []string{gameindex.CountryAliases, gameindex.FocusTrees, gameindex.WorldTables} {
 		if errors.Is(gameindex.CheckReady(name), gameindex.ErrBuilding) {
 			return true
 		}
@@ -78,4 +80,31 @@ func loadCountryAliases(ctx context.Context) (countryAliasData, error) {
 		return countryAliasData{aliases: map[string][]string{}, tags: map[string]bool{}}, nil
 	}
 	return data, nil
+}
+
+type baseGameCountryTagsKey struct{}
+
+// loadBaseGameCountryTags lists every tag the base game's country_tags
+// declares, the dynamic ones (D01…) included.
+func loadBaseGameCountryTags(ctx context.Context) (map[string]bool, error) {
+	tags, err := gameindex.Load(ctx, baseGameCountryTagsKey{}, gameindex.WorldTables, func(raw []byte) (map[string]bool, error) {
+		var payload struct {
+			CountryFilenames map[string]string `json:"country_filenames"`
+		}
+		if err := json.Unmarshal(raw, &payload); err != nil {
+			return nil, err
+		}
+		out := map[string]bool{}
+		for tag := range payload.CountryFilenames {
+			out[tag] = true
+		}
+		return out, nil
+	})
+	if err != nil {
+		if ctxErr := ctx.Err(); ctxErr != nil {
+			return nil, ctxErr
+		}
+		return map[string]bool{}, nil
+	}
+	return tags, nil
 }

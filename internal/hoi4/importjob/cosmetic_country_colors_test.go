@@ -16,9 +16,11 @@ func TestColorsForBaseGameCountriesAreNotCosmeticTags(t *testing.T) {
 	colors := "FDS = { color = rgb { 1 1 1 } }\n" +
 		"GRE = { color = rgb { 2 2 2 } }\n" +
 		"ENG = { color = rgb { 3 3 3 } }\n" +
+		"D01 = { color = rgb { 5 5 5 } }\n" +
+		"D02 = { color = rgb { 6 6 6 } }\n" +
 		"GRE_neutrality = { color = rgb { 4 4 4 } }\n"
 	for rel, body := range map[string]string{
-		"common/country_tags/00_countries.txt": "FDS = \"countries/Fds.txt\"\n",
+		"common/country_tags/00_countries.txt": "FDS = \"countries/Fds.txt\"\ndynamic_tags = yes\nD02 = \"countries/D02.txt\"\n",
 		"common/countries/Fds.txt":             "color = { 1 1 1 }\n",
 		"common/countries/colors.txt":          colors,
 		"history/countries/GRE - Greece.txt":   "capital = 47\n",
@@ -26,13 +28,15 @@ func TestColorsForBaseGameCountriesAreNotCosmeticTags(t *testing.T) {
 		countryPortWrite(t, root, rel, []byte(body))
 	}
 	p := countryPortProject(t)
-	baseGame := countryAliasData{tags: map[string]bool{"ENG": true}}
+	// The base game's history files name ENG; its country_tags also declare
+	// the dynamic D01. The mod declares its own dynamic D02.
+	baseGame := gameFacts{aliases: countryAliasData{tags: map[string]bool{"ENG": true}}, countryTags: map[string]bool{"ENG": true, "D01": true}}
 
 	s := cosmeticColorsImport(t, p, root, baseGame)
 	if len(s.cosmetic.colorTags) != 1 || s.cosmetic.colorTags[0] != "GRE_neutrality" {
 		t.Fatalf("staged cosmetic tags = %v, want only GRE_neutrality", s.cosmetic.colorTags)
 	}
-	for _, tag := range []string{"FDS", "GRE", "ENG"} {
+	for _, tag := range []string{"FDS", "GRE", "ENG", "D01", "D02"} {
 		if len(countryPortFind(t, p, "project_cosmetic_tags", "tag", tag)) != 0 {
 			t.Fatalf("country %s became a cosmetic tag", tag)
 		}
@@ -52,10 +56,10 @@ func TestColorsForBaseGameCountriesAreNotCosmeticTags(t *testing.T) {
 	}
 }
 
-func cosmeticColorsImport(t *testing.T, p *project.Project, root string, baseGame countryAliasData) *session {
+func cosmeticColorsImport(t *testing.T, p *project.Project, root string, baseGame gameFacts) *session {
 	t.Helper()
 	s := newSession(context.Background(), root, AllOptions(), p.Record())
-	s.facts = &gameFacts{aliases: baseGame}
+	s.facts = &baseGame
 	if _, err := s.stageCountries(CountryStageOptions{ImportCountries: true}); err != nil {
 		t.Fatal(err)
 	}

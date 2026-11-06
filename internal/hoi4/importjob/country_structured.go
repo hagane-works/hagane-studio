@@ -191,6 +191,8 @@ func safeModPath(p string) bool {
 type countryStage struct {
 	rows     []countryStageRow
 	factions []countryFactionRow
+	// dynamic are the mod's dynamic tags (D01…), which are countries too.
+	dynamic []string
 }
 
 type countryStageRow struct {
@@ -275,6 +277,7 @@ func (s *session) stageCountries(opt CountryStageOptions) (CountryCounts, error)
 	for _, tag := range ordered {
 		d := decls[tag]
 		if d.Dynamic {
+			s.countries.dynamic = append(s.countries.dynamic, tag)
 			counts.DynamicSkipped++
 			continue
 		}

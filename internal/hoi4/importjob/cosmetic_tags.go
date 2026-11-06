@@ -186,8 +186,14 @@ func (s *session) cosmeticCountryTags() (countries, own map[string]bool) {
 	for _, row := range s.countries.rows {
 		countries[row.tag], own[row.tag] = true, true
 	}
+	for _, tag := range s.countries.dynamic {
+		countries[tag] = true
+	}
 	if s.facts != nil {
 		for tag := range s.facts.aliases.tags {
+			countries[tag] = true
+		}
+		for tag := range s.facts.countryTags {
 			countries[tag] = true
 		}
 	}

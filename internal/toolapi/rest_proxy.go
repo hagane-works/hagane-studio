@@ -175,6 +175,42 @@ func (p *RESTProxy) callRawLimited(ctx context.Context, method, path string, bod
 	return raw, nil
 }
 
+// streamTo copies a GET response body into w without holding it in memory,
+// for downloads (an exported mod ZIP) that can be larger than a JSON reply.
+func (p *RESTProxy) streamTo(ctx context.Context, path string, w io.Writer, maxBytes int64) (int64, error) {
+	if p == nil || strings.TrimSpace(p.BaseURL) == "" {
+		return 0, errors.New("the project API is not configured")
+	}
+	if p.mapPath != nil {
+		mapped, err := p.mapPath(path)
+		if err != nil {
+			return 0, err
+		}
+		path = mapped
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, p.BaseURL+path, nil)
+	if err != nil {
+		return 0, err
+	}
+	resp, err := p.Client.Do(req)
+	if err != nil {
+		return 0, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		raw, _ := io.ReadAll(io.LimitReader(resp.Body, 64<<10))
+		return 0, &RESTError{Status: resp.StatusCode, Detail: extractRESTErrorDetail(resp.StatusCode, raw), Code: extractRESTErrorCode(raw)}
+	}
+	n, err := io.Copy(w, io.LimitReader(resp.Body, maxBytes+1))
+	if err != nil {
+		return n, err
+	}
+	if n > maxBytes {
+		return n, fmt.Errorf("upstream response exceeds %d bytes", maxBytes)
+	}
+	return n, nil
+}
+
 func extractRESTErrorCode(raw []byte) string {
 	var envelope struct {
 		Code string `json:"code"`

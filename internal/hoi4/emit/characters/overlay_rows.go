@@ -164,6 +164,13 @@ func EmitTraitOverlayRows(rows TraitOverlayRows) (*Result, error) {
 		if !character.ReplacesVanillaID {
 			continue
 		}
+		// An imported country leader is written back with its role in its
+		// own definition. Retiring and re-creating it in an overlay event
+		// would take the role away from its country (or hand it to the
+		// project's tag).
+		if source == "imported" && character.RoleType == "country_leader" {
+			continue
+		}
 		switch character.RoleType {
 		case "country_leader":
 			in.ReplacementCountryLeaders = append(in.ReplacementCountryLeaders, character)

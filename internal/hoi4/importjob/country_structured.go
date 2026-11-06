@@ -88,6 +88,20 @@ func ParseCountryTagDeclarations(text string) []CountryTagDeclaration {
 	}
 	return out
 }
+
+// countrySourceFile is the definition file a country_tags line names, as a
+// path from the mod root with its own letter case.
+func countrySourceFile(raw string) string {
+	p := strings.Trim(strings.ReplaceAll(raw, "\\", "/"), " /")
+	if strings.HasPrefix(strings.ToLower(p), "common/") {
+		p = p[len("common/"):]
+	}
+	if p == "" {
+		return ""
+	}
+	return "common/" + p
+}
+
 func normalizeCountryPath(p string) string {
 	p = strings.Trim(strings.ReplaceAll(p, "\\", "/"), " /")
 	p = strings.TrimPrefix(strings.ToLower(p), "common/")
@@ -195,6 +209,7 @@ type countryStage struct {
 
 type countryStageRow struct {
 	tag, filePath string
+	sourceFile    string
 	payload       payload
 }
 
@@ -283,7 +298,7 @@ func (s *session) stageCountries(opt CountryStageOptions) (CountryCounts, error)
 			m = map[string]any{}
 		}
 		b, _ := json.Marshal(m)
-		s.countries.rows = append(s.countries.rows, countryStageRow{tag: tag, filePath: d.Path, payload: decodePayload(b)})
+		s.countries.rows = append(s.countries.rows, countryStageRow{tag: tag, filePath: d.Path, sourceFile: countrySourceFile(d.RawPath), payload: decodePayload(b)})
 		counts.Countries++
 	}
 	if opt.ImportFactions {
@@ -318,7 +333,7 @@ func (s *session) stageCountries(opt CountryStageOptions) (CountryCounts, error)
 var countryIdeologies = []string{"democratic", "fascism", "communism", "neutrality"}
 
 var countryUpdateColumns = []string{
-	"name", "color", "graphical_culture", "graphical_culture_2d", "use_legacy_ai_pp_spend",
+	"name", "color", "graphical_culture", "graphical_culture_2d", "use_legacy_ai_pp_spend", "source_file",
 	"name_en", "name_zh", "adjective_en", "adjective_zh",
 	"display_name_locs", "adjective_locs", "ideology_name_locs",
 	"name_democratic_en", "name_democratic_zh", "name_fascism_en", "name_fascism_zh",
@@ -376,6 +391,9 @@ func (s *session) mergeCountries(tx *project.Tx, opt CountryMergeOptions) error 
 			"flag_paths_by_ideology": map[string]any{},
 			"has_obs":                false,
 			"auto_added":             true,
+		}
+		if c.sourceFile != "" {
+			row["source_file"] = c.sourceFile
 		}
 		for _, ideology := range countryIdeologies {
 			key := c.tag + "_" + ideology

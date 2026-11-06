@@ -440,6 +440,7 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 		return out
 	}
 
+	historySources := map[string]string{}
 	for _, hf := range c.s.HistoryFiles {
 		ctag := toUpper(pyStrip(eStrOrEmpty(hf, "country_tag")))
 		if ctag == "" {
@@ -447,11 +448,12 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 		}
 		if emittedHistoryFileCtags[ctag] {
 			c.politics = append(c.politics, exportmsg.Message{Key: "politics.duplicate_history", Args: exportmsg.Args{
-				"subject": ctag, "file": "history/countries/" + ctag + " - z" + modDirName + ".txt",
+				"subject": ctag, "file": "history/countries/" + HistoryCountryFilename(ctag, historySources[ctag], modDirName),
 			}})
 			continue
 		}
 		emittedHistoryFileCtags[ctag] = true
+		historySources[ctag] = eStrOrEmpty(hf, "source_file")
 		if pyStrip(eStrOrEmpty(hf, "set_politics_ruling_party")) != "" {
 			emittedSetPoliticsCtags[ctag] = true
 		}
@@ -923,7 +925,7 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 	}
 
 	for _, ctag := range bufferOrder {
-		c.write(modDir+"history/countries/"+ctag+" - z"+modDirName+".txt",
+		c.write(modDir+"history/countries/"+HistoryCountryFilename(ctag, historySources[ctag], modDirName),
 			strings.Join(buffers[ctag], "\n")+"\n")
 	}
 

@@ -256,7 +256,8 @@ func TestEventsWorldPortImportsEveryFamily(t *testing.T) {
 
 	history := worldRowsBy(t, p, "history_files", "country_tag")
 	h := history["TST"]
-	if h == nil || worldInt(h["capital"]) != 1 || worldInt(h["set_research_slots"]) != 3 || jsonText(h["set_stability"]) != "0.5" || h["source"] != "imported" {
+	if h == nil || worldInt(h["capital"]) != 1 || worldInt(h["set_research_slots"]) != 3 || jsonText(h["set_stability"]) != "0.5" || h["source"] != "imported" ||
+		h["source_file"] != "history/countries/TST - Test.txt" {
 		t.Fatalf("history = %v", history)
 	}
 	if tags, _ := h["add_to_faction_tags"].([]any); tags == nil {

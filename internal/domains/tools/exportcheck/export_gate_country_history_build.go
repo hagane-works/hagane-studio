@@ -3,6 +3,7 @@ package exportcheck
 import (
 	"fmt"
 	"haganeworks/internal/hoi4/clausewitz"
+	"haganeworks/internal/hoi4/emit/worldout"
 	"haganeworks/internal/hoi4/importsvc/world"
 	"haganeworks/internal/hoi4/paradox"
 	"sort"
@@ -43,6 +44,7 @@ type CountryHistoryFileRow struct {
 	Capital          any
 	SetResearchSlots any
 	Source           string
+	SourceFile       string
 }
 
 type CountryHistoryRawFile struct {
@@ -195,8 +197,7 @@ func BuildCountryHistoryForExport(in CountryHistoryBuildInput) CountryHistoryReg
 			continue
 		}
 		imported := row.Source == "imported"
-		artifactPath := fmt.Sprintf("history/countries/%s - z%s.txt",
-			tag, in.StructuredArtifactName)
+		artifactPath := "history/countries/" + worldout.HistoryCountryFilename(tag, row.SourceFile, in.StructuredArtifactName)
 		structuredEmitted := !rawHistoryPaths[strings.ToLower(artifactPath)]
 		kind := "project_structured"
 		loadOrder := 300

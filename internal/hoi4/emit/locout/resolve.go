@@ -175,8 +175,10 @@ func resolveDescription(entity *Obj, langCode string, legacy legacyAttrs) string
 	locs := entity.Attr("description_locs")
 	if locs.Kind == KObj {
 		if val, ok := locs.Obj.Get(langCode); ok && val.Kind == KStr {
-			if stripped := pyStrip(val.Str); stripped != "" {
-				return stripped
+			// Leading and trailing line breaks are layout: a mod puts blank
+			// lines above a banner picture (£GFX_...) in a description.
+			if pyStrip(val.Str) != "" {
+				return val.Str
 			}
 		}
 	}

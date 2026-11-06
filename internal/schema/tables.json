@@ -919,6 +919,10 @@
       "not_null": true
     },
     {
+      "name": "source",
+      "type": "character varying"
+    },
+    {
       "name": "source_file",
       "type": "character varying"
     },

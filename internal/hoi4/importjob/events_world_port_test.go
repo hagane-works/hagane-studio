@@ -208,8 +208,8 @@ func TestEventsWorldPortImportsEveryFamily(t *testing.T) {
 	if cat == nil || cat["icon"] != "GFX_cat_icon" || worldInt(cat["priority"]) != 5 || !strings.Contains(jsonText(cat["allowed"]), "original_tag = TST") {
 		t.Fatalf("tst_cat = %v (the definition must win over the bare block)", cat)
 	}
-	if cat["source_file"] != "common/decisions/categories/tst_categories.txt" {
-		t.Errorf("tst_cat source_file = %v", cat["source_file"])
+	if cat["source_file"] != "common/decisions/categories/tst_categories.txt" || cat["source"] != "imported" {
+		t.Errorf("tst_cat source_file = %v, source = %v", cat["source_file"], cat["source"])
 	}
 	if cat["name_en"] != "Test Category" || cat["name_zh"] != "测试分类" || cat["desc_en"] != "Category Desc" || cat["visibility"] != "visible" {
 		t.Errorf("tst_cat texts = %v", cat)

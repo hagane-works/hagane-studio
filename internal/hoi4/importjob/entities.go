@@ -178,8 +178,8 @@ func (s *session) mergeSimpleEntities(tx *project.Tx) error {
 			opinion.upsert(project.Row{
 				"country_tag": tag, "modifier_id": e.naturalKey,
 				"body": p.jsonOr("body", map[string]any{}), "raw_extras": p.jsonOr("raw_extras", map[string]any{}),
-				"source": "imported",
-			}, []string{"country_tag", "body", "raw_extras", "source"})
+				"source": "imported", "source_file": worldNullIfBlank(e.sourceFile),
+			}, []string{"country_tag", "body", "raw_extras", "source", "source_file"})
 		case "dynamic_modifier":
 			names := s.locNamesOrEmpty(e.naturalKey)
 			dynamic.upsert(project.Row{
@@ -187,8 +187,8 @@ func (s *session) mergeSimpleEntities(tx *project.Tx) error {
 				"name_en": s.locStr(e.naturalKey, "en"), "name_zh": s.locStr(e.naturalKey, "zh"), "display_name_locs": names,
 				"icon": p.str("icon"), "remove_trigger": p.str("remove_trigger"), "enable": p.str("enable"),
 				"modifier": p.jsonOr("modifier", map[string]any{}), "raw_extras": p.jsonOr("raw_extras", map[string]any{}),
-				"source": "imported",
-			}, []string{"country_tag", "name_en", "name_zh", "display_name_locs", "icon", "remove_trigger", "enable", "modifier", "raw_extras", "source"})
+				"source": "imported", "source_file": worldNullIfBlank(e.sourceFile),
+			}, []string{"country_tag", "name_en", "name_zh", "display_name_locs", "icon", "remove_trigger", "enable", "modifier", "raw_extras", "source", "source_file"})
 		case "autonomy_state":
 			names := s.locNamesOrEmpty(e.naturalKey)
 			autonomy.upsert(project.Row{
@@ -198,8 +198,8 @@ func (s *session) mergeSimpleEntities(tx *project.Tx) error {
 				"manpower_influence": p.nullableFloat("manpower_influence"),
 				"min_freedom_level":  p.intOr("min_freedom_level", 0), "rule": p.str("rule"),
 				"ai_weights": p.jsonOr("ai_weights", map[string]any{}), "modifier": p.jsonOr("modifier", map[string]any{}),
-				"raw_extras": p.jsonOr("raw_extras", map[string]any{}), "source": "imported",
-			}, []string{"country_tag", "name_en", "name_zh", "display_name_locs", "is_puppet", "is_default", "manpower_influence", "min_freedom_level", "rule", "ai_weights", "modifier", "raw_extras", "source"})
+				"raw_extras": p.jsonOr("raw_extras", map[string]any{}), "source": "imported", "source_file": worldNullIfBlank(e.sourceFile),
+			}, []string{"country_tag", "name_en", "name_zh", "display_name_locs", "is_puppet", "is_default", "manpower_influence", "min_freedom_level", "rule", "ai_weights", "modifier", "raw_extras", "source", "source_file"})
 		case "scripted_effect", "scripted_trigger":
 			snippets.upsert(project.Row{
 				"kind": snippetKind(e.kind), "name": e.naturalKey, "body": p.str("body"),

@@ -497,9 +497,10 @@ func (s *session) charsExtrasMergeSpecialProjects(rows []entityRow, table *keyed
 			"resource_cost": p.str("resource_cost"), "project_output": p.str("project_output"),
 			"generic_prototype_rewards": p.jsonOr("generic_prototype_rewards", []any{}),
 			"raw_extras":                p.jsonOr("raw_extras", map[string]any{}), "source": "imported",
+			"source_file": worldNullIfBlank(e.sourceFile),
 		}, []string{"specialization", "name_en", "name_zh", "desc_en", "desc_zh", "display_name_locs", "description_locs",
 			"icon", "blueprint_image", "complexity", "prototype_time", "project_tags", "special_project_parent",
-			"allowed", "visible", "available", "resource_cost", "project_output", "generic_prototype_rewards", "raw_extras", "source"})
+			"allowed", "visible", "available", "resource_cost", "project_output", "generic_prototype_rewards", "raw_extras", "source", "source_file"})
 	}
 }
 
@@ -550,8 +551,9 @@ func (s *session) charsExtrasMergeAgencies(rows []entityRow, table *keyedTable, 
 			"country_tag": proj.ownTag(p), "scope_kind": "own", "shared_country_tags": nil, "source": "imported",
 			"name_en": s.locStr(locKey, "en"), "name_zh": s.locStr(locKey, "zh"),
 			"display_name_locs": s.locNamesOrEmpty(locKey), "description_locs": map[string]any{},
+			"source_file": worldNullIfBlank(e.sourceFile),
 		}, []string{"picture", "names", "default_trigger", "available", "upgrade_branches", "raw_extras",
-			"country_tag", "source", "name_en", "name_zh", "display_name_locs"})
+			"country_tag", "source", "name_en", "name_zh", "display_name_locs", "source_file"})
 	}
 }
 

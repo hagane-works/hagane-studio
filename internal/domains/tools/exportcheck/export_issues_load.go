@@ -341,6 +341,7 @@ func projectGateBookmarks(rows []Bookmark) []ExportGateBookmark {
 			BookmarkID: b.BookmarkID, Date: b.Date, Source: b.Source,
 			DefaultFlag: b.DefaultFlag, DefaultCountry: b.DefaultCountry,
 			SelectableCountries: b.SelectableCountries, Filters: b.Filters,
+			SourceFile: b.SourceFile,
 		})
 	}
 	return out

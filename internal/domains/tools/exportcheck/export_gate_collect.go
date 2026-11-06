@@ -1,6 +1,7 @@
 package exportcheck
 
 import (
+	"haganeworks/internal/hoi4/emit/worldout"
 	"haganeworks/internal/hoi4/exportengine"
 	"haganeworks/internal/hoi4/exportplan/timeline"
 	"haganeworks/internal/hoi4/importsvc/world"
@@ -18,6 +19,20 @@ type ExportGateBookmark struct {
 	Filters             []string
 	EffectivePath       string
 	EffectiveSource     string
+	SourceFile          string
+}
+
+// bookmarkArtifactPaths are the paths export writes the bookmarks to, in
+// order (worldout.BookmarkFilename).
+func bookmarkArtifactPaths(bookmarks []ExportGateBookmark) []string {
+	used := map[string]bool{}
+	out := make([]string, len(bookmarks))
+	for i, bookmark := range bookmarks {
+		if id := strings.TrimSpace(bookmark.BookmarkID); id != "" {
+			out[i] = "common/bookmarks/" + worldout.BookmarkFilename(id, bookmark.SourceFile, used)
+		}
+	}
+	return out
 }
 
 type ExportGateProject struct {
@@ -74,13 +89,12 @@ func effectiveBookmarkRows(
 		}
 		byPath[key] = rows
 	}
-	for _, bookmark := range bookmarks {
-		id := strings.TrimSpace(bookmark.BookmarkID)
-		if id == "" {
+	artifactPaths := bookmarkArtifactPaths(bookmarks)
+	for i, bookmark := range bookmarks {
+		if artifactPaths[i] == "" {
 			continue
 		}
-		addPath(strings.ToLower("common/bookmarks/"+id+".txt"),
-			[]ExportGateBookmark{bookmark})
+		addPath(strings.ToLower(artifactPaths[i]), []ExportGateBookmark{bookmark})
 	}
 
 	findings := []map[string]any{}
@@ -186,7 +200,8 @@ func BuildTimelinePlanForExport(
 	rawFiles []FocusGateRawFile,
 ) TimelinePlan {
 	structured := make([]StructuredBookmarkInput, 0, len(bookmarks))
-	for _, bookmark := range bookmarks {
+	artifactPaths := bookmarkArtifactPaths(bookmarks)
+	for i, bookmark := range bookmarks {
 		id := strings.TrimSpace(bookmark.BookmarkID)
 		source := bookmark.Source
 		if source == "" {
@@ -194,7 +209,7 @@ func BuildTimelinePlanForExport(
 		}
 		structured = append(structured, StructuredBookmarkInput{
 			BookmarkID: bookmark.BookmarkID, Date: bookmark.Date,
-			Path: "common/bookmarks/" + id + ".txt", Source: source,
+			Path: artifactPaths[i], Source: source,
 			Emitted: id != "",
 		})
 	}
@@ -283,7 +298,7 @@ func BuildBookmarkQualityForExport(
 	for _, bookmark := range effectiveRows {
 		path := bookmark.EffectivePath
 		if path == "" {
-			path = "common/bookmarks/" + strings.TrimSpace(bookmark.BookmarkID) + ".txt"
+			path = "common/bookmarks/" + worldout.BookmarkFilename(strings.TrimSpace(bookmark.BookmarkID), bookmark.SourceFile, map[string]bool{})
 		}
 		source := bookmark.EffectiveSource
 		if source == "" {

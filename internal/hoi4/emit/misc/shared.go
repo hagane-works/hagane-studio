@@ -219,3 +219,25 @@ func OOBDestination(row *NS) string {
 	}
 	return "history/units/" + stem + ".txt"
 }
+
+// bareImportedCategory reports an imported decision category the mod only
+// names, as the wrapper of its decisions, and defines nowhere: its definition
+// is the base game's (or another mod's), and writing an empty one would
+// replace it.
+func bareImportedCategory(c *NS) bool {
+	if c.Str("source") != "imported" || strings.TrimSpace(c.Str("source_file")) != "" {
+		return false
+	}
+	for _, key := range []string{"icon", "picture", "on_map_area", "allowed", "visible"} {
+		if strings.TrimSpace(c.Str(key)) != "" {
+			return false
+		}
+	}
+	if c.Int("priority", 0) != 0 {
+		return false
+	}
+	if extras := c.Dict("raw_extras"); extras != nil && extras.Len() > 0 {
+		return false
+	}
+	return true
+}

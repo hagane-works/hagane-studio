@@ -22,10 +22,14 @@ func TestFileSharedByCountriesKeepsEveryCountrysContent(t *testing.T) {
 			"decision_categories": {
 				json.RawMessage(`{"id":1,"category_id":"shared_category","country_tag":"","source":"imported","source_file":"common/decisions/categories/00_decision_categories.txt"}`),
 				json.RawMessage(`{"id":2,"category_id":"usa_category","country_tag":"USA","source":"imported","source_file":"common/decisions/categories/00_decision_categories.txt"}`),
+				// Defined only by the base game; the mod's decisions file
+				// just wraps its decisions in it.
+				json.RawMessage(`{"id":3,"category_id":"ARG_balancing_act_decisions","country_tag":"ARG","source":"imported"}`),
 			},
 			"decisions": {
 				json.RawMessage(`{"id":1,"decision_id":"shared_decision","category_id":1,"source":"imported","source_file":"common/decisions/endgame.txt","display_name_locs":{},"description_locs":{}}`),
 				json.RawMessage(`{"id":2,"decision_id":"usa_decision","category_id":2,"country_tag":"USA","source":"imported","source_file":"common/decisions/endgame.txt","display_name_locs":{},"description_locs":{}}`),
+				json.RawMessage(`{"id":3,"decision_id":"ARG_decision","category_id":3,"country_tag":"ARG","source":"imported","source_file":"common/decisions/ARG.txt","display_name_locs":{},"description_locs":{}}`),
 			},
 		},
 	}
@@ -51,9 +55,15 @@ func TestFileSharedByCountriesKeepsEveryCountrysContent(t *testing.T) {
 			t.Errorf("common/decisions/categories/00_decision_categories.txt lost %s:\n%s", id, categories)
 		}
 	}
-	for name := range files {
+	for name, body := range files {
 		if strings.HasPrefix(name, "common/decisions/categories/") && name != "common/decisions/categories/00_decision_categories.txt" {
 			t.Errorf("categories also written to %s", name)
 		}
+		if strings.HasPrefix(name, "common/decisions/categories/") && strings.Contains(string(body), "ARG_balancing_act_decisions") {
+			t.Errorf("%s redefines a category only the base game defines", name)
+		}
+	}
+	if arg := string(files["common/decisions/ARG.txt"]); !strings.Contains(arg, "ARG_balancing_act_decisions = {") || !strings.Contains(arg, "ARG_decision = {") {
+		t.Errorf("common/decisions/ARG.txt lost the decision or its category wrapper:\n%s", arg)
 	}
 }

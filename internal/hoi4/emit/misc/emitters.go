@@ -374,8 +374,14 @@ func EmitDecisionsSuperevents(env *Env, decisions, decisionCategories, superEven
 				decIconGates[d.Int("id", 0)] = d.Str("icon") != custom || shippedDecSprites[custom]
 			}
 
-			if len(visibleCats) > 0 {
-				catGroups := GroupBySourceFile(visibleCats, func(*NS) string {
+			var definedCats []*NS
+			for _, c := range visibleCats {
+				if !bareImportedCategory(c) {
+					definedCats = append(definedCats, c)
+				}
+			}
+			if len(definedCats) > 0 {
+				catGroups := GroupBySourceFile(definedCats, func(*NS) string {
 					return "common/decisions/categories/" + tag + "_" + ctag + "_categories.txt"
 				}, "common/decisions/categories")
 				for _, relPath := range catGroups.Keys {

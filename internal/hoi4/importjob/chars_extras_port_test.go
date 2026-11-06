@@ -316,7 +316,7 @@ func TestCharsExtrasPortFirstImport(t *testing.T) {
 		"country_tag": `"TST"`, "scope_kind": `"own"`, "shared_country_tags": `null`,
 		"name_en": `"Test Idea"`, "name_zh": `"测试理念"`, "desc_en": `"Idea desc"`, "desc_zh": `""`,
 		"display_name_locs": `{"en":"Test Idea","zh":"测试理念"}`, "description_locs": `{"en":"Idea desc"}`,
-		"idea_type": `"country"`, "picture": `"GFX_idea_tst"`, "removal_cost": `25`, "auto_attach_on_start": `true`,
+		"idea_type": `"country"`, "picture": `"GFX_idea_tst"`, "removal_cost": `25`, "auto_attach_on_start": `false`,
 		"cancel_if_invalid": `true`, "has_obs": `false`, "source": `"imported"`, "source_file": `"common/ideas/TST.txt"`,
 	})
 	charsExtrasPortCheck(t, "generic_idea", charsExtrasPortRow(t, p, "ideas", "idea_id", "generic_idea"), map[string]string{

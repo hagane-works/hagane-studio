@@ -1657,6 +1657,11 @@ func SeedImportedPolitics(p *project.Project) error {
 		if err != nil {
 			return err
 		}
+		if removed := removedBaseGameGroups(layers, discovery); len(removed) > 0 {
+			updated["removed_base_groups"] = removed
+		} else {
+			delete(updated, "removed_base_groups")
+		}
 		deps := jsonStrings(tx.Record()["dependencies"])
 		normalized := workbench.NormalizeRegistry(updated)
 		current, _ := clonePoliticsRegistry(registry.Raw)
@@ -1666,6 +1671,32 @@ func SeedImportedPolitics(p *project.Project) error {
 		}
 		return persistPoliticsRegistry(tx, updated, deps)
 	})
+}
+
+// removedBaseGameGroups lists the base game's ideology groups an imported mod
+// takes out of the game: the mod replaces the base game's ideology file and
+// does not define the group itself.
+func removedBaseGameGroups(layers []ideologysource.Layer, discovery ideologysource.Discovery) []any {
+	replaced := false
+	for _, layer := range layers {
+		if layer.SourceKind == ideologysource.SourceDependency && ideologysource.ReplacesBaseGameIdeologies(layer) {
+			replaced = true
+		}
+	}
+	if !replaced {
+		return nil
+	}
+	defined := map[string]bool{}
+	for _, owner := range discovery.Roots {
+		defined[strings.TrimSpace(owner.RootID)] = true
+	}
+	removed := []any{}
+	for _, group := range reftables.Ideologies().Groups {
+		if !defined[group] {
+			removed = append(removed, group)
+		}
+	}
+	return removed
 }
 
 func jsonRoundTrip(value any) any {

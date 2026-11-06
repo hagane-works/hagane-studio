@@ -15,16 +15,26 @@ func TestImportedHistoryKeepsItsFileName(t *testing.T) {
 			"history_files": {
 				json.RawMessage(`{"id":1,"country_tag":"GER","source":"imported","capital":64,"source_file":"history/countries/GER - Germany.txt"}`),
 				json.RawMessage(`{"id":2,"country_tag":"ITA","source":"created","capital":2}`),
+				// A mod empties a base-game country's history with a file of
+				// the same name that only sets convoys to 0.
+				json.RawMessage(`{"id":3,"country_tag":"EST","source":"imported","capital":0,"set_convoys":0,"source_file":"history/countries/EST - Estonia.txt"}`),
+				json.RawMessage(`{"id":4,"country_tag":"LAT","source":"created","capital":0}`),
 			},
 		}}
 	files, err := BuildNativeTextTree(snapshot, true)
 	if err != nil {
 		t.Fatal(err)
 	}
-	for _, want := range []string{"history/countries/GER - Germany.txt", "history/countries/ITA - zNames fixture.txt"} {
+	for _, want := range []string{"history/countries/GER - Germany.txt", "history/countries/ITA - zNames fixture.txt", "history/countries/EST - Estonia.txt"} {
 		if _, ok := files[want]; !ok {
 			t.Errorf("%s not written; files: %v", want, keysOf(files))
 		}
+	}
+	if body := string(files["history/countries/EST - Estonia.txt"]); !strings.Contains(body, "\nset_convoys = 0\n") {
+		t.Errorf("the emptied history has no statement:\n%s", body)
+	}
+	if _, ok := files["history/countries/LAT - zNames fixture.txt"]; ok {
+		t.Error("an empty history made in the app was written")
 	}
 }
 

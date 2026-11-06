@@ -762,7 +762,15 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 			}
 		}
 		if !nonComment {
-			continue
+			// An imported history that replaces a file of its own name is
+			// kept even when nothing in it maps to a field (a mod empties a
+			// base-game country's history this way); the no-op statement
+			// keeps the file from being empty.
+			if pyStrOrEmpty(eGet(hf, "source")) != "imported" ||
+				HistoryCountryFilename(ctag, historySources[ctag], modDirName) == HistoryCountryFilename(ctag, "", modDirName) {
+				continue
+			}
+			hfLines = append(hfLines, "set_convoys = 0", "")
 		}
 		bufSet(ctag, hfLines)
 	}

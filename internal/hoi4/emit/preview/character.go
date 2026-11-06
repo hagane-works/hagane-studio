@@ -197,7 +197,11 @@ func GenerateCharacterScript(
 	if pyTruthy(attr(char, "ideology")) {
 		ideology = pyStr(attr(char, "ideology"))
 	}
-	shouldEmitLeader := ideology != "" && roleType == "country_leader"
+	// An imported character whose main role is another one (a general who
+	// is also head of state) keeps its country_leader block: the import
+	// records its ideology and expiry from that block.
+	imported := pyStr(attr(char, "source")) == "imported"
+	shouldEmitLeader := ideology != "" && (roleType == "country_leader" || imported)
 	if shouldEmitLeader {
 		expireVal := ""
 		if pyTruthy(attr(char, "expire")) {

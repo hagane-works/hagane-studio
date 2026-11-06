@@ -921,7 +921,7 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 	}
 
 	history := newKeyedTable(tx, "history_files", "country_tag")
-	historyUpdate := []string{"capital", "set_politics_ruling_party", "set_politics_last_election", "set_politics_election_frequency", "set_politics_elections_allowed", "set_popularities_democratic", "set_popularities_communism", "set_popularities_fascism", "set_popularities_neutrality", "set_popularities", "set_research_slots", "set_convoys", "set_stability", "set_war_support", "add_ideas_extra", "remove_ideas", "complete_national_focus_ids", "set_technology_ids", "startup_flags", "give_guarantee_tags", "add_to_faction", "set_autonomy", "diplomatic_relation", "add_to_faction_tags", "set_cosmetic_tag", "set_oob", "set_air_oob", "set_naval_oob", "date_blocks", "raw_script", "source"}
+	historyUpdate := []string{"capital", "set_politics_ruling_party", "set_politics_last_election", "set_politics_election_frequency", "set_politics_elections_allowed", "set_popularities_democratic", "set_popularities_communism", "set_popularities_fascism", "set_popularities_neutrality", "set_popularities", "set_research_slots", "set_convoys", "set_stability", "set_war_support", "add_ideas_extra", "remove_ideas", "complete_national_focus_ids", "set_technology_ids", "startup_flags", "give_guarantee_tags", "add_to_faction", "set_autonomy", "diplomatic_relation", "add_to_faction_tags", "set_cosmetic_tag", "set_oob", "set_air_oob", "set_naval_oob", "date_blocks", "raw_script", "source", "source_file"}
 	for _, r := range rows {
 		if r.kind != "history" || r.key == "" {
 			continue
@@ -949,6 +949,9 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 			"set_popularities":                p.jsonOr("set_popularities", map[string]any{}),
 			"set_stability":                   floatOr("set_stability"), "set_war_support": floatOr("set_war_support"),
 			"add_to_faction_tags": factionTags, "source": "imported",
+		}
+		if r.source != "" {
+			row["source_file"] = r.source
 		}
 		for _, column := range []string{"set_popularities_democratic", "set_popularities_communism", "set_popularities_fascism", "set_popularities_neutrality", "set_research_slots", "set_convoys"} {
 			row[column] = p.intOr(column, 0)

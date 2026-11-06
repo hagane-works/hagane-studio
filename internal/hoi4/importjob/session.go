@@ -123,12 +123,19 @@ func (s *session) projectTags() []string {
 	return out
 }
 
+// localeCodes maps a game locale to the language code the project stores
+// and the exporter reads (locout.LangCodeToHOI4). Keeping "l_korean" as
+// "korean" left every non-English, non-Chinese text unread on export, where
+// it fell back to English.
+var localeCodes = map[string]string{
+	"l_english": "en", "l_simp_chinese": "zh", "l_russian": "ru", "l_french": "fr",
+	"l_german": "de", "l_spanish": "es", "l_japanese": "ja", "l_korean": "ko",
+	"l_polish": "pl", "l_braz_por": "pt",
+}
+
 func locShort(locale string) string {
-	switch locale {
-	case "l_english":
-		return "en"
-	case "l_simp_chinese":
-		return "zh"
+	if code, ok := localeCodes[locale]; ok {
+		return code
 	}
 	if len(locale) > 2 {
 		return locale[2:]

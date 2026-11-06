@@ -727,7 +727,7 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 		}
 	}
 	categories := newKeyedTable(tx, "decision_categories", "category_id")
-	categoryOverwrite := []string{"icon", "picture", "priority", "on_map_area", "allowed", "visible", "raw_extras", "country_tag", "scope_kind", "shared_country_tags"}
+	categoryOverwrite := []string{"icon", "picture", "priority", "on_map_area", "allowed", "visible", "raw_extras", "country_tag", "scope_kind", "shared_country_tags", "source_file"}
 	for _, key := range wantedIDs {
 		r := chosen[key]
 		if r == nil {
@@ -742,6 +742,12 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 			"raw_extras": p.jsonOr("raw_extras", map[string]any{}), "country_tag": countryTag, "scope_kind": kind, "shared_country_tags": shared,
 			"name_en": s.locStr(key, "en"), "name_zh": s.locStr(key, "zh"), "desc_en": s.locStr(key+"_desc", "en"), "desc_zh": s.locStr(key+"_desc", "zh"),
 			"display_name_locs": s.locNamesOrEmpty(key), "description_locs": s.locNamesOrEmpty(key + "_desc"), "visibility": "visible",
+			"source_file": nil,
+		}
+		// Only a definition in decisions/categories names the file the
+		// category is written back to.
+		if worldCategoryDefinition(r.source) {
+			row["source_file"] = r.source
 		}
 		id, exists := categories.find(key)
 		if !exists {

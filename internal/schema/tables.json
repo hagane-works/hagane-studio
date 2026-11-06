@@ -919,6 +919,10 @@
       "not_null": true
     },
     {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
       "name": "created_at",
       "type": "timestamp without time zone"
     },

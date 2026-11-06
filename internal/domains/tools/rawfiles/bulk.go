@@ -15,8 +15,10 @@ import (
 )
 
 // Limits for one bulk request. A client sends a large mod in several requests.
+// Each file takes two multipart parts (its path and its bytes), and Go's
+// multipart reader refuses a form of more than 1000 parts.
 const (
-	maxBulkFiles     = 2000
+	maxBulkFiles     = 400
 	maxBulkBodyBytes = 1 << 30
 )
 

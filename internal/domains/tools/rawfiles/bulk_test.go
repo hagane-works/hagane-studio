@@ -3,6 +3,7 @@ package rawfiles
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"mime/multipart"
 	"net/http"
 	"net/http/httptest"
@@ -95,5 +96,16 @@ func TestRawFilesBulkAddsManyFilesInOneWrite(t *testing.T) {
 	}))
 	if again["common/bop/mod_bop.txt"] != "exists" || again["common/bop/other.txt"] != "created/text" {
 		t.Fatalf("resend: %v", again)
+	}
+}
+
+func TestRawFilesBulkTakesItsLargestBatch(t *testing.T) {
+	_, mux := newProject(t)
+	files := make([][2]string, maxBulkFiles)
+	for i := range files {
+		files[i] = [2]string{fmt.Sprintf("gfx/interface/icon_%d.dds", i), "DDS"}
+	}
+	if out := postBulk(t, mux, files); out["created"].(float64) != maxBulkFiles {
+		t.Fatalf("created = %v, want %d", out["created"], maxBulkFiles)
 	}
 }

@@ -505,6 +505,9 @@ func (s *session) stageEventsWorld(options EventsWorldStageOptions, progress fun
 			}
 		}
 	}
+	if loaded, _ := s.record["is_loaded_existing_mod"].(bool); loaded {
+		allowed = map[string]bool{}
+	}
 	facts, err := s.gameFacts()
 	if err != nil {
 		return nil, err

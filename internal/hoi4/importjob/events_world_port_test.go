@@ -407,3 +407,27 @@ func TestEventsWorldPortStageOptions(t *testing.T) {
 		t.Errorf("counts = %v, rows = %d", counts, len(s.world.rows))
 	}
 }
+
+func TestEventsWorldPortLoadedExistingModKeepsEveryNamespace(t *testing.T) {
+	root := writeWorldTestMod(t, map[string]string{
+		"events/mod_asia.txt": `add_namespace = MOD_asia
+country_event = {
+	id = MOD_asia.1
+	is_triggered_only = yes
+	trigger = { tag = BEN }
+	option = { name = MOD_asia.1.a }
+}
+`,
+	})
+	for _, loaded := range []bool{false, true} {
+		p, err := project.NewStore(t.TempDir()).Create(project.Row{"name": "t", "uuid": "u1", "country_tag": "TST", "country_tags": []any{"TST"}, "is_loaded_existing_mod": loaded}, "t")
+		if err != nil {
+			t.Fatal(err)
+		}
+		importWorld(t, p, root, "overwrite")
+		events := worldRowsBy(t, p, "events", "event_id")
+		if kept := events["MOD_asia.1"] != nil; kept != loaded {
+			t.Errorf("is_loaded_existing_mod=%v: MOD_asia.1 imported %v", loaded, kept)
+		}
+	}
+}

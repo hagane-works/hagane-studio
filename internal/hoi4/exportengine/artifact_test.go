@@ -6,6 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"os"
 	"path/filepath"
@@ -195,5 +196,15 @@ func TestBuildRejectsUnsafeAndCollidingPaths(t *testing.T) {
 		if _, err := Build(filepath.Join(t.TempDir(), "bad.zip"), "fp", entries, budget); err == nil {
 			t.Fatalf("unsafe entries accepted: %#v", entries)
 		}
+	}
+}
+
+func TestDefaultBudgetFitsLargeTotalConversion(t *testing.T) {
+	entries := make([]Entry, 30_000)
+	for i := range entries {
+		entries[i] = Entry{Path: fmt.Sprintf("Demo/gfx/leaders/p%05d.dds", i), Bytes: []byte("x"), Origin: "generated"}
+	}
+	if _, err := Build(filepath.Join(t.TempDir(), "large.zip"), "fp", entries, DefaultArtifactBudget()); err != nil {
+		t.Fatalf("a 30,000-file mod must export: %v", err)
 	}
 }

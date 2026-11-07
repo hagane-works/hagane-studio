@@ -1,6 +1,37 @@
 package preview
 
-import "strings"
+import (
+	"strings"
+
+	"haganeworks/internal/hoi4/importsvc/characters"
+)
+
+// importedCharacterName is the name an imported character was written
+// with: another localisation key, or literal text the game shows as is.
+// Other characters use their localisation key.
+func importedCharacterName(char *OD, imported bool) string {
+	key := CharacterLocKey(char)
+	name := pyStrip(getStr(char, "name"))
+	if !imported || name == "" || name == key {
+		return key
+	}
+	if IsLegalLocKey(name) {
+		return name
+	}
+	return "\"" + strings.ReplaceAll(name, "\"", "") + "\""
+}
+
+// legacyIDLines writes a unit leader's legacy_id: the imported value, none
+// when the imported block had none, and -1 for leaders made in the app.
+func legacyIDLines(extras *OD, imported bool) []string {
+	if value, ok := extras.Get(characters.LegacyIDKey); ok && pyStrip(pyStr(value)) != "" {
+		return []string{"\t\t\tlegacy_id = " + pyStrip(pyStr(value))}
+	}
+	if imported {
+		return nil
+	}
+	return []string{"\t\t\tlegacy_id = -1"}
+}
 
 var advisorEmittedRawKeys = map[string]bool{
 	"advisor_slot": true, "advisor_cost": true, "advisor_idea_token": true,
@@ -37,10 +68,16 @@ func GenerateCharacterScript(
 	tag := pyUpper(countryTag)
 	slug := ExtractSlug(getStr(char, "tag"), tag)
 	var lines []string
+	imported := pyStr(attr(char, "source")) == "imported"
+	extras := getOD(char, "raw_extras")
+	if extras == nil {
+		extras = NewOD()
+	}
+	uploaded := hasPortraitImage && portraitPathOverride == "" || hasAdvisorImage && advisorPathOverride == ""
 
 	lines = append(lines, "characters = {")
 	lines = append(lines, "\t"+getStr(char, "tag")+" = {")
-	lines = append(lines, "\t\tname = "+CharacterLocKey(char))
+	lines = append(lines, "\t\tname = "+importedCharacterName(char, imported))
 
 	if pyTruthy(attr(char, "gender")) {
 		lines = append(lines, "\t\tgender = "+pyStr(attr(char, "gender")))
@@ -74,7 +111,20 @@ func GenerateCharacterScript(
 	emitNavyLarge := roleUsesNavyLarge && hasPortraitImage
 	emitArmySmall := hasAdvisorImage
 
-	if emitCivilianLarge || emitArmyLarge || emitNavyLarge || emitArmySmall {
+	// An imported portraits block is written as it was while its pictures
+	// are the ones it was read as and no new image was uploaded.
+	verbatimPortraits := false
+	if block, ok := extras.Get("portraits"); ok && imported && !uploaded {
+		refs, _ := extras.Get(characters.PortraitRefsKey)
+		if pyStr(refs) == characters.PortraitRefs(getStr(char, "large_portrait"), getStr(char, "small_portrait")) {
+			verbatimPortraits = true
+			lines = append(lines, "\t\tportraits = {")
+			lines = append(lines, indentBlock(pyStr(block), 3)...)
+			lines = append(lines, "\t\t}")
+		}
+	}
+
+	if !verbatimPortraits && (emitCivilianLarge || emitArmyLarge || emitNavyLarge || emitArmySmall) {
 		lines = append(lines, "\t\tportraits = {")
 		if emitCivilianLarge {
 			lines = append(lines, "\t\t\tcivilian = {")
@@ -119,7 +169,7 @@ func GenerateCharacterScript(
 		lines = append(lines, "\t\t\tdefense_skill = "+pyStr(attr(char, "defense_skill")))
 		lines = append(lines, "\t\t\tplanning_skill = "+pyStr(attr(char, "planning_skill")))
 		lines = append(lines, "\t\t\tlogistics_skill = "+pyStr(attr(char, "logistics_skill")))
-		lines = append(lines, "\t\t\tlegacy_id = -1")
+		lines = append(lines, legacyIDLines(extras, imported)...)
 		lines = append(lines, emitUnitLeaderVisible(char)...)
 		lines = append(lines, "\t\t}")
 
@@ -133,7 +183,7 @@ func GenerateCharacterScript(
 		lines = append(lines, "\t\t\tdefense_skill = "+pyStr(attr(char, "defense_skill")))
 		lines = append(lines, "\t\t\tmaneuvering_skill = "+pyStr(attr(char, "maneuvering_skill")))
 		lines = append(lines, "\t\t\tcoordination_skill = "+pyStr(attr(char, "coordination_skill")))
-		lines = append(lines, "\t\t\tlegacy_id = -1")
+		lines = append(lines, legacyIDLines(extras, imported)...)
 		lines = append(lines, emitUnitLeaderVisible(char)...)
 		lines = append(lines, "\t\t}")
 
@@ -253,7 +303,9 @@ func GenerateCharacterScript(
 			lines = append(lines, "\t\t\tallowed = {")
 			lines = append(lines, indentBlock(pyStr(advisorAllowedRaw), 4)...)
 			lines = append(lines, "\t\t\t}")
-		} else {
+		} else if !imported {
+			// An imported advisor without allowed is open to every country
+			// that has it; the default would take it from them.
 			lines = append(lines, "\t\t\tallowed = {")
 			lines = append(lines, "\t\t\t\toriginal_tag = "+tag)
 			lines = append(lines, "\t\t\t}")
@@ -316,7 +368,7 @@ func GenerateCharacterScript(
 		if key == "_origin_has_instance" || key == "additional_instances" {
 			continue
 		}
-		if key == "can_be_captured" {
+		if key == "can_be_captured" || key == "portraits" || key == characters.PortraitRefsKey || key == characters.LegacyIDKey {
 			continue
 		}
 		value, _ := rawExtrasAll.Get(key)

@@ -1598,7 +1598,21 @@ func mergeImportedPoliticsSource(registry map[string]any, discovery ideologysour
 	conflict := func(id string) error {
 		return politicsCommandError{Code: "politics_script_id_conflict", Detail: fmt.Sprintf("Imported political script ID %q conflicts with an existing project definition.", id)}
 	}
-	for _, owner := range discovery.Roots {
+	byID := func(list []any) func(i, j int) bool {
+		return func(i, j int) bool {
+			left, _ := list[i].(map[string]any)
+			right, _ := list[j].(map[string]any)
+			return str(left["id"]) < str(right["id"])
+		}
+	}
+	sort.SliceStable(groups, func(i, j int) bool { return str(groups[i]) < str(groups[j]) })
+	sort.SliceStable(roots, byID(roots))
+	sort.SliceStable(subs, byID(subs))
+	// The game lists ideology groups in the order they are defined, so
+	// imported ROOTs keep the order the mod wrote them in.
+	owners := append([]ideologysource.RootOwner(nil), discovery.Roots...)
+	sort.SliceStable(owners, func(i, j int) bool { return owners[i].Position < owners[j].Position })
+	for _, owner := range owners {
 		rootID := strings.TrimSpace(owner.RootID)
 
 		if reftables.Ideologies().IsGroup(rootID) {
@@ -1625,16 +1639,6 @@ func mergeImportedPoliticsSource(registry map[string]any, discovery ideologysour
 			})
 		}
 	}
-	byID := func(list []any) func(i, j int) bool {
-		return func(i, j int) bool {
-			left, _ := list[i].(map[string]any)
-			right, _ := list[j].(map[string]any)
-			return str(left["id"]) < str(right["id"])
-		}
-	}
-	sort.SliceStable(groups, func(i, j int) bool { return str(groups[i]) < str(groups[j]) })
-	sort.SliceStable(roots, byID(roots))
-	sort.SliceStable(subs, byID(subs))
 	updated["groups"], updated["root_definitions"], updated["sub_ideologies"] = groups, roots, subs
 	return updated, nil
 }

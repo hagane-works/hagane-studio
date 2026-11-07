@@ -108,6 +108,7 @@ func appendOwner(discovery *Discovery, root rootLocation, suppressed bool) {
 	owner := root.Owner
 	owner.SubtypeIDs = append([]string(nil), owner.SubtypeIDs...)
 	sort.Strings(owner.SubtypeIDs)
+	owner.Position = len(discovery.Roots) + len(discovery.Suppressed)
 	if suppressed {
 		discovery.Suppressed = append(discovery.Suppressed, owner)
 		return

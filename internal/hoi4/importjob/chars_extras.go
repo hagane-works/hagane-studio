@@ -609,7 +609,7 @@ func (s *session) charsExtrasMergeIdeas(rows []entityRow, table *keyedTable, pro
 			"country_tag": countryTag, "scope_kind": scopeKind, "shared_country_tags": shared,
 			"idea_id": e.naturalKey, "idea_type": p.strOr("idea_type", "country"), "name": p.strOr("name", e.naturalKey),
 			"picture": p.str("picture"), "modifier": p.jsonOr("modifier", map[string]any{}), "ai_will_do": p.str("ai_will_do"),
-			"removal_cost": p.intOr("removal_cost", -1), "auto_attach_on_start": true,
+			"removal_cost": p.intOr("removal_cost", -1), "auto_attach_on_start": false,
 			"allowed": p.str("allowed"), "allowed_civil_war": p.str("allowed_civil_war"),
 			"is_designer": p.boolOr("is_designer", false), "research_bonus": p.jsonOr("research_bonus", map[string]any{}),
 			"designer_traits": p.jsonOr("designer_traits", []any{}),

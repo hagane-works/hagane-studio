@@ -41,6 +41,10 @@ type RootOwner struct {
 	RootSHA256    string   `json:"root_sha256"`
 	SubtypeIDs    []string `json:"subtype_ids"`
 	TypesCount    int      `json:"types_count"`
+	// Position is where the ROOT stands in load order: layer, then file
+	// path, then place in the file. Roots are listed by ID, so this keeps
+	// the order the mod wrote them in.
+	Position int `json:"-"`
 }
 
 type Discovery struct {

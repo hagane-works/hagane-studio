@@ -59,11 +59,15 @@ func (s *session) gameFacts() (*gameFacts, error) {
 		if err != nil {
 			return nil, err
 		}
+		countryTags, err := loadBaseGameCountryTags(s.ctx)
+		if err != nil {
+			return nil, err
+		}
 		focus, focusErr := loadFocusRegistry(s.ctx)
 		if err := s.ctx.Err(); err != nil {
 			return nil, err
 		}
-		s.facts = &gameFacts{aliases: aliases, focus: focus, focusErr: focusErr}
+		s.facts = &gameFacts{aliases: aliases, countryTags: countryTags, focus: focus, focusErr: focusErr}
 	}
 	return s.facts, nil
 }

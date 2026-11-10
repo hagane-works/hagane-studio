@@ -30,7 +30,7 @@ func useTestIndex(t *testing.T, reads *atomic.Int64, build func(ctx context.Cont
 	index, err := gameindex.New(func() (fs.FS, error) {
 		reads.Add(1)
 		return game, nil
-	}, []gameindex.Dataset{dataset(gameindex.CountryAliases), dataset(gameindex.FocusTrees)}, "")
+	}, []gameindex.Dataset{dataset(gameindex.CountryAliases), dataset(gameindex.FocusTrees), dataset(gameindex.WorldTables)}, "")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -69,7 +69,9 @@ func TestEventsWorldReadsTheGameIndexOnce(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if got := reads.Load(); got > 4 {
+	// Two looks per dataset the session reads: country aliases, focus trees and
+	// world tables. More would mean a look per event or country.
+	if got := reads.Load(); got > 6 {
 		t.Errorf("the game folder was looked at %d times for 1,001 events and 60 countries", got)
 	}
 

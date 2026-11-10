@@ -336,6 +336,7 @@ func TestCharsExtrasPortFirstImport(t *testing.T) {
 		"country_tag": `"TST"`, "scope_kind": `"own"`, "shared_country_tags": `null`,
 		"name_en": `"Test Agency"`, "name_zh": `""`, "display_name_locs": `{"en":"Test Agency"}`, "description_locs": `{}`,
 		"names": `["Secret Service","TST_agency"]`, "source": `"imported"`,
+		"source_file": `"common/intelligence_agencies/agencies.txt"`,
 	})
 
 	charsExtrasPortCheck(t, "mobile_test", charsExtrasPortRow(t, p, "doctrines", "entity_type", "grand_doctrine", "entity_key", "mobile_test"), map[string]string{
@@ -352,6 +353,7 @@ func TestCharsExtrasPortFirstImport(t *testing.T) {
 		"description_locs": `{"en":"Spec desc"}`, "facility_model": `"test_facility"`, "source": `"imported"`,
 	})
 	charsExtrasPortCheck(t, "sp_test", charsExtrasPortRow(t, p, "special_projects", "project_token", "sp_test"), map[string]string{
+		"source_file": `"common/special_projects/projects/test.txt"`,
 		"country_tag": `"TST"`, "specialization": `"specialization_test"`, "name_en": `"Test Project"`, "desc_en": `"Project desc"`,
 		"icon": `"GFX_sp_test"`, "complexity": `"sp_complexity_medium"`, "prototype_time": `"sp_time_cost_medium"`,
 		"project_tags": `[]`, "source": `"imported"`,

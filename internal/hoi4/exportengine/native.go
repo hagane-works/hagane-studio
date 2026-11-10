@@ -2465,19 +2465,26 @@ func nativeModifiers(snapshot Snapshot, modDir string, includeImported bool) ([]
 		if len(rows) == 0 {
 			continue
 		}
-		raw := make([]json.RawMessage, 0, len(rows))
 		locObjects := make([]*locout.Obj, 0, len(rows))
 		for _, row := range rows {
-			raw = append(raw, row.raw)
 			locObjects = append(locObjects, row.loc)
 		}
-		body, _ := json.Marshal(map[string]any{current.requestKey: raw})
-		script, err := current.emit(body)
-		if err != nil {
-			return nil, fmt.Errorf("emit %s: %w", current.table, err)
-		}
-		if script != "" {
-			entries = append(entries, Entry{Path: modDir + "/" + current.path, Bytes: []byte(script), Origin: "generated", SourceEntity: current.table})
+		// Imported rows go back to the file they came from, so a mod that
+		// replaces a base-game file by name still replaces it.
+		dir := current.path[:strings.LastIndex(current.path, "/")]
+		for _, group := range groupNativeRows(rows, func(nativeRow) string { return current.path }, dir) {
+			raw := make([]json.RawMessage, 0, len(group.rows))
+			for _, row := range group.rows {
+				raw = append(raw, row.raw)
+			}
+			body, _ := json.Marshal(map[string]any{current.requestKey: raw})
+			script, err := current.emit(body)
+			if err != nil {
+				return nil, fmt.Errorf("emit %s: %w", current.table, err)
+			}
+			if script != "" {
+				entries = append(entries, Entry{Path: modDir + "/" + group.path, Bytes: []byte(script), Origin: "generated", SourceEntity: current.table})
+			}
 		}
 		if current.loc != nil {
 			for _, lang := range langs {
@@ -2707,6 +2714,32 @@ func nativeAdvancedScripts(snapshot Snapshot, modDir string, includeImported boo
 		script, err := emit(encoded)
 		return script, rows, err
 	}
+	// emitRowsByFile writes imported rows back to the file they came from and
+	// the rest to defaultPath.
+	emitRowsByFile := func(table, key, defaultPath, source string, emit func([]byte) (string, error), extra map[string]any) ([]nativeRow, error) {
+		rows, err := nativeRows(snapshot.Tables[table], includeImported)
+		if err != nil || len(rows) == 0 {
+			return rows, err
+		}
+		dir := defaultPath[:strings.LastIndex(defaultPath, "/")]
+		for _, group := range groupNativeRows(rows, func(nativeRow) string { return defaultPath }, dir) {
+			raw := make([]json.RawMessage, 0, len(group.rows))
+			for _, row := range group.rows {
+				raw = append(raw, row.raw)
+			}
+			body := map[string]any{key: raw}
+			for k, v := range extra {
+				body[k] = v
+			}
+			encoded, _ := json.Marshal(body)
+			script, err := emit(encoded)
+			if err != nil {
+				return rows, err
+			}
+			appendScript(group.path, source, script)
+		}
+		return rows, nil
+	}
 
 	traits, err := nativeRows(snapshot.Tables["custom_traits"], true)
 	if err != nil {
@@ -2872,11 +2905,11 @@ func nativeAdvancedScripts(snapshot Snapshot, modDir string, includeImported boo
 		}
 	}
 
-	agencyScript, agencies, err := emitRows("intelligence_agencies", "agencies", emitscripts.EmitIntelAgenciesJSON, map[string]any{"resolved_managed_logos": resolvedAgency})
+	agencies, err := emitRowsByFile("intelligence_agencies", "agencies", "common/intelligence_agencies/"+tag+"_intelligence_agencies.txt",
+		"intelligence_agencies", emitscripts.EmitIntelAgenciesJSON, map[string]any{"resolved_managed_logos": resolvedAgency})
 	if err != nil {
 		return nil, err
 	}
-	appendScript("common/intelligence_agencies/"+tag+"_intelligence_agencies.txt", "intelligence_agencies", agencyScript)
 	upgradeScript, _, err := emitRows("intelligence_agencies", "agencies", emitscripts.EmitIntelAgencyUpgradesJSON, nil)
 	if err != nil {
 		return nil, err
@@ -2889,11 +2922,11 @@ func nativeAdvancedScripts(snapshot Snapshot, modDir string, includeImported boo
 		return nil, err
 	}
 	appendScript("common/special_projects/specialization/"+tag+"_specializations.txt", "special_project_specializations", specScript)
-	projectScript, projects, err := emitRows("special_projects", "projects", emitscripts.EmitSpecialProjectsJSON, nil)
+	projects, err := emitRowsByFile("special_projects", "projects", "common/special_projects/projects/"+tag+"_projects.txt",
+		"special_projects", emitscripts.EmitSpecialProjectsJSON, nil)
 	if err != nil {
 		return nil, err
 	}
-	appendScript("common/special_projects/projects/"+tag+"_projects.txt", "special_projects", projectScript)
 	if len(projects) > 0 {
 		tagScript, _, err := emitRows("special_projects", "projects", emitscripts.EmitProjectTagsJSON, nil)
 		if err != nil {

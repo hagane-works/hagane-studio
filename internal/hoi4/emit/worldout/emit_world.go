@@ -142,6 +142,7 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 
 	exportLangs := c.exportLangs()
 
+	bookmarkFiles := map[string]bool{}
 	for _, bm := range c.s.Bookmarks {
 		bmID := pyStrip(eStrOrEmpty(bm, "bookmark_id"))
 		if bmID == "" {
@@ -310,7 +311,8 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 
 		bmLines = append(bmLines, "\t}")
 		bmLines = append(bmLines, "}")
-		c.write(modDir+"common/bookmarks/"+bmID+".txt",
+		bookmarkFile := BookmarkFilename(bmID, eStrOrEmpty(bm, "source_file"), bookmarkFiles)
+		c.write(modDir+"common/bookmarks/"+bookmarkFile,
 			strings.Join(bmLines, "\n")+"\n")
 
 		bookmarkLocByLang := map[string]string{}
@@ -973,4 +975,20 @@ func historyPopularityLines(hf *OMap) []string {
 		}
 	}
 	return lines
+}
+
+// BookmarkFilename names the common/bookmarks file a bookmark is written to:
+// the file it was imported from, when that is a plain file in the folder no
+// other bookmark took, else `<bookmark id>.txt`. A mod that replaces a
+// base-game bookmark file by name (to hide that bookmark) still replaces it.
+func BookmarkFilename(bookmarkID, sourceFile string, used map[string]bool) string {
+	name := bookmarkID + ".txt"
+	source := strings.ReplaceAll(strings.TrimSpace(sourceFile), "\\", "/")
+	if dir, base, ok := strings.Cut(source, "common/bookmarks/"); ok && dir == "" &&
+		!strings.Contains(base, "/") && !stateFnIllegalRe.MatchString(base) &&
+		strings.HasSuffix(strings.ToLower(base), ".txt") && strings.Trim(base, ". ") != "" && !used[strings.ToLower(base)] {
+		name = base
+	}
+	used[strings.ToLower(name)] = true
+	return name
 }

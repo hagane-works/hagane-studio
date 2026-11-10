@@ -250,7 +250,8 @@ func TestEventsWorldPortImportsEveryFamily(t *testing.T) {
 
 	bookmarks := worldRowsBy(t, p, "bookmarks", "bookmark_id")
 	bm := bookmarks["tst_bm"]
-	if bm == nil || bm["name_en"] != "Test Bookmark" || bm["desc_en"] != "Bookmark Desc" || bm["default_country"] != "TST" || bm["default_flag"] != true || bm["picture"] != "GFX_select_date_tst" {
+	if bm == nil || bm["name_en"] != "Test Bookmark" || bm["desc_en"] != "Bookmark Desc" || bm["default_country"] != "TST" || bm["default_flag"] != true || bm["picture"] != "GFX_select_date_tst" ||
+		bm["source_file"] != "common/bookmarks/tst.txt" {
 		t.Fatalf("bookmarks = %v", bookmarks)
 	}
 	if countries, _ := bm["selectable_countries"].([]any); len(countries) != 1 || worldInt(bm["edit_revision"]) != 1 {

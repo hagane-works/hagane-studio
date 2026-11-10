@@ -917,7 +917,7 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 	}
 
 	bookmarks := newKeyedTable(tx, "bookmarks", "bookmark_id")
-	bookmarkUpdate := []string{"name_en", "name_zh", "desc_en", "desc_zh", "display_name_locs", "description_locs", "date", "picture", "default_country", "default_flag", "selectable_countries", "filters", "source", "raw_extras"}
+	bookmarkUpdate := []string{"name_en", "name_zh", "desc_en", "desc_zh", "display_name_locs", "description_locs", "date", "picture", "default_country", "default_flag", "selectable_countries", "filters", "source", "raw_extras", "source_file"}
 	for _, r := range rows {
 		if r.kind != "bookmark" {
 			continue
@@ -932,6 +932,7 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 			"default_country": p.str("default_country"), "default_flag": p.boolOr("default_flag", false),
 			"selectable_countries": p.jsonOr("selectable_countries", []any{}), "filters": p.jsonOr("filters", []any{}),
 			"source": "imported", "raw_extras": p.jsonOr("raw_extras", map[string]any{}),
+			"source_file": worldNullIfBlank(r.source),
 		}, bookmarkUpdate)
 	}
 
@@ -1020,4 +1021,12 @@ func (s *session) mergeEventsWorld(tx *project.Tx, options EventsWorldMergeOptio
 		write(states, row, stateUpdate)
 	}
 	return nil
+}
+
+// worldNullIfBlank stores an empty source path as null.
+func worldNullIfBlank(text string) any {
+	if text == "" {
+		return nil
+	}
+	return text
 }

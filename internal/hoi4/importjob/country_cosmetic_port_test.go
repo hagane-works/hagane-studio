@@ -194,6 +194,9 @@ func TestCountryCosmeticFlagImportPort(t *testing.T) {
 			t.Errorf("TST.%s = %s, want %s", column, got, want)
 		}
 	}
+	if tst["source_file"] != "common/countries/Test.txt" {
+		t.Errorf("TST.source_file = %v", tst["source_file"])
+	}
 	abc := countryPortOne(t, p, "countries", "tag", "ABC")
 	for column, want := range map[string]string{
 		"name": `"ABC"`, "name_en": `"ABC"`, "color": `[1,2,3]`, "graphical_culture": `""`, "use_legacy_ai_pp_spend": `null`,

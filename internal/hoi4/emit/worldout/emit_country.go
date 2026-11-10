@@ -278,18 +278,29 @@ func (c *emitCtx) emitCountrySections(cosmeticTagsSeen map[string]string) {
 		emitRegistry bool
 	}
 	var countryEmitPlan []emitPlanEntry
+	usedDefNames := map[string]bool{}
 	for _, e := range countryDefinitions {
 		shadowName := ""
 		if _, isVanilla := vanillaCultures[e.tag]; isVanilla {
 			shadowName = c.t.CountryFilenames[e.tag]
 		}
 		if shadowName != "" {
+			usedDefNames[toLower(shadowName)] = true
 			countryEmitPlan = append(countryEmitPlan,
 				emitPlanEntry{e.tag, e.country, e.definition, shadowName, false})
-		} else {
-			countryEmitPlan = append(countryEmitPlan,
-				emitPlanEntry{e.tag, e.country, e.definition, e.tag + ".txt", true})
 		}
+	}
+	for _, e := range countryDefinitions {
+		if _, isVanilla := vanillaCultures[e.tag]; isVanilla && c.t.CountryFilenames[e.tag] != "" {
+			continue
+		}
+		name := CountryDefinitionFilename(e.tag, eStrOrEmpty(e.country, "source_file"))
+		if usedDefNames[toLower(name)] {
+			name = e.tag + ".txt"
+		}
+		usedDefNames[toLower(name)] = true
+		countryEmitPlan = append(countryEmitPlan,
+			emitPlanEntry{e.tag, e.country, e.definition, name, true})
 	}
 
 	var registryLines [][2]string

@@ -436,6 +436,7 @@ func projectHistoryFileRows(rows []HistoryFile) []CountryHistoryFileRow {
 			Capital:          h["capital"],
 			SetResearchSlots: h["set_research_slots"],
 			Source:           anyToString(h["source"]),
+			SourceFile:       anyToString(h["source_file"]),
 		})
 	}
 	return out

@@ -732,6 +732,10 @@
       "default": false
     },
     {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
       "name": "auto_added",
       "type": "boolean",
       "not_null": true,
@@ -2519,6 +2523,10 @@
       "name": "source",
       "type": "character varying",
       "not_null": true
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
     },
     {
       "name": "created_at",

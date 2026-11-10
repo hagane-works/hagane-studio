@@ -513,6 +513,11 @@ func mapOneCharacter(tag string, body []*paradox.Entry, summary *importsvc.Impor
 		large, small := extractPortraitPaths(portraits)
 		data["large_portrait"] = large
 		data["small_portrait"] = small
+		// The model holds one large and one small picture; the block can
+		// give each portrait type its own. It is kept as written, with the
+		// pictures it was read as, so export can tell it was not changed.
+		rawExtras["portraits"] = importsvc.BlockToText(portraits, 0)
+		rawExtras[PortraitRefsKey] = PortraitRefs(large, small)
 	}
 
 	hasCommander := findOne(body, "corps_commander") != nil
@@ -612,11 +617,23 @@ func mapCountryLeader(data map[string]any, leaderBlock *paradox.Block) {
 	}
 }
 
+// PortraitRefsKey holds, in raw_extras, the pictures an imported portraits
+// block was read as; PortraitRefs builds its value.
+const PortraitRefsKey = "_portraits_refs"
+
+func PortraitRefs(large, small string) string { return large + "\n" + small }
+
+// LegacyIDKey holds, in raw_extras, a unit leader's legacy_id as written.
+const LegacyIDKey = "_legacy_id"
+
 func mapMilitary(data map[string]any, milBlock *paradox.Block, isNavy bool) error {
 	if !blockTruthy(milBlock) {
 		return nil
 	}
 	mil := milBlock.Entries
+	if legacy, found := scalarFound(mil, "legacy_id"); found {
+		data["raw_extras"].(map[string]any)[LegacyIDKey] = pyStr(legacy)
+	}
 	keys := []string{"skill", "attack_skill", "defense_skill"}
 	if isNavy {
 		keys = append(keys, "maneuvering_skill", "coordination_skill")
@@ -717,7 +734,6 @@ var advisorKnownFields = map[string]bool{
 	"slot": true, "cost": true, "idea_token": true, "traits": true,
 	"available": true, "visible": true, "removal_cost": true, "modifier": true,
 	"on_add": true, "on_remove": true, "allowed": true,
-	"ai_will_do": true, "can_be_fired": true, "ledger": true,
 	"always_show_on_actions_tooltip": true,
 }
 

@@ -36,7 +36,9 @@ type exportProjectOut struct {
 	JobID             string   `json:"job_id"`
 }
 
-const exportZIPMaxBytes = 2 << 30
+// exportZIPMaxBytes matches the export artifact budget; the ZIP is streamed to
+// disk, so a large mod is not held in memory.
+const exportZIPMaxBytes = 16 << 30
 
 func splitReplacePaths(raw string) []string {
 	out := []string{}
@@ -172,19 +174,17 @@ func saveExportZIP(ctx context.Context, jobs *RESTProxy, downloadPath, folder, n
 	if name == "" || name == "." || !strings.HasSuffix(strings.ToLower(name), ".zip") {
 		return "", errors.New("the export job named no ZIP file")
 	}
-	data, err := jobs.callRawLimited(ctx, "GET", downloadPath, nil, exportZIPMaxBytes)
-	if err != nil {
-		return "", fmt.Errorf("could not read the finished ZIP: %w", err)
-	}
 	target := filepath.Join(folder, name)
 	tmp, err := os.CreateTemp(folder, name+".*.tmp")
 	if err != nil {
 		return "", err
 	}
-	_, err = tmp.Write(data)
-	if closeErr := tmp.Close(); err == nil {
-		err = closeErr
+	if _, err := jobs.streamTo(ctx, downloadPath, tmp, exportZIPMaxBytes); err != nil {
+		_ = tmp.Close()
+		_ = os.Remove(tmp.Name())
+		return "", fmt.Errorf("could not read the finished ZIP: %w", err)
 	}
+	err = tmp.Close()
 	if err == nil {
 		err = os.Rename(tmp.Name(), target)
 	}

@@ -2973,7 +2973,7 @@ func nativeInlineRawFiles(snapshot Snapshot, includeImported bool, resolve BlobR
 	var replacePaths []string
 	var resolvedBytes int64
 	const maxRawObjectBytes = int64(256 << 20)
-	const maxRawTotalBytes = int64(2 << 30)
+	maxRawTotalBytes := DefaultArtifactBudget().MaxTotalBytes
 	for _, raw := range snapshot.Tables["project_raw_files"] {
 		row, err := emitmisc.DecodeEntityJSON(raw)
 		if err != nil {

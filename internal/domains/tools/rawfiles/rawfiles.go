@@ -33,6 +33,7 @@ func Register(mux *http.ServeMux, deps domains.Deps) {
 	mux.HandleFunc("POST "+prefix, h(createRawFile))
 	mux.HandleFunc("GET "+prefix+"/templates", h(rawTemplates))
 	mux.HandleFunc("POST "+prefix+"/binary", h(createRawBinary))
+	mux.HandleFunc("POST "+prefix+"/bulk", h(createRawBulk))
 	mux.HandleFunc("POST "+prefix+"/from-template", h(fromTemplate))
 	mux.HandleFunc("POST "+prefix+"/from-template/{route}", h(fromTemplate))
 	mux.HandleFunc("GET "+prefix+"/{rid}", h(getRawFile))

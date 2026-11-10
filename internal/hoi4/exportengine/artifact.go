@@ -56,7 +56,7 @@ type ArtifactBudget struct {
 }
 
 func DefaultArtifactBudget() ArtifactBudget {
-	return ArtifactBudget{MaxEntries: 20000, MaxEntryBytes: 256 << 20, MaxTotalBytes: 4 << 30}
+	return ArtifactBudget{MaxEntries: 100_000, MaxEntryBytes: 256 << 20, MaxTotalBytes: 4 << 30}
 }
 
 func Build(destination, fingerprint string, entries []Entry, budget ArtifactBudget) (Manifest, error) {

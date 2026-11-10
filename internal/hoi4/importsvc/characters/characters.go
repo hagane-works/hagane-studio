@@ -582,6 +582,15 @@ func mapOneCharacter(tag string, body []*paradox.Entry, summary *importsvc.Impor
 			summary.AddPreserved(*entry.Key)
 		}
 	}
+	// The model holds one leader role with one set of traits; a character
+	// can have several (one per ideology), with traits the main role's
+	// mapping does not keep. Every country_leader block is also kept as
+	// written, and an imported character is exported with these.
+	for _, entry := range body {
+		if entry.Key != nil && *entry.Key == "country_leader" && entry.Block != nil {
+			accumulateRawExtra(rawExtras, "country_leader", importsvc.BlockToText(entry.Block, 0))
+		}
+	}
 
 	return data, nil
 }

@@ -142,7 +142,7 @@ var characterFields = []fieldDef{
 	{"advisor_on_remove", sv("")},
 	{"always_show_on_actions_tooltip", nilv()},
 	{"raw_extras", dictv()}, {"large_portrait", sv("")},
-	{"small_portrait", sv("")},
+	{"small_portrait", sv("")}, {"source", sv("")},
 }
 
 var eventFields = []fieldDef{

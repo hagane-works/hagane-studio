@@ -113,11 +113,21 @@ func parseLocFile(path, sourceFile string, sourceOrder int32) ([]locRow, error) 
 	return rows, scanner.Err()
 }
 
+// decodeLocValue turns escapes into the characters they stand for, except an
+// escaped backslash. The exporter writes a backslash followed by n, t, " or
+// another backslash through as an escape, so a decoded `\\n` (stored as `\n`)
+// would come back as a line break. Keeping `\\` as written makes the round
+// trip exact.
 func decodeLocValue(value string) string {
 	var out strings.Builder
 	for index := 0; index < len(value); index++ {
 		if value[index] == '\\' && index+1 < len(value) {
-			if decoded, ok := map[byte]byte{'n': '\n', 'r': '\r', 't': '\t', '"': '"', '\\': '\\'}[value[index+1]]; ok {
+			if value[index+1] == '\\' {
+				out.WriteString(`\\`)
+				index++
+				continue
+			}
+			if decoded, ok := map[byte]byte{'n': '\n', 'r': '\r', 't': '\t', '"': '"'}[value[index+1]]; ok {
 				out.WriteByte(decoded)
 				index++
 				continue

@@ -67,18 +67,31 @@ func (c *emitCtx) emitCountryFlagsNames() {
 			if adjective == "" {
 				adjective = fallbackValue
 			}
+			// The definite (_DEF) form and the per-ideology adjective are not
+			// part of the country model; they are filled from the plain name
+			// and adjective. Like cosmetic names, such a filled-in value does
+			// not replace text the project's own localisation defines for the
+			// same key ("the Republic of China" for CHI_DEF).
+			preserved := c.s.PreservedLocKeys[suffix]
+			filled := func(key, value string) {
+				if !preserved[key] {
+					ymlLines = append(ymlLines, ymlLine(key, value, false))
+				}
+			}
 			ymlLines = append(ymlLines, ymlLine(ctag, fallbackValue, false))
-			ymlLines = append(ymlLines, ymlLine(ctag+"_DEF", fallbackValue, false))
+			filled(ctag+"_DEF", fallbackValue)
 			ymlLines = append(ymlLines, ymlLine(ctag+"_ADJ", adjective, false))
 			for _, ideology := range ideologyKeys {
 				value := overrides[ideology]
-				if value == "" {
-					value = fallbackValue
-				}
 				key := ctag + "_" + ideology
-				ymlLines = append(ymlLines, ymlLine(key, value, false))
-				ymlLines = append(ymlLines, ymlLine(key+"_DEF", value, false))
-				ymlLines = append(ymlLines, ymlLine(key+"_ADJ", adjective, false))
+				if value == "" {
+					filled(key, fallbackValue)
+					value = fallbackValue
+				} else {
+					ymlLines = append(ymlLines, ymlLine(key, value, false))
+				}
+				filled(key+"_DEF", value)
+				filled(key+"_ADJ", adjective)
 			}
 			ymlLines = append(ymlLines, "")
 			c.write(

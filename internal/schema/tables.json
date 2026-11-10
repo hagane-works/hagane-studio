@@ -834,6 +834,14 @@
       "type": "json"
     },
     {
+      "name": "source",
+      "type": "character varying"
+    },
+    {
+      "name": "source_file",
+      "type": "character varying"
+    },
+    {
       "name": "created_at",
       "type": "timestamp without time zone"
     },

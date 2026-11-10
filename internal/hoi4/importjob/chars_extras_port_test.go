@@ -307,6 +307,7 @@ func TestCharsExtrasPortFirstImport(t *testing.T) {
 	charsExtrasPortCheck(t, "tst_trait", charsExtrasPortRow(t, p, "custom_traits", "trait_type", "country_leader", "trait_id", "tst_trait"), map[string]string{
 		"country_tag": `"TST"`, "name_en": `""`, "desc_en": `""`,
 		"display_name_locs": `{"en":"Test Trait"}`, "description_locs": `{"en":"Trait description"}`, "random": `false`,
+		"source": `"imported"`, "source_file": `"common/country_leader/traits.txt"`,
 	})
 
 	if got := charsExtrasPortKeys(t, p, "ideas", "idea_id"); got != "TST_idea,generic_idea" {

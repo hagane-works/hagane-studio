@@ -2421,6 +2421,16 @@ func groupedSourcePath(sourceFile, expectedDir string) string {
 	return prefix + "/" + parts[len(parts)-1]
 }
 
+// importedTraitFile is the file an imported trait came from, so a mod that
+// replaces a base-game trait file by name gets that file back instead of a
+// second file defining the same traits. Traits made in the app have none.
+func importedTraitFile(row nativeRow, dir string) string {
+	if row.misc.Str("source") != "imported" || !strings.HasSuffix(strings.ToLower(row.misc.Str("source_file")), ".txt") {
+		return ""
+	}
+	return groupedSourcePath(row.misc.Str("source_file"), dir)
+}
+
 func nativeModifiers(snapshot Snapshot, modDir string, includeImported bool) ([]Entry, error) {
 	project, err := emitmisc.DecodeEntityJSON(snapshot.Project)
 	if err != nil {
@@ -2757,6 +2767,8 @@ func nativeAdvancedScripts(snapshot Snapshot, modDir string, includeImported boo
 	for _, family := range traitFamilies {
 		buckets := map[string][]nativeRow{}
 		var order []string
+		files := map[string][]nativeRow{}
+		var fileOrder []string
 		for _, row := range traits {
 			if row.misc.Str("trait_type") != family.kind {
 				continue
@@ -2769,20 +2781,32 @@ func nativeAdvancedScripts(snapshot Snapshot, modDir string, includeImported boo
 				order = append(order, ctag)
 			}
 			buckets[ctag] = append(buckets[ctag], row)
+			path := importedTraitFile(row, family.dir)
+			if path == "" {
+				path = family.dir + "/" + ctag + "_" + family.file + ".txt"
+			}
+			if _, ok := files[path]; !ok {
+				fileOrder = append(fileOrder, path)
+			}
+			files[path] = append(files[path], row)
 		}
-		for _, ctag := range order {
-			raw := make([]json.RawMessage, 0, len(buckets[ctag]))
-			locs := make([]*locout.Obj, 0, len(buckets[ctag]))
-			for _, row := range buckets[ctag] {
+		for _, path := range fileOrder {
+			raw := make([]json.RawMessage, 0, len(files[path]))
+			for _, row := range files[path] {
 				raw = append(raw, row.raw)
-				locs = append(locs, row.loc)
 			}
 			body, _ := json.Marshal(map[string]any{"traits": raw})
 			script, err := family.emit(body)
 			if err != nil {
 				return nil, fmt.Errorf("emit %s traits: %w", family.kind, err)
 			}
-			appendScript(family.dir+"/"+ctag+"_"+family.file+".txt", "custom_traits", script)
+			appendScript(path, "custom_traits", script)
+		}
+		for _, ctag := range order {
+			locs := make([]*locout.Obj, 0, len(buckets[ctag]))
+			for _, row := range buckets[ctag] {
+				locs = append(locs, row.loc)
+			}
 			for _, lang := range langs {
 				text := locout.GenerateCustomTraitsLocalisation(locs, lang.Code)
 				if strings.Count(text, "\n") >= 1 {

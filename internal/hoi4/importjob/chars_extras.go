@@ -450,8 +450,9 @@ func (s *session) charsExtrasMergeTraits(rows []entityRow, table *keyedTable, pr
 			"modifier": p.jsonOr("modifier", map[string]any{}), "ai_will_do": p.str("ai_will_do"),
 			"targeted_modifier": p.jsonOr("targeted_modifier", []any{}), "random": p.boolOr("random", true),
 			"extra_fields": p.jsonOr("extra_fields", map[string]any{}), "raw_extras": p.jsonOr("raw_extras", map[string]any{}),
+			"source": "imported", "source_file": e.sourceFile,
 		}, []string{"country_tag", "name_en", "name_zh", "desc_en", "desc_zh", "display_name_locs", "description_locs",
-			"modifier", "ai_will_do", "targeted_modifier", "random", "extra_fields", "raw_extras"})
+			"modifier", "ai_will_do", "targeted_modifier", "random", "extra_fields", "raw_extras", "source", "source_file"})
 	}
 }
 

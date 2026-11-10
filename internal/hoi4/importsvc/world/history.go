@@ -213,19 +213,30 @@ func ImportHistoryFiles(text, filename string) ([]*PyDict, *importsvc.ImportSumm
 				}
 			}
 			sawAnyKnown = true
-		case keyIs(ent, "set_autonomy") && ent.Block != nil:
+		case keyIs(ent, "set_autonomy") && ent.Block != nil && setAutonomyStructured(ent.Block):
+			// The game takes the state as autonomous_state or autonomy_state;
+			// keep which one the file used, and freedom_level.
 			target := ""
 			if v, ok := ppScalar(ent.Block.Entries, "target"); ok {
 				target = pyStrip(pyStr(v))
 			}
-			astate := ""
-			if v, ok := ppScalar(ent.Block.Entries, "autonomous_state"); ok {
-				astate = pyStrip(pyStr(v))
+			astate, stateKey := "", "autonomous_state"
+			for _, key := range []string{"autonomous_state", "autonomy_state"} {
+				if v, ok := ppScalar(ent.Block.Entries, key); ok {
+					astate, stateKey = pyStrip(pyStr(v)), key
+					break
+				}
 			}
 			if target != "" || astate != "" {
 				d := NewPyDict()
 				d.Set("target", target)
 				d.Set("autonomous_state", astate)
+				if stateKey != "autonomous_state" {
+					d.Set("state_key", stateKey)
+				}
+				if v, ok := ppScalar(ent.Block.Entries, "freedom_level"); ok {
+					d.Set("freedom_level", pyStrip(pyStr(v)))
+				}
 				data.appendTo("set_autonomy", d)
 			}
 			sawAnyKnown = true
@@ -265,11 +276,9 @@ func ImportHistoryFiles(text, filename string) ([]*PyDict, *importsvc.ImportSumm
 				}
 			}
 			sawAnyKnown = true
-		case keyIs(ent, "retire_country_leader") || keyIs(ent, "create_country_leader"):
-
-			sawAnyKnown = true
-			continue
 		case ent.Key != nil:
+			// Everything else, create_country_leader and
+			// retire_country_leader included, is kept as written.
 
 			if s, e, ok := importsvc.TopLevelLineBounds(srcLines, ast.Entries, idx); ok {
 				rawBounds = append(rawBounds, [2]int{s, e})
@@ -305,4 +314,21 @@ func ImportHistoryFiles(text, filename string) ([]*PyDict, *importsvc.ImportSumm
 
 	summary.Total = 1
 	return []*PyDict{data}, summary, nil
+}
+
+// setAutonomyStructured reports whether a set_autonomy block holds only what
+// the history model stores; anything more (end_wars, a scripted target) is
+// kept as written instead.
+func setAutonomyStructured(block *paradox.Block) bool {
+	for _, entry := range block.Entries {
+		if entry.Key == nil || entry.Block != nil {
+			return false
+		}
+		switch *entry.Key {
+		case "target", "autonomous_state", "autonomy_state", "freedom_level":
+		default:
+			return false
+		}
+	}
+	return true
 }

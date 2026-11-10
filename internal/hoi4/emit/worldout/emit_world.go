@@ -705,9 +705,16 @@ func (c *emitCtx) emitHistoryStatesCountryMain() {
 			if saT == "" || saS == "" {
 				continue
 			}
+			stateKey := pyStrip(pyStrOrEmpty(eGet(sa, "state_key")))
+			if stateKey != "autonomy_state" {
+				stateKey = "autonomous_state"
+			}
 			hfLines = append(hfLines, "set_autonomy = {")
 			hfLines = append(hfLines, "\ttarget = "+saT)
-			hfLines = append(hfLines, "\tautonomous_state = "+saS)
+			hfLines = append(hfLines, "\t"+stateKey+" = "+saS)
+			if level := pyStrip(pyStrOrEmpty(eGet(sa, "freedom_level"))); level != "" {
+				hfLines = append(hfLines, "\tfreedom_level = "+level)
+			}
 			hfLines = append(hfLines, "}")
 			diploEmitted = true
 		}

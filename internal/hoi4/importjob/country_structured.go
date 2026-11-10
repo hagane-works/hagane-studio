@@ -207,6 +207,10 @@ type countryStage struct {
 	factions []countryFactionRow
 	// dynamic are the mod's dynamic tags (D01…), which are countries too.
 	dynamic []string
+	// definitions are common/countries files that define a country no
+	// country_tags line of the mod names: a mod that changes a base-game
+	// country keeps the base game's tag line and replaces only its file.
+	definitions []countryFactionRow
 }
 
 type countryStageRow struct {
@@ -276,9 +280,16 @@ func (s *session) stageCountries(opt CountryStageOptions) (CountryCounts, error)
 			return e
 		}
 		if len(tags) == 0 {
-			for tag, m := range sharedCountryMetadata(string(b)) {
+			shared := sharedCountryMetadata(string(b))
+			for tag, m := range shared {
 				if metadata[tag] == nil {
 					metadata[tag] = m
+				}
+			}
+			if opt.ImportCountries && len(shared) == 0 && cultureRE.MatchString(string(b)) {
+				rel, _ := filepath.Rel(root, p)
+				if dest := filepath.ToSlash(rel); safeModPath(dest) {
+					s.countries.definitions = append(s.countries.definitions, countryFactionRow{destPath: dest, content: decodeScriptBytes(b)})
 				}
 			}
 			return nil
@@ -344,6 +355,8 @@ var countryUpdateColumns = []string{
 }
 
 const countryFactionNote = "preserved on whole-mod import (common/factions)"
+
+const countryDefinitionNote = "preserved on whole-mod import (common/countries definition no country_tags line of the mod names)"
 
 func (s *session) countryLocOrNull(key, lang string) any {
 	if text, ok := s.locText(key, lang); ok {
@@ -411,7 +424,33 @@ func (s *session) mergeCountries(tx *project.Tx, opt CountryMergeOptions) error 
 		}
 	}
 
+	staged := map[string]bool{}
+	for _, f := range s.countries.definitions {
+		staged[f.destPath] = true
+	}
+	tx.Delete("project_raw_files", func(row project.Row) bool {
+		dest, _ := row["dest_path"].(string)
+		return row["source"] == "imported" && row["note"] == countryDefinitionNote && !staged[dest]
+	})
+
 	raw := newKeyedTable(tx, "project_raw_files", "dest_path")
+	for _, f := range s.countries.definitions {
+		if id, ok := raw.find(f.destPath); ok {
+			if skip || tx.Find("project_raw_files", id)["source"] != "imported" {
+				continue
+			}
+			if _, err := tx.Update("project_raw_files", id, func(row project.Row) {
+				row["content"], row["note"], row["is_binary"], row["source"] = f.content, countryDefinitionNote, false, "imported"
+			}); err != nil {
+				return fmt.Errorf("merge country definitions: %w", err)
+			}
+			continue
+		}
+		raw.insertNew(project.Row{
+			"dest_path": f.destPath, "content": f.content, "generate_replace_path": false,
+			"note": countryDefinitionNote, "is_binary": false, "source": "imported",
+		})
+	}
 	for _, f := range s.countries.factions {
 		if id, ok := raw.find(f.destPath); ok {
 			if skip || tx.Find("project_raw_files", id)["source"] != "imported" {

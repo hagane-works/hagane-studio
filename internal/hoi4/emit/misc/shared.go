@@ -85,6 +85,40 @@ func (g *FileGroups) append(k string, v *NS) {
 
 func (g *FileGroups) Get(k string) []*NS { return g.m[k] }
 
+// decisionFiles collects the decisions bound for each output file across
+// countries, with the categories they may sit under, so a file shared by
+// several countries is written once.
+type decisionFiles struct {
+	order []string
+	files map[string]*decisionFile
+}
+
+type decisionFile struct {
+	cats    []*NS
+	catSeen map[int64]bool
+	decs    []*NS
+}
+
+func newDecisionFiles() *decisionFiles {
+	return &decisionFiles{files: map[string]*decisionFile{}}
+}
+
+func (f *decisionFiles) add(path string, cats, decs []*NS) {
+	file, ok := f.files[path]
+	if !ok {
+		file = &decisionFile{catSeen: map[int64]bool{}}
+		f.files[path] = file
+		f.order = append(f.order, path)
+	}
+	for _, cat := range cats {
+		if id := cat.Int("id", 0); !file.catSeen[id] {
+			file.catSeen[id] = true
+			file.cats = append(file.cats, cat)
+		}
+	}
+	file.decs = append(file.decs, decs...)
+}
+
 func FocusTreeFilenames(trees []*NS) *FileGroups {
 	out := newFileGroups()
 	for _, tree := range trees {
@@ -184,4 +218,26 @@ func OOBDestination(row *NS) string {
 		stem = "untitled"
 	}
 	return "history/units/" + stem + ".txt"
+}
+
+// bareImportedCategory reports an imported decision category the mod only
+// names, as the wrapper of its decisions, and defines nowhere: its definition
+// is the base game's (or another mod's), and writing an empty one would
+// replace it.
+func bareImportedCategory(c *NS) bool {
+	if c.Str("source") != "imported" || strings.TrimSpace(c.Str("source_file")) != "" {
+		return false
+	}
+	for _, key := range []string{"icon", "picture", "on_map_area", "allowed", "visible"} {
+		if strings.TrimSpace(c.Str(key)) != "" {
+			return false
+		}
+	}
+	if c.Int("priority", 0) != 0 {
+		return false
+	}
+	if extras := c.Dict("raw_extras"); extras != nil && extras.Len() > 0 {
+		return false
+	}
+	return true
 }
